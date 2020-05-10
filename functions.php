@@ -21,7 +21,7 @@ function bn_style_resourses()
 
     wp_enqueue_style('font-awesome-5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null);
 
-    wp_enqueue_style('boozang-fourth-custom', get_stylesheet_directory_uri() . '/css/custom.css');
+    wp_enqueue_style('boozang-fifth-custom', get_stylesheet_directory_uri() . '/css/custom.css');
 
 }
 add_action('wp_enqueue_scripts', 'bn_style_resourses');
@@ -39,7 +39,7 @@ add_action('wp_head', 'google_fonts');
 
 function add_scripts()
 {
-    wp_register_script('custom_script', home_url() . '/wp-content/themes/boozang-fourth/js/custom_script.js', array('jquery'));
+    wp_register_script('custom_script', home_url() . '/wp-content/themes/boozang-fifth/js/custom_script.js', array('jquery'));
     wp_enqueue_script('custom_script');
 
 }
@@ -89,7 +89,7 @@ add_filter('excerpt_length', 'set_excerpt_length');
 function boozang_register_menus()
 {
     register_nav_menus(array(
-        'primary' => __('Primary Menu', 'boozang-fourth'),
+        'primary' => __('Primary Menu', 'boozang-fifth'),
     ));
 }
 add_action('after_setup_theme', 'boozang_register_menus');
