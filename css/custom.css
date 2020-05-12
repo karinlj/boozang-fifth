@@ -1717,7 +1717,7 @@ nav {
         height: 400px; } }
     @media all and (min-width: 768px) {
       .two-columns-section.feature-slider .feat-slider-wrapper {
-        height: 550px; } }
+        height: 500px; } }
     .two-columns-section.feature-slider .feat-slider-wrapper img.feat-img {
       position: absolute;
       top: 0;
@@ -1880,11 +1880,7 @@ forum section
     .signup_section .btn_container {
       justify-content: flex-start; } }
   .signup_section .btn_container .btn {
-    padding: 10px 45px;
-    width: 100%; }
-    @media all and (min-width: 576px) {
-      .signup_section .btn_container .btn {
-        max-width: 250px; } }
+    padding: 10px 45px; }
     .signup_section .btn_container .btn:after {
       content: "\f061";
       font-family: 'Font Awesome 5 Free';

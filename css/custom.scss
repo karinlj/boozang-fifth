@@ -2476,7 +2476,7 @@ nav {
     }
 
     @media all and (min-width: $md-min) {
-      height: 550px;
+      height: 500px;
     }
 
     img.feat-img {
@@ -2722,11 +2722,6 @@ forum section
 
     .btn {
       padding: 10px 45px;
-      width: 100%;
-
-      @media all and (min-width: $sm-min) {
-        max-width: 250px;
-      }
 
       &:after {
         content: "\f061";
