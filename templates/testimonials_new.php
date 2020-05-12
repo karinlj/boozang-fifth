@@ -7,7 +7,7 @@ $link = get_sub_field('link');
 
     <div class="row align-items-start justify-content-between">
 
-      <div class="col-lg-9">
+      <div class="col-xl-10">
         <div class="testimonials-container">
           <?php
 // check if the repeater field has rows
@@ -34,7 +34,7 @@ if (have_rows('testimonials_content')) {
 }?>
         </div>
       </div>
-      <div class="col-lg-3 heading-section">
+      <div class="col-xl-2 heading-section">
         <div>
           <h3 class="tesimonials-heading"><?php the_sub_field('heading');?></h3>
 

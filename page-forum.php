@@ -9,7 +9,7 @@
 <section class="forum_section section_spacing_top_medium">
   <div class="container">
     <div class="row">
-      <div class="col-md-10 offset-md-1">
+      <div class="col-xl-9">
 
         <?php while (have_posts()):
     the_post();
@@ -23,6 +23,10 @@
 
 endwhile; // End the loop.
 ?>
+      </div>
+      <div class="col-xl-3">
+
+        <?php get_template_part('parts/sidebar-forum');?>
       </div>
     </div>
   </div>

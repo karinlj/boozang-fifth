@@ -5,8 +5,8 @@ if (get_row_layout() == 'pricing_cards') {?>
  <section class="pricing-section section_spacing_top_medium">
 
    <div class="container">
-     <div class="row justify-content-center">
-       <div class="col-lg-10">
+     <div class="row">
+       <div class="col-xl-10 offset-xl-1">
          <div class="row">
 
            <?php //pricing_cards repeater

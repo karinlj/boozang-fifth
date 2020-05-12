@@ -1,7 +1,7 @@
 <?php
 // feature-slider layout for Front Page Block
 ?>
-<section class="two-columns-section feature-slider section_spacing_top_big">
+<section class="two-columns-section feature-slider section_spacing_top_medium">
   <div class="container">
     <div class="row justify-content-between">
       <?php
@@ -25,8 +25,6 @@ if (get_sub_field('image_position')) { //radio btn field
         <div class="feat-list">
 
           <h3><?php the_sub_field('heading');?></h3>
-          <p class="preamble"><?php the_sub_field('preamble');?></p>
-
           <p class="feature-description-mobile"><?php the_sub_field('feature_description_mobile');?></p>
 
           <ul id="features-menu">
@@ -41,7 +39,6 @@ if (have_rows('feature_slider')) {
 
         $j++; //räknare räknas upp varje varv
         ?>
-
             <!--I have <?php echo $j; ?>-->
 
             <?php
@@ -49,23 +46,16 @@ if (get_sub_field('heading_link') || get_sub_field('feature_description')) {?>
 
             <li id="<?php echo $j ?><?php echo $suffix ?>" class="feat-menu-item inactive">
 
-
-              <!--   if ( get_sub_field('heading_link') || get_sub_field('feature_description') ) { ?>
-
-                                                <li class="feat-menu-item"> -->
-
               <span id="<?php echo $j ?><?php echo $suffix ?>"><?php the_sub_field('heading_link');?></span>
               <p class="text"><?php the_sub_field('feature_description');?></p>
             </li>
+
             <?php
 }
-        ?>
-            <?php
-}
+    }
 }
 ?>
           </ul>
-
         </div>
       </div>
 
@@ -84,9 +74,7 @@ if (have_rows('feature_slider')) {
 
         $i++; //räknare räknas upp varje varv
         ?>
-
           <!-- I have <?php echo $i; ?>-->
-
           <?php
 $image = get_sub_field('img');
 
@@ -99,17 +87,27 @@ $image = get_sub_field('img');
 
           <?php
 }
-        ?>
-          <?php
-}
+    }
 }
 ?>
         </div>
       </div>
-
-
-
     </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <h6 class="preamble text-center"><?php the_sub_field('link_preamble');?></h6>
+
+        <?php
+$link_url = get_sub_field('link_url');
+$link_text = get_sub_field('link_text');?>
+
+        <div class="link_wrapper text-center">
+          <a class="arrow_link" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </section>

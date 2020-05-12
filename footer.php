@@ -21,17 +21,18 @@ if (function_exists('acf_add_options_page')) {
 
       <div class="container">
         <div class="row">
-          <div class="col-md-8 offset-md-2">
+          <!-- <div class="col-md-8 offset-md-2"> -->
+          <div class="col-md-12">
             <div class="row">
 
-              <div class="col-lg-8">
+              <div class="col-md-6 col-lg-8">
                 <div class="text_section">
                   <h2><?php the_sub_field('heading');?></h2>
                   <p> <?php the_sub_field('text');?></p>
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-md-6 col-lg-4">
                 <div class="btn_container">
                   <?php
 $signup_button = get_sub_field('signup_button');
@@ -77,13 +78,6 @@ $signup_button = get_sub_field('signup_button');
 if (function_exists('acf_add_options_page')) {
     ?>
               <ul class="social">
-                <?php
-$link = get_field('mail_link', 'option');?>
-
-                <li class="social-item">
-                  <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope"
-                      aria-hidden="true"></i></a>
-                </li>
 
                 <?php
 if (have_rows('social_icons', 'option')) { // check if repeater field has rows ?>
@@ -101,7 +95,13 @@ while (have_rows('social_icons', 'option')) {
                 <?php
 }?>
                 <?php
-}?>
+}
+    $link = get_field('mail_link', 'option');?>
+
+                <li class="social-item">
+                  <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope"
+                      aria-hidden="true"></i></a>
+                </li>
               </ul>
               <?php
 }
@@ -151,19 +151,17 @@ $link = get_sub_field('link');?>
 }
 ?>
             </div>
-
           </div>
         </div>
       </div>
-
-
 
       <div class="footer-copy">
         <div class="container">
           <div class="row align-items-start">
             <div class="col">
               <div class="copy">
-                <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name');?> INC. ALL RIGHTS RESERVED.
+                <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name');?> INC. ALL RIGHTS RESERVED. Website by <a
+                    href="http://karinljunggren.com/" target="_blank">Karin</a>
                 </p>
               </div>
 

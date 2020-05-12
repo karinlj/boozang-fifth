@@ -112,6 +112,12 @@ function wpb_init_widgets($id)
         'before_widget' => '<div class="newsletter-form">',
         'after_widget' => '</div>',
     ));
+    register_sidebar(array(
+        'name' => 'Sidebar-forum',
+        'id' => 'sidebar-forum',
+        'before_widget' => '<div class="sidebar_forum">',
+        'after_widget' => '</div>',
+    ));
 
 }
 add_action('widgets_init', 'wpb_init_widgets');

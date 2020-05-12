@@ -1,5 +1,5 @@
 /*
-Theme Name: Boozang-fourth
+Theme Name: Boozang-fifth
 Author: Karin Ljunggren
 Author URI: http://karinljunggren.com
 */
@@ -26,7 +26,7 @@ $themecolor: #373c49;
 $themeBorderColor: #ebebeb;
 $themecolorLighter: #a8adbd;
 
-$themeHeadingcolor: #21242c;
+$themeHeadingcolor: #373c49; // #21242c;
 $lightgrey: #f6f9fc; //#f9f9f9; 
 $mediumgrey: #f1f1f4;
 $themecolorGreen: #18cd61;
@@ -34,7 +34,8 @@ $themecolorYellow: #e62e65;
 $linkhoverOpacity: 0.7;
 
 //Blue
-$themecolorBlue: #1b2fe4; //#3475e5
+$complementcolorBlue: #3475e5;
+$themecolorBlue: #1b2fe4;
 $themecolorBlueBg: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
 $themecolorBlueOverlay: linear-gradient(to right bottom,
   rgba(27, 47, 228, 0.85),
@@ -42,7 +43,17 @@ $themecolorBlueOverlay: linear-gradient(to right bottom,
 
 //BlueLight
 $themecolorBlueLight: #2e9ce6;
+
+// $themecolorBlueLightBg: linear-gradient(to right bottom, #2f80ed, #0096f4, #00a9f6, #25bbf5, #56ccf2);
+
 $themecolorBlueLightBg: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+
+
+// $themecolorBlueLightOverlay: linear-gradient(to right bottom,
+//   rgba(47, 128, 237, 0.95),
+//   rgba(86, 204, 242, 0.85));
+
+
 $themecolorBlueLightOverlay: linear-gradient(to right bottom,
   rgba(27, 148, 228, 0.85),
   rgba(142, 201, 241, 0.95));
@@ -63,10 +74,10 @@ $themecoloPurpleOverlay: linear-gradient(to right bottom,
 
 //DarkGrey
 $themecolorDarkGrey: #21242c;
-$themecolorDarkGreyBg: linear-gradient(to right, #21242c, #292d36, #313641, #393f4c, #424857);
+$themecolorDarkGreyBg:linear-gradient(to right, #21242c, #24272f, #262a33, #292d36, #2c303a);
 $themecolorDarkGreyOverlay: linear-gradient(to right bottom,
   rgba(33, 36, 44, 0.85),
-  rgba(66, 72, 87, 0.95));
+  rgba(44, 48, 58, 0.95));
 
 
 //other
@@ -81,7 +92,7 @@ $themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, .1);
 /*transparent nav*/
 $navcolor: #fff;
 $navBg_transp: transparent;
-$linkcolor: #2f80ed; //$themecolorBlueLight;
+$linkcolor: #1b94e4; //$themecolorBlueLight;
 
 /********************
      general
@@ -121,13 +132,14 @@ img {
 *********************/
 
 .container {
-  max-width: 1280px;
+  // max-width: 1280px;
+  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
 
-  @media all and (min-width: 1580px) {
-    max-width: 1500px;
-  }
+  // @media all and (min-width: 1580px) {
+  //   max-width: 1500px;
+  // }
 }
 
 .section_spacing_top_big {
@@ -298,8 +310,8 @@ h6 {
 .pillars-item,
 .text_section,
 .get_started_banner,
-.footer-main .logo,
-.info_banner {
+.info_banner,
+.copy {
   text-align: center;
 
   @media all and (min-width: $sm-min) {
@@ -625,7 +637,6 @@ nav {
         transition: all .5s ease;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
-        text-transform: uppercase;
         font-size: 0.85em;
         letter-spacing: 0.5px;
         display: block;
@@ -686,7 +697,8 @@ nav {
         &::after {
           content: "\f107";
           font-family: 'Font Awesome 5 Free';
-          font-weight: 900;
+          //
+          font-weight: 600;
           margin-left: 5px;
           color: $navcolor;
         }
@@ -713,7 +725,7 @@ nav {
             border-radius: 0;
             color: #16181d;
             font-weight: 500;
-            font-size: 0.85em;
+            font-size: 0.80rem;
           }
 
           &:hover {
@@ -803,7 +815,6 @@ nav {
           border-radius: $themeBorder_radius;
           padding: 10px 20px;
           cursor: pointer;
-          transition: all 1s ease;
           line-height: 1.2;
           font-weight: 600;
           transition: all .5s ease;
@@ -861,13 +872,12 @@ nav {
     li {
       a {
         transition: all .5s ease;
-        text-transform: uppercase;
         font-size: 0.9em;
         letter-spacing: 0.5px;
         display: block;
         color: #fff;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 500;
         cursor: pointer;
         padding: 10px;
       }
@@ -929,15 +939,14 @@ nav {
 
         .signup_btn {
           margin: 1rem 0.5rem;
-          background: $themecolorGreen;
+          background: $themecolorBlueLightBg;
           color: #fff !important;
-          border: 1px solid $themecolorGreen;
+          border: 1px solid $themecolorBlueLight;
           width: 100%;
 
           &:hover {
             background: transparent;
-            color: $themecolorGreen;
-            border: 1px solid $themecolorGreen;
+            color: $themecolorBlueLight;
           }
 
           @media all and (min-width: $sm-min) {
@@ -1261,21 +1270,21 @@ nav {
       }
 
       &:hover {
-        opacity: 0.7;
+        opacity: 0.8;
       }
     }
 
     .btn {
       &.green {
-        background: $themecolorGreenNew;
+        background: $themecolorGreenNewBg;
       }
 
       &.blue {
-        background: $themecolorBlue;
+        background: $themecolorBlueBg;
       }
 
       &.lightblue {
-        background: $themecolorBlueLight;
+        background: $themecolorBlueLightBg;
       }
     }
 
@@ -1698,16 +1707,16 @@ nav {
   justify-content: center;
   align-items: center;
 
-  @media all and (min-width: $lg-min) {
+  @media all and (min-width: $xl-min) {
     height: 700px;
   }
 
-  .col-lg-3.heading-section {
+  .col-xl-2.heading-section {
     order: -1;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
 
-    @media all and (min-width: $lg-min) {
+    @media all and (min-width: $xl-min) {
       order: 10;
       margin-bottom: 0;
       text-align: left;
@@ -1716,9 +1725,8 @@ nav {
 
   .tesimonials-heading {
 
-    @media all and (min-width: $lg-min) {
+    @media all and (min-width: $xl-min) {
       margin-top: 4rem;
-
     }
   }
 
@@ -2418,205 +2426,6 @@ nav {
   }
 }
 
-
-/*********************
-   footer and signup
-*********************/
-.signup_section {
-  //background: see scss section
-
-  .text_section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media all and (min-width: $lg-min) {
-      justify-content: flex-end;
-      align-items: flex-start;
-    }
-  }
-
-  .btn_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media all and (min-width: $lg-min) {
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: flex-start;
-    }
-
-    &.btn {
-      text-transform: uppercase;
-      font-size: 0.8rem;
-    }
-  }
-
-  &.lightgrey {
-    .btn.signup_btn {
-      background: $themecolorGreen;
-      color: #fff;
-      border: 1px solid $lightgrey;
-
-      &:hover {
-        background: transparent;
-        color: $themecolorGreen;
-        border: 1px solid $themecolorGreen;
-      }
-    }
-  }
-
-  &.lightblue {
-    .btn.signup_btn {
-      background: #fff;
-      color: $themecolorBlueLight;
-      border: 1px solid $themecolorBlueLight;
-
-      &:hover {
-        background: transparent;
-        color: #fff;
-        border: 1px solid #fff;
-      }
-    }
-  }
-
-  &.blue {
-    .btn.signup_btn {
-      background: #fff;
-      color: $themecolorBlue;
-      border: 1px solid $themecolorBlue;
-
-      &:hover {
-        background: transparent;
-        color: #fff;
-        border: 1px solid #fff;
-      }
-    }
-  }
-}
-
-.footer-main {
-
-  width: 100%;
-  @include d-inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #fff;
-  background-image: $themecolorDarkGreyBg;
-  min-height: 480px;
-
-  @media all and (max-width: $xs-max) {
-    min-height: 540px;
-  }
-
-  >.container {
-    padding-top: 2rem;
-
-  }
-
-  .logo {
-
-    img {
-      width: 140px;
-      margin-top: -0.5rem;
-    }
-  }
-
-  .links {
-
-    @media all and (min-width: $lg-min) {
-      justify-content: flex-end;
-    }
-
-    h5.footer-links-heading {
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-      color: #fff;
-      text-transform: uppercase;
-      padding-top: 2rem;
-
-      @media all and (min-width: $lg-min) {
-        padding-top: 0;
-      }
-    }
-
-    ul.footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        padding-bottom: 0.4rem;
-
-        a {
-          color: #cbd6e2;
-          font-size: 1rem;
-
-          &:hover {
-            color: $themecolorBlueLight;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-
-  .social-icons {
-    padding: 2rem 0;
-
-    ul.social {
-      @include d-inline-flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      justify-content: center;
-
-      @media all and (min-width: $sm-min) {
-        justify-content: flex-start;
-      }
-
-      li.social-item {
-        padding: 0 0.4rem;
-
-        &:first-child {
-          padding-left: 0;
-        }
-
-        .fab,
-        fas {
-          // padding-right: 5px;
-          font-size: 18px;
-          text-align: center;
-          text-decoration: none;
-          border-radius: 50%;
-          transition: 1s;
-          color: $themecolorBlueLight;
-
-          &:hover {
-            opacity: 0.8;
-          }
-        }
-      }
-    }
-  }
-
-  .footer-copy {
-    .copy {
-
-      p {
-        margin-top: 4rem;
-        color: #cbd6e2;
-        font-size: 80%;
-        margin-bottom: 0;
-      }
-    }
-  }
-}
-
 /******************************
      features slider
 *******************************/
@@ -2654,8 +2463,21 @@ nav {
 
   //slider
   .feat-slider-wrapper {
+    height: 320px;
     position: relative;
     transition: opacity 0.5s ease-in-out;
+
+    @media all and (max-width: $xs-max) {
+      height: 270px;
+    }
+
+    @media all and (min-width: $sm-min) {
+      height: 400px;
+    }
+
+    @media all and (min-width: $md-min) {
+      height: 550px;
+    }
 
     img.feat-img {
       position: absolute;
@@ -2679,13 +2501,6 @@ nav {
   }
 
   //feat-list
-  .preamble {
-    display: none;
-
-    @media all and (min-width: $lg-min) {
-      display: block;
-    }
-  }
 
   //menu
   ul#features-menu {
@@ -2701,7 +2516,7 @@ nav {
     li.feat-menu-item {
       text-align: left;
       padding: .6rem .95rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
       cursor: pointer;
 
       &:hover {
@@ -2709,7 +2524,7 @@ nav {
       }
 
       span {
-        font-size: 15px;
+        font-size: 0.9rem;
         display: inline-block;
         padding: 3px 2px;
         font-weight: 600;
@@ -2858,7 +2673,220 @@ text layout for Pages Content block
 forum section
 ***********************************/
 .forum_section {
-  padding-bottom: 10rem;
+
+  @media all and (min-width: $xl-min) {
+    padding-bottom: 7rem;
+  }
+
+  .forum-sidebar {
+    padding-top: 3rem;
+
+    @media all and (min-width: $xl-min) {
+      padding-top: 0;
+    }
+
+    .sidebar_forum {
+      .widgettitle {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/*********************
+   footer and signup
+*********************/
+.signup_section {
+  //background: see scss section
+
+  .text_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media all and (min-width: $md-min) {
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+  }
+
+  .btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media all and (min-width: $lg-min) {
+      justify-content: flex-start;
+    }
+
+    .btn {
+      padding: 10px 45px;
+      width: 100%;
+
+      @media all and (min-width: $sm-min) {
+        max-width: 250px;
+      }
+
+      &:after {
+        content: "\f061";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &.lightgrey {
+    .btn.signup_btn {
+      background-image: $themecolorBlueLightBg;
+      color: #fff;
+      border: 1px solid $lightgrey;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &.lightblue {
+    .btn.signup_btn {
+      background: #fff;
+      color: $themecolorBlueLight;
+      border: 1px solid $themecolorBlueLight;
+
+      &:hover {
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  &.blue {
+    .btn.signup_btn {
+      background: #fff;
+      color: $themecolorBlue;
+      border: 1px solid $themecolorBlue;
+
+      &:hover {
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+    }
+  }
+}
+
+.footer-main {
+
+  width: 100%;
+  @include d-inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  background-image: $themecolorDarkGreyBg;
+  min-height: 480px;
+
+  @media all and (max-width: $xs-max) {
+    min-height: 540px;
+  }
+
+  >.container {
+    padding-top: 2rem;
+
+  }
+
+  img {
+    width: 140px;
+    margin-top: -0.5rem;
+  }
+
+  .links {
+
+    @media all and (min-width: $lg-min) {
+      justify-content: flex-end;
+    }
+
+    h5.footer-links-heading {
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      color: #fff;
+      padding-top: 2rem;
+      margin-bottom: 1rem;
+
+      @media all and (min-width: $lg-min) {
+        padding-top: 0;
+      }
+    }
+
+    ul.footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding-bottom: 0.4rem;
+
+        a {
+          color: #fff;
+          font-size: 0.9rem;
+
+          &:hover {
+            color: $themecolorBlueLight;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    padding: 1.5rem 0;
+
+    ul.social {
+      @include d-inline-flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      li.social-item {
+        padding: 0 0.4rem;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        .fab,
+        .fas {
+          font-size: 14px;
+          padding-right: 2px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 50%;
+          transition: 1s;
+          color: #fff;
+
+          &:hover {
+            color: $themecolorBlueLight;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-copy {
+    .copy {
+
+      p {
+        margin-top: 4rem;
+        color: #cbd6e2;
+        font-size: 70%;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 /*********************************

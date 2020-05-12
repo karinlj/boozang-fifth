@@ -30,8 +30,8 @@ wp_nav_menu(array(
                   </a>
                 </li>
                 <li>
-                  <a href="https://app.hubspot.com/meetings/mats-ljunggren">
-                    Request Demo
+                  <a href="https://ai.boozang.com/#security/signup">
+                    Sign Up
                   </a>
                 </li>
               </ul>
