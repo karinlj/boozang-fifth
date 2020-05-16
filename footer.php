@@ -160,11 +160,10 @@ $link = get_sub_field('link');?>
           <div class="row align-items-start">
             <div class="col">
               <div class="copy">
-                <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name');?> INC. ALL RIGHTS RESERVED. Website by <a
+                <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name');?> INC. ALL RIGHTS RESERVED. Theme by <a
                     href="http://karinljunggren.com/" target="_blank">Karin</a>
                 </p>
               </div>
-
             </div>
           </div>
         </div>

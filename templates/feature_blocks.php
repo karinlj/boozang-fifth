@@ -3,8 +3,6 @@
 ?>
 <section class="banner-section section_spacing_top_medium">
   <div class="container">
-    <!-- <div class="row">
-      <div class="col-md-10 offset-md-1"> -->
 
     <?php
 // check if the repeater field has rows
@@ -57,8 +55,6 @@ if (have_rows('feature_blocks_row')) {
 }
 }
 ?>
-    <!-- </div>
-    </div> -->
   </div>
 
 </section>

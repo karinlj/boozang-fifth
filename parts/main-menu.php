@@ -61,12 +61,15 @@ wp_nav_menu(array(
     <div class="signup">
       <ul>
         <li>
-          <a href="<?php echo get_theme_mod('custom-link-sign-up-url'); ?>">
+          <!-- <a href="<?php echo get_theme_mod('custom-link-sign-up-url'); ?>">
+            Login
+          </a> -->
+          <a href="https://ai.boozang.com/">
             Login
           </a>
         </li>
         <li>
-          <a class="btn signup_btn" href="<?php echo get_theme_mod('custom-link-sign-up-url'); ?>">
+          <a class="btn signup_btn" href="https://ai.boozang.com/#security/signup">
             Free Trial
           </a>
         </li>
