@@ -82,6 +82,9 @@ function set_excerpt_length()
 }
 add_filter('excerpt_length', 'set_excerpt_length');
 
+//New file for customizing
+require get_template_directory() . '/inc/customizer.php';
+
 //Menyer
 //register Nav Walker class_alias
 //require_once('wp-bootstrap-navwalker.php');
