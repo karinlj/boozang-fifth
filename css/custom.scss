@@ -1186,21 +1186,23 @@ nav {
 /*********************
     pricing
  *********************/
-.pricing-section {
-  margin-bottom: -5rem;
+.pricing_section {
+  background: $lightgrey;
 
-  @media all and (min-width: $md-min) {
-    margin-bottom: 0;
-  }
-
-  .pricing-preamble {
+  .pricing_preamble {
     margin-bottom: 5rem;
     font-size: 1.2em;
   }
 
+  .cards_wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   .card {
+    text-align: center;
+    width: 33.33333%;
     margin-bottom: 5rem;
-    box-shadow: $themeBox_shadow;
     border-radius: $themeBorder_radius;
     border: none;
 
@@ -1210,131 +1212,86 @@ nav {
   }
 
   .card {
+    border: 1px solid $lightgrey;
+    height: 550px;
 
-    &.green {
-      border-top: 5px solid $themecolorGreenNew;
-    }
+    .card-body {
 
-    &.blue {
-      border-top: 5px solid $themecolorBlue;
+      height: 100%;
     }
 
     &.lightblue {
-      border-top: 5px solid $themecolorBlueLight;
+      background: #1885cd;
+      color: #fff;
+      // height: 580px;
+
+      .text,
+      .heading,
+      .number,
+      li {
+        color: #fff;
+      }
+
+      .pricing_header {
+        border-bottom: 2px solid #1b94e4;
+      }
+    }
+
+    .pricing_header {
+      border-bottom: 2px solid $lightgrey;
+      padding: .25rem 0 1.5rem 0;
+
+      .heading {
+        margin-bottom: 0.2rem;
+      }
+
+      .text {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
     }
   }
 
-  .pricing-card {
-    min-height: 480px;
-    padding-top: 1rem;
+  ul.feat_list {
+    padding: 1.25rem 0 0 0;
+    margin: 0;
+    list-style: none;
+    min-height: 15rem;
 
-    @include d-flex;
-    @include flex-column;
-    flex: 0 0 100%;
-    justify-content: space-between;
+    li.list_item {
+      margin-bottom: 0.8rem;
+    }
+  }
 
-    .heading {
-      font-weight: 400;
-      font-size: 2em;
-      margin-bottom: 0.5rem;
+  .price {
+    padding: 1rem 0;
 
-      @media all and (min-width: $md-min) {
-        font-size: 1.5em;
-      }
+    .number {
+      font-weight: 500;
+      font-size: 1.9rem;
 
-      @media all and (min-width: $lg-min) {
-        font-size: 2em;
+      span {
+        color: $themecolorLighter;
+        font-size: 0.8rem;
       }
     }
+  }
 
-    .text {
-      line-height: 1.4;
-      font-size: 1.3em;
+  .btn {
+    background: $themecolorBlueLight;
+    color: #fff;
+    margin-top: 1rem;
+    padding: 10px 40px;
 
-      @media all and (min-width: $md-min) {
-        font-size: 1.1em;
-      }
-
-      @media all and (min-width: $lg-min) {
-        font-size: 1.3em;
-      }
-    }
-
-    .btn {
-      color: #fff;
-      display: block;
-      margin-top: 1rem;
-
-      @media all and (min-width: $lg-min) {
-        font-size: 1.2em;
-      }
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-
-    .btn {
-      &.green {
-        background: $themecolorGreenNewBg;
-      }
-
-      &.blue {
-        background: $themecolorBlueBg;
-      }
-
-      &.lightblue {
-        background: $themecolorBlueLightBg;
-      }
-    }
-
-    .heading,
-    .text {
-      &.green {
-        color: $themecolorGreenNew;
-      }
-
-      &.blue {
-        color: $themecolorBlue;
-      }
-
-      &.lightblue {
-        color: $themecolorBlueLight;
-      }
-    }
-
-    .price {
-      font-size: 2em;
-      margin-bottom: 0.2rem;
-      font-weight: 300;
-
-      @media all and (min-width: $md-min) {
-        font-size: 1.7em;
-      }
-
-      @media all and (min-width: $lg-min) {
-        font-size: 2em;
-      }
-    }
-
-    .price-text {
-      font-weight: 400;
-      color: $themecolorLighter;
-    }
-
-    ul.feat-list {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      min-height: 15rem;
-
-      li.list-item {
-        margin-bottom: 0.3rem;
-        clear: both;
-      }
+    &:hover {
+      opacity: 0.8;
     }
   }
 }
+
+
+
+
 
 //horizontal-box-section
 .horizontal-box-section {

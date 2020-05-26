@@ -2,12 +2,12 @@
 // pricing layout for Pages Content block
 if (get_row_layout() == 'pricing_cards') {?>
 
- <section class="pricing-section section_spacing_top_medium">
+ <section class="pricing_section section_spacing_top_medium">
 
    <div class="container">
      <div class="row">
-       <div class="col-xl-10 offset-xl-1">
-         <div class="row">
+       <div class="col-12">
+         <div class="cards_wrapper">
 
            <?php //pricing_cards repeater
 
@@ -20,50 +20,46 @@ if (get_row_layout() == 'pricing_cards') {?>
             $color = get_sub_field('color_theme');
             ?>
 
-           <div class="col-md-4">
+           <div class="card <?php echo $color; ?>">
+             <div class="card-body">
 
-             <div class="card <?php echo $color; ?>">
-               <div class="card-body">
+               <div class="pricing_header">
 
-                 <div class="pricing-card">
+                 <h3 class="heading <?php echo $color; ?>"><?php the_sub_field('heading');?></h3>
+                 <p class="text <?php echo $color; ?>"><?php the_sub_field('text');?></p>
+               </div>
 
-                   <h3 class="heading <?php echo $color; ?>"><?php the_sub_field('heading');?></h3>
-
-                   <p class="text <?php echo $color; ?>"><?php the_sub_field('text');?></p>
-
-                   <div class="">
-                     <h2 class="price"><?php the_sub_field('price');?></h2>
-                     <p class="price-text"><?php the_sub_field('price_text');?></p>
-                   </div>
-
-                   <ul class="feat-list">
-                     <?php
+               <ul class="feat_list">
+                 <?php
 // check if the repeater field has rows
             if (have_rows('features_list')) {
 
                 while (have_rows('features_list')) {
                     the_row();
                     ?>
-                     <li class="list-item"><?php the_sub_field('feature');?></li>
+                 <li class="list_item"><?php the_sub_field('feature');?></li>
 
-                     <?php
+                 <?php
 }
             }?>
-                   </ul>
+               </ul>
+               <div class="price">
+                 <h2 class="number"><?php the_sub_field('price');?>
+                   <span><?php the_sub_field('price_text');?></span></h2>
+               </div>
 
-                   <?php
+               <?php
 $btn_link = get_sub_field('button_link');
             ?>
 
-                   <a class="btn <?php echo $color; ?>" href="<?php echo $btn_link['url']; ?>"
-                     target="<?php echo $btn_link['target']; ?>"><?php echo $btn_link['title']; ?></a>
+               <a class="btn <?php echo $color; ?>" href="<?php echo $btn_link['url']; ?>"
+                 target="<?php echo $btn_link['target']; ?>"><?php echo $btn_link['title']; ?></a>
 
-                 </div>
-               </div>
 
              </div>
+
            </div>
-           <!--.col-->
+
 
            <?php
 }?>

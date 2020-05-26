@@ -59,7 +59,7 @@ $signup_button = get_sub_field('signup_button');
 }
 ?>
 
-    <footer class="footer-main section_spacing_top_small">
+    <footer id="footer" class="footer-main section_spacing_top_small">
 
       <div class="container">
         <div class="row align-items-start justify-content-between">

@@ -849,106 +849,68 @@ nav {
 /*********************
     pricing
  *********************/
-.pricing-section {
-  margin-bottom: -5rem; }
-  @media all and (min-width: 768px) {
-    .pricing-section {
-      margin-bottom: 0; } }
-  .pricing-section .pricing-preamble {
+.pricing_section {
+  background: #f6f9fc; }
+  .pricing_section .pricing_preamble {
     margin-bottom: 5rem;
     font-size: 1.2em; }
-  .pricing-section .card {
+  .pricing_section .cards_wrapper {
+    display: flex;
+    align-items: center; }
+  .pricing_section .card {
+    text-align: center;
+    width: 33.33333%;
     margin-bottom: 5rem;
-    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     border: none; }
     @media all and (min-width: 768px) {
-      .pricing-section .card {
+      .pricing_section .card {
         margin-bottom: 0; } }
-  .pricing-section .card.green {
-    border-top: 5px solid #0ba893; }
-  .pricing-section .card.blue {
-    border-top: 5px solid #1b2fe4; }
-  .pricing-section .card.lightblue {
-    border-top: 5px solid #2e9ce6; }
-  .pricing-section .pricing-card {
-    min-height: 480px;
-    padding-top: 1rem;
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-    -webkit-flex-direction: column !important;
-    -ms-flex-direction: column !important;
-    flex-direction: column !important;
-    flex: 0 0 100%;
-    justify-content: space-between; }
-    .pricing-section .pricing-card .heading {
-      font-weight: 400;
-      font-size: 2em;
-      margin-bottom: 0.5rem; }
-      @media all and (min-width: 768px) {
-        .pricing-section .pricing-card .heading {
-          font-size: 1.5em; } }
-      @media all and (min-width: 992px) {
-        .pricing-section .pricing-card .heading {
-          font-size: 2em; } }
-    .pricing-section .pricing-card .text {
-      line-height: 1.4;
-      font-size: 1.3em; }
-      @media all and (min-width: 768px) {
-        .pricing-section .pricing-card .text {
-          font-size: 1.1em; } }
-      @media all and (min-width: 992px) {
-        .pricing-section .pricing-card .text {
-          font-size: 1.3em; } }
-    .pricing-section .pricing-card .btn {
-      color: #fff;
-      display: block;
-      margin-top: 1rem; }
-      @media all and (min-width: 992px) {
-        .pricing-section .pricing-card .btn {
-          font-size: 1.2em; } }
-      .pricing-section .pricing-card .btn:hover {
-        opacity: 0.8; }
-    .pricing-section .pricing-card .btn.green {
-      background: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd); }
-    .pricing-section .pricing-card .btn.blue {
-      background: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4); }
-    .pricing-section .pricing-card .btn.lightblue {
-      background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
-    .pricing-section .pricing-card .heading.green,
-    .pricing-section .pricing-card .text.green {
-      color: #0ba893; }
-    .pricing-section .pricing-card .heading.blue,
-    .pricing-section .pricing-card .text.blue {
-      color: #1b2fe4; }
-    .pricing-section .pricing-card .heading.lightblue,
-    .pricing-section .pricing-card .text.lightblue {
-      color: #2e9ce6; }
-    .pricing-section .pricing-card .price {
-      font-size: 2em;
-      margin-bottom: 0.2rem;
-      font-weight: 300; }
-      @media all and (min-width: 768px) {
-        .pricing-section .pricing-card .price {
-          font-size: 1.7em; } }
-      @media all and (min-width: 992px) {
-        .pricing-section .pricing-card .price {
-          font-size: 2em; } }
-    .pricing-section .pricing-card .price-text {
-      font-weight: 400;
-      color: #a8adbd; }
-    .pricing-section .pricing-card ul.feat-list {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      min-height: 15rem; }
-      .pricing-section .pricing-card ul.feat-list li.list-item {
-        margin-bottom: 0.3rem;
-        clear: both; }
+  .pricing_section .card {
+    border: 1px solid #f6f9fc;
+    height: 550px; }
+    .pricing_section .card .card-body {
+      height: 100%; }
+    .pricing_section .card.lightblue {
+      background: #1885cd;
+      color: #fff; }
+      .pricing_section .card.lightblue .text,
+      .pricing_section .card.lightblue .heading,
+      .pricing_section .card.lightblue .number,
+      .pricing_section .card.lightblue li {
+        color: #fff; }
+      .pricing_section .card.lightblue .pricing_header {
+        border-bottom: 2px solid #1b94e4; }
+    .pricing_section .card .pricing_header {
+      border-bottom: 2px solid #f6f9fc;
+      padding: .25rem 0 1.5rem 0; }
+      .pricing_section .card .pricing_header .heading {
+        margin-bottom: 0.2rem; }
+      .pricing_section .card .pricing_header .text {
+        font-size: 0.9rem;
+        margin-bottom: 0; }
+  .pricing_section ul.feat_list {
+    padding: 1.25rem 0 0 0;
+    margin: 0;
+    list-style: none;
+    min-height: 15rem; }
+    .pricing_section ul.feat_list li.list_item {
+      margin-bottom: 0.8rem; }
+  .pricing_section .price {
+    padding: 1rem 0; }
+    .pricing_section .price .number {
+      font-weight: 500;
+      font-size: 1.9rem; }
+      .pricing_section .price .number span {
+        color: #a8adbd;
+        font-size: 0.8rem; }
+  .pricing_section .btn {
+    background: #2e9ce6;
+    color: #fff;
+    margin-top: 1rem;
+    padding: 10px 40px; }
+    .pricing_section .btn:hover {
+      opacity: 0.8; }
 
 .horizontal-box-section h2.heading {
   margin-bottom: 3rem; }
