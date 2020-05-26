@@ -24,9 +24,10 @@ if (get_row_layout() == 'pricing_cards') {?>
              <div class="card-body">
 
                <div class="pricing_header">
-
-                 <h3 class="heading <?php echo $color; ?>"><?php the_sub_field('heading');?></h3>
-                 <p class="text <?php echo $color; ?>"><?php the_sub_field('text');?></p>
+                 <div class="">
+                   <h3 class="heading <?php echo $color; ?>"><?php the_sub_field('heading');?></h3>
+                   <p class="text <?php echo $color; ?>"><?php the_sub_field('text');?></p>
+                 </div>
                </div>
 
                <ul class="feat_list">

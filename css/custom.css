@@ -868,22 +868,28 @@ nav {
         margin-bottom: 0; } }
   .pricing_section .card {
     border: 1px solid #f6f9fc;
-    height: 550px; }
+    height: 530px; }
     .pricing_section .card .card-body {
+      padding: 0 1.25rem 1.25rem 1.25rem;
       height: 100%; }
     .pricing_section .card.lightblue {
       background: #1885cd;
-      color: #fff; }
+      color: #fff;
+      height: 560px; }
       .pricing_section .card.lightblue .text,
       .pricing_section .card.lightblue .heading,
       .pricing_section .card.lightblue .number,
       .pricing_section .card.lightblue li {
         color: #fff; }
       .pricing_section .card.lightblue .pricing_header {
-        border-bottom: 2px solid #1b94e4; }
+        border-bottom: 2px solid #1b94e4;
+        height: 115px; }
     .pricing_section .card .pricing_header {
       border-bottom: 2px solid #f6f9fc;
-      padding: .25rem 0 1.5rem 0; }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px; }
       .pricing_section .card .pricing_header .heading {
         margin-bottom: 0.2rem; }
       .pricing_section .card .pricing_header .text {
@@ -908,7 +914,11 @@ nav {
     background: #2e9ce6;
     color: #fff;
     margin-top: 1rem;
-    padding: 10px 40px; }
+    padding: 10px 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px; }
     .pricing_section .btn:hover {
       opacity: 0.8; }
 
