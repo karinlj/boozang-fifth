@@ -44,15 +44,7 @@ $themecolorBlueOverlay: linear-gradient(to right bottom,
 //BlueLight
 $themecolorBlueLight: #2e9ce6;
 
-// $themecolorBlueLightBg: linear-gradient(to right bottom, #2f80ed, #0096f4, #00a9f6, #25bbf5, #56ccf2);
-
 $themecolorBlueLightBg: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
-
-
-// $themecolorBlueLightOverlay: linear-gradient(to right bottom,
-//   rgba(47, 128, 237, 0.95),
-//   rgba(86, 204, 242, 0.85));
-
 
 $themecolorBlueLightOverlay: linear-gradient(to right bottom,
   rgba(27, 148, 228, 0.85),
@@ -503,7 +495,8 @@ a.banner_link {
 .header_small,
 .info_banner,
 .get_started_banner,
-.signup_section {
+.signup_section,
+.pricing_banner {
   position: relative;
 
   &.lightblue {
@@ -520,7 +513,54 @@ a.banner_link {
 
   &.lightgrey {
     background: $lightgrey;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $themeHeadingcolor;
+    }
+
+    p {
+      color: $themecolor;
+    }
+
+    .banner_link {
+      color: $themecolorBlueLight;
+
+      &:before {
+        background: $themecolorBlueLightBg;
+      }
+    }
   }
+
+  &.darkgrey {
+    background: $themecolorDarkGreyBg;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fcfdfe;
+    }
+
+    p {
+      color: #fcfdfe;
+    }
+
+    .banner_link {
+      color: #fcfdfe;
+
+      &:before {
+        background: #fcfdfe;
+      }
+    }
+  }
+
 
   &.overlay-dark::before {
     position: absolute;
@@ -1189,128 +1229,168 @@ nav {
 .pricing_section {
   background: $lightgrey;
 
-  .pricing_preamble {
-    margin-bottom: 5rem;
-    font-size: 1.2em;
+  .preamble_section {
+    text-align: center;
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 4rem;
   }
 
   .cards_wrapper {
     display: flex;
     align-items: center;
-  }
 
-  .card {
-    text-align: center;
-    width: 33.33333%;
-    margin-bottom: 5rem;
-    border-radius: $themeBorder_radius;
-    border: none;
-    border: 1px solid $lightgrey;
-    height: 530px;
+    .card {
+      text-align: center;
+      width: 33.33333%;
+      border-radius: $themeBorder_radius;
+      border: 1px solid $lightgrey;
+      height: 530px;
 
-    @media all and (min-width: $md-min) {
-      margin-bottom: 0;
-    }
-
-    &::nth-child(even) {
-      background-color: pink;
-    }
-
-
-    .card-body {
-      padding: 0 1.25rem 1.25rem 1.25rem;
-      height: 100%;
-    }
-
-    &.higher {
-      height: 560px;
+      .card-body {
+        padding: 0 1.25rem 1.25rem 1.25rem;
+        height: 100%;
+      }
 
       .pricing_header {
-        height: 115px;
+        border-bottom: 2px solid $lightgrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+
+        .heading {
+          margin-bottom: 0.2rem;
+        }
+
+        .text {
+          font-size: 0.9rem;
+          margin-bottom: 0;
+        }
       }
-    }
 
-    &.blue {
-      background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4); //#1885cd;
-      color: #fff;
+      ul.feat_list {
+        padding: 1.25rem 0 0 0;
+        margin: 0;
+        list-style: none;
+        min-height: 15rem;
 
-      .text,
-      .heading,
-      .number,
-      li {
+        li.list_item {
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      .price {
+        padding: 1rem 0;
+
+        .number {
+          font-weight: 500;
+          font-size: 1.9rem;
+
+          span {
+            color: $themecolorLighter;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .btn {
+        background: $themecolorBlueLight;
         color: #fff;
+        margin-top: 1rem;
+        padding: 10px 40px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 20px;
+
+        &:hover {
+          opacity: 0.8;
+        }
       }
 
-      .pricing_header {
-        border-bottom: 2px solid #1b94e4;
-      }
-    }
+      //middle card higher
+      &.higher {
+        height: 560px;
 
-    .pricing_header {
-      border-bottom: 2px solid $lightgrey;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100px;
-
-      .heading {
-        margin-bottom: 0.2rem;
+        .pricing_header {
+          height: 115px;
+        }
       }
 
-      .text {
-        font-size: 0.9rem;
-        margin-bottom: 0;
+      //last card blue
+      &.blue_darker {
+        background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
+        color: #fff;
+
+        .text,
+        .heading,
+        .number,
+        li {
+          color: #fff;
+        }
+
+        .pricing_header {
+          border-bottom: 2px solid #1b94e4;
+        }
       }
-    }
-  }
-
-  ul.feat_list {
-    padding: 1.25rem 0 0 0;
-    margin: 0;
-    list-style: none;
-    min-height: 15rem;
-
-    li.list_item {
-      margin-bottom: 0.8rem;
-    }
-  }
-
-  .price {
-    padding: 1rem 0;
-
-    .number {
-      font-weight: 500;
-      font-size: 1.9rem;
-
-      span {
-        color: $themecolorLighter;
-        font-size: 0.8rem;
-      }
-    }
-  }
-
-  .btn {
-    background: $themecolorBlueLight;
-    color: #fff;
-    margin-top: 1rem;
-    padding: 10px 40px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 20px;
-
-
-    &:hover {
-      opacity: 0.8;
     }
   }
 }
 
+/*********************
+    pricing banner
+ *********************/
+.pricing_banner {
+  //background and overlay: see scss section
+  min-height: 330px;
 
+  p {
+    font-size: 1.1rem;
 
+    @media all and (min-width: $lg-min) {
+      font-size: 1.2rem;
+    }
+  }
 
+  h3 {
+    margin-bottom: 1.6rem;
+  }
 
-//horizontal-box-section
+  h5,
+  h3,
+  p {
+    color: #fff;
+
+    &::before {
+      font-weight: 600;
+      font-size: 40px;
+      color: #fff;
+    }
+  }
+
+  .link_wrapper {
+    padding-top: 1rem;
+  }
+
+  .btn_wrapper {
+    padding-top: 1rem;
+
+    .link {
+      background-color: rgba(255, 255, 255, .2);
+      color: #fff;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+/*********************
+horizontal-box-section 
+*********************/
+
 .horizontal-box-section {
   h2.heading {
     margin-bottom: 3rem;

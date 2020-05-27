@@ -325,37 +325,166 @@ a.banner_link {
 .header_small,
 .info_banner,
 .get_started_banner,
-.signup_section {
+.signup_section,
+.pricing_banner {
   position: relative; }
   .header_big.lightblue,
   .header_small.lightblue,
   .info_banner.lightblue,
   .get_started_banner.lightblue,
-  .signup_section.lightblue {
+  .signup_section.lightblue,
+  .pricing_banner.lightblue {
     background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
   .header_big.blue,
   .header_small.blue,
   .info_banner.blue,
   .get_started_banner.blue,
-  .signup_section.blue {
+  .signup_section.blue,
+  .pricing_banner.blue {
     background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4); }
   .header_big.green,
   .header_small.green,
   .info_banner.green,
   .get_started_banner.green,
-  .signup_section.green {
+  .signup_section.green,
+  .pricing_banner.green {
     background-image: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd); }
   .header_big.lightgrey,
   .header_small.lightgrey,
   .info_banner.lightgrey,
   .get_started_banner.lightgrey,
-  .signup_section.lightgrey {
+  .signup_section.lightgrey,
+  .pricing_banner.lightgrey {
     background: #f6f9fc; }
+    .header_big.lightgrey h1,
+    .header_big.lightgrey h2,
+    .header_big.lightgrey h3,
+    .header_big.lightgrey h4,
+    .header_big.lightgrey h5,
+    .header_big.lightgrey h6,
+    .header_small.lightgrey h1,
+    .header_small.lightgrey h2,
+    .header_small.lightgrey h3,
+    .header_small.lightgrey h4,
+    .header_small.lightgrey h5,
+    .header_small.lightgrey h6,
+    .info_banner.lightgrey h1,
+    .info_banner.lightgrey h2,
+    .info_banner.lightgrey h3,
+    .info_banner.lightgrey h4,
+    .info_banner.lightgrey h5,
+    .info_banner.lightgrey h6,
+    .get_started_banner.lightgrey h1,
+    .get_started_banner.lightgrey h2,
+    .get_started_banner.lightgrey h3,
+    .get_started_banner.lightgrey h4,
+    .get_started_banner.lightgrey h5,
+    .get_started_banner.lightgrey h6,
+    .signup_section.lightgrey h1,
+    .signup_section.lightgrey h2,
+    .signup_section.lightgrey h3,
+    .signup_section.lightgrey h4,
+    .signup_section.lightgrey h5,
+    .signup_section.lightgrey h6,
+    .pricing_banner.lightgrey h1,
+    .pricing_banner.lightgrey h2,
+    .pricing_banner.lightgrey h3,
+    .pricing_banner.lightgrey h4,
+    .pricing_banner.lightgrey h5,
+    .pricing_banner.lightgrey h6 {
+      color: #373c49; }
+    .header_big.lightgrey p,
+    .header_small.lightgrey p,
+    .info_banner.lightgrey p,
+    .get_started_banner.lightgrey p,
+    .signup_section.lightgrey p,
+    .pricing_banner.lightgrey p {
+      color: #373c49; }
+    .header_big.lightgrey .banner_link,
+    .header_small.lightgrey .banner_link,
+    .info_banner.lightgrey .banner_link,
+    .get_started_banner.lightgrey .banner_link,
+    .signup_section.lightgrey .banner_link,
+    .pricing_banner.lightgrey .banner_link {
+      color: #2e9ce6; }
+      .header_big.lightgrey .banner_link:before,
+      .header_small.lightgrey .banner_link:before,
+      .info_banner.lightgrey .banner_link:before,
+      .get_started_banner.lightgrey .banner_link:before,
+      .signup_section.lightgrey .banner_link:before,
+      .pricing_banner.lightgrey .banner_link:before {
+        background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
+  .header_big.darkgrey,
+  .header_small.darkgrey,
+  .info_banner.darkgrey,
+  .get_started_banner.darkgrey,
+  .signup_section.darkgrey,
+  .pricing_banner.darkgrey {
+    background: linear-gradient(to right, #21242c, #24272f, #262a33, #292d36, #2c303a); }
+    .header_big.darkgrey h1,
+    .header_big.darkgrey h2,
+    .header_big.darkgrey h3,
+    .header_big.darkgrey h4,
+    .header_big.darkgrey h5,
+    .header_big.darkgrey h6,
+    .header_small.darkgrey h1,
+    .header_small.darkgrey h2,
+    .header_small.darkgrey h3,
+    .header_small.darkgrey h4,
+    .header_small.darkgrey h5,
+    .header_small.darkgrey h6,
+    .info_banner.darkgrey h1,
+    .info_banner.darkgrey h2,
+    .info_banner.darkgrey h3,
+    .info_banner.darkgrey h4,
+    .info_banner.darkgrey h5,
+    .info_banner.darkgrey h6,
+    .get_started_banner.darkgrey h1,
+    .get_started_banner.darkgrey h2,
+    .get_started_banner.darkgrey h3,
+    .get_started_banner.darkgrey h4,
+    .get_started_banner.darkgrey h5,
+    .get_started_banner.darkgrey h6,
+    .signup_section.darkgrey h1,
+    .signup_section.darkgrey h2,
+    .signup_section.darkgrey h3,
+    .signup_section.darkgrey h4,
+    .signup_section.darkgrey h5,
+    .signup_section.darkgrey h6,
+    .pricing_banner.darkgrey h1,
+    .pricing_banner.darkgrey h2,
+    .pricing_banner.darkgrey h3,
+    .pricing_banner.darkgrey h4,
+    .pricing_banner.darkgrey h5,
+    .pricing_banner.darkgrey h6 {
+      color: #fcfdfe; }
+    .header_big.darkgrey p,
+    .header_small.darkgrey p,
+    .info_banner.darkgrey p,
+    .get_started_banner.darkgrey p,
+    .signup_section.darkgrey p,
+    .pricing_banner.darkgrey p {
+      color: #fcfdfe; }
+    .header_big.darkgrey .banner_link,
+    .header_small.darkgrey .banner_link,
+    .info_banner.darkgrey .banner_link,
+    .get_started_banner.darkgrey .banner_link,
+    .signup_section.darkgrey .banner_link,
+    .pricing_banner.darkgrey .banner_link {
+      color: #fcfdfe; }
+      .header_big.darkgrey .banner_link:before,
+      .header_small.darkgrey .banner_link:before,
+      .info_banner.darkgrey .banner_link:before,
+      .get_started_banner.darkgrey .banner_link:before,
+      .signup_section.darkgrey .banner_link:before,
+      .pricing_banner.darkgrey .banner_link:before {
+        background: #fcfdfe; }
   .header_big.overlay-dark::before,
   .header_small.overlay-dark::before,
   .info_banner.overlay-dark::before,
   .get_started_banner.overlay-dark::before,
-  .signup_section.overlay-dark::before {
+  .signup_section.overlay-dark::before,
+  .pricing_banner.overlay-dark::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -368,7 +497,8 @@ a.banner_link {
   .header_small.overlay-lightblue::before,
   .info_banner.overlay-lightblue::before,
   .get_started_banner.overlay-lightblue::before,
-  .signup_section.overlay-lightblue::before {
+  .signup_section.overlay-lightblue::before,
+  .pricing_banner.overlay-lightblue::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -381,7 +511,8 @@ a.banner_link {
   .header_small.overlay-blue::before,
   .info_banner.overlay-blue::before,
   .get_started_banner.overlay-blue::before,
-  .signup_section.overlay-blue::before {
+  .signup_section.overlay-blue::before,
+  .pricing_banner.overlay-blue::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -394,7 +525,8 @@ a.banner_link {
   .header_small.overlay-green::before,
   .info_banner.overlay-green::before,
   .get_started_banner.overlay-green::before,
-  .signup_section.overlay-green::before {
+  .signup_section.overlay-green::before,
+  .pricing_banner.overlay-green::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -851,80 +983,110 @@ nav {
  *********************/
 .pricing_section {
   background: #f6f9fc; }
-  .pricing_section .pricing_preamble {
-    margin-bottom: 5rem;
-    font-size: 1.2em; }
+  .pricing_section .preamble_section {
+    text-align: center;
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 4rem; }
   .pricing_section .cards_wrapper {
     display: flex;
     align-items: center; }
-  .pricing_section .card {
-    text-align: center;
-    width: 33.33333%;
-    margin-bottom: 5rem;
-    border-radius: 10px;
-    border: none;
-    border: 1px solid #f6f9fc;
-    height: 530px; }
-    @media all and (min-width: 768px) {
-      .pricing_section .card {
-        margin-bottom: 0; } }
-    .pricing_section .card::nth-child(even) {
-      background-color: pink; }
-    .pricing_section .card .card-body {
-      padding: 0 1.25rem 1.25rem 1.25rem;
-      height: 100%; }
-    .pricing_section .card.higher {
-      height: 560px; }
-      .pricing_section .card.higher .pricing_header {
-        height: 115px; }
-    .pricing_section .card.blue {
-      background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
-      color: #fff; }
-      .pricing_section .card.blue .text,
-      .pricing_section .card.blue .heading,
-      .pricing_section .card.blue .number,
-      .pricing_section .card.blue li {
+    .pricing_section .cards_wrapper .card {
+      text-align: center;
+      width: 33.33333%;
+      border-radius: 10px;
+      border: 1px solid #f6f9fc;
+      height: 530px; }
+      .pricing_section .cards_wrapper .card .card-body {
+        padding: 0 1.25rem 1.25rem 1.25rem;
+        height: 100%; }
+      .pricing_section .cards_wrapper .card .pricing_header {
+        border-bottom: 2px solid #f6f9fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px; }
+        .pricing_section .cards_wrapper .card .pricing_header .heading {
+          margin-bottom: 0.2rem; }
+        .pricing_section .cards_wrapper .card .pricing_header .text {
+          font-size: 0.9rem;
+          margin-bottom: 0; }
+      .pricing_section .cards_wrapper .card ul.feat_list {
+        padding: 1.25rem 0 0 0;
+        margin: 0;
+        list-style: none;
+        min-height: 15rem; }
+        .pricing_section .cards_wrapper .card ul.feat_list li.list_item {
+          margin-bottom: 0.8rem; }
+      .pricing_section .cards_wrapper .card .price {
+        padding: 1rem 0; }
+        .pricing_section .cards_wrapper .card .price .number {
+          font-weight: 500;
+          font-size: 1.9rem; }
+          .pricing_section .cards_wrapper .card .price .number span {
+            color: #a8adbd;
+            font-size: 0.8rem; }
+      .pricing_section .cards_wrapper .card .btn {
+        background: #2e9ce6;
+        color: #fff;
+        margin-top: 1rem;
+        padding: 10px 40px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 20px; }
+        .pricing_section .cards_wrapper .card .btn:hover {
+          opacity: 0.8; }
+      .pricing_section .cards_wrapper .card.higher {
+        height: 560px; }
+        .pricing_section .cards_wrapper .card.higher .pricing_header {
+          height: 115px; }
+      .pricing_section .cards_wrapper .card.blue_darker {
+        background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
         color: #fff; }
-      .pricing_section .card.blue .pricing_header {
-        border-bottom: 2px solid #1b94e4; }
-    .pricing_section .card .pricing_header {
-      border-bottom: 2px solid #f6f9fc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100px; }
-      .pricing_section .card .pricing_header .heading {
-        margin-bottom: 0.2rem; }
-      .pricing_section .card .pricing_header .text {
-        font-size: 0.9rem;
-        margin-bottom: 0; }
-  .pricing_section ul.feat_list {
-    padding: 1.25rem 0 0 0;
-    margin: 0;
-    list-style: none;
-    min-height: 15rem; }
-    .pricing_section ul.feat_list li.list_item {
-      margin-bottom: 0.8rem; }
-  .pricing_section .price {
-    padding: 1rem 0; }
-    .pricing_section .price .number {
-      font-weight: 500;
-      font-size: 1.9rem; }
-      .pricing_section .price .number span {
-        color: #a8adbd;
-        font-size: 0.8rem; }
-  .pricing_section .btn {
-    background: #2e9ce6;
-    color: #fff;
-    margin-top: 1rem;
-    padding: 10px 40px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 20px; }
-    .pricing_section .btn:hover {
-      opacity: 0.8; }
+        .pricing_section .cards_wrapper .card.blue_darker .text,
+        .pricing_section .cards_wrapper .card.blue_darker .heading,
+        .pricing_section .cards_wrapper .card.blue_darker .number,
+        .pricing_section .cards_wrapper .card.blue_darker li {
+          color: #fff; }
+        .pricing_section .cards_wrapper .card.blue_darker .pricing_header {
+          border-bottom: 2px solid #1b94e4; }
 
+/*********************
+    pricing banner
+ *********************/
+.pricing_banner {
+  min-height: 330px; }
+  .pricing_banner p {
+    font-size: 1.1rem; }
+    @media all and (min-width: 992px) {
+      .pricing_banner p {
+        font-size: 1.2rem; } }
+  .pricing_banner h3 {
+    margin-bottom: 1.6rem; }
+  .pricing_banner h5,
+  .pricing_banner h3,
+  .pricing_banner p {
+    color: #fff; }
+    .pricing_banner h5::before,
+    .pricing_banner h3::before,
+    .pricing_banner p::before {
+      font-weight: 600;
+      font-size: 40px;
+      color: #fff; }
+  .pricing_banner .link_wrapper {
+    padding-top: 1rem; }
+  .pricing_banner .btn_wrapper {
+    padding-top: 1rem; }
+    .pricing_banner .btn_wrapper .link {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff; }
+      .pricing_banner .btn_wrapper .link:hover {
+        opacity: 0.8; }
+
+/*********************
+horizontal-box-section 
+*********************/
 .horizontal-box-section h2.heading {
   margin-bottom: 3rem; }
 .horizontal-box-section .card {

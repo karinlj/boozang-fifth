@@ -1,6 +1,6 @@
 <?php
-// get started layout for  Pages Content block
-if (get_row_layout() == 'info_banner') {?>
+// pricing banner layout for Pages Content block
+if (get_row_layout() == 'pricing_banner') {?>
 
 <?php
 $style = '';
@@ -13,12 +13,12 @@ $style = '';
     }
     ?>
 
-<section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
+<section class="pricing_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_big"
   <?php echo $style; ?>>
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-8 offset-md-2 text-center">
         <?php
 $heading = get_sub_field('heading');
     $text = get_sub_field('text');
@@ -71,5 +71,6 @@ $heading = get_sub_field('heading');
     </div>
   </div>
 </section>
+
 <?php
 }?>
