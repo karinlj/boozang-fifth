@@ -27,10 +27,10 @@ $themeBorderColor: #ebebeb;
 $themecolorLighter: #a8adbd;
 
 $themeHeadingcolor: #373c49; // #21242c;
-$lightgrey: #f6f9fc; //#f9f9f9; 
+$lightgrey: #f9f9f9; //#f6f9fc; 
 $mediumgrey: #f1f1f4;
 $themecolorGreen: #18cd61;
-$themecolorYellow: #e62e65;
+$themecolorRed: #e62e65;
 $linkhoverOpacity: 0.7;
 
 //Blue
@@ -1228,7 +1228,6 @@ nav {
  *********************/
 .pricing_section {
   //background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(243, 244, 246, 1) 100%); 
-
   background: $lightgrey;
 
   .preamble_section {
@@ -1246,6 +1245,7 @@ nav {
       text-align: center;
       width: 33.33333%;
       border-radius: $themeBorder_radius;
+      box-shadow: $themeBox_shadow;
       border: 1px solid $lightgrey;
       height: 530px;
 
@@ -1341,49 +1341,42 @@ nav {
 }
 
 /*********************
-    pricing banner
- *********************/
-.pricing_banner {
-  //background and overlay: see scss section
-  min-height: 330px;
-
-  p {
-    font-size: 1.1rem;
-
-    @media all and (min-width: $lg-min) {
-      font-size: 1.2rem;
-    }
+feature list
+*********************/
+.feature_list_section {
+  .heading {
+    margin-bottom: 4rem;
   }
 
-  h3 {
-    margin-bottom: 1.6rem;
-  }
+  .feature_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  h5,
-  h3,
-  p {
-    color: #fff;
+    .feature_list_item {
+      width: 30%;
+      display: flex;
+      padding-bottom: 2rem;
 
-    &::before {
-      font-weight: 600;
-      font-size: 40px;
-      color: #fff;
-    }
-  }
+      .features_icon {
+        height: 3rem;
+        background-color: #e8eaf4;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-  .link_wrapper {
-    padding-top: 1rem;
-  }
+        i {
+          padding: 1rem;
+          color: $themecolorGreen;
+        }
+      }
 
-  .btn_wrapper {
-    padding-top: 1rem;
-
-    .link {
-      background-color: rgba(255, 255, 255, .2);
-      color: #fff;
-
-      &:hover {
-        opacity: 0.8;
+      .info {
+        padding-left: 1rem;
       }
     }
   }
@@ -1394,10 +1387,12 @@ horizontal-box-section
 *********************/
 
 .horizontal_boxes_section {
-  // background: $themecolorDarkGreyBg;
+  background: #393a51;
+  // background: $themecolorGreenNewBg;
 
   .heading {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    color: #fcfdfe;
   }
 
   .card {
@@ -1405,6 +1400,9 @@ horizontal-box-section
     padding: 0.5rem 1.5rem;
     box-shadow: $themeBox_shadow;
     border: none;
+    border-top: 5px solid $themecolorGreen;
+    // border-top: 5px solid #e6e6e6;
+
     background: #fff;
     margin-bottom: 3rem;
 

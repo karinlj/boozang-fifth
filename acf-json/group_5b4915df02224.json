@@ -896,6 +896,144 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5ece95936814b": {
+                    "key": "layout_5ece95936814b",
+                    "name": "faq_accordion",
+                    "label": "FAQ accordion",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ece95b46814c",
+                            "label": "FAQ accordion",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5ece9712d0d2a": {
+                    "key": "layout_5ece9712d0d2a",
+                    "name": "feature_list",
+                    "label": "Feature list",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ececba3457f6",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5ecec93ed82b7",
+                            "label": "Feature list",
+                            "name": "feature_list",
+                            "type": "repeater",
+                            "instructions": "List with icon, heading and text.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Feature item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5ecec9add82ba",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "check": "Check"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": "",
+                                    "layout": "vertical",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
+                                },
+                                {
+                                    "key": "field_5ecec93ed82b8",
+                                    "label": "Item heading",
+                                    "name": "item_heading",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5ecec93ed82b9",
+                                    "label": "Item text",
+                                    "name": "item_text",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -934,5 +1072,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1590596355
+    "modified": 1590611206
 }
