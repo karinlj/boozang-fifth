@@ -13,14 +13,23 @@ if (get_row_layout() == 'pricing_cards') {?>
 
     // check if the repeater field has rows
     if (have_rows('pricing_cards')) {
-
+        //count for setting classes
+        $count = 0;
         while (have_rows('pricing_cards')) {
             the_row();
 
             $color = get_sub_field('color_theme');
             ?>
 
-           <div class="card <?php echo $color; ?>">
+           <div class="card <?php echo $color;
+            if ($count == 1) {
+                ?>
+             higher
+                <?php } elseif ($count == 2) {
+                ?> blue
+                <?php }
+            ?>">
+
              <div class="card-body">
 
                <div class="pricing_header">
@@ -63,7 +72,8 @@ $btn_link = get_sub_field('button_link');
 
 
            <?php
-}?>
+$count++;
+        }?>
 
            <?php
 }

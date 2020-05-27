@@ -862,28 +862,31 @@ nav {
     width: 33.33333%;
     margin-bottom: 5rem;
     border-radius: 10px;
-    border: none; }
+    border: none;
+    border: 1px solid #f6f9fc;
+    height: 530px; }
     @media all and (min-width: 768px) {
       .pricing_section .card {
         margin-bottom: 0; } }
-  .pricing_section .card {
-    border: 1px solid #f6f9fc;
-    height: 530px; }
+    .pricing_section .card::nth-child(even) {
+      background-color: pink; }
     .pricing_section .card .card-body {
       padding: 0 1.25rem 1.25rem 1.25rem;
       height: 100%; }
-    .pricing_section .card.lightblue {
-      background: #1885cd;
-      color: #fff;
+    .pricing_section .card.higher {
       height: 560px; }
-      .pricing_section .card.lightblue .text,
-      .pricing_section .card.lightblue .heading,
-      .pricing_section .card.lightblue .number,
-      .pricing_section .card.lightblue li {
-        color: #fff; }
-      .pricing_section .card.lightblue .pricing_header {
-        border-bottom: 2px solid #1b94e4;
+      .pricing_section .card.higher .pricing_header {
         height: 115px; }
+    .pricing_section .card.blue {
+      background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
+      color: #fff; }
+      .pricing_section .card.blue .text,
+      .pricing_section .card.blue .heading,
+      .pricing_section .card.blue .number,
+      .pricing_section .card.blue li {
+        color: #fff; }
+      .pricing_section .card.blue .pricing_header {
+        border-bottom: 2px solid #1b94e4; }
     .pricing_section .card .pricing_header {
       border-bottom: 2px solid #f6f9fc;
       display: flex;

@@ -1205,25 +1205,34 @@ nav {
     margin-bottom: 5rem;
     border-radius: $themeBorder_radius;
     border: none;
+    border: 1px solid $lightgrey;
+    height: 530px;
 
     @media all and (min-width: $md-min) {
       margin-bottom: 0;
     }
-  }
 
-  .card {
-    border: 1px solid $lightgrey;
-    height: 530px;
+    &::nth-child(even) {
+      background-color: pink;
+    }
+
 
     .card-body {
       padding: 0 1.25rem 1.25rem 1.25rem;
       height: 100%;
     }
 
-    &.lightblue {
-      background: #1885cd;
-      color: #fff;
+    &.higher {
       height: 560px;
+
+      .pricing_header {
+        height: 115px;
+      }
+    }
+
+    &.blue {
+      background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4); //#1885cd;
+      color: #fff;
 
       .text,
       .heading,
@@ -1234,8 +1243,6 @@ nav {
 
       .pricing_header {
         border-bottom: 2px solid #1b94e4;
-
-        height: 115px;
       }
     }
 
