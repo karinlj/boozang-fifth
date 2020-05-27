@@ -1,29 +1,29 @@
 <?php
 // boxes layout for Pages Content block
-if (get_row_layout() == 'horizontal_box') {?>
+if (get_row_layout() == 'horizontal_boxes') {?>
 
-<section class="horizontal-box-section section_spacing_top_medium">
+<section class="horizontal_boxes_section section_spacing_top_medium">
 
-  <h2 class="heading text-center"><?php the_sub_field('heading');?></h2>
+  <h3 class="heading text-center"><?php the_sub_field('heading');?></h3>
 
   <div class="container">
     <div class="row justify-content-center">
 
       <?php //horizontal_box repeater
-    if (have_rows('horizontal_box')) {
+    if (have_rows('horizontal_boxes')) {
 
-        while (have_rows('horizontal_box')) {
+        while (have_rows('horizontal_boxes')) {
             the_row();
             ?>
 
-      <div class="col-lg-10">
+      <div class="col-lg-6">
         <div class="card">
           <div class="card-body">
             <div class="horizontal-box">
 
               <div class="row align-items-center justify-content-between">
-                <div class="col-sm-8">
-                  <h3 class="heading>"><?php the_sub_field('heading');?></h3>
+                <div class="col-sm-9">
+                  <h4 class="heading>"><?php the_sub_field('heading');?></h4>
 
                   <p class="text <?php echo $color; ?>"><?php the_sub_field('text');?></p>
                   <?php $link = get_sub_field('mail_link');?>
@@ -36,7 +36,7 @@ if (get_row_layout() == 'horizontal_box') {?>
 
                 <div class="col-sm-3">
                   <div class="price">
-                    <h2 class=""><?php the_sub_field('price');?></h2>
+                    <h3 class=""><?php the_sub_field('price');?></h3>
                     <p class="price-text"><?php the_sub_field('price_text');?></p>
 
                   </div>
