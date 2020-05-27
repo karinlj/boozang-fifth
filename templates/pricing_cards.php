@@ -72,19 +72,13 @@ $btn_link = get_sub_field('button_link');
                <a class="btn" href="<?php echo $btn_link['url']; ?>"
                  target="<?php echo $btn_link['target']; ?>"><?php echo $btn_link['title']; ?></a>
 
-
              </div>
-
            </div>
-
-
            <?php
 $count++;
-        }?>
+        }
+    }?>
 
-           <?php
-}
-    ?>
          </div>
        </div>
      </div>
