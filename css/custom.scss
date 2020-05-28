@@ -1377,6 +1377,10 @@ feature list
 
       .info {
         padding-left: 1rem;
+
+        .item_text {
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -1387,12 +1391,10 @@ horizontal-box-section
 *********************/
 
 .horizontal_boxes_section {
-  background: #393a51;
   background: $lightgrey;
 
   .heading {
     margin-bottom: 4rem;
-    color: #fcfdfe;
   }
 
   .card {
@@ -1408,6 +1410,10 @@ horizontal-box-section
 
     .col-sm-9 {
       border-right: 2px solid #e6e6e6;
+
+      .text {
+        font-size: 0.9rem;
+      }
     }
 
     .col-sm-3 {

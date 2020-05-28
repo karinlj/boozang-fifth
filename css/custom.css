@@ -1081,16 +1081,16 @@ feature list
         color: #18cd61; }
     .feature_list_section .feature_list .feature_list_item .info {
       padding-left: 1rem; }
+      .feature_list_section .feature_list .feature_list_item .info .item_text {
+        font-size: 0.9rem; }
 
 /*********************
 horizontal-box-section 
 *********************/
 .horizontal_boxes_section {
-  background: #393a51;
   background: #f9f9f9; }
   .horizontal_boxes_section .heading {
-    margin-bottom: 4rem;
-    color: #fcfdfe; }
+    margin-bottom: 4rem; }
   .horizontal_boxes_section .card {
     height: 250px;
     padding: 0.5rem 1.5rem;
@@ -1101,6 +1101,8 @@ horizontal-box-section
     margin-bottom: 3rem; }
     .horizontal_boxes_section .card .col-sm-9 {
       border-right: 2px solid #e6e6e6; }
+      .horizontal_boxes_section .card .col-sm-9 .text {
+        font-size: 0.9rem; }
     @media all and (min-width: 576px) {
       .horizontal_boxes_section .card .col-sm-3 {
         text-align: center; } }
