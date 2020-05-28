@@ -15,12 +15,15 @@
 
       <div class="col-lg-6">
         <div class="info_list_item">
-          <div class="heading_part">
+
+          <div class="question_part">
             <h5><?php echo $question; ?></h5>
-            <i class="fas fa-angle-down"></i>
+            <!-- <i class="fas fa-chevron-down"></i> -->
           </div>
 
-          <p><?php echo $answer; ?> </p>
+          <div class="answer_part">
+            <p><?php echo $answer; ?> </p>
+          </div>
         </div>
 
       </div>

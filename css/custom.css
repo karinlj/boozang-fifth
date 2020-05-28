@@ -1071,13 +1071,9 @@ feature list
     padding-bottom: 2rem; }
     .feature_list_section .feature_list .feature_list_item .features_icon {
       height: 3rem;
-      background-color: #e8eaf4;
-      border-radius: 2px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      border-radius: 2px; }
       .feature_list_section .feature_list .feature_list_item .features_icon i {
-        padding: 1rem;
+        padding: 0 1rem 1rem 1rem;
         color: #18cd61; }
     .feature_list_section .feature_list .feature_list_item .info {
       padding-left: 1rem; }
@@ -1096,8 +1092,6 @@ horizontal-box-section
     padding: 0.5rem 1.5rem;
     box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
     border: none;
-    border-top: 5px solid #18cd61;
-    background: #fff;
     margin-bottom: 3rem; }
     .horizontal_boxes_section .card .col-sm-9 {
       border-right: 2px solid #e6e6e6; }
@@ -1111,18 +1105,40 @@ horizontal-box-section
       color: #2e9ce6; }
     .horizontal_boxes_section .card .col-sm-3 .price-text {
       font-weight: 400; }
+    .horizontal_boxes_section .card.blue {
+      border-top: 5px solid #1b2fe4; }
+    .horizontal_boxes_section .card.lightblue {
+      border-top: 5px solid #2e9ce6; }
+    .horizontal_boxes_section .card.green {
+      border-top: 5px solid #18cd61; }
+    .horizontal_boxes_section .card.red {
+      border-top: 5px solid #e62e65; }
 
 /*********************
    faq accordion
 *********************/
-.faq_accordion_section .info_list_item {
-  padding: 1rem; }
-  .faq_accordion_section .info_list_item .heading_part {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .faq_accordion_section .info_list_item .heading_part i {
-      font-size: 1.5rem; }
+.faq_accordion_section .info_list_item .question_part {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer; }
+  .faq_accordion_section .info_list_item .question_part:after {
+    font-family: "Font Awesome 5 Free";
+    margin-left: 0.7rem;
+    font-size: 1rem;
+    content: '\f078';
+    font-weight: 600;
+    transition: max-height 0.5s ease-out; }
+.faq_accordion_section .info_list_item .question_part.active {
+  display: flex; }
+  .faq_accordion_section .info_list_item .question_part.active:after {
+    content: '\f077'; }
+.faq_accordion_section .info_list_item .answer_part {
+  padding: 0 0 1rem 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out; }
+  .faq_accordion_section .info_list_item .answer_part.open {
+    max-height: 200px; }
 
 /*********************
    info banner

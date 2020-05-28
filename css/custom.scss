@@ -26,7 +26,7 @@ $themecolor: #373c49;
 $themeBorderColor: #ebebeb;
 $themecolorLighter: #a8adbd;
 
-$themeHeadingcolor: #373c49; // #21242c;
+$themeHeadingcolor: #373c49;
 $lightgrey: #f9f9f9; //#f6f9fc; 
 $mediumgrey: #f1f1f4;
 $themecolorGreen: #18cd61;
@@ -1363,14 +1363,12 @@ feature list
 
       .features_icon {
         height: 3rem;
-        background-color: #e8eaf4;
+        //  background-color: #e8eaf4;
         border-radius: 2px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         i {
-          padding: 1rem;
+          // padding: 1rem;
+          padding: 0 1rem 1rem 1rem;
           color: $themecolorGreen;
         }
       }
@@ -1402,10 +1400,6 @@ horizontal-box-section
     padding: 0.5rem 1.5rem;
     box-shadow: $themeBox_shadow;
     border: none;
-    border-top: 5px solid $themecolorGreen;
-    // border-top: 5px solid #e6e6e6;
-
-    background: #fff;
     margin-bottom: 3rem;
 
     .col-sm-9 {
@@ -1433,6 +1427,26 @@ horizontal-box-section
         font-weight: 400;
       }
     }
+
+    &.blue {
+      border-top: 5px solid $themecolorBlue;
+
+    }
+
+    &.lightblue {
+      border-top: 5px solid $themecolorBlueLight;
+
+    }
+
+    &.green {
+      border-top: 5px solid $themecolorGreen;
+
+    }
+
+    &.red {
+      border-top: 5px solid $themecolorRed;
+
+    }
   }
 }
 
@@ -1442,18 +1456,41 @@ horizontal-box-section
 .faq_accordion_section {
 
   .info_list_item {
-    padding: 1rem;
 
-    .heading_part {
+    .question_part {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
+      cursor: pointer;
 
-      i {
-        font-size: 1.5rem;
+      &:after {
+        font-family: "Font Awesome 5 Free";
+        margin-left: 0.7rem;
+        font-size: 1rem;
+        content: '\f078';
+        font-weight: 600;
+        transition: max-height 0.5s ease-out;
+        //color: $themecolorLighter;
       }
     }
 
+    .question_part.active {
+      display: flex;
+
+      &:after {
+        content: '\f077';
+      }
+    }
+
+    .answer_part {
+      padding: 0 0 1rem 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+
+      &.open {
+        max-height: 200px;
+      }
+    }
   }
 
 }

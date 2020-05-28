@@ -1,11 +1,20 @@
 /*My mobile menu*/
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
+
+
+  /*when click on chevron in faq_accordion_list...add or remove class */
+  $(".question_part").click(function (e) {
+    $(this).toggleClass("active");
+    $(this).siblings(".answer_part").toggleClass("open");
+    //$(this).parent().next().toggleClass("open");
+  });
+
   /*Blog Sidebar Categories*/
   $(".blog-sidebar ul").prepend(
     '<li class="most-recent"><a href="/blog">Most Recent</a></li>'
   );
 
-  $(window).on("load", function() {
+  $(window).on("load", function () {
     var path = window.location.pathname;
 
     if (path.indexOf("blog") >= 0) {
@@ -17,21 +26,21 @@ jQuery(document).ready(function($) {
   });
 
   /*when click on veggoburger...add or remove class */
-  $(".toggle").click(function() {
+  $(".toggle").click(function () {
     $(".nav-mobile").toggleClass("nav-mobile-open");
   });
 
   /*Desktop*/
   /*when click on menu-item with sub-menu...add or remove class*/
 
-  $("nav ul li.menu-item-has-children").click(function(event) {
+  $("nav ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation(); /* to stop the 'document handler' from activating at the same time as the click event on class */
     $(this).children("ul").toggleClass("sub-menu-open");
     //$('nav ul li.menu-item-has-children ul').toggleClass('sub-menu-open');
   });
 
   /*remove class clicking anywhere on page*/
-  $(document).click(function(event) {
+  $(document).click(function (event) {
     if (!$(event.target).closest("nav ul li.menu-item-has-children ul").length) {
       $("nav ul li.menu-item-has-children ul").removeClass("sub-menu-open");
     }
@@ -39,14 +48,14 @@ jQuery(document).ready(function($) {
 
   /*Mobile menu*/
 
-  $(".nav-mobile ul li.menu-item-has-children").click(function(event) {
+  $(".nav-mobile ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation(); /* to stop the 'document handler' from activating at the same time as the click event on class */
     //$('.nav-mobile ul li.menu-item-has-children ul').toggleClass('sub-menu-open');
     $(this).children("ul").toggleClass("sub-menu-open");
   });
 
   /*remove class clicking anywhere on page*/
-  $(document).click(function(event) {
+  $(document).click(function (event) {
     if (!$(event.target).closest(".nav-mobile ul li.menu-item-has-children ul").length) {
       $(".nav-mobile ul li.menu-item-has-children ul").removeClass("sub-menu-open");
     }
@@ -144,7 +153,7 @@ jQuery(document).ready(function($) {
         changeClassPrev();
     });*/
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     console.log("ready!");
     $("li.feat-menu-item.active").removeClass("active"); //remove active class on li
     $("img.feat-img.active").removeClass("active"); //remove active class on li
@@ -158,7 +167,7 @@ jQuery(document).ready(function($) {
     $(".comes-last li.feat-menu-item:first").addClass("active"); //set active class on first li
   });
 
-  $("li.feat-menu-item").click(function() {
+  $("li.feat-menu-item").click(function () {
     //click on span tag
 
     $("li.feat-menu-item.active").removeClass("active"); //remove active class on li

@@ -14,10 +14,11 @@ if (get_row_layout() == 'horizontal_boxes') {?>
 
         while (have_rows('horizontal_boxes')) {
             the_row();
+            $color = get_sub_field('color_theme');
             ?>
 
       <div class="col-lg-6">
-        <div class="card">
+        <div class="card <?php echo $color; ?>">
           <div class="card-body">
             <div class="horizontal-box">
 
