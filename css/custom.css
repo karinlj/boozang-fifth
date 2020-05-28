@@ -1086,7 +1086,8 @@ feature list
 horizontal-box-section 
 *********************/
 .horizontal_boxes_section {
-  background: #393a51; }
+  background: #393a51;
+  background: #f9f9f9; }
   .horizontal_boxes_section .heading {
     margin-bottom: 4rem;
     color: #fcfdfe; }
@@ -1108,6 +1109,18 @@ horizontal-box-section
       color: #2e9ce6; }
     .horizontal_boxes_section .card .col-sm-3 .price-text {
       font-weight: 400; }
+
+/*********************
+   faq accordion
+*********************/
+.faq_accordion_section .info_list_item {
+  padding: 1rem; }
+  .faq_accordion_section .info_list_item .heading_part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .faq_accordion_section .info_list_item .heading_part i {
+      font-size: 1.5rem; }
 
 /*********************
    info banner

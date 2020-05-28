@@ -904,11 +904,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5ece95b46814c",
-                            "label": "FAQ accordion",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
+                            "key": "field_5ecf7f674339b",
+                            "label": "FAQ accordion list",
+                            "name": "faq_accordion_list",
+                            "type": "repeater",
+                            "instructions": "List with heading and text.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -916,9 +916,51 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "open": 0,
-                            "multi_expand": 0,
-                            "endpoint": 0
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5ecf7f674339c",
+                                    "label": "Question",
+                                    "name": "question",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5ecf7f674339d",
+                                    "label": "Answer",
+                                    "name": "answer",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -1072,5 +1114,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1590611206
+    "modified": 1590657650
 }
