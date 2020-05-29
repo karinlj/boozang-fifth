@@ -4,9 +4,8 @@ jQuery(document).ready(function ($) {
 
   /*when click on chevron in faq_accordion_list...add or remove class */
   $(".question_part").click(function (e) {
-    $(this).toggleClass("active");
+    $(this).find(".question").toggleClass("active");
     $(this).siblings(".answer_part").toggleClass("open");
-    //$(this).parent().next().toggleClass("open");
   });
 
   /*Blog Sidebar Categories*/

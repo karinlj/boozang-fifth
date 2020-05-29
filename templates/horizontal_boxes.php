@@ -1,12 +1,14 @@
 <?php
 // boxes layout for Pages Content block
-if (get_row_layout() == 'horizontal_boxes') {?>
+if (get_row_layout() == 'horizontal_boxes') {
+
+    $heading = get_sub_field('heading');?>
 
 <section class="horizontal_boxes_section section_spacing_top_medium">
 
-  <h3 class="heading text-center"><?php the_sub_field('heading');?></h3>
-
   <div class="container">
+    <h3 class="heading text-center"><?php echo $heading; ?></h3>
+
     <div class="row justify-content-center">
 
       <?php //horizontal_box repeater
@@ -15,6 +17,11 @@ if (get_row_layout() == 'horizontal_boxes') {?>
         while (have_rows('horizontal_boxes')) {
             the_row();
             $color = get_sub_field('color_theme');
+
+            $box_heading = get_sub_field('heading');
+            $box_text = get_sub_field('text');
+            $box_price = get_sub_field('price');
+            $mail_link = get_sub_field('mail_link');
             ?>
 
       <div class="col-lg-6">
@@ -24,22 +31,19 @@ if (get_row_layout() == 'horizontal_boxes') {?>
 
               <div class="row align-items-center justify-content-between">
                 <div class="col-sm-9">
-                  <h4 class="heading>"><?php the_sub_field('heading');?></h4>
+                  <h4 class="heading>"><?php echo $box_heading; ?></h4>
 
-                  <p class="text <?php echo $color; ?>"><?php the_sub_field('text');?></p>
-                  <?php $link = get_sub_field('mail_link');?>
+                  <p class="text <?php echo $color; ?>"><?php echo $box_text; ?></p>
 
                   <p class="">
                     <a href="mailto:<?php echo $link; ?>" target="_blank"><i class="fas fa-envelope"
-                        aria-hidden="true"></i> <?php echo $link; ?></a>
+                        aria-hidden="true"></i> <?php echo $mail_link; ?></a>
                   </p>
                 </div>
 
                 <div class="col-sm-3">
                   <div class="price">
-                    <h3 class=""><?php the_sub_field('price');?></h3>
-                    <p class="price-text"><?php the_sub_field('price_text');?></p>
-
+                    <h3 class=""><?php echo $box_price; ?></h3>
                   </div>
                 </div>
               </div>

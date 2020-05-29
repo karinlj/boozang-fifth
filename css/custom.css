@@ -420,7 +420,7 @@ a.banner_link {
   .get_started_banner.darkgrey,
   .signup_section.darkgrey,
   .pricing_banner.darkgrey {
-    background: linear-gradient(to right, #21242c, #24272f, #262a33, #292d36, #2c303a); }
+    background: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857); }
     .header_big.darkgrey h1,
     .header_big.darkgrey h2,
     .header_big.darkgrey h3,
@@ -798,7 +798,7 @@ nav {
     width: 100%; }
     .nav-mobile .signup ul li .signup_btn {
       margin: 1rem 0.5rem;
-      background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+      background: #2e9ce6;
       color: #fff !important;
       border: 1px solid #2e9ce6;
       width: 100%; }
@@ -985,100 +985,102 @@ nav {
   background: #f9f9f9; }
   .pricing_section .preamble_section {
     text-align: center;
-    max-width: 70%;
+    max-width: 100%;
     margin: auto;
     margin-bottom: 4rem; }
-  .pricing_section .cards_wrapper {
-    display: flex;
-    align-items: center; }
-    .pricing_section .cards_wrapper .card {
-      text-align: center;
-      width: 33.33333%;
-      border-radius: 10px;
-      box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-      border: 1px solid #f9f9f9;
-      height: 530px; }
-      .pricing_section .cards_wrapper .card .card-body {
-        padding: 0 1.25rem 1.25rem 1.25rem;
-        height: 100%; }
-      .pricing_section .cards_wrapper .card .pricing_header {
-        border-bottom: 2px solid #f9f9f9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px; }
-        .pricing_section .cards_wrapper .card .pricing_header .heading {
-          margin-bottom: 0.2rem; }
-        .pricing_section .cards_wrapper .card .pricing_header .text {
-          font-size: 0.9rem;
-          margin-bottom: 0; }
-      .pricing_section .cards_wrapper .card ul.feat_list {
-        padding: 1.25rem 0 0 0;
-        margin: 0;
-        list-style: none;
-        min-height: 15rem; }
-        .pricing_section .cards_wrapper .card ul.feat_list li.list_item {
-          margin-bottom: 0.8rem; }
-      .pricing_section .cards_wrapper .card .price {
-        padding: 1rem 0; }
-        .pricing_section .cards_wrapper .card .price .number {
-          font-weight: 500;
-          font-size: 1.9rem; }
-          .pricing_section .cards_wrapper .card .price .number span {
-            color: #a8adbd;
-            font-size: 0.8rem; }
-      .pricing_section .cards_wrapper .card .btn {
-        background: #2e9ce6;
-        color: #fff;
-        margin-top: 1rem;
-        padding: 10px 40px;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        bottom: 20px; }
-        .pricing_section .cards_wrapper .card .btn:hover {
-          opacity: 0.8; }
-      .pricing_section .cards_wrapper .card.higher {
-        height: 560px; }
-        .pricing_section .cards_wrapper .card.higher .pricing_header {
-          height: 115px; }
-      .pricing_section .cards_wrapper .card.blue_darker {
-        background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
+    @media all and (min-width: 768px) {
+      .pricing_section .preamble_section {
+        max-width: 70%; } }
+  .pricing_section .col-md-4 {
+    margin-bottom: 2rem; }
+    @media all and (min-width: 768px) {
+      .pricing_section .col-md-4 {
+        margin-bottom: 0; } }
+  .pricing_section .card {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f9f9f9;
+    height: 530px; }
+    .pricing_section .card .card-body {
+      padding: 0 1.25rem 1.25rem 1.25rem;
+      height: 100%; }
+    .pricing_section .card .pricing_header {
+      border-bottom: 2px solid #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px; }
+      .pricing_section .card .pricing_header .heading {
+        margin-bottom: 0.2rem; }
+      .pricing_section .card .pricing_header .text {
+        font-size: 0.9rem;
+        margin-bottom: 0; }
+    .pricing_section .card ul.feat_list {
+      padding: 1.25rem 0 0 0;
+      margin: 0;
+      list-style: none;
+      min-height: 15rem; }
+      .pricing_section .card ul.feat_list li.list_item {
+        margin-bottom: 0.8rem; }
+    .pricing_section .card .price {
+      padding: 1rem 0; }
+      .pricing_section .card .price .number {
+        font-weight: 500;
+        font-size: 1.9rem; }
+        .pricing_section .card .price .number span {
+          color: #a8adbd;
+          font-size: 0.8rem; }
+    .pricing_section .card .btn {
+      background: #2e9ce6;
+      color: #fff;
+      margin-top: 1rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 20px;
+      width: 12rem; }
+      .pricing_section .card .btn:hover {
+        opacity: 0.8; }
+    .pricing_section .card.higher {
+      height: 560px; }
+      .pricing_section .card.higher .pricing_header {
+        height: 115px; }
+    .pricing_section .card.blue_darker {
+      background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
+      color: #fff; }
+      .pricing_section .card.blue_darker .text,
+      .pricing_section .card.blue_darker .heading,
+      .pricing_section .card.blue_darker .number,
+      .pricing_section .card.blue_darker li {
         color: #fff; }
-        .pricing_section .cards_wrapper .card.blue_darker .text,
-        .pricing_section .cards_wrapper .card.blue_darker .heading,
-        .pricing_section .cards_wrapper .card.blue_darker .number,
-        .pricing_section .cards_wrapper .card.blue_darker li {
-          color: #fff; }
-        .pricing_section .cards_wrapper .card.blue_darker .pricing_header {
-          border-bottom: 2px solid #1b94e4; }
+      .pricing_section .card.blue_darker .pricing_header {
+        border-bottom: 2px solid #2e9ce6; }
 
 /*********************
 feature list
 *********************/
 .feature_list_section .heading {
   margin-bottom: 4rem; }
-.feature_list_section .feature_list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.feature_list_section .feature_list_item {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  .feature_list_section .feature_list .feature_list_item {
-    width: 30%;
-    display: flex;
-    padding-bottom: 2rem; }
-    .feature_list_section .feature_list .feature_list_item .features_icon {
-      height: 3rem;
-      border-radius: 2px; }
-      .feature_list_section .feature_list .feature_list_item .features_icon i {
-        padding: 0 1rem 1rem 1rem;
-        color: #18cd61; }
-    .feature_list_section .feature_list .feature_list_item .info {
-      padding-left: 1rem; }
-      .feature_list_section .feature_list .feature_list_item .info .item_text {
-        font-size: 0.9rem; }
+  padding-bottom: 2rem; }
+  .feature_list_section .feature_list_item .features_icon {
+    height: 2.4rem;
+    border-radius: 2px; }
+    .feature_list_section .feature_list_item .features_icon i {
+      padding: 0 0.7rem 0.7rem 0.7rem;
+      color: #18cd61; }
+      @media all and (min-width: 1200px) {
+        .feature_list_section .feature_list_item .features_icon i {
+          padding: 0 1rem 1rem 1rem; } }
+    @media all and (min-width: 1200px) {
+      .feature_list_section .feature_list_item .features_icon {
+        height: 3rem; } }
+  .feature_list_section .feature_list_item .info {
+    padding-left: 1rem; }
+    .feature_list_section .feature_list_item .info .item_text {
+      font-size: 0.9rem; }
 
 /*********************
 horizontal-box-section 
@@ -1088,13 +1090,20 @@ horizontal-box-section
   .horizontal_boxes_section .heading {
     margin-bottom: 4rem; }
   .horizontal_boxes_section .card {
-    height: 250px;
+    height: auto;
     padding: 0.5rem 1.5rem;
     box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
     border: none;
     margin-bottom: 3rem; }
+    @media all and (min-width: 576px) {
+      .horizontal_boxes_section .card {
+        height: 250px; } }
     .horizontal_boxes_section .card .col-sm-9 {
-      border-right: 2px solid #e6e6e6; }
+      border-bottom: 2px solid #e6e6e6; }
+      @media all and (min-width: 576px) {
+        .horizontal_boxes_section .card .col-sm-9 {
+          border-bottom: none;
+          border-right: 2px solid #e6e6e6; } }
       .horizontal_boxes_section .card .col-sm-9 .text {
         font-size: 0.9rem; }
     @media all and (min-width: 576px) {
@@ -1102,9 +1111,10 @@ horizontal-box-section
         text-align: center; } }
     .horizontal_boxes_section .card .col-sm-3 .price h3 {
       margin-bottom: 0.2rem;
-      color: #2e9ce6; }
-    .horizontal_boxes_section .card .col-sm-3 .price-text {
-      font-weight: 400; }
+      padding-top: 1rem; }
+      @media all and (min-width: 576px) {
+        .horizontal_boxes_section .card .col-sm-3 .price h3 {
+          padding-top: 0; } }
     .horizontal_boxes_section .card.blue {
       border-top: 5px solid #1b2fe4; }
     .horizontal_boxes_section .card.lightblue {
@@ -1117,28 +1127,35 @@ horizontal-box-section
 /*********************
    faq accordion
 *********************/
-.faq_accordion_section .info_list_item .question_part {
-  display: flex;
-  align-items: baseline;
-  cursor: pointer; }
-  .faq_accordion_section .info_list_item .question_part:after {
-    font-family: "Font Awesome 5 Free";
-    margin-left: 0.7rem;
-    font-size: 1rem;
-    content: '\f078';
-    font-weight: 600;
-    transition: max-height 0.5s ease-out; }
-.faq_accordion_section .info_list_item .question_part.active {
-  display: flex; }
-  .faq_accordion_section .info_list_item .question_part.active:after {
-    content: '\f077'; }
-.faq_accordion_section .info_list_item .answer_part {
-  padding: 0 0 1rem 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out; }
-  .faq_accordion_section .info_list_item .answer_part.open {
-    max-height: 200px; }
+.faq_accordion_section {
+  padding-bottom: 10rem; }
+  .faq_accordion_section .info_list_item {
+    margin-bottom: 0.7rem; }
+    @media all and (min-width: 992px) {
+      .faq_accordion_section .info_list_item {
+        margin-bottom: 0; } }
+    .faq_accordion_section .info_list_item .question_part {
+      display: flex;
+      align-items: baseline;
+      cursor: pointer; }
+      .faq_accordion_section .info_list_item .question_part .question {
+        line-height: 1.7; }
+        .faq_accordion_section .info_list_item .question_part .question:after {
+          font-family: "Font Awesome 5 Free";
+          margin-left: 0.3rem;
+          font-size: 0.9rem;
+          content: '\f078';
+          font-weight: 600;
+          transition: max-height 0.5s ease-out; }
+      .faq_accordion_section .info_list_item .question_part .question.active:after {
+        content: '\f077'; }
+    .faq_accordion_section .info_list_item .answer_part {
+      padding: 0 0 1rem 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out; }
+      .faq_accordion_section .info_list_item .answer_part.open {
+        max-height: 200px; }
 
 /*********************
    info banner
@@ -2039,7 +2056,7 @@ forum section
       font-weight: 900;
       margin-left: 10px; }
 .signup_section.lightgrey .btn.signup_btn {
-  background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+  background: #2e9ce6;
   color: #fff;
   border: 1px solid #f9f9f9; }
   .signup_section.lightgrey .btn.signup_btn:hover {
@@ -2070,7 +2087,7 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-image: linear-gradient(to right, #21242c, #24272f, #262a33, #292d36, #2c303a);
+  background-image: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857);
   min-height: 480px; }
   @media all and (max-width: 480px) {
     .footer-main {
