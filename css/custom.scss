@@ -26,11 +26,11 @@ $themecolor: #373c49;
 $themeBorderColor: #ebebeb;
 $themecolorLighter: #a8adbd;
 
-$themeHeadingcolor: #373c49; // #21242c;
-$lightgrey: #f6f9fc; //#f9f9f9; 
+$themeHeadingcolor: #373c49;
+$lightgrey: #f9f9f9; //#f6f9fc; 
 $mediumgrey: #f1f1f4;
 $themecolorGreen: #18cd61;
-$themecolorYellow: #e62e65;
+$themecolorRed: #e62e65;
 $linkhoverOpacity: 0.7;
 
 //Blue
@@ -43,20 +43,13 @@ $themecolorBlueOverlay: linear-gradient(to right bottom,
 
 //BlueLight
 $themecolorBlueLight: #2e9ce6;
-
-// $themecolorBlueLightBg: linear-gradient(to right bottom, #2f80ed, #0096f4, #00a9f6, #25bbf5, #56ccf2);
-
 $themecolorBlueLightBg: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
-
-
-// $themecolorBlueLightOverlay: linear-gradient(to right bottom,
-//   rgba(47, 128, 237, 0.95),
-//   rgba(86, 204, 242, 0.85));
-
-
 $themecolorBlueLightOverlay: linear-gradient(to right bottom,
   rgba(27, 148, 228, 0.85),
   rgba(142, 201, 241, 0.95));
+
+//Blue darker
+$themecolorBlueDarkerBg: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
 
 //GreenNew
 $themecolorGreenNew: #0ba893;
@@ -65,20 +58,12 @@ $themecolorGreenNewOverlay: linear-gradient(to right bottom,
   rgba(9, 144, 126, 0.85),
   rgba(14, 216, 189, 0.95));
 
-//Purple
-$themecoloPurple: #8e66c8;
-$themecoloPurpleBg: linear-gradient(to right bottom, #4568dc, #7266d2, #8e66c8, #a267bd, #b06ab3);
-$themecoloPurpleOverlay: linear-gradient(to right bottom,
-  rgba(69, 104, 220, 0.85),
-  rgba(162, 103, 189, 0.95));
-
 //DarkGrey
 $themecolorDarkGrey: #21242c;
-$themecolorDarkGreyBg:linear-gradient(to right, #21242c, #24272f, #262a33, #292d36, #2c303a);
+$themecolorDarkGreyBg: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857);
 $themecolorDarkGreyOverlay: linear-gradient(to right bottom,
   rgba(33, 36, 44, 0.85),
-  rgba(44, 48, 58, 0.95));
-
+  rgba(66, 72, 87, 0.95));
 
 //other
 $themefont: 'Roboto',
@@ -132,14 +117,17 @@ img {
 *********************/
 
 .container {
-  // max-width: 1280px;
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
 
-  // @media all and (min-width: 1580px) {
-  //   max-width: 1500px;
-  // }
+  @media all and (min-width: 1580px) {
+    max-width: 1250px;
+  }
+
+  @media all and (min-width: 1780px) {
+    max-width: 1450px;
+  }
 }
 
 .section_spacing_top_big {
@@ -393,6 +381,8 @@ a {
 a.arrow_link {
   display: inline-block;
   position: relative;
+  color: $linkcolor;
+  ;
 
   &:before {
     // opacity: .6;
@@ -465,7 +455,6 @@ a.banner_link {
   }
 }
 
-
 /*********************
     buttons
  *********************/
@@ -499,11 +488,8 @@ a.banner_link {
 /*********************************************
     overlay and background - header and sections
  *********************************************/
-.header_big,
-.header_small,
-.info_banner,
-.get_started_banner,
-.signup_section {
+section,
+header {
   position: relative;
 
   &.lightblue {
@@ -520,7 +506,54 @@ a.banner_link {
 
   &.lightgrey {
     background: $lightgrey;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $themeHeadingcolor;
+    }
+
+    p {
+      color: $themecolor;
+    }
+
+    .banner_link {
+      color: $themecolorBlueLight;
+
+      &:before {
+        background: $themecolorBlueLightBg;
+      }
+    }
   }
+
+  &.darkgrey {
+    background: $themecolorDarkGreyBg;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fcfdfe;
+    }
+
+    p {
+      color: #fcfdfe;
+    }
+
+    .banner_link {
+      color: #fcfdfe;
+
+      &:before {
+        background: #fcfdfe;
+      }
+    }
+  }
+
 
   &.overlay-dark::before {
     position: absolute;
@@ -939,7 +972,7 @@ nav {
 
         .signup_btn {
           margin: 1rem 0.5rem;
-          background: $themecolorBlueLightBg;
+          background: $themecolorBlueLight;
           color: #fff !important;
           border: 1px solid $themecolorBlueLight;
           width: 100%;
@@ -1186,23 +1219,23 @@ nav {
 /*********************
     pricing
  *********************/
-.pricing-section {
-  margin-bottom: -5rem;
+.pricing_section {
+  //background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(243, 244, 246, 1) 100%); 
+  background: $lightgrey;
 
-  @media all and (min-width: $md-min) {
-    margin-bottom: 0;
+  .preamble_section {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 4rem;
+
+    @media all and (min-width: $md-min) {
+      max-width: 70%;
+    }
   }
 
-  .pricing-preamble {
-    margin-bottom: 5rem;
-    font-size: 1.2em;
-  }
-
-  .card {
-    margin-bottom: 5rem;
-    box-shadow: $themeBox_shadow;
-    border-radius: $themeBorder_radius;
-    border: none;
+  .col-md-4 {
+    margin-bottom: 2rem;
 
     @media all and (min-width: $md-min) {
       margin-bottom: 0;
@@ -1210,9 +1243,200 @@ nav {
   }
 
   .card {
+    text-align: center;
+    //  width: 33.33333%;
+    border-radius: $themeBorder_radius;
+    box-shadow: $themeBox_shadow;
+    border: 1px solid $lightgrey;
+    height: 530px;
 
-    &.green {
-      border-top: 5px solid $themecolorGreenNew;
+    .card-body {
+      padding: 0 1.25rem 1.25rem 1.25rem;
+      height: 100%;
+    }
+
+    .pricing_header {
+      border-bottom: 2px solid $lightgrey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+
+      .heading {
+        margin-bottom: 0.2rem;
+      }
+
+      .text {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+    }
+
+    ul.feat_list {
+      padding: 1.25rem 0 0 0;
+      margin: 0;
+      list-style: none;
+      min-height: 15rem;
+
+      li.list_item {
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    .price {
+      padding: 1rem 0;
+
+      .number {
+        font-weight: 500;
+        font-size: 1.9rem;
+
+        span {
+          color: $themecolorLighter;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .btn {
+      background: $themecolorBlueLight;
+      color: #fff;
+      margin-top: 1rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 20px;
+      width: 12rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    //middle card higher
+    &.higher {
+      height: 560px;
+
+      .pricing_header {
+        height: 115px;
+      }
+    }
+
+    //last card blue
+    &.blue_darker {
+      background: $themecolorBlueDarkerBg;
+      color: #fff;
+
+      .text,
+      .heading,
+      .number,
+      li {
+        color: #fff;
+      }
+
+      .pricing_header {
+        border-bottom: 2px solid $themecolorBlueLight; // #1b94e4;
+      }
+    }
+  }
+}
+
+/*********************
+feature list
+*********************/
+.feature_list_section {
+  padding-bottom: 2rem;
+
+  .heading {
+    margin-bottom: 4rem;
+  }
+
+  .feature_list_item {
+    display: flex;
+    padding-bottom: 2rem;
+
+    .features_icon {
+      height: 2.4rem;
+      // background-color: #e8eaf4;
+      border-radius: 2px;
+
+      i {
+        padding: 0 0.7rem 0.7rem 0.7rem;
+        color: $themecolorGreen;
+
+        @media all and (min-width: $xl-min) {
+          // padding: 1rem;
+          padding: 0 1rem 1rem 1rem;
+        }
+      }
+
+      @media all and (min-width: $xl-min) {
+        height: 3rem;
+      }
+    }
+
+    .info {
+      padding-left: 1rem;
+
+      .item_text {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+/***************************
+small pricing cards
+****************************/
+.small_pricing_cards_section {
+
+  .heading {
+    margin-bottom: 4rem;
+  }
+
+  .card {
+    height: auto;
+    padding: 0.5rem 1.5rem;
+    box-shadow: $themeBox_shadow;
+    border: none;
+    margin-bottom: 3rem;
+
+    @media all and (min-width: $sm-min) {
+      height: 250px;
+    }
+
+    @media all and (min-width: $lg-min) {
+      margin-bottom: 0;
+    }
+
+    .col-sm-9 {
+      border-bottom: 2px solid #e6e6e6;
+
+      @media all and (min-width: $sm-min) {
+        border-bottom: none;
+        border-right: 2px solid #e6e6e6;
+      }
+
+      .text {
+        font-size: 0.9rem;
+      }
+    }
+
+    .col-sm-3 {
+      @media all and (min-width: $sm-min) {
+        text-align: center;
+      }
+
+      .price {
+
+        h3 {
+          margin-bottom: 0.2rem;
+          padding-top: 1rem;
+
+          @media all and (min-width: $sm-min) {
+            padding-top: 0;
+          }
+        }
+      }
     }
 
     &.blue {
@@ -1222,175 +1446,71 @@ nav {
     &.lightblue {
       border-top: 5px solid $themecolorBlueLight;
     }
-  }
 
-  .pricing-card {
-    min-height: 480px;
-    padding-top: 1rem;
+    &.green {
+      border-top: 5px solid $themecolorGreen;
 
-    @include d-flex;
-    @include flex-column;
-    flex: 0 0 100%;
-    justify-content: space-between;
-
-    .heading {
-      font-weight: 400;
-      font-size: 2em;
-      margin-bottom: 0.5rem;
-
-      @media all and (min-width: $md-min) {
-        font-size: 1.5em;
-      }
-
-      @media all and (min-width: $lg-min) {
-        font-size: 2em;
-      }
     }
 
-    .text {
-      line-height: 1.4;
-      font-size: 1.3em;
-
-      @media all and (min-width: $md-min) {
-        font-size: 1.1em;
-      }
-
-      @media all and (min-width: $lg-min) {
-        font-size: 1.3em;
-      }
-    }
-
-    .btn {
-      color: #fff;
-      display: block;
-      margin-top: 1rem;
-
-      @media all and (min-width: $lg-min) {
-        font-size: 1.2em;
-      }
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-
-    .btn {
-      &.green {
-        background: $themecolorGreenNewBg;
-      }
-
-      &.blue {
-        background: $themecolorBlueBg;
-      }
-
-      &.lightblue {
-        background: $themecolorBlueLightBg;
-      }
-    }
-
-    .heading,
-    .text {
-      &.green {
-        color: $themecolorGreenNew;
-      }
-
-      &.blue {
-        color: $themecolorBlue;
-      }
-
-      &.lightblue {
-        color: $themecolorBlueLight;
-      }
-    }
-
-    .price {
-      font-size: 2em;
-      margin-bottom: 0.2rem;
-      font-weight: 300;
-
-      @media all and (min-width: $md-min) {
-        font-size: 1.7em;
-      }
-
-      @media all and (min-width: $lg-min) {
-        font-size: 2em;
-      }
-    }
-
-    .price-text {
-      font-weight: 400;
-      color: $themecolorLighter;
-    }
-
-    ul.feat-list {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      min-height: 15rem;
-
-      li.list-item {
-        margin-bottom: 0.3rem;
-        clear: both;
-      }
+    &.red {
+      border-top: 5px solid $themecolorRed;
     }
   }
 }
 
-//horizontal-box-section
-.horizontal-box-section {
-  h2.heading {
-    margin-bottom: 3rem;
+/*********************
+   faq accordion
+*********************/
+.faq_accordion_section {
+
+  .heading {
+    margin-bottom: 4rem;
+
+    @media all and (min-width: $md-min) {
+      text-align: center;
+    }
   }
 
-  .card {
-    padding: 0.5rem 1.5rem;
-    box-shadow: $themeBox_shadow;
-    background: $lightgrey;
-    border: none;
-    margin-bottom: 3rem;
+  .info_list_item {
+    margin-bottom: 0.7rem;
 
-    .col-sm-8 {
-      position: relative;
+    @media all and (min-width: $lg-min) {
+      margin-bottom: 0;
+    }
 
-      &:before {
-        content: "";
-        position: absolute;
-        right: -50px;
-        top: 20px;
-        bottom: 20px;
-        width: 2px;
-        background: #e6e6e6;
+    .question_part {
+      display: flex;
+      align-items: baseline;
+      cursor: pointer;
+
+      .question {
+        line-height: 1.7;
+
+        &:after {
+          font-family: "Font Awesome 5 Free";
+          margin-left: 0.3rem;
+          font-size: 0.9rem;
+          content: '\f078';
+          font-weight: 600;
+          transition: max-height 0.5s ease-out;
+        }
+      }
+
+      .question.active {
+        &:after {
+          content: '\f077';
+        }
       }
     }
 
-    .col-sm-3 {
-      @media all and (min-width: $sm-min) {
-        text-align: right;
-      }
+    .answer_part {
+      padding: 0 0 1rem 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
 
-      .price {
-        @media all and (min-width: $sm-min) {
-          text-align: center;
-        }
-
-        h2 {
-          margin-bottom: 0.2rem;
-          font-size: 2em;
-          font-weight: 300;
-
-          @media all and (min-width: $md-min) {
-            font-size: 1.7em;
-          }
-
-          @media all and (min-width: $lg-min) {
-            font-size: 2em;
-          }
-        }
-      }
-
-      .price-text {
-        font-weight: 400;
-        color: $themecolorLighter;
+      &.open {
+        max-height: 200px;
       }
     }
   }
@@ -1929,15 +2049,15 @@ nav {
 
   .course_card {
     position: relative;
-    height: 150px;
-    padding: 25px 25px 5px 110px;
-    box-shadow: 0 10px 20px rgba(91, 107, 174, .15);
-    border-radius: 5px;
+    height: 170px;
+    padding: 25px 25px 5px 25px;
+    box-shadow: $themeBox_shadow;
+    border-radius: 3px;
     transition: .25s ease-in-out;
     margin: 0 -15px 2rem -15px;
 
     @media all and (max-width:$xs-max) {
-      height: 170px;
+      height: 190px;
     }
 
     @media all and (min-width:$md-min) {
@@ -1949,7 +2069,7 @@ nav {
     }
 
     &:hover {
-      box-shadow: 0 16px 24px rgba(0, 0, 0, .16);
+      box-shadow: 0 10px 25px 1px rgba(0, 0, 0, 0.1);
 
       p {
         transition: .25s ease-in-out;
@@ -1967,25 +2087,37 @@ nav {
     }
 
     .course_name {
-      color: $themecolor;
-      font-weight: 500;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       line-height: 1.5rem;
+      margin-left: 80px;
+
+      @media all and (max-width:$xs-max) {
+        margin-bottom: 2.5rem;
+      }
     }
 
-    .cta {
-      font-size: 0.9rem;
-      color: $themecolorBlueLight;
+    .arrow_link {
+      margin-left: 80px;
 
-      &:after {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        font-size: 1rem;
-        content: '\f061';
-        margin-left: 0.2rem;
-        color: $themecolorBlueLight;
+      @media all and (max-width:$xs-max) {
+        margin-left: 0;
       }
+    }
+
+    &.blue {
+      border-top: 5px solid $themecolorBlue;
+    }
+
+    &.lightblue {
+      border-top: 5px solid $themecolorBlueLight;
+    }
+
+    &.green {
+      border-top: 5px solid $themecolorGreenNew;
+    }
+
+    &.red {
+      border-top: 5px solid $themecolorRed;
     }
   }
 }
@@ -2734,7 +2866,7 @@ forum section
 
   &.lightgrey {
     .btn.signup_btn {
-      background-image: $themecolorBlueLightBg;
+      background: $themecolorBlueLight;
       color: #fff;
       border: 1px solid $lightgrey;
 

@@ -19,8 +19,12 @@ $style = '';
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <h3 class=""><?php the_sub_field('heading');?></h3>
-        <p class=""><?php the_sub_field('text');?></p>
+        <?php
+$heading = get_sub_field('heading');
+    $text = get_sub_field('text');
+    ?>
+        <h3 class=""><?php echo $heading; ?></h3>
+        <p class=""><?php echo $text; ?></p>
 
         <!-- loopa flex content -->
         <?php if (have_rows('banner_links')) {

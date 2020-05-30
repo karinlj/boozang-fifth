@@ -12,6 +12,7 @@ if (have_rows('cards')) {
         the_row();
 
         $style = '';
+        $color = get_sub_field('color_theme');
         $logo_img = get_sub_field('logo_image');
         $course_url = get_sub_field('url');?>
 
@@ -22,7 +23,7 @@ if (have_rows('cards')) {
         }?>
 
       <div class="col-md-6 col-lg-12 col-xl-6">
-        <div class="course_card" <?php echo $style; ?>>
+        <div class="course_card <?php echo $color; ?>" <?php echo $style; ?>>
           <!-- url -->
           <?php if ($course_url) {?>
           <a class="course_link" href="<?php echo $course_url; ?>">
@@ -30,9 +31,9 @@ if (have_rows('cards')) {
           <?php }?>
 
           <!-- text -->
-          <p class="course_name"><?php the_sub_field('text');?> </p>
+          <h6 class="course_name"><?php the_sub_field('text');?> </h6>
           <!-- call to action -->
-          <p class="cta"><?php the_sub_field('call_to_action');?> </p>
+          <a class="arrow_link"><?php the_sub_field('call_to_action');?> </a>
         </div>
       </div>
       <?php

@@ -1,81 +1,91 @@
  <?php
 // pricing layout for Pages Content block
-if (get_row_layout() == 'pricing_cards') {?>
-
- <section class="pricing-section section_spacing_top_medium">
+if (get_row_layout() == 'pricing_cards') {
+    $preamble_heading = get_sub_field('preamble_heading');
+    $preamble_text = get_sub_field('preamble_text');
+    ?>
+ <section class="pricing_section section_spacing_top_medium">
 
    <div class="container">
-     <div class="row">
-       <div class="col-xl-10 offset-xl-1">
-         <div class="row">
 
-           <?php //pricing_cards repeater
+     <section class="preamble_section">
+       <h3 class="preamble_heading"><?php echo $preamble_heading; ?></h3>
+       <p class="preamble_text"><?php echo $preamble_text; ?></p>
+     </section>
+
+     <div class="row align-items-center no-gutters">
+
+       <?php //pricing_cards repeater
 
     // check if the repeater field has rows
     if (have_rows('pricing_cards')) {
-
+        //count for setting classes
+        $count = 0;
         while (have_rows('pricing_cards')) {
             the_row();
-
-            $color = get_sub_field('color_theme');
+            $heading = get_sub_field('heading');
+            $text = get_sub_field('text');
             ?>
 
-           <div class="col-md-4">
+       <div class="col-md-4">
+         <div class="card <?php
+if ($count == 1) {
+                ?>
+             higher
+                <?php } elseif ($count == 2) {
+                ?> blue_darker
+                <?php }
+            ?>">
 
-             <div class="card <?php echo $color; ?>">
-               <div class="card-body">
+           <div class="card-body">
+             <div class="pricing_header">
+               <div class="">
+                 <h3 class="heading"><?php echo $heading; ?></h3>
+                 <p class="text"><?php echo $text; ?></p>
+               </div>
+             </div>
 
-                 <div class="pricing-card">
-
-                   <h3 class="heading <?php echo $color; ?>"><?php the_sub_field('heading');?></h3>
-
-                   <p class="text <?php echo $color; ?>"><?php the_sub_field('text');?></p>
-
-                   <div class="">
-                     <h2 class="price"><?php the_sub_field('price');?></h2>
-                     <p class="price-text"><?php the_sub_field('price_text');?></p>
-                   </div>
-
-                   <ul class="feat-list">
-                     <?php
+             <ul class="feat_list">
+               <?php
 // check if the repeater field has rows
             if (have_rows('features_list')) {
 
                 while (have_rows('features_list')) {
                     the_row();
-                    ?>
-                     <li class="list-item"><?php the_sub_field('feature');?></li>
 
-                     <?php
+                    $feature = get_sub_field('feature');
+                    ?>
+
+               <li class="list_item"><?php echo $feature; ?></li>
+               <?php
 }
             }?>
-                   </ul>
-
-                   <?php
-$btn_link = get_sub_field('button_link');
+             </ul>
+             <?php
+$price = get_sub_field('price');
+            $price_text = get_sub_field('price_text');
             ?>
-
-                   <a class="btn <?php echo $color; ?>" href="<?php echo $btn_link['url']; ?>"
-                     target="<?php echo $btn_link['target']; ?>"><?php echo $btn_link['title']; ?></a>
-
-                 </div>
-               </div>
-
+             <div class="price">
+               <h2 class="number"><?php echo $price; ?>
+                 <span><?php echo $price_text; ?></span></h2>
              </div>
+
+             <?php
+$btn_link = get_sub_field('button_link');
+
+            ?>
+             <a class="btn" href="<?php echo $btn_link['url']; ?>"
+               target="<?php echo $btn_link['target']; ?>"><?php echo $btn_link['title']; ?></a>
            </div>
-           <!--.col-->
-
-           <?php
-}?>
-
-           <?php
-}
-    ?>
          </div>
        </div>
+       <?php
+$count++;
+        }
+    }?>
+
      </div>
-     <!--row-->
-   </div><!-- /.container -->
+   </div>
  </section>
  <?php
 }

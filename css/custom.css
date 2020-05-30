@@ -39,6 +39,12 @@ img {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto; }
+  @media all and (min-width: 1580px) {
+    .container {
+      max-width: 1250px; } }
+  @media all and (min-width: 1780px) {
+    .container {
+      max-width: 1450px; } }
 
 .section_spacing_top_big {
   padding: 5rem calc(1.5rem - 15px); }
@@ -242,7 +248,8 @@ a {
 
 a.arrow_link {
   display: inline-block;
-  position: relative; }
+  position: relative;
+  color: #1b94e4; }
   a.arrow_link:before {
     opacity: .4;
     position: absolute;
@@ -321,41 +328,70 @@ a.banner_link {
 /*********************************************
     overlay and background - header and sections
  *********************************************/
-.header_big,
-.header_small,
-.info_banner,
-.get_started_banner,
-.signup_section {
+section,
+header {
   position: relative; }
-  .header_big.lightblue,
-  .header_small.lightblue,
-  .info_banner.lightblue,
-  .get_started_banner.lightblue,
-  .signup_section.lightblue {
+  section.lightblue,
+  header.lightblue {
     background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
-  .header_big.blue,
-  .header_small.blue,
-  .info_banner.blue,
-  .get_started_banner.blue,
-  .signup_section.blue {
+  section.blue,
+  header.blue {
     background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4); }
-  .header_big.green,
-  .header_small.green,
-  .info_banner.green,
-  .get_started_banner.green,
-  .signup_section.green {
+  section.green,
+  header.green {
     background-image: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd); }
-  .header_big.lightgrey,
-  .header_small.lightgrey,
-  .info_banner.lightgrey,
-  .get_started_banner.lightgrey,
-  .signup_section.lightgrey {
-    background: #f6f9fc; }
-  .header_big.overlay-dark::before,
-  .header_small.overlay-dark::before,
-  .info_banner.overlay-dark::before,
-  .get_started_banner.overlay-dark::before,
-  .signup_section.overlay-dark::before {
+  section.lightgrey,
+  header.lightgrey {
+    background: #f9f9f9; }
+    section.lightgrey h1,
+    section.lightgrey h2,
+    section.lightgrey h3,
+    section.lightgrey h4,
+    section.lightgrey h5,
+    section.lightgrey h6,
+    header.lightgrey h1,
+    header.lightgrey h2,
+    header.lightgrey h3,
+    header.lightgrey h4,
+    header.lightgrey h5,
+    header.lightgrey h6 {
+      color: #373c49; }
+    section.lightgrey p,
+    header.lightgrey p {
+      color: #373c49; }
+    section.lightgrey .banner_link,
+    header.lightgrey .banner_link {
+      color: #2e9ce6; }
+      section.lightgrey .banner_link:before,
+      header.lightgrey .banner_link:before {
+        background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
+  section.darkgrey,
+  header.darkgrey {
+    background: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857); }
+    section.darkgrey h1,
+    section.darkgrey h2,
+    section.darkgrey h3,
+    section.darkgrey h4,
+    section.darkgrey h5,
+    section.darkgrey h6,
+    header.darkgrey h1,
+    header.darkgrey h2,
+    header.darkgrey h3,
+    header.darkgrey h4,
+    header.darkgrey h5,
+    header.darkgrey h6 {
+      color: #fcfdfe; }
+    section.darkgrey p,
+    header.darkgrey p {
+      color: #fcfdfe; }
+    section.darkgrey .banner_link,
+    header.darkgrey .banner_link {
+      color: #fcfdfe; }
+      section.darkgrey .banner_link:before,
+      header.darkgrey .banner_link:before {
+        background: #fcfdfe; }
+  section.overlay-dark::before,
+  header.overlay-dark::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -364,11 +400,8 @@ a.banner_link {
     background: rgba(0, 0, 0, 0.5);
     content: '';
     display: block; }
-  .header_big.overlay-lightblue::before,
-  .header_small.overlay-lightblue::before,
-  .info_banner.overlay-lightblue::before,
-  .get_started_banner.overlay-lightblue::before,
-  .signup_section.overlay-lightblue::before {
+  section.overlay-lightblue::before,
+  header.overlay-lightblue::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -377,11 +410,8 @@ a.banner_link {
     background-image: linear-gradient(to right bottom, rgba(27, 148, 228, 0.85), rgba(142, 201, 241, 0.95));
     content: '';
     display: block; }
-  .header_big.overlay-blue::before,
-  .header_small.overlay-blue::before,
-  .info_banner.overlay-blue::before,
-  .get_started_banner.overlay-blue::before,
-  .signup_section.overlay-blue::before {
+  section.overlay-blue::before,
+  header.overlay-blue::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -390,11 +420,8 @@ a.banner_link {
     background-image: linear-gradient(to right bottom, rgba(27, 47, 228, 0.85), rgba(164, 172, 244, 0.95));
     content: '';
     display: block; }
-  .header_big.overlay-green::before,
-  .header_small.overlay-green::before,
-  .info_banner.overlay-green::before,
-  .get_started_banner.overlay-green::before,
-  .signup_section.overlay-green::before {
+  section.overlay-green::before,
+  header.overlay-green::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -666,7 +693,7 @@ nav {
     width: 100%; }
     .nav-mobile .signup ul li .signup_btn {
       margin: 1rem 0.5rem;
-      background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+      background: #2e9ce6;
       color: #fff !important;
       border: 1px solid #2e9ce6;
       width: 100%; }
@@ -849,144 +876,187 @@ nav {
 /*********************
     pricing
  *********************/
-.pricing-section {
-  margin-bottom: -5rem; }
-  @media all and (min-width: 768px) {
-    .pricing-section {
-      margin-bottom: 0; } }
-  .pricing-section .pricing-preamble {
-    margin-bottom: 5rem;
-    font-size: 1.2em; }
-  .pricing-section .card {
-    margin-bottom: 5rem;
-    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    border: none; }
+.pricing_section {
+  background: #f9f9f9; }
+  .pricing_section .preamble_section {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 4rem; }
     @media all and (min-width: 768px) {
-      .pricing-section .card {
+      .pricing_section .preamble_section {
+        max-width: 70%; } }
+  .pricing_section .col-md-4 {
+    margin-bottom: 2rem; }
+    @media all and (min-width: 768px) {
+      .pricing_section .col-md-4 {
         margin-bottom: 0; } }
-  .pricing-section .card.green {
-    border-top: 5px solid #0ba893; }
-  .pricing-section .card.blue {
-    border-top: 5px solid #1b2fe4; }
-  .pricing-section .card.lightblue {
-    border-top: 5px solid #2e9ce6; }
-  .pricing-section .pricing-card {
-    min-height: 480px;
-    padding-top: 1rem;
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-    -webkit-flex-direction: column !important;
-    -ms-flex-direction: column !important;
-    flex-direction: column !important;
-    flex: 0 0 100%;
-    justify-content: space-between; }
-    .pricing-section .pricing-card .heading {
-      font-weight: 400;
-      font-size: 2em;
-      margin-bottom: 0.5rem; }
-      @media all and (min-width: 768px) {
-        .pricing-section .pricing-card .heading {
-          font-size: 1.5em; } }
-      @media all and (min-width: 992px) {
-        .pricing-section .pricing-card .heading {
-          font-size: 2em; } }
-    .pricing-section .pricing-card .text {
-      line-height: 1.4;
-      font-size: 1.3em; }
-      @media all and (min-width: 768px) {
-        .pricing-section .pricing-card .text {
-          font-size: 1.1em; } }
-      @media all and (min-width: 992px) {
-        .pricing-section .pricing-card .text {
-          font-size: 1.3em; } }
-    .pricing-section .pricing-card .btn {
-      color: #fff;
-      display: block;
-      margin-top: 1rem; }
-      @media all and (min-width: 992px) {
-        .pricing-section .pricing-card .btn {
-          font-size: 1.2em; } }
-      .pricing-section .pricing-card .btn:hover {
-        opacity: 0.8; }
-    .pricing-section .pricing-card .btn.green {
-      background: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd); }
-    .pricing-section .pricing-card .btn.blue {
-      background: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4); }
-    .pricing-section .pricing-card .btn.lightblue {
-      background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
-    .pricing-section .pricing-card .heading.green,
-    .pricing-section .pricing-card .text.green {
-      color: #0ba893; }
-    .pricing-section .pricing-card .heading.blue,
-    .pricing-section .pricing-card .text.blue {
-      color: #1b2fe4; }
-    .pricing-section .pricing-card .heading.lightblue,
-    .pricing-section .pricing-card .text.lightblue {
-      color: #2e9ce6; }
-    .pricing-section .pricing-card .price {
-      font-size: 2em;
-      margin-bottom: 0.2rem;
-      font-weight: 300; }
-      @media all and (min-width: 768px) {
-        .pricing-section .pricing-card .price {
-          font-size: 1.7em; } }
-      @media all and (min-width: 992px) {
-        .pricing-section .pricing-card .price {
-          font-size: 2em; } }
-    .pricing-section .pricing-card .price-text {
-      font-weight: 400;
-      color: #a8adbd; }
-    .pricing-section .pricing-card ul.feat-list {
-      padding: 0;
+  .pricing_section .card {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f9f9f9;
+    height: 530px; }
+    .pricing_section .card .card-body {
+      padding: 0 1.25rem 1.25rem 1.25rem;
+      height: 100%; }
+    .pricing_section .card .pricing_header {
+      border-bottom: 2px solid #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px; }
+      .pricing_section .card .pricing_header .heading {
+        margin-bottom: 0.2rem; }
+      .pricing_section .card .pricing_header .text {
+        font-size: 0.9rem;
+        margin-bottom: 0; }
+    .pricing_section .card ul.feat_list {
+      padding: 1.25rem 0 0 0;
       margin: 0;
       list-style: none;
       min-height: 15rem; }
-      .pricing-section .pricing-card ul.feat-list li.list-item {
-        margin-bottom: 0.3rem;
-        clear: both; }
+      .pricing_section .card ul.feat_list li.list_item {
+        margin-bottom: 0.8rem; }
+    .pricing_section .card .price {
+      padding: 1rem 0; }
+      .pricing_section .card .price .number {
+        font-weight: 500;
+        font-size: 1.9rem; }
+        .pricing_section .card .price .number span {
+          color: #a8adbd;
+          font-size: 0.8rem; }
+    .pricing_section .card .btn {
+      background: #2e9ce6;
+      color: #fff;
+      margin-top: 1rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 20px;
+      width: 12rem; }
+      .pricing_section .card .btn:hover {
+        opacity: 0.8; }
+    .pricing_section .card.higher {
+      height: 560px; }
+      .pricing_section .card.higher .pricing_header {
+        height: 115px; }
+    .pricing_section .card.blue_darker {
+      background: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
+      color: #fff; }
+      .pricing_section .card.blue_darker .text,
+      .pricing_section .card.blue_darker .heading,
+      .pricing_section .card.blue_darker .number,
+      .pricing_section .card.blue_darker li {
+        color: #fff; }
+      .pricing_section .card.blue_darker .pricing_header {
+        border-bottom: 2px solid #2e9ce6; }
 
-.horizontal-box-section h2.heading {
-  margin-bottom: 3rem; }
-.horizontal-box-section .card {
+/*********************
+feature list
+*********************/
+.feature_list_section {
+  padding-bottom: 2rem; }
+  .feature_list_section .heading {
+    margin-bottom: 4rem; }
+  .feature_list_section .feature_list_item {
+    display: flex;
+    padding-bottom: 2rem; }
+    .feature_list_section .feature_list_item .features_icon {
+      height: 2.4rem;
+      border-radius: 2px; }
+      .feature_list_section .feature_list_item .features_icon i {
+        padding: 0 0.7rem 0.7rem 0.7rem;
+        color: #18cd61; }
+        @media all and (min-width: 1200px) {
+          .feature_list_section .feature_list_item .features_icon i {
+            padding: 0 1rem 1rem 1rem; } }
+      @media all and (min-width: 1200px) {
+        .feature_list_section .feature_list_item .features_icon {
+          height: 3rem; } }
+    .feature_list_section .feature_list_item .info {
+      padding-left: 1rem; }
+      .feature_list_section .feature_list_item .info .item_text {
+        font-size: 0.9rem; }
+
+/***************************
+small pricing cards
+****************************/
+.small_pricing_cards_section .heading {
+  margin-bottom: 4rem; }
+.small_pricing_cards_section .card {
+  height: auto;
   padding: 0.5rem 1.5rem;
   box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-  background: #f6f9fc;
   border: none;
   margin-bottom: 3rem; }
-  .horizontal-box-section .card .col-sm-8 {
-    position: relative; }
-    .horizontal-box-section .card .col-sm-8:before {
-      content: "";
-      position: absolute;
-      right: -50px;
-      top: 20px;
-      bottom: 20px;
-      width: 2px;
-      background: #e6e6e6; }
   @media all and (min-width: 576px) {
-    .horizontal-box-section .card .col-sm-3 {
-      text-align: right; } }
+    .small_pricing_cards_section .card {
+      height: 250px; } }
+  @media all and (min-width: 992px) {
+    .small_pricing_cards_section .card {
+      margin-bottom: 0; } }
+  .small_pricing_cards_section .card .col-sm-9 {
+    border-bottom: 2px solid #e6e6e6; }
+    @media all and (min-width: 576px) {
+      .small_pricing_cards_section .card .col-sm-9 {
+        border-bottom: none;
+        border-right: 2px solid #e6e6e6; } }
+    .small_pricing_cards_section .card .col-sm-9 .text {
+      font-size: 0.9rem; }
   @media all and (min-width: 576px) {
-    .horizontal-box-section .card .col-sm-3 .price {
+    .small_pricing_cards_section .card .col-sm-3 {
       text-align: center; } }
-  .horizontal-box-section .card .col-sm-3 .price h2 {
+  .small_pricing_cards_section .card .col-sm-3 .price h3 {
     margin-bottom: 0.2rem;
-    font-size: 2em;
-    font-weight: 300; }
-    @media all and (min-width: 768px) {
-      .horizontal-box-section .card .col-sm-3 .price h2 {
-        font-size: 1.7em; } }
-    @media all and (min-width: 992px) {
-      .horizontal-box-section .card .col-sm-3 .price h2 {
-        font-size: 2em; } }
-  .horizontal-box-section .card .col-sm-3 .price-text {
-    font-weight: 400;
-    color: #a8adbd; }
+    padding-top: 1rem; }
+    @media all and (min-width: 576px) {
+      .small_pricing_cards_section .card .col-sm-3 .price h3 {
+        padding-top: 0; } }
+  .small_pricing_cards_section .card.blue {
+    border-top: 5px solid #1b2fe4; }
+  .small_pricing_cards_section .card.lightblue {
+    border-top: 5px solid #2e9ce6; }
+  .small_pricing_cards_section .card.green {
+    border-top: 5px solid #18cd61; }
+  .small_pricing_cards_section .card.red {
+    border-top: 5px solid #e62e65; }
+
+/*********************
+   faq accordion
+*********************/
+.faq_accordion_section .heading {
+  margin-bottom: 4rem; }
+  @media all and (min-width: 768px) {
+    .faq_accordion_section .heading {
+      text-align: center; } }
+.faq_accordion_section .info_list_item {
+  margin-bottom: 0.7rem; }
+  @media all and (min-width: 992px) {
+    .faq_accordion_section .info_list_item {
+      margin-bottom: 0; } }
+  .faq_accordion_section .info_list_item .question_part {
+    display: flex;
+    align-items: baseline;
+    cursor: pointer; }
+    .faq_accordion_section .info_list_item .question_part .question {
+      line-height: 1.7; }
+      .faq_accordion_section .info_list_item .question_part .question:after {
+        font-family: "Font Awesome 5 Free";
+        margin-left: 0.3rem;
+        font-size: 0.9rem;
+        content: '\f078';
+        font-weight: 600;
+        transition: max-height 0.5s ease-out; }
+    .faq_accordion_section .info_list_item .question_part .question.active:after {
+      content: '\f077'; }
+  .faq_accordion_section .info_list_item .answer_part {
+    padding: 0 0 1rem 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; }
+    .faq_accordion_section .info_list_item .answer_part.open {
+      max-height: 200px; }
 
 /*********************
    info banner
@@ -1350,15 +1420,15 @@ nav {
       padding-top: 0; } }
   .udemy_cards .course_card {
     position: relative;
-    height: 150px;
-    padding: 25px 25px 5px 110px;
-    box-shadow: 0 10px 20px rgba(91, 107, 174, 0.15);
-    border-radius: 5px;
+    height: 170px;
+    padding: 25px 25px 5px 25px;
+    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
     transition: .25s ease-in-out;
     margin: 0 -15px 2rem -15px; }
     @media all and (max-width: 480px) {
       .udemy_cards .course_card {
-        height: 170px; } }
+        height: 190px; } }
     @media all and (min-width: 768px) {
       .udemy_cards .course_card {
         margin: 0; } }
@@ -1366,7 +1436,7 @@ nav {
       .udemy_cards .course_card {
         margin-bottom: 1.5rem; } }
     .udemy_cards .course_card:hover {
-      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16); }
+      box-shadow: 0 10px 25px 1px rgba(0, 0, 0, 0.1); }
       .udemy_cards .course_card:hover p {
         transition: .25s ease-in-out;
         color: #2e9ce6; }
@@ -1378,21 +1448,25 @@ nav {
       left: 0;
       z-index: 3; }
     .udemy_cards .course_card .course_name {
-      color: #373c49;
-      font-weight: 500;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      line-height: 1.5rem; }
-    .udemy_cards .course_card .cta {
-      font-size: 0.9rem;
-      color: #2e9ce6; }
-      .udemy_cards .course_card .cta:after {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        font-size: 1rem;
-        content: '\f061';
-        margin-left: 0.2rem;
-        color: #2e9ce6; }
+      margin-bottom: 1rem;
+      line-height: 1.5rem;
+      margin-left: 80px; }
+      @media all and (max-width: 480px) {
+        .udemy_cards .course_card .course_name {
+          margin-bottom: 2.5rem; } }
+    .udemy_cards .course_card .arrow_link {
+      margin-left: 80px; }
+      @media all and (max-width: 480px) {
+        .udemy_cards .course_card .arrow_link {
+          margin-left: 0; } }
+    .udemy_cards .course_card.blue {
+      border-top: 5px solid #1b2fe4; }
+    .udemy_cards .course_card.lightblue {
+      border-top: 5px solid #2e9ce6; }
+    .udemy_cards .course_card.green {
+      border-top: 5px solid #0ba893; }
+    .udemy_cards .course_card.red {
+      border-top: 5px solid #e62e65; }
 
 /*********************
         Blog 
@@ -1838,7 +1912,7 @@ text layout for Pages Content block
   404-page
 *********************/
 .nopage {
-  background: #f6f9fc;
+  background: #f9f9f9;
   border: 1px solid #ebebeb;
   padding: 3rem;
   min-height: 300px;
@@ -1887,9 +1961,9 @@ forum section
       font-weight: 900;
       margin-left: 10px; }
 .signup_section.lightgrey .btn.signup_btn {
-  background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+  background: #2e9ce6;
   color: #fff;
-  border: 1px solid #f6f9fc; }
+  border: 1px solid #f9f9f9; }
   .signup_section.lightgrey .btn.signup_btn:hover {
     opacity: 0.8; }
 .signup_section.lightblue .btn.signup_btn {
@@ -1918,7 +1992,7 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-image: linear-gradient(to right, #21242c, #24272f, #262a33, #292d36, #2c303a);
+  background-image: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857);
   min-height: 480px; }
   @media all and (max-width: 480px) {
     .footer-main {
