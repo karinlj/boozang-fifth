@@ -248,7 +248,8 @@ a {
 
 a.arrow_link {
   display: inline-block;
-  position: relative; }
+  position: relative;
+  color: #1b94e4; }
   a.arrow_link:before {
     opacity: .4;
     position: absolute;
@@ -978,9 +979,9 @@ feature list
       .feature_list_section .feature_list_item .info .item_text {
         font-size: 0.9rem; }
 
-/*********************
-small_pricing_cards_section
-*********************/
+/***************************
+small pricing cards
+****************************/
 .small_pricing_cards_section .heading {
   margin-bottom: 4rem; }
 .small_pricing_cards_section .card {
@@ -1419,15 +1420,15 @@ small_pricing_cards_section
       padding-top: 0; } }
   .udemy_cards .course_card {
     position: relative;
-    height: 150px;
-    padding: 25px 25px 5px 110px;
-    box-shadow: 0 10px 20px rgba(91, 107, 174, 0.15);
-    border-radius: 5px;
+    height: 170px;
+    padding: 25px 25px 5px 25px;
+    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
     transition: .25s ease-in-out;
     margin: 0 -15px 2rem -15px; }
     @media all and (max-width: 480px) {
       .udemy_cards .course_card {
-        height: 170px; } }
+        height: 190px; } }
     @media all and (min-width: 768px) {
       .udemy_cards .course_card {
         margin: 0; } }
@@ -1435,7 +1436,7 @@ small_pricing_cards_section
       .udemy_cards .course_card {
         margin-bottom: 1.5rem; } }
     .udemy_cards .course_card:hover {
-      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16); }
+      box-shadow: 0 10px 25px 1px rgba(0, 0, 0, 0.1); }
       .udemy_cards .course_card:hover p {
         transition: .25s ease-in-out;
         color: #2e9ce6; }
@@ -1447,21 +1448,25 @@ small_pricing_cards_section
       left: 0;
       z-index: 3; }
     .udemy_cards .course_card .course_name {
-      color: #373c49;
-      font-weight: 500;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      line-height: 1.5rem; }
-    .udemy_cards .course_card .cta {
-      font-size: 0.9rem;
-      color: #2e9ce6; }
-      .udemy_cards .course_card .cta:after {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        font-size: 1rem;
-        content: '\f061';
-        margin-left: 0.2rem;
-        color: #2e9ce6; }
+      margin-bottom: 1rem;
+      line-height: 1.5rem;
+      margin-left: 80px; }
+      @media all and (max-width: 480px) {
+        .udemy_cards .course_card .course_name {
+          margin-bottom: 2.5rem; } }
+    .udemy_cards .course_card .arrow_link {
+      margin-left: 80px; }
+      @media all and (max-width: 480px) {
+        .udemy_cards .course_card .arrow_link {
+          margin-left: 0; } }
+    .udemy_cards .course_card.blue {
+      border-top: 5px solid #1b2fe4; }
+    .udemy_cards .course_card.lightblue {
+      border-top: 5px solid #2e9ce6; }
+    .udemy_cards .course_card.green {
+      border-top: 5px solid #0ba893; }
+    .udemy_cards .course_card.red {
+      border-top: 5px solid #e62e65; }
 
 /*********************
         Blog 
