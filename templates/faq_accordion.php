@@ -9,7 +9,9 @@
 <section class="faq_accordion_section <?php echo $bgColor; ?> section_spacing_top_big">
   <div class="container">
 
+    <?php if ($heading) {?>
     <h3 class="heading"><?php echo $heading; ?></h3>
+    <?php }?>
 
     <div class="row justify-content-between">
       <?php

@@ -9,7 +9,9 @@ if (get_row_layout() == 'small_pricing_cards') {
 <section class="small_pricing_cards_section <?php echo $bgColor; ?> section_spacing_top_big">
 
   <div class="container">
+    <?php if ($heading) {?>
     <h3 class="heading text-center"><?php echo $heading; ?></h3>
+    <?php }?>
 
     <div class="row justify-content-center">
 

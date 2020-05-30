@@ -10,7 +10,9 @@ if (get_row_layout() == 'feature_list') {
   <div class="container">
     <div class="row">
       <div class="col-12">
+        <?php if ($heading) {?>
         <h3 class="heading text-center"><?php echo $heading; ?></h3>
+        <?php }?>
 
         <div class="row">
 
