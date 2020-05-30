@@ -58,13 +58,6 @@ $themecolorGreenNewOverlay: linear-gradient(to right bottom,
   rgba(9, 144, 126, 0.85),
   rgba(14, 216, 189, 0.95));
 
-//Purple
-$themecoloPurple: #8e66c8;
-$themecoloPurpleBg: linear-gradient(to right bottom, #4568dc, #7266d2, #8e66c8, #a267bd, #b06ab3);
-$themecoloPurpleOverlay: linear-gradient(to right bottom,
-  rgba(69, 104, 220, 0.85),
-  rgba(162, 103, 189, 0.95));
-
 //DarkGrey
 $themecolorDarkGrey: #21242c;
 $themecolorDarkGreyBg: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857);
@@ -124,14 +117,17 @@ img {
 *********************/
 
 .container {
-  // max-width: 1280px;
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
 
-  // @media all and (min-width: 1580px) {
-  //   max-width: 1500px;
-  // }
+  @media all and (min-width: 1580px) {
+    max-width: 1250px;
+  }
+
+  @media all and (min-width: 1780px) {
+    max-width: 1450px;
+  }
 }
 
 .section_spacing_top_big {
@@ -457,7 +453,6 @@ a.banner_link {
   }
 }
 
-
 /*********************
     buttons
  *********************/
@@ -491,12 +486,8 @@ a.banner_link {
 /*********************************************
     overlay and background - header and sections
  *********************************************/
-.header_big,
-.header_small,
-.info_banner,
-.get_started_banner,
-.signup_section,
-.pricing_banner {
+section,
+header {
   position: relative;
 
   &.lightblue {
@@ -1351,6 +1342,8 @@ nav {
 feature list
 *********************/
 .feature_list_section {
+  padding-bottom: 2rem;
+
   .heading {
     margin-bottom: 4rem;
   }
@@ -1390,10 +1383,9 @@ feature list
 }
 
 /*********************
-horizontal-box-section 
+small_pricing_cards_section
 *********************/
-.horizontal_boxes_section {
-  background: $lightgrey;
+.small_pricing_cards_section {
 
   .heading {
     margin-bottom: 4rem;
@@ -1408,6 +1400,10 @@ horizontal-box-section
 
     @media all and (min-width: $sm-min) {
       height: 250px;
+    }
+
+    @media all and (min-width: $lg-min) {
+      margin-bottom: 0;
     }
 
     .col-sm-9 {
@@ -1464,7 +1460,14 @@ horizontal-box-section
    faq accordion
 *********************/
 .faq_accordion_section {
-  padding-bottom: 10rem;
+
+  .heading {
+    margin-bottom: 4rem;
+
+    @media all and (min-width: $md-min) {
+      text-align: center;
+    }
+  }
 
   .info_list_item {
     margin-bottom: 0.7rem;
@@ -1509,7 +1512,6 @@ horizontal-box-section
       }
     }
   }
-
 }
 
 /*********************

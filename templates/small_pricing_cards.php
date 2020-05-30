@@ -1,10 +1,12 @@
 <?php
 // boxes layout for Pages Content block
-if (get_row_layout() == 'horizontal_boxes') {
+if (get_row_layout() == 'small_pricing_cards') {
 
-    $heading = get_sub_field('heading');?>
+    $heading = get_sub_field('heading');
+    $bgColor = get_sub_field('background_color');
+    ?>
 
-<section class="horizontal_boxes_section section_spacing_top_medium">
+<section class="small_pricing_cards_section <?php echo $bgColor; ?> section_spacing_top_big">
 
   <div class="container">
     <h3 class="heading text-center"><?php echo $heading; ?></h3>
@@ -12,9 +14,9 @@ if (get_row_layout() == 'horizontal_boxes') {
     <div class="row justify-content-center">
 
       <?php //horizontal_box repeater
-    if (have_rows('horizontal_boxes')) {
+    if (have_rows('small_pricing_cards_list')) {
 
-        while (have_rows('horizontal_boxes')) {
+        while (have_rows('small_pricing_cards_list')) {
             the_row();
             $color = get_sub_field('color_theme');
 
@@ -27,7 +29,7 @@ if (get_row_layout() == 'horizontal_boxes') {
       <div class="col-lg-6">
         <div class="card <?php echo $color; ?>">
           <div class="card-body">
-            <div class="horizontal-box">
+            <div class="small_pricing_card">
 
               <div class="row align-items-center justify-content-between">
                 <div class="col-sm-9">

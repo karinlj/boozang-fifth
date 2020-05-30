@@ -39,6 +39,12 @@ img {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto; }
+  @media all and (min-width: 1580px) {
+    .container {
+      max-width: 1250px; } }
+  @media all and (min-width: 1780px) {
+    .container {
+      max-width: 1450px; } }
 
 .section_spacing_top_big {
   padding: 5rem calc(1.5rem - 15px); }
@@ -321,170 +327,70 @@ a.banner_link {
 /*********************************************
     overlay and background - header and sections
  *********************************************/
-.header_big,
-.header_small,
-.info_banner,
-.get_started_banner,
-.signup_section,
-.pricing_banner {
+section,
+header {
   position: relative; }
-  .header_big.lightblue,
-  .header_small.lightblue,
-  .info_banner.lightblue,
-  .get_started_banner.lightblue,
-  .signup_section.lightblue,
-  .pricing_banner.lightblue {
+  section.lightblue,
+  header.lightblue {
     background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
-  .header_big.blue,
-  .header_small.blue,
-  .info_banner.blue,
-  .get_started_banner.blue,
-  .signup_section.blue,
-  .pricing_banner.blue {
+  section.blue,
+  header.blue {
     background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4); }
-  .header_big.green,
-  .header_small.green,
-  .info_banner.green,
-  .get_started_banner.green,
-  .signup_section.green,
-  .pricing_banner.green {
+  section.green,
+  header.green {
     background-image: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd); }
-  .header_big.lightgrey,
-  .header_small.lightgrey,
-  .info_banner.lightgrey,
-  .get_started_banner.lightgrey,
-  .signup_section.lightgrey,
-  .pricing_banner.lightgrey {
+  section.lightgrey,
+  header.lightgrey {
     background: #f9f9f9; }
-    .header_big.lightgrey h1,
-    .header_big.lightgrey h2,
-    .header_big.lightgrey h3,
-    .header_big.lightgrey h4,
-    .header_big.lightgrey h5,
-    .header_big.lightgrey h6,
-    .header_small.lightgrey h1,
-    .header_small.lightgrey h2,
-    .header_small.lightgrey h3,
-    .header_small.lightgrey h4,
-    .header_small.lightgrey h5,
-    .header_small.lightgrey h6,
-    .info_banner.lightgrey h1,
-    .info_banner.lightgrey h2,
-    .info_banner.lightgrey h3,
-    .info_banner.lightgrey h4,
-    .info_banner.lightgrey h5,
-    .info_banner.lightgrey h6,
-    .get_started_banner.lightgrey h1,
-    .get_started_banner.lightgrey h2,
-    .get_started_banner.lightgrey h3,
-    .get_started_banner.lightgrey h4,
-    .get_started_banner.lightgrey h5,
-    .get_started_banner.lightgrey h6,
-    .signup_section.lightgrey h1,
-    .signup_section.lightgrey h2,
-    .signup_section.lightgrey h3,
-    .signup_section.lightgrey h4,
-    .signup_section.lightgrey h5,
-    .signup_section.lightgrey h6,
-    .pricing_banner.lightgrey h1,
-    .pricing_banner.lightgrey h2,
-    .pricing_banner.lightgrey h3,
-    .pricing_banner.lightgrey h4,
-    .pricing_banner.lightgrey h5,
-    .pricing_banner.lightgrey h6 {
+    section.lightgrey h1,
+    section.lightgrey h2,
+    section.lightgrey h3,
+    section.lightgrey h4,
+    section.lightgrey h5,
+    section.lightgrey h6,
+    header.lightgrey h1,
+    header.lightgrey h2,
+    header.lightgrey h3,
+    header.lightgrey h4,
+    header.lightgrey h5,
+    header.lightgrey h6 {
       color: #373c49; }
-    .header_big.lightgrey p,
-    .header_small.lightgrey p,
-    .info_banner.lightgrey p,
-    .get_started_banner.lightgrey p,
-    .signup_section.lightgrey p,
-    .pricing_banner.lightgrey p {
+    section.lightgrey p,
+    header.lightgrey p {
       color: #373c49; }
-    .header_big.lightgrey .banner_link,
-    .header_small.lightgrey .banner_link,
-    .info_banner.lightgrey .banner_link,
-    .get_started_banner.lightgrey .banner_link,
-    .signup_section.lightgrey .banner_link,
-    .pricing_banner.lightgrey .banner_link {
+    section.lightgrey .banner_link,
+    header.lightgrey .banner_link {
       color: #2e9ce6; }
-      .header_big.lightgrey .banner_link:before,
-      .header_small.lightgrey .banner_link:before,
-      .info_banner.lightgrey .banner_link:before,
-      .get_started_banner.lightgrey .banner_link:before,
-      .signup_section.lightgrey .banner_link:before,
-      .pricing_banner.lightgrey .banner_link:before {
+      section.lightgrey .banner_link:before,
+      header.lightgrey .banner_link:before {
         background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
-  .header_big.darkgrey,
-  .header_small.darkgrey,
-  .info_banner.darkgrey,
-  .get_started_banner.darkgrey,
-  .signup_section.darkgrey,
-  .pricing_banner.darkgrey {
+  section.darkgrey,
+  header.darkgrey {
     background: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857); }
-    .header_big.darkgrey h1,
-    .header_big.darkgrey h2,
-    .header_big.darkgrey h3,
-    .header_big.darkgrey h4,
-    .header_big.darkgrey h5,
-    .header_big.darkgrey h6,
-    .header_small.darkgrey h1,
-    .header_small.darkgrey h2,
-    .header_small.darkgrey h3,
-    .header_small.darkgrey h4,
-    .header_small.darkgrey h5,
-    .header_small.darkgrey h6,
-    .info_banner.darkgrey h1,
-    .info_banner.darkgrey h2,
-    .info_banner.darkgrey h3,
-    .info_banner.darkgrey h4,
-    .info_banner.darkgrey h5,
-    .info_banner.darkgrey h6,
-    .get_started_banner.darkgrey h1,
-    .get_started_banner.darkgrey h2,
-    .get_started_banner.darkgrey h3,
-    .get_started_banner.darkgrey h4,
-    .get_started_banner.darkgrey h5,
-    .get_started_banner.darkgrey h6,
-    .signup_section.darkgrey h1,
-    .signup_section.darkgrey h2,
-    .signup_section.darkgrey h3,
-    .signup_section.darkgrey h4,
-    .signup_section.darkgrey h5,
-    .signup_section.darkgrey h6,
-    .pricing_banner.darkgrey h1,
-    .pricing_banner.darkgrey h2,
-    .pricing_banner.darkgrey h3,
-    .pricing_banner.darkgrey h4,
-    .pricing_banner.darkgrey h5,
-    .pricing_banner.darkgrey h6 {
+    section.darkgrey h1,
+    section.darkgrey h2,
+    section.darkgrey h3,
+    section.darkgrey h4,
+    section.darkgrey h5,
+    section.darkgrey h6,
+    header.darkgrey h1,
+    header.darkgrey h2,
+    header.darkgrey h3,
+    header.darkgrey h4,
+    header.darkgrey h5,
+    header.darkgrey h6 {
       color: #fcfdfe; }
-    .header_big.darkgrey p,
-    .header_small.darkgrey p,
-    .info_banner.darkgrey p,
-    .get_started_banner.darkgrey p,
-    .signup_section.darkgrey p,
-    .pricing_banner.darkgrey p {
+    section.darkgrey p,
+    header.darkgrey p {
       color: #fcfdfe; }
-    .header_big.darkgrey .banner_link,
-    .header_small.darkgrey .banner_link,
-    .info_banner.darkgrey .banner_link,
-    .get_started_banner.darkgrey .banner_link,
-    .signup_section.darkgrey .banner_link,
-    .pricing_banner.darkgrey .banner_link {
+    section.darkgrey .banner_link,
+    header.darkgrey .banner_link {
       color: #fcfdfe; }
-      .header_big.darkgrey .banner_link:before,
-      .header_small.darkgrey .banner_link:before,
-      .info_banner.darkgrey .banner_link:before,
-      .get_started_banner.darkgrey .banner_link:before,
-      .signup_section.darkgrey .banner_link:before,
-      .pricing_banner.darkgrey .banner_link:before {
+      section.darkgrey .banner_link:before,
+      header.darkgrey .banner_link:before {
         background: #fcfdfe; }
-  .header_big.overlay-dark::before,
-  .header_small.overlay-dark::before,
-  .info_banner.overlay-dark::before,
-  .get_started_banner.overlay-dark::before,
-  .signup_section.overlay-dark::before,
-  .pricing_banner.overlay-dark::before {
+  section.overlay-dark::before,
+  header.overlay-dark::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -493,12 +399,8 @@ a.banner_link {
     background: rgba(0, 0, 0, 0.5);
     content: '';
     display: block; }
-  .header_big.overlay-lightblue::before,
-  .header_small.overlay-lightblue::before,
-  .info_banner.overlay-lightblue::before,
-  .get_started_banner.overlay-lightblue::before,
-  .signup_section.overlay-lightblue::before,
-  .pricing_banner.overlay-lightblue::before {
+  section.overlay-lightblue::before,
+  header.overlay-lightblue::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -507,12 +409,8 @@ a.banner_link {
     background-image: linear-gradient(to right bottom, rgba(27, 148, 228, 0.85), rgba(142, 201, 241, 0.95));
     content: '';
     display: block; }
-  .header_big.overlay-blue::before,
-  .header_small.overlay-blue::before,
-  .info_banner.overlay-blue::before,
-  .get_started_banner.overlay-blue::before,
-  .signup_section.overlay-blue::before,
-  .pricing_banner.overlay-blue::before {
+  section.overlay-blue::before,
+  header.overlay-blue::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -521,12 +419,8 @@ a.banner_link {
     background-image: linear-gradient(to right bottom, rgba(27, 47, 228, 0.85), rgba(164, 172, 244, 0.95));
     content: '';
     display: block; }
-  .header_big.overlay-green::before,
-  .header_small.overlay-green::before,
-  .info_banner.overlay-green::before,
-  .get_started_banner.overlay-green::before,
-  .signup_section.overlay-green::before,
-  .pricing_banner.overlay-green::before {
+  section.overlay-green::before,
+  header.overlay-green::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -1060,102 +954,108 @@ nav {
 /*********************
 feature list
 *********************/
-.feature_list_section .heading {
-  margin-bottom: 4rem; }
-.feature_list_section .feature_list_item {
-  display: flex;
+.feature_list_section {
   padding-bottom: 2rem; }
-  .feature_list_section .feature_list_item .features_icon {
-    height: 2.4rem;
-    border-radius: 2px; }
-    .feature_list_section .feature_list_item .features_icon i {
-      padding: 0 0.7rem 0.7rem 0.7rem;
-      color: #18cd61; }
+  .feature_list_section .heading {
+    margin-bottom: 4rem; }
+  .feature_list_section .feature_list_item {
+    display: flex;
+    padding-bottom: 2rem; }
+    .feature_list_section .feature_list_item .features_icon {
+      height: 2.4rem;
+      border-radius: 2px; }
+      .feature_list_section .feature_list_item .features_icon i {
+        padding: 0 0.7rem 0.7rem 0.7rem;
+        color: #18cd61; }
+        @media all and (min-width: 1200px) {
+          .feature_list_section .feature_list_item .features_icon i {
+            padding: 0 1rem 1rem 1rem; } }
       @media all and (min-width: 1200px) {
-        .feature_list_section .feature_list_item .features_icon i {
-          padding: 0 1rem 1rem 1rem; } }
-    @media all and (min-width: 1200px) {
-      .feature_list_section .feature_list_item .features_icon {
-        height: 3rem; } }
-  .feature_list_section .feature_list_item .info {
-    padding-left: 1rem; }
-    .feature_list_section .feature_list_item .info .item_text {
-      font-size: 0.9rem; }
+        .feature_list_section .feature_list_item .features_icon {
+          height: 3rem; } }
+    .feature_list_section .feature_list_item .info {
+      padding-left: 1rem; }
+      .feature_list_section .feature_list_item .info .item_text {
+        font-size: 0.9rem; }
 
 /*********************
-horizontal-box-section 
+small_pricing_cards_section
 *********************/
-.horizontal_boxes_section {
-  background: #f9f9f9; }
-  .horizontal_boxes_section .heading {
-    margin-bottom: 4rem; }
-  .horizontal_boxes_section .card {
-    height: auto;
-    padding: 0.5rem 1.5rem;
-    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-    border: none;
-    margin-bottom: 3rem; }
+.small_pricing_cards_section .heading {
+  margin-bottom: 4rem; }
+.small_pricing_cards_section .card {
+  height: auto;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-bottom: 3rem; }
+  @media all and (min-width: 576px) {
+    .small_pricing_cards_section .card {
+      height: 250px; } }
+  @media all and (min-width: 992px) {
+    .small_pricing_cards_section .card {
+      margin-bottom: 0; } }
+  .small_pricing_cards_section .card .col-sm-9 {
+    border-bottom: 2px solid #e6e6e6; }
     @media all and (min-width: 576px) {
-      .horizontal_boxes_section .card {
-        height: 250px; } }
-    .horizontal_boxes_section .card .col-sm-9 {
-      border-bottom: 2px solid #e6e6e6; }
-      @media all and (min-width: 576px) {
-        .horizontal_boxes_section .card .col-sm-9 {
-          border-bottom: none;
-          border-right: 2px solid #e6e6e6; } }
-      .horizontal_boxes_section .card .col-sm-9 .text {
-        font-size: 0.9rem; }
+      .small_pricing_cards_section .card .col-sm-9 {
+        border-bottom: none;
+        border-right: 2px solid #e6e6e6; } }
+    .small_pricing_cards_section .card .col-sm-9 .text {
+      font-size: 0.9rem; }
+  @media all and (min-width: 576px) {
+    .small_pricing_cards_section .card .col-sm-3 {
+      text-align: center; } }
+  .small_pricing_cards_section .card .col-sm-3 .price h3 {
+    margin-bottom: 0.2rem;
+    padding-top: 1rem; }
     @media all and (min-width: 576px) {
-      .horizontal_boxes_section .card .col-sm-3 {
-        text-align: center; } }
-    .horizontal_boxes_section .card .col-sm-3 .price h3 {
-      margin-bottom: 0.2rem;
-      padding-top: 1rem; }
-      @media all and (min-width: 576px) {
-        .horizontal_boxes_section .card .col-sm-3 .price h3 {
-          padding-top: 0; } }
-    .horizontal_boxes_section .card.blue {
-      border-top: 5px solid #1b2fe4; }
-    .horizontal_boxes_section .card.lightblue {
-      border-top: 5px solid #2e9ce6; }
-    .horizontal_boxes_section .card.green {
-      border-top: 5px solid #18cd61; }
-    .horizontal_boxes_section .card.red {
-      border-top: 5px solid #e62e65; }
+      .small_pricing_cards_section .card .col-sm-3 .price h3 {
+        padding-top: 0; } }
+  .small_pricing_cards_section .card.blue {
+    border-top: 5px solid #1b2fe4; }
+  .small_pricing_cards_section .card.lightblue {
+    border-top: 5px solid #2e9ce6; }
+  .small_pricing_cards_section .card.green {
+    border-top: 5px solid #18cd61; }
+  .small_pricing_cards_section .card.red {
+    border-top: 5px solid #e62e65; }
 
 /*********************
    faq accordion
 *********************/
-.faq_accordion_section {
-  padding-bottom: 10rem; }
-  .faq_accordion_section .info_list_item {
-    margin-bottom: 0.7rem; }
-    @media all and (min-width: 992px) {
-      .faq_accordion_section .info_list_item {
-        margin-bottom: 0; } }
-    .faq_accordion_section .info_list_item .question_part {
-      display: flex;
-      align-items: baseline;
-      cursor: pointer; }
-      .faq_accordion_section .info_list_item .question_part .question {
-        line-height: 1.7; }
-        .faq_accordion_section .info_list_item .question_part .question:after {
-          font-family: "Font Awesome 5 Free";
-          margin-left: 0.3rem;
-          font-size: 0.9rem;
-          content: '\f078';
-          font-weight: 600;
-          transition: max-height 0.5s ease-out; }
-      .faq_accordion_section .info_list_item .question_part .question.active:after {
-        content: '\f077'; }
-    .faq_accordion_section .info_list_item .answer_part {
-      padding: 0 0 1rem 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease-out; }
-      .faq_accordion_section .info_list_item .answer_part.open {
-        max-height: 200px; }
+.faq_accordion_section .heading {
+  margin-bottom: 4rem; }
+  @media all and (min-width: 768px) {
+    .faq_accordion_section .heading {
+      text-align: center; } }
+.faq_accordion_section .info_list_item {
+  margin-bottom: 0.7rem; }
+  @media all and (min-width: 992px) {
+    .faq_accordion_section .info_list_item {
+      margin-bottom: 0; } }
+  .faq_accordion_section .info_list_item .question_part {
+    display: flex;
+    align-items: baseline;
+    cursor: pointer; }
+    .faq_accordion_section .info_list_item .question_part .question {
+      line-height: 1.7; }
+      .faq_accordion_section .info_list_item .question_part .question:after {
+        font-family: "Font Awesome 5 Free";
+        margin-left: 0.3rem;
+        font-size: 0.9rem;
+        content: '\f078';
+        font-weight: 600;
+        transition: max-height 0.5s ease-out; }
+    .faq_accordion_section .info_list_item .question_part .question.active:after {
+      content: '\f077'; }
+  .faq_accordion_section .info_list_item .answer_part {
+    padding: 0 0 1rem 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; }
+    .faq_accordion_section .info_list_item .answer_part.open {
+      max-height: 200px; }
 
 /*********************
    info banner

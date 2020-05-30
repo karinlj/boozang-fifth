@@ -1,15 +1,22 @@
 <!-- faq accordion layout for Pages Content block-->
 
-<?php if (get_row_layout() == 'faq_accordion') {?>
+<?php if (get_row_layout() == 'faq_accordion') {
 
-<section class="faq_accordion_section section_spacing_top_big">
+    $heading = get_sub_field('heading');
+    $bgColor = get_sub_field('background_color');
+    ?>
+
+<section class="faq_accordion_section <?php echo $bgColor; ?> section_spacing_top_big">
   <div class="container">
-    <div class="row">
+
+    <h3 class="heading"><?php echo $heading; ?></h3>
+
+    <div class="row justify-content-between">
       <?php
 $count = 0;
     $list_length = count(get_sub_field("faq_accordion_list"));
     ?>
-      <div class="col-lg-6">
+      <div class="col-md-5">
 
         <?php if (have_rows('faq_accordion_list')) {?>
         <?php while (have_rows('faq_accordion_list')) {
@@ -34,7 +41,7 @@ $count = 0;
         <?php if ($count == ceil($list_length / 2)) {?>
       </div>
 
-      <div class="col-lg-6">
+      <div class="col-md-6">
         <?php }?>
 
         <?php }
