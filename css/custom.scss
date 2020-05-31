@@ -1220,7 +1220,6 @@ nav {
     pricing
  *********************/
 .pricing_section {
-  //background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(243, 244, 246, 1) 100%); 
   background: $lightgrey;
 
   .preamble_section {
@@ -1248,7 +1247,7 @@ nav {
     border-radius: $themeBorder_radius;
     box-shadow: $themeBox_shadow;
     border: 1px solid $lightgrey;
-    height: 530px;
+    height: 500px;
 
     .card-body {
       padding: 0 1.25rem 1.25rem 1.25rem;
@@ -1256,7 +1255,7 @@ nav {
     }
 
     .pricing_header {
-      border-bottom: 2px solid $lightgrey;
+      border-bottom: 2px solid $mediumgrey;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1314,7 +1313,7 @@ nav {
 
     //middle card higher
     &.higher {
-      height: 560px;
+      height: 530px;
 
       .pricing_header {
         height: 115px;

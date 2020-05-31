@@ -9,8 +9,12 @@ if (get_row_layout() == 'pricing_cards') {
    <div class="container">
 
      <section class="preamble_section">
+       <?php if ($preamble_heading) {?>
        <h3 class="preamble_heading"><?php echo $preamble_heading; ?></h3>
+       <?php }?>
+       <?php if ($preamble_text) {?>
        <p class="preamble_text"><?php echo $preamble_text; ?></p>
+       <?php }?>
      </section>
 
      <div class="row align-items-center no-gutters">

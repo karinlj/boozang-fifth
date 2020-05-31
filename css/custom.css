@@ -896,12 +896,12 @@ nav {
     border-radius: 10px;
     box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
     border: 1px solid #f9f9f9;
-    height: 530px; }
+    height: 500px; }
     .pricing_section .card .card-body {
       padding: 0 1.25rem 1.25rem 1.25rem;
       height: 100%; }
     .pricing_section .card .pricing_header {
-      border-bottom: 2px solid #f9f9f9;
+      border-bottom: 2px solid #f1f1f4;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -938,7 +938,7 @@ nav {
       .pricing_section .card .btn:hover {
         opacity: 0.8; }
     .pricing_section .card.higher {
-      height: 560px; }
+      height: 530px; }
       .pricing_section .card.higher .pricing_header {
         height: 115px; }
     .pricing_section .card.blue_darker {
