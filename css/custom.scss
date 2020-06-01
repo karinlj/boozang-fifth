@@ -1243,7 +1243,6 @@ nav {
 
   .card {
     text-align: center;
-    //  width: 33.33333%;
     border-radius: $themeBorder_radius;
     box-shadow: $themeBox_shadow;
     border: 1px solid $lightgrey;
@@ -1398,6 +1397,7 @@ small pricing cards
     box-shadow: $themeBox_shadow;
     border: none;
     margin-bottom: 3rem;
+    border-radius: $themeBorder_radius;
 
     @media all and (min-width: $sm-min) {
       height: 250px;
@@ -2051,7 +2051,7 @@ small pricing cards
     height: 170px;
     padding: 25px 25px 5px 25px;
     box-shadow: $themeBox_shadow;
-    border-radius: 3px;
+    border-radius: $themeBorder_radius;
     transition: .25s ease-in-out;
     margin: 0 -15px 2rem -15px;
 

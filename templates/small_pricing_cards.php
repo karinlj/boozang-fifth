@@ -6,7 +6,7 @@ if (get_row_layout() == 'small_pricing_cards') {
     $bgColor = get_sub_field('background_color');
     ?>
 
-<section class="small_pricing_cards_section <?php echo $bgColor; ?> section_spacing_top_big">
+<section class="small_pricing_cards_section <?php echo $bgColor; ?> section_spacing_top_medium">
 
   <div class="container">
     <?php if ($heading) {?>
