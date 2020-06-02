@@ -4,7 +4,7 @@
 
   <?php get_template_part('parts/blog-sidebar');?>
 
-  <div class="blog_flow">
+  <div class="blog_flow section_spacing_top_small">
     <div class="container">
       <div class="row">
 
@@ -13,8 +13,8 @@
 
         <?php while (have_posts()): the_post();?>
 
-        <!--get content.php-->
-        <?php get_template_part('content', get_post_format());?>
+        <!--get content.php hej-->
+        <?php get_template_part('parts/content', get_post_format());?>
 
         <?php endwhile;?>
 
