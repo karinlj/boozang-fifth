@@ -34,7 +34,6 @@ $themecolorRed: #e62e65;
 $linkhoverOpacity: 0.7;
 
 //Blue
-$complementcolorBlue: #3475e5;
 $themecolorBlue: #1b2fe4;
 $themecolorBlueBg: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
 $themecolorBlueOverlay: linear-gradient(to right bottom,
@@ -1919,30 +1918,68 @@ small pricing cards
 /********************
   Videos Page Layout
 *********************/
-//new
+.videos_udemy_section {}
+
 .video_section {
-  padding-top: 0;
+  // padding-top: 0;
 
-  .video_list {
-    display: flex;
-    flex-wrap: wrap;
+  .video_container {
+    position: relative;
+    width: 100%;
+    box-shadow: $themeBox_shadow;
+    border-radius: $themeBorder_radius;
+    margin: 0 2% 3rem 0;
+    transition: .25s ease-in-out;
 
-    .video_container {
-      padding-bottom: 3rem;
-      width: 100%;
-      padding-right: 2%;
+    &:hover {
+      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16);
 
-      @media all and (min-width:$sm-min) {
-        width: 50%;
+      .title,
+      .description {
+        transition: .25s ease-in-out;
+        color: $themecolorBlueLight;
+      }
+    }
+
+    .embed_container {
+      // background: linear-gradient(to right bottom, #0a3b5c, #0b4267, #0c4a73, #0e517e, #0f598a);
+      border-top-left-radius: $themeBorder_radius;
+      border-top-right-radius: $themeBorder_radius;
+
+      .video_link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
       }
 
-      @media all and (min-width:$lg-min) {
-        width: 33%;
-      }
+      .img_container {
+        img {
+          border-top-left-radius: $themeBorder_radius;
+          border-top-right-radius: $themeBorder_radius;
+        }
 
-      @media all and (min-width:$xl-min) {
-        width: 25%;
+        .title_on_img {
+          width: 86%;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 20%;
+          left: 50%;
+          z-index: 2;
+          color: #fff;
+          font-weight: 600;
+          margin-bottom: 0;
+          font-size: 1.1rem;
+          text-align: center;
+          line-height: 1.4;
+        }
       }
+    }
+
+    .content_container {
+      padding: 1rem 1.2rem 0.5rem 1.2rem;
 
       .cat_badge {
         text-align: center;
@@ -1961,53 +1998,15 @@ small pricing cards
       }
 
       .title {
-        padding: 1rem 0 0 0;
+        padding: 0.5rem 0 0 0;
         font-weight: 600;
       }
 
       .description {
         font-size: 0.8rem;
       }
-
-      .embed_container {
-        padding-bottom: 0.5rem;
-        height: 150px;
-        position: relative;
-        border-radius: 3px;
-
-        .video_link {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          z-index: 3;
-        }
-
-        .title_on_img {
-          width: 80%;
-          position: absolute;
-          transform: translate(-50%, -50%);
-          top: 35%;
-          left: 50%;
-          z-index: 2;
-          color: #fff;
-          font-weight: 600;
-          // line-height: 1;
-          margin-bottom: 0;
-          font-size: 1.1rem;
-          text-align: center;
-        }
-
-        iframe {
-          max-height: 100%;
-          width: 100%;
-          box-shadow: 0 2px 4px 0 rgba(91, 107, 174, .15);
-          border-radius: 2px;
-          overflow: hidden;
-        }
-      }
     }
+
   }
 }
 
@@ -2304,11 +2303,9 @@ small pricing cards
   // posts
   .post_card {
     position: relative;
-    padding: 0.3rem;
     box-shadow: 0 20px 40px rgba(91, 107, 174, .15);
     margin-bottom: 3rem;
     border-radius: $themeBorder_radius;
-    border-radius: 16px;
     transition: .25s ease-in-out;
     background: #fff;
 
@@ -2332,12 +2329,12 @@ small pricing cards
     }
 
     img {
-      border-radius: $themeBorder_radius;
-      border-radius: 16px;
+      border-top-left-radius: $themeBorder_radius;
+      border-top-right-radius: $themeBorder_radius;
     }
 
     .post_content {
-      padding: 1.2rem 1.2rem 0.5rem 1.2rem;
+      padding: 1rem 1.2rem 0.5rem 1.2rem;
 
       //centered images
       img {

@@ -20,8 +20,8 @@
         },
         {
             "key": "field_5ea43c376b2df",
-            "label": "Background image",
-            "name": "background_image",
+            "label": "Image",
+            "name": "image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -34,8 +34,8 @@
             "return_format": "id",
             "preview_size": "small-thumbnail",
             "library": "all",
-            "min_width": 315,
-            "min_height": 165,
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
             "max_width": "",
             "max_height": "",
@@ -95,5 +95,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1588697555
+    "modified": 1591179608
 }

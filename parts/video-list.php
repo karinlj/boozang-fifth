@@ -2,8 +2,8 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-12">
-        <div class="video_list">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="row">
 
           <?php
 $post_type = 'videos';
@@ -26,40 +26,44 @@ foreach ($taxonomies as $taxonomy) {
 
                 $posts->the_post();?>
 
-          <?php $video_url = get_field('url');
+          <div class="col-sm-6 col-lg-4">
+
+            <div class="video_container">
+
+              <?php $video_url = get_field('url');
                 $style = '';
                 $bg_img = get_field('background_image');
                 ?>
+              <div class="embed_container" <?php echo $style; ?>>
+                <!-- url -->
+                <?php if ($video_url) {?>
+                <a class="video_link" href="<?php echo $video_url; ?>">
+                </a>
+                <?php }?>
 
-          <!-- bgImage -->
-          <?php if ($bg_img) {?>
+                <div class="img_container">
 
-          <?php $style = 'style="background: #2e9ce6 url(\'' . wp_get_attachment_url($bg_img, 'full') . '\') no-repeat center; background-size: cover"';
-                } else {
-                    $style = 'style="background-image: linear-gradient(to right bottom, #0a3b5c, #0b4267, #0c4a73, #0e517e, #0f598a)"';
+                  <?php $image = get_field('image');
+                $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                if ($image) {
+                    echo wp_get_attachment_image($image, $size);
                 }?>
 
-          <div class="video_container">
-            <div class="embed_container" <?php echo $style; ?>>
+                  <h4 class="title_on_img"><?php the_title();?></h4>
+                </div>
+              </div>
 
-              <!-- url -->
-              <?php if ($video_url) {?>
-              <a class="video_link" href="<?php echo $video_url; ?>">
-              </a>
-              <?php }?>
+              <div class="content_container">
 
-              <p class="title_on_img"><?php the_title();?></p>
+                <?php echo '<span class="cat_badge">' . $term->name . '</span>'; ?>
+
+                <h6 class="title"><?php the_title();?></h6>
+                <p class="description"><?php the_field('description');?></p>
+              </div>
             </div>
-
-            <?php echo '<span class="cat_badge">' . $term->name . '</span>'; ?>
-
-            <h6 class="title"><?php the_title();?></h6>
-            <p class="description"><?php the_field('description');?></p>
           </div>
-
           <?php
 }
-
         }
     }
 }?>
@@ -67,5 +71,4 @@ foreach ($taxonomies as $taxonomy) {
       </div>
     </div>
   </div>
-
 </section>
