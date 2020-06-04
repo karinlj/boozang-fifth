@@ -60,22 +60,6 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
-        },
-        {
-            "key": "field_5b9e2ed69eec6",
-            "label": "Video",
-            "name": "video",
-            "type": "oembed",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "width": 270,
-            "height": 150
         }
     ],
     "location": [
@@ -95,5 +79,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591179608
+    "modified": 1591297843
 }

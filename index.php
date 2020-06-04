@@ -19,19 +19,20 @@
       </div>
 
       <div class="paginate_links">
-        <button class=" btn">
-
-          <?php
+        <?php
 $pages = array(
 
     'prev_text' => __('<i class="fas fa-angle-double-left"></i>'),
     'next_text' => __('<i class="fas fa-angle-double-right"></i>'),
 );
 
-echo paginate_links($pages);
-?>
+if (paginate_links($pages)) {?>
+        <button class=" btn">
+          <?php echo paginate_links($pages); ?>
         </button>
+        <?php }?>
       </div>
+
       <?php else: ?>
       <p><?php __('No Posts Found');?></p>
       <?php endif;?>
