@@ -4,7 +4,7 @@
 
   <?php get_template_part('parts/blog-sidebar');?>
 
-  <div class="blog_flow section_spacing_top_small">
+  <div class="blog_flow section_spacing_top_medium">
     <div class="container">
       <div class="row">
 
@@ -19,13 +19,31 @@
       </div>
 
       <div class="paginate_links">
-        <!-- <?php previous_posts_link();?>
-        <?php next_posts_link();?> -->
-        <?php echo paginate_links(); ?>
-      </div>
+        <button class=" btn">
 
-      <!-- JetMail newsletter widget -->
-      <section class="newsletter">
+          <?php
+$pages = array(
+
+    'prev_text' => __('<i class="fas fa-angle-double-left"></i>'),
+    'next_text' => __('<i class="fas fa-angle-double-right"></i>'),
+    'posts_per_page' => '3',
+);
+
+echo paginate_links($pages);
+?>
+        </button>
+      </div>
+      <?php else: ?>
+      <p><?php __('No Posts Found');?></p>
+      <?php endif;?>
+    </div>
+  </div>
+</div>
+<!-- MailJet newsletter widget -->
+<section class="newsletter section_spacing_top_medium">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
         <div class="newsletter_content">
 
           <?php if (is_active_sidebar('newsletter')):
@@ -34,13 +52,9 @@
 endif;
 ?>
         </div>
-      </section>
-
-      <?php else: ?>
-      <p><?php __('No Posts Found');?></p>
-      <?php endif;?>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <?php get_footer();?>

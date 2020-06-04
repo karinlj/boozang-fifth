@@ -298,7 +298,8 @@ h6 {
 .text_section,
 .get_started_banner,
 .info_banner,
-.copy {
+.copy,
+.newsletter {
   text-align: center;
 
   @media all and (min-width: $sm-min) {
@@ -2287,7 +2288,6 @@ small pricing cards
     //next and previous
     .paginate_links {
       text-align: center;
-      padding-bottom: 2rem;
 
       span,
       a {
@@ -2295,7 +2295,7 @@ small pricing cards
       }
 
       .page-numbers.current {
-        color: #777;
+        color: #b3b3b3;
       }
     }
   }
@@ -2384,23 +2384,20 @@ small pricing cards
 
     //single post
     &.single {
-      margin-top: -80px;
+      margin-top: -90px;
       box-shadow: none;
       transition: none;
       margin-bottom: 0;
 
       @media all and (min-width: $sm-min) {
-        margin: -80px 2rem 3rem 2rem;
-
-        padding: 0.3rem;
-        box-shadow: 0 20px 40px rgba(91, 107, 174, .15);
-        border-radius: 16px;
+        box-shadow: $themeBox_shadow; //0 20px 40px rgba(91, 107, 174, .15);
+        border-radius: $themeBorder_radius;
         transition: .25s ease-in-out;
         background: #fff;
       }
 
       @media all and (min-width: $xl-min) {
-        margin-top: -90px;
+        margin-top: -100px;
       }
 
       &:hover {
@@ -2474,30 +2471,57 @@ small pricing cards
       }
     }
   }
+}
 
-  // Newsletter {
-  .newsletter {
-    background: $themecolorBlueBg;
-    border-radius: $themeBorder_radius;
+// Newsletter {
+.newsletter {
+  background-image: url('../img/newspapers.jpg');
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: $themecolorBlueOverlay;
+    content: '';
+    display: block;
+  }
+
+  .newsletter_content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    text-align: center;
+    flex-direction: column;
 
-    @media all and (min-width: $md-min) {
-      padding: 3rem 3.5rem;
+    @media all and (min-width: $lg-min) {
+      flex-direction: row;
+      align-items: flex-end;
     }
 
-    .newsletter_content {
+    .widget_text.newsletter-form {
+      .textwidget.custom-html-widget {
 
-      .heading,
-      .text {
-        color: #fff;
+        .heading,
+        .text {
+          color: #fff;
+        }
+
+        .text {
+          font-size: 1.2rem;
+        }
       }
 
+      @media all and (min-width: $lg-min) {
+        padding-right: 3rem;
+      }
+    }
+
+    .mailjet_widget_front_container {
+      margin: 0;
+
       #mailjetSubscriptionForm {
+
         display: flex;
         flex-direction: column;
 
@@ -2510,7 +2534,7 @@ small pricing cards
           border: none;
           color: #565c76;
           padding-left: 30px;
-          height: 40px;
+          height: 45px;
           border-radius: $themeBorder_radius;
 
           @media all and (min-width: $md-min) {
@@ -2521,17 +2545,21 @@ small pricing cards
         input[type="submit"] {
           width: 100%;
           border: none;
-          background: #fff;
-          font-size: 1.3em;
-          padding: 7px 15px;
-          height: 40px;
+          font-size: 1rem;
+          padding: 10px 20px;
+          height: 45px;
           border-radius: $themeBorder_radius;
-          transition: all 1s;
-          color: $themecolorBlue;
-          border: 1px solid #fff;
+          transition: 1s all ease;
+          color: #fff;
+          background-color: rgba(255, 255, 255, .2);
           font-size: initial;
           line-height: 1;
           cursor: pointer;
+          font-weight: 600;
+          letter-spacing: 0.2px;
+          box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+
+
 
           @media all and (min-width: $md-min) {
             width: initial;
@@ -2539,17 +2567,16 @@ small pricing cards
           }
 
           &:hover {
-            background: transparent;
-            color: #fff;
+            opacity: 0.7;
           }
         }
       }
     }
+  }
 
-    &.single {
-      @media all and (min-width: $sm-min) {
-        margin: 3rem 2rem;
-      }
+  &.single {
+    @media all and (min-width: $sm-min) {
+      margin: 3rem 2rem;
     }
   }
 }
@@ -2836,6 +2863,10 @@ forum section
     @media all and (min-width: $md-min) {
       justify-content: flex-end;
       align-items: flex-start;
+    }
+
+    p {
+      color: $themecolorLighter;
     }
   }
 

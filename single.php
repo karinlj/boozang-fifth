@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <div class="container_blog">
-  <div class="blog_flow section_spacing_top_small">
+  <div class="blog_flow section_spacing_top_medium">
     <div class="container">
       <div class="row">
 
@@ -18,26 +18,26 @@
         <?php endif;?>
 
       </div>
+    </div>
+    <?php // comments_template();?>
+  </div>
 
-      <!-- newsletter widget -->
+  <!-- MailJet newsletter widget -->
+  <section class="newsletter section_spacing_top_medium">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-          <section class="newsletter single">
-            <div class="newsletter_content">
+        <div class="col-lg-12">
+          <div class="newsletter_content">
 
-              <!--JetMail widget for newsletter-->
-              <?php if (is_active_sidebar('newsletter')):
+            <?php if (is_active_sidebar('newsletter')):
 
     dynamic_sidebar('newsletter');
 endif;
 ?>
-            </div>
-          </section>
+          </div>
         </div>
       </div>
-
     </div>
-    <?php // comments_template();?>
-  </div>
+  </section>
 
   <?php get_footer();?>

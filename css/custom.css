@@ -177,14 +177,16 @@ h6 {
 .text_section,
 .get_started_banner,
 .info_banner,
-.copy {
+.copy,
+.newsletter {
   text-align: center; }
   @media all and (min-width: 576px) {
     .pillars-item,
     .text_section,
     .get_started_banner,
     .info_banner,
-    .copy {
+    .copy,
+    .newsletter {
       text-align: left; } }
 
 /********************
@@ -1570,13 +1572,12 @@ small pricing cards
   .blog_flow .container .container {
     padding: 0; }
   .blog_flow .container .paginate_links {
-    text-align: center;
-    padding-bottom: 2rem; }
+    text-align: center; }
     .blog_flow .container .paginate_links span,
     .blog_flow .container .paginate_links a {
       padding-right: 0.4rem; }
     .blog_flow .container .paginate_links .page-numbers.current {
-      color: #777; }
+      color: #b3b3b3; }
   .blog_flow .post_card {
     position: relative;
     box-shadow: 0 20px 40px rgba(91, 107, 174, 0.15);
@@ -1633,21 +1634,19 @@ small pricing cards
         line-height: 1.3;
         margin: 1rem 0; }
     .blog_flow .post_card.single {
-      margin-top: -80px;
+      margin-top: -90px;
       box-shadow: none;
       transition: none;
       margin-bottom: 0; }
       @media all and (min-width: 576px) {
         .blog_flow .post_card.single {
-          margin: -80px 2rem 3rem 2rem;
-          padding: 0.3rem;
-          box-shadow: 0 20px 40px rgba(91, 107, 174, 0.15);
-          border-radius: 16px;
+          box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
           transition: .25s ease-in-out;
           background: #fff; } }
       @media all and (min-width: 1200px) {
         .blog_flow .post_card.single {
-          margin-top: -90px; } }
+          margin-top: -100px; } }
       .blog_flow .post_card.single:hover {
         box-shadow: 0 20px 40px rgba(91, 107, 174, 0.15); }
         .blog_flow .post_card.single:hover .blog_post_title,
@@ -1689,61 +1688,78 @@ small pricing cards
       max-width: 100%; }
       .blog_flow .wpcf7 label input {
         max-width: 100%; }
-  .blog_flow .newsletter {
-    background: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
-    border-radius: 10px;
+
+.newsletter {
+  background-image: url("../img/newspapers.jpg");
+  background-size: cover;
+  position: relative; }
+  .newsletter:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right bottom, rgba(27, 47, 228, 0.85), rgba(164, 172, 244, 0.95));
+    content: '';
+    display: block; }
+  .newsletter .newsletter_content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    text-align: center; }
-    @media all and (min-width: 768px) {
-      .blog_flow .newsletter {
-        padding: 3rem 3.5rem; } }
-    .blog_flow .newsletter .newsletter_content .heading,
-    .blog_flow .newsletter .newsletter_content .text {
+    flex-direction: column; }
+    @media all and (min-width: 992px) {
+      .newsletter .newsletter_content {
+        flex-direction: row;
+        align-items: flex-end; } }
+    .newsletter .newsletter_content .widget_text.newsletter-form .textwidget.custom-html-widget .heading,
+    .newsletter .newsletter_content .widget_text.newsletter-form .textwidget.custom-html-widget .text {
       color: #fff; }
-    .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm {
-      display: flex;
-      flex-direction: column; }
-      @media all and (min-width: 768px) {
-        .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm {
-          flex-direction: row; } }
-      .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input#mailjet_widget_email {
-        width: 100%;
-        border: none;
-        color: #565c76;
-        padding-left: 30px;
-        height: 40px;
-        border-radius: 10px; }
+    .newsletter .newsletter_content .widget_text.newsletter-form .textwidget.custom-html-widget .text {
+      font-size: 1.2rem; }
+    @media all and (min-width: 992px) {
+      .newsletter .newsletter_content .widget_text.newsletter-form {
+        padding-right: 3rem; } }
+    .newsletter .newsletter_content .mailjet_widget_front_container {
+      margin: 0; }
+      .newsletter .newsletter_content .mailjet_widget_front_container #mailjetSubscriptionForm {
+        display: flex;
+        flex-direction: column; }
         @media all and (min-width: 768px) {
-          .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input#mailjet_widget_email {
-            width: 25rem; } }
-      .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input[type="submit"] {
-        width: 100%;
-        border: none;
-        background: #fff;
-        font-size: 1.3em;
-        padding: 7px 15px;
-        height: 40px;
-        border-radius: 10px;
-        transition: all 1s;
-        color: #1b2fe4;
-        border: 1px solid #fff;
-        font-size: initial;
-        line-height: 1;
-        cursor: pointer; }
-        @media all and (min-width: 768px) {
-          .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input[type="submit"] {
-            width: initial;
-            margin-left: 0.5rem; } }
-        .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input[type="submit"]:hover {
-          background: transparent;
-          color: #fff; }
-    @media all and (min-width: 576px) {
-      .blog_flow .newsletter.single {
-        margin: 3rem 2rem; } }
+          .newsletter .newsletter_content .mailjet_widget_front_container #mailjetSubscriptionForm {
+            flex-direction: row; } }
+        .newsletter .newsletter_content .mailjet_widget_front_container #mailjetSubscriptionForm input#mailjet_widget_email {
+          width: 100%;
+          border: none;
+          color: #565c76;
+          padding-left: 30px;
+          height: 45px;
+          border-radius: 10px; }
+          @media all and (min-width: 768px) {
+            .newsletter .newsletter_content .mailjet_widget_front_container #mailjetSubscriptionForm input#mailjet_widget_email {
+              width: 25rem; } }
+        .newsletter .newsletter_content .mailjet_widget_front_container #mailjetSubscriptionForm input[type="submit"] {
+          width: 100%;
+          border: none;
+          font-size: 1rem;
+          padding: 10px 20px;
+          height: 45px;
+          border-radius: 10px;
+          transition: 1s all ease;
+          color: #fff;
+          background-color: rgba(255, 255, 255, 0.2);
+          font-size: initial;
+          line-height: 1;
+          cursor: pointer;
+          font-weight: 600;
+          letter-spacing: 0.2px;
+          box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1); }
+          @media all and (min-width: 768px) {
+            .newsletter .newsletter_content .mailjet_widget_front_container #mailjetSubscriptionForm input[type="submit"] {
+              width: initial;
+              margin-left: 0.5rem; } }
+          .newsletter .newsletter_content .mailjet_widget_front_container #mailjetSubscriptionForm input[type="submit"]:hover {
+            opacity: 0.7; }
+  @media all and (min-width: 576px) {
+    .newsletter.single {
+      margin: 3rem 2rem; } }
 
 /******************************
      features slider
@@ -1938,6 +1954,8 @@ forum section
     .signup_section .text_section {
       justify-content: flex-end;
       align-items: flex-start; } }
+  .signup_section .text_section p {
+    color: #a8adbd; }
 .signup_section .btn_container {
   display: flex;
   justify-content: center;
