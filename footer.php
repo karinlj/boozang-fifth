@@ -25,14 +25,16 @@ if (function_exists('acf_add_options_page')) {
           <div class="col-md-12">
             <div class="row">
 
-              <div class="col-md-6 col-lg-8">
+              <!-- <div class="col-md-6 col-lg-8"> -->
+              <div class="col-md-6">
                 <div class="text_section">
                   <h2><?php the_sub_field('heading');?></h2>
                   <p> <?php the_sub_field('text');?></p>
                 </div>
               </div>
 
-              <div class="col-md-6 col-lg-4">
+              <!-- <div class="col-md-6 col-lg-4"> -->
+              <div class="col-md-6">
                 <div class="btn_container">
                   <?php
 $signup_button = get_sub_field('signup_button');

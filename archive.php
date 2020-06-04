@@ -29,20 +29,20 @@
 </div>
 
 <!-- MailJet newsletter widget -->
-<section class="newsletter section_spacing_top_medium">
+<!-- <section class="newsletter section_spacing_top_medium">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="newsletter_content">
 
-          <?php if (is_active_sidebar('newsletter')):
+          <?php //if (is_active_sidebar('newsletter')):
 
-    dynamic_sidebar('newsletter');
-endif;
+//dynamic_sidebar('newsletter');
+//endif;
 ?>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <?php get_footer();?>
