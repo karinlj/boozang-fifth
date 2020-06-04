@@ -26,7 +26,6 @@ $pages = array(
 
     'prev_text' => __('<i class="fas fa-angle-double-left"></i>'),
     'next_text' => __('<i class="fas fa-angle-double-right"></i>'),
-    'posts_per_page' => '3',
 );
 
 echo paginate_links($pages);
