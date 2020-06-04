@@ -2853,16 +2853,22 @@ forum section
 *********************/
 .signup_section {
   //background: see scss section
+  background: #fff !important;
 
   .text_section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
 
     @media all and (min-width: $md-min) {
-      justify-content: flex-end;
-      align-items: flex-start;
+      // justify-content: flex-end;
+      // align-items: flex-start;
+    }
+
+    h2 {
+      //  font-size: 2rem;
     }
 
     p {
@@ -2876,23 +2882,52 @@ forum section
     align-items: center;
 
     @media all and (min-width: $lg-min) {
-      justify-content: flex-start;
+      //justify-content: flex-start;
     }
 
     .btn {
-      padding: 10px 45px;
+      padding: 10px 30px;
 
-      &:after {
-        content: "\f061";
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        margin-left: 10px;
+      &.signup_btn {
+        margin-right: 1.5rem;
       }
+
+      &.demo_btn {}
+
+      // &:after {
+      //   content: "\f061";
+      //   font-family: 'Font Awesome 5 Free';
+      //   font-weight: 900;
+      //   margin-left: 10px;
+      // }
     }
   }
 
   &.lightgrey {
-    .btn.signup_btn {
+    .btn {
+      &.signup_btn {
+        background: $themecolorBlueLight;
+        color: #fff;
+        border: 1px solid transparent;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      &.demo_btn {
+        color: $themecolorBlueLight;
+        border: 1px solid transparent;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+
+
+    .signup_btn {
       background: $themecolorBlueLight;
       color: #fff;
       border: 1px solid $lightgrey;

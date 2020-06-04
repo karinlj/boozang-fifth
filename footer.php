@@ -20,35 +20,40 @@ if (function_exists('acf_add_options_page')) {
       <?php echo $style; ?>>
 
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-center align-self-center">
           <!-- <div class="col-md-8 offset-md-2"> -->
-          <div class="col-md-12">
-            <div class="row">
+          <!-- <div class="col-md-12"> -->
+          <!-- <div class="row"> -->
 
-              <div class="col-md-6 col-lg-8">
-                <div class="text_section">
-                  <h2><?php the_sub_field('heading');?></h2>
-                  <p> <?php the_sub_field('text');?></p>
-                </div>
-              </div>
+          <!-- <div class="col-md-6 col-lg-8"> -->
 
-              <div class="col-md-6 col-lg-4">
-                <div class="btn_container">
-                  <?php
+          <div class="col-md-6">
+            <div class="text_section">
+              <h2><?php the_sub_field('heading');?></h2>
+              <p> <?php the_sub_field('text');?></p>
+            </div>
+            <!-- </div> -->
+
+            <!-- <div class="col-md-6 col-lg-4"> -->
+            <div class="btn_container">
+              <?php
 $signup_button = get_sub_field('signup_button');
 
             if ($signup_button) {?>
 
-                  <a class="btn signup_btn" href="<?php echo $signup_button['url']; ?>"
-                    target="<?php echo $signup_button['target']; ?>"><?php echo $signup_button['title']; ?>
-                  </a>
+              <a class="btn signup_btn" href="<?php echo $signup_button['url']; ?>"
+                target="<?php echo $signup_button['target']; ?>"><?php echo $signup_button['title']; ?>
+              </a>
 
-                  <?php }?>
-
-                </div>
-              </div>
+              <a class="btn demo_btn" href="<?php echo $signup_button['url']; ?>"
+                target="<?php echo $signup_button['target']; ?>">Request demo
+              </a>
+              <?php }?>
 
             </div>
+            <!-- </div> -->
+
+            <!-- </div> -->
           </div>
         </div>
       </div>

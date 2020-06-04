@@ -1945,53 +1945,57 @@ forum section
 /*********************
    footer and signup
 *********************/
-.signup_section .text_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  @media all and (min-width: 768px) {
-    .signup_section .text_section {
-      justify-content: flex-end;
-      align-items: flex-start; } }
-  .signup_section .text_section p {
-    color: #a8adbd; }
-.signup_section .btn_container {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  @media all and (min-width: 992px) {
-    .signup_section .btn_container {
-      justify-content: flex-start; } }
-  .signup_section .btn_container .btn {
-    padding: 10px 45px; }
-    .signup_section .btn_container .btn:after {
-      content: "\f061";
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      margin-left: 10px; }
-.signup_section.lightgrey .btn.signup_btn {
-  background: #2e9ce6;
-  color: #fff;
-  border: 1px solid #f9f9f9; }
-  .signup_section.lightgrey .btn.signup_btn:hover {
-    opacity: 0.8; }
-.signup_section.lightblue .btn.signup_btn {
-  background: #fff;
-  color: #2e9ce6;
-  border: 1px solid #2e9ce6; }
-  .signup_section.lightblue .btn.signup_btn:hover {
-    background: transparent;
+.signup_section {
+  background: #fff !important; }
+  .signup_section .text_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem; }
+    .signup_section .text_section p {
+      color: #a8adbd; }
+  .signup_section .btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .signup_section .btn_container .btn {
+      padding: 10px 30px; }
+      .signup_section .btn_container .btn.signup_btn {
+        margin-right: 1.5rem; }
+  .signup_section.lightgrey .btn.signup_btn {
+    background: #2e9ce6;
     color: #fff;
-    border: 1px solid #fff; }
-.signup_section.blue .btn.signup_btn {
-  background: #fff;
-  color: #1b2fe4;
-  border: 1px solid #1b2fe4; }
-  .signup_section.blue .btn.signup_btn:hover {
-    background: transparent;
+    border: 1px solid transparent; }
+    .signup_section.lightgrey .btn.signup_btn:hover {
+      opacity: 0.8; }
+  .signup_section.lightgrey .btn.demo_btn {
+    color: #2e9ce6;
+    border: 1px solid transparent; }
+    .signup_section.lightgrey .btn.demo_btn:hover {
+      opacity: 0.8; }
+  .signup_section.lightgrey .signup_btn {
+    background: #2e9ce6;
     color: #fff;
-    border: 1px solid #fff; }
+    border: 1px solid #f9f9f9; }
+    .signup_section.lightgrey .signup_btn:hover {
+      opacity: 0.8; }
+  .signup_section.lightblue .btn.signup_btn {
+    background: #fff;
+    color: #2e9ce6;
+    border: 1px solid #2e9ce6; }
+    .signup_section.lightblue .btn.signup_btn:hover {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff; }
+  .signup_section.blue .btn.signup_btn {
+    background: #fff;
+    color: #1b2fe4;
+    border: 1px solid #1b2fe4; }
+    .signup_section.blue .btn.signup_btn:hover {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff; }
 
 .footer-main {
   width: 100%;
