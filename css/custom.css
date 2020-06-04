@@ -1581,7 +1581,7 @@ small pricing cards
   .blog_flow .post_card {
     position: relative;
     box-shadow: 0 20px 40px rgba(91, 107, 174, 0.15);
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     border-radius: 10px;
     transition: .25s ease-in-out;
     background: #fff; }
