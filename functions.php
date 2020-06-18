@@ -22,6 +22,7 @@ function bn_style_resourses()
     wp_enqueue_style('font-awesome-5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null);
 
     wp_enqueue_style('boozang-fifth-custom', get_stylesheet_directory_uri() . '/css/custom.css');
+    wp_enqueue_style('comp', get_stylesheet_directory_uri() . '/css/comp.css');
 
 }
 add_action('wp_enqueue_scripts', 'bn_style_resourses');
