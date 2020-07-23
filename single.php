@@ -22,7 +22,7 @@
     <?php // comments_template();?>
   </div>
 
-  <!-- MailJet newsletter widget -->
+  <!-- newsletter widget -->
   <section class="newsletter section_spacing_top_medium">
     <div class="container">
       <div class="row">

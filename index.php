@@ -39,7 +39,7 @@ if (paginate_links($pages)) {?>
     </div>
   </div>
 </div>
-<!-- MailJet newsletter widget -->
+<!-- newsletter widget -->
 <section class="newsletter section_spacing_top_medium">
   <div class="container">
     <div class="row">

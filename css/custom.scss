@@ -2538,61 +2538,63 @@ small pricing cards
       }
     }
 
-    .mailjet_widget_front_container {
-      margin: 0;
 
-      #mailjetSubscriptionForm {
+    .es_subscription_form {
 
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
+
+      @media all and (min-width: $md-min) {
+        flex-direction: row;
+      }
+
+      label {
+        display: block;
+      }
+
+      .es_txt_email {
+        width: 100%;
+        border: none;
+        color: #565c76;
+        padding-left: 30px;
+        height: 45px;
+        border-radius: $themeBorder_radius;
 
         @media all and (min-width: $md-min) {
-          flex-direction: row;
+          width: 25rem;
+        }
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        border: none;
+        font-size: 1rem;
+        padding: 10px 20px;
+        height: 45px;
+        border-radius: $themeBorder_radius;
+        transition: 1s all ease;
+        color: #fff;
+        background-color: rgba(255, 255, 255, .2);
+        font-size: initial;
+        line-height: 1;
+        cursor: pointer;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+
+
+
+        @media all and (min-width: $md-min) {
+          width: initial;
+          margin-left: 0.5rem;
         }
 
-        input#mailjet_widget_email {
-          width: 100%;
-          border: none;
-          color: #565c76;
-          padding-left: 30px;
-          height: 45px;
-          border-radius: $themeBorder_radius;
-
-          @media all and (min-width: $md-min) {
-            width: 25rem;
-          }
-        }
-
-        input[type="submit"] {
-          width: 100%;
-          border: none;
-          font-size: 1rem;
-          padding: 10px 20px;
-          height: 45px;
-          border-radius: $themeBorder_radius;
-          transition: 1s all ease;
-          color: #fff;
-          background-color: rgba(255, 255, 255, .2);
-          font-size: initial;
-          line-height: 1;
-          cursor: pointer;
-          font-weight: 600;
-          letter-spacing: 0.2px;
-          box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-
-
-
-          @media all and (min-width: $md-min) {
-            width: initial;
-            margin-left: 0.5rem;
-          }
-
-          &:hover {
-            opacity: 0.7;
-          }
+        &:hover {
+          opacity: 0.7;
         }
       }
     }
+
   }
 
   &.single {
