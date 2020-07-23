@@ -43,59 +43,54 @@ if ($categories) {
     echo trim($output, $separator);
 }
 ?>
+      <!-- post_heading -->
+      <div class="post_heading">
+        <h3 class="blog_post_title">
+          <?php the_title();?>
+        </h3>
+      </div>
 
-      <?php if (!is_single()) {?>
-      <div class="post_content_inner">
-        <?php }?>
+      <!-- meta - single-->
+      <?php if (is_single()) {?>
+      <div class="blog_post_meta">
+        <p>
+          by <?php the_author();?> &nbsp; | &nbsp;
+        </p>
+        <p>
+          <?php echo get_the_date('F j, Y'); ?>
+        </p>
+      </div>
+      <?php }?>
 
-        <!-- post_heading -->
-        <div class="post_heading">
-          <h3 class="blog_post_title">
-            <?php the_title();?>
-          </h3>
-        </div>
+      <div class="post_text">
+        <!-- content and exerpt-->
+        <!--if search.php or archive.php -> show only excerpts-->
+        <?php if (is_search() or is_archive()) {?>
 
-        <!-- meta - single-->
-        <?php if (is_single()) {?>
-        <div class="blog_post_meta">
-          <p>
-            by <?php the_author();?> &nbsp; | &nbsp;
-          </p>
-          <p>
-            <?php echo get_the_date('F j, Y'); ?>
-          </p>
-        </div>
-        <?php }?>
-
-        <div class="post_text">
-          <!-- content and exerpt-->
-          <!--if search.php or archive.php -> show only excerpts-->
-          <?php if (is_search() or is_archive()) {?>
-
-          <p>
-            <?php echo get_the_excerpt(); ?>
-            <!-- <a class="read_more" href="<?php the_permalink();?>">Read More&raquo;</a> -->
-          </p>
-          <?php } else {
+        <p>
+          <?php echo get_the_excerpt(); ?>
+          <!-- <a class="read_more" href="<?php the_permalink();?>">Read More&raquo;</a> -->
+        </p>
+        <?php } else {
 
 /*if excerpt used in GUI -> show excerpt*/
     if ($post->post_excerpt) {?>
 
-          <p>
-            <?php echo get_the_excerpt(); ?>
-          </p>
+        <p>
+          <?php echo get_the_excerpt(); ?>
+        </p>
 
-          <?php } else {
+        <?php } else if (!is_single()) {?>
+
+        <p>
+          <?php echo get_the_excerpt(); ?>
+        </p>
+
+        <?php } else {
         the_content();
     }
 }?>
-        </div>
-
-        <?php if (!is_single()) {?>
-        <!--/end  post_content_inner -->
       </div>
-      <?php }?>
-
 
       <!-- meta - blog page-->
       <?php if (!is_single()) {?>
