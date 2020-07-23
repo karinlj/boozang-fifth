@@ -2338,21 +2338,27 @@ small pricing cards
         margin: 2.5rem auto;
       }
 
-      // .post_content_inner {
-      //   position: relative;
-      //   max-height: 220px;
-      //   overflow: hidden;
-      //   text-overflow: ellipsis;
+      .post_content_inner {
+        margin-bottom: 1rem;
 
-      //   &:before {
-      //     content: '';
-      //     position: absolute;
-      //     bottom: 0;
-      //     width: 100%;
-      //     height: 2rem;
-      //     background: linear-gradient(transparent, white);
-      //   }
-      // }
+        position: relative;
+        height: 230px;
+        overflow: hidden;
+        //text-overflow: ellipsis;
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 2rem;
+          background: linear-gradient(transparent, white);
+        }
+
+        .more-link {
+          display: none;
+        }
+      }
 
       p {
         font-size: 0.95rem;

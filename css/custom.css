@@ -1602,6 +1602,20 @@ small pricing cards
     .blog_flow .post_card .post_content img {
       display: block;
       margin: 2.5rem auto; }
+    .blog_flow .post_card .post_content .post_content_inner {
+      margin-bottom: 1rem;
+      position: relative;
+      height: 230px;
+      overflow: hidden; }
+      .blog_flow .post_card .post_content .post_content_inner:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2rem;
+        background: linear-gradient(transparent, white); }
+      .blog_flow .post_card .post_content .post_content_inner .more-link {
+        display: none; }
     .blog_flow .post_card .post_content p {
       font-size: 0.95rem;
       line-height: 1.6; }
