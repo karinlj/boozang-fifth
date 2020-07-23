@@ -17,7 +17,6 @@ $post_class = 'post_card';
     $post_class = 'post_card single';
 }?>
   <article class="<?php echo $post_class; ?>">
-
     <?php the_post_thumbnail('banner-image');?>
 
     <!-- link if post page  -->
