@@ -2549,7 +2549,6 @@ small pricing cards
       }
     }
 
-
     .es_subscription_form {
 
       display: flex;
@@ -2604,8 +2603,15 @@ small pricing cards
           opacity: 0.7;
         }
       }
+
+      .es_spinner_image {
+        margin-left: 0.5rem;
+      }
     }
 
+    .es_subscription_message {
+      color: #fff;
+    }
   }
 
   &.single {

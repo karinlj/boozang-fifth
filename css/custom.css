@@ -1775,6 +1775,10 @@ small pricing cards
             margin-left: 0.5rem; } }
         .newsletter .newsletter_content .es_subscription_form input[type="submit"]:hover {
           opacity: 0.7; }
+      .newsletter .newsletter_content .es_subscription_form .es_spinner_image {
+        margin-left: 0.5rem; }
+    .newsletter .newsletter_content .es_subscription_message {
+      color: #fff; }
   @media all and (min-width: 576px) {
     .newsletter.single {
       margin: 3rem 2rem; } }
