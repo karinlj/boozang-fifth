@@ -1328,66 +1328,80 @@ small pricing cards
 /********************
   Videos Page Layout
 *********************/
-.video_section .video_container {
-  position: relative;
-  width: 100%;
-  box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin: 0 2% 3rem 0;
-  transition: .25s ease-in-out; }
-  .video_section .video_container:hover {
-    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16); }
-    .video_section .video_container:hover .title,
-    .video_section .video_container:hover .description {
-      transition: .25s ease-in-out;
-      color: #2e9ce6; }
-  .video_section .video_container .embed_container {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px; }
-    .video_section .video_container .embed_container .video_link {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 3; }
-    .video_section .video_container .embed_container .img_container img {
+.video_section {
+  padding-top: 0; }
+  .video_section .video_container {
+    position: relative;
+    width: 100%;
+    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 2% 3rem 0;
+    transition: .25s ease-in-out; }
+    .video_section .video_container:hover {
+      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16); }
+      .video_section .video_container:hover .title,
+      .video_section .video_container:hover .description {
+        transition: .25s ease-in-out;
+        color: #2e9ce6; }
+    .video_section .video_container .embed_container {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px; }
-    .video_section .video_container .embed_container .img_container .title_on_img {
-      width: 86%;
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 20%;
-      left: 50%;
-      z-index: 2;
-      color: #fff;
-      font-weight: 600;
-      margin-bottom: 0;
-      font-size: 1.1rem;
-      text-align: center;
-      line-height: 1.4; }
-  .video_section .video_container .content_container {
-    padding: 1rem 1.2rem 0.5rem 1.2rem; }
-    .video_section .video_container .content_container .cat_badge {
-      text-align: center;
-      margin-top: 10px;
-      margin-right: 5px;
-      height: 20px;
-      border-radius: 2px;
-      background-color: #f0f1f6;
-      font-size: 10px;
-      font-weight: 500;
-      line-height: 18px;
-      letter-spacing: normal;
-      color: #737373;
-      padding: 3px 6px;
-      text-transform: uppercase; }
-    .video_section .video_container .content_container .title {
-      padding: 0.5rem 0 0 0;
-      font-weight: 600; }
-    .video_section .video_container .content_container .description {
-      font-size: 0.8rem; }
+      .video_section .video_container .embed_container .video_link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3; }
+      .video_section .video_container .embed_container .img_container img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px; }
+      .video_section .video_container .embed_container .img_container .title_on_img {
+        width: 86%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 20%;
+        left: 50%;
+        z-index: 2;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.4; }
+    .video_section .video_container .content_container {
+      padding: 1rem 1.2rem 0.5rem 1.2rem; }
+      .video_section .video_container .content_container .cat_badge {
+        text-align: center;
+        margin-top: 10px;
+        margin-right: 5px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: #f0f1f6;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: normal;
+        color: #737373;
+        padding: 3px 6px;
+        text-transform: uppercase; }
+      .video_section .video_container .content_container .content_container_inner {
+        margin-bottom: 1rem;
+        position: relative;
+        height: 150px;
+        overflow: hidden; }
+        .video_section .video_container .content_container .content_container_inner:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 2rem;
+          background: linear-gradient(transparent, white); }
+        .video_section .video_container .content_container .content_container_inner .title {
+          padding: 0.5rem 0 0 0;
+          font-weight: 600; }
+        .video_section .video_container .content_container .content_container_inner .description {
+          font-size: 0.8rem; }
 
 /**********************
    check list

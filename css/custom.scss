@@ -1922,7 +1922,7 @@ small pricing cards
 .videos_udemy_section {}
 
 .video_section {
-  // padding-top: 0;
+  padding-top: 0;
 
   .video_container {
     position: relative;
@@ -1998,16 +1998,31 @@ small pricing cards
         text-transform: uppercase;
       }
 
-      .title {
-        padding: 0.5rem 0 0 0;
-        font-weight: 600;
-      }
+      .content_container_inner {
+        margin-bottom: 1rem;
+        position: relative;
+        height: 150px;
+        overflow: hidden;
 
-      .description {
-        font-size: 0.8rem;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 2rem;
+          background: linear-gradient(transparent, white);
+        }
+
+        .title {
+          padding: 0.5rem 0 0 0;
+          font-weight: 600;
+        }
+
+        .description {
+          font-size: 0.8rem;
+        }
       }
     }
-
   }
 }
 
