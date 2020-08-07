@@ -1334,7 +1334,7 @@ small pricing cards
     width: 100%;
     box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin: 0 2% 3rem 0;
+    margin: 0 2% 4rem 0;
     transition: .25s ease-in-out; }
     .video_section .video_container:hover {
       box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16); }
@@ -1358,13 +1358,14 @@ small pricing cards
           border-top-left-radius: 10px;
           border-top-right-radius: 10px; }
         .video_section .video_container .embed_container .img_container .title_on_img {
-          font-family: 'Proza Libre', sans-serif;
+          font-family: 'Roboto Slab', serif;
           width: 86%;
           position: absolute;
           transform: translate(-50%, -50%);
           top: 35%;
           left: 50%;
           z-index: 2;
+          font-size: 1.7rem;
           font-weight: 600;
           margin-bottom: 0;
           text-align: center;
@@ -1388,7 +1389,7 @@ small pricing cards
       .video_section .video_container .content_container .content_container_inner {
         margin-bottom: 1rem;
         position: relative;
-        height: 150px;
+        height: 180px;
         overflow: hidden; }
         .video_section .video_container .content_container .content_container_inner:before {
           content: '';
@@ -1469,14 +1470,6 @@ small pricing cards
       @media all and (max-width: 480px) {
         .udemy_cards .course_card .arrow_link {
           margin-left: 0; } }
-    .udemy_cards .course_card.blue {
-      border-top: 5px solid #1b2fe4; }
-    .udemy_cards .course_card.lightblue {
-      border-top: 5px solid #2e9ce6; }
-    .udemy_cards .course_card.green {
-      border-top: 5px solid #0ba893; }
-    .udemy_cards .course_card.red {
-      border-top: 5px solid #e62e65; }
 
 /*********************
         Blog 

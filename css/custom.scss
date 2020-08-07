@@ -1928,7 +1928,7 @@ small pricing cards
     width: 100%;
     box-shadow: $themeBox_shadow;
     border-radius: $themeBorder_radius;
-    margin: 0 2% 3rem 0;
+    margin: 0 2% 4rem 0;
     transition: .25s ease-in-out;
 
     &:hover {
@@ -1963,13 +1963,14 @@ small pricing cards
         }
 
         .title_on_img {
-          font-family: 'Proza Libre', sans-serif;
+          font-family: 'Roboto Slab', serif;
           width: 86%;
           position: absolute;
           transform: translate(-50%, -50%);
           top: 35%;
           left: 50%;
           z-index: 2;
+          font-size: 1.7rem;
           font-weight: 600;
           margin-bottom: 0;
           text-align: center;
@@ -2000,7 +2001,7 @@ small pricing cards
       .content_container_inner {
         margin-bottom: 1rem;
         position: relative;
-        height: 150px;
+        height: 180px;
         overflow: hidden;
 
         &:before {
@@ -2117,21 +2118,21 @@ small pricing cards
       }
     }
 
-    &.blue {
-      border-top: 5px solid $themecolorBlue;
-    }
+    // &.blue {
+    //   border-top: 5px solid $themecolorBlue;
+    // }
 
-    &.lightblue {
-      border-top: 5px solid $themecolorBlueLight;
-    }
+    // &.lightblue {
+    //   border-top: 5px solid $themecolorBlueLight;
+    // }
 
-    &.green {
-      border-top: 5px solid $themecolorGreenNew;
-    }
+    // &.green {
+    //   border-top: 5px solid $themecolorGreenNew;
+    // }
 
-    &.red {
-      border-top: 5px solid $themecolorRed;
-    }
+    // &.red {
+    //   border-top: 5px solid $themecolorRed;
+    // }
   }
 }
 

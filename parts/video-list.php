@@ -2,7 +2,9 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-10 offset-lg-1">
+      <!-- <div class="col-lg-10 offset-lg-1"> -->
+      <div class="col-12">
+
         <div class="row">
 
           <?php
@@ -27,6 +29,7 @@ foreach ($taxonomies as $taxonomy) {
                 $posts->the_post();?>
 
           <div class="col-sm-6 col-lg-4">
+
 
             <div class="video_container">
 
