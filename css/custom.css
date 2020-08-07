@@ -969,7 +969,7 @@ feature list
       border-radius: 2px; }
       .feature_list_section .feature_list_item .features_icon i {
         padding: 0 0.7rem 0.7rem 0.7rem;
-        color: #18cd61; }
+        color: #5d5f5e; }
         @media all and (min-width: 1200px) {
           .feature_list_section .feature_list_item .features_icon i {
             padding: 0 1rem 1rem 1rem; } }
@@ -1021,7 +1021,7 @@ small pricing cards
   .small_pricing_cards_section .card.lightblue {
     border-top: 5px solid #2e9ce6; }
   .small_pricing_cards_section .card.green {
-    border-top: 5px solid #18cd61; }
+    border-top: 5px solid #5d5f5e; }
   .small_pricing_cards_section .card.red {
     border-top: 5px solid #e62e65; }
 
@@ -1417,7 +1417,7 @@ small pricing cards
       font-weight: 900;
       content: "\f00c";
       font-size: 1rem;
-      color: #18cd61;
+      color: #5d5f5e;
       padding-right: 0.5rem; }
 
 /**********************
