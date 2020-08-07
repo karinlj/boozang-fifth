@@ -43,6 +43,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_5f2d9c3beca65",
+            "label": "Image title",
+            "name": "image_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5b9e139d96f17",
             "label": "Description",
             "name": "description",
@@ -79,5 +98,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591297843
+    "modified": 1596824678
 }

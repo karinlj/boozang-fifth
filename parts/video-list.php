@@ -49,7 +49,7 @@ foreach ($taxonomies as $taxonomy) {
                     echo wp_get_attachment_image($image, $size);
                 }?>
 
-                  <h4 class="title_on_img"><?php the_title();?></h4>
+                  <h3 class="title_on_img"><?php the_field('image_title');?></h3>
                 </div>
               </div>
 
