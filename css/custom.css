@@ -1358,16 +1358,15 @@ small pricing cards
           border-top-left-radius: 10px;
           border-top-right-radius: 10px; }
         .video_section .video_container .embed_container .img_container .title_on_img {
+          font-family: 'Proza Libre', sans-serif;
           width: 86%;
           position: absolute;
           transform: translate(-50%, -50%);
-          top: 45%;
+          top: 35%;
           left: 50%;
           z-index: 2;
-          color: #fff;
           font-weight: 600;
           margin-bottom: 0;
-          font-size: 1.1rem;
           text-align: center;
           line-height: 1.4; }
     .video_section .video_container .content_container {

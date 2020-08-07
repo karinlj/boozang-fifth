@@ -1965,16 +1965,17 @@ small pricing cards
         }
 
         .title_on_img {
+          font-family: 'Proza Libre', sans-serif;
           width: 86%;
           position: absolute;
           transform: translate(-50%, -50%);
-          top: 45%;
+          top: 35%;
           left: 50%;
           z-index: 2;
-          color: #fff;
+          // color: #fff;
           font-weight: 600;
           margin-bottom: 0;
-          font-size: 1.1rem;
+          //font-size: 1.1rem;
           text-align: center;
           line-height: 1.4;
         }

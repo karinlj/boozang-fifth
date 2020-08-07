@@ -32,7 +32,7 @@ function google_fonts()
     //Av någon anledning knasar det med wp_enqueue_script
     ?>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
-<!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@500&display=swap" rel="stylesheet">
 
 <?php
 }
