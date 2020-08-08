@@ -1371,7 +1371,8 @@ small pricing cards
           text-align: center;
           line-height: 1.4; }
     .video_section .video_container .content_container {
-      padding: 1rem 1.2rem 0.5rem 1.2rem; }
+      padding: 1rem 1.2rem 0.5rem 1.2rem;
+      padding: 1rem 1.7rem 0.5rem 1.7rem; }
       .video_section .video_container .content_container .cat_badge {
         text-align: center;
         margin-top: 10px;
