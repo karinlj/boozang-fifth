@@ -1178,15 +1178,31 @@ small pricing cards
       @media all and (min-width: 992px) {
         .two_columns_section .column_row .part.text {
           padding: 0 3rem; } }
-      .two_columns_section .column_row .part.image img {
-        border-radius: 10px;
-        box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1); }
-      .two_columns_section .column_row .part.image .alt_caption {
-        text-align: center;
-        display: block;
-        font-size: 0.9rem;
-        font-style: italic;
-        margin-top: 4px; }
+      .two_columns_section .column_row .part.image {
+        z-index: 1000;
+        position: relative; }
+        .two_columns_section .column_row .part.image::before {
+          content: "Hover image to enlarge";
+          position: absolute;
+          color: #2e9ce6;
+          font-size: 0.8rem;
+          font-weight: 400;
+          right: 0;
+          top: -30px; }
+        .two_columns_section .column_row .part.image img {
+          border-radius: 10px;
+          box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          height: auto;
+          transition: all 1.5s 1s; }
+          .two_columns_section .column_row .part.image img:hover {
+            transform: scale(1.4); }
+        .two_columns_section .column_row .part.image .alt_caption {
+          text-align: center;
+          display: block;
+          font-size: 0.9rem;
+          font-style: italic;
+          margin-top: 4px; }
 
 /**********************
   pillars
@@ -1371,7 +1387,6 @@ small pricing cards
           text-align: center;
           line-height: 1.4; }
     .video_section .video_container .content_container {
-      padding: 1rem 1.2rem 0.5rem 1.2rem;
       padding: 1rem 1.7rem 0.5rem 1.7rem; }
       .video_section .video_container .content_container .cat_badge {
         text-align: center;
@@ -1708,6 +1723,22 @@ small pricing cards
         .blog_flow .post_card.single .post_content .blog_post_meta p {
           font-size: 0.9rem;
           color: #8c8c8c; }
+      .blog_flow .post_card.single .post_content .post_text figure {
+        position: relative; }
+        .blog_flow .post_card.single .post_content .post_text figure::before {
+          content: "Hover image to enlarge";
+          position: absolute;
+          color: #2e9ce6;
+          font-size: 0.8rem;
+          font-weight: 400;
+          right: 0;
+          top: -30px; }
+        .blog_flow .post_card.single .post_content .post_text figure img {
+          width: 100%;
+          height: auto;
+          transition: all 1.5s 1s; }
+          .blog_flow .post_card.single .post_content .post_text figure img:hover {
+            transform: scale(1.4); }
 .blog_flow .wpcf7 {
   max-width: 100%; }
   .blog_flow .wpcf7 label {
@@ -1964,6 +1995,22 @@ forum section
 @media all and (min-width: 1200px) {
   .forum_section {
     padding-bottom: 7rem; } }
+.forum_section #af-wrapper .post-message p:last-of-type {
+  position: relative; }
+  .forum_section #af-wrapper .post-message p:last-of-type::before {
+    content: "Hover image to enlarge";
+    position: absolute;
+    color: #2e9ce6;
+    font-size: 0.8rem;
+    font-weight: 400;
+    right: 0;
+    top: -30px; }
+  .forum_section #af-wrapper .post-message p:last-of-type img {
+    width: 100%;
+    height: auto;
+    transition: all 1.5s 1s; }
+    .forum_section #af-wrapper .post-message p:last-of-type img:hover {
+      transform: scale(1.4); }
 .forum_section .forum-sidebar {
   padding-top: 3rem; }
   @media all and (min-width: 1200px) {

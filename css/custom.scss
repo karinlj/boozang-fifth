@@ -1703,9 +1703,29 @@ small pricing cards
       }
 
       &.image {
+        z-index: 1000;
+        position: relative;
+
+        &::before {
+          content: "Hover image to enlarge";
+          position: absolute;
+          color: $themecolorBlueLight;
+          font-size: 0.8rem;
+          font-weight: 400;
+          right: 0;
+          top: -30px;
+        }
+
         img {
           border-radius: $themeBorder_radius;
           box-shadow: $themeBox_shadow;
+          width: 100%;
+          height: auto;
+          transition: all 1.5s 1s; //how fast with delay
+
+          &:hover {
+            transform: scale(1.4); //how much
+          }
         }
 
         .alt_caption {
@@ -1980,8 +2000,7 @@ small pricing cards
     }
 
     .content_container {
-      padding: 1rem 1.2rem 0.5rem 1.2rem;
-
+      // padding: 1rem 1.2rem 0.5rem 1.2rem;
       padding: 1rem 1.7rem 0.5rem 1.7rem;
 
       .cat_badge {
@@ -2504,9 +2523,36 @@ small pricing cards
           }
         }
 
+        .post_text {
+
+          figure {
+            position: relative;
+
+            &::before {
+              content: "Hover image to enlarge";
+              position: absolute;
+              color: $themecolorBlueLight;
+              font-size: 0.8rem;
+              font-weight: 400;
+              right: 0;
+              top: -30px;
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+              transition: all 1.5s 1s; //how fast with delay
+
+              &:hover {
+                transform: scale(1.4); //how much
+              }
+            }
+          }
+        }
       }
     }
   }
+
 
   //wpcf7 form
   .wpcf7 {
@@ -2888,6 +2934,34 @@ forum section
 
   @media all and (min-width: $xl-min) {
     padding-bottom: 7rem;
+  }
+
+  #af-wrapper {
+    .post-message {
+      p:last-of-type {
+        position: relative;
+
+        &::before {
+          content: "Hover image to enlarge";
+          position: absolute;
+          color: $themecolorBlueLight;
+          font-size: 0.8rem;
+          font-weight: 400;
+          right: 0;
+          top: -30px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          transition: all 1.5s 1s; //how fast with delay
+
+          &:hover {
+            transform: scale(1.4); //how much
+          }
+        }
+      }
+    }
   }
 
   .forum-sidebar {
