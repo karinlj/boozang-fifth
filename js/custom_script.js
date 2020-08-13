@@ -1,12 +1,6 @@
 /*My mobile menu*/
 jQuery(document).ready(function ($) {
 
-  /*when click on chevron in faq_accordion_list...add or remove class */
-  $(".question_part").click(function (e) {
-    $(this).find(".question").toggleClass("active");
-    $(this).siblings(".answer_part").toggleClass("open");
-  });
-
   /*Blog Sidebar Categories*/
   $(".blog-sidebar ul").prepend(
     '<li class="most-recent"><a href="/blog">Most Recent</a></li>'
