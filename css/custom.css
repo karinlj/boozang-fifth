@@ -1724,7 +1724,8 @@ small pricing cards
           font-size: 0.9rem;
           color: #8c8c8c; }
       .blog_flow .post_card.single .post_content .post_text figure {
-        position: relative; }
+        position: relative;
+        z-index: 1000; }
         .blog_flow .post_card.single .post_content .post_text figure::before {
           content: "Hover image to enlarge";
           position: absolute;

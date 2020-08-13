@@ -2527,6 +2527,7 @@ small pricing cards
 
           figure {
             position: relative;
+            z-index: 1000;
 
             &::before {
               content: "Hover image to enlarge";
