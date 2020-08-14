@@ -1996,22 +1996,12 @@ forum section
 @media all and (min-width: 1200px) {
   .forum_section {
     padding-bottom: 7rem; } }
-.forum_section #af-wrapper .post-message p:last-of-type {
-  position: relative; }
-  .forum_section #af-wrapper .post-message p:last-of-type::before {
-    content: "Hover image to enlarge";
-    position: absolute;
-    color: #2e9ce6;
-    font-size: 0.8rem;
-    font-weight: 400;
-    right: 0;
-    top: -30px; }
-  .forum_section #af-wrapper .post-message p:last-of-type img {
-    width: 100%;
-    height: auto;
-    transition: all 1.5s 1s; }
-    .forum_section #af-wrapper .post-message p:last-of-type img:hover {
-      transform: scale(1.4); }
+.forum_section #af-wrapper .post-message img {
+  width: 100%;
+  height: auto;
+  transition: all 1.5s 1s; }
+  .forum_section #af-wrapper .post-message img:hover {
+    transform: scale(1.4); }
 .forum_section .forum-sidebar {
   padding-top: 3rem; }
   @media all and (min-width: 1200px) {
