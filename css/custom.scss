@@ -2939,27 +2939,14 @@ forum section
 
   #af-wrapper {
     .post-message {
-      p:last-of-type {
-        position: relative;
 
-        &::before {
-          content: "Hover image to enlarge";
-          position: absolute;
-          color: $themecolorBlueLight;
-          font-size: 0.8rem;
-          font-weight: 400;
-          right: 0;
-          top: -30px;
-        }
+      img {
+        width: 100%;
+        height: auto;
+        transition: all 1.5s 1s; //how fast with delay
 
-        img {
-          width: 100%;
-          height: auto;
-          transition: all 1.5s 1s; //how fast with delay
-
-          &:hover {
-            transform: scale(1.4); //how much
-          }
+        &:hover {
+          transform: scale(1.4); //how much
         }
       }
     }
