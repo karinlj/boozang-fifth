@@ -1,6 +1,13 @@
 /*My mobile menu*/
 jQuery(document).ready(function ($) {
 
+
+  //faq_accordion_section
+  $(".question_part").click(function () {
+   $(this).next().toggleClass("open");
+  });
+
+
   /*Blog Sidebar Categories*/
   $(".blog-sidebar ul").prepend(
     '<li class="most-recent"><a href="/blog">Most Recent</a></li>'
