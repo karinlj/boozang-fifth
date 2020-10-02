@@ -7,7 +7,8 @@ Custom WordPress theme for new Boozang launch august 2020# boozang-fifth
 ## Built With
 - WordPress
 - Sass
-- Bootstrap4
+- Bootstrap4  
+- jQuery
 
 ## Author
 
