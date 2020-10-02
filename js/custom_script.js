@@ -1,12 +1,10 @@
 /*My mobile menu*/
 jQuery(document).ready(function ($) {
 
-
   //faq_accordion_section
   $(".question_part").click(function () {
    $(this).next().toggleClass("open");
   });
-
 
   /*Blog Sidebar Categories*/
   $(".blog-sidebar ul").prepend(
