@@ -3,7 +3,7 @@ Theme Name: Boozang-fifth
 Author: Karin Ljunggren
 Author URI: http://karinljunggren.com
 */
-@import '_mixins.scss';
+@import "_mixins.scss";
 
 //$xs-max: 575.9px;
 $xs-max: 480px;
@@ -27,7 +27,7 @@ $themeBorderColor: #ebebeb;
 $themecolorLighter: #a8adbd;
 
 $themeHeadingcolor: #373c49;
-$lightgrey: #f9f9f9; //#f6f9fc; 
+$lightgrey: #f9f9f9; //#f6f9fc;
 $mediumgrey: #f1f1f4;
 $themecolorGreen: #5d5f5e;
 $themecolorRed: #e62e65;
@@ -35,43 +35,84 @@ $linkhoverOpacity: 0.7;
 
 //Blue
 $themecolorBlue: #1b2fe4;
-$themecolorBlueBg: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
-$themecolorBlueOverlay: linear-gradient(to right bottom,
+$themecolorBlueBg: linear-gradient(
+  to right bottom,
+  #1b2fe4,
+  #4852eb,
+  #6871f1,
+  #868ff3,
+  #a4acf4
+);
+$themecolorBlueOverlay: linear-gradient(
+  to right bottom,
   rgba(27, 47, 228, 0.85),
-  rgba(164, 172, 244, 0.95));
+  rgba(164, 172, 244, 0.95)
+);
 
 //BlueLight
 $themecolorBlueLight: #2e9ce6;
-$themecolorBlueLightBg: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
-$themecolorBlueLightOverlay: linear-gradient(to right bottom,
+$themecolorBlueLightBg: linear-gradient(
+  to right bottom,
+  #1b94e4,
+  #42a1e8,
+  #5dafeb,
+  #76bcee,
+  #8ec9f1
+);
+$themecolorBlueLightOverlay: linear-gradient(
+  to right bottom,
   rgba(27, 148, 228, 0.85),
-  rgba(142, 201, 241, 0.95));
+  rgba(142, 201, 241, 0.95)
+);
 
 //Blue darker
-$themecolorBlueDarkerBg: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
+$themecolorBlueDarkerBg: linear-gradient(
+  to bottom,
+  #1576b7,
+  #177dc2,
+  #1885cd,
+  #1a8cd9,
+  #1b94e4
+);
 
 //GreenNew
 $themecolorGreenNew: #0ba893;
-$themecolorGreenNewBg: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd);
-$themecolorGreenNewOverlay: linear-gradient(to right bottom,
+$themecolorGreenNewBg: linear-gradient(
+  to right bottom,
+  #09907e,
+  #0aa18d,
+  #0bb39d,
+  #0dc6ad,
+  #0ed8bd
+);
+$themecolorGreenNewOverlay: linear-gradient(
+  to right bottom,
   rgba(9, 144, 126, 0.85),
-  rgba(14, 216, 189, 0.95));
+  rgba(14, 216, 189, 0.95)
+);
 
 //DarkGrey
 $themecolorDarkGrey: #21242c;
-$themecolorDarkGreyBg: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857);
-$themecolorDarkGreyOverlay: linear-gradient(to right bottom,
+$themecolorDarkGreyBg: linear-gradient(
+  to bottom,
+  #21242c,
+  #292d36,
+  #313641,
+  #393f4c,
+  #424857
+);
+$themecolorDarkGreyOverlay: linear-gradient(
+  to right bottom,
   rgba(33, 36, 44, 0.85),
-  rgba(66, 72, 87, 0.95));
+  rgba(66, 72, 87, 0.95)
+);
 
 //other
-$themefont: 'Roboto',
-'Helvetica',
-sans-serif;
+$themefont: "Roboto", "Helvetica", sans-serif;
 $navfont: $themefont;
 $headingfont: $themefont;
 $themeBorder_radius: 10px;
-$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, .1);
+$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
 
 /*transparent nav*/
 $navcolor: #fff;
@@ -201,7 +242,6 @@ h6 {
 }
 
 section {
-
   h3,
   h4 {
     margin-bottom: 1.2rem;
@@ -245,7 +285,8 @@ h3 {
   font-weight: 600;
   line-height: 1.2;
 
-  @media all and (min-width: $xl-min) {}
+  @media all and (min-width: $xl-min) {
+  }
 }
 
 h4 {
@@ -343,17 +384,17 @@ a {
 
     &:before {
       // opacity: .6;
-      opacity: .4;
+      opacity: 0.4;
       position: absolute;
       bottom: 0;
       left: 1px;
-      content: '';
+      content: "";
       width: 100%;
       // width: 0;
       height: 2px;
       background: $linkcolor;
-      -webkit-transition: width .2s ease-in;
-      transition: width .2s ease-in;
+      -webkit-transition: width 0.2s ease-in;
+      transition: width 0.2s ease-in;
     }
 
     &:hover {
@@ -361,7 +402,7 @@ a {
 
       &:before {
         width: 100%;
-        opacity: .7;
+        opacity: 0.7;
       }
     }
 
@@ -369,7 +410,7 @@ a {
     &.arrow_link {
       &:after {
         content: "\f061 ";
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Font Awesome 5 Free";
         font-weight: 900;
         margin-left: 10px;
       }
@@ -377,26 +418,24 @@ a {
   }
 }
 
-//class for link with arrow 
+//class for link with arrow
 a.arrow_link {
   display: inline-block;
   position: relative;
   color: $linkcolor;
-  ;
-
   &:before {
     // opacity: .6;
-    opacity: .4;
+    opacity: 0.4;
     position: absolute;
     bottom: 0;
     left: 1px;
-    content: '';
+    content: "";
     width: 100%;
     // width: 0;
     height: 2px;
     background: $linkcolor;
-    -webkit-transition: width .2s ease-in;
-    transition: width .2s ease-in;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
   }
 
   &:hover {
@@ -404,14 +443,14 @@ a.arrow_link {
 
     &:before {
       width: 100%;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 
   //arrow right
   &:after {
     content: "\f061 ";
-    font-family: 'Font Awesome 5 Free';
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-left: 10px;
   }
@@ -426,21 +465,21 @@ a.banner_link {
   position: relative;
 
   &:before {
-    opacity: .4;
+    opacity: 0.4;
     position: absolute;
     bottom: 0;
     left: 1px;
-    content: '';
+    content: "";
     width: 100%;
     height: 2px;
     background: #fff;
-    -webkit-transition: width .2s ease-in;
-    transition: width .2s ease-in;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
   }
 
   &::after {
     content: "\f061 ";
-    font-family: 'Font Awesome 5 Free';
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-left: 10px;
   }
@@ -450,7 +489,7 @@ a.banner_link {
 
     &:before {
       width: 100%;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 }
@@ -554,15 +593,14 @@ header {
     }
   }
 
-
   &.overlay-dark::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, .5);
-    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
     display: block;
   }
 
@@ -573,7 +611,7 @@ header {
     bottom: 0;
     left: 0;
     background-image: $themecolorBlueLightOverlay;
-    content: '';
+    content: "";
     display: block;
   }
 
@@ -584,7 +622,7 @@ header {
     bottom: 0;
     left: 0;
     background-image: $themecolorBlueOverlay;
-    content: '';
+    content: "";
     display: block;
   }
 
@@ -595,7 +633,7 @@ header {
     bottom: 0;
     left: 0;
     background-image: $themecolorGreenNewOverlay;
-    content: '';
+    content: "";
     display: block;
   }
 }
@@ -667,7 +705,7 @@ nav {
 
       a {
         margin: 0 1rem -1px 1rem;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
         font-size: 0.85em;
@@ -713,14 +751,14 @@ nav {
     }
 
     li.current-menu-item {
-      >a {
+      > a {
         color: $navcolor;
         border-bottom: 1px solid #fff;
       }
     }
 
     li.menu-item-has-children {
-      >a {
+      > a {
         color: $navcolor;
 
         &:hover {
@@ -729,7 +767,7 @@ nav {
 
         &::after {
           content: "\f107";
-          font-family: 'Font Awesome 5 Free';
+          font-family: "Font Awesome 5 Free";
           //
           font-weight: 600;
           margin-left: 5px;
@@ -758,7 +796,7 @@ nav {
             border-radius: 0;
             color: #16181d;
             font-weight: 500;
-            font-size: 0.80rem;
+            font-size: 0.8rem;
           }
 
           &:hover {
@@ -775,11 +813,10 @@ nav {
         display: flex;
         flex-direction: column;
       }
-
     }
   }
 
-  >.toggle {
+  > .toggle {
     font-size: 30px;
     color: $navcolor;
     cursor: pointer;
@@ -850,7 +887,7 @@ nav {
           cursor: pointer;
           line-height: 1.2;
           font-weight: 600;
-          transition: all .5s ease;
+          transition: all 0.5s ease;
           text-transform: uppercase;
           font-size: 0.85em;
           letter-spacing: 0.5px;
@@ -904,7 +941,7 @@ nav {
 
     li {
       a {
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         font-size: 0.9em;
         letter-spacing: 0.5px;
         display: block;
@@ -932,7 +969,7 @@ nav {
         flex-direction: column;
       }
 
-      >a {
+      > a {
         color: #fff;
 
         &:hover {
@@ -941,7 +978,7 @@ nav {
 
         &::after {
           content: "\f107";
-          font-family: 'Font Awesome 5 Free';
+          font-family: "Font Awesome 5 Free";
           font-weight: 900;
           margin-left: 5px;
         }
@@ -969,7 +1006,6 @@ nav {
       width: 100%;
 
       li {
-
         .signup_btn {
           margin: 1rem 0.5rem;
           background: $themecolorBlueLight;
@@ -992,7 +1028,7 @@ nav {
 
   /*close button*/
 
-  >span.toggle {
+  > span.toggle {
     position: absolute;
     top: 0;
     right: 25px;
@@ -1030,7 +1066,6 @@ nav {
 
 .header_big,
 .header_small {
-
   //background and overlay: see scss section
   .header_links_section {
     display: flex;
@@ -1194,13 +1229,13 @@ nav {
   }
 }
 
-//header items 
+//header items
 .header_big {
   .header_items_section {
-    padding-top: calc(500px/3);
+    padding-top: calc(500px / 3);
 
     @media all and (min-width: $sm-min) {
-      padding-top: calc(600px/3);
+      padding-top: calc(600px / 3);
     }
   }
 }
@@ -1386,7 +1421,6 @@ feature list
 small pricing cards
 ****************************/
 .small_pricing_cards_section {
-
   .heading {
     margin-bottom: 4rem;
   }
@@ -1426,7 +1460,6 @@ small pricing cards
       }
 
       .price {
-
         h3 {
           margin-bottom: 0.2rem;
           padding-top: 1rem;
@@ -1448,7 +1481,6 @@ small pricing cards
 
     &.green {
       border-top: 5px solid $themecolorGreen;
-
     }
 
     &.red {
@@ -1461,7 +1493,6 @@ small pricing cards
    faq accordion
 *********************/
 .faq_accordion_section {
-
   .heading {
     margin-bottom: 4rem;
 
@@ -1489,7 +1520,7 @@ small pricing cards
           font-family: "Font Awesome 5 Free";
           margin-left: 0.3rem;
           font-size: 0.9rem;
-          content: '\f078';
+          content: "\f078";
           font-weight: 600;
           transition: max-height 0.5s ease-out;
         }
@@ -1497,7 +1528,7 @@ small pricing cards
 
       .question.active {
         &:after {
-          content: '\f077';
+          content: "\f077";
         }
       }
     }
@@ -1554,7 +1585,7 @@ small pricing cards
     padding-top: 1rem;
 
     .link {
-      background-color: rgba(255, 255, 255, .2);
+      background-color: rgba(255, 255, 255, 0.2);
       color: #fff;
 
       &:hover {
@@ -1863,7 +1894,6 @@ small pricing cards
   }
 
   .tesimonials-heading {
-
     @media all and (min-width: $xl-min) {
       margin-top: 4rem;
     }
@@ -1939,7 +1969,8 @@ small pricing cards
 /********************
   Videos Page Layout
 *********************/
-.videos_udemy_section {}
+.videos_udemy_section {
+}
 
 .video_section {
   padding-top: 0;
@@ -1949,14 +1980,14 @@ small pricing cards
     box-shadow: $themeBox_shadow;
     border-radius: $themeBorder_radius;
     margin: 0 2% 4rem 0;
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
 
     &:hover {
       box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16);
 
       .title,
       .description {
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         color: $themecolorBlueLight;
       }
     }
@@ -1983,7 +2014,7 @@ small pricing cards
         }
 
         .title_on_img {
-          font-family: 'Roboto Slab', serif;
+          font-family: "Roboto Slab", serif;
           width: 86%;
           position: absolute;
           transform: translate(-50%, -50%);
@@ -2026,7 +2057,7 @@ small pricing cards
         overflow: hidden;
 
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           bottom: 0;
           width: 100%;
@@ -2051,7 +2082,6 @@ small pricing cards
    check list
 ***********************/
 .video_checklist_section {
-
   ul.list {
     list-style: none;
     margin: 0;
@@ -2078,7 +2108,7 @@ small pricing cards
 .udemy_cards {
   padding-top: 2rem;
 
-  @media all and (min-width:$lg-min) {
+  @media all and (min-width: $lg-min) {
     padding-top: 0;
   }
 
@@ -2088,18 +2118,18 @@ small pricing cards
     padding: 25px 25px 5px 25px;
     box-shadow: $themeBox_shadow;
     border-radius: $themeBorder_radius;
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
     margin: 0 -15px 2rem -15px;
 
-    @media all and (max-width:$xs-max) {
+    @media all and (max-width: $xs-max) {
       height: 190px;
     }
 
-    @media all and (min-width:$md-min) {
+    @media all and (min-width: $md-min) {
       margin: 0;
     }
 
-    @media all and (min-width:$lg-min) {
+    @media all and (min-width: $lg-min) {
       margin-bottom: 1.5rem;
     }
 
@@ -2107,7 +2137,7 @@ small pricing cards
       box-shadow: 0 10px 25px 1px rgba(0, 0, 0, 0.1);
 
       p {
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         color: $themecolorBlueLight;
       }
     }
@@ -2126,7 +2156,7 @@ small pricing cards
       line-height: 1.5rem;
       margin-left: 80px;
 
-      @media all and (max-width:$xs-max) {
+      @media all and (max-width: $xs-max) {
         margin-bottom: 2.5rem;
       }
     }
@@ -2134,7 +2164,7 @@ small pricing cards
     .arrow_link {
       margin-left: 80px;
 
-      @media all and (max-width:$xs-max) {
+      @media all and (max-width: $xs-max) {
         margin-left: 0;
       }
     }
@@ -2225,7 +2255,7 @@ small pricing cards
         a {
           margin-left: -15px;
           margin-right: -15px;
-          transition: all .5s ease;
+          transition: all 0.5s ease;
           padding: 0.8rem 0.2rem;
           border: none;
           text-transform: uppercase;
@@ -2239,7 +2269,6 @@ small pricing cards
           border-bottom: 1px solid #ddd;
           color: $themecolor;
           text-decoration: none;
-
 
           &:hover {
             opacity: 1;
@@ -2311,7 +2340,6 @@ small pricing cards
 
 //blog_flow
 .blog_flow {
-
   .container {
     .container {
       padding: 0;
@@ -2338,7 +2366,7 @@ small pricing cards
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 4rem;
     border-radius: $themeBorder_radius;
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
     background: #fff;
 
     &:hover {
@@ -2346,7 +2374,7 @@ small pricing cards
 
       .blog_post_title,
       p {
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         color: $themecolorBlueLight;
       }
     }
@@ -2359,7 +2387,6 @@ small pricing cards
       right: 0;
       z-index: 20;
     }
-
 
     .img_wrapper {
       height: 490px;
@@ -2388,7 +2415,7 @@ small pricing cards
         //text-overflow: ellipsis;
 
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           bottom: 0;
           width: 100%;
@@ -2412,7 +2439,7 @@ small pricing cards
         z-index: 40;
         letter-spacing: 0.01rem;
         text-transform: uppercase;
-        font-size: .9rem;
+        font-size: 0.9rem;
 
         &:hover {
           text-decoration: underline;
@@ -2451,7 +2478,7 @@ small pricing cards
       @media all and (min-width: $sm-min) {
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
         border-radius: $themeBorder_radius;
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         background: #fff;
         margin-top: -90px;
       }
@@ -2524,7 +2551,6 @@ small pricing cards
         }
 
         .post_text {
-
           figure {
             position: relative;
             z-index: 1000;
@@ -2554,7 +2580,6 @@ small pricing cards
     }
   }
 
-
   //wpcf7 form
   .wpcf7 {
     max-width: 100%;
@@ -2571,7 +2596,7 @@ small pricing cards
 
 // Newsletter {
 .newsletter {
-  background-image: url('../img/newspapers.jpg');
+  background-image: url("../img/newspapers.jpg");
   background-size: cover;
   position: relative;
 
@@ -2582,7 +2607,7 @@ small pricing cards
     bottom: 0;
     left: 0;
     background-image: $themecolorBlueOverlay;
-    content: '';
+    content: "";
     display: block;
   }
 
@@ -2597,7 +2622,6 @@ small pricing cards
 
     .widget_text.newsletter-form {
       .textwidget.custom-html-widget {
-
         .heading,
         .text {
           color: #fff;
@@ -2614,7 +2638,6 @@ small pricing cards
     }
 
     .es_subscription_form {
-
       display: flex;
       flex-direction: column;
 
@@ -2648,15 +2671,13 @@ small pricing cards
         border-radius: $themeBorder_radius;
         transition: 1s all ease;
         color: #fff;
-        background-color: rgba(255, 255, 255, .2);
+        background-color: rgba(255, 255, 255, 0.2);
         font-size: initial;
         line-height: 1;
         cursor: pointer;
         font-weight: 600;
         letter-spacing: 0.2px;
         box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-
-
 
         @media all and (min-width: $md-min) {
           width: initial;
@@ -2774,7 +2795,7 @@ small pricing cards
 
     li.feat-menu-item {
       text-align: left;
-      padding: .6rem .95rem;
+      padding: 0.6rem 0.95rem;
       margin-bottom: 0.3rem;
       cursor: pointer;
 
@@ -2833,9 +2854,9 @@ small pricing cards
 
     li.feat-menu-item.active {
       &::after {
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        content: '\f061';
+        content: "\f061";
         position: absolute;
         color: $themecolorBlueLight;
         font-size: 1.5em;
@@ -2867,9 +2888,9 @@ small pricing cards
 
     li.feat-menu-item.active {
       &::before {
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        content: '\f060';
+        content: "\f060";
         position: absolute;
         color: $themecolorBlueLight;
         font-size: 1.5em;
@@ -2887,9 +2908,9 @@ small pricing cards
 
 .feature-description-mobile {
   display: block;
-  padding: .6rem .95rem;
+  padding: 0.6rem 0.95rem;
   background: white;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   border-radius: $themeBorder_radius;
   border-left: 3px solid $themecolorBlueLight;
 
@@ -2932,14 +2953,12 @@ text layout for Pages Content block
 forum section
 ***********************************/
 .forum_section {
-
   @media all and (min-width: $xl-min) {
     padding-bottom: 7rem;
   }
 
   #af-wrapper {
     .post-message {
-
       img {
         width: 100%;
         height: auto;
@@ -3003,7 +3022,7 @@ forum section
 
       &:after {
         content: "\f061";
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Font Awesome 5 Free";
         font-weight: 900;
         margin-left: 10px;
       }
@@ -3052,7 +3071,6 @@ forum section
 }
 
 .footer-main {
-
   width: 100%;
   @include d-inline-flex;
   flex-direction: column;
@@ -3065,9 +3083,8 @@ forum section
     min-height: 540px;
   }
 
-  >.container {
+  > .container {
     padding-top: 2rem;
-
   }
 
   img {
@@ -3076,7 +3093,6 @@ forum section
   }
 
   .links {
-
     @media all and (min-width: $lg-min) {
       justify-content: flex-end;
     }
@@ -3151,7 +3167,6 @@ forum section
 
   .footer-copy {
     .copy {
-
       p {
         margin-top: 4rem;
         color: #cbd6e2;

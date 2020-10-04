@@ -1,9 +1,9 @@
 /*My mobile menu*/
 jQuery(document).ready(function ($) {
-
   //faq_accordion_section
   $(".question_part").click(function () {
-   $(this).next().toggleClass("open");
+    $(this).next().toggleClass("open");
+    $(".question").toggleClass("active");
   });
 
   /*Blog Sidebar Categories*/
@@ -29,7 +29,9 @@ jQuery(document).ready(function ($) {
 
   /*remove class clicking anywhere on page*/
   $(document).click(function (event) {
-    if (!$(event.target).closest("nav ul li.menu-item-has-children ul").length) {
+    if (
+      !$(event.target).closest("nav ul li.menu-item-has-children ul").length
+    ) {
       $("nav ul li.menu-item-has-children ul").removeClass("sub-menu-open");
     }
   });
@@ -48,8 +50,13 @@ jQuery(document).ready(function ($) {
 
   /*remove class clicking anywhere on page*/
   $(document).click(function (event) {
-    if (!$(event.target).closest(".nav-mobile ul li.menu-item-has-children ul").length) {
-      $(".nav-mobile ul li.menu-item-has-children ul").removeClass("sub-menu-open");
+    if (
+      !$(event.target).closest(".nav-mobile ul li.menu-item-has-children ul")
+        .length
+    ) {
+      $(".nav-mobile ul li.menu-item-has-children ul").removeClass(
+        "sub-menu-open"
+      );
     }
   });
 
@@ -79,7 +86,10 @@ jQuery(document).ready(function ($) {
 
     //alert("ItemId:" + itemId);
 
-    $(this).closest(".container").find("img.feat-img.active").removeClass("active"); //remove active class on image
+    $(this)
+      .closest(".container")
+      .find("img.feat-img.active")
+      .removeClass("active"); //remove active class on image
     $(this).closest(".container").find("img.feat-img").addClass("inactive"); //remove active class on image
 
     $("#" + imgId).addClass("active"); // set img active class on image to set opacity=1 and z-index=2

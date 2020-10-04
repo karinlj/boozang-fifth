@@ -1101,11 +1101,11 @@ nav > .toggle {
 }
 
 .header_big .header_items_section {
-  padding-top: calc(500px/3);
+  padding-top: calc(500px / 3);
 }
 @media all and (min-width: 576px) {
   .header_big .header_items_section {
-    padding-top: calc(600px/3);
+    padding-top: calc(600px / 3);
   }
 }
 
