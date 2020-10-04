@@ -1,8 +1,8 @@
 jQuery(document).ready(function ($) {
   //faq_accordion_section
-  $(".question_part").click(function () {
+  $(".question_part").click(function (event) {
     $(this).next().toggleClass("open");
-    $(".question").toggleClass("active");
+    $(event.target).closest(".question").toggleClass("active");
   });
 
   /*Blog Sidebar Categories*/
