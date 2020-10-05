@@ -1,8 +1,9 @@
 jQuery(document).ready(function ($) {
   //faq_accordion_section
-  $(".question_part").click(function (event) {
+  $(".question_part").click(function () {
+    //console.log("this", this); = .question_part
     $(this).next().toggleClass("open");
-    $(event.target).closest(".question").toggleClass("active");
+    $(this).children("h5").toggleClass("active");
   });
 
   /*Blog Sidebar Categories*/
@@ -42,8 +43,7 @@ jQuery(document).ready(function ($) {
   });
 
   $(".nav-mobile ul li.menu-item-has-children").click(function (event) {
-    event.stopPropagation(); /* to stop the 'document handler' from activating at the same time as the click event on class */
-    //$('.nav-mobile ul li.menu-item-has-children ul').toggleClass('sub-menu-open');
+    event.stopPropagation();
     $(this).children("ul").toggleClass("sub-menu-open");
   });
 
@@ -60,19 +60,16 @@ jQuery(document).ready(function ($) {
   });
 
   //feature slider
-  $(document).ready(function () {
-    console.log("ready!");
-    $("li.feat-menu-item.active").removeClass("active"); //remove active class on li
-    $("img.feat-img.active").removeClass("active"); //remove active class on li
-    $("li.feat-menu-item.active").addClass("inactive"); //remove active class on li
-    $("img.feat-img.active").addClass("inactive"); //remove active class on li
-    $(".comes-first li.feat-menu-item:first").addClass("active"); //set active class on first li
-    $(".comes-last img.feat-img").addClass("inactive");
-    $(".comes-last img.feat-img:first").addClass("active");
-    $(".comes-first img.feat-img").addClass("inactive");
-    $(".comes-first img.feat-img:first").addClass("active");
-    $(".comes-last li.feat-menu-item:first").addClass("active"); //set active class on first li
-  });
+  $("li.feat-menu-item.active").removeClass("active"); //remove active class on li
+  $("img.feat-img.active").removeClass("active"); //remove active class on li
+  $("li.feat-menu-item.active").addClass("inactive"); //remove active class on li
+  $("img.feat-img.active").addClass("inactive"); //remove active class on li
+  $(".comes-first li.feat-menu-item:first").addClass("active"); //set active class on first li
+  $(".comes-last img.feat-img").addClass("inactive");
+  $(".comes-last img.feat-img:first").addClass("active");
+  $(".comes-first img.feat-img").addClass("inactive");
+  $(".comes-first img.feat-img:first").addClass("active");
+  $(".comes-last li.feat-menu-item:first").addClass("active"); //set active class on first li
 
   $("li.feat-menu-item").click(function () {
     //click on span tag
