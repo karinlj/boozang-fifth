@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
   $(".question_part").click(function () {
     //console.log("this", this); = .question_part
     $(this).next().toggleClass("open");
-    $(this).children("h5").toggleClass("active");
+    $(this).children(".question").toggleClass("active");
   });
 
   /*Blog Sidebar Categories*/
