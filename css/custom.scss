@@ -35,14 +35,7 @@ $linkhoverOpacity: 0.7;
 
 //Blue
 $themecolorBlue: #1b2fe4;
-$themecolorBlueBg: linear-gradient(
-  to right bottom,
-  #1b2fe4,
-  #4852eb,
-  #6871f1,
-  #868ff3,
-  #a4acf4
-);
+$themecolorBlueBg: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
 $themecolorBlueOverlay: linear-gradient(
   to right bottom,
   rgba(27, 47, 228, 0.85),
@@ -66,14 +59,7 @@ $themecolorBlueLightOverlay: linear-gradient(
 );
 
 //Blue darker
-$themecolorBlueDarkerBg: linear-gradient(
-  to bottom,
-  #1576b7,
-  #177dc2,
-  #1885cd,
-  #1a8cd9,
-  #1b94e4
-);
+$themecolorBlueDarkerBg: linear-gradient(to bottom, #1576b7, #177dc2, #1885cd, #1a8cd9, #1b94e4);
 
 //GreenNew
 $themecolorGreenNew: #0ba893;
@@ -93,14 +79,7 @@ $themecolorGreenNewOverlay: linear-gradient(
 
 //DarkGrey
 $themecolorDarkGrey: #21242c;
-$themecolorDarkGreyBg: linear-gradient(
-  to bottom,
-  #21242c,
-  #292d36,
-  #313641,
-  #393f4c,
-  #424857
-);
+$themecolorDarkGreyBg: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857);
 $themecolorDarkGreyOverlay: linear-gradient(
   to right bottom,
   rgba(33, 36, 44, 0.85),
@@ -2751,11 +2730,11 @@ small pricing cards
     }
 
     @media all and (min-width: $sm-min) {
-      height: 400px;
+      height: 480px;
     }
 
     @media all and (min-width: $md-min) {
-      height: 500px;
+      height: 540px;
     }
 
     img.feat-img {

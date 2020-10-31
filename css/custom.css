@@ -1356,7 +1356,6 @@ small pricing cards
   font-size: 0.9rem;
   content: "";
   font-weight: 600;
-  transition: max-height 0.5s ease-out;
 }
 .faq_accordion_section .info_list_item .question_part .question.active:after {
   content: "";
@@ -2425,12 +2424,12 @@ small pricing cards
 }
 @media all and (min-width: 576px) {
   .two-columns-section.feature-slider .feat-slider-wrapper {
-    height: 400px;
+    height: 480px;
   }
 }
 @media all and (min-width: 768px) {
   .two-columns-section.feature-slider .feat-slider-wrapper {
-    height: 500px;
+    height: 540px;
   }
 }
 .two-columns-section.feature-slider .feat-slider-wrapper img.feat-img {
