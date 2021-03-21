@@ -1,0 +1,138 @@
+//$xs-max: 575.9px;
+$xs-max: 480px;
+$sm-min: 576px;
+
+$sm-max: 767.9px;
+$md-min: 768px;
+
+$md-max: 991.9px;
+$lg-min: 992px;
+
+$lg-max: 1199.9px;
+$xl-min: 1200px;
+
+$xl-max: 1309px;
+$max-page-width: 1380px;
+
+//other
+$themefont: "Roboto", "Helvetica", sans-serif;
+$navfont: $themefont;
+$headingfont: $themefont;
+$themeBorder_radius: 10px;
+$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+
+/*transparent nav*/
+$navcolor: #fff;
+$navBg_transp: transparent;
+$linkcolor: #1b94e4; //$themecolorBlueLight;
+
+/* colors */
+//new lila
+$themecolorLila: #2a2966;
+$themecolorLilaDark: #2c407d;
+$themecolorLilaDarkest: #161637;
+
+$themecolor: #373c49;
+$themeBorderColor: #ebebeb;
+$themecolorLighter: #a8adbd;
+
+$themeHeadingcolor: #373c49;
+$lightgrey: #f9f9f9; //#f6f9fc;
+$mediumgrey: #f1f1f4;
+$themecolorGreen: #5d5f5e;
+$themecolorRed: #e62e65;
+$linkhoverOpacity: 0.7;
+$themecolorOrange: #de7560;
+$themecolorPink: #f24d7f;
+$themecolorGreen: #00ac7d;
+
+//Blue
+$themecolorBlue: #1b2fe4;
+$themecolorBlueBg: linear-gradient(
+  to right bottom,
+  #1b2fe4,
+  #4852eb,
+  #6871f1,
+  #868ff3,
+  #a4acf4
+);
+
+//BlueLight
+$themecolorBlueLight: #2e9ce6;
+$themecolorBlueLightBg: linear-gradient(
+  to right bottom,
+  #1b94e4,
+  #42a1e8,
+  #5dafeb,
+  #76bcee,
+  #8ec9f1
+);
+
+//Blue darker
+$themecolorBlueDarkerBg: linear-gradient(
+  to bottom,
+  #1576b7,
+  #177dc2,
+  #1885cd,
+  #1a8cd9,
+  #1b94e4
+);
+
+//GreenNew
+$themecolorGreenNew: #0ba893;
+$themecolorGreenNewBg: linear-gradient(
+  to right bottom,
+  #09907e,
+  #0aa18d,
+  #0bb39d,
+  #0dc6ad,
+  #0ed8bd
+);
+
+//DarkGrey
+$themecolorDarkGrey: #21242c;
+$themecolorDarkGreyBg: linear-gradient(
+  to bottom,
+  #21242c,
+  #292d36,
+  #313641,
+  #393f4c,
+  #424857
+);
+
+$themecolorBlueLight: #2a2966;
+
+//down
+$themecolorBlueLightBgDown: linear-gradient(
+  to bottom,
+  #161637,
+  #1a1940,
+  #1d1d48,
+  #212051,
+  #25245a,
+  #252f68,
+  #233a75,
+  #1e4583,
+  #095a96,
+  #006fa6,
+  #0084b5,
+  #0099c1
+);
+
+//$themecolorLilabg: linear-gradient(
+//left side up
+$themecolorBlueLightBg: linear-gradient(
+  to right bottom,
+  #161637,
+  #1a1940,
+  #1d1d48,
+  #212051,
+  #25245a,
+  #252f68,
+  #233a75,
+  #1e4583,
+  #095a96,
+  #006fa6,
+  #0084b5,
+  #0099c1
+);

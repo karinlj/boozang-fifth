@@ -4,120 +4,7 @@ Author: Karin Ljunggren
 Author URI: http://karinljunggren.com
 */
 @import "_mixins.scss";
-
-//$xs-max: 575.9px;
-$xs-max: 480px;
-$sm-min: 576px;
-
-$sm-max: 767.9px;
-$md-min: 768px;
-
-$md-max: 991.9px;
-$lg-min: 992px;
-
-$lg-max: 1199.9px;
-$xl-min: 1200px;
-
-$xl-max: 1309px;
-$max-page-width: 1380px;
-
-/* colors */
-$themecolor: #373c49;
-$themeBorderColor: #ebebeb;
-$themecolorLighter: #a8adbd;
-
-$themeHeadingcolor: #373c49;
-$lightgrey: #f9f9f9; //#f6f9fc;
-$mediumgrey: #f1f1f4;
-$themecolorGreen: #5d5f5e;
-$themecolorRed: #e62e65;
-$linkhoverOpacity: 0.7;
-
-//Blue
-$themecolorBlue: #1b2fe4;
-$themecolorBlueBg: linear-gradient(
-  to right bottom,
-  #1b2fe4,
-  #4852eb,
-  #6871f1,
-  #868ff3,
-  #a4acf4
-);
-$themecolorBlueOverlay: linear-gradient(
-  to right bottom,
-  rgba(27, 47, 228, 0.85),
-  rgba(164, 172, 244, 0.95)
-);
-
-//BlueLight
-$themecolorBlueLight: #2e9ce6;
-$themecolorBlueLightBg: linear-gradient(
-  to right bottom,
-  #1b94e4,
-  #42a1e8,
-  #5dafeb,
-  #76bcee,
-  #8ec9f1
-);
-$themecolorBlueLightOverlay: linear-gradient(
-  to right bottom,
-  rgba(27, 148, 228, 0.85),
-  rgba(142, 201, 241, 0.95)
-);
-
-//Blue darker
-$themecolorBlueDarkerBg: linear-gradient(
-  to bottom,
-  #1576b7,
-  #177dc2,
-  #1885cd,
-  #1a8cd9,
-  #1b94e4
-);
-
-//GreenNew
-$themecolorGreenNew: #0ba893;
-$themecolorGreenNewBg: linear-gradient(
-  to right bottom,
-  #09907e,
-  #0aa18d,
-  #0bb39d,
-  #0dc6ad,
-  #0ed8bd
-);
-$themecolorGreenNewOverlay: linear-gradient(
-  to right bottom,
-  rgba(9, 144, 126, 0.85),
-  rgba(14, 216, 189, 0.95)
-);
-
-//DarkGrey
-$themecolorDarkGrey: #21242c;
-$themecolorDarkGreyBg: linear-gradient(
-  to bottom,
-  #21242c,
-  #292d36,
-  #313641,
-  #393f4c,
-  #424857
-);
-$themecolorDarkGreyOverlay: linear-gradient(
-  to right bottom,
-  rgba(33, 36, 44, 0.85),
-  rgba(66, 72, 87, 0.95)
-);
-
-//other
-$themefont: "Roboto", "Helvetica", sans-serif;
-$navfont: $themefont;
-$headingfont: $themefont;
-$themeBorder_radius: 10px;
-$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-
-/*transparent nav*/
-$navcolor: #fff;
-$navBg_transp: transparent;
-$linkcolor: #1b94e4; //$themecolorBlueLight;
+@import "variables.scss";
 
 /********************
      general
@@ -128,7 +15,7 @@ body {
   color: $themecolor;
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: $lightgrey;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -502,7 +389,7 @@ a.banner_link {
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: $themeBorder_radius;
+  border-radius: 0;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
   font-size: 1em;
@@ -610,7 +497,8 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorBlueLightOverlay;
+    background-image: $themecolorBlueLightBg;
+    opacity: 0.85;
     content: "";
     display: block;
   }
@@ -621,7 +509,8 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorBlueOverlay;
+    background-image: $themecolorBlueBg;
+    opacity: 0.85;
     content: "";
     display: block;
   }
@@ -632,7 +521,8 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorGreenNewOverlay;
+    background-image: $themecolorGreenNewBg;
+    opacity: 0.85;
     content: "";
     display: block;
   }
@@ -882,7 +772,7 @@ nav {
           background-color: #fff;
           border: 1px solid #fff;
           margin: 0 0 0 1.2rem;
-          border-radius: $themeBorder_radius;
+          border-radius: 0;
           padding: 10px 20px;
           cursor: pointer;
           line-height: 1.2;
@@ -892,15 +782,12 @@ nav {
           font-size: 0.85em;
           letter-spacing: 0.5px;
           box-shadow: $themeBox_shadow;
-
           @media all and (min-width: $lg-min) {
             font-size: 0.7em;
           }
-
           @media all and (min-width: $xl-min) {
             font-size: 0.85em;
           }
-
           &:hover {
             background: transparent !important;
             color: #fff !important;
@@ -1000,7 +887,6 @@ nav {
       }
     }
   }
-
   .signup {
     ul {
       width: 100%;
@@ -1101,19 +987,18 @@ nav {
           color: #fff;
         }
       }
-
       .demo_btn {
-        background: transparent;
-        border: 1px solid #fff;
+        background: $themecolorGreen; //transparent;
+        border: 1px solid $themecolorGreen; //#fff;
         color: #fff;
 
         &:hover {
           background: #fff;
           color: $themecolorBlueLight;
+          border: 1px solid #fff;
         }
       }
     }
-
     a.play_btn {
       margin: auto;
 
@@ -1123,60 +1008,54 @@ nav {
       }
     }
   }
-
   &.lightblue {
     .signup ul li:last-of-type a {
-      color: $themecolorBlueLight;
+      background: transparent;
+      color: #fff;
+      &:hover {
+        color: $themecolorBlueLight;
+        background: #fff;
+      }
     }
   }
-
   &.blue {
     .signup_btn {
       color: $themecolorBlue;
     }
-
     .demo_btn {
       &:hover {
         color: $themecolorBlue;
       }
     }
-
     .signup ul li:last-of-type a {
       color: $themecolorBlue;
     }
   }
-
   &.green {
     .signup_btn {
       color: $themecolorGreenNew;
     }
-
     .demo_btn {
       &:hover {
         color: $themecolorGreenNew;
       }
     }
-
     .signup ul li:last-of-type a {
       color: $themecolorGreenNew;
     }
   }
-
   .header_items_section {
     padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
 
     @media all and (min-width: $sm-min) {
       padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
     }
-
     @media all and (min-width: $md-min) {
       padding: 0 calc(3rem - 15px) 4rem calc(3rem - 15px);
     }
-
     @media all and (min-width: $xl-min) {
       padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
     }
-
     .header_heading {
       color: #fff;
       margin-bottom: 1.5rem;
@@ -1185,10 +1064,8 @@ nav {
       @media all and (max-width: $xs-max) {
         text-align: center;
       }
-
       &.front {
         text-align: center;
-
         @media all and (min-width: $sm-min) {
           text-align: left;
         }
@@ -1213,12 +1090,10 @@ nav {
         }
       }
     }
-
     .header_image_section {
       img {
         max-width: 230px;
       }
-
       text-align: center;
       display: none;
 
@@ -1780,31 +1655,43 @@ small pricing cards
   @include d-flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
+  // margin: 0 10rem;
+
+  @media all and (min-width: $md-min) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: $themeBorder_radius;
+    box-shadow: $themeBox_shadow;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2000;
+    background: #fff;
+    margin-bottom: 2rem;
+  }
 
   .pillars-item {
-    margin: 2rem 0;
     height: auto;
-
+    @media all and (min-width: $md-min) {
+      background: #fff;
+      margin: 1rem 0;
+    }
     @media all and (min-width: $lg-min) {
       margin-bottom: 0;
     }
-
     .top-heading {
       font-weight: 500;
-
-      &.blue {
-        color: $themecolorBlue;
-      }
-
+      // &.blue {
+      //   color: $themecolorBlue;
+      // }
+      //orange?
       &.mediumgrey {
-        color: #a8adbd;
+        color: $themecolorOrange; // #a8adbd;
       }
-
-      &.lightblue {
-        color: $themecolorBlueLight;
-      }
+      // &.lightblue {
+      //   color: $themecolorBlueLight;
+      // }
     }
-
     .heading {
       margin-bottom: 1rem;
     }
@@ -1816,7 +1703,7 @@ small pricing cards
 ***********************/
 
 .integrations_section {
-  background-image: $themecolorBlueLightBg;
+  background-image: $themecolorBlueLightBgDown;
 
   .text_section {
     padding-bottom: 2rem;
@@ -2605,7 +2492,8 @@ small pricing cards
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorBlueOverlay;
+    background-image: $themecolorBlueBg;
+    opacity: 0.85;
     content: "";
     display: block;
   }
@@ -2710,7 +2598,7 @@ small pricing cards
 *******************************/
 .two-columns-section.feature-slider {
   min-height: 650px;
-  background: #f9f9f9;
+  background: $lightgrey;
 
   @media all and (min-width: $sm-min) {
     min-height: 700px;
@@ -3075,7 +2963,7 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-image: $themecolorDarkGreyBg;
+  background-image: $themecolorBlueLightBg;
   min-height: 480px;
 
   @media all and (max-width: $xs-max) {

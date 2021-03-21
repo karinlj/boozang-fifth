@@ -4,8 +4,8 @@ Theme Name: Boozang-fifth
 Author: Karin Ljunggren
 Author URI: http://karinljunggren.com
 */
-/* colors */
 /*transparent nav*/
+/* colors */
 /********************
      general
 *********************/
@@ -14,7 +14,7 @@ body {
   color: #373c49;
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #f9f9f9;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -394,7 +394,7 @@ a.banner_link:hover:before {
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 0;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
   font-size: 1em;
@@ -424,7 +424,7 @@ header {
 }
 section.lightblue,
 header.lightblue {
-  background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+  background-image: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
 }
 section.blue,
 header.blue {
@@ -458,11 +458,11 @@ header.lightgrey p {
 }
 section.lightgrey .banner_link,
 header.lightgrey .banner_link {
-  color: #2e9ce6;
+  color: #2a2966;
 }
 section.lightgrey .banner_link:before,
 header.lightgrey .banner_link:before {
-  background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+  background: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
 }
 section.darkgrey,
 header.darkgrey {
@@ -512,7 +512,8 @@ header.overlay-lightblue::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, rgba(27, 148, 228, 0.85), rgba(142, 201, 241, 0.95));
+  background-image: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
+  opacity: 0.85;
   content: "";
   display: block;
 }
@@ -523,7 +524,8 @@ header.overlay-blue::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, rgba(27, 47, 228, 0.85), rgba(164, 172, 244, 0.95));
+  background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
+  opacity: 0.85;
   content: "";
   display: block;
 }
@@ -534,7 +536,8 @@ header.overlay-green::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, rgba(9, 144, 126, 0.85), rgba(14, 216, 189, 0.95));
+  background-image: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd);
+  opacity: 0.85;
   content: "";
   display: block;
 }
@@ -768,7 +771,7 @@ nav > .toggle {
   background-color: #fff;
   border: 1px solid #fff;
   margin: 0 0 0 1.2rem;
-  border-radius: 10px;
+  border-radius: 0;
   padding: 10px 20px;
   cursor: pointer;
   line-height: 1.2;
@@ -877,14 +880,14 @@ nav > .toggle {
 }
 .nav-mobile .signup ul li .signup_btn {
   margin: 1rem 0.5rem;
-  background: #2e9ce6;
+  background: #2a2966;
   color: #fff !important;
-  border: 1px solid #2e9ce6;
+  border: 1px solid #2a2966;
   width: 100%;
 }
 .nav-mobile .signup ul li .signup_btn:hover {
   background: transparent;
-  color: #2e9ce6;
+  color: #2a2966;
 }
 @media all and (min-width: 576px) {
   .nav-mobile .signup ul li .signup_btn {
@@ -959,7 +962,7 @@ nav > .toggle {
 .header_big .header_links_section .header_btn_section .signup_btn,
 .header_small .header_links_section .header_btn_section .signup_btn {
   background: #fff;
-  color: #2e9ce6;
+  color: #2a2966;
   border: 1px solid #fff;
 }
 .header_big .header_links_section .header_btn_section .signup_btn:hover,
@@ -969,14 +972,15 @@ nav > .toggle {
 }
 .header_big .header_links_section .header_btn_section .demo_btn,
 .header_small .header_links_section .header_btn_section .demo_btn {
-  background: transparent;
-  border: 1px solid #fff;
+  background: #00ac7d;
+  border: 1px solid #00ac7d;
   color: #fff;
 }
 .header_big .header_links_section .header_btn_section .demo_btn:hover,
 .header_small .header_links_section .header_btn_section .demo_btn:hover {
   background: #fff;
-  color: #2e9ce6;
+  color: #2a2966;
+  border: 1px solid #fff;
 }
 .header_big .header_links_section a.play_btn,
 .header_small .header_links_section a.play_btn {
@@ -991,7 +995,13 @@ nav > .toggle {
 }
 .header_big.lightblue .signup ul li:last-of-type a,
 .header_small.lightblue .signup ul li:last-of-type a {
-  color: #2e9ce6;
+  background: transparent;
+  color: #fff;
+}
+.header_big.lightblue .signup ul li:last-of-type a:hover,
+.header_small.lightblue .signup ul li:last-of-type a:hover {
+  color: #2a2966;
+  background: #fff;
 }
 .header_big.blue .signup_btn,
 .header_small.blue .signup_btn {
@@ -1190,7 +1200,7 @@ nav > .toggle {
   font-size: 0.8rem;
 }
 .pricing_section .card .btn {
-  background: #2e9ce6;
+  background: #2a2966;
   color: #fff;
   margin-top: 1rem;
   position: absolute;
@@ -1219,7 +1229,7 @@ nav > .toggle {
   color: #fff;
 }
 .pricing_section .card.blue_darker .pricing_header {
-  border-bottom: 2px solid #2e9ce6;
+  border-bottom: 2px solid #2a2966;
 }
 
 /*********************
@@ -1241,7 +1251,7 @@ feature list
 }
 .feature_list_section .feature_list_item .features_icon i {
   padding: 0 0.7rem 0.7rem 0.7rem;
-  color: #5d5f5e;
+  color: #00ac7d;
 }
 @media all and (min-width: 1200px) {
   .feature_list_section .feature_list_item .features_icon i {
@@ -1314,10 +1324,10 @@ small pricing cards
   border-top: 5px solid #1b2fe4;
 }
 .small_pricing_cards_section .card.lightblue {
-  border-top: 5px solid #2e9ce6;
+  border-top: 5px solid #2a2966;
 }
 .small_pricing_cards_section .card.green {
-  border-top: 5px solid #5d5f5e;
+  border-top: 5px solid #00ac7d;
 }
 .small_pricing_cards_section .card.red {
   border-top: 5px solid #e62e65;
@@ -1356,7 +1366,6 @@ small pricing cards
   font-size: 0.9rem;
   content: "";
   font-weight: 600;
-  transition: max-height 0.5s ease-out;
 }
 .faq_accordion_section .info_list_item .question_part .question.active:after {
   content: "";
@@ -1543,7 +1552,7 @@ small pricing cards
 .two_columns_section .column_row .part.image::before {
   content: "Hover image to enlarge";
   position: absolute;
-  color: #2e9ce6;
+  color: #2a2966;
   font-size: 0.8rem;
   font-weight: 400;
   right: 0;
@@ -1579,10 +1588,29 @@ small pricing cards
   display: flex !important;
   justify-content: center;
   align-items: center;
+  background: transparent;
+}
+@media all and (min-width: 768px) {
+  .pillars-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2000;
+    background: #fff;
+    margin-bottom: 2rem;
+  }
 }
 .pillars-section .pillars-item {
-  margin: 2rem 0;
   height: auto;
+}
+@media all and (min-width: 768px) {
+  .pillars-section .pillars-item {
+    background: #fff;
+    margin: 1rem 0;
+  }
 }
 @media all and (min-width: 992px) {
   .pillars-section .pillars-item {
@@ -1592,14 +1620,8 @@ small pricing cards
 .pillars-section .pillars-item .top-heading {
   font-weight: 500;
 }
-.pillars-section .pillars-item .top-heading.blue {
-  color: #1b2fe4;
-}
 .pillars-section .pillars-item .top-heading.mediumgrey {
-  color: #a8adbd;
-}
-.pillars-section .pillars-item .top-heading.lightblue {
-  color: #2e9ce6;
+  color: #de7560;
 }
 .pillars-section .pillars-item .heading {
   margin-bottom: 1rem;
@@ -1609,7 +1631,7 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+  background-image: linear-gradient(to bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
 }
 .integrations_section .text_section {
   padding-bottom: 2rem;
@@ -1743,10 +1765,10 @@ small pricing cards
   color: #0ba893;
 }
 .testimonials-section-new .testimonials-container .testimonials-item.lightblue {
-  border-left: 5px solid #2e9ce6;
+  border-left: 5px solid #2a2966;
 }
 .testimonials-section-new .testimonials-container .testimonials-item.lightblue .signature {
-  color: #2e9ce6;
+  color: #2a2966;
 }
 
 /********************
@@ -1768,7 +1790,7 @@ small pricing cards
 .video_section .video_container:hover .title,
 .video_section .video_container:hover .description {
   transition: 0.25s ease-in-out;
-  color: #2e9ce6;
+  color: #2a2966;
 }
 .video_section .video_container .embed_container {
   border-top-left-radius: 10px;
@@ -1859,7 +1881,7 @@ small pricing cards
   font-weight: 900;
   content: "";
   font-size: 1rem;
-  color: #5d5f5e;
+  color: #00ac7d;
   padding-right: 0.5rem;
 }
 
@@ -1903,7 +1925,7 @@ small pricing cards
 }
 .udemy_cards .course_card:hover p {
   transition: 0.25s ease-in-out;
-  color: #2e9ce6;
+  color: #2a2966;
 }
 .udemy_cards .course_card .course_link {
   position: absolute;
@@ -2088,7 +2110,7 @@ small pricing cards
 .blog_flow .post_card:hover .blog_post_title,
 .blog_flow .post_card:hover p {
   transition: 0.25s ease-in-out;
-  color: #2e9ce6;
+  color: #2a2966;
 }
 .blog_flow .post_card .post_link {
   position: absolute;
@@ -2249,7 +2271,7 @@ small pricing cards
 .blog_flow .post_card.single .post_content .post_text figure::before {
   content: "Hover image to enlarge";
   position: absolute;
-  color: #2e9ce6;
+  color: #2a2966;
   font-size: 0.8rem;
   font-weight: 400;
   right: 0;
@@ -2284,7 +2306,8 @@ small pricing cards
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, rgba(27, 47, 228, 0.85), rgba(164, 172, 244, 0.95));
+  background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
+  opacity: 0.85;
   content: "";
   display: block;
 }
@@ -2484,11 +2507,11 @@ small pricing cards
 .two-columns-section.feature-slider ul#features-menu li.feat-menu-item.active {
   position: relative;
   background: white;
-  border-left: 3px solid #2e9ce6;
+  border-left: 3px solid #2a2966;
 }
 .two-columns-section.feature-slider ul#features-menu li.feat-menu-item.active span {
   border-color: transparent;
-  color: #2e9ce6;
+  color: #2a2966;
   font-weight: 600;
 }
 .two-columns-section.feature-slider ul#features-menu li.feat-menu-item.active p.text {
@@ -2517,7 +2540,7 @@ small pricing cards
   font-weight: 900;
   content: "";
   position: absolute;
-  color: #2e9ce6;
+  color: #2a2966;
   font-size: 1.5em;
   right: -40px;
   top: 24px;
@@ -2550,7 +2573,7 @@ small pricing cards
   font-weight: 900;
   content: "";
   position: absolute;
-  color: #2e9ce6;
+  color: #2a2966;
   font-size: 1.5em;
   left: -40px;
   top: 24px;
@@ -2568,7 +2591,7 @@ small pricing cards
   background: white;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  border-left: 3px solid #2e9ce6;
+  border-left: 3px solid #2a2966;
 }
 @media all and (min-width: 992px) {
   .feature-description-mobile {
@@ -2664,7 +2687,7 @@ forum section
   margin-left: 10px;
 }
 .signup_section.lightgrey .btn.signup_btn {
-  background: #2e9ce6;
+  background: #2a2966;
   color: #fff;
   border: 1px solid #f9f9f9;
 }
@@ -2673,8 +2696,8 @@ forum section
 }
 .signup_section.lightblue .btn.signup_btn {
   background: #fff;
-  color: #2e9ce6;
-  border: 1px solid #2e9ce6;
+  color: #2a2966;
+  border: 1px solid #2a2966;
 }
 .signup_section.lightblue .btn.signup_btn:hover {
   background: transparent;
@@ -2701,7 +2724,7 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-image: linear-gradient(to bottom, #21242c, #292d36, #313641, #393f4c, #424857);
+  background-image: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
   min-height: 480px;
 }
 @media all and (max-width: 480px) {
@@ -2746,7 +2769,7 @@ forum section
   font-size: 0.9rem;
 }
 .footer-main .links ul.footer-links li a:hover {
-  color: #2e9ce6;
+  color: #2a2966;
   text-decoration: none;
 }
 .footer-main .social-icons {
@@ -2780,7 +2803,7 @@ forum section
 }
 .footer-main .social-icons ul.social li.social-item .fab:hover,
 .footer-main .social-icons ul.social li.social-item .fas:hover {
-  color: #2e9ce6;
+  color: #2a2966;
 }
 .footer-main .footer-copy .copy p {
   margin-top: 4rem;
@@ -2819,7 +2842,7 @@ forum section
   background: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd);
 }
 .banner-section .banner-item.lightblue {
-  background: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
+  background: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
 }
 .banner-section .banner-item {
   box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
