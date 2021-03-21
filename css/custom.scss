@@ -988,14 +988,13 @@ nav {
         }
       }
       .demo_btn {
-        background: $themecolorGreen; //transparent;
-        border: 1px solid $themecolorGreen; //#fff;
+        background: transparent;
+        border: 1px solid #fff;
         color: #fff;
 
         &:hover {
           background: #fff;
           color: $themecolorBlueLight;
-          border: 1px solid #fff;
         }
       }
     }

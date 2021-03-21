@@ -972,15 +972,14 @@ nav > .toggle {
 }
 .header_big .header_links_section .header_btn_section .demo_btn,
 .header_small .header_links_section .header_btn_section .demo_btn {
-  background: #00ac7d;
-  border: 1px solid #00ac7d;
+  background: transparent;
+  border: 1px solid #fff;
   color: #fff;
 }
 .header_big .header_links_section .header_btn_section .demo_btn:hover,
 .header_small .header_links_section .header_btn_section .demo_btn:hover {
   background: #fff;
   color: #2a2966;
-  border: 1px solid #fff;
 }
 .header_big .header_links_section a.play_btn,
 .header_small .header_links_section a.play_btn {
