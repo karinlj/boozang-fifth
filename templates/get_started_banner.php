@@ -12,7 +12,7 @@ if ($bg_image) {
     $overlay_color = get_sub_field('overlay_color');
 }?>
 
-<section class="get_started_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
+<section class="get_started_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_big"
   <?php echo $style; ?>>
 
   <div class="container">

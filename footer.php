@@ -16,24 +16,18 @@ if (function_exists('acf_add_options_page')) {
                 $overlay_color = get_sub_field('overlay_color');
             }?>
 
-    <section class="signup_section <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
+    <section class="signup_section <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small"
       <?php echo $style; ?>>
 
       <div class="container">
-        <div class="row">
-          <!-- <div class="col-md-8 offset-md-2"> -->
-          <div class="col-md-12">
-            <div class="row">
-
-              <!-- <div class="col-md-6 col-lg-8"> -->
+        <div class="row align-items-center">
+         
               <div class="col-md-6">
                 <div class="text_section">
                   <h2><?php the_sub_field('heading');?></h2>
                   <p> <?php the_sub_field('text');?></p>
                 </div>
               </div>
-
-              <!-- <div class="col-md-6 col-lg-4"> -->
               <div class="col-md-6">
                 <div class="btn_container">
                   <?php
@@ -49,9 +43,7 @@ $signup_button = get_sub_field('signup_button');
 
                 </div>
               </div>
-
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
@@ -60,7 +52,6 @@ $signup_button = get_sub_field('signup_button');
     }
 }
 ?>
-
     <footer id="footer" class="footer-main section_spacing_top_small">
 
       <div class="container">
@@ -137,7 +128,6 @@ $link = get_sub_field('link');?>
                     <a href="<?php echo $link['url']; ?>"
                       target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
                   </li>
-
                   <?php
 }?>
 
@@ -145,7 +135,6 @@ $link = get_sub_field('link');?>
                 <?php
 }?>
               </div>
-              <!--col-->
               <?php
 }?>
               <?php
@@ -156,7 +145,6 @@ $link = get_sub_field('link');?>
           </div>
         </div>
       </div>
-
       <div class="footer-copy">
         <div class="container">
           <div class="row align-items-start">

@@ -43,41 +43,41 @@ $mediumgrey: #f1f1f4;
 $themecolorGreen: #5d5f5e;
 $themecolorRed: #e62e65;
 $linkhoverOpacity: 0.7;
-$themecolorOrange: #de7560;
+$themecolorOrange: #fcb25a;
 $themecolorPink: #f24d7f;
 $themecolorGreen: #00ac7d;
 
 //Blue
 $themecolorBlue: #1b2fe4;
-$themecolorBlueBg: linear-gradient(
-  to right bottom,
-  #1b2fe4,
-  #4852eb,
-  #6871f1,
-  #868ff3,
-  #a4acf4
-);
+// $themecolorBlueBg: linear-gradient(
+//   to right bottom,
+//   #1b2fe4,
+//   #4852eb,
+//   #6871f1,
+//   #868ff3,
+//   #a4acf4
+// );
 
 //BlueLight
 $themecolorBlueLight: #2e9ce6;
-$themecolorBlueLightBg: linear-gradient(
-  to right bottom,
-  #1b94e4,
-  #42a1e8,
-  #5dafeb,
-  #76bcee,
-  #8ec9f1
-);
+// $themecolorBlueLightBg: linear-gradient(
+//   to right bottom,
+//   #1b94e4,
+//   #42a1e8,
+//   #5dafeb,
+//   #76bcee,
+//   #8ec9f1
+// );
 
 //Blue darker
-$themecolorBlueDarkerBg: linear-gradient(
-  to bottom,
-  #1576b7,
-  #177dc2,
-  #1885cd,
-  #1a8cd9,
-  #1b94e4
-);
+//$themecolorBlueDarkerBg: linear-gradient(
+//   to bottom,
+//   #1576b7,
+//   #177dc2,
+//   #1885cd,
+//   #1a8cd9,
+//   #1b94e4
+// );
 
 //GreenNew
 $themecolorGreenNew: #0ba893;
@@ -102,7 +102,6 @@ $themecolorDarkGreyBg: linear-gradient(
 );
 
 $themecolorBlueLight: #2a2966;
-
 //down
 $themecolorBlueLightBgDown: linear-gradient(
   to bottom,
@@ -173,4 +172,47 @@ $themecolorBlueBg: linear-gradient(
   #20adb3,
   #45c4b9,
   #6bdabb
+);
+
+//Blue darker (light orange)
+$themecolorBlueDarkerBg: linear-gradient(
+  to right bottom,
+  #a54863,
+  #b14f63,
+  #bd5763,
+  #c85f63,
+  #d26862,
+  #da7161,
+  #e17a5f,
+  #e8835e,
+  #ef8e5c,
+  #f49a5b,
+  #f9a65a,
+  #fcb25a
+);
+
+// (light orange)
+// $themecolorGreenNewBg: linear-gradient(
+//   to right bottom,
+//   #a54863,
+//   #b14f63,
+//   #bd5763,
+//   #c85f63,
+//   #d26862,
+//   #da7161,
+//   #e17a5f,
+//   #e8835e,
+//   #ef8e5c,
+//   #f49a5b,
+//   #f9a65a,
+//   #fcb25a
+// );
+
+$themecolorLilaDarkestBg: linear-gradient(
+  to bottom,
+  #161637,
+  #1b1b42,
+  #201f4e,
+  #25245a,
+  #2a2966
 );
