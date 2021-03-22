@@ -9,7 +9,9 @@ Author URI: http://karinljunggren.com
 /********************
      general
 *********************/
-
+html {
+  font-size: 0.9rem;
+}
 body {
   font-family: $themefont;
   color: $themecolor;
@@ -389,7 +391,7 @@ a.banner_link {
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: $btnBorder_radius;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
   font-size: 1em;
@@ -417,22 +419,17 @@ a.banner_link {
 section,
 header {
   position: relative;
-
   &.lightblue {
     background-image: $themecolorBlueLightBg;
   }
-
   &.blue {
     background-image: $themecolorBlueBg;
   }
-
   &.green {
     background-image: $themecolorGreenNewBg;
   }
-
   &.lightgrey {
     background: $lightgrey;
-
     h1,
     h2,
     h3,
@@ -441,11 +438,9 @@ header {
     h6 {
       color: $themeHeadingcolor;
     }
-
     p {
       color: $themecolor;
     }
-
     .banner_link {
       color: $themecolorBlueLight;
 
@@ -454,7 +449,6 @@ header {
       }
     }
   }
-
   &.darkgrey {
     background: $themecolorDarkGreyBg;
 
@@ -466,11 +460,9 @@ header {
     h6 {
       color: #fcfdfe;
     }
-
     p {
       color: #fcfdfe;
     }
-
     .banner_link {
       color: #fcfdfe;
 
@@ -479,7 +471,6 @@ header {
       }
     }
   }
-
   &.overlay-dark::before {
     position: absolute;
     top: 0;
@@ -490,7 +481,6 @@ header {
     content: "";
     display: block;
   }
-
   &.overlay-lightblue::before {
     position: absolute;
     top: 0;
@@ -502,7 +492,6 @@ header {
     content: "";
     display: block;
   }
-
   &.overlay-blue::before {
     position: absolute;
     top: 0;
@@ -772,7 +761,7 @@ nav {
           background-color: #fff;
           border: 1px solid #fff;
           margin: 0 0 0 1.2rem;
-          border-radius: 0;
+          border-radius: $btnBorder_radius;
           padding: 10px 20px;
           cursor: pointer;
           line-height: 1.2;
@@ -1474,68 +1463,54 @@ small pricing cards
 .get_started_banner {
   //background and overlay: see scss section
   min-height: 330px;
-
   .sub_info_part {
     p {
       font-size: 1.2rem;
     }
-
     &.smallscreen {
       display: block;
       margin-top: 2rem;
-
       @media all and (min-width: $lg-min) {
         display: none;
       }
     }
-
     &.bigscreen {
       display: none;
-
       @media all and (min-width: $lg-min) {
         display: block;
         margin-right: 1rem;
       }
     }
   }
-
   h2 {
     margin-bottom: 3rem;
   }
-
   h5,
   h2,
   p {
     color: #fff;
-
     &::before {
       font-weight: 600;
       font-size: 40px;
       color: #fff;
     }
   }
-
   .action_items {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
     @media all and (min-width: $sm-min) {
       flex-direction: row;
     }
-
     .action_item {
       padding-right: 0.7rem;
       width: 100%;
-
       @media all and (min-width: $md-min) {
         align-items: flex-start;
       }
-
       @media all and (min-width: $lg-min) {
         align-items: flex-start;
       }
-
       &:nth-of-type(1) {
         h5 {
           &::before {
@@ -1543,7 +1518,6 @@ small pricing cards
           }
         }
       }
-
       &:nth-of-type(2) {
         h5 {
           &::before {
@@ -1551,7 +1525,6 @@ small pricing cards
           }
         }
       }
-
       &:nth-of-type(3) {
         h5 {
           &::before {
@@ -1702,47 +1675,40 @@ small pricing cards
 ***********************/
 
 .integrations_section {
-  background-image: $themecolorBlueLightBgDown;
+  background-image: $themecolorGreenNewBg;
 
   .text_section {
     padding-bottom: 2rem;
-
     h3,
     p {
       color: #fff;
     }
-
     p {
       font-size: 1.2rem;
     }
-
     @media all and (min-width: $lg-min) {
       padding-bottom: 0;
     }
   }
-
   .icon_section {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -12px;
-
     .img_box {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 50%;
       padding: 0 12px 24px;
-
       @media all and (min-width: $sm-min) {
         width: 25%;
         padding: 0 12px 24px;
       }
-
       span {
         height: 7rem;
         background: #fff;
         box-shadow: $themeBox_shadow;
-        border-radius: 3px;
+        border-radius: $themeBorder_radius;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2893,7 +2859,6 @@ forum section
       color: $themecolorLighter;
     }
   }
-
   .btn_container {
     display: flex;
     justify-content: center;
@@ -2902,10 +2867,8 @@ forum section
     @media all and (min-width: $lg-min) {
       justify-content: flex-start;
     }
-
     .btn {
       padding: 10px 45px;
-
       &:after {
         content: "\f061";
         font-family: "Font Awesome 5 Free";
@@ -2914,7 +2877,6 @@ forum section
       }
     }
   }
-
   &.lightgrey {
     .btn.signup_btn {
       background: $themecolorBlueLight;
@@ -2926,13 +2888,11 @@ forum section
       }
     }
   }
-
   &.lightblue {
     .btn.signup_btn {
       background: #fff;
       color: $themecolorBlueLight;
       border: 1px solid $themecolorBlueLight;
-
       &:hover {
         background: transparent;
         color: #fff;
@@ -2940,7 +2900,6 @@ forum section
       }
     }
   }
-
   &.blue {
     .btn.signup_btn {
       background: #fff;
@@ -2955,29 +2914,25 @@ forum section
     }
   }
 }
-
 .footer-main {
   width: 100%;
   @include d-inline-flex;
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-image: $themecolorBlueLightBg;
+  background: $themecolorLilaDarkest;
   min-height: 480px;
 
   @media all and (max-width: $xs-max) {
     min-height: 540px;
   }
-
   > .container {
     padding-top: 2rem;
   }
-
   img {
     width: 140px;
     margin-top: -0.5rem;
   }
-
   .links {
     @media all and (min-width: $lg-min) {
       justify-content: flex-end;
@@ -2994,15 +2949,12 @@ forum section
         padding-top: 0;
       }
     }
-
     ul.footer-links {
       list-style: none;
       padding: 0;
       margin: 0;
-
       li {
         padding-bottom: 0.4rem;
-
         a {
           color: #fff;
           font-size: 0.9rem;
@@ -3015,24 +2967,19 @@ forum section
       }
     }
   }
-
   .social-icons {
     padding: 1.5rem 0;
-
     ul.social {
       @include d-inline-flex;
       list-style: none;
       margin: 0;
       padding: 0;
       width: 100%;
-
       li.social-item {
         padding: 0 0.4rem;
-
         &:first-child {
           padding-left: 0;
         }
-
         .fab,
         .fas {
           font-size: 14px;
@@ -3042,7 +2989,6 @@ forum section
           border-radius: 50%;
           transition: 1s;
           color: #fff;
-
           &:hover {
             color: $themecolorBlueLight;
           }
@@ -3050,7 +2996,6 @@ forum section
       }
     }
   }
-
   .footer-copy {
     .copy {
       p {

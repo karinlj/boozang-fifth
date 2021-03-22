@@ -19,6 +19,7 @@ $themefont: "Roboto", "Helvetica", sans-serif;
 $navfont: $themefont;
 $headingfont: $themefont;
 $themeBorder_radius: 10px;
+$btnBorder_radius: 3px;
 $themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
 
 /*transparent nav*/
@@ -80,14 +81,14 @@ $themecolorBlueDarkerBg: linear-gradient(
 
 //GreenNew
 $themecolorGreenNew: #0ba893;
-$themecolorGreenNewBg: linear-gradient(
-  to right bottom,
-  #09907e,
-  #0aa18d,
-  #0bb39d,
-  #0dc6ad,
-  #0ed8bd
-);
+//$themecolorGreenNewBg: linear-gradient(
+//   to right bottom,
+//   #09907e,
+//   #0aa18d,
+//   #0bb39d,
+//   #0dc6ad,
+//   #0ed8bd
+// );
 
 //DarkGrey
 $themecolorDarkGrey: #21242c;
@@ -135,4 +136,41 @@ $themecolorBlueLightBg: linear-gradient(
   #006fa6,
   #0084b5,
   #0099c1
+);
+//GreenNew
+$themecolorGreenNew: #0ba893;
+$themecolorGreenNewBg: linear-gradient(
+  to right bottom,
+  #2a2966,
+  #583071,
+  #813676,
+  #a64076,
+  #c64e72
+);
+//down
+$themecolorGreenNewBgDown: linear-gradient(
+  to bottom,
+  #2a2966,
+  #583071,
+  #813676,
+  #a64076,
+  #c64e72
+);
+
+//Blue
+$themecolorBlue: #1b2fe4;
+$themecolorBlueBg: linear-gradient(
+  to right bottom,
+  #0d3961,
+  #0b4068,
+  #08476f,
+  #054f76,
+  #02567d,
+  #006388,
+  #007092,
+  #007e9c,
+  #0095aa,
+  #20adb3,
+  #45c4b9,
+  #6bdabb
 );

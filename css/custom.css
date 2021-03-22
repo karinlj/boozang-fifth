@@ -9,6 +9,10 @@ Author URI: http://karinljunggren.com
 /********************
      general
 *********************/
+html {
+  font-size: 0.9rem;
+}
+
 body {
   font-family: "Roboto", "Helvetica", sans-serif;
   color: #373c49;
@@ -394,7 +398,7 @@ a.banner_link:hover:before {
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: 3px;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
   font-size: 1em;
@@ -428,11 +432,11 @@ header.lightblue {
 }
 section.blue,
 header.blue {
-  background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
+  background-image: linear-gradient(to right bottom, #0d3961, #0b4068, #08476f, #054f76, #02567d, #006388, #007092, #007e9c, #0095aa, #20adb3, #45c4b9, #6bdabb);
 }
 section.green,
 header.green {
-  background-image: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd);
+  background-image: linear-gradient(to right bottom, #2a2966, #583071, #813676, #a64076, #c64e72);
 }
 section.lightgrey,
 header.lightgrey {
@@ -524,7 +528,7 @@ header.overlay-blue::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
+  background-image: linear-gradient(to right bottom, #0d3961, #0b4068, #08476f, #054f76, #02567d, #006388, #007092, #007e9c, #0095aa, #20adb3, #45c4b9, #6bdabb);
   opacity: 0.85;
   content: "";
   display: block;
@@ -536,7 +540,7 @@ header.overlay-green::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd);
+  background-image: linear-gradient(to right bottom, #2a2966, #583071, #813676, #a64076, #c64e72);
   opacity: 0.85;
   content: "";
   display: block;
@@ -771,7 +775,7 @@ nav > .toggle {
   background-color: #fff;
   border: 1px solid #fff;
   margin: 0 0 0 1.2rem;
-  border-radius: 0;
+  border-radius: 3px;
   padding: 10px 20px;
   cursor: pointer;
   line-height: 1.2;
@@ -1630,7 +1634,7 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background-image: linear-gradient(to bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
+  background-image: linear-gradient(to right bottom, #2a2966, #583071, #813676, #a64076, #c64e72);
 }
 .integrations_section .text_section {
   padding-bottom: 2rem;
@@ -1669,7 +1673,7 @@ small pricing cards
   height: 7rem;
   background: #fff;
   box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2305,7 +2309,7 @@ small pricing cards
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
+  background-image: linear-gradient(to right bottom, #0d3961, #0b4068, #08476f, #054f76, #02567d, #006388, #007092, #007e9c, #0095aa, #20adb3, #45c4b9, #6bdabb);
   opacity: 0.85;
   content: "";
   display: block;
@@ -2723,7 +2727,7 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-image: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
+  background: #161637;
   min-height: 480px;
 }
 @media all and (max-width: 480px) {
@@ -2835,10 +2839,10 @@ forum section
   padding: 0.75rem 0;
 }
 .banner-section .banner-item.blue {
-  background: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
+  background: linear-gradient(to right bottom, #0d3961, #0b4068, #08476f, #054f76, #02567d, #006388, #007092, #007e9c, #0095aa, #20adb3, #45c4b9, #6bdabb);
 }
 .banner-section .banner-item.green {
-  background: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd);
+  background: linear-gradient(to right bottom, #2a2966, #583071, #813676, #a64076, #c64e72);
 }
 .banner-section .banner-item.lightblue {
   background: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
