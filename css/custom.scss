@@ -2686,7 +2686,6 @@ small pricing cards
         // transition: all 0.25s ease;
         transform: scale(1.07);
         //box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 34%);
-
         opacity: 1;
       }
 
@@ -3132,5 +3131,63 @@ forum section
 .cookie-notice-container {
   span {
     color: #999;
+  }
+}
+
+/**********************************
+img_text_section
+***********************************/
+
+.img_text_section {
+  background: $themecolorLilaDarkestBg;
+  margin-left: -5rem;
+  margin-right: -5rem;
+  .column_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    @media all and (min-width: $md-min) {
+      flex-direction: row;
+    }
+    .part {
+      width: 100%;
+      @media all and (min-width: $md-min) {
+        width: 40%;
+      }
+      &.text {
+        h2,
+        h6,
+        p {
+          color: #fff;
+        }
+        @media all and (max-width: $sm-max) {
+          order: -1;
+          padding: 1rem 0;
+        }
+        @media all and (min-width: $md-min) {
+          padding: 0 2rem;
+        }
+        @media all and (min-width: $lg-min) {
+          padding: 0 3rem;
+        }
+      }
+      &.image {
+        z-index: 1000;
+        position: relative;
+        img {
+          border-radius: $themeBorder_radius;
+          box-shadow: $themeBox_shadow;
+          width: 100%;
+          height: auto;
+          transition: all 0.25s ease;
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: $themeBox_shadow;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }

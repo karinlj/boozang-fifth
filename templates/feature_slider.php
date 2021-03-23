@@ -38,6 +38,7 @@ if (have_rows('feature_slider'))
     {
         the_row();
         $j++; //räknare räknas upp varje varv
+        
 ?>
             <!--I have <?php echo $j; ?>-->
 
@@ -157,6 +158,21 @@ $link_text = get_sub_field('link_text'); ?>
 </div>
   </section>
 
+  <section class="img_text_section section_spacing_top_medium">
+  <div class="container">
+        <div class="column_row"> 
+          <div class="part text">
+            <h2>theLab <span><i class="fas fa-graduation-cap"></i></span></h2>
+            <p>Much more than a simple record-and-replay tool, Boozang provides IDE-style visual interface that allow you to create and maintain tests for complex projects.</p>
+            <h6>Multiple tabs</h6>
+            <p>Work on several tests at once using multiple tabs, just like any desktop IDE.</p>
+          </div>
+            <div class="part image">
+            <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelab.jpg" alt="theLab">
+      </div>
+    </div>
+    </div>
+      </div>
+  </section>
+
 </section>
-
-
