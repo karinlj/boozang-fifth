@@ -346,7 +346,7 @@ a.arrow_link {
 }
 
 //white link with arrow on colored banner
-a.banner_link {
+.banner_link {
   color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
@@ -1668,7 +1668,7 @@ small pricing cards
 ***********************/
 
 .integrations_section {
-  background-image: $themecolorGreenNewBg;
+  background-image: $themecolorGreenNewBgDown;
   .text_section {
     padding-bottom: 2rem;
     h3,
@@ -2553,6 +2553,9 @@ small pricing cards
 /******************************
      features slider
 *******************************/
+.two-columns-section.feature-slider.section_spacing_top_medium {
+  padding-bottom: 0;
+}
 .two-columns-section.feature-slider {
   min-height: 650px;
   // background: $lightgrey;
@@ -2640,7 +2643,6 @@ small pricing cards
       }
       p.text {
         color: $themecolorLilaDark;
-
         line-height: 1.4;
         font-size: 90%;
         margin-bottom: 0;
@@ -3175,16 +3177,24 @@ img_text_section
       &.image {
         z-index: 1000;
         position: relative;
-        img {
-          border-radius: $themeBorder_radius;
-          box-shadow: $themeBox_shadow;
-          width: 100%;
-          height: auto;
-          transition: all 0.25s ease;
+        .img_link {
+          text-align: center;
+          transition: transform 0.3s ease;
+          display: block;
           &:hover {
-            transform: translateY(-5px);
-            box-shadow: $themeBox_shadow;
+            opacity: 1;
+            transform: translateX(5px);
             cursor: pointer;
+          }
+          img {
+            border-radius: $themeBorder_radius;
+            box-shadow: $themeBox_shadow;
+            width: 100%;
+            height: auto;
+          }
+          .banner_link {
+            padding-top: 1rem;
+            color: #fff;
           }
         }
       }

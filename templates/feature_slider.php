@@ -112,7 +112,9 @@ $link_text = get_sub_field('link_text'); ?>
 
   </div>
 
-  <section class="feature_link_item_section section_spacing_top_small">
+
+
+  <section class="feature_link_item_section section_spacing_top_medium">
   <h3 class="preamble text-center"><?php the_sub_field('link_preamble'); ?></h3>
 
   <div class="container">
@@ -158,7 +160,7 @@ $link_text = get_sub_field('link_text'); ?>
 </div>
   </section>
 
-  <section class="img_text_section section_spacing_top_medium">
+  <section class="img_text_section section_spacing_top_big">
   <div class="container">
         <div class="column_row"> 
           <div class="part text">
@@ -168,11 +170,16 @@ $link_text = get_sub_field('link_text'); ?>
             <p>Work on several tests at once using multiple tabs, just like any desktop IDE.</p>
           </div>
             <div class="part image">
-            <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelab.jpg" alt="theLab">
+            <a href="http://thelab.boozang.com/" class="img_link">
+            <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelab.jpg" target="_blank" alt="theLab">
+            <div class="banner_link">Go to The Lab</div>
+
+            </a>
       </div>
     </div>
     </div>
       </div>
   </section>
+
 
 </section>

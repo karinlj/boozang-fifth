@@ -354,7 +354,7 @@ a.arrow_link:after {
   margin-left: 10px;
 }
 
-a.banner_link {
+.banner_link {
   color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
@@ -362,14 +362,14 @@ a.banner_link {
   position: relative;
   transition: transform 0.3s ease;
 }
-a.banner_link:hover {
+.banner_link:hover {
   opacity: 1;
   transform: translateX(5px);
 }
-a.banner_link:hover:before {
+.banner_link:hover:before {
   opacity: 0.7;
 }
-a.banner_link:before {
+.banner_link:before {
   opacity: 0.4;
   position: absolute;
   bottom: 0;
@@ -379,7 +379,7 @@ a.banner_link:before {
   height: 2px;
   background: #fff;
 }
-a.banner_link::after {
+.banner_link::after {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -1630,7 +1630,7 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background-image: linear-gradient(to right bottom, #2a2966, #583071, #813676, #a64076, #c64e72);
+  background-image: linear-gradient(to bottom, #161637, #231a3e, #301f45, #3d234b, #4b2751, #512953, #572b55, #5d2d57, #5d2d57, #5d2d57, #5d2d57, #5d2d57);
 }
 .integrations_section .text_section {
   padding-bottom: 2rem;
@@ -2398,6 +2398,10 @@ small pricing cards
 /******************************
      features slider
 *******************************/
+.two-columns-section.feature-slider.section_spacing_top_medium {
+  padding-bottom: 0;
+}
+
 .two-columns-section.feature-slider {
   min-height: 650px;
 }
@@ -2997,17 +3001,25 @@ img_text_section
   z-index: 1000;
   position: relative;
 }
-.img_text_section .column_row .part.image img {
+.img_text_section .column_row .part.image .img_link {
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: block;
+}
+.img_text_section .column_row .part.image .img_link:hover {
+  opacity: 1;
+  transform: translateX(5px);
+  cursor: pointer;
+}
+.img_text_section .column_row .part.image .img_link img {
   border-radius: 10px;
   box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: auto;
-  transition: all 0.25s ease;
 }
-.img_text_section .column_row .part.image img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+.img_text_section .column_row .part.image .img_link .banner_link {
+  padding-top: 1rem;
+  color: #fff;
 }
 
 /*# sourceMappingURL=custom.css.map */
