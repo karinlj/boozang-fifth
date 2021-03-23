@@ -121,21 +121,30 @@ $themecolorBlueLightBgDown: linear-gradient(
 
 //$themecolorLilabg: linear-gradient(
 //left side up
-$themecolorBlueLightBg: linear-gradient(
-  to right bottom,
-  #161637,
-  #1a1940,
-  #1d1d48,
-  #212051,
-  #25245a,
-  #252f68,
-  #233a75,
-  #1e4583,
-  #095a96,
-  #006fa6,
-  #0084b5,
-  #0099c1
-);
+$themecolorBlueLightBg: #2c407d;
+// linear-gradient(
+//   to bottom,
+//   #2c407d,
+//   #374483,
+//   #424788,
+//   #4d4b8e,
+//   #574e93
+// );
+
+//   to right bottom,
+//   #161637,
+//   #1a1940,
+//   #1d1d48,
+//   #212051,
+//   #25245a,
+//   #252f68,
+//   #233a75,
+//   #1e4583,
+//   #095a96,
+//   #006fa6,
+//   #0084b5,
+//   #0099c1
+// );
 //GreenNew
 $themecolorGreenNew: #0ba893;
 $themecolorGreenNewBg: linear-gradient(
@@ -230,4 +239,14 @@ $themecolorLilaDarkestBg: linear-gradient(
   #201f4e,
   #25245a,
   #2a2966
+);
+
+//beautiful blue
+$themecolorNewBlueBg: linear-gradient(
+  to right bottom,
+  #004e91,
+  #005799,
+  #0061a2,
+  #006aa9,
+  #0074b1
 );

@@ -423,11 +423,11 @@ header {
 }
 section.lightblue,
 header.lightblue {
-  background-image: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
+  background: #2c407d;
 }
 section.blue,
 header.blue {
-  background-image: linear-gradient(to right bottom, #0d3961, #0b4068, #08476f, #054f76, #02567d, #006388, #007092, #007e9c, #0095aa, #20adb3, #45c4b9, #6bdabb);
+  background-image: linear-gradient(to right bottom, #004e91, #005799, #0061a2, #006aa9, #0074b1);
 }
 section.green,
 header.green {
@@ -461,7 +461,7 @@ header.lightgrey .banner_link {
 }
 section.lightgrey .banner_link:before,
 header.lightgrey .banner_link:before {
-  background: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
+  background: #2c407d;
 }
 section.darkgrey,
 header.darkgrey {
@@ -511,7 +511,7 @@ header.overlay-lightblue::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
+  background-image: #2c407d;
   opacity: 0.85;
   content: "";
   display: block;
@@ -792,8 +792,8 @@ nav > .toggle {
   }
 }
 .signup ul li:last-of-type a:hover {
-  background: transparent !important;
-  color: #fff !important;
+  color: #2a2966;
+  background: #fff;
   border: 1px solid #fff !important;
   opacity: 1;
 }
@@ -926,7 +926,7 @@ nav > .toggle {
 }
 
 .header_small {
-  min-height: 360px;
+  min-height: 460px;
 }
 
 .header_big .header_links_section,
@@ -966,8 +966,8 @@ nav > .toggle {
 }
 .header_big .header_links_section .header_btn_section .signup_btn:hover,
 .header_small .header_links_section .header_btn_section .signup_btn:hover {
-  background: transparent;
-  color: #fff;
+  background: #fff;
+  color: #2a2966;
 }
 .header_big .header_links_section .header_btn_section .demo_btn,
 .header_small .header_links_section .header_btn_section .demo_btn {
@@ -1620,7 +1620,7 @@ small pricing cards
   font-size: 0.85rem;
 }
 .pillars-section .pillars-item .top-heading.mediumgrey {
-  color: #c64e72;
+  color: #f24d7f;
 }
 .pillars-section .pillars-item .heading {
   margin-bottom: 1rem;
@@ -1630,7 +1630,7 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background-image: linear-gradient(to bottom, #161637, #231a3e, #301f45, #3d234b, #4b2751, #512953, #572b55, #5d2d57, #5d2d57, #5d2d57, #5d2d57, #5d2d57);
+  background-image: linear-gradient(to bottom, #5d2d57, #662f5f, #6f3266, #78346e, #813676);
 }
 .integrations_section .text_section {
   padding-bottom: 2rem;
@@ -2757,7 +2757,7 @@ forum section
   justify-content: space-between;
   color: #fff;
   background-image: linear-gradient(to bottom, #161637, #1b1b42, #201f4e, #25245a, #2a2966);
-  min-height: 480px;
+  min-height: 520px;
 }
 @media all and (max-width: 480px) {
   .footer-main {
@@ -2852,7 +2852,7 @@ forum section
 .footer-main .footer-copy .copy p {
   border-top: 1px solid #2c407d;
   color: #cbd6e2;
-  font-size: 80%;
+  font-size: 75%;
   margin-bottom: -1rem;
   padding-top: 1rem;
 }
@@ -2890,7 +2890,7 @@ forum section
   background: linear-gradient(to right bottom, #2a2966, #583071, #813676, #a64076, #c64e72);
 }
 .banner-section .banner-item.lightblue {
-  background: linear-gradient(to right bottom, #161637, #1a1940, #1d1d48, #212051, #25245a, #252f68, #233a75, #1e4583, #095a96, #006fa6, #0084b5, #0099c1);
+  background: #2c407d;
 }
 .banner-section .banner-item {
   box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);

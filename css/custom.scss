@@ -231,7 +231,6 @@ h6 {
 .copy,
 .newsletter {
   text-align: center;
-
   @media all and (min-width: $sm-min) {
     text-align: left;
   }
@@ -270,7 +269,6 @@ a {
   a {
     display: inline-block;
     position: relative;
-
     &:before {
       // opacity: .6;
       opacity: 0.4;
@@ -285,16 +283,13 @@ a {
       -webkit-transition: width 0.2s ease-in;
       transition: width 0.2s ease-in;
     }
-
     &:hover {
       opacity: 1;
-
       &:before {
         width: 100%;
         opacity: 0.7;
       }
     }
-
     //class for arrow right
     &.arrow_link {
       &:after {
@@ -306,7 +301,6 @@ a {
     }
   }
 }
-
 //class for link with arrow
 a.arrow_link {
   display: inline-block;
@@ -326,16 +320,13 @@ a.arrow_link {
     -webkit-transition: width 0.2s ease-in;
     transition: width 0.2s ease-in;
   }
-
   &:hover {
     opacity: 1;
-
     &:before {
       width: 100%;
       opacity: 0.7;
     }
   }
-
   //arrow right
   &:after {
     content: "\f061 ";
@@ -344,7 +335,6 @@ a.arrow_link {
     margin-left: 10px;
   }
 }
-
 //white link with arrow on colored banner
 .banner_link {
   color: #fff;
@@ -381,7 +371,6 @@ a.arrow_link {
 /*********************
     buttons
  *********************/
-
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -415,10 +404,10 @@ section,
 header {
   position: relative;
   &.lightblue {
-    background-image: $themecolorBlueLightBg;
+    background: $themecolorBlueLightBg;
   }
   &.blue {
-    background-image: $themecolorBlueBg;
+    background-image: $themecolorNewBlueBg;
   }
   &.green {
     background-image: $themecolorGreenNewBg;
@@ -735,7 +724,6 @@ nav {
     flex-direction: row;
   }
 }
-
 .signup {
   display: flex;
   justify-content: flex-start;
@@ -743,14 +731,12 @@ nav {
   @media all and (min-width: $lg-min) {
     justify-content: flex-end;
   }
-
   ul {
     li {
       &:last-of-type {
         @media all and (min-width: $lg-min) {
           border-left: 1px solid #fff;
         }
-
         a {
           color: #333;
           background-color: #fff;
@@ -773,8 +759,11 @@ nav {
             font-size: 0.85em;
           }
           &:hover {
-            background: transparent !important;
-            color: #fff !important;
+            color: $themecolorBlueLight;
+            background: #fff;
+
+            // background: transparent !important;
+            // color: #fff !important;
             border: 1px solid #fff !important;
             opacity: 1;
           }
@@ -920,18 +909,16 @@ nav {
 *************************/
 .header_big {
   min-height: 600px;
-
   @media all and (min-width: $sm-min) {
     min-height: 550px;
   }
-
   @media all and (min-width: $lg-min) {
     min-height: 600px;
   }
 }
-
 .header_small {
-  min-height: 360px;
+  // min-height: 360px;
+  min-height: 460px;
 }
 
 .header_big,
@@ -949,7 +936,6 @@ nav {
       @media all and (min-width: $sm-min) {
         flex-direction: row;
       }
-
       a {
         margin-right: 1rem;
         width: 100%;
@@ -959,16 +945,14 @@ nav {
           width: auto;
         }
       }
-
       //default: lightblue
       .signup_btn {
         background: #fff;
         color: $themecolorBlueLight;
         border: 1px solid #fff;
-
         &:hover {
-          background: transparent;
-          color: #fff;
+          background: #fff;
+          color: $themecolorBlueLight;
         }
       }
       .demo_btn {
@@ -1054,7 +1038,6 @@ nav {
         }
       }
     }
-
     .header_text {
       font-size: 1.2rem;
       color: #fff;
@@ -1064,7 +1047,6 @@ nav {
       @media all and (min-width: $sm-min) {
         font-size: 1.3em;
       }
-
       &.front {
         text-align: center;
 
@@ -1097,7 +1079,6 @@ nav {
     }
   }
 }
-
 .header_small {
   .header_items_section {
     text-align: center;
@@ -1651,7 +1632,7 @@ small pricing cards
       // }
       //orange?
       &.mediumgrey {
-        color: #c64e72; // #a8adbd;
+        color: $themecolorPink; //#c64e72;
       }
       // &.lightblue {
       //   color: $themecolorBlueLight;
@@ -1668,7 +1649,15 @@ small pricing cards
 ***********************/
 
 .integrations_section {
-  background-image: $themecolorGreenNewBgDown;
+  background-image: linear-gradient(
+    to bottom,
+    #5d2d57,
+    #662f5f,
+    #6f3266,
+    #78346e,
+    #813676
+  ); //$themecolorGreenNewBgDown;
+  // background: #5d2d57;
   .text_section {
     padding-bottom: 2rem;
     h3,
@@ -2933,7 +2922,7 @@ forum section
   justify-content: space-between;
   color: #fff;
   background-image: $themecolorLilaDarkestBg;
-  min-height: 480px;
+  min-height: 520px;
 
   @media all and (max-width: $xs-max) {
     min-height: 540px;
@@ -3022,7 +3011,7 @@ forum section
       p {
         border-top: 1px solid $themecolorLilaDark;
         color: #cbd6e2;
-        font-size: 80%;
+        font-size: 75%;
         margin-bottom: -1rem;
         padding-top: 1rem;
         a {
@@ -3045,65 +3034,52 @@ forum section
   justify-content: center;
   align-items: center;
   transition: all 150ms ease-out;
-
   @media all and (min-width: $lg-min) {
     min-height: 500px;
   }
-
   .row {
     padding: 0.75rem 0;
   }
-
   .banner-item {
     &.blue {
       background: $themecolorBlueBg;
     }
-
     &.green {
       background: $themecolorGreenNewBg;
     }
-
     &.lightblue {
       background: $themecolorBlueLightBg;
     }
   }
-
   .banner-item {
     box-shadow: $themeBox_shadow;
     margin-bottom: 2rem;
     padding: 1.5rem;
     height: auto;
     border-radius: $themeBorder_radius;
-
     @media all and (min-width: $lg-min) {
       margin-bottom: 0;
       height: 280px;
     }
-
     .banner-icon {
       margin-bottom: 1rem;
-
       i.fas {
         font-size: 1.3rem;
       }
     }
-
     p,
     h3,
     li,
     .banner-icon {
       color: #fff;
     }
-
     h3 {
       &:after {
         background-color: #fff;
       }
     }
-
     p {
       font-size: 1rem;
-
       @media all and (min-width: $lg-min) and (max-width: $lg-max) {
         font-size: 0.95rem;
         margin-bottom: 0.5rem;
