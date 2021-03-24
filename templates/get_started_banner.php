@@ -12,6 +12,48 @@ if ($bg_image) {
     $overlay_color = get_sub_field('overlay_color');
 }?>
 
+
+            <!-- boxes -->
+            <section class="boxes">
+	<div class="boxes_inner">
+		<!-- <div class="box" style="background: url(&quot;/static/media/leaves_small.770460e1.jpg&quot;);">
+			<div class="text-part-outer">
+				<div class="text-part-inner"><i class="fas fa-laptop boxes-icon"></i>
+					<h3 class="heading"> Web Technologies &amp; other</h3>
+					<div class="text">
+						<p><b>Git</b>, NPM, Webpack, Azure DevOps, Firebase.</p>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="box darkblue">
+			<div class="text-part-outer">
+				<div class="text-part-inner">
+					<h3 class="heading">Create your account for free!</h3>
+					<div class="text">
+            <p>No credit card required.</p>
+            <div class="btn_container">
+
+            <a class="btn signup_btn" href="https://ai.boozang.com/#security/signup" target="">Sign Up today                  </a>
+
+                </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box extraLightBlue">
+			<div class="text-part-outer">
+				<div class="text-part-inner"><i class="fas fa-wordpress boxes-icon"></i><i class="fab fa-wordpress boxes-icon"></i>
+					<h3 class="heading">Read more about all the Boozang features</h3>
+					<div class="text">
+          <p>I’m baby retro tattooed pour-over, I’m baby retro tattooed pour-over.</p>					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+
+
 <section class="get_started_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_big"
   <?php echo $style; ?>>
 

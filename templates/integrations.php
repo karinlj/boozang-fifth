@@ -4,8 +4,7 @@
 <section class="integrations_section section_spacing_top_big">
 
   <div class="container">
-    <!-- <div class="row align-items-center"> -->
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="text_section">
           <h2 class="">
@@ -44,7 +43,29 @@ if (have_rows('icon_box')) {
     </div>
   </div>
 
+    <!-- aspect_wrapper -->
+    <section class="two_columns_blocks section_spacing_top_big">
+    <div class="aspect_wrapper image">
+	<div class="box image"> 
+  <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelabTables.jpg" target="_blank" alt="theLab"/>            
+</div>
+</div>
 
+  <div class="aspect_wrapper text">
+		<div class="box text">
+			<div class="text_part">
+				<div class="text_part_child">
+        <i class="fas fa-graduation-cap boxes-icon"></i>
+					<h4>I'm baby retro tattooed pour-over</h4>
+					<p></p>
+					<p>I’m baby retro tattooed pour-over, I’m baby retro tattooed pour-over.</p>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section> 
 
 
 

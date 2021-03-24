@@ -1,10 +1,8 @@
     <?php
 if (function_exists('acf_add_options_page')) {
     if (have_rows('sign_up_field', 'option')) { // check if the group field has rows
-
         while (have_rows('sign_up_field', 'option')) {
             the_row();
-
             $style = '';
             $btn_url = get_sub_field('button_url');
             $btn_text = get_sub_field('button_text');
@@ -31,7 +29,7 @@ if (function_exists('acf_add_options_page')) {
               <div class="col-md-6">
                 <div class="btn_container">
                   <?php
-$signup_button = get_sub_field('signup_button');
+                  $signup_button = get_sub_field('signup_button');
 
             if ($signup_button) {?>
 
@@ -46,12 +44,87 @@ $signup_button = get_sub_field('signup_button');
          
         </div>
       </div>
-    </section>
+    </section> 
     <?php
 }
     }
 }
 ?>
+
+<!-- boxes - no img -->
+<!-- <section class="boxes">
+	<div class="boxes-inner">
+		<div class="box" style="background: url(&quot;/static/media/leaves_small.770460e1.jpg&quot;);">
+			<div class="text-part-outer">
+				<div class="text-part-inner"><i class="fas fa-laptop boxes-icon"></i><i class="fab fa-laptop boxes-icon"></i>
+					<h3 class="heading"> Web Technologies &amp; other</h3>
+					<div class="text">
+						<p><b>Git</b>, NPM, Webpack, Azure DevOps, Firebase.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box" style="background: url(&quot;/static/media/leaves_small.770460e1.jpg&quot;);">
+			<div class="text-part-outer">
+				<div class="text-part-inner"><i class="fas fa-graduation-cap boxes-icon"></i>
+					<h3 class="heading"> theLab</h3>
+					<div class="text">
+						<p>Try to jump onto window and fall while scratching at wall sit in window and stare oooh, a bird, yum. Cat cat moo moo lick ears lick paws run at 3am human is washing you why halp oh the horror.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box" style="background: url(&quot;/static/media/leaves_small.770460e1.jpg&quot;);">
+			<div class="text-part-outer">
+				<div class="text-part-inner"><i class="fas fa-wordpress boxes-icon"></i><i class="fab fa-wordpress boxes-icon"></i>
+					<h3 class="heading"> CMS/Wordpress/Contentful</h3>
+					<div class="text">
+						<p><b>Custom WP themes</b> - dynamic and lightweight, best bulit with ACF. Woocommerce themes for webshops. Also developing with headless CMS <b>Sanity.io </b>or <b>Contentful</b>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+
+
+<!-- aspect_wrapper -->
+<!-- <section class="two_columns_blocks">
+	<div class="aspect_wrapper text">
+		<div class="box text darkblue">
+			<div class="text_part">
+				<div class="text_part_child">
+					<h4>I'm baby retro tattooed pour-over</h4>
+					<p></p>
+					<p>I’m baby retro tattooed pour-over, I’m baby retro tattooed pour-over.</p>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="aspect_wrapper text">
+		<div class="box text newblue">
+			<div class="text_part">
+				<div class="text_part_child">
+        <i class="fas fa-graduation-cap boxes-icon"></i>
+					<h4>theLab </h4>
+					<p></p>
+					<p>I’m baby retro tattooed pour-over, I’m baby retro tattooed pour-over.</p>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="aspect_wrapper image">
+	<div class="box image"> 
+  <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelabTables.jpg" target="_blank" alt="theLab"/>            
+</div>
+</div>
+</section> -->
+
+
+
     <footer id="footer" class="footer-main section_spacing_top_small">
       <div class="container">
         <div class="row align-items-start justify-content-between">

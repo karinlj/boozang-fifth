@@ -35,7 +35,9 @@ $themecolorLilaDarkest: #161637;
 
 $themecolor: #373c49;
 $themeBorderColor: #ebebeb;
-$themecolorLighter: #66758d;
+
+$themecolorLight: #66758d;
+$themecolorLighter: #e6e6e6;
 
 $themeHeadingcolor: #121923;
 $lightgrey: #f9f9f9; //#f6f9fc;
@@ -128,16 +130,8 @@ $themecolorBlueLightBgDown: linear-gradient(
 
 //$themecolorLilabg: linear-gradient(
 //left side up
-$themecolorBlueLightBg: #2c407d;
-// linear-gradient(
-//   to bottom,
-//   #2c407d,
-//   #374483,
-//   #424788,
-//   #4d4b8e,
-//   #574e93
-// );
-
+$themecolorBlueLightBg:// #2c407d;
+  linear-gradient(to right bottom, #2a2966, #2b2f6c, #2b3572, #2c3a77, #2c407d);
 //   to right bottom,
 //   #161637,
 //   #1a1940,

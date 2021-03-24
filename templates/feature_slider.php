@@ -160,8 +160,8 @@ $link_text = get_sub_field('link_text'); ?>
 </div>
   </section>  -->
 
-
-  <div class="container">
+   <!-- <div class="banner_link">Go to The Lab</div> -->
+ <!-- <div class="container">
     <section class="img_text_section section_spacing_top_small">
           <div class="column_row"> 
             <div class="part text">
@@ -171,12 +171,58 @@ $link_text = get_sub_field('link_text'); ?>
             </div>
               <div class="part image">
               <a href="http://thelab.boozang.com/" class="img_link">
-              <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelab.jpg" target="_blank" alt="theLab">
-              <!-- <div class="banner_link">Go to The Lab</div> -->
-              </a>
+              <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelabTables.jpg" target="_blank" alt="theLab"/>
+                </a>
         </div>
       </div>
-      </div>
+      </div>  -->
+
+
+
+  
+
+
+
+<!-- <section class="boxes">
+	<div class="boxes-inner">
+		<div class="box" style="background: url(&quot;/static/media/leaves_small.770460e1.jpg&quot;);">
+			<div class="text-part-outer">
+				<div class="text-part-inner"><i class="fas fa-laptop boxes-icon"></i>
+					<h3 class="heading"> Web Technologies &amp; other</h3>
+					<div class="text">
+						<p><b>Git</b>, NPM, Webpack, Azure DevOps, Firebase.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box" style="background: url(&quot;/static/media/leaves_small.770460e1.jpg&quot;);">
+			<div class="text-part-outer">
+				<div class="text-part-inner"><i class="fas fa-graduation-cap boxes-icon"></i>
+					<h3 class="heading"> theLab</h3>
+					<div class="text">
+						<p>Try to jump onto window and fall while scratching at wall sit in window and stare oooh, a bird, yum. Cat cat moo moo lick ears lick paws run at 3am human is washing you why halp oh the horror.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box" style="background: url(&quot;/static/media/leaves_small.770460e1.jpg&quot;);">
+			<div class="text-part-outer">
+				<div class="text-part-inner"><i class="fas fa-wordpress boxes-icon"></i><i class="fab fa-wordpress boxes-icon"></i>
+					<h3 class="heading"> CMS/Wordpress/Contentful</h3>
+					<div class="text">
+						<p><b>Custom WP themes</b> - dynamic and lightweight, best bulit with ACF. Woocommerce themes for webshops. Also developing with headless CMS <b>Sanity.io </b>or <b>Contentful</b>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+
+
+
+
+
     </section>
   </div>
 
