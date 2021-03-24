@@ -43,7 +43,6 @@ img {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
-
   @media all and (min-width: 1580px) {
     max-width: 1250px;
   }
@@ -53,17 +52,15 @@ img {
 }
 .section_spacing_top_big {
   padding: 5rem calc(1.5rem - 15px);
-
   @media all and (min-width: $sm-min) {
     padding: 5rem calc(2.25rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 6rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $xl-min) {
-    padding: 7rem calc(3.75rem - 15px);
+    // padding: 7rem calc(3.75rem - 15px);
+    padding: 9rem calc(3.75rem - 15px);
   }
 }
 .section_spacing_top_medium {
@@ -72,18 +69,15 @@ img {
   @media all and (min-width: $sm-min) {
     padding: 4rem calc(2.25rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 4rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $xl-min) {
     padding: 4.5rem calc(3.75rem - 15px);
   }
 }
 .section_spacing_top_small {
   padding: 1.5rem calc(1.5rem - 15px);
-
   @media all and (min-width: $sm-min) {
     padding: 2rem calc(2.25rem - 15px);
   }
@@ -1565,7 +1559,7 @@ small pricing cards
   pillars
 ***********************/
 
-.pillars-section {
+.pillars_section {
   height: auto;
   overflow: hidden;
   @include d-flex;
@@ -1586,7 +1580,6 @@ small pricing cards
   .pillars-item {
     height: auto;
     @media all and (min-width: $md-min) {
-      background: #fff;
       margin: 1rem 0;
     }
     @media all and (min-width: $lg-min) {
@@ -1677,7 +1670,7 @@ small pricing cards
   // justify-content: center;
   // align-items: center;
   @media all and (min-width: $xl-min) {
-    height: 700px;
+    min-height: 700px;
   }
   .heading_section {
     text-align: center;
@@ -3146,7 +3139,6 @@ img_text_section
 
 //aspect ratio blocks
 .two_columns_blocks {
-  border-radius: $themeBorder_radius;
   display: flex;
   flex-direction: column;
   @media all and (min-width: $lg-min) {
@@ -3170,9 +3162,8 @@ img_text_section
         color: #fff;
       }
       img {
-        border-top-right-radius: $themeBorder_radius;
-        border-bottom-right-radius: $themeBorder_radius;
-        border-radius: $themeBorder_radius;
+        // border-top-right-radius: $themeBorder_radius;
+        // border-bottom-right-radius: $themeBorder_radius;
       }
       &.image {
         position: relative;
@@ -3190,6 +3181,9 @@ img_text_section
         // border-bottom-right-radius: $themeBorder_radius;
       }
       &.text {
+        // background: $themecolorNewBlueBg;
+        // border-top-left-radius: $themeBorder_radius;
+        // border-bottom-left-radius: $themeBorder_radius;
         // &:nth-of-type(odd) {
         //   border-top-left-radius: $themeBorder_radius;
         //   border-bottom-left-radius: $themeBorder_radius;
@@ -3202,9 +3196,6 @@ img_text_section
       }
     }
     &:nth-of-type(odd) {
-      border-top-left-radius: $themeBorder_radius;
-      border-bottom-left-radius: $themeBorder_radius;
-
       //first half
       .box.text .text_part {
         //padding for the left .text-part
@@ -3224,8 +3215,6 @@ img_text_section
       }
     }
     &:nth-of-type(even) {
-      border-top-right-radius: $themeBorder_radius;
-      border-bottom-right-radius: $themeBorder_radius;
       //second half
       .box.text .text_part {
         //padding for the right .text-part
@@ -3256,7 +3245,8 @@ img_text_section
     @media all and (min-width: $md-min) {
       //padding-bottom: 66.67%;
       // padding-bottom: 62%;
-      padding-bottom: calc(688 / 1260 * 100%);
+      // padding-bottom: calc(688 / 1260 * 100%);
+      padding-bottom: calc(695 / 1000 * 100%);
     }
     .text_part {
       //for aspect ratio div
@@ -3306,29 +3296,6 @@ img_text_section
       flex-wrap: wrap;
     }
     .box {
-      // &:nth-of-type(1) {
-      //   border-top-left-radius: $themeBorder_radius;
-      //   border-top-right-radius: $themeBorder_radius;
-      // }
-      // &:nth-of-type(6) {
-      //   border-bottom-left-radius: $themeBorder_radius;
-      //   border-bottom-right-radius: $themeBorder_radius;
-      // }
-      // @media all and (min-width: $lg-min) {
-      //   &:nth-of-type(1) {
-      //     border-top-right-radius: 0;
-      //   }
-      //   &:nth-of-type(3) {
-      //     border-top-right-radius: $themeBorder_radius;
-      //   }
-      //   &:nth-of-type(4) {
-      //     border-bottom-left-radius: $themeBorder_radius;
-      //   }
-      //   &:nth-of-type(6) {
-      //     border-bottom-left-radius: 0;
-      //   }
-      // }
-
       // min-height: 320px;
       min-height: 380px;
       overflow: hidden;
@@ -3475,11 +3442,22 @@ img_text_section
 }
 .extraLightBlue {
   background-image: linear-gradient(
-    to bottom,
-    #eafaf6,
-    #eefbfd,
-    #f5fcff,
-    #fbfdff,
+    to right bottom,
+    #f0dbed,
+    #f1e5f3,
+    #f4eef8,
+    #f9f7fc,
     #ffffff
   );
+}
+.myblue {
+  background-image: $themecolorBlueLightBg;
+  h3,
+  h4,
+  p,
+  .boxes-icon,
+  ul,
+  li {
+    color: #fff;
+  }
 }

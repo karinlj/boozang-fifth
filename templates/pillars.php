@@ -6,7 +6,7 @@ $color = get_sub_field('color_theme');
     <div class="row">
        <div class="col">
 
-        <section class="pillars-section section_spacing_top_medium">
+        <section class="pillars_section section_spacing_top_medium">
           <div class="container">
             <div class="row align-items-start">
               <?php

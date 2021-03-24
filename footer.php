@@ -14,15 +14,16 @@ if (function_exists('acf_add_options_page')) {
                 $overlay_color = get_sub_field('overlay_color');
             }?>
 
-    <section class="signup_section <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small"
+
+    <section class="signup_section <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
       <?php echo $style; ?>>
 
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row">
          
               <div class="col-md-6">
                 <div class="text_section">
-                  <h4><?php the_sub_field('heading');?></h4>
+                  <h2><?php the_sub_field('heading');?></h2>
                   <p> <?php the_sub_field('text');?></p>
                 </div>
               </div>
@@ -89,39 +90,7 @@ if (function_exists('acf_add_options_page')) {
 
 
 
-<!-- aspect_wrapper -->
-<!-- <section class="two_columns_blocks">
-	<div class="aspect_wrapper text">
-		<div class="box text darkblue">
-			<div class="text_part">
-				<div class="text_part_child">
-					<h4>I'm baby retro tattooed pour-over</h4>
-					<p></p>
-					<p>I’m baby retro tattooed pour-over, I’m baby retro tattooed pour-over.</p>
-					<p></p>
-				</div>
-			</div>
-		</div>
-	</div>
-  <div class="aspect_wrapper text">
-		<div class="box text newblue">
-			<div class="text_part">
-				<div class="text_part_child">
-        <i class="fas fa-graduation-cap boxes-icon"></i>
-					<h4>theLab </h4>
-					<p></p>
-					<p>I’m baby retro tattooed pour-over, I’m baby retro tattooed pour-over.</p>
-					<p></p>
-				</div>
-			</div>
-		</div>
-	</div>
-  <div class="aspect_wrapper image">
-	<div class="box image"> 
-  <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelabTables.jpg" target="_blank" alt="theLab"/>            
-</div>
-</div>
-</section> -->
+
 
 
 
