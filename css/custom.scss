@@ -17,34 +17,28 @@ body {
   color: $themecolor;
   margin: 0;
   padding: 0;
-  background: $lightgrey;
+  background: #fff;
   -webkit-font-smoothing: antialiased;
 }
-
 .content_container_page {
   min-height: 30rem;
 }
-
 hr {
   width: 250px;
   border-top: 1px solid #d3d6de;
   margin: 3em auto;
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
-
 .contact-map {
   width: 100%;
   margin: 0 auto;
 }
-
 /********************
   padding/ margin sections
 *********************/
-
 .container {
   max-width: 1170px;
   width: 100%;
@@ -53,12 +47,10 @@ img {
   @media all and (min-width: 1580px) {
     max-width: 1250px;
   }
-
   @media all and (min-width: 1780px) {
     max-width: 1450px;
   }
 }
-
 .section_spacing_top_big {
   padding: 5rem calc(1.5rem - 15px);
 
@@ -74,7 +66,6 @@ img {
     padding: 7rem calc(3.75rem - 15px);
   }
 }
-
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
 
@@ -90,18 +81,15 @@ img {
     padding: 4.5rem calc(3.75rem - 15px);
   }
 }
-
 .section_spacing_top_small {
   padding: 1.5rem calc(1.5rem - 15px);
 
   @media all and (min-width: $sm-min) {
     padding: 2rem calc(2.25rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 2rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $xl-min) {
     padding: 3.2rem calc(3.75rem - 15px);
   }
@@ -129,19 +117,17 @@ h6 {
   font-family: $themefont;
   color: $themeHeadingcolor;
 }
-
 section {
   h3,
   h4 {
     margin-bottom: 1.2rem;
   }
 }
-
 p {
   font-size: 1rem;
   line-height: 1.7;
+  //color: #515e72;
 }
-
 h1 {
   font-size: 2rem;
   font-weight: 500;
@@ -149,73 +135,63 @@ h1 {
   @media all and (min-width: $md-min) {
     font-size: 2.1rem;
   }
-
   @media all and (min-width: $lg-min) {
     font-size: 2.2rem;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 2.3rem;
+    font-size: 2.8rem;
   }
 }
-
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-
   @media all and (min-width: $xl-min) {
     font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
-
 h3 {
   position: relative;
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 1.2;
-
   @media all and (min-width: $xl-min) {
+    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
-
 h4 {
   font-size: 1.1em;
   font-weight: 600;
-
   @media all and (min-width: $md-min) {
     font-size: 1.1em;
   }
-
   @media all and (min-width: $lg-min) {
     font-size: 1.2em;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 1.2em;
+    font-size: 1.4em;
   }
 }
-
 h5 {
   font-size: 1em;
   font-weight: 600;
-
   @media all and (min-width: $md-min) {
     font-size: 1.1em;
   }
-
   @media all and (min-width: $xl-min) {
+    font-size: 1.1em;
     font-size: 1.1em;
   }
 }
-
 h6 {
   font-size: 0.9em;
   font-weight: 600;
-
   @media all and (min-width: $md-min) {
     font-size: 0.9em;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 1em;
   }
@@ -1217,38 +1193,30 @@ feature list
 *********************/
 .feature_list_section {
   padding-bottom: 2rem;
-
   .heading {
     margin-bottom: 4rem;
   }
-
   .feature_list_item {
     display: flex;
     padding-bottom: 2rem;
-
     .features_icon {
       height: 2.4rem;
       // background-color: #e8eaf4;
       border-radius: 2px;
-
       i {
         padding: 0 0.7rem 0.7rem 0.7rem;
         color: $themecolorGreen;
-
         @media all and (min-width: $xl-min) {
           // padding: 1rem;
           padding: 0 1rem 1rem 1rem;
         }
       }
-
       @media all and (min-width: $xl-min) {
         height: 3rem;
       }
     }
-
     .info {
       padding-left: 1rem;
-
       .item_text {
         font-size: 0.9rem;
       }
@@ -1660,7 +1628,7 @@ small pricing cards
   // background: #5d2d57;
   .text_section {
     padding-bottom: 2rem;
-    h3,
+    h2,
     p {
       color: #fff;
     }
@@ -1702,43 +1670,43 @@ small pricing cards
   testimonials new
 ***********************/
 
-.testimonials-section-new {
+.testimonials_section_new {
   height: auto;
   overflow: hidden;
-  @include d-flex;
-  justify-content: center;
-  align-items: center;
-
+  // @include d-flex;
+  // justify-content: center;
+  // align-items: center;
   @media all and (min-width: $xl-min) {
     height: 700px;
   }
-
-  .col-xl-2.heading-section {
-    order: -1;
-    margin-bottom: 3rem;
+  .heading_section {
     text-align: center;
-
-    @media all and (min-width: $xl-min) {
-      order: 10;
-      margin-bottom: 0;
-      text-align: left;
-    }
+    margin-bottom: 4rem;
   }
+  // .col-xl-2.heading-section {
+  //   order: -1;
+  //   margin-bottom: 3rem;
+  //   text-align: center;
 
-  .tesimonials-heading {
-    @media all and (min-width: $xl-min) {
-      margin-top: 4rem;
-    }
-  }
+  //   @media all and (min-width: $xl-min) {
+  //     order: 10;
+  //     margin-bottom: 0;
+  //     text-align: left;
+  //   }
+  // }
+
+  // .tesimonials-heading {
+  //   @media all and (min-width: $xl-min) {
+  //     margin-top: 4rem;
+  //   }
+  // }
 
   .testimonials-container {
     @include d-flex;
     flex-direction: column;
-
     @media all and (min-width: $lg-min) {
       flex-direction: row;
     }
-
     .testimonials-item {
       flex: 1 1 28%;
       border-radius: $themeBorder_radius;
@@ -1746,50 +1714,42 @@ small pricing cards
       padding: 1.5rem;
       height: auto;
       box-shadow: $themeBox_shadow;
-
       @media all and (min-width: $lg-min) {
         margin-bottom: 0;
         min-height: 340px;
       }
-
       .signature {
         font-weight: 400;
-
-        @media all and (min-width: $lg-min) and (max-width: $lg-max) {
-          font-size: 1.2rem;
-        }
+        // @media all and (min-width: $lg-min) and (max-width: $lg-max) {
+        //   font-size: 1.2rem;
+        // }
+        border-left: 5px solid $themeBorderColor;
+        padding-left: 1rem;
+        margin-left: 1rem;
       }
-
       .icon {
         margin-bottom: 1rem;
-
         i.fas {
-          color: $themecolor;
+          color: $themeBorderColor;
           font-size: 1.5em;
         }
       }
     }
-
     .testimonials-item {
       &.blue {
-        border-left: 5px solid $themecolorBlue;
-
+        // border-left: 5px solid $themecolorBlue;
         .signature {
           color: $themecolorBlue;
         }
       }
-
       &.green {
-        border-left: 5px solid $themecolorGreenNew;
-
+        //border-left: 5px solid $themecolorGreenNew;
         .signature {
           color: $themecolorGreenNew;
         }
       }
-
       &.lightblue {
-        border-left: 5px solid $themecolorBlueLight;
-
+        // border-left: 5px solid $themecolorBlueLight;
         .signature {
           color: $themecolorBlueLight;
         }
@@ -2542,10 +2502,10 @@ small pricing cards
 /******************************
      features slider
 *******************************/
-.two-columns-section.feature-slider.section_spacing_top_medium {
+.two-columns-section.feature_slider.section_spacing_top_medium {
   padding-bottom: 0;
 }
-.two-columns-section.feature-slider {
+.two-columns-section.feature_slider {
   min-height: 650px;
   // background: $lightgrey;
   @media all and (min-width: $sm-min) {
@@ -2563,10 +2523,11 @@ small pricing cards
   @media all and (min-width: 1590px) {
     min-height: 680px;
   }
-  h3 {
+  h2 {
     text-align: center;
+    margin-bottom: 4rem;
     @media all and (min-width: $sm-min) {
-      text-align: left;
+      text-align: center;
     }
   }
   //slider
@@ -2616,12 +2577,12 @@ small pricing cards
       padding: 0.7rem 1rem;
       margin-bottom: 0.6rem;
       cursor: pointer;
-      border: 1px solid $themecolorLilaDark;
+      border: 1px solid $themeBorderColor;
       border-radius: $themeBorder_radius;
-      color: $themecolorLilaDark;
+      color: $themecolorNewBlueBg;
       transition: transform 0.3s ease;
       &:hover {
-        transform: translateX(-5px);
+        transform: translateX(-2px);
         box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
       }
       span {
@@ -2631,7 +2592,7 @@ small pricing cards
         font-weight: 600;
       }
       p.text {
-        color: $themecolorLilaDark;
+        color: $themecolorNewBlueBg;
         line-height: 1.4;
         font-size: 90%;
         margin-bottom: 0;
@@ -2639,13 +2600,10 @@ small pricing cards
     }
     li.feat-menu-item.active {
       position: relative;
-      //background: white;
-      //  border-left: 3px solid $themecolorBlueLight;
-      background: $themecolorLilaDark;
+      background: $themecolorNewBlueBg;
       color: #fff;
       span {
         border-color: transparent;
-        // color: $themecolorBlueLight;
         font-weight: 600;
       }
       p.text {
@@ -2655,120 +2613,117 @@ small pricing cards
       }
     }
   }
-  .feature_link_item_section {
-    .preamble {
-      margin-bottom: 2rem;
-    }
-    .feature_link_item {
-      height: 100%;
-      display: block;
-      padding: 1rem;
-      background: $themecolorLilaDark;
-      box-shadow: 0 2px 20px 1px rgb(0 0 0 / 10%);
-      border-radius: $themeBorder_radius;
-      text-align: center;
-      // transition: all 0.25s ease;
 
-      transform: scale(1);
-      -webkit-transition: transform 0.2s;
-      transition: transform 0.2s;
-      &:hover {
-        // transform: translateY(-5px);
-        // transition: all 0.25s ease;
-        transform: scale(1.07);
-        //box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 34%);
-        opacity: 1;
-      }
-
-      .icon {
-        margin: 0 auto 1rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        background-color: #fff;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        i {
-          color: $themecolorOrange;
-        }
-      }
-      h6,
-      p {
-        color: #fff;
-      }
-      p {
-        font-size: 0.8rem;
-      }
-    }
-  }
-}
-//image or text first?
-.comes-first {
-  order: 0;
-  @media all and (min-width: $lg-min) {
-    order: -1;
-  }
-  .feat-list {
-    padding: 0 0 1.3rem 0;
+  //image or text first?
+  .comes-first {
+    order: 0;
     @media all and (min-width: $lg-min) {
-      padding: 0 2rem 0 0;
+      order: -1;
     }
-    li.feat-menu-item.active {
-      &::after {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f061";
-        position: absolute;
-        color: $themecolorBlueLight;
-        font-size: 1.5em;
-        right: -40px;
-        top: 24px;
-        display: none;
-        @media all and (min-width: $lg-min) {
-          display: block;
-        }
+    .feat-list {
+      padding: 0 0 1.3rem 0;
+      @media all and (min-width: $lg-min) {
+        padding: 0 2rem 0 0;
+      }
+      li.feat-menu-item.active {
+        // &::after {
+        //   font-family: "Font Awesome 5 Free";
+        //   font-weight: 900;
+        //   content: "\f060";
+        //   position: absolute;
+        //   color: $themecolorBlueLight;
+        //   font-size: 1.5em;
+        //   right: -40px;
+        //   top: 24px;
+        //   // display: none;
+        //   @media all and (min-width: $lg-min) {
+        //     display: block;
+        //   }
+        // }
       }
     }
   }
-}
-.comes-last {
-  order: 0;
-  @media all and (min-width: $lg-min) {
-    order: 15;
-  }
-  .feat-list {
-    padding: 0 0 1.3rem 0;
+  .comes-last {
+    order: 0;
     @media all and (min-width: $lg-min) {
-      padding: 0 0 0 2rem;
+      order: 15;
     }
-    li.feat-menu-item.active {
-      &::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f060";
-        position: absolute;
-        color: $themecolorBlueLight;
-        font-size: 1.5em;
-        left: -40px;
-        top: 24px;
-        display: none;
-        @media all and (min-width: $lg-min) {
-          display: block;
-        }
+    .feat-list {
+      padding: 0 0 1.3rem 0;
+      @media all and (min-width: $lg-min) {
+        padding: 0 0 0 2rem;
+      }
+      li.feat-menu-item.active {
+        // &::before {
+        //   font-family: "Font Awesome 5 Free";
+        //   font-weight: 900;
+        //   content: "\f061";
+        //   position: absolute;
+        //   color: $themecolorNewBlueBg;
+        //   font-size: 1.5em;
+        //   left: -40px;
+        //   top: 24px;
+        //   display: none;
+        //   @media all and (min-width: $lg-min) {
+        //     display: block;
+        //   }
+        // }
       }
     }
   }
+  .feature-description-mobile {
+    display: block;
+    padding: 0.6rem 0.95rem;
+    background: white;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+    border-radius: $themeBorder_radius;
+    border-left: 3px solid $themecolorBlueLight;
+    @media all and (min-width: $lg-min) {
+      display: none;
+    }
+  }
 }
-.feature-description-mobile {
-  display: block;
-  padding: 0.6rem 0.95rem;
-  background: white;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-  border-radius: $themeBorder_radius;
-  border-left: 3px solid $themecolorBlueLight;
-  @media all and (min-width: $lg-min) {
-    display: none;
+//features link boxes
+.feature_link_item_section {
+  .preamble {
+    margin-bottom: 4rem;
+  }
+  .feature_link_item {
+    height: 100%;
+    display: block;
+    padding: 1rem;
+    background: $themecolorNewBlueBg;
+    box-shadow: 0 2px 20px 1px rgb(0 0 0 / 10%);
+    border-radius: $themeBorder_radius;
+    box-shadow: $themeBox_shadow;
+    text-align: center;
+    transform: scale(1);
+    -webkit-transition: transform 0.2s;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+    .icon {
+      margin: 0 auto 1rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        color: $themecolorGreen;
+      }
+    }
+    h6,
+    p {
+      color: #fff;
+    }
+    p {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -3115,14 +3070,19 @@ forum section
 /**********************************
 img_text_section
 ***********************************/
-
 .img_text_section {
-  background: $themecolorLilaDarkestBg;
-  margin-left: -5rem;
-  margin-right: -5rem;
+  margin: 5rem 0;
+  border-radius: $themeBorder_radius;
+  background-image: linear-gradient(
+    to right,
+    #eafaf6,
+    #eefbfd,
+    #f5fcff,
+    #fbfdff,
+    #ffffff
+  );
   .column_row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-direction: column;
     @media all and (min-width: $md-min) {
@@ -3131,13 +3091,12 @@ img_text_section
     .part {
       width: 100%;
       @media all and (min-width: $md-min) {
-        width: 40%;
+        width: 50%;
       }
       &.text {
-        h2,
-        h6,
-        p {
-          color: #fff;
+        h2 {
+          text-align: left;
+          margin-bottom: 1rem;
         }
         @media all and (max-width: $sm-max) {
           order: -1;
@@ -3151,6 +3110,7 @@ img_text_section
         }
       }
       &.image {
+        width: 40%;
         z-index: 1000;
         position: relative;
         .img_link {
@@ -3159,19 +3119,19 @@ img_text_section
           display: block;
           &:hover {
             opacity: 1;
-            transform: translateX(5px);
+            transform: translateX(3px);
             cursor: pointer;
           }
           img {
-            border-radius: $themeBorder_radius;
             box-shadow: $themeBox_shadow;
+            border-radius: $themeBorder_radius;
             width: 100%;
             height: auto;
           }
-          .banner_link {
-            padding-top: 1rem;
-            color: #fff;
-          }
+          // .banner_link {
+          //   padding-top: 1rem;
+          //   color: $themecolorLila;
+          // }
         }
       }
     }

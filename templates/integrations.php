@@ -1,16 +1,16 @@
 <?php
 // integrations layout for Front Page Block
 ?>
-<section class="integrations_section section_spacing_top_medium">
+<section class="integrations_section section_spacing_top_big">
 
   <div class="container">
-    <div class="row align-items-center">
-
+    <!-- <div class="row align-items-center"> -->
+    <div class="row">
       <div class="col-lg-6">
         <div class="text_section">
-          <h3 class="">
+          <h2 class="">
             <?php the_sub_field('heading');?>
-          </h3>
+          </h2>
           <p>
             <?php the_sub_field('text');?>
           </p>
@@ -31,7 +31,6 @@ if (have_rows('icon_box')) {
               <div class="img_box">
                 <span>
                   <?php $img_id = get_sub_field('icon_image');?>
-
                   <?php echo wp_get_attachment_image($img_id, 'full'); ?>
                 </span>
               </div>

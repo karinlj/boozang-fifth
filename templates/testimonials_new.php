@@ -2,12 +2,27 @@
 $link = get_sub_field('link');
 ?>
 
-<section class="testimonials-section-new section_spacing_top_big">
+<section class="testimonials_section_new section_spacing_top_big">
+     <div class="heading_section">
+        <div>
+          <h2 class="tesimonials-heading"><?php the_sub_field('heading');?></h2>
+          <?php if ($link) {?>
+          <a class="arrow_link" href="<?php echo $link['url']; ?>"
+            target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
+          </a>
+          <?php
+}?>
+
+        </div>
+
+      </div> 
+
   <div class="container">
 
     <div class="row align-items-start justify-content-between">
 
-      <div class="col-xl-10">
+      <!-- <div class="col-xl-10"> -->
+      <div class="col">
         <div class="testimonials-container">
           <?php
 // check if the repeater field has rows
@@ -34,20 +49,7 @@ if (have_rows('testimonials_content')) {
 }?>
         </div>
       </div>
-      <div class="col-xl-2 heading-section">
-        <div>
-          <h3 class="tesimonials-heading"><?php the_sub_field('heading');?></h3>
 
-          <?php if ($link) {?>
-          <a class="arrow_link" href="<?php echo $link['url']; ?>"
-            target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
-          </a>
-          <?php
-}?>
-
-        </div>
-
-      </div>
 
     </div>
   </div>

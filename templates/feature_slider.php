@@ -2,7 +2,8 @@
 // feature-slider layout for Front Page Block
 
 ?>
-<section class="two-columns-section feature-slider section_spacing_top_medium">
+<section class="two-columns-section feature_slider section_spacing_top_medium">
+<h2><?php the_sub_field('heading'); ?></h2>
   <div class="container">
     <div class="row justify-content-between">
       <?php
@@ -25,7 +26,7 @@ if (get_sub_field('image_position'))
 } ?>
       <div class="col-lg-4 <?php echo $text_order; ?>">
         <div class="feat-list">
-          <h3><?php the_sub_field('heading'); ?></h3>
+          <!-- <h3><?php the_sub_field('heading'); ?></h3> -->
           <p class="feature-description-mobile"><?php the_sub_field('feature_description_mobile'); ?></p>
           <ul id="features-menu">
 
@@ -113,9 +114,8 @@ $link_text = get_sub_field('link_text'); ?>
   </div>
 
 
-
-  <section class="feature_link_item_section section_spacing_top_medium">
-  <h3 class="preamble text-center"><?php the_sub_field('link_preamble'); ?></h3>
+     <!-- <section class="feature_link_item_section section_spacing_top_small">
+  <h2 class="preamble text-center"><?php the_sub_field('link_preamble'); ?></h2>
 
   <div class="container">
   <div class="row justify-content-center">
@@ -158,28 +158,26 @@ $link_text = get_sub_field('link_text'); ?>
     </div>
 </div>
 </div>
-  </section>
+  </section>  -->
 
-  <section class="img_text_section section_spacing_top_big">
+
   <div class="container">
-        <div class="column_row"> 
-          <div class="part text">
-            <h2>theLab <span><i class="fas fa-graduation-cap"></i></span></h2>
-            <p>Much more than a simple record-and-replay tool, Boozang provides IDE-style visual interface that allow you to create and maintain tests for complex projects.</p>
-            <h6>Multiple tabs</h6>
-            <p>Work on several tests at once using multiple tabs, just like any desktop IDE.</p>
-          </div>
-            <div class="part image">
-            <a href="http://thelab.boozang.com/" class="img_link">
-            <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelab.jpg" target="_blank" alt="theLab">
-            <div class="banner_link">Go to The Lab</div>
-
-            </a>
+    <section class="img_text_section section_spacing_top_small">
+          <div class="column_row"> 
+            <div class="part text">
+              <h2>theLab <span><i class="fas fa-graduation-cap"></i></span></h2>
+              <p>Much more than a simple record-and-replay tool, Boozang provides IDE-style visual interface that allow you to create and maintain tests for complex projects.</p>
+              <p>Work on several tests at once using multiple tabs, just like any desktop IDE. Work on several tests at once using multiple tabs, just like any desktop IDE.</p>
+            </div>
+              <div class="part image">
+              <a href="http://thelab.boozang.com/" class="img_link">
+              <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelab.jpg" target="_blank" alt="theLab">
+              <!-- <div class="banner_link">Go to The Lab</div> -->
+              </a>
+        </div>
       </div>
-    </div>
-    </div>
       </div>
-  </section>
-
+    </section>
+  </div>
 
 </section>

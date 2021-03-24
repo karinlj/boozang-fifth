@@ -24,7 +24,7 @@ if (function_exists('acf_add_options_page')) {
          
               <div class="col-md-6">
                 <div class="text_section">
-                  <h2><?php the_sub_field('heading');?></h2>
+                  <h4><?php the_sub_field('heading');?></h4>
                   <p> <?php the_sub_field('text');?></p>
                 </div>
               </div>
@@ -53,11 +53,9 @@ $signup_button = get_sub_field('signup_button');
 }
 ?>
     <footer id="footer" class="footer-main section_spacing_top_small">
-
       <div class="container">
         <div class="row align-items-start justify-content-between">
           <div class="col-lg-3">
-
             <div class="logo">
               <a href="<?php echo home_url() ?>" class="logo">
 

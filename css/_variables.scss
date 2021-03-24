@@ -19,7 +19,7 @@ $themefont: "Roboto", "Helvetica", sans-serif;
 $navfont: $themefont;
 $headingfont: $themefont;
 $themeBorder_radius: 10px;
-$btnBorder_radius: 3px;
+$btnBorder_radius: 5px;
 $themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
 
 /*transparent nav*/
@@ -35,9 +35,9 @@ $themecolorLilaDarkest: #161637;
 
 $themecolor: #373c49;
 $themeBorderColor: #ebebeb;
-$themecolorLighter: #a8adbd;
+$themecolorLighter: #66758d;
 
-$themeHeadingcolor: #373c49;
+$themeHeadingcolor: #121923;
 $lightgrey: #f9f9f9; //#f6f9fc;
 $mediumgrey: #f1f1f4;
 $themecolorGreen: #5d5f5e;
@@ -105,19 +105,26 @@ $themecolorBlueLight: #2a2966;
 //down
 $themecolorBlueLightBgDown: linear-gradient(
   to bottom,
-  #161637,
-  #1a1940,
-  #1d1d48,
-  #212051,
-  #25245a,
-  #252f68,
-  #233a75,
-  #1e4583,
-  #095a96,
-  #006fa6,
-  #0084b5,
-  #0099c1
+  #2a2966,
+  #2b2f6c,
+  #2b3572,
+  #2c3a77,
+  #2c407d
 );
+//   to bottom,
+//   #161637,
+//   #1a1940,
+//   #1d1d48,
+//   #212051,
+//   #25245a,
+//   #252f68,
+//   #233a75,
+//   #1e4583,
+//   #095a96,
+//   #006fa6,
+//   #0084b5,
+//   #0099c1
+// );
 
 //$themecolorLilabg: linear-gradient(
 //left side up
