@@ -13,37 +13,96 @@ if ($bg_image) {
 }?>
 
 
-     <!-- aspect_wrapper -->
-     <!-- <section class="two_columns_blocks section_spacing_top_big">
-      <div class="aspect_wrapper text darkblue">
-        <div class="box text">
-          <div class="text_part">
-            <div class="text_part_child"> <i class="fas fa-graduation-cap boxes-icon"></i>
-              <h4>I'm baby retro tattooed pour-over</h4>
-              <p></p>
-              <p>I’m baby retro tattooed pour-over, I’m baby retro tattooed pour-over.</p>
-              <p></p>
-            </div>
-          </div>
+ <!-- boxes -->
+<section class="boxes">
+	<div class="boxes_inner">
+    <div class="box noColor" style="background: url('https://boozang.com/wp-content/uploads/2020/05/keyboard.jpg');">
+	<div class="text-part-outer">
+		<div class="text-part-inner">
+        <h4 class="heading">Boozang from the Trenches</h4>
+					<div class="text">
+          <p>We are so excited to make this official. There will now be a first book on Boozang and how it’s used in a real-life project.</p>
+          <a href="http://thelab.boozang.com/" class="banner_link">Check out the book!</a>
         </div>
-      </div>
-      <div class="aspect_wrapper image">
-      <div class="box image"> <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelabTables.jpg" target="_blank" alt="theLab" /> </div>
-      </div>
-    </section>  -->
+		</div>
+	</div>
+</div> 
+<div class="box myblue">
+			<div class="text-part-outer">
+				<div class="text-part-inner">
+        <h4 class="heading">Read more about all the Boozang features</h4>
+            <div class="text">
+      <ul>
+        <li><a href="http://thelab.boozang.com/" class="banner_link">Feature overview</a> </li>
+        <li><a href="http://thelab.boozang.com/" class="banner_link">BDD/Cucumber support</a> </li>
+        <li> <a href="http://thelab.boozang.com/" class="banner_link">Data Handling</a> </li>
+      </ul>
+    </div>
+			</div>
+		</div>
+    </div>
+    <div class="box extraLightBlue">
+			<div class="text-part-outer">
+				<div class="text-part-inner">
+        <h4 class="heading">Stay updated with the Boozang Blog</h4>
+					<div class="text">
+          <p>I’m baby retro tattooed pour-over, I’m baby retro tattooed pour-over.</p>
+          <a href="http://thelab.boozang.com/" class="banner_link">Boozang Blog</a>
+        </div>
+				</div>
+			</div>
+		</div> 
+	</div>
+</section>  
 
- 
 
+   <!-- aspect_wrapper -->
+  	<!-- <section class="two_columns_blocks">
+ <div class="aspect_wrapper text">
+		<div class="box text noColor" style="background: url('https://boozang.com/wp-content/uploads/2020/05/keyboard.jpg');">
+			<div class="text_part">
+				<div class="text_part_child">
+        <h4>Read more about all the Boozang features</h4>
+				<ul>
+          <li>Feature overview</li>
+          <li>BDD/Cucumber support</li>
+          <li>Data Handling</li>
+        </ul>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="aspect_wrapper text">
+		<div class="box text myblue">
+			<div class="text_part">
+      <div class="text_part_child">
+        <h4>Spill litter box</h4>
+					<p>Spill litter box, scratch at owner, destroy all furniture, especially couch if it fits, i sits eat from dog's food but thinking longingly about tuna brine.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="aspect_wrapper text">
+		<div class="box text newblue">
+			<div class="text_part">
+      <div class="text_part_child">
+        <h4>Spill litter box</h4>
+					<p>Spill litter box, scratch at owner, destroy all furniture, especially couch if it fits, i sits eat from dog's food but thinking longingly about tuna brine.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>    -->
 
-<section class="get_started_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_big"
+<section class="get_started_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
   <?php echo $style; ?>>
 
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-
+        <div>
         <h2 class=""><?php the_sub_field('heading');?></h2>
-
         <div class="sub_info_part bigscreen">
           <p class=""><?php the_sub_field('text');?></p>
 
@@ -54,9 +113,12 @@ if ($bg_image) {
 }
 ?>
         </div>
+        </div>
       </div>
 
       <div class="col-lg-6">
+        <div>
+     
         <div class="action_items">
           <?php
 // check if the repeater field has rows
@@ -88,7 +150,10 @@ if ($link_url && $link_text) {?>
 ?>
         </div>
       </div>
-
+     
+      </div>
     </div>
   </div>
 </section>
+
+ 

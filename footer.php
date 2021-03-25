@@ -15,7 +15,7 @@ if (function_exists('acf_add_options_page')) {
             }?>
 
 
-    <section class="signup_section <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
+    <section class="signup_section <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small"
       <?php echo $style; ?>>
 
       <div class="container">

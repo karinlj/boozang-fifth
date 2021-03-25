@@ -20,7 +20,9 @@ $navfont: $themefont;
 $headingfont: $themefont;
 $themeBorder_radius: 10px;
 $btnBorder_radius: 5px;
-$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1); // 0 1.875rem 3.125rem rgb(40 45 80 / 5%); //
+
+$themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
 
 /*transparent nav*/
 $navcolor: #fff;
@@ -157,28 +159,12 @@ $themecolorBlueLightBg: linear-gradient(
 //GreenNew
 $themecolorGreenNew: #0ba893;
 $themecolorGreenNewBg: linear-gradient(
-  to right bottom,
-  #2a2966,
-  #583071,
-  #813676,
-  #a64076,
-  #c64e72
-);
-//down
-$themecolorGreenNewBgDown: linear-gradient(
   to bottom,
-  #161637,
-  #231a3e,
-  #301f45,
-  #3d234b,
-  #4b2751,
-  #512953,
-  #572b55,
   #5d2d57,
-  #5d2d57,
-  #5d2d57,
-  #5d2d57,
-  #5d2d57
+  #662f5f,
+  #6f3266,
+  #78346e,
+  #813676
 );
 
 //   to bottom,
@@ -252,10 +238,26 @@ $themecolorLilaDarkestBg: linear-gradient(
 
 //beautiful blue
 $themecolorNewBlueBg: linear-gradient(
+  //   to right bottom,
+  //   #004e91,
+  //   #0061a0,
+  //   #0074ad,
+  //   #0086b8,
+  //   #0099c1
+  // );
   to right bottom,
   #004e91,
   #005799,
   #0061a2,
   #006aa9,
   #0074b1
+);
+
+$extraLightBlueOverlay: linear-gradient(
+  to right bottom,
+  #8fa1d6,
+  #9daddb,
+  #abb8e0,
+  #b9c4e5,
+  #c7d0ea
 );
