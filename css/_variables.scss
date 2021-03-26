@@ -36,6 +36,7 @@ $themecolorLilaDark: #2c407d;
 $themecolorLilaDarkest: #161637;
 
 $themecolor: #373c49;
+$themecolorFront: #f2f2f2;
 $themeBorderColor: #ebebeb;
 
 $themecolorLight: #66758d;
@@ -54,47 +55,10 @@ $mistyRose: #efd6d2;
 
 //Blue
 $themecolorBlue: #1b2fe4;
-// $themecolorBlueBg: linear-gradient(
-//   to right bottom,
-//   #1b2fe4,
-//   #4852eb,
-//   #6871f1,
-//   #868ff3,
-//   #a4acf4
-// );
-
 //BlueLight
 $themecolorBlueLight: #2e9ce6;
-// $themecolorBlueLightBg: linear-gradient(
-//   to right bottom,
-//   #1b94e4,
-//   #42a1e8,
-//   #5dafeb,
-//   #76bcee,
-//   #8ec9f1
-// );
-
-//Blue darker
-//$themecolorBlueDarkerBg: linear-gradient(
-//   to bottom,
-//   #1576b7,
-//   #177dc2,
-//   #1885cd,
-//   #1a8cd9,
-//   #1b94e4
-// );
-
 //GreenNew
 $themecolorGreenNew: #0ba893;
-//$themecolorGreenNewBg: linear-gradient(
-//   to right bottom,
-//   #09907e,
-//   #0aa18d,
-//   #0bb39d,
-//   #0dc6ad,
-//   #0ed8bd
-// );
-
 //DarkGrey
 $themecolorDarkGrey: #21242c;
 $themecolorDarkGreyBg: linear-gradient(
@@ -116,46 +80,19 @@ $themecolorBlueLightBgDown: linear-gradient(
   #2c3a77,
   #2c407d
 );
-//   to bottom,
-//   #161637,
-//   #1a1940,
-//   #1d1d48,
-//   #212051,
-//   #25245a,
-//   #252f68,
-//   #233a75,
-//   #1e4583,
-//   #095a96,
-//   #006fa6,
-//   #0084b5,
-//   #0099c1
-// );
 
 //$themecolorLilabg: linear-gradient(
 //left side up
-$themecolorBlueLightBg: linear-gradient(
-  to right bottom,
-  #2a2966,
-  #2b2f6c,
-  #2b3572,
-  #2c3a77,
-  #2c407d
-);
-
+$themecolorBlueLightBg: $themecolorLila;
+//linear-gradient(
 //   to right bottom,
-//   #161637,
-//   #1a1940,
-//   #1d1d48,
-//   #212051,
-//   #25245a,
-//   #252f68,
-//   #233a75,
-//   #1e4583,
-//   #095a96,
-//   #006fa6,
-//   #0084b5,
-//   #0099c1
+//   #2a2966,
+//   #2b2f6c,
+//   #2b3572,
+//   #2c3a77,
+//   #2c407d
 // );
+
 //GreenNew
 $themecolorGreenNew: #0ba893;
 $themecolorGreenNewBg: linear-gradient(
@@ -167,30 +104,15 @@ $themecolorGreenNewBg: linear-gradient(
   #813676
 );
 
-//   to bottom,
-//   #2a2966,
-//   #583071,
-//   #813676,
-//   #a64076,
-//   #c64e72
-// );
-
 //Blue
 $themecolorBlue: #1b2fe4;
 $themecolorBlueBg: linear-gradient(
   to right bottom,
-  #0d3961,
-  #0b4068,
-  #08476f,
-  #054f76,
-  #02567d,
-  #006388,
-  #007092,
-  #007e9c,
-  #0095aa,
-  #20adb3,
-  #45c4b9,
-  #6bdabb
+  #2c407d,
+  #2c3a77,
+  #2b3572,
+  #2b2f6c,
+  #2a2966
 );
 
 //Blue darker (light orange)
@@ -210,23 +132,6 @@ $themecolorBlueDarkerBg: linear-gradient(
   #fcb25a
 );
 
-// (light orange)
-// $themecolorGreenNewBg: linear-gradient(
-//   to right bottom,
-//   #a54863,
-//   #b14f63,
-//   #bd5763,
-//   #c85f63,
-//   #d26862,
-//   #da7161,
-//   #e17a5f,
-//   #e8835e,
-//   #ef8e5c,
-//   #f49a5b,
-//   #f9a65a,
-//   #fcb25a
-// );
-
 $themecolorLilaDarkestBg: linear-gradient(
   to bottom,
   #161637,
@@ -238,13 +143,6 @@ $themecolorLilaDarkestBg: linear-gradient(
 
 //beautiful blue
 $themecolorNewBlueBg: linear-gradient(
-  //   to right bottom,
-  //   #004e91,
-  //   #0061a0,
-  //   #0074ad,
-  //   #0086b8,
-  //   #0099c1
-  // );
   to right bottom,
   #004e91,
   #005799,

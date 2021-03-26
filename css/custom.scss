@@ -121,8 +121,7 @@ section {
 }
 p {
   font-size: 1rem;
-  line-height: 1.7;
-  //color: #515e72;
+  line-height: 1.9;
 }
 h1 {
   font-size: 2rem;
@@ -385,7 +384,8 @@ header {
     background-image: $themecolorGreenNewBg;
   }
   &.lightgrey {
-    background: $lightgrey;
+    //tillfälligt
+    background: $themecolorBlueLight;
     h1,
     h2,
     h3,
@@ -448,17 +448,6 @@ header {
     content: "";
     display: block;
   }
-  &.overlay-blue::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: $themecolorBlueBg;
-    opacity: 0.85;
-    content: "";
-    display: block;
-  }
 
   &.overlay-green::before {
     position: absolute;
@@ -484,19 +473,15 @@ header {
   height: 80px;
   background: $navBg_transp;
   padding: 0rem calc(1.5rem - 15px);
-
   @media all and (min-width: $sm-min) {
     padding: 0rem calc(2.25rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 0rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 1rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $xl-min) {
     padding: 1rem calc(3.75rem - 15px);
   }
@@ -1582,23 +1567,16 @@ small pricing cards
 ***********************/
 
 .pillars_section {
+  border-top: 1px solid $themecolorBlue;
+  border-bottom: 1px solid $themecolorBlue;
+  background: $themecolorBlueLightBg;
   height: auto;
   overflow: hidden;
   @include d-flex;
   justify-content: center;
   align-items: center;
-  background: transparent;
   @media all and (min-width: $md-min) {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: $themeBorder_radius;
-    box-shadow: $themeBox_shadow;
-    margin-top: -3rem;
-    position: relative;
-    z-index: 2000;
-    background: #fff;
-    margin-bottom: 2rem;
-  }
+
   .pillars-item {
     height: auto;
     @media all and (min-width: $md-min) {
@@ -1623,6 +1601,10 @@ small pricing cards
     }
     .heading {
       margin-bottom: 1rem;
+      color: #fff;
+    }
+    p {
+      color: $themecolorFront;
     }
   }
 }
@@ -1677,36 +1659,19 @@ small pricing cards
 ***********************/
 
 .testimonials_section_new {
+  background: $themecolorBlueLightBg;
   height: auto;
   overflow: hidden;
-  // @include d-flex;
-  // justify-content: center;
-  // align-items: center;
   @media all and (min-width: $xl-min) {
     min-height: 700px;
   }
   .heading_section {
     text-align: center;
     margin-bottom: 4rem;
+    h2 {
+      color: #fff;
+    }
   }
-  // .col-xl-2.heading-section {
-  //   order: -1;
-  //   margin-bottom: 3rem;
-  //   text-align: center;
-
-  //   @media all and (min-width: $xl-min) {
-  //     order: 10;
-  //     margin-bottom: 0;
-  //     text-align: left;
-  //   }
-  // }
-
-  // .tesimonials-heading {
-  //   @media all and (min-width: $xl-min) {
-  //     margin-top: 4rem;
-  //   }
-  // }
-
   .testimonials-container {
     @include d-flex;
     flex-direction: column;
@@ -1714,6 +1679,7 @@ small pricing cards
       flex-direction: row;
     }
     .testimonials-item {
+      background: #fff;
       flex: 1 1 28%;
       border-radius: $themeBorder_radius;
       margin: 0 1rem 2rem 0;
@@ -1724,6 +1690,9 @@ small pricing cards
         margin-bottom: 0;
         min-height: 340px;
       }
+      // p {
+      //   color: $themecolorFront;
+      // }
       .signature {
         font-weight: 400;
         // @media all and (min-width: $lg-min) and (max-width: $lg-max) {
@@ -2404,21 +2373,18 @@ small pricing cards
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorBlueBg;
+    background-image: $themecolorGreenNewBg;
     opacity: 0.85;
     content: "";
     display: block;
   }
-
   .newsletter_content {
     display: flex;
     flex-direction: column;
-
     @media all and (min-width: $lg-min) {
       flex-direction: row;
       align-items: flex-end;
     }
-
     .widget_text.newsletter-form {
       .textwidget.custom-html-widget {
         .heading,
@@ -2510,6 +2476,7 @@ small pricing cards
 *******************************/
 
 .two-columns-section.feature_slider {
+  background: $themecolorBlueLightBg;
   min-height: 650px;
   // background: $lightgrey;
   @media all and (min-width: $sm-min) {
@@ -2805,18 +2772,38 @@ forum section
    footer and signup
 *********************/
 .signup_section {
+  background: $themecolorLilaDarkestBg;
   //background: see scss section
-  .text_section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media all and (min-width: $md-min) {
-      justify-content: flex-end;
-      align-items: flex-start;
+  .heading {
+    text-align: center;
+    h3 {
+      color: #fff;
     }
     p {
-      color: $themecolorLight;
+      color: $themecolorFront;
+    }
+    padding-bottom: 3rem;
+  }
+  .signup_button {
+  }
+  .demo_button {
+    float: right;
+  }
+  .text_section {
+    // div {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
+    //   @media all and (min-width: $md-min) {
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //   }
+    // }
+
+    p {
+      color: $themecolorFront;
     }
   }
   .btn_container {
@@ -2839,6 +2826,9 @@ forum section
         font-weight: 900;
         margin-left: 10px;
       }
+    }
+    &.demo {
+      float: right;
     }
   }
   &.lightgrey {
@@ -2883,7 +2873,7 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-image: $themecolorLilaDarkestBg;
+  background: $themecolorLilaDarkestBg;
   min-height: 520px;
 
   @media all and (max-width: $xs-max) {
@@ -3004,7 +2994,7 @@ forum section
   }
   .banner-item {
     &.blue {
-      background: $themecolorBlueBg;
+      background-image: $themecolorGreenNewBg;
     }
     &.green {
       background: $themecolorGreenNewBg;
