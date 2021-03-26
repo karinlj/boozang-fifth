@@ -2,9 +2,29 @@
 $color = get_sub_field('color_theme');
 ?>
 
+<!-- thelab -->
+<!-- two_columns_section -->
+<section class="two_columns_section demo section_spacing_top_medium lightgrey">
+    <div class="container">
+        <div class="column_row">
+            <!-- loopa flex content -->
+            <div class="part text">
+                <h3> Welcome to the Boozang Test Lab!</h3>
+                <p> Here you find a number of test categories, that each has a number of problems to solve. Each
+                    problem has a brief description and an information box of why this problem is worth solving.
+                </p>
+            </div>
+
+            <div class="part image">
+                <a href="http://thelab.boozang.com/" class="img_link" target="_blank" rel="noreferrer noopener"></a>
+                <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelabTablesImg.jpg" alt="Map view">
+            </div>
+        </div>
+    </div>
+</section>
 
 
-<section class="pillars_section section_spacing_top_small">
+<section class="pillars_section section_spacing_top_medium">
     <div class="container">
         <div class="row align-items-start">
             <?php

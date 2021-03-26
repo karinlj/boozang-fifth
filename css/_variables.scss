@@ -32,12 +32,15 @@ $linkcolor: #1b94e4; //$themecolorBlueLight;
 /* colors */
 //new lila
 $themecolorLila: #2a2966;
-$themecolorLilaDark: #2c407d;
-$themecolorLilaDarkest: #161637;
+// $themecolorLilaDark: #2c407d;
+$themecolorLilaDark: #1b274b;
+// $themecolorLilaDarkest: #161637;
+$themecolorLilaDarkest: #151e37;
 
 $themecolor: #373c49;
-$themecolorFront: #f2f2f2;
+$themecolorFront: #c7d0eb;
 $themeBorderColor: #ebebeb;
+$themeBorderColorFront: #2f4483;
 
 $themecolorLight: #66758d;
 $themecolorLighter: #e6e6e6;
@@ -70,7 +73,14 @@ $themecolorDarkGreyBg: linear-gradient(
   #424857
 );
 
-$themecolorBlueLight: #2a2966;
+$themecolorBlueLight: linear-gradient(
+  to bottom,
+  #161637,
+  #1b1b42,
+  #201f4e,
+  #25245a,
+  #2a2966
+);
 //down
 $themecolorBlueLightBgDown: linear-gradient(
   to bottom,
@@ -83,14 +93,14 @@ $themecolorBlueLightBgDown: linear-gradient(
 
 //$themecolorLilabg: linear-gradient(
 //left side up
-$themecolorBlueLightBg: $themecolorLila;
-//linear-gradient(
-//   to right bottom,
-//   #2a2966,
-//   #2b2f6c,
-//   #2b3572,
-//   #2c3a77,
-//   #2c407d
+$themecolorBlueLightBg: $themecolorLilaDark;
+// $themecolorBlueLightBg: linear-gradient(
+//   to bottom,
+//   #161637,
+//   #1b1b42,
+//   #201f4e,
+//   #25245a,
+//   #2a2966
 // );
 
 //GreenNew

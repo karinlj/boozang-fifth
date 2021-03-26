@@ -20,7 +20,7 @@ if (function_exists('acf_add_options_page')) {
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="heading">
                         <h3 class=""><?php the_sub_field('heading'); ?></h3>
                         <p>Cats are cute kitty for slap owner's face at 5am until human fills food dish and steal mom's
@@ -29,13 +29,14 @@ if (function_exists('acf_add_options_page')) {
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-8 offset-2">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
                     <div class="row justify-content-between">
                         <div class="col-md-6">
                             <div class="signup_button">
                                 <div class="text_section">
                                     <div>
+                                        <h4>Create an account!</h4>
                                         <p> <?php the_sub_field('text'); ?></p>
                                     </div>
                                 </div>
@@ -55,6 +56,7 @@ if (function_exists('acf_add_options_page')) {
                             <div class="demo_button">
                                 <div class="text_section">
                                     <div>
+                                        <h4>Hate dogs meow to be let?</h4>
                                         <p> <?php the_sub_field('text'); ?></p>
                                     </div>
                                 </div>

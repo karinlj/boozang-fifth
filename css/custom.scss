@@ -385,7 +385,7 @@ header {
   }
   &.lightgrey {
     //tillfälligt
-    background: $themecolorBlueLight;
+    background: $themecolorBlueLightBg;
     h1,
     h2,
     h3,
@@ -443,7 +443,7 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorBlueLightBg;
+    background: $themecolorBlueLightBg;
     opacity: 0.85;
     content: "";
     display: block;
@@ -646,13 +646,10 @@ nav {
     }
   }
 }
-
 /*nav-desktop*/
-
 .site-title {
   padding: 0;
   margin: 0;
-
   img {
     width: 360px;
     padding-right: 25px;
@@ -660,17 +657,14 @@ nav {
     @media all and (min-width: $sm-min) {
       width: 280px;
     }
-
     @media all and (min-width: $md-min) {
       width: 240px;
     }
-
     @media all and (min-width: $lg-min) {
       width: 210px;
     }
   }
 }
-
 .nav-links {
   display: flex;
   flex-direction: column;
@@ -684,7 +678,6 @@ nav {
 .signup {
   display: flex;
   justify-content: flex-start;
-
   @media all and (min-width: $lg-min) {
     justify-content: flex-end;
   }
@@ -729,9 +722,7 @@ nav {
     }
   }
 }
-
 /*Mobile view*/
-
 .nav-mobile {
   position: fixed;
   height: 100%;
@@ -820,7 +811,6 @@ nav {
   .signup {
     ul {
       width: 100%;
-
       li {
         .signup_btn {
           margin: 1rem 0.5rem;
@@ -828,12 +818,10 @@ nav {
           color: #fff !important;
           border: 1px solid $themecolorBlueLight;
           width: 100%;
-
           &:hover {
             background: transparent;
             color: $themecolorBlueLight;
           }
-
           @media all and (min-width: $sm-min) {
             width: 12rem;
           }
@@ -841,9 +829,7 @@ nav {
       }
     }
   }
-
   /*close button*/
-
   > span.toggle {
     position: absolute;
     top: 0;
@@ -853,9 +839,7 @@ nav {
     cursor: pointer;
   }
 }
-
 /*toggle class with jquery*/
-
 .nav-mobile-open {
   overflow-x: auto;
   transform: translateX(0);
@@ -877,19 +861,16 @@ nav {
   // min-height: 360px;
   min-height: 460px;
 }
-
 .header_big,
 .header_small {
   //background and overlay: see scss section
   .header_links_section {
     display: flex;
     flex-direction: column;
-
     .header_btn_section {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
-
       @media all and (min-width: $sm-min) {
         flex-direction: row;
       }
@@ -897,7 +878,6 @@ nav {
         margin-right: 1rem;
         width: 100%;
         margin-bottom: 1rem;
-
         @media all and (min-width: $sm-min) {
           width: auto;
         }
@@ -925,7 +905,6 @@ nav {
     }
     a.play_btn {
       margin: auto;
-
       @media all and (min-width: $sm-min) {
         margin-right: auto;
         margin-left: 0;
@@ -1000,13 +979,11 @@ nav {
       color: #fff;
       margin-bottom: 1.5rem;
       text-align: center;
-
       @media all and (min-width: $sm-min) {
         font-size: 1.3em;
       }
       &.front {
         text-align: center;
-
         @media all and (min-width: $sm-min) {
           text-align: left;
         }
@@ -1025,12 +1002,10 @@ nav {
     }
   }
 }
-
 //header items
 .header_big {
   .header_items_section {
     padding-top: calc(500px / 3);
-
     @media all and (min-width: $sm-min) {
       padding-top: calc(600px / 3);
     }
@@ -1040,7 +1015,6 @@ nav {
   .header_items_section {
     text-align: center;
     padding-top: 160px;
-
     @media all and (min-width: $sm-min) {
       padding-top: 170px;
     }
@@ -1052,18 +1026,15 @@ nav {
  *********************/
 .pricing_section {
   background: $lightgrey;
-
   .preamble_section {
     text-align: center;
     max-width: 100%;
     margin: auto;
     margin-bottom: 4rem;
-
     @media all and (min-width: $md-min) {
       max-width: 70%;
     }
   }
-
   .col-md-4 {
     margin-bottom: 2rem;
 
@@ -1071,61 +1042,50 @@ nav {
       margin-bottom: 0;
     }
   }
-
   .card {
     text-align: center;
     border-radius: $themeBorder_radius;
     box-shadow: $themeBox_shadow;
     border: 1px solid $lightgrey;
     height: 500px;
-
     .card-body {
       padding: 0 1.25rem 1.25rem 1.25rem;
       height: 100%;
     }
-
     .pricing_header {
       border-bottom: 2px solid $mediumgrey;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100px;
-
       .heading {
         margin-bottom: 0.2rem;
       }
-
       .text {
         font-size: 0.9rem;
         margin-bottom: 0;
       }
     }
-
     ul.feat_list {
       padding: 1.25rem 0 0 0;
       margin: 0;
       list-style: none;
       min-height: 15rem;
-
       li.list_item {
         margin-bottom: 0.8rem;
       }
     }
-
     .price {
       padding: 1rem 0;
-
       .number {
         font-weight: 500;
         font-size: 1.9rem;
-
         span {
           color: $themecolorLighter;
           font-size: 0.8rem;
         }
       }
     }
-
     .btn {
       background: $themecolorBlueLight;
       color: #fff;
@@ -1135,12 +1095,10 @@ nav {
       transform: translate(-50%);
       bottom: 20px;
       width: 12rem;
-
       &:hover {
         opacity: 0.8;
       }
     }
-
     //middle card higher
     &.higher {
       height: 530px;
@@ -1149,26 +1107,22 @@ nav {
         height: 115px;
       }
     }
-
     //last card blue
     &.blue_darker {
       background: $themecolorBlueDarkerBg;
       color: #fff;
-
       .text,
       .heading,
       .number,
       li {
         color: #fff;
       }
-
       .pricing_header {
         border-bottom: 2px solid $themecolorBlueLight; // #1b94e4;
       }
     }
   }
 }
-
 /*********************
 feature list
 *********************/
@@ -1531,12 +1485,28 @@ small pricing cards
   //tillfälligt
   &.demo {
     .column_row {
+      @media all and (min-width: $md-min) {
+        flex-direction: column;
+      }
       padding: 0;
       .part {
+        @media all and (min-width: $md-min) {
+          width: 70%;
+        }
         &.text {
+          text-align: center;
           padding-left: 0;
+          h3 {
+            color: #fff;
+          }
+          p {
+            color: $themecolorFront;
+          }
+          padding-bottom: 3rem;
         }
         &.image {
+          // tillfälligt
+          width: 60%;
           transition: transform 0.3s ease;
           &:hover {
             transform: translateX(5px);
@@ -1567,8 +1537,8 @@ small pricing cards
 ***********************/
 
 .pillars_section {
-  border-top: 1px solid $themecolorBlue;
-  border-bottom: 1px solid $themecolorBlue;
+  border-top: 1px solid $themeBorderColorFront;
+  border-bottom: 1px solid $themeBorderColorFront;
   background: $themecolorBlueLightBg;
   height: auto;
   overflow: hidden;
@@ -1576,6 +1546,7 @@ small pricing cards
   justify-content: center;
   align-items: center;
   @media all and (min-width: $md-min) {
+  }
 
   .pillars-item {
     height: auto;
@@ -1608,7 +1579,6 @@ small pricing cards
     }
   }
 }
-
 /**********************
   integrations
 ***********************/
@@ -1653,7 +1623,6 @@ small pricing cards
     }
   }
 }
-
 /**********************
   testimonials new
 ***********************/
@@ -1732,37 +1701,28 @@ small pricing cards
     }
   }
 }
-
 /********************
   Videos Page Layout
 *********************/
-.videos_udemy_section {
-}
-
 .video_section {
   padding-top: 0;
-
   .video_container {
     width: 100%;
     box-shadow: $themeBox_shadow;
     border-radius: $themeBorder_radius;
     margin: 0 2% 4rem 0;
     transition: 0.25s ease-in-out;
-
     &:hover {
       box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16);
-
       .title,
       .description {
         transition: 0.25s ease-in-out;
         color: $themecolorBlueLight;
       }
     }
-
     .embed_container {
       border-top-left-radius: $themeBorder_radius;
       border-top-right-radius: $themeBorder_radius;
-
       .video_link {
         position: absolute;
         top: 0;
@@ -1771,15 +1731,12 @@ small pricing cards
         left: 0;
         z-index: 3;
       }
-
       .img_container {
         position: relative;
-
         img {
           border-top-left-radius: $themeBorder_radius;
           border-top-right-radius: $themeBorder_radius;
         }
-
         .title_on_img {
           font-family: "Roboto Slab", serif;
           width: 86%;
@@ -1796,11 +1753,9 @@ small pricing cards
         }
       }
     }
-
     .content_container {
       // padding: 1rem 1.2rem 0.5rem 1.2rem;
       padding: 1rem 1.7rem 0.5rem 1.7rem;
-
       .cat_badge {
         text-align: center;
         margin-top: 10px;
@@ -1816,13 +1771,11 @@ small pricing cards
         padding: 3px 6px;
         text-transform: uppercase;
       }
-
       .content_container_inner {
         margin-bottom: 1rem;
         position: relative;
         height: 180px;
         overflow: hidden;
-
         &:before {
           content: "";
           position: absolute;
@@ -1831,7 +1784,6 @@ small pricing cards
           height: 2rem;
           background: linear-gradient(transparent, white);
         }
-
         .title {
           padding: 0.5rem 0 0 0;
           font-weight: 600;
@@ -1844,7 +1796,6 @@ small pricing cards
     }
   }
 }
-
 /**********************
    check list
 ***********************/
@@ -1853,10 +1804,8 @@ small pricing cards
     list-style: none;
     margin: 0;
     padding: 0;
-
     .check_list_item {
       margin-bottom: 0.8rem;
-
       &::before {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
@@ -1868,17 +1817,14 @@ small pricing cards
     }
   }
 }
-
 /**********************
  cards
 ***********************/
 .udemy_cards {
   padding-top: 2rem;
-
   @media all and (min-width: $lg-min) {
     padding-top: 0;
   }
-
   .course_card {
     position: relative;
     height: 170px;
@@ -1887,28 +1833,22 @@ small pricing cards
     border-radius: $themeBorder_radius;
     transition: 0.25s ease-in-out;
     margin: 0 -15px 2rem -15px;
-
     @media all and (max-width: $xs-max) {
       height: 190px;
     }
-
     @media all and (min-width: $md-min) {
       margin: 0;
     }
-
     @media all and (min-width: $lg-min) {
       margin-bottom: 1.5rem;
     }
-
     &:hover {
       box-shadow: 0 10px 25px 1px rgba(0, 0, 0, 0.1);
-
       p {
         transition: 0.25s ease-in-out;
         color: $themecolorBlueLight;
       }
     }
-
     .course_link {
       position: absolute;
       top: 0;
@@ -1917,25 +1857,20 @@ small pricing cards
       left: 0;
       z-index: 3;
     }
-
     .course_name {
       margin-bottom: 1rem;
       line-height: 1.5rem;
       margin-left: 80px;
-
       @media all and (max-width: $xs-max) {
         margin-bottom: 2.5rem;
       }
     }
-
     .arrow_link {
       margin-left: 80px;
-
       @media all and (max-width: $xs-max) {
         margin-left: 0;
       }
     }
-
     // &.blue {
     //   border-top: 5px solid $themecolorBlue;
     // }
@@ -1967,32 +1902,25 @@ small pricing cards
   margin: 0;
   height: auto;
   padding: 0;
-
   @media all and (min-width: $sm-min) {
     padding: 1rem calc(2.25rem - 15px);
     height: 60px;
   }
-
   @media all and (min-width: $md-min) {
     padding: 1rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 1rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $xl-min) {
     padding: 1rem calc(3.75rem - 15px);
   }
-
   .sidebar-module {
     width: 100%;
     margin-bottom: 1rem;
-
     h4 {
       display: none;
     }
-
     ul {
       list-style: none;
       width: 100%;
@@ -2004,21 +1932,17 @@ small pricing cards
       list-style: none;
       margin: 0;
       padding: 0;
-
       @media all and (min-width: $sm-min) {
         flex-direction: row;
       }
-
       li {
         background: #fff;
         width: 100%;
         text-align: center;
-
         @media all and (min-width: $sm-min) {
           width: auto;
           text-align: left;
         }
-
         a {
           margin-left: -15px;
           margin-right: -15px;
@@ -2036,60 +1960,46 @@ small pricing cards
           border-bottom: 1px solid #ddd;
           color: $themecolor;
           text-decoration: none;
-
           &:hover {
             opacity: 1;
             background: #f2f2f2;
           }
-
           @media all and (min-width: $sm-min) {
-            //margin: 0 1rem -2px 1rem;
-            //border-bottom: 2px solid transparent;
             margin: 0 0.2rem;
             border: none;
             font-size: 0.7em;
             padding: 0.5rem 1rem;
             font-weight: 500;
-            //border-radius: 5px;
             border-radius: $themeBorder_radius;
-
             &:hover {
               opacity: 1;
               background: #f2f2f2;
-              // border-bottom: 2px solid $themecolorGreen;
-              //background: #fff;
             }
           }
-
           @media all and (min-width: $md-min) {
             font-size: 0.8em;
             font-weight: 600;
             margin: 0 0.3rem;
           }
-
           @media all and (min-width: $xl-min) {
             letter-spacing: 0.5px;
           }
         }
       }
-
       /*Uncategorized not show*/
       li.cat-item-1 {
         display: none;
       }
-
       li.current-cat {
         a {
           background: #f2f2f2;
           border-bottom: none;
-
           @media all and (min-width: $md-min) {
             // background: #fff;
             // border-bottom: 2px solid $themecolorGreen;
           }
         }
       }
-
       .most-recent.current-misse {
         a {
           background: #f2f2f2;
@@ -2104,29 +2014,24 @@ small pricing cards
     }
   }
 }
-
 //blog_flow
 .blog_flow {
   .container {
     .container {
       padding: 0;
     }
-
     //next and previous
     .paginate_links {
       text-align: center;
-
       span,
       a {
         padding-right: 0.4rem;
       }
-
       .page-numbers.current {
         color: #b3b3b3;
       }
     }
   }
-
   // posts
   .post_card {
     position: relative;
@@ -2135,17 +2040,14 @@ small pricing cards
     border-radius: $themeBorder_radius;
     transition: 0.25s ease-in-out;
     background: #fff;
-
     &:hover {
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-
       .blog_post_title,
       p {
         transition: 0.25s ease-in-out;
         color: $themecolorBlueLight;
       }
     }
-
     .post_link {
       position: absolute;
       top: 0;
@@ -2154,33 +2056,26 @@ small pricing cards
       right: 0;
       z-index: 20;
     }
-
     .img_wrapper {
       height: 490px;
     }
-
     img {
       border-top-left-radius: $themeBorder_radius;
       border-top-right-radius: $themeBorder_radius;
     }
-
     .post_content {
       padding: 1rem 1.2rem 0.5rem 1.2rem;
-
       //centered images
       img {
         display: block;
         margin: 2.5rem auto;
       }
-
       .post_content_inner {
         margin-bottom: 1rem;
-
         position: relative;
         height: 230px;
         overflow: hidden;
         //text-overflow: ellipsis;
-
         &:before {
           content: "";
           position: absolute;
@@ -2189,17 +2084,14 @@ small pricing cards
           height: 2rem;
           background: linear-gradient(transparent, white);
         }
-
         .more-link {
           display: none;
         }
       }
-
       p {
         font-size: 0.95rem;
         line-height: 1.6;
       }
-
       .category {
         position: relative;
         color: #8c8c8c;
@@ -2207,13 +2099,11 @@ small pricing cards
         letter-spacing: 0.01rem;
         text-transform: uppercase;
         font-size: 0.9rem;
-
         &:hover {
           text-decoration: underline;
           opacity: 1;
         }
       }
-
       .blog_post_meta {
         display: flex;
         justify-content: space-between;
@@ -2221,27 +2111,23 @@ small pricing cards
         border-top: 1px solid $mediumgrey;
         width: 100%;
         padding: 0.5rem 0 0 0;
-
         p {
           font-size: 0.8rem;
           margin: 0;
           color: #8c8c8c;
         }
       }
-
       .blog_post_title {
         line-height: 1.3;
         margin: 1rem 0;
       }
     }
-
     //single post
     &.single {
       box-shadow: none;
       transition: none;
       margin-bottom: 0;
       box-shadow: none;
-
       @media all and (min-width: $sm-min) {
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
         border-radius: $themeBorder_radius;
@@ -2249,79 +2135,62 @@ small pricing cards
         background: #fff;
         margin-top: -90px;
       }
-
       @media all and (min-width: $xl-min) {
         margin-top: -100px;
       }
-
       &:hover {
         box-shadow: none;
-
         .blog_post_title,
         p {
           transition: none;
           color: $themecolor;
         }
       }
-
       img {
         box-shadow: $themeBox_shadow;
-
         @media all and (min-width: $sm-min) {
           box-shadow: none;
         }
       }
-
       .post_content {
         padding: 2rem 0;
-
         @media all and (min-width: $sm-min) {
           padding: 2rem;
         }
-
         @media all and (min-width: $md-min) {
           padding: 2.5rem 3.5rem;
         }
-
         .category {
           font-size: 1.1rem;
         }
-
         p {
           @media all and (min-width: $md-min) {
             font-size: 1.1rem;
           }
         }
-
         .blog_post_title {
           font-weight: 600;
           font-size: 1.5rem;
-
           @media all and (min-width: $sm-min) {
             font-size: 2rem;
           }
-
           @media all and (min-width: $md-min) {
             font-size: 2.5rem;
           }
         }
-
         .blog_post_meta {
           border: none;
           padding-bottom: 2rem;
           justify-content: start;
-
           p {
             font-size: 0.9rem;
             color: #8c8c8c;
           }
         }
-
         .post_text {
           figure {
             position: relative;
             z-index: 1000;
-
             &::before {
               content: "Hover image to enlarge";
               position: absolute;
@@ -2331,7 +2200,6 @@ small pricing cards
               right: 0;
               top: -30px;
             }
-
             img {
               width: 100%;
               height: auto;
@@ -2346,14 +2214,11 @@ small pricing cards
       }
     }
   }
-
   //wpcf7 form
   .wpcf7 {
     max-width: 100%;
-
     label {
       max-width: 100%;
-
       input {
         max-width: 100%;
       }
@@ -2391,29 +2256,23 @@ small pricing cards
         .text {
           color: #fff;
         }
-
         .text {
           font-size: 1.2rem;
         }
       }
-
       @media all and (min-width: $lg-min) {
         padding-right: 3rem;
       }
     }
-
     .es_subscription_form {
       display: flex;
       flex-direction: column;
-
       @media all and (min-width: $md-min) {
         flex-direction: row;
       }
-
       label {
         display: block;
       }
-
       .es_txt_email {
         width: 100%;
         border: none;
@@ -2426,7 +2285,6 @@ small pricing cards
           width: 25rem;
         }
       }
-
       input[type="submit"] {
         width: 100%;
         border: none;
@@ -2443,27 +2301,22 @@ small pricing cards
         font-weight: 600;
         letter-spacing: 0.2px;
         box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-
         @media all and (min-width: $md-min) {
           width: initial;
           margin-left: 0.5rem;
         }
-
         &:hover {
           opacity: 0.7;
         }
       }
-
       .es_spinner_image {
         margin-left: 0.5rem;
       }
     }
-
     .es_subscription_message {
       color: #fff;
     }
   }
-
   &.single {
     @media all and (min-width: $sm-min) {
       margin: 3rem 2rem;
@@ -2476,7 +2329,7 @@ small pricing cards
 *******************************/
 
 .two-columns-section.feature_slider {
-  background: $themecolorBlueLightBg;
+  background-image: $themecolorBlueLightBg;
   min-height: 650px;
   // background: $lightgrey;
   @media all and (min-width: $sm-min) {
@@ -2657,49 +2510,49 @@ small pricing cards
     }
   }
 }
-//features link boxes
-.feature_link_item_section {
-  .preamble {
-    margin-bottom: 4rem;
-  }
-  .feature_link_item {
-    height: 100%;
-    display: block;
-    padding: 1rem;
-    background: $themecolorNewBlueBg;
-    box-shadow: 0 2px 20px 1px rgb(0 0 0 / 10%);
-    border-radius: $themeBorder_radius;
-    box-shadow: $themeBox_shadow;
-    text-align: center;
-    transform: scale(1);
-    -webkit-transition: transform 0.2s;
-    transition: transform 0.2s;
-    &:hover {
-      transform: scale(1.02);
-      opacity: 1;
-    }
-    .icon {
-      margin: 0 auto 1rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      background-color: #fff;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      i {
-        color: $themecolorGreen;
-      }
-    }
-    h6,
-    p {
-      color: #fff;
-    }
-    p {
-      font-size: 0.8rem;
-    }
-  }
-}
+// //features link boxes
+// .feature_link_item_section {
+//   .preamble {
+//     margin-bottom: 4rem;
+//   }
+//   .feature_link_item {
+//     height: 100%;
+//     display: block;
+//     padding: 1rem;
+//     background: $themecolorNewBlueBg;
+//     box-shadow: 0 2px 20px 1px rgb(0 0 0 / 10%);
+//     border-radius: $themeBorder_radius;
+//     box-shadow: $themeBox_shadow;
+//     text-align: center;
+//     transform: scale(1);
+//     -webkit-transition: transform 0.2s;
+//     transition: transform 0.2s;
+//     &:hover {
+//       transform: scale(1.02);
+//       opacity: 1;
+//     }
+//     .icon {
+//       margin: 0 auto 1rem;
+//       width: 2.5rem;
+//       height: 2.5rem;
+//       background-color: #fff;
+//       border-radius: 50%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       i {
+//         color: $themecolorGreen;
+//       }
+//     }
+//     h6,
+//     p {
+//       color: #fff;
+//     }
+//     p {
+//       font-size: 0.8rem;
+//     }
+//   }
+// }
 
 /**********************************
 text layout for Pages Content block
@@ -2772,8 +2625,10 @@ forum section
    footer and signup
 *********************/
 .signup_section {
-  background: $themecolorLilaDarkestBg;
   //background: see scss section
+  .col-md-6:first-child {
+    // border-right: 1px solid $themecolorLilaDarkest;
+  }
   .heading {
     text-align: center;
     h3 {
@@ -2790,20 +2645,14 @@ forum section
     float: right;
   }
   .text_section {
-    // div {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   @media all and (min-width: $md-min) {
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //   }
-    // }
-
+    div {
+      text-align: center;
+    }
     p {
       color: $themecolorFront;
+    }
+    h4 {
+      color: #fff;
     }
   }
   .btn_container {
@@ -2811,7 +2660,7 @@ forum section
     justify-content: center;
     align-items: center;
     @media all and (min-width: $lg-min) {
-      justify-content: flex-start;
+      // justify-content: flex-start;
     }
     .btn {
       padding: 10px 45px;
@@ -2833,7 +2682,7 @@ forum section
   }
   &.lightgrey {
     .btn.signup_btn {
-      background: $themecolorBlueLight;
+      background: $themecolorBlueLightBg;
       color: #fff;
       border: 1px solid $lightgrey;
       &:hover {
@@ -2873,7 +2722,7 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background: $themecolorLilaDarkestBg;
+  background: $themecolorLilaDarkest;
   min-height: 520px;
 
   @media all and (max-width: $xs-max) {
@@ -2914,7 +2763,7 @@ forum section
           text-decoration: none;
         }
         a {
-          color: #fff;
+          color: $themecolorFront;
           font-size: 0.9rem;
           &:hover {
             text-decoration: none;
@@ -3483,7 +3332,7 @@ img_text_section
 }
 
 .myblue {
-  background-image: $themecolorBlueLightBg;
+  background: $themecolorBlueLightBg;
 }
 .purple {
   background-image: $themecolorGreenNewBg;
