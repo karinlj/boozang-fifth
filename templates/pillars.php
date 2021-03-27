@@ -30,19 +30,17 @@ $color = get_sub_field('color_theme');
             <?php
         // check if the repeater field has rows
         if (have_rows('pillars_content')) {
-
             while (have_rows('pillars_content')) {
-                the_row();
-                ?>
+                the_row(); ?>
             <div class="col-lg">
                 <div class="pillars-item">
-                    <h6 class="top-heading <?php echo $color; ?>"><?php the_sub_field('top_heading');?></h6>
-                    <h5 class="heading"><?php the_sub_field('heading');?></h5>
-                    <p class="text"><?php the_sub_field('text');?></p>
+                    <h6 class="top-heading <?php echo $color; ?>"><?php the_sub_field('top_heading'); ?></h6>
+                    <h5 class="heading"><?php the_sub_field('heading'); ?></h5>
+                    <p class="text"><?php the_sub_field('text'); ?></p>
                 </div>
             </div>
             <?php
-        }
+            }
         }
         ?>
         </div>

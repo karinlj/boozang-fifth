@@ -1,10 +1,9 @@
 <?php
 // feature-slider layout for Front Page Block
-
 ?>
 <section class="two-columns-section feature_slider section_spacing_top_medium">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-end">
             <div class="col-lg-6">
                 <!-- <h2><?php the_sub_field('heading'); ?></h2> -->
                 <?php

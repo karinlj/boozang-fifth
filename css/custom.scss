@@ -854,8 +854,8 @@ nav {
     min-height: 550px;
   }
   @media all and (min-width: $lg-min) {
-    //min-height: 600px;
-    min-height: 750px;
+    min-height: 600px;
+    //min-height: 750px;
   }
 }
 .header_small {
@@ -950,7 +950,6 @@ nav {
   }
   .header_items_section {
     padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
-
     @media all and (min-width: $sm-min) {
       padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
     }
@@ -964,7 +963,6 @@ nav {
       color: #fff;
       margin-bottom: 1.5rem;
       text-align: center;
-
       @media all and (max-width: $xs-max) {
         text-align: center;
       }
@@ -977,7 +975,7 @@ nav {
     }
     .header_text {
       font-size: 1.2rem;
-      color: #fff;
+      color: $themecolorFront;
       margin-bottom: 1.5rem;
       text-align: center;
       @media all and (min-width: $sm-min) {
@@ -1484,6 +1482,62 @@ small pricing cards
     }
   }
   //tillfälligt
+  &.presentation {
+    background: #fff;
+    .column_row {
+      padding-bottom: 0;
+      .part {
+        @media all and (min-width: $md-min) {
+          // width: 70%;
+        }
+        &.text {
+          padding: 0;
+        }
+        &.image {
+          &::before {
+            content: "";
+          }
+          img {
+            max-width: 210px;
+            &:hover {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+  &.story {
+    background: $lightgrey;
+    .column_row {
+      padding-bottom: 6rem;
+      .part {
+        @media all and (min-width: $md-min) {
+          // width: 70%;
+        }
+        &.text {
+          // text-align: center;
+          // h3 {
+          //   color: #fff;
+          // }
+          // p {
+          //   color: $themecolorFront;
+          // }
+          padding-bottom: 3rem;
+        }
+        &.image {
+          &::before {
+            content: "";
+          }
+          img {
+            &:hover {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
   &.demo {
     .column_row {
       @media all and (min-width: $md-min) {
@@ -1496,7 +1550,6 @@ small pricing cards
         }
         &.text {
           text-align: center;
-          padding-left: 0;
           h3 {
             color: #fff;
           }
@@ -2403,9 +2456,9 @@ small pricing cards
     li.features_menu_item {
       text-align: center;
       flex: 0 0 30%;
-      padding: 0.7rem 0.5rem;
+      padding: 0.5rem 0.5rem;
       margin-bottom: 0.6rem;
-      margin-right: 0.6rem;
+      margin-right: 0.5rem;
       cursor: pointer;
       box-shadow: $themeBox_shadow;
       border-radius: $themeBorder_radius;
@@ -2988,14 +3041,7 @@ img_text_section
 .img_text_section {
   margin: 5rem 0;
   border-radius: $themeBorder_radius;
-  background-image: linear-gradient(
-    to right,
-    #eafaf6,
-    #eefbfd,
-    #f5fcff,
-    #fbfdff,
-    #ffffff
-  );
+
   .column_row {
     display: flex;
     justify-content: space-between;
