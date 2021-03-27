@@ -36,7 +36,7 @@ if (function_exists('acf_add_options_page')) {
                             <div class="signup_button">
                                 <div class="text_section">
                                     <div>
-                                        <h4>Create an account!</h4>
+                                        <h4>Create your account for free!</h4>
                                         <p> <?php the_sub_field('text'); ?></p>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@ if (function_exists('acf_add_options_page')) {
                   $signup_button = get_sub_field('signup_button');
             if ($signup_button) {?>
                                     <a class="btn signup_btn" href="<?php echo $signup_button['url']; ?>"
-                                        target="<?php echo $signup_button['target']; ?>"><?php echo $signup_button['title']; ?>
+                                        target="<?php echo $signup_button['target']; ?>">Request Demo
                                     </a>
                                     <?php } ?>
                                 </div>

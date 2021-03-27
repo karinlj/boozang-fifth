@@ -18,8 +18,8 @@ $max-page-width: 1380px;
 $themefont: "Roboto", "Helvetica", sans-serif;
 $navfont: $themefont;
 $headingfont: $themefont;
-$themeBorder_radius: 5px; //10px;
-$btnBorder_radius: 5px;
+$themeBorder_radius: 4px; //10px;
+$btnBorder_radius: 4px;
 //$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1); // 0 1.875rem 3.125rem rgb(40 45 80 / 5%); //
 
 $themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
@@ -40,13 +40,13 @@ $themecolorLilaDarkest: #151e37;
 $themecolor: #373c49;
 $themecolorFront: #c7d0eb;
 $themeBorderColor: #ebebeb;
-$themeBorderColorFront: #2f4483;
+$themeBorderColorFront: #293b70;
 
 $themecolorLight: #66758d;
 $themecolorLighter: #e6e6e6;
 
 $themeHeadingcolor: #121923;
-$lightgrey: #f5f6f9; //#f9f9f9;
+$lightgrey: #f9f9f9; //#f5f6f9
 $mediumgrey: #f1f1f4;
 $themecolorGreen: #5d5f5e;
 $themecolorRed: #e62e65;
@@ -105,14 +105,15 @@ $themecolorBlueLightBg: $themecolorLilaDark;
 
 //GreenNew
 $themecolorGreenNew: #0ba893;
-$themecolorGreenNewBg: linear-gradient(
-  to bottom,
-  #5d2d57,
-  #662f5f,
-  #6f3266,
-  #78346e,
-  #813676
-);
+$themecolorGreenNewBg: #5d2d57;
+// $themecolorGreenNewBg: linear-gradient(
+//   to bottom,
+//   #5d2d57,
+//   #662f5f,
+//   #6f3266,
+//   #78346e,
+//   #813676
+// );
 
 //Blue
 $themecolorBlue: #1b2fe4;
@@ -169,3 +170,6 @@ $extraLightBlueOverlay: linear-gradient(
   #b9c4e5,
   #c7d0ea
 );
+
+$themecolorNewBlue: #0074b1;
+$themecolorNewBlueHover: #004266;

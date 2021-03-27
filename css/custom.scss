@@ -974,6 +974,7 @@ nav {
       }
     }
     .header_text {
+      max-width: 420px;
       font-size: 1.2rem;
       color: $themecolorFront;
       margin-bottom: 1.5rem;
@@ -1483,9 +1484,10 @@ small pricing cards
   }
   //tillfälligt
   &.presentation {
-    background: #fff;
+    background: $lightgrey;
     .column_row {
       padding-bottom: 0;
+      justify-content: flex-end;
       .part {
         @media all and (min-width: $md-min) {
           // width: 70%;
@@ -1494,10 +1496,12 @@ small pricing cards
           padding: 0;
         }
         &.image {
+          width: 30%;
           &::before {
             content: "";
           }
           img {
+            box-shadow: none;
             max-width: 210px;
             &:hover {
               transform: scale(1);
@@ -1508,7 +1512,12 @@ small pricing cards
     }
   }
   &.story {
-    background: $lightgrey;
+    padding-bottom: 0;
+    background: #fff;
+    .header {
+      text-align: center;
+      padding-bottom: 4rem;
+    }
     .column_row {
       padding-bottom: 6rem;
       .part {
@@ -1516,13 +1525,6 @@ small pricing cards
           // width: 70%;
         }
         &.text {
-          // text-align: center;
-          // h3 {
-          //   color: #fff;
-          // }
-          // p {
-          //   color: $themecolorFront;
-          // }
           padding-bottom: 3rem;
         }
         &.image {
@@ -1637,7 +1639,7 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background-image: $themecolorGreenNewBg;
+  background: $themecolorGreenNewBg;
   .text_section {
     padding-bottom: 2rem;
     h2,
@@ -1702,8 +1704,11 @@ small pricing cards
       flex-direction: row;
     }
     .testimonials-item {
-      background: #fff;
+      background: $themecolorLilaDarkest;
       flex: 1 1 28%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       border-radius: $themeBorder_radius;
       margin: 0 1rem 2rem 0;
       padding: 1.5rem;
@@ -1713,43 +1718,44 @@ small pricing cards
         margin-bottom: 0;
         min-height: 340px;
       }
-      // p {
-      //   color: $themecolorFront;
-      // }
+      p {
+        color: $themecolorFront;
+        strong {
+          color: #fff;
+        }
+      }
       .signature {
         font-weight: 400;
         // @media all and (min-width: $lg-min) and (max-width: $lg-max) {
         //   font-size: 1.2rem;
         // }
-        border-left: 5px solid $themecolorLighter;
+        border-left: 5px solid $themecolorFront;
         padding-left: 1rem;
         margin-left: 1rem;
       }
       .icon {
         margin-bottom: 1rem;
         i.fas {
-          color: $themecolorLighter;
+          // color: $themecolorLighter;
+          color: #fff;
           font-size: 1.5em;
         }
       }
     }
     .testimonials-item {
       &.blue {
-        // border-left: 5px solid $themecolorBlue;
         .signature {
           color: $themecolorBlue;
         }
       }
       &.green {
-        //border-left: 5px solid $themecolorGreenNew;
         .signature {
           color: $themecolorGreenNew;
         }
       }
       &.lightblue {
-        // border-left: 5px solid $themecolorBlueLight;
         .signature {
-          color: $themecolorBlueLight;
+          color: #0074b1;
         }
       }
     }
@@ -2456,7 +2462,7 @@ small pricing cards
     li.features_menu_item {
       text-align: center;
       flex: 0 0 30%;
-      padding: 0.5rem 0.5rem;
+      padding: 0.4rem 0.4rem;
       margin-bottom: 0.6rem;
       margin-right: 0.5rem;
       cursor: pointer;
@@ -2749,7 +2755,7 @@ forum section
 .signup_section {
   //background: see scss section
   .col-md-6:first-child {
-    // border-right: 1px solid $themecolorLilaDarkest;
+    border-right: 1px solid $themeBorderColorFront;
   }
   .heading {
     text-align: center;
@@ -2785,33 +2791,27 @@ forum section
       // justify-content: flex-start;
     }
     .btn {
+      background: $themecolorNewBlue;
+      color: #fff;
       padding: 10px 45px;
       transition: transform 0.3s ease;
       &:hover {
         transform: translateX(3px);
         box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
+        background: $themecolorNewBlueHover;
       }
-      &:after {
-        content: "\f061";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        margin-left: 10px;
-      }
+      // &:after {
+      //   content: "\f061";
+      //   font-family: "Font Awesome 5 Free";
+      //   font-weight: 900;
+      //   margin-left: 10px;
+      // }
     }
     &.demo {
       float: right;
     }
   }
-  &.lightgrey {
-    .btn.signup_btn {
-      background: $themecolorBlueLightBg;
-      color: #fff;
-      border: 1px solid $lightgrey;
-      &:hover {
-        opacity: 0.9;
-      }
-    }
-  }
+
   // &.lightblue {
   //   .btn.signup_btn {
   //     background: #fff;

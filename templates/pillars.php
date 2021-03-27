@@ -17,7 +17,7 @@ $color = get_sub_field('color_theme');
 
             <div class="part image">
                 <a href="http://thelab.boozang.com/" class="img_link" target="_blank" rel="noreferrer noopener"></a>
-                <img src="https://localhost/Boozang/wp-content/uploads/2021/03/thelabTablesImg.jpg" alt="Map view">
+                <img src="https://localhost/Boozang/wp-content/uploads/2021/03/catordog.png" alt="Map view">
             </div>
         </div>
     </div>

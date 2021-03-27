@@ -4,7 +4,7 @@
 
 <!-- story -->
 <!-- two_columns_section -->
-<section class="two_columns_section presentation section_spacing_top_medium lightgrey">
+<section class="two_columns_section presentation section_spacing_top_small lightgrey">
     <div class="container">
         <div class="column_row">
             <!-- loopa flex content -->
@@ -13,10 +13,14 @@
             </div>
             <div class="part text">
                 <h3>Boozang is... </h3>
-                <p>Hate dogs meow to be let in kitty scratches couch bad kitty yet enslave the hooman. Trip on
-                    catnip. Cats are cute kitty for slap owner's face at 5am until human fills food dish and
-                    steal mom's crouton while she is in the bathroom, so sleep over your phone and make cute
-                    snoring noises pooping rainbow while flying
+                <p>Boozang is a web test automation tool that tests
+                    your application flows end-to-end.
+                    Boozang takes a modern approach to test automation,
+                    using the built-in test capabilities of the web
+                    browser instead of relying on APIs such as Selenium.
+                    It’s part of the code-less revolution, but we prefer the
+                    term low-code, or code optional, as you can incorporate
+                    code when needed.
                 </p>
             </div>
         </div>
@@ -26,6 +30,11 @@
 <!-- story -->
 <!-- two_columns_section -->
 <section class="two_columns_section story section_spacing_top_medium lightgrey">
+    <div class="header">
+        <h3>How Boozang works</h3>
+        <p>Something here...</p>
+    </div>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
