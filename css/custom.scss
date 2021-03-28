@@ -2388,7 +2388,7 @@ small pricing cards
 *******************************/
 
 .two-columns-section.feature_slider {
-  background: $themecolorBlueLightBg;
+  // background-image: $themecolorBlueDarkerBg;
   // min-height: 650px;
   // @media all and (min-width: $sm-min) {
   //   min-height: 700px;
@@ -2417,18 +2417,18 @@ small pricing cards
     position: relative;
     transition: opacity 0.5s ease-in-out;
     height: 320px;
-    @media all and (max-width: $xs-max) {
-      height: 250px;
-    }
-    @media all and (min-width: $sm-min) {
-      height: 280px;
-    }
-    @media all and (min-width: $md-min) {
-      height: 320px;
-    }
-    @media all and (min-width: $xl-min) {
-      height: 380px;
-    }
+    // @media all and (max-width: $xs-max) {
+    //   height: 250px;
+    // }
+    // @media all and (min-width: $sm-min) {
+    //   height: 280px;
+    // }
+    // @media all and (min-width: $md-min) {
+    //   height: 320px;
+    // }
+    // @media all and (min-width: $xl-min) {
+    //   height: 380px;
+    // }
     img.feat_img {
       height: auto;
       position: absolute;
@@ -2469,12 +2469,7 @@ small pricing cards
       box-shadow: $themeBox_shadow;
       border-radius: $themeBorder_radius;
       border: 1px solid $themeBorderColor;
-      transition: transform 0.3s ease;
       color: #fff;
-      &:hover {
-        transform: translateX(2px);
-        box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
-      }
       span {
         font-size: 0.85rem;
         display: inline-block;
@@ -2491,34 +2486,6 @@ small pricing cards
     }
   }
 
-  // .comes-first {
-  //   order: 0;
-  //   @media all and (min-width: $lg-min) {
-  //     order: -1;
-  //   }
-  //   .feat_list {
-  //     padding: 0 0 1.3rem 0;
-  //     @media all and (min-width: $lg-min) {
-  //       padding: 0 2rem 0 0;
-  //     }
-  //     li.feat-menu-item.active {
-  //     }
-  //   }
-  // }
-  // .comes-last {
-  //   order: 0;
-  //   @media all and (min-width: $lg-min) {
-  //     order: 15;
-  //   }
-  //   .feat_list {
-  //     padding: 0 0 1.3rem 0;
-  //     @media all and (min-width: $lg-min) {
-  //       padding: 0 0 0 2rem;
-  //     }
-  //     li.feat-menu-item.active {
-  //     }
-  //   }
-  // }
   .feature-description-mobile {
     display: block;
     padding: 0.6rem 0.95rem;
@@ -3490,12 +3457,12 @@ img_text_section
 
 //tabs2
 .mytabs2 {
-  padding: 3rem;
-
-  //links
+  max-width: 500px;
+  margin: 4rem auto;
   .tabs {
+    padding-top: 1rem;
     list-style: none;
-    li {
+    li.tab_link {
       color: #222;
       display: inline-block;
       padding: 10px 15px;
@@ -3506,19 +3473,22 @@ img_text_section
     }
   }
   //content
-  .tab-content {
+  .tab_content {
+    // img {
+    height: 300px !important;
+    // }
     display: none;
-    animation: fadeEffect 3s; /* Fading effect takes 1 second */
+    // animation: fadeIn ease-in-out 1s; /* Fading effect takes 1 second */
     &.active {
       display: block;
     }
-    @keyframes fadeEffect {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+    // @keyframes fadeIn {
+    //   0% {
+    //     opacity: 0;
+    //   }
+    //   100% {
+    //     opacity: 1;
+    //   }
+    // }
   }
 }

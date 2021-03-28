@@ -2463,9 +2463,6 @@ small pricing cards
 /******************************
      features slider
 *******************************/
-.two-columns-section.feature_slider {
-  background: #1b274b;
-}
 .two-columns-section.feature_slider h2 {
   text-align: center;
   margin-bottom: 4rem;
@@ -2479,26 +2476,6 @@ small pricing cards
   position: relative;
   transition: opacity 0.5s ease-in-out;
   height: 320px;
-}
-@media all and (max-width: 480px) {
-  .two-columns-section.feature_slider .feat_slider_wrapper {
-    height: 250px;
-  }
-}
-@media all and (min-width: 576px) {
-  .two-columns-section.feature_slider .feat_slider_wrapper {
-    height: 280px;
-  }
-}
-@media all and (min-width: 768px) {
-  .two-columns-section.feature_slider .feat_slider_wrapper {
-    height: 320px;
-  }
-}
-@media all and (min-width: 1200px) {
-  .two-columns-section.feature_slider .feat_slider_wrapper {
-    height: 380px;
-  }
 }
 .two-columns-section.feature_slider .feat_slider_wrapper img.feat_img {
   height: auto;
@@ -2541,12 +2518,7 @@ small pricing cards
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
   border-radius: 4px;
   border: 1px solid #ebebeb;
-  transition: transform 0.3s ease;
   color: #fff;
-}
-.two-columns-section.feature_slider ul#features_menu li.features_menu_item:hover {
-  transform: translateX(2px);
-  box-shadow: 0 4px 15px 0 rgba(7, 42, 68, 0.2);
 }
 .two-columns-section.feature_slider ul#features_menu li.features_menu_item span {
   font-size: 0.85rem;
@@ -3279,35 +3251,28 @@ img_text_section
 }
 
 .mytabs2 {
-  padding: 3rem;
+  max-width: 500px;
+  margin: 4rem auto;
 }
 .mytabs2 .tabs {
+  padding-top: 1rem;
   list-style: none;
 }
-.mytabs2 .tabs li {
+.mytabs2 .tabs li.tab_link {
   color: #222;
   display: inline-block;
   padding: 10px 15px;
   cursor: pointer;
 }
-.mytabs2 .tabs li.active {
+.mytabs2 .tabs li.tab_link.active {
   background: #ededed;
 }
-.mytabs2 .tab-content {
+.mytabs2 .tab_content {
+  height: 300px !important;
   display: none;
-  animation: fadeEffect 3s;
-  /* Fading effect takes 1 second */
 }
-.mytabs2 .tab-content.active {
+.mytabs2 .tab_content.active {
   display: block;
-}
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /*# sourceMappingURL=custom.css.map */
