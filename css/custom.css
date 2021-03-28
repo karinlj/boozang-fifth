@@ -3262,4 +3262,52 @@ img_text_section
   background: #f9f9f9;
 }
 
+.mytabs1 {
+  padding: 3rem;
+}
+.mytabs1 .nav-tab {
+  color: green;
+}
+.mytabs1 .nav-tab.active {
+  color: #f00;
+}
+.mytabs1 .tab-content {
+  display: none;
+}
+.mytabs1 .tab-content.active {
+  display: block;
+}
+
+.mytabs2 {
+  padding: 3rem;
+}
+.mytabs2 .tabs {
+  list-style: none;
+}
+.mytabs2 .tabs li {
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.mytabs2 .tabs li.active {
+  background: #ededed;
+}
+.mytabs2 .tab-content {
+  display: none;
+  animation: fadeEffect 3s;
+  /* Fading effect takes 1 second */
+}
+.mytabs2 .tab-content.active {
+  display: block;
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=custom.css.map */

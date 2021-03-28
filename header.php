@@ -127,52 +127,41 @@ if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_
                         </div> -->
 
                         <!-- get feature_slider -->
-                        <!-- <?php get_template_part('parts/feature_slider'); ?> -->
                         <section class="two-columns-section feature_slider ">
-
-                            <div class="comes-first">
-                                <div class="feat_slider_wrapper">
-
-                                    <!-- I have 1-->
-
-                                    <img id="1y_img" class="feat_img inactive active"
-                                        src="https://localhost/Boozang/wp-content/uploads/2020/06/ide-style.png"
-                                        alt="IDE-style interface">
-                                    <!-- I have 2-->
-                                    <img id="2y_img" class="feat_img inactive"
-                                        src="https://localhost/Boozang/wp-content/uploads/2020/05/map-view.png"
-                                        alt="Map view">
-                                    <!-- I have 3-->
-                                    <img id="3y_img" class="feat_img inactive"
-                                        src="https://localhost/Boozang/wp-content/uploads/2020/05/cucumber-built-in.png"
-                                        alt="Cucumber support built-in">
-                                </div>
+                            <!-- images -->
+                            <div class="feat_slider_wrapper">
+                                <!-- I have 1-->
+                                <img id="1y_img" class="feat_img inactive active"
+                                    src="https://localhost/Boozang/wp-content/uploads/2020/06/ide-style.png"
+                                    alt="IDE-style interface">
+                                <!-- I have 2-->
+                                <img id="2y_img" class="feat_img inactive"
+                                    src="https://localhost/Boozang/wp-content/uploads/2020/05/map-view.png"
+                                    alt="Map view">
+                                <!-- I have 3-->
+                                <img id="3y_img" class="feat_img inactive"
+                                    src="https://localhost/Boozang/wp-content/uploads/2020/05/cucumber-built-in.png"
+                                    alt="Cucumber support built-in">
                             </div>
-                            <div class="comes-last">
-                                <div class="feat_list">
-                                    <!-- <h3>Why use Boozang?</h3> -->
-                                    <!-- <p class="feature-description-mobile">Automate all module operations and build upstream tests based on business requirements. All tests are recorded in natural language and run stable independent of coding details, making tests completely agnostic to underlying technology.</p> -->
-                                    <ul id="features_menu">
-                                        <!--I have 1-->
-                                        <li id="1y" class="features_menu_item inactive active">
-                                            <span id="1y">IDE-style interface</span>
-                                            <!-- <p class="text">The user-friendly IDE-style interface uses tabs for quick test authoring.  No coding required.</p> -->
-                                        </li>
-                                        <!--I have 2-->
-                                        <li id="2y" class="features_menu_item inactive">
-                                            <span id="2y">Graphic maps</span>
-                                            <!-- <p class="text">Generate graphic maps that shows all test relationships. Quickly find bugs and optimizations. </p> -->
-                                        </li>
-                                        <!--I have 3-->
-                                        <li id="3y" class="features_menu_item inactive">
-                                            <span id="3y">Cucumber support</span>
-                                            <!-- <p class="text">Built-in support for BDD. Synchronize your Gherkin tests from XRay / Jira or your versioning system.</p> -->
-                                        </li>
-                                    </ul>
-                                </div>
+                            <!-- tabs -->
+                            <div class="feat_list">
+                                <ul id="features_menu">
+                                    <!--I have 1-->
+                                    <li id="1y" class="features_menu_item inactive active">
+                                        <span id="1y">IDE-style interface</span>
+                                    </li>
+                                    <!--I have 2-->
+                                    <li id="2y" class="features_menu_item inactive">
+                                        <span id="2y">Graphic maps</span>
+                                    </li>
+                                    <!--I have 3-->
+                                    <li id="3y" class="features_menu_item inactive">
+                                        <span id="3y">Cucumber support</span>
+                                    </li>
+                                </ul>
                             </div>
+
                         </section>
-
                     </div>
                     <?php
 }

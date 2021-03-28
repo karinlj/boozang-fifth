@@ -3470,3 +3470,55 @@ img_text_section
 .lightgrey {
   background: $lightgrey;
 }
+
+//tabs1
+.mytabs1 {
+  padding: 3rem;
+  .nav-tab {
+    color: green;
+    &.active {
+      color: #f00;
+    }
+  }
+  .tab-content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+//tabs2
+.mytabs2 {
+  padding: 3rem;
+
+  //links
+  .tabs {
+    list-style: none;
+    li {
+      color: #222;
+      display: inline-block;
+      padding: 10px 15px;
+      cursor: pointer;
+      &.active {
+        background: #ededed;
+      }
+    }
+  }
+  //content
+  .tab-content {
+    display: none;
+    animation: fadeEffect 3s; /* Fading effect takes 1 second */
+    &.active {
+      display: block;
+    }
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+}

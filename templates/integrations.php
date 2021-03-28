@@ -1,8 +1,77 @@
 <?php
 // integrations layout for Front Page Block
 ?>
+<!-- mytabs1-->
+<section class="mytabs1">
+    <div class="container">
+        <div class="tab-wrapper">
+            <nav>
+                <a href="#tab-1" class="nav-tab active">First</a>
+                <a href="#tab-2" class="nav-tab">Second</a>
+                <a href="#tab-3" class="nav-tab">Third</a>
+            </nav>
+            <hr />
+            <section id="tab-1" class="tab-content active">
+                <P>Some content here.</P>
+            </section>
+            <section id="tab-2" class="tab-content">
+                <p>Some more here.</p>
+            </section>
+            <section id="tab-3" class="tab-content">
+                <p>Something else here.</p>
+            </section>
+        </div>
 
-<!-- story -->
+        <!-- <div class="nav-tab-wrapper">
+            <div class="">
+                <a href="#tab-1" class="nav-tab active">First</a>
+                <a href="#tab-2" class="nav-tab">Second</a>
+                <a href="#tab-3" class="nav-tab">Third</a>
+            </div>
+
+            <div id="tab-1" class="tab-content active">
+                <P>First content here.</P>
+            </div>
+            <div id="tab-2" class="tab-content">
+                <p>Second content here.</p>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <p>Third content here.</p>
+            </div>
+        </div> -->
+    </div>
+</section>
+
+
+<!-- tabs2 -->
+<section class="mytabs2">
+    <div class="container">
+        <ul class="tabs">
+            <li class="tab-link active" data_tab="tab_1">Tab One</li>
+            <li class="tab-link" data_tab="tab_2">Tab Two</li>
+            <li class="tab-link" data_tab="tab_3">Tab Three</li>
+        </ul>
+
+        <div id="tab_1" class="tab-content active">
+            <img class="feat_img" src="https://localhost/Boozang/wp-content/uploads/2020/06/ide-style.png"
+                alt="IDE-style interface">
+        </div>
+        <div id="tab_2" class="tab-content">
+            <img class="feat_img" src="https://localhost/Boozang/wp-content/uploads/2020/05/map-view.png"
+                alt="Map view">
+        </div>
+        <div id="tab_3" class="tab-content">
+            <img class="feat_img" src="https://localhost/Boozang/wp-content/uploads/2020/05/cucumber-built-in.png"
+                alt="Cucumber support built-in">
+        </div>
+    </div><!-- container -->
+</section>
+
+
+
+
+
+<!-- about -->
 <!-- two_columns_section -->
 <section class="two_columns_section presentation section_spacing_top_small lightgrey">
     <div class="container">
