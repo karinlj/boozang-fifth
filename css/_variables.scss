@@ -24,6 +24,9 @@ $btnBorder_radius: 4px;
 
 $themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
 
+$themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+  rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
 /*transparent nav*/
 $navcolor: #fff;
 $navBg_transp: transparent;
@@ -32,12 +35,14 @@ $linkcolor: #1b94e4; //$themecolorBlueLight;
 /* colors */
 //new lila
 $themecolorLila: #2a2966;
-// $themecolorLilaDark: #2c407d;
+//$themecolorLilaDarkOriginal: #2c407d;
 $themecolorLilaDark: #1b274b;
+$themecolorLilaDarkLighter: #22315d;
+
 // $themecolorLilaDarkest: #161637;
 $themecolorLilaDarkest: #151e37;
 
-$themecolor: #373c49;
+$themecolor: #4a5669; //#373c49;
 $themecolorFront: #c7d0eb;
 $themeBorderColor: #ebebeb;
 $themeBorderColorFront: #293b70;
@@ -45,8 +50,8 @@ $themeBorderColorFront: #293b70;
 $themecolorLight: #66758d;
 $themecolorLighter: #e6e6e6;
 
-$themeHeadingcolor: #121923;
-$lightgrey: #f9f9f9; //#f5f6f9
+$themeHeadingcolor: #212735; //#121923;
+$lightgrey: #f5f6f9; //#f9f9f9;
 $mediumgrey: #f1f1f4;
 $themecolorGreen: #5d5f5e;
 $themecolorRed: #e62e65;

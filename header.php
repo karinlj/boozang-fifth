@@ -159,41 +159,6 @@ if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_
                             </ul>
                         </section>
                         <?php } ?>
-
-
-
-
-
-
-
-
-
-                        <!-- get feature_slider -->
-                        <!-- <section class="two-columns-section feature_slider ">
-                        <div class="feat_slider_wrapper">
-                            <img id="1y_img" class="feat_img inactive active"
-                                src="https://localhost/Boozang/wp-content/uploads/2020/06/ide-style.png"
-                                alt="IDE-style interface">
-                            <img id="2y_img" class="feat_img inactive"
-                                src="https://localhost/Boozang/wp-content/uploads/2020/05/map-view.png" alt="Map view">
-                            <img id="3y_img" class="feat_img inactive"
-                                src="https://localhost/Boozang/wp-content/uploads/2020/05/cucumber-built-in.png"
-                                alt="Cucumber support built-in">
-                        </div>
-                        <div class="feat_list">
-                            <ul id="features_menu">
-                                <li id="1y" class="features_menu_item inactive active">
-                                    <span id="1y">IDE-style interface</span>
-                                </li>
-                                <li id="2y" class="features_menu_item inactive">
-                                    <span id="2y">Graphic maps</span>
-                                </li>
-                                <li id="3y" class="features_menu_item inactive">
-                                    <span id="3y">Cucumber support</span>
-                                </li>
-                            </ul>
-                        </div>
-                        </section> -->
                     </div>
                     <?php
 }

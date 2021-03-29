@@ -65,7 +65,6 @@ img {
 }
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
-
   @media all and (min-width: $sm-min) {
     padding: 4rem calc(2.25rem - 15px);
   }
@@ -385,7 +384,7 @@ header {
   }
   &.lightgrey {
     //tillfälligt
-    background: $themecolorBlueLightBg;
+    background: $lightgrey;
     h1,
     h2,
     h3,
@@ -1526,58 +1525,91 @@ small pricing cards
   }
   //tillfälligt
   &.presentation {
-    background: $lightgrey;
-    .column_row {
-      padding-bottom: 0;
-      justify-content: flex-end;
-      .part {
-        @media all and (min-width: $md-min) {
-          // width: 70%;
+    .part {
+      @media all and (min-width: $md-min) {
+        // width: 70%;
+      }
+      &.text {
+        padding: 0;
+      }
+      &.image {
+        &::before {
+          content: "";
         }
-        &.text {
-          padding: 0;
-        }
-        &.image {
-          width: 30%;
-          &::before {
-            content: "";
-          }
-          img {
-            box-shadow: none;
-            max-width: 210px;
-            &:hover {
-              transform: scale(1);
-            }
+        img {
+          box-shadow: none;
+          // max-width: 210px;
+          &:hover {
+            transform: scale(1);
           }
         }
       }
     }
   }
+  //story fields
   &.story {
-    padding-bottom: 0;
-    background: #fff;
+    padding: 4rem 0 0 0;
+    @media all and (min-width: $md-min) {
+      padding: 7rem 0 0 0;
+    }
     .header {
       text-align: center;
-      padding-bottom: 4rem;
     }
     .column_row {
-      padding-bottom: 6rem;
+      display: block;
+      padding: 2rem calc(1.5rem - 15px);
+      @media all and (min-width: $sm-min) {
+        padding: 2rem calc(2.25rem - 15px);
+      }
+      @media all and (min-width: $md-min) {
+        padding: 3rem calc(3rem - 15px);
+      }
+      @media all and (min-width: $xl-min) {
+        padding: 3rem calc(3.75rem - 15px);
+      }
       .part {
         @media all and (min-width: $md-min) {
           // width: 70%;
         }
         &.text {
           padding-bottom: 3rem;
+          .small_title {
+            font-weight: 700;
+            font-size: 17px;
+            color: #cfd5de;
+            letter-spacing: 0;
+            line-height: 36px;
+            .number {
+              font-size: 70px;
+              font-weight: 700;
+              color: #e1e6ed;
+              letter-spacing: 0;
+            }
+          }
         }
         &.image {
           &::before {
             content: "";
           }
           img {
+            box-shadow: $themeBox_shadow_images;
             &:hover {
               transform: scale(1);
             }
           }
+        }
+      }
+      .column_row_inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @media all and (min-width: $sm-min) {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+        @media all and (min-width: $md-min) {
+          flex-direction: row;
+          max-width: 960px;
         }
       }
     }
@@ -1635,8 +1667,8 @@ small pricing cards
 ***********************/
 
 .pillars_section {
-  border-top: 1px solid $themeBorderColorFront;
-  border-bottom: 1px solid $themeBorderColorFront;
+  // border-top: 1px solid $themeBorderColorFront;
+  // border-bottom: 1px solid $themeBorderColorFront;
   background: $themecolorBlueLightBg;
   height: auto;
   overflow: hidden;
@@ -1746,7 +1778,7 @@ small pricing cards
       flex-direction: row;
     }
     .testimonials-item {
-      background: $themecolorLilaDarkest;
+      background: $themecolorLilaDarkLighter;
       flex: 1 1 28%;
       display: flex;
       flex-direction: column;
@@ -1761,10 +1793,10 @@ small pricing cards
         min-height: 340px;
       }
       p {
-        color: $themecolorFront;
-        strong {
-          color: #fff;
-        }
+        color: #fff; //$themecolorFront;
+        // strong {
+        //   color: #fff;
+        // }
       }
       .signature {
         font-weight: 400;

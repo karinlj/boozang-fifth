@@ -60,13 +60,12 @@ jQuery(document).ready(function ($) {
   });
 
   //feature slider
-  var rand = Math.floor(Math.random() * 3);
+  var rand = Math.floor(Math.random() * 3 + 1);
   //set active class on rand
-  // $(".tab_content:eq(' + rand + ')").addClass("active");
-  // $(".tab_link:eq(' + rand + ')").addClass("active");
-
-  $(".tab_content:first-child ").addClass("active");
-  $(".tab_link:first-child ").addClass("active");
+  $(".tab_content:nth-child(" + rand + ")").addClass("active");
+  $(".tab_link:nth-child(" + rand + ")").addClass("active");
+  // $(".tab_content:first-child ").addClass("active");
+  // $(".tab_link:first-child ").addClass("active");
 
   $(".tab_link").click(function () {
     //get value of data_tab-attribute in this link

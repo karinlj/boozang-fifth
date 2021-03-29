@@ -11,7 +11,7 @@ Author URI: http://karinljunggren.com
 *********************/
 body {
   font-family: "Roboto", "Helvetica", sans-serif;
-  color: #373c49;
+  color: #4a5669;
   margin: 0;
   padding: 0;
   background: #fff;
@@ -123,7 +123,7 @@ li,
 div,
 input {
   font-family: "Roboto", "Helvetica", sans-serif;
-  color: #373c49;
+  color: #4a5669;
   font-weight: 400;
 }
 
@@ -134,7 +134,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", "Helvetica", sans-serif;
-  color: #121923;
+  color: #212735;
 }
 
 section h3,
@@ -446,7 +446,7 @@ header.green {
 }
 section.lightgrey,
 header.lightgrey {
-  background: #1b274b;
+  background: #f5f6f9;
 }
 section.lightgrey h1,
 section.lightgrey h2,
@@ -460,11 +460,11 @@ header.lightgrey h3,
 header.lightgrey h4,
 header.lightgrey h5,
 header.lightgrey h6 {
-  color: #121923;
+  color: #212735;
 }
 section.lightgrey p,
 header.lightgrey p {
-  color: #373c49;
+  color: #4a5669;
 }
 section.lightgrey .banner_link,
 header.lightgrey .banner_link {
@@ -1176,7 +1176,7 @@ nav > .toggle {
     pricing
  *********************/
 .pricing_section {
-  background: #f9f9f9;
+  background: #f5f6f9;
 }
 .pricing_section .preamble_section {
   text-align: center;
@@ -1201,7 +1201,7 @@ nav > .toggle {
   text-align: center;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
-  border: 1px solid #f9f9f9;
+  border: 1px solid #f5f6f9;
   height: 500px;
 }
 .pricing_section .card .card-body {
@@ -1619,48 +1619,89 @@ small pricing cards
   font-style: italic;
   margin-top: 4px;
 }
-.two_columns_section.presentation {
-  background: #f9f9f9;
-}
-.two_columns_section.presentation .column_row {
-  padding-bottom: 0;
-  justify-content: flex-end;
-}
-.two_columns_section.presentation .column_row .part.text {
+.two_columns_section.presentation .part.text {
   padding: 0;
 }
-.two_columns_section.presentation .column_row .part.image {
-  width: 30%;
-}
-.two_columns_section.presentation .column_row .part.image::before {
+.two_columns_section.presentation .part.image::before {
   content: "";
 }
-.two_columns_section.presentation .column_row .part.image img {
+.two_columns_section.presentation .part.image img {
   box-shadow: none;
-  max-width: 210px;
 }
-.two_columns_section.presentation .column_row .part.image img:hover {
+.two_columns_section.presentation .part.image img:hover {
   transform: scale(1);
 }
 .two_columns_section.story {
-  padding-bottom: 0;
-  background: #fff;
+  padding: 4rem 0 0 0;
+}
+@media all and (min-width: 768px) {
+  .two_columns_section.story {
+    padding: 7rem 0 0 0;
+  }
 }
 .two_columns_section.story .header {
   text-align: center;
-  padding-bottom: 4rem;
 }
 .two_columns_section.story .column_row {
-  padding-bottom: 6rem;
+  display: block;
+  padding: 2rem calc(1.5rem - 15px);
+}
+@media all and (min-width: 576px) {
+  .two_columns_section.story .column_row {
+    padding: 2rem calc(2.25rem - 15px);
+  }
+}
+@media all and (min-width: 768px) {
+  .two_columns_section.story .column_row {
+    padding: 3rem calc(3rem - 15px);
+  }
+}
+@media all and (min-width: 1200px) {
+  .two_columns_section.story .column_row {
+    padding: 3rem calc(3.75rem - 15px);
+  }
 }
 .two_columns_section.story .column_row .part.text {
   padding-bottom: 3rem;
 }
+.two_columns_section.story .column_row .part.text .small_title {
+  font-weight: 700;
+  font-size: 17px;
+  color: #cfd5de;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+.two_columns_section.story .column_row .part.text .small_title .number {
+  font-size: 70px;
+  font-weight: 700;
+  color: #e1e6ed;
+  letter-spacing: 0;
+}
 .two_columns_section.story .column_row .part.image::before {
   content: "";
 }
+.two_columns_section.story .column_row .part.image img {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
 .two_columns_section.story .column_row .part.image img:hover {
   transform: scale(1);
+}
+.two_columns_section.story .column_row .column_row_inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media all and (min-width: 576px) {
+  .two_columns_section.story .column_row .column_row_inner {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 768px) {
+  .two_columns_section.story .column_row .column_row_inner {
+    flex-direction: row;
+    max-width: 960px;
+  }
 }
 .two_columns_section.demo .column_row {
   padding: 0;
@@ -1712,8 +1753,6 @@ small pricing cards
   pillars
 ***********************/
 .pillars_section {
-  border-top: 1px solid #293b70;
-  border-bottom: 1px solid #293b70;
   background: #1b274b;
   height: auto;
   overflow: hidden;
@@ -1834,7 +1873,7 @@ small pricing cards
   }
 }
 .testimonials_section_new .testimonials-container .testimonials-item {
-  background: #151e37;
+  background: #22315d;
   flex: 1 1 28%;
   display: flex;
   flex-direction: column;
@@ -1852,9 +1891,6 @@ small pricing cards
   }
 }
 .testimonials_section_new .testimonials-container .testimonials-item p {
-  color: #c7d0eb;
-}
-.testimonials_section_new .testimonials-container .testimonials-item p strong {
   color: #fff;
 }
 .testimonials_section_new .testimonials-container .testimonials-item .signature {
@@ -2143,12 +2179,12 @@ small pricing cards
   font-size: 0.8em;
   display: block;
   letter-spacing: 0.2px;
-  color: #373c49;
+  color: #4a5669;
   text-decoration: none;
   cursor: pointer;
   font-weight: 500;
   border-bottom: 1px solid #ddd;
-  color: #373c49;
+  color: #4a5669;
   text-decoration: none;
 }
 .blog-sidebar .sidebar-module ul li a:hover {
@@ -2319,7 +2355,7 @@ small pricing cards
 .blog_flow .post_card.single:hover .blog_post_title,
 .blog_flow .post_card.single:hover p {
   transition: none;
-  color: #373c49;
+  color: #4a5669;
 }
 .blog_flow .post_card.single img {
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
@@ -2517,7 +2553,7 @@ text layout for Pages Content block
   404-page
 *********************/
 .nopage {
-  background: #f9f9f9;
+  background: #f5f6f9;
   border: 1px solid #ebebeb;
   padding: 3rem;
   min-height: 300px;
@@ -3139,10 +3175,10 @@ img_text_section
   background-image: linear-gradient(to right bottom, #f0dbed, #f1e5f3, #f4eef8, #f9f7fc, #ffffff);
 }
 .extraLightBlue .banner_link {
-  color: #373c49;
+  color: #4a5669;
 }
 .extraLightBlue .banner_link:before {
-  background: #373c49;
+  background: #4a5669;
 }
 
 .myblue {
@@ -3187,7 +3223,7 @@ img_text_section
 }
 
 .lightgrey {
-  background: #f9f9f9;
+  background: #f5f6f9;
 }
 
 /*# sourceMappingURL=custom.css.map */
