@@ -36,7 +36,6 @@ if (have_rows('testimonials_content')) {
 
                         <h4 class="signature"><?php the_sub_field('signature'); ?></h4>
                     </div>
-                    <!-- <span class="pointer-tip"></span> -->
                     <?php
     }
 }?>
