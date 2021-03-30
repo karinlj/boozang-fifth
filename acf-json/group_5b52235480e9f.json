@@ -196,7 +196,7 @@
                     "label": "Image",
                     "name": "img",
                     "type": "image",
-                    "instructions": "Aspect ratio 16 : 9",
+                    "instructions": "Aspect ratio 4:3",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -254,5 +254,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617005540
+    "modified": 1617140295
 }

@@ -86,7 +86,19 @@ img {
   }
   @media all and (min-width: $xl-min) {
     // padding: 3.2rem calc(3.75rem - 15px);
-    padding: 5rem calc(3.75rem - 15px);
+    padding: 3rem calc(3.75rem - 15px);
+  }
+}
+.section_spacing_top_mini {
+  padding: 1.5rem calc(1.5rem - 15px);
+  @media all and (min-width: $sm-min) {
+    padding: 1rem calc(2.25rem - 15px);
+  }
+  @media all and (min-width: $md-min) {
+    padding: 1rem calc(3rem - 15px);
+  }
+  @media all and (min-width: $xl-min) {
+    padding: 1rem calc(3.75rem - 15px);
   }
 }
 
@@ -853,8 +865,8 @@ nav {
     min-height: 550px;
   }
   @media all and (min-width: $lg-min) {
-    min-height: 600px;
-    //min-height: 750px;
+    // min-height: 600px;
+    min-height: 650px;
   }
 }
 .header_small {
@@ -953,10 +965,12 @@ nav {
       padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
     }
     @media all and (min-width: $md-min) {
-      padding: 0 calc(3rem - 15px) 4rem calc(3rem - 15px);
+      //padding: 0 calc(3rem - 15px) 4rem calc(3rem - 15px);
+      padding: 0 calc(3rem - 15px) 2rem calc(3rem - 15px);
     }
     @media all and (min-width: $xl-min) {
       padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
+      //padding: 0 calc(3.75rem - 15px) 2rem calc(3.75rem - 15px);
     }
     .header_heading {
       color: #fff;
@@ -995,7 +1009,7 @@ nav {
       align-items: flex-end;
       //tillfälligt
       img {
-        height: 300px;
+        //height: 300px;
       }
       //content
       .tab_content {
@@ -1025,7 +1039,7 @@ nav {
             margin-right: 0;
           }
           &.active {
-            border-color: $themecolorPink;
+            border-color: $linkcolor;
           }
         }
       }
@@ -1048,7 +1062,7 @@ nav {
   .header_items_section {
     padding-top: calc(500px / 3);
     @media all and (min-width: $sm-min) {
-      padding-top: calc(600px / 3);
+      //padding-top: calc(500px / 3);
     }
   }
 }
@@ -1215,33 +1229,26 @@ small pricing cards
     border: none;
     margin-bottom: 3rem;
     border-radius: $themeBorder_radius;
-
     @media all and (min-width: $sm-min) {
       height: 250px;
     }
-
     @media all and (min-width: $lg-min) {
       margin-bottom: 0;
     }
-
     .col-sm-9 {
       border-bottom: 2px solid #e6e6e6;
-
       @media all and (min-width: $sm-min) {
         border-bottom: none;
         border-right: 2px solid #e6e6e6;
       }
-
       .text {
         font-size: 0.9rem;
       }
     }
-
     .col-sm-3 {
       @media all and (min-width: $sm-min) {
         text-align: center;
       }
-
       .price {
         h3 {
           margin-bottom: 0.2rem;
@@ -1253,19 +1260,15 @@ small pricing cards
         }
       }
     }
-
     &.blue {
       border-top: 5px solid $themecolorBlue;
     }
-
     &.lightblue {
       border-top: 5px solid $themecolorBlueLight;
     }
-
     &.green {
       border-top: 5px solid $themecolorGreen;
     }
-
     &.red {
       border-top: 5px solid $themecolorRed;
     }
@@ -1614,52 +1617,6 @@ small pricing cards
       }
     }
   }
-  &.demo {
-    .column_row {
-      @media all and (min-width: $md-min) {
-        flex-direction: column;
-      }
-      padding: 0;
-      .part {
-        @media all and (min-width: $md-min) {
-          width: 70%;
-        }
-        &.text {
-          text-align: center;
-          h3 {
-            color: #fff;
-          }
-          p {
-            color: $themecolorFront;
-          }
-          padding-bottom: 3rem;
-        }
-        &.image {
-          // tillfälligt
-          width: 60%;
-          transition: transform 0.3s ease;
-          &:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
-          }
-          &::before {
-            content: "";
-          }
-          .img_link {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            z-index: 20;
-            &::before {
-              background: transparent;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 /**********************
@@ -1667,9 +1624,9 @@ small pricing cards
 ***********************/
 
 .pillars_section {
-  // border-top: 1px solid $themeBorderColorFront;
+  border-top: 1px solid $themeBorderColorFront;
   // border-bottom: 1px solid $themeBorderColorFront;
-  background: $themecolorBlueLightBg;
+  background: $themecolorLilaDarkLighter;
   height: auto;
   overflow: hidden;
   @include d-flex;
@@ -1677,7 +1634,6 @@ small pricing cards
   align-items: center;
   @media all and (min-width: $md-min) {
   }
-
   .pillars-item {
     height: auto;
     @media all and (min-width: $md-min) {
@@ -1701,11 +1657,12 @@ small pricing cards
       // }
     }
     .heading {
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       color: #fff;
     }
     p {
       color: $themecolorFront;
+      font-size: 0.9rem;
     }
   }
 }
@@ -1810,8 +1767,7 @@ small pricing cards
       .icon {
         margin-bottom: 1rem;
         i.fas {
-          // color: $themecolorLighter;
-          color: #fff;
+          color: $themecolorFront;
           font-size: 1.5em;
         }
       }
@@ -1819,12 +1775,12 @@ small pricing cards
     .testimonials-item {
       &.blue {
         .signature {
-          color: $themecolorBlue;
+          color: $themecolorPink;
         }
       }
       &.green {
         .signature {
-          color: $themecolorGreenNew;
+          color: $themecolorGreen;
         }
       }
       &.lightblue {
@@ -2530,6 +2486,7 @@ forum section
 *********************/
 .signup_section {
   //background: see scss section
+  background: $themecolorLilaDark !important;
   .col-md-6:first-child {
     border-right: 1px solid $themeBorderColorFront;
   }
@@ -2727,6 +2684,8 @@ forum section
 ***********************************/
 
 .banner-section {
+  background: $themecolorLilaDark;
+  border-radius: $themeBorder_radius;
   height: auto;
   overflow: hidden;
   @include d-flex;
@@ -2737,17 +2696,17 @@ forum section
     min-height: 500px;
   }
   .row {
-    padding: 0.75rem 0;
+    //padding: 0.75rem 0;
   }
   .banner-item {
     &.blue {
-      background-image: $themecolorGreenNewBg;
+      background: $themecolorLilaDarkLighter;
     }
     &.green {
       background: $themecolorGreenNewBg;
     }
     &.lightblue {
-      background: $themecolorBlueLightBg;
+      background: $themecolorNewBlue;
     }
   }
   .banner-item {
@@ -2755,7 +2714,6 @@ forum section
     margin-bottom: 2rem;
     padding: 1.5rem;
     height: auto;
-    border-radius: $themeBorder_radius;
     @media all and (min-width: $lg-min) {
       margin-bottom: 0;
       height: 280px;
@@ -2767,12 +2725,12 @@ forum section
       }
     }
     p,
-    h3,
+    .heading,
     li,
     .banner-icon {
       color: #fff;
     }
-    h3 {
+    .heading {
       &:after {
         background-color: #fff;
       }
@@ -2784,6 +2742,92 @@ forum section
         margin-bottom: 0.5rem;
       }
     }
+    &:first-child {
+      border-top-left-radius: $themeBorder_radius;
+      border-bottom-left-radius: $themeBorder_radius;
+    }
+    &:last-child {
+      border-top-right-radius: $themeBorder_radius;
+      border-bottom-right-radius: $themeBorder_radius;
+    }
+  }
+}
+
+/*********************************
+smaller_items blocks
+***********************************/
+
+.smaller_items {
+  background: $themecolorLilaDark;
+  // overflow: hidden;
+  // @include d-flex;
+  // justify-content: center;
+  // align-items: center;
+  // transition: all 150ms ease-out;
+
+  .header {
+    .heading {
+      color: #fff;
+      margin-bottom: 5rem;
+    }
+  }
+  .row {
+    //padding: 0.75rem 0;
+  }
+  .banner-item {
+    &.blue {
+      background: $themecolorLilaDarkLighter;
+    }
+    &.green {
+      background: $themecolorGreenNewBg;
+    }
+    &.lightblue {
+      background: $themecolorNewBlue;
+    }
+  }
+  .banner-item {
+    box-shadow: $themeBox_shadow;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    height: auto;
+    @media all and (min-width: $lg-min) {
+      margin-bottom: 0;
+      height: 280px;
+    }
+    .banner-icon {
+      margin-bottom: 1rem;
+      i.fas {
+        font-size: 1.3rem;
+      }
+    }
+    p {
+      color: $themecolorFront;
+    }
+    .heading,
+    li,
+    .banner-icon {
+      color: #fff;
+    }
+    .heading {
+      &:after {
+        background-color: #fff;
+      }
+    }
+    p {
+      font-size: 1rem;
+      @media all and (min-width: $lg-min) and (max-width: $lg-max) {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+    // &:first-child {
+    //   border-top-left-radius: $themeBorder_radius;
+    //   border-bottom-left-radius: $themeBorder_radius;
+    // }
+    // &:last-child {
+    //   border-top-right-radius: $themeBorder_radius;
+    //   border-bottom-right-radius: $themeBorder_radius;
+    // }
   }
 }
 
@@ -2874,6 +2918,81 @@ img_text_section
     }
   }
 }
+/**********************************
+big_image_center
+***********************************/
+.big_image_center {
+  background: $themecolorLilaDark;
+  text-align: center;
+  .heading {
+    color: #fff;
+  }
+  .preamble {
+    color: $themecolorFront;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .image_part {
+    padding-top: 2rem;
+    a:hover {
+      opacity: 1;
+    }
+    transition: all 0.5s ease-in; //how fast with delay
+    &:hover {
+      transform: scale(1.02); //how much
+    }
+    img {
+      border-radius: $themeBorder_radius;
+    }
+  }
+}
+
+// &.demo {
+//   .column_row {
+//     @media all and (min-width: $md-min) {
+//       flex-direction: column;
+//     }
+//     padding: 0;
+//     .part {
+//       @media all and (min-width: $md-min) {
+//         width: 70%;
+//       }
+//       &.text {
+//         text-align: center;
+//         h3 {
+//           color: #fff;
+//         }
+//         p {
+//           color: $themecolorFront;
+//         }
+//         padding-bottom: 3rem;
+//       }
+//       &.image {
+//         // tillfälligt
+//         width: 60%;
+//         transition: transform 0.3s ease;
+//         &:hover {
+//           transform: translateX(5px);
+//           box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
+//         }
+//         &::before {
+//           content: "";
+//         }
+//         .img_link {
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           bottom: 0;
+//           right: 0;
+//           z-index: 20;
+//           &::before {
+//             background: transparent;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 /******************************************************************************
   two columns blocks - Text (and/ or image) - two columns with background color
@@ -3037,152 +3156,6 @@ img_text_section
   }
 }
 
-/**********************
-   skills boxes
-***********************/
-.boxes {
-  //built with flexbox and text on hover with position:absolute
-  .boxes_inner {
-    display: flex;
-    flex-direction: column;
-    @media all and (min-width: $lg-min) {
-      flex-direction: row !important;
-      flex-wrap: wrap;
-    }
-    .box {
-      //height: 420px;
-      height: 280px;
-      overflow: hidden;
-      position: relative;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top center;
-      display: flex;
-      align-items: center;
-      flex: 0 0 33.33%;
-      // flex: 0 0 50%;
-      &:nth-of-type(1) {
-        &:before {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background-image: $themecolorBlueBg;
-          opacity: 0.85;
-          // background: rgba(0, 0, 0, 0.1);
-          content: "";
-          display: block;
-          z-index: 0;
-        }
-      }
-      // &:hover {
-      //   filter: brightness(85%);
-      //   -webkit-filter: brightness(85%);
-      //   transition: all 1s ease;
-      // }
-      img {
-        width: 100%;
-      }
-      &:nth-of-type(odd) {
-        // sätter padding-left på vänstra sidans textfält
-        .text-part-outer {
-          @media all and (min-width: $sm-min) {
-            padding-left: 2.25rem;
-          }
-          @media all and (min-width: $md-min) {
-            padding-left: 3rem;
-          }
-          @media all and (min-width: $lg-min) {
-            padding-left: calc(3.75rem);
-            // padding-right: 5rem;
-            right: 0;
-            left: auto;
-          }
-        }
-      }
-      &:nth-of-type(even) {
-        // sätter padding-right på högra sidans textfält
-        .text-part-outer {
-          @media all and (min-width: $sm-min) {
-            padding-right: 2.25rem;
-          }
-          @media all and (min-width: $md-min) {
-            padding-right: 3rem;
-          }
-          @media all and (min-width: $lg-min) {
-            padding-right: calc(2.25rem + 15px);
-            padding-left: 5rem;
-            left: 0;
-            right: auto;
-          }
-        }
-      }
-      //container with
-      // @media all and (min-width: 1580px) {
-      //   max-width: 1250px;
-      // }
-      // @media all and (min-width: 1780px) {
-      //   max-width: 1450px;
-      // }
-
-      //padding
-      // padding: 4rem calc(1.5rem - 15px);
-      // @media all and (min-width: $sm-min) {
-      //   padding: 4rem calc(2.25rem - 15px);
-      // }
-      // @media all and (min-width: $md-min) {
-      //   padding: 4rem calc(3rem - 15px);
-      // }
-      // @media all and (min-width: $xl-min) {
-      //   // padding: 4.5rem calc(3.75rem - 15px);
-      //   padding: 7rem calc(3.75rem - 15px);
-      // }
-
-      .text-part-outer {
-        //general for both sides
-        position: relative;
-        z-index: 10;
-        padding: 0 1.5rem;
-        max-width: calc((1380px / 2) + 2.25rem);
-        @media all and (min-width: $xl-min) {
-          max-width: calc((1380px / 2) + 3.75rem - 15px);
-        }
-
-        .text-part-inner {
-          // overflow: hidden;
-          @media all and (max-width: $sm-max) {
-            padding: 5.6rem 0;
-          }
-          p {
-            //color: #fff;
-            @media all and (min-width: $xl-min) {
-              font-size: 1em;
-            }
-            strong {
-              letter-spacing: 0.5px;
-            }
-          }
-          h3 {
-            //color: #fff;
-            letter-spacing: 0.5px;
-          }
-          .boxes-icon {
-            margin-bottom: 1rem;
-            font-size: 2.1rem;
-            //color: #fff;
-          }
-        }
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-      }
-    }
-  }
-}
-
 .darkblue {
   background-image: $themecolorLilaDarkestBg;
   //background: #fff;
@@ -3247,32 +3220,152 @@ img_text_section
   background: $lightgrey;
 }
 
-// .feature_slider_test {
-//   background: lightblue;
-//   max-width: 800px;
-//   margin: 4rem auto;
-//   //content
-//   .tab_content {
-//     // img {
-//     height: 300px !important;
-//     // }
-//     display: none;
-//     &.active {
-//       display: block;
-//     }
-//   }
-//   //link
-//   .tabs {
-//     padding-top: 1rem;
-//     list-style: none;
-//     li.tab_link {
-//       color: #222;
-//       display: inline-block;
-//       padding: 10px 15px;
-//       cursor: pointer;
-//       &.active {
-//         background: #ededed;
-//       }
-//     }
-//   }
-// }
+/**********************
+   skills boxes
+***********************/
+.skills_section {
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  //built with flexbox and text on hover with position:absolute
+  .boxes-inner {
+    display: flex;
+    flex-direction: column;
+
+    @media all and (min-width: $lg-min) {
+      flex-direction: row !important;
+      flex-wrap: wrap;
+    }
+    .box {
+      &:nth-of-type(1) {
+        border-top-left-radius: $themeBorder_radius;
+        border-top-right-radius: $themeBorder_radius;
+      }
+      &:nth-of-type(6) {
+        border-bottom-left-radius: $themeBorder_radius;
+        border-bottom-right-radius: $themeBorder_radius;
+      }
+      @media all and (min-width: $lg-min) {
+        &:nth-of-type(1) {
+          border-top-right-radius: 0;
+        }
+        &:nth-of-type(3) {
+          border-top-right-radius: $themeBorder_radius;
+        }
+        &:nth-of-type(4) {
+          border-bottom-left-radius: $themeBorder_radius;
+        }
+        &:nth-of-type(6) {
+          border-bottom-left-radius: 0;
+        }
+      }
+      background: $themecolorLilaDarkLighter;
+      min-height: 320px;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      display: flex;
+      align-items: center;
+      flex: 0 0 33.33%;
+      //se även nedan
+      &:nth-child(odd):not(:first-child) {
+        background: $linkcolor;
+      }
+      //se även nedan
+      &:nth-child(even) {
+        background: $themecolorLilaDarkLighter;
+      }
+      &:first-child {
+        &:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.1);
+          content: "";
+          display: block;
+          z-index: 0;
+        }
+      }
+      &:hover {
+        filter: brightness(85%);
+        -webkit-filter: brightness(85%);
+        transition: all 1s ease;
+      }
+      img {
+        width: 100%;
+      }
+      &:nth-of-type(odd) {
+        // sätter padding-left på vänstra sidans textfält
+        .text-part-outer {
+          @media all and (min-width: $sm-min) {
+            padding-left: 2.25rem;
+          }
+          @media all and (min-width: $md-min) {
+            padding-left: 3rem;
+          }
+          @media all and (min-width: $lg-min) {
+            padding-left: calc(3.75rem);
+            // padding-right: 5rem;
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+
+      &:nth-of-type(even) {
+        // sätter padding-right på högra sidans textfält
+        .text-part-outer {
+          @media all and (min-width: $sm-min) {
+            padding-right: 2.25rem;
+          }
+          @media all and (min-width: $md-min) {
+            padding-right: 3rem;
+          }
+          @media all and (min-width: $lg-min) {
+            padding-right: calc(2.25rem + 15px);
+            padding-left: 5rem;
+            left: 0;
+            right: auto;
+          }
+        }
+      }
+      .text-part-outer {
+        //general for both sides
+        position: relative;
+        z-index: 10;
+        padding: 0 1.5rem;
+        max-width: calc((1380px / 2) + 2.25rem);
+
+        .text-part-inner {
+          // overflow: hidden;
+          @media all and (max-width: $sm-max) {
+            padding: 5.6rem 0;
+          }
+          p {
+            color: #fff;
+            @media all and (min-width: $xl-min) {
+              font-size: 1em;
+            }
+            strong {
+              letter-spacing: 0.5px;
+            }
+          }
+          h3 {
+            color: #fff;
+            letter-spacing: 0.5px;
+          }
+          .boxes-icon {
+            margin-bottom: 1rem;
+            font-size: 2.1rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,11 @@
 <?php
-// Feature blocks layout for Front Page Block
+// smaller_items for Front Page Block
 ?>
-<section class="banner-section section_spacing_top_medium">
+<section class="smaller_items section_spacing_top_small">
+    <header class="header text-center">
+        <h3 class="heading"><?php the_sub_field('heading'); ?></h3>
+    </header>
     <div class="container">
-        <?php
-// check if the repeater field has rows
-if (have_rows('feature_blocks_row')) {
-    while (have_rows('feature_blocks_row')) {
-        the_row(); ?>
-
         <div class="row no-gutters align-items-start">
             <?php
 // check if the repeater field has rows
@@ -38,9 +35,6 @@ if (have_rows('feature_blocks_row')) {
             }
         } ?>
         </div>
-        <?php
-    }
-}
-?>
+
     </div>
 </section>
