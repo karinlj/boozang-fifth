@@ -3,10 +3,10 @@
     "title": "Sign up field",
     "fields": [
         {
-            "key": "field_5b48ac5e57a1f",
-            "label": "Sign up field",
-            "name": "sign_up_field",
-            "type": "group",
+            "key": "field_60647dc19c419",
+            "label": "Sign up btns",
+            "name": "sign_up_btns",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,10 +15,14 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5b48acea57a20",
+                    "key": "field_60647dd99c41a",
                     "label": "Heading",
                     "name": "heading",
                     "type": "text",
@@ -37,10 +41,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5b48b7af6fa67",
+                    "key": "field_60647dde9c41b",
                     "label": "Text",
                     "name": "text",
-                    "type": "textarea",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -51,14 +55,14 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
-                    "key": "field_5b48b8c45257f",
-                    "label": "Signup button",
-                    "name": "signup_button",
+                    "key": "field_60647de59c41c",
+                    "label": "Link",
+                    "name": "link",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -69,32 +73,6 @@
                         "id": ""
                     },
                     "return_format": "array"
-                },
-                {
-                    "key": "field_5b7eea37e44d1",
-                    "label": "Color theme",
-                    "name": "color_theme",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "blue": "Blue",
-                        "lightblue": "Lightblue",
-                        "lightgrey": "Lightgrey",
-                        "green": "Green"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "default_value": "",
-                    "layout": "vertical",
-                    "return_format": "value",
-                    "save_other_choice": 0
                 }
             ]
         }
@@ -114,7 +92,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1588341661
+    "modified": 1617198590
 }

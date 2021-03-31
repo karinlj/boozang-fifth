@@ -2479,19 +2479,19 @@ forum section
   }
 }
 
-/*********************
-   footer and signup
-*********************/
-.signup_section {
+/***************************
+   sign_up_field Front Page
+****************************/
+
+.sign_up_front_section {
   padding-top: 1rem;
-  //background: see scss section
   background: $themecolorLilaDark !important;
   .col-md-6:first-child {
     border-right: 1px solid $themeBorderColorFront;
   }
-  .heading {
+  header {
     text-align: center;
-    h3 {
+    .heading {
       color: #fff;
     }
     p {
@@ -2499,76 +2499,76 @@ forum section
     }
     padding-bottom: 3rem;
   }
-  .signup_button {
-  }
-  .demo_button {
-    float: right;
-  }
-  .text_section {
-    div {
+  .button_item {
+    .text_section {
       text-align: center;
-    }
-    p {
-      color: $themecolorFront;
-    }
-    h4 {
-      color: #fff;
-    }
-  }
-  .btn_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media all and (min-width: $lg-min) {
-      // justify-content: flex-start;
-    }
-    .btn {
-      background: $themecolorNewBlue;
-      color: #fff;
-      padding: 10px 45px;
-      transition: transform 0.3s ease;
-      &:hover {
-        transform: translateX(3px);
-        box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
-        background: $themecolorNewBlueHover;
+      p {
+        color: $themecolorFront;
       }
-      // &:after {
-      //   content: "\f061";
-      //   font-family: "Font Awesome 5 Free";
-      //   font-weight: 900;
-      //   margin-left: 10px;
-      // }
+      .heading {
+        color: #fff;
+      }
     }
-    &.demo {
-      float: right;
+    .btn_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media all and (min-width: $lg-min) {
+        // justify-content: flex-start;
+      }
+      .btn {
+        background: $themecolorNewBlue;
+        color: #fff;
+        padding: 10px 45px;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: translateX(3px);
+          box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
+          background: $themecolorNewBlueHover;
+        }
+      }
+      &.demo {
+        float: right;
+      }
     }
   }
+}
 
-  // &.lightblue {
-  //   .btn.signup_btn {
-  //     background: #fff;
-  //     color: $themecolorBlueLight;
-  //     border: 1px solid $themecolorBlueLight;
-  //     &:hover {
-  //       background: transparent;
-  //       color: #fff;
-  //       border: 1px solid #fff;
-  //     }
-  //   }
-  // }
-  // &.blue {
-  //   .btn.signup_btn {
-  //     background: #fff;
-  //     color: $themecolorBlue;
-  //     border: 1px solid $themecolorBlue;
-
-  //     &:hover {
-  //       background: transparent;
-  //       color: #fff;
-  //       border: 1px solid #fff;
-  //     }
-  //   }
-  // }
+/*********************
+   footer and signup
+*********************/
+.signup_section {
+  background: #fff;
+  .col-md-6:first-child {
+    border-right: 1px solid $themeBorderColor;
+  }
+  .button_item {
+    .text_section {
+      text-align: center;
+      p {
+        color: $themecolorLight;
+      }
+    }
+    .btn_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media all and (min-width: $lg-min) {
+        // justify-content: flex-start;
+      }
+      .btn {
+        background: $themecolorNewBlue;
+        color: #fff;
+        padding: 10px 45px;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: translateX(3px);
+          box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
+          background: $themecolorNewBlueHover;
+        }
+      }
+    }
+  }
 }
 .footer-main {
   width: 100%;

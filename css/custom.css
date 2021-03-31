@@ -2555,56 +2555,85 @@ forum section
   font-size: 1rem;
 }
 
-/*********************
-   footer and signup
-*********************/
-.signup_section {
+/***************************
+   sign_up_field Front Page
+****************************/
+.sign_up_front_section {
   padding-top: 1rem;
   background: #22315e !important;
 }
-.signup_section .col-md-6:first-child {
+.sign_up_front_section .col-md-6:first-child {
   border-right: 1px solid #293b70;
 }
-.signup_section .heading {
+.sign_up_front_section header {
   text-align: center;
   padding-bottom: 3rem;
 }
-.signup_section .heading h3 {
+.sign_up_front_section header .heading {
   color: #fff;
 }
-.signup_section .heading p {
+.sign_up_front_section header p {
   color: #dae0f1;
 }
-.signup_section .demo_button {
-  float: right;
-}
-.signup_section .text_section div {
+.sign_up_front_section .button_item .text_section {
   text-align: center;
 }
-.signup_section .text_section p {
+.sign_up_front_section .button_item .text_section p {
   color: #dae0f1;
 }
-.signup_section .text_section h4 {
+.sign_up_front_section .button_item .text_section .heading {
   color: #fff;
 }
-.signup_section .btn_container {
+.sign_up_front_section .button_item .btn_container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.signup_section .btn_container .btn {
+.sign_up_front_section .button_item .btn_container .btn {
   background: #0074b1;
   color: #fff;
   padding: 10px 45px;
   transition: transform 0.3s ease;
 }
-.signup_section .btn_container .btn:hover {
+.sign_up_front_section .button_item .btn_container .btn:hover {
   transform: translateX(3px);
   box-shadow: 0 4px 15px 0 rgba(7, 42, 68, 0.2);
   background: #004266;
 }
-.signup_section .btn_container.demo {
+.sign_up_front_section .button_item .btn_container.demo {
   float: right;
+}
+
+/*********************
+   footer and signup
+*********************/
+.signup_section {
+  background: #fff;
+}
+.signup_section .col-md-6:first-child {
+  border-right: 1px solid #ebebeb;
+}
+.signup_section .button_item .text_section {
+  text-align: center;
+}
+.signup_section .button_item .text_section p {
+  color: #66758d;
+}
+.signup_section .button_item .btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup_section .button_item .btn_container .btn {
+  background: #0074b1;
+  color: #fff;
+  padding: 10px 45px;
+  transition: transform 0.3s ease;
+}
+.signup_section .button_item .btn_container .btn:hover {
+  transform: translateX(3px);
+  box-shadow: 0 4px 15px 0 rgba(7, 42, 68, 0.2);
+  background: #004266;
 }
 
 .footer-main {

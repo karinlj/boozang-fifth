@@ -1,9 +1,6 @@
 <?php
 // integrations layout for Front Page Block
 ?>
-
-
-
 <!-- integrations_section -->
 <section class="integrations_section section_spacing_top_medium">
     <div class="container">
