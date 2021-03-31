@@ -1076,11 +1076,35 @@
                                             "save_other_choice": 0
                                         },
                                         {
-                                            "key": "field_5b7886080d2dd",
-                                            "label": "Icon",
-                                            "name": "icon",
+                                            "key": "field_6064477e73835",
+                                            "label": "Background image",
+                                            "name": "background_image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "id",
+                                            "preview_size": "medium",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": ""
+                                        },
+                                        {
+                                            "key": "field_6064478273836",
+                                            "label": "Overlay color",
+                                            "name": "overlay_color",
                                             "type": "radio",
-                                            "instructions": "Which icon do you want?",
+                                            "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
@@ -1089,11 +1113,8 @@
                                                 "id": ""
                                             },
                                             "choices": {
-                                                "code": "Code",
-                                                "check": "Check",
-                                                "user": "User",
-                                                "edit": "Edit",
-                                                "''": "none"
+                                                "overlay-blue": "Overlay blue",
+                                                "overlay-lightblue": "Overlay lightblue"
                                             },
                                             "allow_null": 0,
                                             "other_choice": 0,
@@ -1125,7 +1146,7 @@
                                             "key": "field_5b7886080d2df",
                                             "label": "Text",
                                             "name": "text",
-                                            "type": "wysiwyg",
+                                            "type": "textarea",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
@@ -1135,10 +1156,45 @@
                                                 "id": ""
                                             },
                                             "default_value": "",
-                                            "tabs": "all",
-                                            "toolbar": "full",
-                                            "media_upload": 1,
-                                            "delay": 0
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "new_lines": ""
+                                        },
+                                        {
+                                            "key": "field_6064477573833",
+                                            "label": "Link url",
+                                            "name": "link_url",
+                                            "type": "url",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": ""
+                                        },
+                                        {
+                                            "key": "field_6064477a73834",
+                                            "label": "Link Text",
+                                            "name": "link_text",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
                                         }
                                     ]
                                 },
@@ -1677,5 +1733,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617138244
+    "modified": 1617185032
 }

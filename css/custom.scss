@@ -86,7 +86,7 @@ img {
   }
   @media all and (min-width: $xl-min) {
     // padding: 3.2rem calc(3.75rem - 15px);
-    padding: 3rem calc(3.75rem - 15px);
+    padding: 4rem calc(3.75rem - 15px);
   }
 }
 .section_spacing_top_mini {
@@ -418,7 +418,6 @@ header {
   }
   &.darkgrey {
     background: $themecolorDarkGreyBg;
-
     h1,
     h2,
     h3,
@@ -454,8 +453,7 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background: $themecolorBlueLightBg;
-    opacity: 0.85;
+    background: rgba(34, 49, 94, 0.8);
     content: "";
     display: block;
   }
@@ -2485,6 +2483,7 @@ forum section
    footer and signup
 *********************/
 .signup_section {
+  padding-top: 1rem;
   //background: see scss section
   background: $themecolorLilaDark !important;
   .col-md-6:first-child {
@@ -2683,72 +2682,58 @@ forum section
   banner blocks in different colors
 ***********************************/
 
-.banner-section {
+.feature_blocks {
   background: $themecolorLilaDark;
-  border-radius: $themeBorder_radius;
   height: auto;
   overflow: hidden;
-  @include d-flex;
-  justify-content: center;
-  align-items: center;
   transition: all 150ms ease-out;
   @media all and (min-width: $lg-min) {
     min-height: 500px;
   }
-  .row {
-    //padding: 0.75rem 0;
+  .main_heading {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 3rem;
   }
-  .banner-item {
+  .row {
+    padding: 0.75rem 0;
+  }
+  .single_block {
+    border-radius: $themeBorder_radius;
     &.blue {
       background: $themecolorLilaDarkLighter;
     }
     &.green {
-      background: $themecolorGreenNewBg;
+      background: $themecolorLilaDarkest;
     }
     &.lightblue {
       background: $themecolorNewBlue;
     }
   }
-  .banner-item {
+  .single_block {
     box-shadow: $themeBox_shadow;
     margin-bottom: 2rem;
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
     height: auto;
     @media all and (min-width: $lg-min) {
       margin-bottom: 0;
       height: 280px;
     }
-    .banner-icon {
-      margin-bottom: 1rem;
-      i.fas {
-        font-size: 1.3rem;
+    .inner_items {
+      position: relative;
+      z-index: 10;
+      .heading,
+      li {
+        color: #fff;
       }
-    }
-    p,
-    .heading,
-    li,
-    .banner-icon {
-      color: #fff;
-    }
-    .heading {
-      &:after {
-        background-color: #fff;
+      p {
+        color: $themecolorFront;
+        font-size: 1rem;
+        @media all and (min-width: $lg-min) and (max-width: $lg-max) {
+          font-size: 0.95rem;
+          margin-bottom: 0.5rem;
+        }
       }
-    }
-    p {
-      font-size: 1rem;
-      @media all and (min-width: $lg-min) and (max-width: $lg-max) {
-        font-size: 0.95rem;
-        margin-bottom: 0.5rem;
-      }
-    }
-    &:first-child {
-      border-top-left-radius: $themeBorder_radius;
-      border-bottom-left-radius: $themeBorder_radius;
-    }
-    &:last-child {
-      border-top-right-radius: $themeBorder_radius;
-      border-bottom-right-radius: $themeBorder_radius;
     }
   }
 }

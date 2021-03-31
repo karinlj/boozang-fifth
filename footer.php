@@ -82,9 +82,6 @@ if (function_exists('acf_add_options_page')) {
 ?>
 
 
-
-
-
   <footer id="footer" class="footer-main section_spacing_top_small">
       <div class="container">
           <div class="row align-items-start justify-content-between">

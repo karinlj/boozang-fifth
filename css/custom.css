@@ -110,7 +110,7 @@ img {
 }
 @media all and (min-width: 1200px) {
   .section_spacing_top_small {
-    padding: 3rem calc(3.75rem - 15px);
+    padding: 4rem calc(3.75rem - 15px);
   }
 }
 
@@ -541,8 +541,7 @@ header.overlay-lightblue::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #22315e;
-  opacity: 0.85;
+  background: rgba(34, 49, 94, 0.8);
   content: "";
   display: block;
 }
@@ -1091,7 +1090,7 @@ nav > .toggle {
 .header_small .header_items_section .header_text {
   max-width: 420px;
   font-size: 1.2rem;
-  color: #c7d0eb;
+  color: #dae0f1;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -1752,7 +1751,7 @@ small pricing cards
   color: #fff;
 }
 .pillars_section .pillars-item p {
-  color: #c7d0eb;
+  color: #dae0f1;
   font-size: 0.9rem;
 }
 
@@ -1860,7 +1859,7 @@ small pricing cards
 }
 .testimonials_section_new .testimonials-container .testimonials-item .signature {
   font-weight: 400;
-  border-left: 5px solid #c7d0eb;
+  border-left: 5px solid #dae0f1;
   padding-left: 1rem;
   margin-left: 1rem;
 }
@@ -1868,7 +1867,7 @@ small pricing cards
   margin-bottom: 1rem;
 }
 .testimonials_section_new .testimonials-container .testimonials-item .icon i.fas {
-  color: #c7d0eb;
+  color: #dae0f1;
   font-size: 1.5em;
 }
 .testimonials_section_new .testimonials-container .testimonials-item.blue .signature {
@@ -2560,6 +2559,7 @@ forum section
    footer and signup
 *********************/
 .signup_section {
+  padding-top: 1rem;
   background: #22315e !important;
 }
 .signup_section .col-md-6:first-child {
@@ -2573,7 +2573,7 @@ forum section
   color: #fff;
 }
 .signup_section .heading p {
-  color: #c7d0eb;
+  color: #dae0f1;
 }
 .signup_section .demo_button {
   float: right;
@@ -2582,7 +2582,7 @@ forum section
   text-align: center;
 }
 .signup_section .text_section p {
-  color: #c7d0eb;
+  color: #dae0f1;
 }
 .signup_section .text_section h4 {
   color: #fff;
@@ -2664,7 +2664,7 @@ forum section
   text-decoration: none;
 }
 .footer-main .links ul.footer-links li a {
-  color: #c7d0eb;
+  color: #dae0f1;
   font-size: 0.9rem;
 }
 .footer-main .links ul.footer-links li a:hover {
@@ -2724,76 +2724,66 @@ forum section
   feature blocks 
   banner blocks in different colors
 ***********************************/
-.banner-section {
+.feature_blocks {
   background: #22315e;
-  border-radius: 4px;
   height: auto;
   overflow: hidden;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
   transition: all 150ms ease-out;
 }
 @media all and (min-width: 992px) {
-  .banner-section {
+  .feature_blocks {
     min-height: 500px;
   }
 }
-.banner-section .banner-item.blue {
+.feature_blocks .main_heading {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 3rem;
+}
+.feature_blocks .row {
+  padding: 0.75rem 0;
+}
+.feature_blocks .single_block {
+  border-radius: 4px;
+}
+.feature_blocks .single_block.blue {
   background: #293b70;
 }
-.banner-section .banner-item.green {
-  background: #5d2d57;
+.feature_blocks .single_block.green {
+  background: #1c284a;
 }
-.banner-section .banner-item.lightblue {
+.feature_blocks .single_block.lightblue {
   background: #0074b1;
 }
-.banner-section .banner-item {
+.feature_blocks .single_block {
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
   margin-bottom: 2rem;
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
   height: auto;
 }
 @media all and (min-width: 992px) {
-  .banner-section .banner-item {
+  .feature_blocks .single_block {
     margin-bottom: 0;
     height: 280px;
   }
 }
-.banner-section .banner-item .banner-icon {
-  margin-bottom: 1rem;
+.feature_blocks .single_block .inner_items {
+  position: relative;
+  z-index: 10;
 }
-.banner-section .banner-item .banner-icon i.fas {
-  font-size: 1.3rem;
-}
-.banner-section .banner-item p,
-.banner-section .banner-item .heading,
-.banner-section .banner-item li,
-.banner-section .banner-item .banner-icon {
+.feature_blocks .single_block .inner_items .heading,
+.feature_blocks .single_block .inner_items li {
   color: #fff;
 }
-.banner-section .banner-item .heading:after {
-  background-color: #fff;
-}
-.banner-section .banner-item p {
+.feature_blocks .single_block .inner_items p {
+  color: #dae0f1;
   font-size: 1rem;
 }
 @media all and (min-width: 992px) and (max-width: 1199.9px) {
-  .banner-section .banner-item p {
+  .feature_blocks .single_block .inner_items p {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
   }
-}
-.banner-section .banner-item:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-.banner-section .banner-item:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
 }
 
 /*********************************
@@ -2834,7 +2824,7 @@ smaller_items blocks
   font-size: 1.3rem;
 }
 .smaller_items .banner-item p {
-  color: #c7d0eb;
+  color: #dae0f1;
 }
 .smaller_items .banner-item .heading,
 .smaller_items .banner-item li,
@@ -2951,7 +2941,7 @@ big_image_center
   color: #fff;
 }
 .big_image_center .preamble {
-  color: #c7d0eb;
+  color: #dae0f1;
   max-width: 80%;
   margin: 0 auto;
 }

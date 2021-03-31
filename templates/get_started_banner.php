@@ -13,8 +13,8 @@ if ($bg_image) {
 }?>
 
 
- <!-- boxes -->
-<section class="boxes">
+<!-- boxes -->
+<!-- <section class="boxes">
 	<div class="boxes_inner">
     <div class="box noColor" style="background: url('https://boozang.com/wp-content/uploads/2020/05/keyboard.jpg');">
 	<div class="text-part-outer">
@@ -53,107 +53,64 @@ if ($bg_image) {
 			</div>
 		</div> 
 	</div>
-</section>  
+</section>   -->
 
-
-   <!-- aspect_wrapper -->
-  	<!-- <section class="two_columns_blocks">
- <div class="aspect_wrapper text">
-		<div class="box text noColor" style="background: url('https://boozang.com/wp-content/uploads/2020/05/keyboard.jpg');">
-			<div class="text_part">
-				<div class="text_part_child">
-        <h4>Read more about all the Boozang features</h4>
-				<ul>
-          <li>Feature overview</li>
-          <li>BDD/Cucumber support</li>
-          <li>Data Handling</li>
-        </ul>
-					<p></p>
-				</div>
-			</div>
-		</div>
-	</div>
-  <div class="aspect_wrapper text">
-		<div class="box text myblue">
-			<div class="text_part">
-      <div class="text_part_child">
-        <h4>Spill litter box</h4>
-					<p>Spill litter box, scratch at owner, destroy all furniture, especially couch if it fits, i sits eat from dog's food but thinking longingly about tuna brine.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-  <div class="aspect_wrapper text">
-		<div class="box text newblue">
-			<div class="text_part">
-      <div class="text_part_child">
-        <h4>Spill litter box</h4>
-					<p>Spill litter box, scratch at owner, destroy all furniture, especially couch if it fits, i sits eat from dog's food but thinking longingly about tuna brine.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>    -->
 
 <section class="get_started_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
-  <?php echo $style; ?>>
+    <?php echo $style; ?>>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div>
-        <h2 class=""><?php the_sub_field('heading');?></h2>
-        <div class="sub_info_part bigscreen">
-          <p class=""><?php the_sub_field('text');?></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <h2 class=""><?php the_sub_field('heading');?></h2>
+                    <div class="sub_info_part bigscreen">
+                        <p class=""><?php the_sub_field('text');?></p>
 
-          <?php if ($link_url && $link_text) {?>
+                        <?php if ($link_url && $link_text) {?>
 
-          <a href="<?php echo $link_url; ?>" class="banner_link"><?php echo $link_text; ?></a>
-          <?php
+                        <a href="<?php echo $link_url; ?>" class="banner_link"><?php echo $link_text; ?></a>
+                        <?php
 }
 ?>
-        </div>
-        </div>
-      </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="col-lg-6">
-        <div>
-     
-        <div class="action_items">
-          <?php
+            <div class="col-lg-6">
+                <div>
+
+                    <div class="action_items">
+                        <?php
 // check if the repeater field has rows
 if (have_rows('action_items')) {
-
     while (have_rows('action_items')) {
-        the_row();
-        ?>
-          <div class="action_item">
+        the_row(); ?>
+                        <div class="action_item">
 
-            <h5><?php the_sub_field('action_heading');?></h5>
-            <p><?php the_sub_field('action_text');?></p>
-          </div>
+                            <h5><?php the_sub_field('action_heading'); ?></h5>
+                            <p><?php the_sub_field('action_text'); ?></p>
+                        </div>
 
-          <?php
-}
+                        <?php
+    }
 }
 ?>
-        </div>
-        <div class="sub_info_part smallscreen">
-          <p class=""><?php the_sub_field('text');?></p>
+                    </div>
+                    <div class="sub_info_part smallscreen">
+                        <p class=""><?php the_sub_field('text');?></p>
 
-          <?php
+                        <?php
 if ($link_url && $link_text) {?>
 
-          <a href="<?php echo $link_url; ?>" class="banner_link"><?php echo $link_text; ?></a>
-          <?php
+                        <a href="<?php echo $link_url; ?>" class="banner_link"><?php echo $link_text; ?></a>
+                        <?php
 }
 ?>
-        </div>
-      </div>
-     
-      </div>
-    </div>
-  </div>
-</section>
+                    </div>
+                </div>
 
- 
+            </div>
+        </div>
+    </div>
+</section>
