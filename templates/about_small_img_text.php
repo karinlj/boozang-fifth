@@ -26,7 +26,7 @@
 
             <div class="col-md-6">
                 <div class="part text">
-                    <h3><?php the_sub_field('heading');?></h3>
+                    <h2><?php the_sub_field('heading');?></h2>
                     <p><?php the_sub_field('text');?></p>
                 </div>
             </div>

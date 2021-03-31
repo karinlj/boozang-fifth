@@ -18,7 +18,7 @@ $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true);?>
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <h3 class="heading"> <?php echo $heading; ?></h3>
+                <h2 class="heading"> <?php echo $heading; ?></h2>
                 <p class="preamble"> <?php echo $preamble; ?></p>
                 <div class="image_part">
                     <a class="link_url" href="<?php echo $link_url;?>" target="_blank" rel="noreferrer noopener">

@@ -2,7 +2,12 @@
 // Feature blocks layout for Front Page Block
 ?>
 <section class="feature_blocks section_spacing_top_medium">
-    <h3 class="main_heading">Check out our assets!</h3>
+    <?php
+   $heading = get_sub_field('heading');
+if ($heading) {?>
+    <h2 class="main_heading"> <?php echo $heading; ?></h2>
+    <?php
+}?>
     <div class="container">
         <?php
 // check if the repeater field has rows

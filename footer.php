@@ -1,15 +1,7 @@
 <?php
-
- 
-
-
 if (!is_front_page() && function_exists('acf_add_options_page')) {
     ?>
-
-
-
-
-
+<!-- signup for pages -->
 <section class="signup_section <?php echo $color; ?> section_spacing_top_small">
     <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -51,16 +43,13 @@ if (!is_front_page() && function_exists('acf_add_options_page')) {
                     <?php
                         }
                     } ?>
-
-
                 </div>
             </div>
         </div>
 </section>
 <?php
 }?>
-
-
+<!-- footer -->
 <footer id="footer" class="footer-main section_spacing_top_small">
     <div class="container">
         <div class="row align-items-start justify-content-between">

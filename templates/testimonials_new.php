@@ -7,9 +7,10 @@ $link = get_sub_field('link');
         <div>
             <h2 class="tesimonials-heading"><?php the_sub_field('heading');?></h2>
             <?php if ($link) {?>
-            <a class="arrow_link" href="<?php echo $link['url']; ?>"
-                target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
-            </a>
+            <h5> <a class="arrow_link" href="<?php echo $link['url']; ?>"
+                    target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
+                </a></h5>
+
             <?php
 }?>
 
@@ -34,7 +35,7 @@ if (have_rows('testimonials_content')) {
                             <p class="text"><?php the_sub_field('text'); ?></p>
                         </div>
 
-                        <h4 class="signature"><?php the_sub_field('signature'); ?></h4>
+                        <h5 class="signature"><?php the_sub_field('signature'); ?></h5>
                     </div>
                     <?php
     }

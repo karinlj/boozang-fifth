@@ -30,7 +30,9 @@ $themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
 /*transparent nav*/
 $navcolor: #fff;
 $navBg_transp: transparent;
-$linkcolor: #1b94e4; //$themecolorBlueLight;
+$themecolorNewBlue: #0074b1;
+$themecolorNewBlueHover: #004266;
+$linkcolor: $themecolorNewBlue; // #1b94e4; //$themecolorBlueLight;
 
 /* colors */
 //new lila
@@ -176,6 +178,3 @@ $extraLightBlueOverlay: linear-gradient(
   #b9c4e5,
   #c7d0ea
 );
-
-$themecolorNewBlue: #0074b1;
-$themecolorNewBlueHover: #004266;

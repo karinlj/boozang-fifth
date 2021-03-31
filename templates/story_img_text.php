@@ -4,14 +4,13 @@
  * Layout 'story_img_text' in flex content 'Front Page block'
  */
 ?>
-
 <section class="two_columns_section story">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="header">
                     <?php if (get_sub_field('heading')) {?>
-                    <h3><?php the_sub_field('heading');?></h3>
+                    <h2><?php the_sub_field('heading');?></h2>
                     <?php  }
                 if (get_sub_field('preamble')) {?>
                     <p><?php the_sub_field('preamble');?></p>
