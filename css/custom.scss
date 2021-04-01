@@ -1674,7 +1674,8 @@ small pricing cards
 ***********************/
 
 .testimonials_section_new {
-  background: $themecolorBlueLightBg;
+  background: $lightgrey;
+  background: $themecolorLilaDark;
   height: auto;
   overflow: hidden;
   @media all and (min-width: $xl-min) {
@@ -1695,7 +1696,7 @@ small pricing cards
       flex-direction: row;
     }
     .testimonials-item {
-      background: $themecolorLilaDarkLighter;
+      background: $themecolorLilaDarkest;
       flex: 1 1 28%;
       display: flex;
       flex-direction: column;
@@ -1710,7 +1711,7 @@ small pricing cards
         min-height: 340px;
       }
       p {
-        color: #fff; //$themecolorFront;
+        color: $themecolorFront; //#fff; //$themecolorFront;
         // strong {
         //   color: #fff;
         // }
@@ -1736,17 +1737,17 @@ small pricing cards
     .testimonials-item {
       &.blue {
         .signature {
-          color: $themecolorGreenNew;
+          color: $themecolorPink;
         }
       }
       &.green {
         .signature {
-          color: $themecolorGreenNew;
+          color: $themecolorPink;
         }
       }
       &.lightblue {
         .signature {
-          color: $themecolorGreenNew;
+          color: $themecolorPink;
         }
       }
     }
@@ -2387,7 +2388,6 @@ text layout for Pages Content block
 /***************************
    sign_up_field Front Page
 ****************************/
-
 .sign_up_front_section {
   padding-top: 1rem;
   background: $themecolorLilaDark !important;
@@ -2425,11 +2425,10 @@ text layout for Pages Content block
         background: $themecolorNewBlue;
         color: #fff;
         padding: 10px 45px;
-        transition: transform 0.3s ease;
+        transition: 0.5s ease-in-out;
         &:hover {
-          transform: translateX(3px);
-          box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
-          background: $themecolorNewBlueHover;
+          box-shadow: $themeBox_shadow_images_hover;
+          background: #006399;
         }
       }
       &.demo {
@@ -2457,15 +2456,13 @@ big_image_center
     a:hover {
       opacity: 1;
     }
-    transition: all 0.5s ease-in; //how fast with delay
-    &:hover {
-      transform: scale(1.02); //how much
-    }
     img {
-      // max-width: 90%;
-      // margin: 0 auto;
       border-radius: $themeBorder_radius;
       box-shadow: $themeBox_shadow_images;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        box-shadow: $themeBox_shadow_images_hover;
+      }
     }
   }
 }
@@ -2475,6 +2472,7 @@ big_image_center
 ***********************************/
 .feature_blocks {
   background: $themecolorLilaDark;
+
   height: auto;
   overflow: hidden;
   transition: all 150ms ease-out;
@@ -2490,18 +2488,8 @@ big_image_center
     padding: 0.75rem 0;
   }
   .single_block {
+    position: relative;
     border-radius: $themeBorder_radius;
-    &.blue {
-      background: $themecolorLilaDarkLighter;
-    }
-    &.green {
-      background: $themecolorLilaDarkest;
-    }
-    &.lightblue {
-      background: $themecolorNewBlue;
-    }
-  }
-  .single_block {
     box-shadow: $themeBox_shadow;
     margin-bottom: 2rem;
     padding: 3rem 1.5rem;
@@ -2526,8 +2514,31 @@ big_image_center
         }
       }
     }
+    .link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 20;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        box-shadow: $themeBox_shadow_images_hover;
+      }
+    }
+    &.blue {
+      background: $themecolorLilaDarkLighter;
+    }
+    &.green {
+      background: $themecolorLilaDarkest;
+    }
+    &.lightblue {
+      background: $themecolorNewBlue;
+    }
   }
 }
+
 /********************
   404-page
 *********************/

@@ -27,14 +27,12 @@ if (have_rows('feature_blocks_row')) {
                 $color = get_sub_field('color_theme');
                 $bg_image = get_sub_field('background_image');
                 $link_url = get_sub_field('link_url');
-                $link_text = get_sub_field('link_text');
                 $overlay_color = '';
                 
                 if ($bg_image) {
                     $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
                     $overlay_color = get_sub_field('overlay_color');
                 }
-
                 $col_class = 'col-12 col-lg-4';
                 if (get_sub_field('columns_wide') == 'large') {
                     $col_class = 'col-12 col-lg-8';
@@ -45,13 +43,11 @@ if (have_rows('feature_blocks_row')) {
                     <div class="inner_items">
                         <h4 class=" heading"><?php the_sub_field('heading'); ?></h4>
                         <p class="text"><?php the_sub_field('text'); ?></p>
-
-                        <?php if ($link_url && $link_text) {?>
-                        <a href="<?php echo $link_url; ?>" class="banner_link"><?php echo $link_text; ?></a>
-                        <?php
-} ?>
-
                     </div>
+                    <?php if ($link_url) {?>
+                    <a href="<?php echo $link_url; ?>" class="link"></a>
+                    <?php
+                        } ?>
 
                 </section>
             </div>
