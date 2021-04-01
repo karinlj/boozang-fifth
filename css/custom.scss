@@ -136,7 +136,7 @@ p {
 }
 h1 {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   @media all and (min-width: $md-min) {
     font-size: 2.1rem;
   }
@@ -145,7 +145,7 @@ h1 {
   }
   @media all and (min-width: $xl-min) {
     font-size: 2.3rem;
-    font-size: 2.8rem;
+    font-size: 2.3rem;
   }
 }
 h2 {
@@ -823,7 +823,7 @@ nav {
 }
 .header_small {
   // min-height: 360px;
-  min-height: 460px;
+  min-height: 400px;
 }
 .header_big,
 .header_small {
@@ -1049,10 +1049,12 @@ nav {
         @media all and (min-width: $sm-min) {
           text-align: left;
         }
+        font-size: 2.5rem;
+        margin-right: 5rem;
       }
     }
     .header_text {
-      max-width: 420px;
+      max-width: 470px;
       margin: 0 auto 1.5rem auto;
       font-size: 1.2rem;
       color: $themecolorFront;
@@ -1065,6 +1067,7 @@ nav {
         margin-left: 0;
         @media all and (min-width: $sm-min) {
           text-align: left;
+          margin-right: 5rem;
         }
       }
     }
@@ -1847,6 +1850,7 @@ small pricing cards
   Videos Page Layout
 *********************/
 .video_section {
+  background: $lightgrey;
   padding-top: 0;
   .video_container {
     width: 100%;
