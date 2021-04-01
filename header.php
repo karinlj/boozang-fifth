@@ -29,7 +29,6 @@ $overlay_color = '';
 $header_heading_pages = get_field('header_heading_pages');
 $header_text_pages = get_field('header_text_pages');
 ?>
-
     <?php if (is_singular('post')) {
     $col_class = 'col-md-10 offset-md-1';
 }

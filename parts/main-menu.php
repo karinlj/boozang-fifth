@@ -1,12 +1,10 @@
 <div id="nav-wrap" class="">
-
     <div class="container">
         <div class="row">
             <div class="col">
                 <nav class="">
                     <h2 class="site-title">
                         <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
-
                             <!--extra double size image for retina-->
                             <img class="logo-img"
                                 src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse.png"
@@ -55,9 +53,6 @@ wp_nav_menu(array(
         <div class="signup">
             <ul>
                 <li>
-                    <!-- <a href="<?php echo get_theme_mod('custom-link-url'); ?>">
-            Login
-          </a> -->
                     <a href="https://ai.boozang.com/">
                         Login
                     </a>

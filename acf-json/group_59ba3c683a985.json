@@ -16,6 +16,7 @@
                 "id": ""
             },
             "choices": {
+                "lightgrey": "Lightgrey",
                 "blue": "Blue",
                 "green": "Green",
                 "lightblue": "Lightblue"
@@ -95,6 +96,13 @@
         ],
         [
             {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
                 "param": "page_type",
                 "operator": "==",
                 "value": "posts_page"
@@ -116,7 +124,7 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1589117421
+    "modified": 1617295948
 }

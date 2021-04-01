@@ -3,24 +3,23 @@
 if (get_row_layout() == 'pricing_cards') {
     $preamble_heading = get_sub_field('preamble_heading');
     $preamble_text = get_sub_field('preamble_text'); ?>
- <section class="pricing_section section_spacing_top_medium">
+ <section class="pricing_section section_spacing_top_mini">
 
      <div class="container">
 
-         <section class="preamble_section">
+         <!-- <section class="preamble_section">
              <?php if ($preamble_heading) {?>
              <h2 class="preamble_heading"><?php echo $preamble_heading; ?></h2>
              <?php } ?>
              <?php if ($preamble_text) {?>
              <p class="preamble_text"><?php echo $preamble_text; ?></p>
              <?php } ?>
-         </section>
+         </section> -->
 
          <div class="row align-items-center no-gutters">
 
-             <?php //pricing_cards repeater
-
-    // check if the repeater field has rows
+             <?php
+        //pricing_cards repeater
     if (have_rows('pricing_cards')) {
         //count for setting classes
         $count = 0;
@@ -31,19 +30,18 @@ if (get_row_layout() == 'pricing_cards') {
 
              <div class="col-md-4">
                  <div class="card <?php
-if ($count == 1) {
-                ?>
+                if ($count == 1) {
+                    ?>
              higher
                 <?php
-            } elseif ($count == 2) {
-                ?> blue_darker
+                } elseif ($count == 2) {
+                    ?> blue_darker
                 <?php
-            } ?>">
-
+                } ?>">
                      <div class="card-body">
                          <div class="pricing_header">
                              <div class="">
-                                 <h3 class="heading"><?php echo $heading; ?></h3>
+                                 <h4 class="heading"><?php echo $heading; ?></h4>
                                  <p class="text"><?php echo $text; ?></p>
                              </div>
                          </div>

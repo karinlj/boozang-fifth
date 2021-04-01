@@ -404,10 +404,10 @@ header {
     h4,
     h5,
     h6 {
-      color: $themeHeadingcolor;
+      color: $themeHeadingcolor !important;
     }
     p {
-      color: $themecolor;
+      color: $themecolorLight !important;
     }
     .banner_link {
       color: $themecolorNewBlue;
@@ -494,9 +494,7 @@ header {
     padding: 1rem calc(3.75rem - 15px);
   }
 }
-
 /*nav-wrap*/
-
 nav {
   background: $navBg_transp;
   display: flex;
@@ -507,14 +505,12 @@ nav {
   @media all and (min-width: $lg-min) {
     justify-content: flex-start;
   }
-
   a,
   a:visited,
   a:focus,
   a:hover {
     color: $navcolor;
   }
-
   ul {
     margin: 0;
     padding: 0;
@@ -522,15 +518,12 @@ nav {
     list-style: none;
     display: none;
     border-radius: 3px;
-
     @media all and (min-width: $lg-min) {
       display: flex;
       align-items: center;
     }
-
     li {
       position: relative;
-
       a {
         margin: 0 1rem -1px 1rem;
         transition: all 0.5s ease;
@@ -543,66 +536,53 @@ nav {
         text-decoration: none;
         font-weight: 600;
         cursor: pointer;
-
         @media all and (min-width: $lg-min) {
           font-size: 0.7em;
         }
-
         @media all and (min-width: $xl-min) {
           font-size: 0.85em;
         }
-
         &:hover {
           color: $navcolor;
           border-bottom: 1px solid #fff;
           opacity: 1;
         }
-
         &:active {
           color: $navcolor;
         }
-
         &:visited {
           color: $navcolor;
         }
       }
     }
-
     /*Wp:s klasser*/
     a:not([href]):not([tabindex]) {
       color: $navcolor;
-
       &:hover {
         color: $navcolor;
         opacity: 1;
       }
     }
-
     li.current-menu-item {
       > a {
         color: $navcolor;
         border-bottom: 1px solid #fff;
       }
     }
-
     li.menu-item-has-children {
       > a {
         color: $navcolor;
-
         &:hover {
           color: $navcolor;
         }
-
         &::after {
           content: "\f107";
           font-family: "Font Awesome 5 Free";
-          //
           font-weight: 600;
           margin-left: 5px;
           color: $navcolor;
         }
       }
-
       ul {
         position: absolute;
         z-index: 10;
@@ -612,10 +592,8 @@ nav {
         padding: 1em 0;
         display: none;
         box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
-
         li {
           width: 100%;
-
           a {
             padding: 0.3rem 1.5rem;
             margin: 0;
@@ -626,7 +604,6 @@ nav {
             font-weight: 500;
             font-size: 0.8rem;
           }
-
           &:hover {
             a {
               background: #f4f0f4;
@@ -635,7 +612,6 @@ nav {
           }
         }
       }
-
       /*togglar med jquery*/
       ul.sub-menu-open {
         display: flex;
@@ -643,12 +619,10 @@ nav {
       }
     }
   }
-
   > .toggle {
     font-size: 30px;
     color: $navcolor;
     cursor: pointer;
-
     @media all and (min-width: $lg-min) {
       display: none;
     }
@@ -661,7 +635,6 @@ nav {
   img {
     width: 360px;
     padding-right: 25px;
-
     @media all and (min-width: $sm-min) {
       width: 280px;
     }
@@ -677,7 +650,6 @@ nav {
   display: flex;
   flex-direction: column;
   width: 100%;
-
   @media all and (min-width: $lg-min) {
     justify-content: space-between;
     flex-direction: row;
@@ -841,7 +813,6 @@ nav {
   overflow-x: auto;
   transform: translateX(0);
 }
-
 /************************
    header
 *************************/
@@ -947,6 +918,116 @@ nav {
     .signup ul li:last-of-type a {
       color: $themecolorGreen;
     }
+  }
+  //lightgrey and dark nav-color
+  &.lightgrey {
+    .signup_btn {
+      color: $themecolor;
+    }
+    .demo_btn {
+      &:hover {
+        color: $themecolor;
+      }
+    }
+    .signup ul li:last-of-type a {
+      color: $navcolorDark;
+      background: transparent;
+      border: 1px solid $navcolorDark;
+      &:hover {
+        color: #fff;
+        background: $themecolorNewBlue;
+        border: 1px solid $themecolorNewBlue;
+      }
+    }
+    //nav
+    nav {
+      a,
+      a:visited,
+      a:focus,
+      a:hover {
+        color: $navcolorDark;
+      }
+      ul {
+        li {
+          a {
+            color: $navcolorDark;
+            &:hover {
+              color: $navcolorDark;
+              border-bottom: 1px solid $navcolorDark;
+            }
+            &:active {
+              color: $navcolorDark;
+              &:visited {
+                color: $navcolorDark;
+              }
+            }
+          }
+          /*Wp:s klasser*/
+          a:not([href]):not([tabindex]) {
+            color: $navcolorDark;
+            &:hover {
+              color: $navcolorDark;
+            }
+          }
+          li.current-menu-item {
+            > a {
+              color: $navcolorDark;
+              border-bottom: 1px solid $navcolorDark;
+            }
+          }
+          li.menu-item-has-children {
+            > a {
+              color: $navcolorDark;
+              &:hover {
+                color: $navcolorDark;
+              }
+              &:after {
+                color: $navcolorDark;
+              }
+            }
+          }
+        }
+        > .toggle {
+          color: $navcolorDark;
+        }
+      }
+      // .header_items_section {
+      //   .header_heading {
+      //     color: $themecolor;
+      //   }
+      //   .header_text {
+      //     color: $themecolorLight;
+      //   }
+      // }
+    }
+    // .signup {
+    //   display: flex;
+    //   justify-content: flex-start;
+    //   @media all and (min-width: $lg-min) {
+    //     justify-content: flex-end;
+    //   }
+    //   ul {
+    //     li {
+    //       &:last-of-type {
+    //         @media all and (min-width: $lg-min) {
+    //           border-left: 1px solid $navcolorDark;
+    //         }
+    //         a {
+    //           color: #fff;
+    //           background-color: $navcolorDark;
+    //           border: 1px solid $navcolorDark;
+
+    //           &:hover {
+    //             color: $navcolorDark;
+    //             background: #fff;
+    //             border: 1px solid #fff !important;
+    //             opacity: 1;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
   .header_items_section {
     padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);

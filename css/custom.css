@@ -455,11 +455,11 @@ header.lightgrey h3,
 header.lightgrey h4,
 header.lightgrey h5,
 header.lightgrey h6 {
-  color: #212735;
+  color: #212735 !important;
 }
 section.lightgrey p,
 header.lightgrey p {
-  color: #4a5669;
+  color: #66758d !important;
 }
 section.lightgrey .banner_link,
 header.lightgrey .banner_link {
@@ -991,6 +991,86 @@ nav > .toggle {
 .header_big.green .signup ul li:last-of-type a,
 .header_small.green .signup ul li:last-of-type a {
   color: #00ac7d;
+}
+.header_big.lightgrey .signup_btn,
+.header_small.lightgrey .signup_btn {
+  color: #4a5669;
+}
+.header_big.lightgrey .demo_btn:hover,
+.header_small.lightgrey .demo_btn:hover {
+  color: #4a5669;
+}
+.header_big.lightgrey .signup ul li:last-of-type a,
+.header_small.lightgrey .signup ul li:last-of-type a {
+  color: #4a5669;
+  background: transparent;
+  border: 1px solid #4a5669;
+}
+.header_big.lightgrey .signup ul li:last-of-type a:hover,
+.header_small.lightgrey .signup ul li:last-of-type a:hover {
+  color: #fff;
+  background: #0085cc;
+  border: 1px solid #0085cc;
+}
+.header_big.lightgrey nav a,
+.header_big.lightgrey nav a:visited,
+.header_big.lightgrey nav a:focus,
+.header_big.lightgrey nav a:hover,
+.header_small.lightgrey nav a,
+.header_small.lightgrey nav a:visited,
+.header_small.lightgrey nav a:focus,
+.header_small.lightgrey nav a:hover {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul li,
+.header_small.lightgrey nav ul li {
+  /*Wp:s klasser*/
+}
+.header_big.lightgrey nav ul li a,
+.header_small.lightgrey nav ul li a {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul li a:hover,
+.header_small.lightgrey nav ul li a:hover {
+  color: #4a5669;
+  border-bottom: 1px solid #4a5669;
+}
+.header_big.lightgrey nav ul li a:active,
+.header_small.lightgrey nav ul li a:active {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul li a:active:visited,
+.header_small.lightgrey nav ul li a:active:visited {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul li a:not([href]):not([tabindex]),
+.header_small.lightgrey nav ul li a:not([href]):not([tabindex]) {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul li a:not([href]):not([tabindex]):hover,
+.header_small.lightgrey nav ul li a:not([href]):not([tabindex]):hover {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul li li.current-menu-item > a,
+.header_small.lightgrey nav ul li li.current-menu-item > a {
+  color: #4a5669;
+  border-bottom: 1px solid #4a5669;
+}
+.header_big.lightgrey nav ul li li.menu-item-has-children > a,
+.header_small.lightgrey nav ul li li.menu-item-has-children > a {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul li li.menu-item-has-children > a:hover,
+.header_small.lightgrey nav ul li li.menu-item-has-children > a:hover {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul li li.menu-item-has-children > a:after,
+.header_small.lightgrey nav ul li li.menu-item-has-children > a:after {
+  color: #4a5669;
+}
+.header_big.lightgrey nav ul > .toggle,
+.header_small.lightgrey nav ul > .toggle {
+  color: #4a5669;
 }
 .header_big .header_items_section,
 .header_small .header_items_section {

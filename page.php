@@ -7,14 +7,11 @@
 <?php get_header();?>
 
 <div class="content_container_page">
-
-  <?php // for layouts of content_block_pages
+    <?php // for layouts of content_block_pages
 
 //Loopa ACF flex Content
 if (function_exists('have_rows')) {
-
     if (have_rows('content_block_pages')) {
-
         while (have_rows('content_block_pages')) {
             the_row();
 
