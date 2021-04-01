@@ -14,7 +14,53 @@ $xl-min: 1200px;
 $xl-max: 1309px;
 $max-page-width: 1380px;
 
+/* colors */
+//original lila colors
+// $themecolorLila: #2a2966;
+// $themecolorLilaDark: #2c407d;
+// $themecolorLilaDarkest: #161637;
+
+$themecolorLila: #2a2966;
+$themecolorBlueDark: #22315e;
+$themecolorBlueDarkLighter: #293b70;
+$themecolorBlueDarkest: #1c284a;
+$themecolorPurple: #5d2d57;
+$themecolorNewBlue: #0085cc;
+$themecolorNewBlueDarker: #005380;
+
+$themecolor: #4a5669; //#373c49;
+$themecolorFront: #dae0f1;
+
+$themeBorderColor: #ebebeb;
+$themeBorderColorFront: #293b70;
+
+$themecolorLight: #66758d;
+$themecolorLighter: #e6e6e6;
+
+$themeHeadingcolor: #212735; //#121923;
+$lightgrey: #f5f6f9; //#f9f9f9;
+$mediumgrey: #f1f1f4;
+$themecolorRed: #e62e65;
+$themecolorOrange: #fcb25a;
+$themecolorPink: #f24d7f;
+$themecolorGreen: #00ac7d;
+$mistyRose: #efd6d2;
+
+//overlays
+$themecolorBlueOverlay: rgba(0, 99, 153, 0.85);
+$themecolorBlueDarkOverlay: rgba(34, 49, 94, 0.8);
+$themecolorPinkOverlay: rgba(242, 77, 127, 0.5);
+
+$themecolorDarkOverlay: rgba(0, 0, 0, 0.5);
+
+//old colors
+// blue light
+//$themecolorBlueLight: #2e9ce6;
+// DarkGrey
+//$themecolorDarkGrey: #21242c;
+
 //other
+$linkhoverOpacity: 0.7;
 $themefont: "Roboto", "Helvetica", sans-serif;
 $navfont: $themefont;
 $headingfont: $themefont;
@@ -29,154 +75,6 @@ $themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
 
 $themeBox_shadow_images_hover: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 
-/*transparent nav*/
 $navcolor: #fff;
 $navBg_transp: transparent;
-$themecolorNewBlue: #0074b1;
-$themecolorNewBlueHover: #004266;
 $linkcolor: $themecolorNewBlue; // #1b94e4; //$themecolorBlueLight;
-
-/* colors */
-//new lila
-$themecolorLila: #2a2966;
-//$themecolorLilaDarkOriginal: #2c407d;
-$themecolorLilaDark: #22315e;
-$themecolorLilaDarkLighter: #293b70;
-
-// $themecolorLilaDarkest: #161637;
-$themecolorLilaDarkest: #1c284a;
-
-$themecolor: #4a5669; //#373c49;
-$themecolorFront: #dae0f1; //
-
-$themeBorderColor: #ebebeb;
-$themeBorderColorFront: #293b70;
-
-$themecolorLight: #66758d;
-$themecolorLighter: #e6e6e6;
-
-$themeHeadingcolor: #212735; //#121923;
-$lightgrey: #f5f6f9; //#f9f9f9;
-$mediumgrey: #f1f1f4;
-$themecolorGreen: #5d5f5e;
-$themecolorRed: #e62e65;
-$linkhoverOpacity: 0.7;
-$themecolorOrange: #fcb25a;
-$themecolorPink: #f24d7f;
-$themecolorGreen: #00ac7d;
-$mistyRose: #efd6d2;
-
-//Blue
-$themecolorBlue: #1b2fe4;
-//BlueLight
-$themecolorBlueLight: #2e9ce6;
-//GreenNew
-$themecolorGreenNew: #0ba893;
-//DarkGrey
-$themecolorDarkGrey: #21242c;
-$themecolorDarkGreyBg: linear-gradient(
-  to bottom,
-  #21242c,
-  #292d36,
-  #313641,
-  #393f4c,
-  #424857
-);
-
-$themecolorBlueLight: linear-gradient(
-  to bottom,
-  #161637,
-  #1b1b42,
-  #201f4e,
-  #25245a,
-  #2a2966
-);
-//down
-$themecolorBlueLightBgDown: linear-gradient(
-  to bottom,
-  #2a2966,
-  #2b2f6c,
-  #2b3572,
-  #2c3a77,
-  #2c407d
-);
-
-//$themecolorLilabg: linear-gradient(
-//left side up
-$themecolorBlueLightBg: $themecolorLilaDark;
-// $themecolorBlueLightBg: linear-gradient(
-//   to bottom,
-//   #161637,
-//   #1b1b42,
-//   #201f4e,
-//   #25245a,
-//   #2a2966
-// );
-
-//GreenNew
-$themecolorGreenNew: #0ba893;
-$themecolorGreenNewBg: #5d2d57;
-// $themecolorGreenNewBg: linear-gradient(
-//   to bottom,
-//   #5d2d57,
-//   #662f5f,
-//   #6f3266,
-//   #78346e,
-//   #813676
-// );
-
-//Blue
-$themecolorBlue: #1b2fe4;
-$themecolorBlueBg: linear-gradient(
-  to right bottom,
-  #2c407d,
-  #2c3a77,
-  #2b3572,
-  #2b2f6c,
-  #2a2966
-);
-
-//Blue darker (light orange)
-$themecolorBlueDarkerBg: linear-gradient(
-  to right bottom,
-  #a54863,
-  #b14f63,
-  #bd5763,
-  #c85f63,
-  #d26862,
-  #da7161,
-  #e17a5f,
-  #e8835e,
-  #ef8e5c,
-  #f49a5b,
-  #f9a65a,
-  #fcb25a
-);
-
-$themecolorLilaDarkestBg: linear-gradient(
-  to bottom,
-  #161637,
-  #1b1b42,
-  #201f4e,
-  #25245a,
-  #2a2966
-);
-
-//beautiful blue
-$themecolorNewBlueBg: linear-gradient(
-  to right bottom,
-  #004e91,
-  #005799,
-  #0061a2,
-  #006aa9,
-  #0074b1
-);
-
-$extraLightBlueOverlay: linear-gradient(
-  to right bottom,
-  #8fa1d6,
-  #9daddb,
-  #abb8e0,
-  #b9c4e5,
-  #c7d0ea
-);

@@ -385,16 +385,18 @@ section,
 header {
   position: relative;
   &.lightblue {
-    background: $themecolorBlueLightBg;
+    background: $themecolorNewBlue;
   }
   &.blue {
-    background-image: $themecolorNewBlueBg;
+    background: $themecolorBlueDark;
   }
-  &.green {
-    background-image: $themecolorGreenNewBg;
+  &.purple {
+    background: $themecolorPurple;
   }
+  // &.green {
+  //   background-image: $themecolorPurple;
+  // }
   &.lightgrey {
-    //tillfälligt
     background: $lightgrey;
     h1,
     h2,
@@ -408,41 +410,41 @@ header {
       color: $themecolor;
     }
     .banner_link {
-      color: $themecolorBlueLight;
-
+      color: $themecolorNewBlue;
       &:before {
-        background: $themecolorBlueLightBg;
+        background: $themecolorBlueDark;
       }
     }
   }
-  &.darkgrey {
-    background: $themecolorDarkGreyBg;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: #fcfdfe;
-    }
-    p {
-      color: #fcfdfe;
-    }
-    .banner_link {
-      color: #fcfdfe;
+  // &.darkgrey {
+  //   //background: $themecolorDarkGreyBg;
+  //   h1,
+  //   h2,
+  //   h3,
+  //   h4,
+  //   h5,
+  //   h6 {
+  //     color: #fcfdfe;
+  //   }
+  //   p {
+  //     color: #fcfdfe;
+  //   }
+  //   .banner_link {
+  //     color: #fcfdfe;
 
-      &:before {
-        background: #fcfdfe;
-      }
-    }
-  }
+  //     &:before {
+  //       background: #fcfdfe;
+  //     }
+  //   }
+  // }
+  //overlays
   &.overlay-dark::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: $themecolorDarkOverlay;
     content: "";
     display: block;
   }
@@ -452,18 +454,17 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 99, 153, 0.9);
+    background: $themecolorBlueOverlay;
     content: "";
     display: block;
   }
-
   &.overlay-blue::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(34, 49, 94, 0.8);
+    background: $themecolorBlueDarkOverlay;
     content: "";
     display: block;
   }
@@ -716,7 +717,7 @@ nav {
             font-size: 0.85em;
           }
           &:hover {
-            color: $themecolorBlueLight;
+            color: $themecolorNewBlue;
             background: #fff;
 
             // background: transparent !important;
@@ -737,23 +738,21 @@ nav {
   z-index: 2000;
   top: 0;
   left: 0;
-  background: $themecolorDarkGrey;
+  //background: $themecolorDarkGrey;
+  background: $themecolorBlueDarkest;
   opacity: 0.95;
   padding: 0 10%;
   padding-top: 60px;
   text-align: left;
   transform: translateX(100%);
   transition: transform 0.6s ease;
-
   @media all and (min-width: $lg-min) {
     display: none;
   }
-
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-
     li {
       a {
         transition: all 0.5s ease;
@@ -767,30 +766,23 @@ nav {
         padding: 10px;
       }
     }
-
     /*Wp:s klasser*/
-
     li.menu-item-has-children {
       ul {
         position: static;
         z-index: 10;
         display: none;
       }
-
       /*togglar med jquery*/
-
       ul.sub-menu-open {
         display: flex;
         flex-direction: column;
       }
-
       > a {
         color: #fff;
-
         &:hover {
           color: #fff;
         }
-
         &::after {
           content: "\f107";
           font-family: "Font Awesome 5 Free";
@@ -798,10 +790,8 @@ nav {
           margin-left: 5px;
         }
       }
-
       li {
         width: 100%;
-
         a {
           padding: 8px 16px;
           background-color: $navBg_transp;
@@ -821,13 +811,13 @@ nav {
       li {
         .signup_btn {
           margin: 1rem 0.5rem;
-          background: $themecolorBlueLight;
+          background: $themecolorBlueDark;
           color: #fff !important;
-          border: 1px solid $themecolorBlueLight;
+          border: 1px solid $themecolorBlueDark;
           width: 100%;
           &:hover {
             background: transparent;
-            color: $themecolorBlueLight;
+            color: $themecolorBlueDark;
           }
           @media all and (min-width: $sm-min) {
             width: 12rem;
@@ -890,14 +880,14 @@ nav {
           width: auto;
         }
       }
-      //default: lightblue
+      //default: blue
       .signup_btn {
         background: #fff;
-        color: $themecolorBlueLight;
+        color: $themecolorBlueDark;
         border: 1px solid #fff;
         &:hover {
-          background: #fff;
-          color: $themecolorBlueLight;
+          color: #fff;
+          background: $themecolorBlueDark;
         }
       }
       .demo_btn {
@@ -906,7 +896,7 @@ nav {
         color: #fff;
         &:hover {
           background: #fff;
-          color: $themecolorBlueLight;
+          color: $themecolorBlueDark;
         }
       }
     }
@@ -923,35 +913,39 @@ nav {
       background: transparent;
       color: #fff;
       &:hover {
-        color: $themecolorBlueLight;
+        color: $themecolorNewBlue;
         background: #fff;
       }
     }
   }
   &.blue {
     .signup_btn {
-      color: $themecolorBlue;
+      color: $themecolorBlueDark;
     }
     .demo_btn {
       &:hover {
-        color: $themecolorBlue;
+        color: $themecolorBlueDark;
       }
     }
     .signup ul li:last-of-type a {
-      color: $themecolorBlue;
+      color: $themecolorBlueDark;
+      &:hover {
+        color: #fff;
+        background: $themecolorBlueDark;
+      }
     }
   }
   &.green {
     .signup_btn {
-      color: $themecolorGreenNew;
+      color: $themecolorGreen;
     }
     .demo_btn {
       &:hover {
-        color: $themecolorGreenNew;
+        color: $themecolorGreen;
       }
     }
     .signup ul li:last-of-type a {
-      color: $themecolorGreenNew;
+      color: $themecolorGreen;
     }
   }
   .header_items_section {
@@ -983,15 +977,16 @@ nav {
     }
     .header_text {
       max-width: 420px;
+      margin: 0 auto 1.5rem auto;
       font-size: 1.2rem;
       color: $themecolorFront;
-      margin-bottom: 1.5rem;
       text-align: center;
       @media all and (min-width: $sm-min) {
         font-size: 1.3em;
       }
       &.front {
         text-align: center;
+        margin-left: 0;
         @media all and (min-width: $sm-min) {
           text-align: left;
         }
@@ -1087,7 +1082,6 @@ nav {
   }
   .col-md-4 {
     margin-bottom: 2rem;
-
     @media all and (min-width: $md-min) {
       margin-bottom: 0;
     }
@@ -1131,13 +1125,13 @@ nav {
         font-weight: 500;
         font-size: 1.9rem;
         span {
-          color: $themecolorLighter;
+          color: $themecolorLight;
           font-size: 0.8rem;
         }
       }
     }
     .btn {
-      background: $themecolorBlueLight;
+      background: $themecolorNewBlueDarker;
       color: #fff;
       margin-top: 1rem;
       position: absolute;
@@ -1152,14 +1146,13 @@ nav {
     //middle card higher
     &.higher {
       height: 530px;
-
       .pricing_header {
         height: 115px;
       }
     }
     //last card blue
     &.blue_darker {
-      background: $themecolorBlueDarkerBg;
+      background: $themecolorNewBlue;
       color: #fff;
       .text,
       .heading,
@@ -1168,7 +1161,12 @@ nav {
         color: #fff;
       }
       .pricing_header {
-        border-bottom: 2px solid $themecolorBlueLight; // #1b94e4;
+        border-bottom: 2px solid $themecolorNewBlue; // #1b94e4;
+      }
+      .price {
+        span {
+          color: $themecolorFront;
+        }
       }
     }
   }
@@ -1255,10 +1253,10 @@ small pricing cards
       }
     }
     &.blue {
-      border-top: 5px solid $themecolorBlue;
+      border-top: 5px solid $themecolorBlueDark;
     }
     &.lightblue {
-      border-top: 5px solid $themecolorBlueLight;
+      border-top: 5px solid $themecolorNewBlue;
     }
     &.green {
       border-top: 5px solid $themecolorGreen;
@@ -1476,7 +1474,7 @@ small pricing cards
         &::before {
           content: "Hover image to enlarge";
           position: absolute;
-          color: $themecolorBlueLight;
+          color: $themecolorNewBlue;
           font-size: 0.8rem;
           font-weight: 400;
           right: 0;
@@ -1585,7 +1583,7 @@ small pricing cards
 .pillars_section {
   border-top: 1px solid $themeBorderColorFront;
   // border-bottom: 1px solid $themeBorderColorFront;
-  background: $themecolorLilaDarkLighter;
+  background: $themecolorBlueDarkLighter;
   height: auto;
   overflow: hidden;
   @include d-flex;
@@ -1605,14 +1603,14 @@ small pricing cards
       font-weight: 500;
       font-size: 0.85rem;
       // &.blue {
-      //   color: $themecolorBlue;
+      //   color: $themecolorBlueDark;
       // }
       //orange?
       &.mediumgrey {
         color: $themecolorPink; //#c64e72;
       }
       // &.lightblue {
-      //   color: $themecolorBlueLight;
+      //   color: $themecolorNewBlue;
       // }
     }
     .heading {
@@ -1629,7 +1627,7 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background: $themecolorGreenNewBg;
+  background: $themecolorPurple;
   .text_section {
     padding-bottom: 2rem;
     h2,
@@ -1675,7 +1673,7 @@ small pricing cards
 
 .testimonials_section_new {
   background: $lightgrey;
-  background: $themecolorLilaDark;
+  background: $themecolorBlueDark;
   height: auto;
   overflow: hidden;
   @media all and (min-width: $xl-min) {
@@ -1696,7 +1694,7 @@ small pricing cards
       flex-direction: row;
     }
     .testimonials-item {
-      background: $themecolorLilaDarkest;
+      background: $themecolorBlueDarkest;
       flex: 1 1 28%;
       display: flex;
       flex-direction: column;
@@ -1769,7 +1767,7 @@ small pricing cards
       .title,
       .description {
         transition: 0.25s ease-in-out;
-        color: $themecolorBlueLight;
+        color: $themecolorNewBlue;
       }
     }
     .embed_container {
@@ -1896,7 +1894,7 @@ small pricing cards
       box-shadow: 0 10px 25px 1px rgba(0, 0, 0, 0.1);
       p {
         transition: 0.25s ease-in-out;
-        color: $themecolorBlueLight;
+        color: $themecolorNewBlue;
       }
     }
     .course_link {
@@ -1922,15 +1920,15 @@ small pricing cards
       }
     }
     // &.blue {
-    //   border-top: 5px solid $themecolorBlue;
+    //   border-top: 5px solid $themecolorBlueDark;
     // }
 
     // &.lightblue {
-    //   border-top: 5px solid $themecolorBlueLight;
+    //   border-top: 5px solid $themecolorNewBlue;
     // }
 
     // &.green {
-    //   border-top: 5px solid $themecolorGreenNew;
+    //   border-top: 5px solid $themecolorGreen;
     // }
 
     // &.red {
@@ -2094,7 +2092,7 @@ small pricing cards
       .blog_post_title,
       p {
         transition: 0.25s ease-in-out;
-        color: $themecolorBlueLight;
+        color: $themecolorNewBlue;
       }
     }
     .post_link {
@@ -2243,7 +2241,7 @@ small pricing cards
             &::before {
               content: "Hover image to enlarge";
               position: absolute;
-              color: $themecolorBlueLight;
+              color: $themecolorNewBlue;
               font-size: 0.8rem;
               font-weight: 400;
               right: 0;
@@ -2286,7 +2284,7 @@ small pricing cards
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorGreenNewBg;
+    background-image: $themecolorPurple;
     opacity: 0.85;
     content: "";
     display: block;
@@ -2390,7 +2388,7 @@ text layout for Pages Content block
 ****************************/
 .sign_up_front_section {
   padding-top: 1rem;
-  background: $themecolorLilaDark !important;
+  background: $themecolorBlueDark !important;
   .col-md-6:first-child {
     border-right: 1px solid $themeBorderColorFront;
   }
@@ -2424,11 +2422,18 @@ text layout for Pages Content block
       .btn {
         background: #fff;
         color: $themecolorPink;
+        border: 1px solid #fff;
         padding: 10px 45px;
         transition: 0.5s ease-in-out;
         &:hover {
           background: transparent;
-          border: 1px solid #fff;
+          box-shadow: none;
+        }
+        &:active {
+          box-shadow: none;
+        }
+        &:focus {
+          box-shadow: none;
         }
       }
       &.demo {
@@ -2441,7 +2446,7 @@ text layout for Pages Content block
 big_image_center
 ***********************************/
 .big_image_center {
-  background: $themecolorLilaDark;
+  background: $themecolorBlueDark;
   text-align: center;
   .heading {
     color: #fff;
@@ -2471,7 +2476,7 @@ big_image_center
   - blocks in different colors or bg image
 ***********************************/
 .feature_blocks {
-  background: $themecolorLilaDark;
+  background: $themecolorBlueDark;
 
   height: auto;
   overflow: hidden;
@@ -2506,7 +2511,7 @@ big_image_center
         color: #fff;
       }
       p {
-        color: $themecolorFront;
+        color: #fff;
         font-size: 1rem;
         @media all and (min-width: $lg-min) and (max-width: $lg-max) {
           font-size: 0.95rem;
@@ -2528,10 +2533,10 @@ big_image_center
       }
     }
     &.blue {
-      background: $themecolorLilaDarkLighter;
+      background: $themecolorBlueDarkLighter;
     }
     &.green {
-      background: $themecolorLilaDarkest;
+      background: $themecolorBlueDarkest;
     }
     &.lightblue {
       background: $themecolorNewBlue;
@@ -2610,12 +2615,20 @@ forum section
       .btn {
         background: $themecolorNewBlue;
         color: #fff;
+        border: 1px solid #fff;
         padding: 10px 45px;
-        transition: transform 0.3s ease;
+        transition: 0.5s ease-in-out;
         &:hover {
-          transform: translateX(3px);
-          box-shadow: 0 4px 15px 0 rgb(7 42 68 / 20%);
-          background: $themecolorNewBlueHover;
+          background: transparent;
+          color: $themecolorNewBlue;
+          border: 1px solid $themecolorNewBlue;
+          box-shadow: none;
+        }
+        &:active {
+          box-shadow: none;
+        }
+        &:focus {
+          box-shadow: none;
         }
       }
     }
@@ -2627,7 +2640,7 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background: $themecolorLilaDarkest;
+  background: $themecolorBlueDarkest;
   min-height: 520px;
 
   @media all and (max-width: $xs-max) {
@@ -2692,7 +2705,7 @@ forum section
         }
         .fab,
         .fas {
-          font-size: 16px;
+          font-size: 17px;
           padding-right: 1rem;
           text-align: center;
           text-decoration: none;
@@ -2715,7 +2728,7 @@ forum section
   .footer-copy {
     .copy {
       p {
-        border-top: 1px solid $themecolorLilaDark;
+        border-top: 1px solid $themecolorBlueDark;
         color: #cbd6e2;
         font-size: 75%;
         margin-bottom: -1rem;
@@ -2725,84 +2738,6 @@ forum section
         }
       }
     }
-  }
-}
-
-/*********************************
-smaller_items blocks
-***********************************/
-
-.smaller_items {
-  background: $themecolorLilaDark;
-  // overflow: hidden;
-  // @include d-flex;
-  // justify-content: center;
-  // align-items: center;
-  // transition: all 150ms ease-out;
-
-  .header {
-    .heading {
-      color: #fff;
-      margin-bottom: 5rem;
-    }
-  }
-  .row {
-    //padding: 0.75rem 0;
-  }
-  .banner-item {
-    &.blue {
-      background: $themecolorLilaDarkLighter;
-    }
-    &.green {
-      background: $themecolorGreenNewBg;
-    }
-    &.lightblue {
-      background: $themecolorNewBlue;
-    }
-  }
-  .banner-item {
-    box-shadow: $themeBox_shadow;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    height: auto;
-    @media all and (min-width: $lg-min) {
-      margin-bottom: 0;
-      height: 280px;
-    }
-    .banner-icon {
-      margin-bottom: 1rem;
-      i.fas {
-        font-size: 1.3rem;
-      }
-    }
-    p {
-      color: $themecolorFront;
-    }
-    .heading,
-    li,
-    .banner-icon {
-      color: #fff;
-    }
-    .heading {
-      &:after {
-        background-color: #fff;
-      }
-    }
-    p {
-      font-size: 1rem;
-      @media all and (min-width: $lg-min) and (max-width: $lg-max) {
-        font-size: 0.95rem;
-        margin-bottom: 0.5rem;
-      }
-    }
-    // &:first-child {
-    //   border-top-left-radius: $themeBorder_radius;
-    //   border-bottom-left-radius: $themeBorder_radius;
-    // }
-    // &:last-child {
-    //   border-top-right-radius: $themeBorder_radius;
-    //   border-bottom-right-radius: $themeBorder_radius;
-    // }
   }
 }
 
@@ -2828,132 +2763,4 @@ smaller_items blocks
   span {
     color: #999;
   }
-}
-
-/**********************************
-img_text_section
-***********************************/
-// .img_text_section {
-//   margin: 5rem 0;
-//   border-radius: $themeBorder_radius;
-
-//   .column_row {
-//     display: flex;
-//     justify-content: space-between;
-//     flex-direction: column;
-//     @media all and (min-width: $md-min) {
-//       flex-direction: row;
-//     }
-//     .part {
-//       width: 100%;
-//       @media all and (min-width: $md-min) {
-//         width: 50%;
-//       }
-//       &.text {
-//         h2 {
-//           text-align: left;
-//           margin-bottom: 1rem;
-//         }
-//         @media all and (max-width: $sm-max) {
-//           order: -1;
-//           padding: 1rem 0;
-//         }
-//         @media all and (min-width: $md-min) {
-//           padding: 0 2rem;
-//         }
-//         @media all and (min-width: $lg-min) {
-//           padding: 0 3rem;
-//         }
-//       }
-//       &.image {
-//         width: 40%;
-//         z-index: 1000;
-//         position: relative;
-//         .img_link {
-//           text-align: center;
-//           transition: transform 0.3s ease;
-//           display: block;
-//           &:hover {
-//             opacity: 1;
-//             transform: translateX(3px);
-//             cursor: pointer;
-//           }
-//           img {
-//             box-shadow: $themeBox_shadow;
-//             border-radius: $themeBorder_radius;
-//             width: 100%;
-//             height: auto;
-//           }
-//           // .banner_link {
-//           //   padding-top: 1rem;
-//           //   color: $themecolorLila;
-//           // }
-//         }
-//       }
-//     }
-//   }
-// }
-
-.darkblue {
-  background-image: $themecolorLilaDarkestBg;
-  //background: #fff;
-  // background: linear-gradient(
-  //   to right bottom,
-  //   #b0e996,
-  //   #b8eba1,
-  //   #c0eeab,
-  //   #c8f0b6,
-  //   #d0f2c0
-  // );
-}
-.newblue {
-  background-image: $themecolorNewBlueBg;
-}
-.extraLightBlue {
-  background-image: linear-gradient(
-    to right bottom,
-    #f0dbed,
-    #f1e5f3,
-    #f4eef8,
-    #f9f7fc,
-    #ffffff
-  );
-  //   to right bottom,
-  //   #8fa1d6,
-  //   #9daddb,
-  //   #abb8e0,
-  //   #b9c4e5,
-  //   #c7d0ea
-  // );
-  .banner_link {
-    color: $themecolor;
-    &:before {
-      background: $themecolor;
-    }
-  }
-}
-
-.myblue {
-  background: $themecolorBlueLightBg;
-}
-.purple {
-  background-image: $themecolorGreenNewBg;
-}
-.noColor,
-.purple,
-.myblue,
-.newblue,
-.darkblue {
-  h3,
-  h4,
-  p,
-  .boxes-icon,
-  ul,
-  li {
-    color: #fff;
-  }
-}
-
-.lightgrey {
-  background: $lightgrey;
 }
