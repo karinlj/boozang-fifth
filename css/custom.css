@@ -2524,14 +2524,14 @@ text layout for Pages Content block
   align-items: center;
 }
 .sign_up_front_section .button_item .btn_container .btn {
-  background: #0074b1;
-  color: #fff;
+  background: #fff;
+  color: #f24d7f;
   padding: 10px 45px;
   transition: 0.5s ease-in-out;
 }
 .sign_up_front_section .button_item .btn_container .btn:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-  background: #006399;
+  background: transparent;
+  border: 1px solid #fff;
 }
 .sign_up_front_section .button_item .btn_container.demo {
   float: right;

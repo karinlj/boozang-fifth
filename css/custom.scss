@@ -2422,13 +2422,13 @@ text layout for Pages Content block
         // justify-content: flex-start;
       }
       .btn {
-        background: $themecolorNewBlue;
-        color: #fff;
+        background: #fff;
+        color: $themecolorPink;
         padding: 10px 45px;
         transition: 0.5s ease-in-out;
         &:hover {
-          box-shadow: $themeBox_shadow_images_hover;
-          background: #006399;
+          background: transparent;
+          border: 1px solid #fff;
         }
       }
       &.demo {
