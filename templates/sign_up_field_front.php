@@ -1,6 +1,6 @@
 <?php if (get_row_layout() == 'sign_up_field_front') {?>
 <!-- sign up for Front Page -->
-<section class="sign_up_front_section <?php echo $color; ?> section_spacing_top_medium">
+<section class="sign_up_front_section <?php echo $color; ?> section_spacing_top_small">
     <?php
     $color = get_sub_field('color_theme');
     $heading = get_sub_field('heading');

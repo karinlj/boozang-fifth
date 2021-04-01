@@ -3,7 +3,7 @@
 if (get_row_layout() == 'pricing_cards') {
     $preamble_heading = get_sub_field('preamble_heading');
     $preamble_text = get_sub_field('preamble_text'); ?>
- <section class="pricing_section section_spacing_top_mini">
+ <section class="pricing_section section_spacing_top_medium">
 
      <div class="container">
 

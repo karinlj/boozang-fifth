@@ -1219,6 +1219,7 @@ nav > .toggle {
     pricing
  *********************/
 .pricing_section {
+  padding-top: 0;
   background: #f5f6f9;
 }
 .pricing_section .preamble_section {
@@ -1286,7 +1287,7 @@ nav > .toggle {
   font-size: 0.8rem;
 }
 .pricing_section .card .btn {
-  background: #005380;
+  background: #006399;
   color: #fff;
   margin-top: 1rem;
   position: absolute;
@@ -1425,6 +1426,9 @@ small pricing cards
 /*********************
    faq accordion
 *********************/
+.faq_accordion_section {
+  background: #f5f6f9;
+}
 .faq_accordion_section .heading {
   margin-bottom: 4rem;
 }
@@ -1434,39 +1438,48 @@ small pricing cards
   }
 }
 .faq_accordion_section .info_list_item {
-  margin-bottom: 0.7rem;
-}
-@media all and (min-width: 992px) {
-  .faq_accordion_section .info_list_item {
-    margin-bottom: 0;
-  }
+  border-bottom: 1px solid #dae0f1;
 }
 .faq_accordion_section .info_list_item .question_part {
-  display: flex;
-  align-items: baseline;
+  width: 100%;
+  position: relative;
+  padding: 1.3rem 0;
   cursor: pointer;
 }
 .faq_accordion_section .info_list_item .question_part .question {
   line-height: 1.7;
+  margin-bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.faq_accordion_section .info_list_item .question_part .question:hover {
+  color: #0085cc;
+}
+.faq_accordion_section .info_list_item .question_part .question:hover::after {
+  color: #0085cc;
 }
 .faq_accordion_section .info_list_item .question_part .question:after {
   font-family: "Font Awesome 5 Free";
-  margin-left: 0.3rem;
-  font-size: 0.9rem;
-  content: "";
-  font-weight: 600;
+  font-size: 0.7rem;
+  content: "";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 1.3rem;
+  padding: 3px;
+  color: #212735;
+  transition: all 0.3s ease-in-out;
 }
 .faq_accordion_section .info_list_item .question_part .question.active:after {
-  content: "";
+  content: "";
 }
 .faq_accordion_section .info_list_item .answer_part {
-  padding: 0 0 1rem 0;
+  width: 100%;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-in-out;
 }
 .faq_accordion_section .info_list_item .answer_part.open {
-  max-height: 200px;
+  max-height: 260px;
 }
 
 /*********************
@@ -1839,7 +1852,6 @@ small pricing cards
   testimonials new
 ***********************/
 .testimonials_section_new {
-  background: #f5f6f9;
   background: #22315e;
   height: auto;
   overflow: hidden;
@@ -1871,37 +1883,39 @@ small pricing cards
 }
 .testimonials_section_new .testimonials-container .testimonials-item {
   background: #1c284a;
+  background: #fff;
   flex: 1 1 28%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 4px;
   margin: 0 1rem 2rem 0;
-  padding: 1.5rem;
+  padding: 2.5rem 1.5rem;
   height: auto;
-  box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 @media all and (min-width: 992px) {
   .testimonials_section_new .testimonials-container .testimonials-item {
     margin-bottom: 0;
-    min-height: 340px;
+    min-height: 360px;
   }
 }
 .testimonials_section_new .testimonials-container .testimonials-item p {
   color: #dae0f1;
+  color: #4a5669;
 }
 .testimonials_section_new .testimonials-container .testimonials-item .signature {
-  font-weight: 400;
-  font-size: 1.2rem;
-  border-left: 5px solid #dae0f1;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-left: 5px solid #e6e6e6;
   padding-left: 1rem;
-  margin-left: 3rem;
 }
 .testimonials_section_new .testimonials-container .testimonials-item .icon {
   margin-bottom: 1rem;
 }
 .testimonials_section_new .testimonials-container .testimonials-item .icon i.fas {
   color: #dae0f1;
+  color: #212735;
   font-size: 1.5em;
 }
 .testimonials_section_new .testimonials-container .testimonials-item.blue .signature {
@@ -2551,8 +2565,7 @@ text layout for Pages Content block
    sign_up_field Front Page
 ****************************/
 .sign_up_front_section {
-  padding-top: 1rem;
-  background: #22315e !important;
+  background: #1c284a;
 }
 .sign_up_front_section .col-md-6:first-child {
   border-right: 1px solid #293b70;
@@ -2582,14 +2595,16 @@ text layout for Pages Content block
   align-items: center;
 }
 .sign_up_front_section .button_item .btn_container .btn {
-  background: #fff;
-  color: #f24d7f;
-  border: 1px solid #fff;
+  background: #0085cc;
+  color: #fff;
+  border: 1px solid #0085cc;
   padding: 10px 45px;
   transition: 0.5s ease-in-out;
 }
 .sign_up_front_section .button_item .btn_container .btn:hover {
   background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
   box-shadow: none;
 }
 .sign_up_front_section .button_item .btn_container .btn:active {
@@ -2773,15 +2788,16 @@ forum section
   align-items: center;
 }
 .signup_section .button_item .btn_container .btn {
-  background: #0085cc;
-  color: #fff;
-  border: 1px solid #fff;
+  background: transparent;
+  border: 1px solid #0085cc;
+  color: #0085cc;
+  border: 1px solid #0085cc;
   padding: 10px 45px;
   transition: 0.5s ease-in-out;
 }
 .signup_section .button_item .btn_container .btn:hover {
-  background: transparent;
-  color: #0085cc;
+  background: #0085cc;
+  color: #fff;
   border: 1px solid #0085cc;
   box-shadow: none;
 }
@@ -2793,6 +2809,7 @@ forum section
 }
 
 .footer-main {
+  padding-top: 0;
   width: 100%;
   display: -webkit-inline-box !important;
   display: -webkit-inline-flex !important;
@@ -2802,15 +2819,16 @@ forum section
   justify-content: space-between;
   color: #fff;
   background: #1c284a;
-  min-height: 520px;
+  min-height: 500px;
 }
 @media all and (max-width: 480px) {
   .footer-main {
-    min-height: 540px;
+    min-height: 520px;
   }
 }
 .footer-main > .container {
-  padding-top: 2rem;
+  padding-top: 5rem;
+  border-top: 1px solid #293b70;
 }
 .footer-main img {
   width: 140px;

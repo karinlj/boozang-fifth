@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_5ea93e627bfcc",
-            "label": "Header heading pages",
-            "name": "header_heading_pages",
+            "label": "Heading pages",
+            "name": "heading_pages",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -60,7 +60,7 @@
             {
                 "param": "post_template",
                 "operator": "==",
-                "value": "layouts-page-centered.php"
+                "value": "default"
             }
         ]
     ],
@@ -70,7 +70,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1588150040
+    "modified": 1617301039
 }

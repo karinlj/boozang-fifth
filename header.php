@@ -26,7 +26,7 @@ $style = '';
 $color = '';
 $header_bgImage = get_field('header_image');
 $overlay_color = '';
-$header_heading_pages = get_field('header_heading_pages');
+$heading_pages = get_field('heading_pages');
 $header_text_pages = get_field('header_text_pages');
 ?>
     <?php if (is_singular('post')) {
@@ -61,8 +61,7 @@ if (is_home() || is_singular('post') || is_archive()) {
   background-size: cover"';
         $overlay_color = get_field('overlay_color', get_option('page_for_posts'));
     }
-}
-?>
+}?>
 
     <header class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
         <?php echo $style; ?>>
@@ -77,11 +76,11 @@ if (is_home() || is_singular('post') || is_archive()) {
                     <div class="<?php echo $col_class; ?>">
 
                         <?php if (is_home() || is_archive()) { //for blog
-    $header_heading_pages = get_field('header_heading_pages', get_option('page_for_posts'));
+    $heading_pages = get_field('heading_pages', get_option('page_for_posts'));
     $header_text_pages = get_field('header_text_pages', get_option('page_for_posts'));
 }?>
                         <h1 class="header_heading">
-                            <?php echo $header_heading_pages; ?>
+                            <?php echo $heading_pages; ?>
                             <!-- title in header for single post -->
                             <?php if (is_singular('post')): the_title();endif;?>
                         </h1>
