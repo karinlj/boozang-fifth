@@ -16,7 +16,7 @@
                 "id": ""
             },
             "choices": {
-                "lightgrey": "Lightgrey",
+                "white": "White",
                 "blue": "Blue",
                 "green": "Green",
                 "lightblue": "Lightblue"
@@ -126,5 +126,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617295948
+    "modified": 1617358281
 }

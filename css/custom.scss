@@ -393,6 +393,13 @@ header {
   // }
   &.lightgrey {
     background: $lightgrey;
+  }
+  &.white {
+    background: #fff;
+  }
+  &.white,
+  .lightgrey {
+    background: #fff;
     h1,
     h2,
     h3,
@@ -583,20 +590,20 @@ nav {
         z-index: 10;
         top: 45px;
         background-color: #fff;
-        width: 220px;
-        padding: 1em 0;
+        width: 280px;
+        padding: 2rem 0;
         display: none;
         box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
         li {
           width: 100%;
           a {
-            padding: 0.3rem 1.5rem;
+            padding: 0.5rem 1.5rem;
             margin: 0;
             text-transform: none;
             background-color: $navBg_transp;
             border-radius: 0;
             color: #16181d;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.8rem;
           }
           &:hover {
@@ -897,7 +904,7 @@ nav {
       color: $themecolorBlueDark;
       &:hover {
         color: #fff;
-        background: $themecolorBlueDark;
+        background: transparent;
       }
     }
   }
@@ -915,7 +922,8 @@ nav {
     }
   }
   //lightgrey and dark nav-color
-  &.lightgrey {
+  &.white,
+  .lightgrey {
     .signup_btn {
       color: $themecolor;
     }
@@ -957,28 +965,28 @@ nav {
               }
             }
           }
-          /*Wp:s klasser*/
-          a:not([href]):not([tabindex]) {
+        }
+        /*Wp:s klasser*/
+        a:not([href]):not([tabindex]) {
+          color: $navcolorDark;
+          &:hover {
+            color: $navcolorDark;
+          }
+        }
+        li.current-menu-item {
+          > a {
+            color: $navcolorDark;
+            border-bottom: 1px solid $navcolorDark;
+          }
+        }
+        li.menu-item-has-children {
+          > a {
             color: $navcolorDark;
             &:hover {
               color: $navcolorDark;
             }
-          }
-          li.current-menu-item {
-            > a {
+            &:after {
               color: $navcolorDark;
-              border-bottom: 1px solid $navcolorDark;
-            }
-          }
-          li.menu-item-has-children {
-            > a {
-              color: $navcolorDark;
-              &:hover {
-                color: $navcolorDark;
-              }
-              &:after {
-                color: $navcolorDark;
-              }
             }
           }
         }
@@ -995,34 +1003,17 @@ nav {
       //   }
       // }
     }
-    // .signup {
-    //   display: flex;
-    //   justify-content: flex-start;
-    //   @media all and (min-width: $lg-min) {
-    //     justify-content: flex-end;
-    //   }
-    //   ul {
-    //     li {
-    //       &:last-of-type {
-    //         @media all and (min-width: $lg-min) {
-    //           border-left: 1px solid $navcolorDark;
-    //         }
-    //         a {
-    //           color: #fff;
-    //           background-color: $navcolorDark;
-    //           border: 1px solid $navcolorDark;
-
-    //           &:hover {
-    //             color: $navcolorDark;
-    //             background: #fff;
-    //             border: 1px solid #fff !important;
-    //             opacity: 1;
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
+    .signup {
+      ul {
+        li {
+          &:last-of-type {
+            @media all and (min-width: $lg-min) {
+              border-left: 1px solid $navcolorDark;
+            }
+          }
+        }
+      }
+    }
   }
   .header_items_section {
     padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
@@ -1068,6 +1059,43 @@ nav {
         @media all and (min-width: $sm-min) {
           text-align: left;
           margin-right: 5rem;
+        }
+      }
+    }
+    //btn_links for udemy
+    .btn_links {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      @media all and (min-width: $md-min) {
+        flex-direction: row;
+      }
+      .btn_container {
+        .btn {
+          background: transparent;
+          color: $themecolorNewBlue;
+          border: 1px solid $themecolorNewBlue;
+          padding: 10px 15px;
+          transition: 0.5s ease-in-out;
+          &:hover {
+            background: $themecolorNewBlue;
+            color: #fff;
+            border: 1px solid $themecolorNewBlue;
+            box-shadow: none;
+          }
+          &:active {
+            box-shadow: none;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        margin-bottom: 1rem;
+        @media all and (min-width: $md-min) {
+          margin-bottom: 0;
         }
       }
     }
@@ -1150,7 +1178,7 @@ nav {
  *********************/
 .pricing_section {
   padding-top: 0;
-  background: $lightgrey;
+  background: #fff;
   .preamble_section {
     text-align: center;
     max-width: 100%;
@@ -1167,6 +1195,7 @@ nav {
     }
   }
   .card {
+    background: $lightgrey;
     text-align: center;
     border-radius: $themeBorder_radius;
     box-shadow: $themeBox_shadow;
@@ -1255,6 +1284,7 @@ nav {
 feature list  var???
 *********************/
 .feature_list_section {
+  background: $lightgrey;
   padding-bottom: 2rem;
   .heading {
     margin-bottom: 4rem;
@@ -1351,7 +1381,7 @@ small pricing cards
    faq accordion
 *********************/
 .faq_accordion_section {
-  background: $lightgrey;
+  background: #fff;
   .heading {
     margin-bottom: 4rem;
     @media all and (min-width: $md-min) {
@@ -1850,11 +1880,21 @@ small pricing cards
   Videos Page Layout
 *********************/
 .video_section {
-  background: $lightgrey;
-  padding-top: 0;
+  background: #fff;
+  > .container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    @media all and (min-width: 1580px) {
+      max-width: 1150px;
+    }
+    @media all and (min-width: 1780px) {
+      max-width: 1300px;
+    }
+  }
   .video_container {
     width: 100%;
-    box-shadow: $themeBox_shadow;
+    box-shadow: $themeBox_shadow_images;
     border-radius: $themeBorder_radius;
     margin: 0 2% 4rem 0;
     transition: 0.25s ease-in-out;
@@ -1882,20 +1922,6 @@ small pricing cards
         img {
           border-top-left-radius: $themeBorder_radius;
           border-top-right-radius: $themeBorder_radius;
-        }
-        .title_on_img {
-          font-family: "Roboto Slab", serif;
-          width: 86%;
-          position: absolute;
-          transform: translate(-50%, -50%);
-          top: 35%;
-          left: 50%;
-          z-index: 2;
-          font-size: 1.7rem;
-          font-weight: 600;
-          margin-bottom: 0;
-          text-align: center;
-          line-height: 1.4;
         }
       }
     }

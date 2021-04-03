@@ -1,4 +1,4 @@
-<section class="video_section section_spacing_top_medium">
+<section class="video_section section_spacing_top_small">
     <div class="container">
         <div class="row">
             <?php
@@ -40,7 +40,6 @@ foreach ($taxonomies as $taxonomy) {
                 if ($image) {
                     echo wp_get_attachment_image($image, $size);
                 } ?>
-                            <h3 class="title_on_img"><?php the_field('image_title'); ?></h3>
                         </div>
                     </div>
                     <div class="content_container">

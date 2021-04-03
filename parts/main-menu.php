@@ -13,7 +13,7 @@ $color = get_field('color_theme');
                             <!--extra double size image for retina-->
 
                             <?php
-                            if ($color === 'lightgrey') {?>
+                            if ($color === 'white') {?>
                             <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang.png"
                                 srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang@2x.png 325w"
                                 width="208" height="51" alt="boozang-logo" />

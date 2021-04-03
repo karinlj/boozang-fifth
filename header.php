@@ -28,6 +28,8 @@ $header_bgImage = get_field('header_image');
 $overlay_color = '';
 $heading_pages = get_field('heading_pages');
 $header_text_pages = get_field('header_text_pages');
+$header_btn_links = get_field('btn_links');
+
 ?>
     <?php if (is_singular('post')) {
     $col_class = 'col-md-10 offset-md-1';
@@ -162,6 +164,32 @@ if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_
 }
 ?>
                     <!-- row -->
+                </div>
+                <!-- btn links -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <ul class="btn_links">
+                            <!-- repeater field -->
+                            <?php
+                            if (have_rows('btn_links')) {?>
+                            <?php while (have_rows('btn_links')) {
+                                the_row();
+                                $link = get_sub_field('link'); ?>
+
+                            <div class="btn_container">
+                                <?php
+                            if ($link) {?>
+                                <a class="btn link" href="<?php echo $link['url']; ?>"
+                                    target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
+                                </a>
+                                <?php } ?>
+
+                            </div>
+                            <?php
+                            }
+                            } ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
