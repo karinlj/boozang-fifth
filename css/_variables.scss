@@ -22,6 +22,15 @@ $max-page-width: 1380px;
 
 $themecolorLila: #2a2966;
 $themecolorBlueDark: #22315e;
+$themecolorBlueDarkBg: linear-gradient(
+  to right,
+  #22315e,
+  #253667,
+  #293b70,
+  #2c4079,
+  #304582
+);
+
 $themecolorBlueDarkLighter: #293b70;
 $themecolorBlueDarkest: #1c284a;
 $themecolorPurple: #5d2d57;
@@ -76,6 +85,8 @@ $themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
   rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
 $themeBox_shadow_images_hover: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+
+//blog:     box-shadow: 0px 2px 10px rgb(0 0 0 / 20%);
 
 $navcolor: #fff;
 $navcolorDark: $themecolor;

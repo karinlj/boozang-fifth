@@ -321,7 +321,8 @@ a.arrow_link {
   transition: transform 0.3s ease;
   &:hover {
     opacity: 1;
-    transform: translateX(5px);
+    transform: translateX(2px);
+    color: #fff;
     &:before {
       opacity: 0.7;
     }
@@ -336,12 +337,6 @@ a.arrow_link {
     height: 2px;
     background: #fff;
   }
-  // &::after {
-  //   content: "\f061 ";
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   margin-left: 10px;
-  // }
 }
 
 /*********************
@@ -383,7 +378,8 @@ header {
     background: $themecolorNewBlue;
   }
   &.blue {
-    background: $themecolorBlueDark;
+    //background: $themecolorBlueDark;
+    background-image: $themecolorBlueDarkBg;
   }
   &.purple {
     background: $themecolorPurple;
@@ -603,7 +599,7 @@ nav {
             background-color: $navBg_transp;
             border-radius: 0;
             color: #16181d;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 0.8rem;
           }
           &:hover {
@@ -611,6 +607,11 @@ nav {
               background: #f4f0f4;
               opacity: 1;
             }
+          }
+        }
+        li.current-menu-item {
+          > a {
+            border-bottom: none;
           }
         }
       }
@@ -890,6 +891,11 @@ nav {
         background: #fff;
       }
     }
+    // .header_items_section {
+    //   .header_text {
+    //     color: #fff;
+    //   }
+    // }
   }
   &.blue {
     .signup_btn {
@@ -984,9 +990,15 @@ nav {
             color: $navcolorDark;
             &:hover {
               color: $navcolorDark;
+              border-bottom: none;
             }
             &:after {
               color: $navcolorDark;
+            }
+          }
+          li.current-menu-item {
+            > a {
+              border-bottom: none;
             }
           }
         }
@@ -1198,7 +1210,7 @@ nav {
     background: $lightgrey;
     text-align: center;
     border-radius: $themeBorder_radius;
-    box-shadow: $themeBox_shadow;
+    box-shadow: $themeBox_shadow_images;
     border: 1px solid $lightgrey;
     height: 500px;
     .card-body {
@@ -1206,7 +1218,7 @@ nav {
       height: 100%;
     }
     .pricing_header {
-      border-bottom: 2px solid $mediumgrey;
+      border-bottom: 1px solid $themecolorFront;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1270,7 +1282,7 @@ nav {
         color: #fff;
       }
       .pricing_header {
-        border-bottom: 2px solid $themecolorNewBlue; // #1b94e4;
+        border-bottom: 1px solid $themecolorNewBlueDarker;
       }
       .price {
         span {
@@ -2072,21 +2084,19 @@ small pricing cards
   height: auto;
   padding: 0;
   @media all and (min-width: $sm-min) {
-    padding: 1rem calc(2.25rem - 15px);
-    height: 60px;
+    padding: 0 calc(2.25rem - 15px);
   }
   @media all and (min-width: $md-min) {
-    padding: 1rem calc(3rem - 15px);
+    padding: 0 calc(3rem - 15px);
   }
   @media all and (min-width: $md-min) {
-    padding: 1rem calc(3rem - 15px);
+    padding: 0 calc(3rem - 15px);
   }
   @media all and (min-width: $xl-min) {
-    padding: 1rem calc(3.75rem - 15px);
+    padding: 0 calc(3.75rem - 15px);
   }
   .sidebar-module {
     width: 100%;
-    margin-bottom: 1rem;
     h4 {
       display: none;
     }
@@ -2101,11 +2111,12 @@ small pricing cards
       list-style: none;
       margin: 0;
       padding: 0;
+      // height: 70px;
       @media all and (min-width: $sm-min) {
         flex-direction: row;
+        border-bottom: 1px solid $themeBorderColor;
       }
       li {
-        background: #fff;
         width: 100%;
         text-align: center;
         @media all and (min-width: $sm-min) {
@@ -2113,11 +2124,8 @@ small pricing cards
           text-align: left;
         }
         a {
-          margin-left: -15px;
-          margin-right: -15px;
-          transition: all 0.5s ease;
-          padding: 0.8rem 0.2rem;
-          border: none;
+          padding: 1rem 0.2rem 0.8rem 0.2rem;
+          transition: all 0.5s ease-out;
           text-transform: uppercase;
           font-size: 0.8em;
           display: block;
@@ -2125,33 +2133,28 @@ small pricing cards
           color: $themecolor;
           text-decoration: none;
           cursor: pointer;
-          font-weight: 500;
-          border-bottom: 1px solid #ddd;
+          font-weight: 600;
           color: $themecolor;
           text-decoration: none;
+          border-bottom: 3px solid transparent;
+          // margin-bottom: -3px;
+          margin: 0 0.6rem;
+          margin-bottom: -2px;
           &:hover {
             opacity: 1;
-            background: #f2f2f2;
+            border-color: $themecolorNewBlue;
           }
           @media all and (min-width: $sm-min) {
-            margin: 0 0.2rem;
-            border: none;
             font-size: 0.7em;
-            padding: 0.5rem 1rem;
-            font-weight: 500;
-            border-radius: $themeBorder_radius;
-            &:hover {
-              opacity: 1;
-              background: #f2f2f2;
-            }
           }
           @media all and (min-width: $md-min) {
             font-size: 0.8em;
-            font-weight: 600;
-            margin: 0 0.3rem;
+            padding: 1.3rem 0.2rem 1.1rem 0.2rem;
           }
           @media all and (min-width: $xl-min) {
             letter-spacing: 0.5px;
+            margin: 0 1rem;
+            margin-bottom: -2px;
           }
         }
       }
@@ -2161,22 +2164,15 @@ small pricing cards
       }
       li.current-cat {
         a {
-          background: #f2f2f2;
-          border-bottom: none;
+          border-bottom: 3px solid $themecolorNewBlue;
           @media all and (min-width: $md-min) {
-            // background: #fff;
-            // border-bottom: 2px solid $themecolorGreen;
           }
         }
       }
       .most-recent.current-misse {
         a {
-          background: #f2f2f2;
-          border-bottom: none;
-
+          border-bottom: 3px solid $themecolorNewBlue;
           @media all and (min-width: $sm-min) {
-            // background: #fff;
-            // border-bottom: 2px solid $themecolorGreen;
           }
         }
       }
@@ -2399,14 +2395,13 @@ small pricing cards
   background-image: url("../img/newspapers.jpg");
   background-size: cover;
   position: relative;
-
   &:before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorPurple;
+    background: $themecolorNewBlueDarkerOverlay;
     opacity: 0.85;
     content: "";
     display: block;

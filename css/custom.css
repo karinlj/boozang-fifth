@@ -376,7 +376,8 @@ a.arrow_link:hover:before {
 }
 .banner_link:hover {
   opacity: 1;
-  transform: translateX(5px);
+  transform: translateX(2px);
+  color: #fff;
 }
 .banner_link:hover:before {
   opacity: 0.7;
@@ -433,7 +434,7 @@ header.lightblue {
 }
 section.blue,
 header.blue {
-  background: #22315e;
+  background-image: linear-gradient(to right, #22315e, #253667, #293b70, #2c4079, #304582);
 }
 section.purple,
 header.purple {
@@ -682,12 +683,15 @@ nav ul li.menu-item-has-children ul li a {
   background-color: transparent;
   border-radius: 0;
   color: #16181d;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.8rem;
 }
 nav ul li.menu-item-has-children ul li:hover a {
   background: #f4f0f4;
   opacity: 1;
+}
+nav ul li.menu-item-has-children ul li.current-menu-item > a {
+  border-bottom: none;
 }
 nav ul li.menu-item-has-children ul.sub-menu-open {
   display: flex;
@@ -1127,12 +1131,19 @@ nav > .toggle {
 .header_small.white nav ul li.menu-item-has-children > a:hover,
 .header_small .lightgrey nav ul li.menu-item-has-children > a:hover {
   color: #4a5669;
+  border-bottom: none;
 }
 .header_big.white nav ul li.menu-item-has-children > a:after,
 .header_big .lightgrey nav ul li.menu-item-has-children > a:after,
 .header_small.white nav ul li.menu-item-has-children > a:after,
 .header_small .lightgrey nav ul li.menu-item-has-children > a:after {
   color: #4a5669;
+}
+.header_big.white nav ul li.menu-item-has-children li.current-menu-item > a,
+.header_big .lightgrey nav ul li.menu-item-has-children li.current-menu-item > a,
+.header_small.white nav ul li.menu-item-has-children li.current-menu-item > a,
+.header_small .lightgrey nav ul li.menu-item-has-children li.current-menu-item > a {
+  border-bottom: none;
 }
 .header_big.white nav ul > .toggle,
 .header_big .lightgrey nav ul > .toggle,
@@ -1372,7 +1383,7 @@ nav > .toggle {
   background: #f5f6f9;
   text-align: center;
   border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   border: 1px solid #f5f6f9;
   height: 500px;
 }
@@ -1381,7 +1392,7 @@ nav > .toggle {
   height: 100%;
 }
 .pricing_section .card .pricing_header {
-  border-bottom: 2px solid #f1f1f4;
+  border-bottom: 1px solid #dae0f1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1444,7 +1455,7 @@ nav > .toggle {
   color: #fff;
 }
 .pricing_section .card.blue_darker .pricing_header {
-  border-bottom: 2px solid #0085cc;
+  border-bottom: 1px solid #006399;
 }
 .pricing_section .card.blue_darker .price span {
   color: #dae0f1;
@@ -2256,28 +2267,26 @@ small pricing cards
 }
 @media all and (min-width: 576px) {
   .blog-sidebar {
-    padding: 1rem calc(2.25rem - 15px);
-    height: 60px;
+    padding: 0 calc(2.25rem - 15px);
   }
 }
 @media all and (min-width: 768px) {
   .blog-sidebar {
-    padding: 1rem calc(3rem - 15px);
+    padding: 0 calc(3rem - 15px);
   }
 }
 @media all and (min-width: 768px) {
   .blog-sidebar {
-    padding: 1rem calc(3rem - 15px);
+    padding: 0 calc(3rem - 15px);
   }
 }
 @media all and (min-width: 1200px) {
   .blog-sidebar {
-    padding: 1rem calc(3.75rem - 15px);
+    padding: 0 calc(3.75rem - 15px);
   }
 }
 .blog-sidebar .sidebar-module {
   width: 100%;
-  margin-bottom: 1rem;
 }
 .blog-sidebar .sidebar-module h4 {
   display: none;
@@ -2298,10 +2307,10 @@ small pricing cards
 @media all and (min-width: 576px) {
   .blog-sidebar .sidebar-module ul {
     flex-direction: row;
+    border-bottom: 1px solid #ebebeb;
   }
 }
 .blog-sidebar .sidebar-module ul li {
-  background: #fff;
   width: 100%;
   text-align: center;
 }
@@ -2312,11 +2321,8 @@ small pricing cards
   }
 }
 .blog-sidebar .sidebar-module ul li a {
-  margin-left: -15px;
-  margin-right: -15px;
-  transition: all 0.5s ease;
-  padding: 0.8rem 0.2rem;
-  border: none;
+  padding: 1rem 0.2rem 0.8rem 0.2rem;
+  transition: all 0.5s ease-out;
   text-transform: uppercase;
   font-size: 0.8em;
   display: block;
@@ -2324,51 +2330,43 @@ small pricing cards
   color: #4a5669;
   text-decoration: none;
   cursor: pointer;
-  font-weight: 500;
-  border-bottom: 1px solid #ddd;
+  font-weight: 600;
   color: #4a5669;
   text-decoration: none;
+  border-bottom: 3px solid transparent;
+  margin: 0 0.6rem;
+  margin-bottom: -2px;
 }
 .blog-sidebar .sidebar-module ul li a:hover {
   opacity: 1;
-  background: #f2f2f2;
+  border-color: #0085cc;
 }
 @media all and (min-width: 576px) {
   .blog-sidebar .sidebar-module ul li a {
-    margin: 0 0.2rem;
-    border: none;
     font-size: 0.7em;
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    border-radius: 4px;
-  }
-  .blog-sidebar .sidebar-module ul li a:hover {
-    opacity: 1;
-    background: #f2f2f2;
   }
 }
 @media all and (min-width: 768px) {
   .blog-sidebar .sidebar-module ul li a {
     font-size: 0.8em;
-    font-weight: 600;
-    margin: 0 0.3rem;
+    padding: 1.3rem 0.2rem 1.1rem 0.2rem;
   }
 }
 @media all and (min-width: 1200px) {
   .blog-sidebar .sidebar-module ul li a {
     letter-spacing: 0.5px;
+    margin: 0 1rem;
+    margin-bottom: -2px;
   }
 }
 .blog-sidebar .sidebar-module ul li.cat-item-1 {
   display: none;
 }
 .blog-sidebar .sidebar-module ul li.current-cat a {
-  background: #f2f2f2;
-  border-bottom: none;
+  border-bottom: 3px solid #0085cc;
 }
 .blog-sidebar .sidebar-module ul .most-recent.current-misse a {
-  background: #f2f2f2;
-  border-bottom: none;
+  border-bottom: 3px solid #0085cc;
 }
 .blog_flow .container .container {
   padding: 0;
@@ -2593,7 +2591,7 @@ small pricing cards
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: #5d2d57;
+  background: rgba(0, 83, 128, 0.8);
   opacity: 0.85;
   content: "";
   display: block;
