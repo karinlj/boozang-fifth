@@ -382,6 +382,15 @@ a.arrow_link:hover:before {
 .banner_link:hover:before {
   opacity: 0.7;
 }
+.banner_link:focus {
+  color: #fff;
+}
+.banner_link:active {
+  color: #fff;
+}
+.banner_link:visited {
+  color: #fff;
+}
 .banner_link:before {
   opacity: 0.4;
   position: absolute;
@@ -516,7 +525,7 @@ header.overlay-lightblue::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 99, 153, 0.85);
+  background: rgba(0, 99, 153, 0.8);
   content: "";
   display: block;
 }
@@ -528,6 +537,17 @@ header.overlay-blue::before {
   bottom: 0;
   left: 0;
   background: rgba(34, 49, 94, 0.8);
+  content: "";
+  display: block;
+}
+section.overlay-lila::before,
+header.overlay-lila::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(42, 41, 102, 0.85);
   content: "";
   display: block;
 }
@@ -655,6 +675,7 @@ nav ul li.menu-item-has-children > a {
 }
 nav ul li.menu-item-has-children > a:hover {
   color: #fff;
+  border-color: transparent !important;
 }
 nav ul li.menu-item-has-children > a::after {
   content: "";
@@ -685,6 +706,9 @@ nav ul li.menu-item-has-children ul li a {
   color: #16181d;
   font-weight: 500;
   font-size: 0.8rem;
+}
+nav ul li.menu-item-has-children ul li a:hover {
+  border-bottom: none !important;
 }
 nav ul li.menu-item-has-children ul li:hover a {
   background: #f4f0f4;
@@ -1131,7 +1155,7 @@ nav > .toggle {
 .header_small.white nav ul li.menu-item-has-children > a:hover,
 .header_small .lightgrey nav ul li.menu-item-has-children > a:hover {
   color: #4a5669;
-  border-bottom: none;
+  border-color: transparent !important;
 }
 .header_big.white nav ul li.menu-item-has-children > a:after,
 .header_big .lightgrey nav ul li.menu-item-has-children > a:after,
@@ -1145,11 +1169,11 @@ nav > .toggle {
 .header_small .lightgrey nav ul li.menu-item-has-children li.current-menu-item > a {
   border-bottom: none;
 }
-.header_big.white nav ul > .toggle,
-.header_big .lightgrey nav ul > .toggle,
-.header_small.white nav ul > .toggle,
-.header_small .lightgrey nav ul > .toggle {
-  color: #4a5669;
+.header_big.white nav > .toggle,
+.header_big .lightgrey nav > .toggle,
+.header_small.white nav > .toggle,
+.header_small .lightgrey nav > .toggle {
+  color: #212735;
 }
 @media all and (min-width: 992px) {
   .header_big.white .signup ul li:last-of-type,
@@ -1668,29 +1692,63 @@ small pricing cards
 /*********************
    info banner small
 *********************/
+.info_banner_small {
+  padding-top: 0;
+  margin-top: -3rem;
+}
+.info_banner_small > .container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
 .info_banner_small .content {
   min-height: 200px;
   border-radius: 4px;
 }
-.info_banner_small .content img {
-  border-radius: 4px;
-}
-.info_banner_small .content .heading {
-  position: relative;
-  margin-bottom: 1.6rem;
-}
 .info_banner_small .content .heading,
 .info_banner_small .content p {
+  position: relative;
   color: #fff;
+}
+.info_banner_small .content p {
+  margin-bottom: 0.5rem;
 }
 .info_banner_small .content .link_wrapper {
   display: flex;
+  align-items: flex-start;
   padding-top: 1rem;
 }
 .info_banner_small .content .link_wrapper img {
   position: relative;
-  max-width: 30px;
-  margin-right: 1rem;
+  max-width: 22px;
+  margin-right: 0.1rem;
+}
+@media all and (min-width: 768px) {
+  .info_banner_small .content .link_wrapper img {
+    max-width: 30px;
+    margin-right: 0.4rem;
+  }
+}
+.info_banner_small .content .link_wrapper a {
+  font-size: 0.75rem;
+}
+@media all and (max-width: 480px) {
+  .info_banner_small .content .link_wrapper a::before {
+    background-color: transparent;
+  }
+}
+@media all and (min-width: 576px) {
+  .info_banner_small .content .link_wrapper a {
+    font-size: 0.9rem;
+  }
+}
+@media all and (min-width: 992px) {
+  .info_banner_small .content .link_wrapper a {
+    font-size: 1rem;
+  }
+}
+.info_banner_small .content::before {
+  border-radius: 4px;
 }
 
 /*********************

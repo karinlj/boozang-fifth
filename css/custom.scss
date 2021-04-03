@@ -327,6 +327,15 @@ a.arrow_link {
       opacity: 0.7;
     }
   }
+  &:focus {
+    color: #fff;
+  }
+  &:active {
+    color: #fff;
+  }
+  &:visited {
+    color: #fff;
+  }
   &:before {
     opacity: 0.4;
     position: absolute;
@@ -466,6 +475,16 @@ header {
     content: "";
     display: block;
   }
+  &.overlay-lila::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $themecolorLilaOverlay;
+    content: "";
+    display: block;
+  }
 }
 
 /************************
@@ -572,6 +591,7 @@ nav {
         color: $navcolor;
         &:hover {
           color: $navcolor;
+          border-color: transparent !important;
         }
         &::after {
           content: "\f107";
@@ -601,6 +621,9 @@ nav {
             color: #16181d;
             font-weight: 500;
             font-size: 0.8rem;
+            &:hover {
+              border-bottom: none !important;
+            }
           }
           &:hover {
             a {
@@ -990,7 +1013,7 @@ nav {
             color: $navcolorDark;
             &:hover {
               color: $navcolorDark;
-              border-bottom: none;
+              border-color: transparent !important;
             }
             &:after {
               color: $navcolorDark;
@@ -1002,9 +1025,9 @@ nav {
             }
           }
         }
-        > .toggle {
-          color: $navcolorDark;
-        }
+      }
+      > .toggle {
+        color: $themeHeadingcolor;
       }
       // .header_items_section {
       //   .header_heading {
@@ -1492,51 +1515,55 @@ small pricing cards
 *********************/
 .info_banner_small {
   //background and overlay: see scss section
-
+  padding-top: 0;
+  margin-top: -3rem;
+  > .container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
   .content {
     min-height: 200px;
     border-radius: $themeBorder_radius;
-    img {
-      border-radius: $themeBorder_radius;
-    }
-    // p {
-    //   font-size: 1.1rem;
-    //   @media all and (min-width: $lg-min) {
-    //     font-size: 1.2rem;
-    //   }
-    // }
-    .heading {
-      position: relative;
-      margin-bottom: 1.6rem;
-    }
     .heading,
     p {
+      position: relative;
       color: #fff;
-      // &::before {
-      //   font-weight: 600;
-      //   font-size: 40px;
-      //   color: #fff;
-      // }
+    }
+    p {
+      margin-bottom: 0.5rem;
     }
     .link_wrapper {
       display: flex;
+      align-items: flex-start;
       padding-top: 1rem;
       img {
         position: relative;
-        max-width: 30px;
-        margin-right: 1rem;
+        max-width: 22px;
+        margin-right: 0.1rem;
+        @media all and (min-width: $md-min) {
+          max-width: 30px;
+          margin-right: 0.4rem;
+        }
+      }
+      a {
+        font-size: 0.75rem;
+        @media all and (max-width: $xs-max) {
+          &::before {
+            background-color: transparent;
+          }
+        }
+        @media all and (min-width: $sm-min) {
+          font-size: 0.9rem;
+        }
+        @media all and (min-width: $lg-min) {
+          font-size: 1rem;
+        }
       }
     }
-    // .btn_wrapper {
-    //   padding-top: 1rem;
-    //   .link {
-    //     background-color: rgba(255, 255, 255, 0.2);
-    //     color: #fff;
-    //     &:hover {
-    //       opacity: 0.8;
-    //     }
-    //   }
-    // }
+    &::before {
+      border-radius: $themeBorder_radius;
+    }
   }
 }
 /*********************
