@@ -1487,7 +1487,58 @@ small pricing cards
     }
   }
 }
+/*********************
+   info banner small
+*********************/
+.info_banner_small {
+  //background and overlay: see scss section
 
+  .content {
+    min-height: 200px;
+    border-radius: $themeBorder_radius;
+    img {
+      border-radius: $themeBorder_radius;
+    }
+    // p {
+    //   font-size: 1.1rem;
+    //   @media all and (min-width: $lg-min) {
+    //     font-size: 1.2rem;
+    //   }
+    // }
+    .heading {
+      position: relative;
+      margin-bottom: 1.6rem;
+    }
+    .heading,
+    p {
+      color: #fff;
+      // &::before {
+      //   font-weight: 600;
+      //   font-size: 40px;
+      //   color: #fff;
+      // }
+    }
+    .link_wrapper {
+      display: flex;
+      padding-top: 1rem;
+      img {
+        position: relative;
+        max-width: 30px;
+        margin-right: 1rem;
+      }
+    }
+    // .btn_wrapper {
+    //   padding-top: 1rem;
+    //   .link {
+    //     background-color: rgba(255, 255, 255, 0.2);
+    //     color: #fff;
+    //     &:hover {
+    //       opacity: 0.8;
+    //     }
+    //   }
+    // }
+  }
+}
 /*********************
    get started banner 
 *********************/

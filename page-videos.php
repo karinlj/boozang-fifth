@@ -5,6 +5,18 @@
  */
 ?>
 <?php get_header();?>
+<?php // for layouts of content_block_pages
+if (function_exists('have_rows')) {
+    if (have_rows('alternative_blocks')) {
+        while (have_rows('alternative_blocks')) {
+            the_row();
+
+            $layout = get_row_layout();
+            // load the layout from the templates folder
+            get_template_part('templates/' . $layout);
+        }
+    }
+}?>
 
 <!-- get video-list -->
 <?php get_template_part('parts/video-list');?>

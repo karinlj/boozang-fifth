@@ -1666,6 +1666,34 @@ small pricing cards
 }
 
 /*********************
+   info banner small
+*********************/
+.info_banner_small .content {
+  min-height: 200px;
+  border-radius: 4px;
+}
+.info_banner_small .content img {
+  border-radius: 4px;
+}
+.info_banner_small .content .heading {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+.info_banner_small .content .heading,
+.info_banner_small .content p {
+  color: #fff;
+}
+.info_banner_small .content .link_wrapper {
+  display: flex;
+  padding-top: 1rem;
+}
+.info_banner_small .content .link_wrapper img {
+  position: relative;
+  max-width: 30px;
+  margin-right: 1rem;
+}
+
+/*********************
    get started banner 
 *********************/
 .get_started_banner {
