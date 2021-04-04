@@ -457,12 +457,6 @@ section.white,
 header.white {
   background: #fff;
 }
-section.white,
-section .lightgrey,
-header.white,
-header .lightgrey {
-  background: #fff;
-}
 section.white h1,
 section.white h2,
 section.white h3,
@@ -675,7 +669,7 @@ nav ul li.menu-item-has-children > a {
 }
 nav ul li.menu-item-has-children > a:hover {
   color: #fff;
-  border-color: transparent !important;
+  border-bottom: 1px solid transparent;
 }
 nav ul li.menu-item-has-children > a::after {
   content: "";
@@ -689,7 +683,7 @@ nav ul li.menu-item-has-children ul {
   z-index: 10;
   top: 45px;
   background-color: #fff;
-  width: 280px;
+  width: 230px;
   padding: 2rem 0;
   display: none;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
@@ -708,14 +702,14 @@ nav ul li.menu-item-has-children ul li a {
   font-size: 0.8rem;
 }
 nav ul li.menu-item-has-children ul li a:hover {
-  border-bottom: none !important;
+  border-bottom: 1px solid transparent;
 }
 nav ul li.menu-item-has-children ul li:hover a {
   background: #f4f0f4;
   opacity: 1;
 }
 nav ul li.menu-item-has-children ul li.current-menu-item > a {
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
 }
 nav ul li.menu-item-has-children ul.sub-menu-open {
   display: flex;
@@ -1155,7 +1149,6 @@ nav > .toggle {
 .header_small.white nav ul li.menu-item-has-children > a:hover,
 .header_small .lightgrey nav ul li.menu-item-has-children > a:hover {
   color: #4a5669;
-  border-color: transparent !important;
 }
 .header_big.white nav ul li.menu-item-has-children > a:after,
 .header_big .lightgrey nav ul li.menu-item-has-children > a:after,
@@ -1163,11 +1156,30 @@ nav > .toggle {
 .header_small .lightgrey nav ul li.menu-item-has-children > a:after {
   color: #4a5669;
 }
-.header_big.white nav ul li.menu-item-has-children li.current-menu-item > a,
-.header_big .lightgrey nav ul li.menu-item-has-children li.current-menu-item > a,
-.header_small.white nav ul li.menu-item-has-children li.current-menu-item > a,
-.header_small .lightgrey nav ul li.menu-item-has-children li.current-menu-item > a {
-  border-bottom: none;
+.header_big.white nav ul li.menu-item-has-children ul li a,
+.header_big .lightgrey nav ul li.menu-item-has-children ul li a,
+.header_small.white nav ul li.menu-item-has-children ul li a,
+.header_small .lightgrey nav ul li.menu-item-has-children ul li a {
+  color: #16181d;
+}
+.header_big.white nav ul li.menu-item-has-children ul li a:hover,
+.header_big .lightgrey nav ul li.menu-item-has-children ul li a:hover,
+.header_small.white nav ul li.menu-item-has-children ul li a:hover,
+.header_small .lightgrey nav ul li.menu-item-has-children ul li a:hover {
+  border-bottom: 1px solid transparent;
+}
+.header_big.white nav ul li.menu-item-has-children ul li:hover a,
+.header_big .lightgrey nav ul li.menu-item-has-children ul li:hover a,
+.header_small.white nav ul li.menu-item-has-children ul li:hover a,
+.header_small .lightgrey nav ul li.menu-item-has-children ul li:hover a {
+  background: #f5f6f9;
+  opacity: 1;
+}
+.header_big.white nav ul li.menu-item-has-children ul li.current-menu-item > a,
+.header_big .lightgrey nav ul li.menu-item-has-children ul li.current-menu-item > a,
+.header_small.white nav ul li.menu-item-has-children ul li.current-menu-item > a,
+.header_small .lightgrey nav ul li.menu-item-has-children ul li.current-menu-item > a {
+  border-bottom: 1px solid transparent;
 }
 .header_big.white nav > .toggle,
 .header_big .lightgrey nav > .toggle,
@@ -1704,6 +1716,7 @@ small pricing cards
 .info_banner_small .content {
   min-height: 200px;
   border-radius: 4px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .info_banner_small .content .heading,
 .info_banner_small .content p {

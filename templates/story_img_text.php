@@ -27,7 +27,7 @@ if (have_rows('two_columns_row')) {
         the_row();
         $number++;
         $color = get_sub_field('background_color'); ?>
-    <div class="column_row <?php echo $color; ?>">
+    <section class="column_row <?php echo $color; ?>">
         <div class="container">
             <div class="column_row_inner">
 
@@ -66,7 +66,7 @@ if (get_row_layout() == 'text') {?>
 
             </div>
         </div>
-    </div>
+    </section>
     <?php
     }
 }

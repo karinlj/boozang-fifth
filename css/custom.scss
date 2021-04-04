@@ -404,7 +404,6 @@ header {
   }
   &.white,
   .lightgrey {
-    background: #fff;
     h1,
     h2,
     h3,
@@ -591,7 +590,7 @@ nav {
         color: $navcolor;
         &:hover {
           color: $navcolor;
-          border-color: transparent !important;
+          border-bottom: 1px solid transparent;
         }
         &::after {
           content: "\f107";
@@ -606,7 +605,7 @@ nav {
         z-index: 10;
         top: 45px;
         background-color: #fff;
-        width: 280px;
+        width: 230px;
         padding: 2rem 0;
         display: none;
         box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
@@ -622,7 +621,7 @@ nav {
             font-weight: 500;
             font-size: 0.8rem;
             &:hover {
-              border-bottom: none !important;
+              border-bottom: 1px solid transparent;
             }
           }
           &:hover {
@@ -634,7 +633,7 @@ nav {
         }
         li.current-menu-item {
           > a {
-            border-bottom: none;
+            border-bottom: 1px solid transparent;
           }
         }
       }
@@ -1013,15 +1012,30 @@ nav {
             color: $navcolorDark;
             &:hover {
               color: $navcolorDark;
-              border-color: transparent !important;
             }
             &:after {
               color: $navcolorDark;
             }
           }
-          li.current-menu-item {
-            > a {
-              border-bottom: none;
+          ul {
+            li {
+              a {
+                color: #16181d;
+                &:hover {
+                  border-bottom: 1px solid transparent;
+                }
+              }
+              &:hover {
+                a {
+                  background: $lightgrey;
+                  opacity: 1;
+                }
+              }
+            }
+            li.current-menu-item {
+              > a {
+                border-bottom: 1px solid transparent;
+              }
             }
           }
         }
@@ -1525,6 +1539,7 @@ small pricing cards
   .content {
     min-height: 200px;
     border-radius: $themeBorder_radius;
+    box-shadow: $themeBox_shadow_more;
     .heading,
     p {
       position: relative;
