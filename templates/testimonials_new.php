@@ -18,30 +18,31 @@ $link = get_sub_field('link');
     </div>
     <div class="container">
         <div class="row align-items-start justify-content-between">
-            <div class="col">
-                <div class="testimonials-container">
-                    <?php
+
+            <?php
 // check if the repeater field has rows
 if (have_rows('testimonials_content')) {
     while (have_rows('testimonials_content')) {
         the_row();
 
         $color = get_sub_field('color_theme'); ?>
-                    <div class="testimonials-item <?php echo $color; ?>">
-                        <div>
-                            <p class="icon">
-                                <i class="fas fa-quote-left"></i>
-                            </p>
-                            <p class="text"><?php the_sub_field('text'); ?></p>
-                        </div>
-
-                        <h5 class="signature"><?php the_sub_field('signature'); ?></h5>
+            <div class="col">
+                <div class="testimonials_item <?php echo $color; ?>">
+                    <div>
+                        <p class="icon">
+                            <i class="fas fa-quote-left"></i>
+                        </p>
+                        <p class="text"><?php the_sub_field('text'); ?></p>
                     </div>
-                    <?php
+
+                    <h5 class="signature"><?php the_sub_field('signature'); ?></h5>
+                </div>
+
+            </div>
+            <?php
     }
 }?>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>

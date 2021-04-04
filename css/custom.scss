@@ -1854,7 +1854,7 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background: $themecolorPurple;
+  background-image: $themecolorLilaBg;
   .text_section {
     padding-bottom: 2rem;
     h2,
@@ -1899,8 +1899,9 @@ small pricing cards
 ***********************/
 
 .testimonials_section_new {
-  //background: $lightgrey;
-  background: $themecolorBlueDark;
+  background: $lightgrey;
+  //background: $themecolorBlueDark;
+  background: #fff;
   height: auto;
   overflow: hidden;
   @media all and (min-width: $xl-min) {
@@ -1910,73 +1911,44 @@ small pricing cards
     text-align: center;
     margin-bottom: 4rem;
     h2 {
-      color: #fff;
+      // color: #fff;
       margin-bottom: 1.5rem;
     }
   }
-  .testimonials-container {
-    @include d-flex;
+  .testimonials_item {
+    height: 330px;
+    background: $themecolorBlueDarkest;
+    background: #fff;
+    // background: $lightgrey;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    border-radius: $themeBorder_radius;
+    padding: 2.5rem 1.5rem;
+    box-shadow: $themeBox_shadow_more;
     @media all and (min-width: $lg-min) {
-      flex-direction: row;
+      margin-bottom: 0;
+      min-height: 360px;
     }
-    .testimonials-item {
-      background: $themecolorBlueDarkest;
-      background: #fff;
-      flex: 1 1 28%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-radius: $themeBorder_radius;
-      margin: 0 1rem 2rem 0;
-      padding: 2.5rem 1.5rem;
-      height: auto;
-      box-shadow: $themeBox_shadow_images;
-      @media all and (min-width: $lg-min) {
-        margin-bottom: 0;
-        min-height: 360px;
-      }
-      p {
-        color: $themecolorFront; //#fff;
-        color: $themecolor;
-        // strong {
-        //   color: #fff;
-        // }
-      }
-      .signature {
-        font-weight: 500;
-        font-size: 1.1rem;
-        // @media all and (min-width: $lg-min) and (max-width: $lg-max) {
-        //   font-size: 1.4rem;
-        // }
-        border-left: 5px solid $themecolorLighter;
-        padding-left: 1rem;
-        //margin-left: 3rem;
-      }
-      .icon {
-        margin-bottom: 1rem;
-        i.fas {
-          color: $themecolorFront;
-          color: $themeHeadingcolor;
-          font-size: 1.5em;
-        }
-      }
+    p {
+      // color: $themecolorFront;
+      color: $themecolor;
+      // strong {
+      //   color: #fff;
+      // }
     }
-    .testimonials-item {
-      &.blue {
-        .signature {
-          color: $themecolorPink;
-        }
-      }
-      &.green {
-        .signature {
-          color: $themecolorPink;
-        }
-      }
-      &.lightblue {
-        .signature {
-          color: $themecolorPink;
-        }
+    .signature {
+      font-weight: 500;
+      font-size: 1.1rem;
+      border-left: 5px solid $themecolorFront;
+      padding-left: 1rem;
+      color: $themecolorPink;
+    }
+    .icon {
+      margin-bottom: 1rem;
+      i.fas {
+        color: $themecolorFront;
+        font-size: 1.5em;
       }
     }
   }
@@ -2598,6 +2570,7 @@ text layout for Pages Content block
 ****************************/
 .sign_up_front_section {
   background: $themecolorBlueDarkest;
+  background: $themecolorBlueDark;
   .col-md-6:first-child {
     border-right: 1px solid $themeBorderColorFront;
   }
@@ -2658,12 +2631,15 @@ big_image_center
 ***********************************/
 .big_image_center {
   background: $themecolorBlueDark;
+  background: $lightgrey;
   text-align: center;
   .heading {
-    color: #fff;
+    // color: #fff;
   }
   .preamble {
-    color: $themecolorFront;
+    //color: $themecolorFront;
+    color: $themecolorLight;
+
     max-width: 80%;
     margin: 0 auto;
   }

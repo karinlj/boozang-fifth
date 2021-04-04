@@ -2042,7 +2042,7 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background: #5d2d57;
+  background-image: linear-gradient(to right, #574e93, #6b559d, #7f5ca6, #9464af, #a86bb7);
 }
 .integrations_section .text_section {
   padding-bottom: 2rem;
@@ -2091,7 +2091,8 @@ small pricing cards
   testimonials new
 ***********************/
 .testimonials_section_new {
-  background: #22315e;
+  background: #f5f6f9;
+  background: #fff;
   height: auto;
   overflow: hidden;
 }
@@ -2105,66 +2106,41 @@ small pricing cards
   margin-bottom: 4rem;
 }
 .testimonials_section_new .heading_section h2 {
-  color: #fff;
   margin-bottom: 1.5rem;
 }
-.testimonials_section_new .testimonials-container {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  flex-direction: column;
-}
-@media all and (min-width: 992px) {
-  .testimonials_section_new .testimonials-container {
-    flex-direction: row;
-  }
-}
-.testimonials_section_new .testimonials-container .testimonials-item {
+.testimonials_section_new .testimonials_item {
+  height: 330px;
   background: #1c284a;
   background: #fff;
-  flex: 1 1 28%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 4px;
-  margin: 0 1rem 2rem 0;
   padding: 2.5rem 1.5rem;
-  height: auto;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 @media all and (min-width: 992px) {
-  .testimonials_section_new .testimonials-container .testimonials-item {
+  .testimonials_section_new .testimonials_item {
     margin-bottom: 0;
     min-height: 360px;
   }
 }
-.testimonials_section_new .testimonials-container .testimonials-item p {
-  color: #dae0f1;
+.testimonials_section_new .testimonials_item p {
   color: #4a5669;
 }
-.testimonials_section_new .testimonials-container .testimonials-item .signature {
+.testimonials_section_new .testimonials_item .signature {
   font-weight: 500;
   font-size: 1.1rem;
-  border-left: 5px solid #e6e6e6;
+  border-left: 5px solid #dae0f1;
   padding-left: 1rem;
+  color: #f24d7f;
 }
-.testimonials_section_new .testimonials-container .testimonials-item .icon {
+.testimonials_section_new .testimonials_item .icon {
   margin-bottom: 1rem;
 }
-.testimonials_section_new .testimonials-container .testimonials-item .icon i.fas {
+.testimonials_section_new .testimonials_item .icon i.fas {
   color: #dae0f1;
-  color: #212735;
   font-size: 1.5em;
-}
-.testimonials_section_new .testimonials-container .testimonials-item.blue .signature {
-  color: #f24d7f;
-}
-.testimonials_section_new .testimonials-container .testimonials-item.green .signature {
-  color: #f24d7f;
-}
-.testimonials_section_new .testimonials-container .testimonials-item.lightblue .signature {
-  color: #f24d7f;
 }
 
 /********************
@@ -2793,6 +2769,7 @@ text layout for Pages Content block
 ****************************/
 .sign_up_front_section {
   background: #1c284a;
+  background: #22315e;
 }
 .sign_up_front_section .col-md-6:first-child {
   border-right: 1px solid #293b70;
@@ -2849,13 +2826,11 @@ big_image_center
 ***********************************/
 .big_image_center {
   background: #22315e;
+  background: #f5f6f9;
   text-align: center;
 }
-.big_image_center .heading {
-  color: #fff;
-}
 .big_image_center .preamble {
-  color: #dae0f1;
+  color: #66758d;
   max-width: 80%;
   margin: 0 auto;
 }
