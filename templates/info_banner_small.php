@@ -15,15 +15,14 @@ $style = '';
 <section class="info_banner_small section_spacing_top_mini">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10">
-                <section class="content <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_mini"
-                    <?php echo $style; ?>>
+            <div class="col-md-8">
+                <section class="content <?php echo $color; ?> <?php echo $overlay_color; ?>" <?php echo $style; ?>>
                     <?php
                     $heading = get_sub_field('heading');
                     $text = get_sub_field('text');
 
                     if ($heading) {?>
-                    <h6 class="heading"><?php echo $heading; ?></h6>
+                    <h5 class="heading"><?php echo $heading; ?></h5>
                     <?php } ?>
                     <?php
 

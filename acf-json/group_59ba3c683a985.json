@@ -17,9 +17,9 @@
             },
             "choices": {
                 "white": "White",
-                "blue": "Blue",
-                "green": "Green",
-                "lightblue": "Lightblue"
+                "blueDark": "Blue dark",
+                "lightblue": "Lightblue",
+                "purpledark": "Purpledark"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -126,5 +126,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617358281
+    "modified": 1617570101
 }

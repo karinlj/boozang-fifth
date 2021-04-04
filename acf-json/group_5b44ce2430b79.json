@@ -232,6 +232,31 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_606a2f20a950e",
+                            "label": "Background color",
+                            "name": "background_color",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "blueDark": "Blue dark",
+                                "lightblue": "Lightblue",
+                                "purpledark": "Purpledark"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_6064616a11c30",
                             "label": "Heading",
                             "name": "heading",
@@ -367,9 +392,9 @@
                                 "id": ""
                             },
                             "choices": {
-                                "lightgrey": "Lightgrey",
-                                "white": "White",
-                                "darkblue": "Darkblue"
+                                "blueDark": "Blue dark",
+                                "lightblue": "Lightblue",
+                                "purpledark": "Purpledark"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -776,6 +801,31 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5b7f1d1b4fa24",
+                            "label": "Color theme",
+                            "name": "color_theme",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "blueDark": "Blue dark",
+                                "lightblue": "Lightblue",
+                                "purpledark": "Purpledark"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value"
+                        },
+                        {
                             "key": "field_5b5f83a6d66fb",
                             "label": "Heading",
                             "name": "heading",
@@ -828,32 +878,6 @@
                             "layout": "",
                             "button_label": "",
                             "sub_fields": [
-                                {
-                                    "key": "field_5b7f1d1b4fa24",
-                                    "label": "Color theme",
-                                    "name": "color_theme",
-                                    "type": "radio",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "lightgrey": "Mediumgrey",
-                                        "green": "Green",
-                                        "blue": "Blue",
-                                        "lightblue": "Lightblue"
-                                    },
-                                    "allow_null": 0,
-                                    "other_choice": 0,
-                                    "default_value": "",
-                                    "layout": "vertical",
-                                    "return_format": "value",
-                                    "save_other_choice": 0
-                                },
                                 {
                                     "key": "field_5b5f83afd66fd",
                                     "label": "Text",
@@ -920,7 +944,7 @@
                             "choices": {
                                 "lightblue": "Lightblue",
                                 "blue": "Blue",
-                                "mediumgrey": "Mediumgrey"
+                                "lightgrey": "Lightgrey"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -1018,6 +1042,32 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_606a31b69b82c",
+                            "label": "Background color",
+                            "name": "background_color",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "blueDark": "Blue dark",
+                                "lightblue": "Lightblue",
+                                "purpledark": "Purpledark",
+                                "purple": "Purple"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_5e709bc0115de",
                             "label": "Heading",
                             "name": "heading",
@@ -1110,6 +1160,31 @@
                     "label": "Feature blocks",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_606a2d13102e8",
+                            "label": "Background color",
+                            "name": "background_color",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "blueDark": "Blue dark",
+                                "lightblue": "Lightblue",
+                                "purpledark": "Purpledark"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
                         {
                             "key": "field_6064a80287c54",
                             "label": "Heading",
@@ -1205,9 +1280,9 @@
                                                 "id": ""
                                             },
                                             "choices": {
-                                                "green": "Green",
                                                 "blue": "Blue",
-                                                "lightblue": "Lightblue"
+                                                "lightblue": "Lightblue",
+                                                "purple": "Purple"
                                             },
                                             "allow_null": 0,
                                             "other_choice": 0,
@@ -1255,7 +1330,8 @@
                                             },
                                             "choices": {
                                                 "overlay-blue": "Overlay blue",
-                                                "overlay-lightblue": "Overlay lightblue"
+                                                "overlay-lightblue": "Overlay lightblue",
+                                                "overlay-purple": "Overlay  Purple"
                                             },
                                             "allow_null": 0,
                                             "other_choice": 0,
@@ -1589,5 +1665,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617280961
+    "modified": 1617572363
 }

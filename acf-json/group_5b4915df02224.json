@@ -814,9 +814,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "blue": "Blue",
+                                "white": "White",
+                                "blueDark": "Blue dark",
                                 "lightblue": "Lightblue",
-                                "green": "Green"
+                                "purpledark": "Purpledark",
+                                "purple": "Purple"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -865,7 +867,7 @@
                             "choices": {
                                 "overlay-blue": "Overlay blue",
                                 "overlay-lightblue": "Overlay lightblue",
-                                "overlay-green": "Overlay green"
+                                "overlay-purple": "Overlay Purple"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -1231,5 +1233,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617477180
+    "modified": 1617573073
 }

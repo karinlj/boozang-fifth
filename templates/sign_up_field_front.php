@@ -1,8 +1,9 @@
-<?php if (get_row_layout() == 'sign_up_field_front') {?>
-<!-- sign up for Front Page -->
-<section class="sign_up_front_section <?php echo $color; ?> section_spacing_top_small">
+<?php if (get_row_layout() == 'sign_up_field_front') {
+    //sign up for Front Page
+    $bg_color = get_sub_field('background_color'); ?>
+
+<section class="sign_up_front_section <?php echo $bg_color; ?> section_spacing_top_small">
     <?php
-    $color = get_sub_field('color_theme');
     $heading = get_sub_field('heading');
     $preamble = get_sub_field('preamble'); ?>
 
@@ -15,7 +16,7 @@
                     <h3 class="heading"> <?php echo $heading; ?></h3>
                     <?php
                     }
-                     if ($preamble) {?>
+    if ($preamble) {?>
                     <p class="preamble"> <?php echo $preamble; ?></p>
                     <?php
                 } ?>
@@ -23,7 +24,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-sm-10 col-lg-8">
                 <div class="row justify-content-between">
 
                     <?php

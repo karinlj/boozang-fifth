@@ -22,35 +22,41 @@ $max-page-width: 1380px;
 
 $themecolorLila: #2a2966;
 $themecolorBlueDark: #22315e;
+// $themecolorBlueDarkBg: linear-gradient(
+//   to right,
+//   #22315e,
+//   #253667,
+//   #293b70,
+//   #2c4079,
+//   #304582
+// );
 $themecolorBlueDarkBg: linear-gradient(
   to right,
-  #22315e,
+  #1b274b,
+  #1e2c54,
+  #22315d,
   #253667,
-  #293b70,
-  #2c4079,
-  #304582
+  #293b70
 );
 
 $themecolorBlueDarkLighter: #293b70;
 $themecolorBlueDarkest: #1c284a;
-$themecolorPurple: #5d2d57;
-$themecolorPinkBg: linear-gradient(
+$themecolorPurpleDark: linear-gradient(
   to right,
-  #d15d87,
-  #d3638b,
-  #d56990,
-  #d66e94,
-  #d87498
-);
-$themecolorLilaBg: linear-gradient(
+  #402442,
+  #48284a,
+  #502d52,
+  #58315b,
+  #603663
+); //#5d2d57;
+$themecolorPurple: linear-gradient(
   to right,
-  #574e93,
-  #6b559d,
-  #7f5ca6,
-  #9464af,
-  #a86bb7
+  #4f4686,
+  #5b4c8e,
+  #675196,
+  #73579e,
+  #7f5da6
 );
-
 $themecolorNewBlue: #0085cc;
 $themecolorNewBlueDarker: #006399;
 
@@ -71,14 +77,14 @@ $themecolorOrange: #fcb25a;
 $themecolorPink: #f24d7f;
 $themecolorGreen: #00ac7d;
 $mistyRose: #efd6d2;
-$themecolorPurpleLight: #7f5da6;
 
 //overlays
 $themecolorBlueOverlay: rgba(0, 99, 153, 0.8);
 $themecolorNewBlueDarkerOverlay: rgba(0, 83, 128, 0.8);
 $themecolorBlueDarkOverlay: rgba(34, 49, 94, 0.8);
 $themecolorPinkOverlay: rgba(242, 77, 127, 0.5);
-$themecolorLilaOverlay: rgba(42, 41, 102, 0.85);
+$themecolorLilaOverlay: rgba(93, 45, 87, 0.85);
+$themecolorPurpleOverlay: rgba(87, 78, 147, 0.85);
 
 $themecolorDarkOverlay: rgba(0, 0, 0, 0.5);
 

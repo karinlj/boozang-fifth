@@ -1,7 +1,8 @@
 <?php
 // Feature blocks layout for Front Page Block
+$bg_color = get_sub_field('background_color');
 ?>
-<section class="feature_blocks section_spacing_top_medium">
+<section class="feature_blocks <?php echo $bg_color; ?> section_spacing_top_medium">
     <?php
    $heading = get_sub_field('heading');
 if ($heading) {?>

@@ -164,14 +164,14 @@
                             "choices": {
                                 "blue": "Blue",
                                 "lightblue": "Lightblue",
-                                "green": "Green"
+                                "purple": "Purple"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
-                            "save_other_choice": 0,
                             "default_value": "",
                             "layout": "vertical",
-                            "return_format": "value"
+                            "return_format": "value",
+                            "save_other_choice": 0
                         },
                         {
                             "key": "field_6068babd61114",
@@ -249,5 +249,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617484996
+    "modified": 1617561586
 }

@@ -5,7 +5,7 @@ if (!is_front_page() && function_exists('acf_add_options_page')) {
 <section class="signup_section <?php echo $color; ?> section_spacing_top_small">
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            <div class="col-md-8">
+            <div class="col-sm-10 col-lg-8">
                 <div class="row justify-content-between">
                     <?php
                         // check if repeater has rows

@@ -77,15 +77,14 @@ img {
   }
 }
 .section_spacing_top_small {
-  padding: 1.5rem calc(1.5rem - 15px);
+  padding: 3rem calc(1.5rem - 15px);
   @media all and (min-width: $sm-min) {
-    padding: 2rem calc(2.25rem - 15px);
+    padding: 3rem calc(2.25rem - 15px);
   }
   @media all and (min-width: $md-min) {
-    padding: 2rem calc(3rem - 15px);
+    padding: 3rem calc(3rem - 15px);
   }
   @media all and (min-width: $xl-min) {
-    // padding: 3.2rem calc(3.75rem - 15px);
     padding: 4rem calc(3.75rem - 15px);
   }
 }
@@ -159,7 +158,7 @@ h3 {
   position: relative;
   font-size: 1.4rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.4;
   @media all and (min-width: $xl-min) {
     font-size: 1.4rem;
     font-size: 1.8rem;
@@ -383,24 +382,52 @@ a.arrow_link {
 section,
 header {
   position: relative;
+  &.blue {
+    background: $themecolorBlueDarkLighter;
+  }
+  &.blueDark {
+    background-image: $themecolorBlueDarkBg;
+  }
+  &.blueDarkest {
+    //background: $themecolorBlueDark;
+    background: $themecolorBlueDarkest;
+  }
   &.lightblue {
     background: $themecolorNewBlue;
   }
-  &.blue {
-    //background: $themecolorBlueDark;
-    background-image: $themecolorBlueDarkBg;
+  &.purpledark {
+    background-image: $themecolorPurpleDark;
   }
   &.purple {
-    background: $themecolorPurple;
+    background-image: $themecolorPurple;
   }
-  // &.green {
-  //   background-image: $themecolorPurple;
-  // }
   &.lightgrey {
     background: $lightgrey;
   }
   &.white {
     background: #fff;
+  }
+  &.lightblue,
+  &.purple,
+  &.purpledark,
+  &.blue {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fff !important;
+    }
+    p {
+      color: $themecolorFront !important;
+    }
+    .banner_link {
+      color: #fff !important;
+      &:before {
+        color: #fff !important;
+      }
+    }
   }
   &.white,
   .lightgrey {
@@ -474,13 +501,13 @@ header {
     content: "";
     display: block;
   }
-  &.overlay-lila::before {
+  &.overlay-purple::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: $themecolorLilaOverlay;
+    background: $themecolorPurpleOverlay;
     content: "";
     display: block;
   }
@@ -1111,7 +1138,6 @@ nav {
         }
       }
     }
-    //btn_links for udemy
     .btn_links {
       padding: 0;
       margin: 0;
@@ -1537,6 +1563,7 @@ small pricing cards
     margin: 0 auto;
   }
   .content {
+    padding: 2rem;
     min-height: 200px;
     border-radius: $themeBorder_radius;
     box-shadow: $themeBox_shadow_more;
@@ -1557,8 +1584,8 @@ small pricing cards
         max-width: 22px;
         margin-right: 0.1rem;
         @media all and (min-width: $md-min) {
-          max-width: 30px;
-          margin-right: 0.4rem;
+          max-width: 28px;
+          margin-right: 0.3rem;
         }
       }
       a {
@@ -1808,18 +1835,13 @@ small pricing cards
 ***********************/
 
 .pillars_section {
-  border-top: 1px solid $themeBorderColorFront;
-  // border-bottom: 1px solid $themeBorderColorFront;
-  background: $themecolorBlueDarkLighter;
-  height: auto;
   overflow: hidden;
-  @include d-flex;
-  justify-content: center;
+  display: flex;
   align-items: center;
   @media all and (min-width: $md-min) {
   }
-  .pillars-item {
-    height: auto;
+  .pillars_item {
+    margin: 1.5rem 0;
     @media all and (min-width: $md-min) {
       margin: 1rem 0;
     }
@@ -1829,23 +1851,13 @@ small pricing cards
     .top-heading {
       font-weight: 500;
       font-size: 0.85rem;
-      // &.blue {
-      //   color: $themecolorBlueDark;
-      // }
-      //orange?
-      &.mediumgrey {
-        color: $themecolorPink; //#c64e72;
-      }
-      // &.lightblue {
-      //   color: $themecolorNewBlue;
-      // }
+      color: $themecolorPink !important;
     }
     .heading {
-      // margin-bottom: 1rem;
-      color: #fff;
+      // color: #fff;
     }
     p {
-      color: $themecolorFront;
+      //color: $themecolorFront;
       font-size: 0.9rem;
     }
   }
@@ -1854,7 +1866,6 @@ small pricing cards
   integrations
 ***********************/
 .integrations_section {
-  background-image: $themecolorLilaBg;
   .text_section {
     padding-bottom: 2rem;
     h2,
@@ -1897,11 +1908,8 @@ small pricing cards
 /**********************
   testimonials new
 ***********************/
-
 .testimonials_section_new {
-  background: $lightgrey;
-  //background: $themecolorBlueDark;
-  background: #fff;
+  // background: $themecolorBlueDark;
   height: auto;
   overflow: hidden;
   @media all and (min-width: $xl-min) {
@@ -1911,31 +1919,29 @@ small pricing cards
     text-align: center;
     margin-bottom: 4rem;
     h2 {
-      // color: #fff;
+      color: #fff;
       margin-bottom: 1.5rem;
     }
   }
   .testimonials_item {
-    height: 330px;
-    background: $themecolorBlueDarkest;
-    background: #fff;
-    // background: $lightgrey;
+    min-height: 380px;
+    margin-bottom: 2rem;
+    background: $lightgrey;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: $themeBorder_radius;
     padding: 2.5rem 1.5rem;
     box-shadow: $themeBox_shadow_more;
+    @media all and (min-width: $sm-min) {
+      min-height: 250px;
+    }
     @media all and (min-width: $lg-min) {
       margin-bottom: 0;
-      min-height: 360px;
+      min-height: 380px;
     }
     p {
-      // color: $themecolorFront;
       color: $themecolor;
-      // strong {
-      //   color: #fff;
-      // }
     }
     .signature {
       font-weight: 500;
@@ -1947,7 +1953,7 @@ small pricing cards
     .icon {
       margin-bottom: 1rem;
       i.fas {
-        color: $themecolorFront;
+        color: $themecolor;
         font-size: 1.5em;
       }
     }
@@ -2062,77 +2068,6 @@ small pricing cards
         padding-right: 0.5rem;
       }
     }
-  }
-}
-/**********************
- cards
-***********************/
-.udemy_cards {
-  padding-top: 2rem;
-  @media all and (min-width: $lg-min) {
-    padding-top: 0;
-  }
-  .course_card {
-    position: relative;
-    height: 170px;
-    padding: 25px 25px 5px 25px;
-    box-shadow: $themeBox_shadow;
-    border-radius: $themeBorder_radius;
-    transition: 0.25s ease-in-out;
-    margin: 0 -15px 2rem -15px;
-    @media all and (max-width: $xs-max) {
-      height: 190px;
-    }
-    @media all and (min-width: $md-min) {
-      margin: 0;
-    }
-    @media all and (min-width: $lg-min) {
-      margin-bottom: 1.5rem;
-    }
-    &:hover {
-      box-shadow: 0 10px 25px 1px rgba(0, 0, 0, 0.1);
-      p {
-        transition: 0.25s ease-in-out;
-        color: $themecolorNewBlue;
-      }
-    }
-    .course_link {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 3;
-    }
-    .course_name {
-      margin-bottom: 1rem;
-      line-height: 1.5rem;
-      margin-left: 80px;
-      @media all and (max-width: $xs-max) {
-        margin-bottom: 2.5rem;
-      }
-    }
-    .arrow_link {
-      margin-left: 80px;
-      @media all and (max-width: $xs-max) {
-        margin-left: 0;
-      }
-    }
-    // &.blue {
-    //   border-top: 5px solid $themecolorBlueDark;
-    // }
-
-    // &.lightblue {
-    //   border-top: 5px solid $themecolorNewBlue;
-    // }
-
-    // &.green {
-    //   border-top: 5px solid $themecolorGreen;
-    // }
-
-    // &.red {
-    //   border-top: 5px solid $themecolorRed;
-    // }
   }
 }
 
@@ -2572,7 +2507,9 @@ text layout for Pages Content block
   background: $themecolorBlueDarkest;
   background: $themecolorBlueDark;
   .col-md-6:first-child {
-    border-right: 1px solid $themeBorderColorFront;
+    @media all and (min-width: $md-min) {
+      border-right: 1px solid $themeBorderColor;
+    }
   }
   header {
     text-align: center;
@@ -2585,6 +2522,10 @@ text layout for Pages Content block
     padding-bottom: 3rem;
   }
   .button_item {
+    margin-bottom: 3rem;
+    @media all and (min-width: $md-min) {
+      margin-bottom: 0;
+    }
     .text_section {
       text-align: center;
       p {
@@ -2630,16 +2571,13 @@ text layout for Pages Content block
 big_image_center
 ***********************************/
 .big_image_center {
-  background: $themecolorBlueDark;
-  background: $lightgrey;
+  // background: $themecolorBlueDark;
   text-align: center;
   .heading {
-    // color: #fff;
+    color: #fff;
   }
   .preamble {
-    //color: $themecolorFront;
-    color: $themecolorLight;
-
+    color: $themecolorFront;
     max-width: 80%;
     margin: 0 auto;
   }
@@ -2663,7 +2601,7 @@ big_image_center
   - blocks in different colors or bg image
 ***********************************/
 .feature_blocks {
-  background: $themecolorBlueDark;
+  // background: $themecolorBlueDark;
 
   height: auto;
   overflow: hidden;
@@ -2784,9 +2722,15 @@ forum section
 .signup_section {
   background: #fff;
   .col-md-6:first-child {
-    border-right: 1px solid $themeBorderColor;
+    @media all and (min-width: $md-min) {
+      border-right: 1px solid $themeBorderColor;
+    }
   }
   .button_item {
+    margin-bottom: 3rem;
+    @media all and (min-width: $md-min) {
+      margin-bottom: 0;
+    }
     .text_section {
       text-align: center;
       p {
@@ -2804,7 +2748,6 @@ forum section
         background: transparent;
         border: 1px solid $themecolorNewBlue;
         color: $themecolorNewBlue;
-        border: 1px solid $themecolorNewBlue;
         padding: 10px 45px;
         transition: 0.5s ease-in-out;
         &:hover {
@@ -2824,20 +2767,15 @@ forum section
   }
 }
 .footer-main {
-  padding-top: 0;
+  background: $themecolorBlueDarkest;
   width: 100%;
   @include d-inline-flex;
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background: $themecolorBlueDarkest;
-  min-height: 500px;
-  @media all and (max-width: $xs-max) {
-    min-height: 520px;
-  }
-  > .container {
-    padding-top: 5rem;
-    border-top: 1px solid $themeBorderColorFront;
+  min-height: 700px;
+  @media all and (min-width: $md-min) {
+    min-height: 550px;
   }
   img {
     width: 140px;

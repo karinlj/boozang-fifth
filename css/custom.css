@@ -95,16 +95,16 @@ img {
 }
 
 .section_spacing_top_small {
-  padding: 1.5rem calc(1.5rem - 15px);
+  padding: 3rem calc(1.5rem - 15px);
 }
 @media all and (min-width: 576px) {
   .section_spacing_top_small {
-    padding: 2rem calc(2.25rem - 15px);
+    padding: 3rem calc(2.25rem - 15px);
   }
 }
 @media all and (min-width: 768px) {
   .section_spacing_top_small {
-    padding: 2rem calc(3rem - 15px);
+    padding: 3rem calc(3rem - 15px);
   }
 }
 @media all and (min-width: 1200px) {
@@ -200,7 +200,7 @@ h3 {
   position: relative;
   font-size: 1.4rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 @media all and (min-width: 1200px) {
   h3 {
@@ -437,17 +437,29 @@ section,
 header {
   position: relative;
 }
+section.blue,
+header.blue {
+  background: #293b70;
+}
+section.blueDark,
+header.blueDark {
+  background-image: linear-gradient(to right, #1b274b, #1e2c54, #22315d, #253667, #293b70);
+}
+section.blueDarkest,
+header.blueDarkest {
+  background: #1c284a;
+}
 section.lightblue,
 header.lightblue {
   background: #0085cc;
 }
-section.blue,
-header.blue {
-  background-image: linear-gradient(to right, #22315e, #253667, #293b70, #2c4079, #304582);
+section.purpledark,
+header.purpledark {
+  background-image: linear-gradient(to right, #402442, #48284a, #502d52, #58315b, #603663);
 }
 section.purple,
 header.purple {
-  background: #5d2d57;
+  background-image: linear-gradient(to right, #4f4686, #5b4c8e, #675196, #73579e, #7f5da6);
 }
 section.lightgrey,
 header.lightgrey {
@@ -456,6 +468,74 @@ header.lightgrey {
 section.white,
 header.white {
   background: #fff;
+}
+section.lightblue h1,
+section.lightblue h2,
+section.lightblue h3,
+section.lightblue h4,
+section.lightblue h5,
+section.lightblue h6, section.purple h1,
+section.purple h2,
+section.purple h3,
+section.purple h4,
+section.purple h5,
+section.purple h6, section.purpledark h1,
+section.purpledark h2,
+section.purpledark h3,
+section.purpledark h4,
+section.purpledark h5,
+section.purpledark h6, section.blue h1,
+section.blue h2,
+section.blue h3,
+section.blue h4,
+section.blue h5,
+section.blue h6,
+header.lightblue h1,
+header.lightblue h2,
+header.lightblue h3,
+header.lightblue h4,
+header.lightblue h5,
+header.lightblue h6,
+header.purple h1,
+header.purple h2,
+header.purple h3,
+header.purple h4,
+header.purple h5,
+header.purple h6,
+header.purpledark h1,
+header.purpledark h2,
+header.purpledark h3,
+header.purpledark h4,
+header.purpledark h5,
+header.purpledark h6,
+header.blue h1,
+header.blue h2,
+header.blue h3,
+header.blue h4,
+header.blue h5,
+header.blue h6 {
+  color: #fff !important;
+}
+section.lightblue p, section.purple p, section.purpledark p, section.blue p,
+header.lightblue p,
+header.purple p,
+header.purpledark p,
+header.blue p {
+  color: #dae0f1 !important;
+}
+section.lightblue .banner_link, section.purple .banner_link, section.purpledark .banner_link, section.blue .banner_link,
+header.lightblue .banner_link,
+header.purple .banner_link,
+header.purpledark .banner_link,
+header.blue .banner_link {
+  color: #fff !important;
+}
+section.lightblue .banner_link:before, section.purple .banner_link:before, section.purpledark .banner_link:before, section.blue .banner_link:before,
+header.lightblue .banner_link:before,
+header.purple .banner_link:before,
+header.purpledark .banner_link:before,
+header.blue .banner_link:before {
+  color: #fff !important;
 }
 section.white h1,
 section.white h2,
@@ -534,14 +614,14 @@ header.overlay-blue::before {
   content: "";
   display: block;
 }
-section.overlay-lila::before,
-header.overlay-lila::before {
+section.overlay-purple::before,
+header.overlay-purple::before {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(42, 41, 102, 0.85);
+  background: rgba(87, 78, 147, 0.85);
   content: "";
   display: block;
 }
@@ -1714,6 +1794,7 @@ small pricing cards
   margin: 0 auto;
 }
 .info_banner_small .content {
+  padding: 2rem;
   min-height: 200px;
   border-radius: 4px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
@@ -1738,8 +1819,8 @@ small pricing cards
 }
 @media all and (min-width: 768px) {
   .info_banner_small .content .link_wrapper img {
-    max-width: 30px;
-    margin-right: 0.4rem;
+    max-width: 28px;
+    margin-right: 0.3rem;
   }
 }
 .info_banner_small .content .link_wrapper a {
@@ -1999,51 +2080,35 @@ small pricing cards
   pillars
 ***********************/
 .pillars_section {
-  border-top: 1px solid #293b70;
-  background: #293b70;
-  height: auto;
   overflow: hidden;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  justify-content: center;
+  display: flex;
   align-items: center;
 }
-.pillars_section .pillars-item {
-  height: auto;
+.pillars_section .pillars_item {
+  margin: 1.5rem 0;
 }
 @media all and (min-width: 768px) {
-  .pillars_section .pillars-item {
+  .pillars_section .pillars_item {
     margin: 1rem 0;
   }
 }
 @media all and (min-width: 992px) {
-  .pillars_section .pillars-item {
+  .pillars_section .pillars_item {
     margin-bottom: 0;
   }
 }
-.pillars_section .pillars-item .top-heading {
+.pillars_section .pillars_item .top-heading {
   font-weight: 500;
   font-size: 0.85rem;
+  color: #f24d7f !important;
 }
-.pillars_section .pillars-item .top-heading.mediumgrey {
-  color: #f24d7f;
-}
-.pillars_section .pillars-item .heading {
-  color: #fff;
-}
-.pillars_section .pillars-item p {
-  color: #dae0f1;
+.pillars_section .pillars_item p {
   font-size: 0.9rem;
 }
 
 /**********************
   integrations
 ***********************/
-.integrations_section {
-  background-image: linear-gradient(to right, #574e93, #6b559d, #7f5ca6, #9464af, #a86bb7);
-}
 .integrations_section .text_section {
   padding-bottom: 2rem;
 }
@@ -2091,8 +2156,6 @@ small pricing cards
   testimonials new
 ***********************/
 .testimonials_section_new {
-  background: #f5f6f9;
-  background: #fff;
   height: auto;
   overflow: hidden;
 }
@@ -2106,12 +2169,13 @@ small pricing cards
   margin-bottom: 4rem;
 }
 .testimonials_section_new .heading_section h2 {
+  color: #fff;
   margin-bottom: 1.5rem;
 }
 .testimonials_section_new .testimonials_item {
-  height: 330px;
-  background: #1c284a;
-  background: #fff;
+  min-height: 380px;
+  margin-bottom: 2rem;
+  background: #f5f6f9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2119,10 +2183,15 @@ small pricing cards
   padding: 2.5rem 1.5rem;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
+@media all and (min-width: 576px) {
+  .testimonials_section_new .testimonials_item {
+    min-height: 250px;
+  }
+}
 @media all and (min-width: 992px) {
   .testimonials_section_new .testimonials_item {
     margin-bottom: 0;
-    min-height: 360px;
+    min-height: 380px;
   }
 }
 .testimonials_section_new .testimonials_item p {
@@ -2139,7 +2208,7 @@ small pricing cards
   margin-bottom: 1rem;
 }
 .testimonials_section_new .testimonials_item .icon i.fas {
-  color: #dae0f1;
+  color: #4a5669;
   font-size: 1.5em;
 }
 
@@ -2256,75 +2325,6 @@ small pricing cards
   font-size: 1rem;
   color: #00ac7d;
   padding-right: 0.5rem;
-}
-
-/**********************
- cards
-***********************/
-.udemy_cards {
-  padding-top: 2rem;
-}
-@media all and (min-width: 992px) {
-  .udemy_cards {
-    padding-top: 0;
-  }
-}
-.udemy_cards .course_card {
-  position: relative;
-  height: 170px;
-  padding: 25px 25px 5px 25px;
-  box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
-  border-radius: 4px;
-  transition: 0.25s ease-in-out;
-  margin: 0 -15px 2rem -15px;
-}
-@media all and (max-width: 480px) {
-  .udemy_cards .course_card {
-    height: 190px;
-  }
-}
-@media all and (min-width: 768px) {
-  .udemy_cards .course_card {
-    margin: 0;
-  }
-}
-@media all and (min-width: 992px) {
-  .udemy_cards .course_card {
-    margin-bottom: 1.5rem;
-  }
-}
-.udemy_cards .course_card:hover {
-  box-shadow: 0 10px 25px 1px rgba(0, 0, 0, 0.1);
-}
-.udemy_cards .course_card:hover p {
-  transition: 0.25s ease-in-out;
-  color: #0085cc;
-}
-.udemy_cards .course_card .course_link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-}
-.udemy_cards .course_card .course_name {
-  margin-bottom: 1rem;
-  line-height: 1.5rem;
-  margin-left: 80px;
-}
-@media all and (max-width: 480px) {
-  .udemy_cards .course_card .course_name {
-    margin-bottom: 2.5rem;
-  }
-}
-.udemy_cards .course_card .arrow_link {
-  margin-left: 80px;
-}
-@media all and (max-width: 480px) {
-  .udemy_cards .course_card .arrow_link {
-    margin-left: 0;
-  }
 }
 
 /*********************
@@ -2771,8 +2771,10 @@ text layout for Pages Content block
   background: #1c284a;
   background: #22315e;
 }
-.sign_up_front_section .col-md-6:first-child {
-  border-right: 1px solid #293b70;
+@media all and (min-width: 768px) {
+  .sign_up_front_section .col-md-6:first-child {
+    border-right: 1px solid #ebebeb;
+  }
 }
 .sign_up_front_section header {
   text-align: center;
@@ -2783,6 +2785,14 @@ text layout for Pages Content block
 }
 .sign_up_front_section header p {
   color: #dae0f1;
+}
+.sign_up_front_section .button_item {
+  margin-bottom: 3rem;
+}
+@media all and (min-width: 768px) {
+  .sign_up_front_section .button_item {
+    margin-bottom: 0;
+  }
 }
 .sign_up_front_section .button_item .text_section {
   text-align: center;
@@ -2825,12 +2835,13 @@ text layout for Pages Content block
 big_image_center
 ***********************************/
 .big_image_center {
-  background: #22315e;
-  background: #f5f6f9;
   text-align: center;
 }
+.big_image_center .heading {
+  color: #fff;
+}
 .big_image_center .preamble {
-  color: #66758d;
+  color: #dae0f1;
   max-width: 80%;
   margin: 0 auto;
 }
@@ -2854,7 +2865,6 @@ big_image_center
   - blocks in different colors or bg image
 ***********************************/
 .feature_blocks {
-  background: #22315e;
   height: auto;
   overflow: hidden;
   transition: all 150ms ease-out;
@@ -2975,8 +2985,18 @@ forum section
 .signup_section {
   background: #fff;
 }
-.signup_section .col-md-6:first-child {
-  border-right: 1px solid #ebebeb;
+@media all and (min-width: 768px) {
+  .signup_section .col-md-6:first-child {
+    border-right: 1px solid #ebebeb;
+  }
+}
+.signup_section .button_item {
+  margin-bottom: 3rem;
+}
+@media all and (min-width: 768px) {
+  .signup_section .button_item {
+    margin-bottom: 0;
+  }
 }
 .signup_section .button_item .text_section {
   text-align: center;
@@ -2993,7 +3013,6 @@ forum section
   background: transparent;
   border: 1px solid #0085cc;
   color: #0085cc;
-  border: 1px solid #0085cc;
   padding: 10px 45px;
   transition: 0.5s ease-in-out;
 }
@@ -3011,7 +3030,7 @@ forum section
 }
 
 .footer-main {
-  padding-top: 0;
+  background: #1c284a;
   width: 100%;
   display: -webkit-inline-box !important;
   display: -webkit-inline-flex !important;
@@ -3020,17 +3039,12 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background: #1c284a;
-  min-height: 500px;
+  min-height: 700px;
 }
-@media all and (max-width: 480px) {
+@media all and (min-width: 768px) {
   .footer-main {
-    min-height: 520px;
+    min-height: 550px;
   }
-}
-.footer-main > .container {
-  padding-top: 5rem;
-  border-top: 1px solid #293b70;
 }
 .footer-main img {
   width: 140px;

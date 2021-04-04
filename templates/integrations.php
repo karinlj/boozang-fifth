@@ -1,8 +1,9 @@
 <?php
 // integrations layout for Front Page Block
+$bg_color = get_sub_field('background_color');
 ?>
 <!-- integrations_section -->
-<section class="integrations_section section_spacing_top_medium">
+<section class="integrations_section <?php echo $bg_color; ?> section_spacing_top_medium">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
