@@ -42,16 +42,15 @@ if ($categories) {
     echo trim($output, $separator);
 }
 ?>
-
             <?php if (!is_single()) {?>
             <div class="post_content_inner">
                 <?php }?>
 
                 <!-- post_heading -->
                 <div class="post_heading">
-                    <h3 class="blog_post_title">
+                    <h4 class="blog_post_title">
                         <?php the_title();?>
-                    </h3>
+                    </h4>
                 </div>
 
                 <!-- meta - single-->

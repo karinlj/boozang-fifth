@@ -245,7 +245,6 @@ a {
     display: inline-block;
     position: relative;
     &:before {
-      // opacity: .6;
       opacity: 0.4;
       position: absolute;
       bottom: 0;
@@ -264,15 +263,6 @@ a {
         width: 100%;
         opacity: 0.7;
       }
-    }
-    //class for arrow right
-    &.arrow_link {
-      // &:after {
-      //   content: "\f061 ";
-      //   font-family: "Font Awesome 5 Free";
-      //   font-weight: 900;
-      //   margin-left: 10px;
-      // }
     }
   }
 }
@@ -302,13 +292,6 @@ a.arrow_link {
       opacity: 0.7;
     }
   }
-  //arrow right
-  // &:after {
-  //   content: "\f061 ";
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   margin-left: 10px;
-  // }
 }
 //white link with arrow on colored banner
 .banner_link {
@@ -361,7 +344,6 @@ a.arrow_link {
   font-weight: 600;
   letter-spacing: 0.2px;
   box-shadow: $themeBox_shadow;
-
   &:hover {
     opacity: 1;
   }
@@ -396,7 +378,7 @@ header {
     background: $themecolorNewBlue;
   }
   &.purpledark {
-    background-image: $themecolorPurpleDark;
+    background-image: $themecolorPurpleDarkBg;
   }
   &.purple {
     background-image: $themecolorPurple;
@@ -410,22 +392,24 @@ header {
   &.lightblue,
   &.purple,
   &.purpledark,
-  &.blue {
+  &.blue,
+  &.blueDark,
+  &.blueDarkest {
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-      color: #fff !important;
+      color: #fff;
     }
     p {
-      color: $themecolorFront !important;
+      color: $themecolorFront;
     }
     .banner_link {
-      color: #fff !important;
+      color: #fff;
       &:before {
-        color: #fff !important;
+        color: #fff;
       }
     }
   }
@@ -437,10 +421,10 @@ header {
     h4,
     h5,
     h6 {
-      color: $themeHeadingcolor !important;
+      color: $themeHeadingcolor;
     }
     p {
-      color: $themecolorLight !important;
+      color: $themecolorLight;
     }
     .banner_link {
       color: $themecolorNewBlue;
@@ -449,67 +433,28 @@ header {
       }
     }
   }
-  // &.darkgrey {
-  //   //background: $themecolorDarkGreyBg;
-  //   h1,
-  //   h2,
-  //   h3,
-  //   h4,
-  //   h5,
-  //   h6 {
-  //     color: #fcfdfe;
-  //   }
-  //   p {
-  //     color: #fcfdfe;
-  //   }
-  //   .banner_link {
-  //     color: #fcfdfe;
-
-  //     &:before {
-  //       background: #fcfdfe;
-  //     }
-  //   }
-  // }
   //overlays
-  &.overlay-dark::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: $themecolorDarkOverlay;
-    content: "";
-    display: block;
-  }
-  &.overlay-lightblue::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: $themecolorBlueOverlay;
-    content: "";
-    display: block;
+  &.overlay-lightblue,
+  &.overlay-blue,
+  &.overlay-purple {
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      display: block;
+    }
   }
   &.overlay-blue::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background: $themecolorBlueDarkOverlay;
-    content: "";
-    display: block;
+  }
+  &.overlay-lightblue::before {
+    background: $themecolorBlueOverlay;
   }
   &.overlay-purple::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background: $themecolorPurpleOverlay;
-    content: "";
-    display: block;
   }
 }
 
@@ -874,12 +819,10 @@ nav {
     min-height: 550px;
   }
   @media all and (min-width: $lg-min) {
-    // min-height: 600px;
     min-height: 650px;
   }
 }
 .header_small {
-  // min-height: 360px;
   min-height: 400px;
 }
 .header_big,
@@ -903,14 +846,13 @@ nav {
           width: auto;
         }
       }
-      //default: blue
+      //default: non white
       .signup_btn {
         background: #fff;
-        color: $themecolorBlueDark;
         border: 1px solid #fff;
         &:hover {
           color: #fff;
-          background: $themecolorBlueDark;
+          background: transparent;
         }
       }
       .demo_btn {
@@ -919,7 +861,6 @@ nav {
         color: #fff;
         &:hover {
           background: #fff;
-          color: $themecolorBlueDark;
         }
       }
     }
@@ -931,22 +872,10 @@ nav {
       }
     }
   }
-  &.lightblue {
-    .signup ul li:last-of-type a {
-      background: transparent;
-      color: #fff;
-      &:hover {
-        color: $themecolorNewBlue;
-        background: #fff;
-      }
-    }
-    // .header_items_section {
-    //   .header_text {
-    //     color: #fff;
-    //   }
-    // }
-  }
-  &.blue {
+  //btns under text
+  //blue
+  &.blueDark,
+  &.blueDarkest {
     .signup_btn {
       color: $themecolorBlueDark;
     }
@@ -963,17 +892,41 @@ nav {
       }
     }
   }
-  &.green {
+  //lightblue
+  &.lightblue {
     .signup_btn {
-      color: $themecolorGreen;
+      color: $themecolorNewBlue;
     }
     .demo_btn {
       &:hover {
-        color: $themecolorGreen;
+        color: $themecolorNewBlue;
       }
     }
     .signup ul li:last-of-type a {
-      color: $themecolorGreen;
+      background: transparent;
+      color: #fff;
+      &:hover {
+        color: $themecolorNewBlue;
+        background: #fff;
+      }
+    }
+  }
+  &.purpledark {
+    .signup_btn {
+      color: $themecolorPurpleDark;
+    }
+    .demo_btn {
+      &:hover {
+        color: $themecolorPurpleDark;
+      }
+    }
+    .signup ul li:last-of-type a {
+      background: transparent;
+      color: #fff;
+      &:hover {
+        color: $themecolorPurpleDark;
+        background: #fff;
+      }
     }
   }
   //lightgrey and dark nav-color
@@ -1070,14 +1023,6 @@ nav {
       > .toggle {
         color: $themeHeadingcolor;
       }
-      // .header_items_section {
-      //   .header_heading {
-      //     color: $themecolor;
-      //   }
-      //   .header_text {
-      //     color: $themecolorLight;
-      //   }
-      // }
     }
     .signup {
       ul {
@@ -1105,7 +1050,7 @@ nav {
       //padding: 0 calc(3.75rem - 15px) 2rem calc(3.75rem - 15px);
     }
     .header_heading {
-      color: #fff;
+      // color: #fff;
       margin-bottom: 1.5rem;
       text-align: center;
       @media all and (max-width: $xs-max) {
@@ -1124,7 +1069,7 @@ nav {
       max-width: 470px;
       margin: 0 auto 1.5rem auto;
       font-size: 1.2rem;
-      color: $themecolorFront;
+      //  color: $themecolorFront;
       text-align: center;
       @media all and (min-width: $sm-min) {
         font-size: 1.3em;
@@ -2285,11 +2230,12 @@ small pricing cards
       }
       .category {
         position: relative;
-        color: #8c8c8c;
+        //color: #8c8c8c;
+        color: $linkcolor;
         z-index: 40;
         letter-spacing: 0.01rem;
         text-transform: uppercase;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         &:hover {
           text-decoration: underline;
           opacity: 1;
@@ -2350,7 +2296,6 @@ small pricing cards
         }
         .category {
           font-size: 1rem;
-          color: $linkcolor;
         }
         p {
           @media all and (min-width: $md-min) {
@@ -2472,19 +2417,20 @@ small pricing cards
         border-radius: $themeBorder_radius;
         transition: 1s all ease;
         color: #fff;
-        background-color: rgba(255, 255, 255, 0.2);
+        background: transparent;
+        border: 1px solid #fff;
         font-size: initial;
         line-height: 1;
         cursor: pointer;
         font-weight: 600;
         letter-spacing: 0.2px;
-        box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+        transition: all 0.25s ease;
         @media all and (min-width: $md-min) {
           width: initial;
           margin-left: 0.5rem;
         }
         &:hover {
-          opacity: 0.7;
+          transform: translateX(2px);
         }
       }
       .es_spinner_image {
@@ -2861,7 +2807,6 @@ forum section
           transition: all 0.25s ease;
           &:hover {
             transform: translateY(-2px);
-            transition: all 0.25s ease;
             box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
           }
         }

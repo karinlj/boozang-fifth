@@ -41,7 +41,8 @@ $themecolorBlueDarkBg: linear-gradient(
 
 $themecolorBlueDarkLighter: #293b70;
 $themecolorBlueDarkest: #1c284a;
-$themecolorPurpleDark: linear-gradient(
+$themecolorPurpleDark: #502d52;
+$themecolorPurpleDarkBg: linear-gradient(
   to right,
   #402442,
   #48284a,
@@ -80,7 +81,7 @@ $mistyRose: #efd6d2;
 
 //overlays
 $themecolorBlueOverlay: rgba(0, 99, 153, 0.8);
-$themecolorNewBlueDarkerOverlay: rgba(0, 83, 128, 0.8);
+$themecolorNewBlueDarkerOverlay: rgba(0, 83, 128, 0.85);
 $themecolorBlueDarkOverlay: rgba(34, 49, 94, 0.8);
 $themecolorPinkOverlay: rgba(242, 77, 127, 0.5);
 $themecolorLilaOverlay: rgba(93, 45, 87, 0.85);

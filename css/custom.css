@@ -341,6 +341,7 @@ a:hover {
   width: 100%;
   opacity: 0.7;
 }
+
 a.arrow_link {
   display: inline-block;
   position: relative;
@@ -489,7 +490,17 @@ section.blue h2,
 section.blue h3,
 section.blue h4,
 section.blue h5,
-section.blue h6,
+section.blue h6, section.blueDark h1,
+section.blueDark h2,
+section.blueDark h3,
+section.blueDark h4,
+section.blueDark h5,
+section.blueDark h6, section.blueDarkest h1,
+section.blueDarkest h2,
+section.blueDarkest h3,
+section.blueDarkest h4,
+section.blueDarkest h5,
+section.blueDarkest h6,
 header.lightblue h1,
 header.lightblue h2,
 header.lightblue h3,
@@ -513,29 +524,47 @@ header.blue h2,
 header.blue h3,
 header.blue h4,
 header.blue h5,
-header.blue h6 {
-  color: #fff !important;
+header.blue h6,
+header.blueDark h1,
+header.blueDark h2,
+header.blueDark h3,
+header.blueDark h4,
+header.blueDark h5,
+header.blueDark h6,
+header.blueDarkest h1,
+header.blueDarkest h2,
+header.blueDarkest h3,
+header.blueDarkest h4,
+header.blueDarkest h5,
+header.blueDarkest h6 {
+  color: #fff;
 }
-section.lightblue p, section.purple p, section.purpledark p, section.blue p,
+section.lightblue p, section.purple p, section.purpledark p, section.blue p, section.blueDark p, section.blueDarkest p,
 header.lightblue p,
 header.purple p,
 header.purpledark p,
-header.blue p {
-  color: #dae0f1 !important;
+header.blue p,
+header.blueDark p,
+header.blueDarkest p {
+  color: #dae0f1;
 }
-section.lightblue .banner_link, section.purple .banner_link, section.purpledark .banner_link, section.blue .banner_link,
+section.lightblue .banner_link, section.purple .banner_link, section.purpledark .banner_link, section.blue .banner_link, section.blueDark .banner_link, section.blueDarkest .banner_link,
 header.lightblue .banner_link,
 header.purple .banner_link,
 header.purpledark .banner_link,
-header.blue .banner_link {
-  color: #fff !important;
+header.blue .banner_link,
+header.blueDark .banner_link,
+header.blueDarkest .banner_link {
+  color: #fff;
 }
-section.lightblue .banner_link:before, section.purple .banner_link:before, section.purpledark .banner_link:before, section.blue .banner_link:before,
+section.lightblue .banner_link:before, section.purple .banner_link:before, section.purpledark .banner_link:before, section.blue .banner_link:before, section.blueDark .banner_link:before, section.blueDarkest .banner_link:before,
 header.lightblue .banner_link:before,
 header.purple .banner_link:before,
 header.purpledark .banner_link:before,
-header.blue .banner_link:before {
-  color: #fff !important;
+header.blue .banner_link:before,
+header.blueDark .banner_link:before,
+header.blueDarkest .banner_link:before {
+  color: #fff;
 }
 section.white h1,
 section.white h2,
@@ -561,13 +590,13 @@ header .lightgrey h3,
 header .lightgrey h4,
 header .lightgrey h5,
 header .lightgrey h6 {
-  color: #212735 !important;
+  color: #212735;
 }
 section.white p,
 section .lightgrey p,
 header.white p,
 header .lightgrey p {
-  color: #66758d !important;
+  color: #66758d;
 }
 section.white .banner_link,
 section .lightgrey .banner_link,
@@ -581,49 +610,29 @@ header.white .banner_link:before,
 header .lightgrey .banner_link:before {
   background: #22315e;
 }
-section.overlay-dark::before,
-header.overlay-dark::before {
+section.overlay-lightblue:before, section.overlay-blue:before, section.overlay-purple:before,
+header.overlay-lightblue:before,
+header.overlay-blue:before,
+header.overlay-purple:before {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  content: "";
-  display: block;
-}
-section.overlay-lightblue::before,
-header.overlay-lightblue::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 99, 153, 0.8);
   content: "";
   display: block;
 }
 section.overlay-blue::before,
 header.overlay-blue::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background: rgba(34, 49, 94, 0.8);
-  content: "";
-  display: block;
+}
+section.overlay-lightblue::before,
+header.overlay-lightblue::before {
+  background: rgba(0, 99, 153, 0.8);
 }
 section.overlay-purple::before,
 header.overlay-purple::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background: rgba(87, 78, 147, 0.85);
-  content: "";
-  display: block;
 }
 
 /************************
@@ -1053,13 +1062,12 @@ nav > .toggle {
 .header_big .header_links_section .header_btn_section .signup_btn,
 .header_small .header_links_section .header_btn_section .signup_btn {
   background: #fff;
-  color: #22315e;
   border: 1px solid #fff;
 }
 .header_big .header_links_section .header_btn_section .signup_btn:hover,
 .header_small .header_links_section .header_btn_section .signup_btn:hover {
   color: #fff;
-  background: #22315e;
+  background: transparent;
 }
 .header_big .header_links_section .header_btn_section .demo_btn,
 .header_small .header_links_section .header_btn_section .demo_btn {
@@ -1070,7 +1078,6 @@ nav > .toggle {
 .header_big .header_links_section .header_btn_section .demo_btn:hover,
 .header_small .header_links_section .header_btn_section .demo_btn:hover {
   background: #fff;
-  color: #22315e;
 }
 .header_big .header_links_section a.play_btn,
 .header_small .header_links_section a.play_btn {
@@ -1083,6 +1090,35 @@ nav > .toggle {
     margin-left: 0;
   }
 }
+.header_big.blueDark .signup_btn, .header_big.blueDarkest .signup_btn,
+.header_small.blueDark .signup_btn,
+.header_small.blueDarkest .signup_btn {
+  color: #22315e;
+}
+.header_big.blueDark .demo_btn:hover, .header_big.blueDarkest .demo_btn:hover,
+.header_small.blueDark .demo_btn:hover,
+.header_small.blueDarkest .demo_btn:hover {
+  color: #22315e;
+}
+.header_big.blueDark .signup ul li:last-of-type a, .header_big.blueDarkest .signup ul li:last-of-type a,
+.header_small.blueDark .signup ul li:last-of-type a,
+.header_small.blueDarkest .signup ul li:last-of-type a {
+  color: #22315e;
+}
+.header_big.blueDark .signup ul li:last-of-type a:hover, .header_big.blueDarkest .signup ul li:last-of-type a:hover,
+.header_small.blueDark .signup ul li:last-of-type a:hover,
+.header_small.blueDarkest .signup ul li:last-of-type a:hover {
+  color: #fff;
+  background: transparent;
+}
+.header_big.lightblue .signup_btn,
+.header_small.lightblue .signup_btn {
+  color: #0085cc;
+}
+.header_big.lightblue .demo_btn:hover,
+.header_small.lightblue .demo_btn:hover {
+  color: #0085cc;
+}
 .header_big.lightblue .signup ul li:last-of-type a,
 .header_small.lightblue .signup ul li:last-of-type a {
   background: transparent;
@@ -1093,34 +1129,23 @@ nav > .toggle {
   color: #0085cc;
   background: #fff;
 }
-.header_big.blue .signup_btn,
-.header_small.blue .signup_btn {
-  color: #22315e;
+.header_big.purpledark .signup_btn,
+.header_small.purpledark .signup_btn {
+  color: #502d52;
 }
-.header_big.blue .demo_btn:hover,
-.header_small.blue .demo_btn:hover {
-  color: #22315e;
+.header_big.purpledark .demo_btn:hover,
+.header_small.purpledark .demo_btn:hover {
+  color: #502d52;
 }
-.header_big.blue .signup ul li:last-of-type a,
-.header_small.blue .signup ul li:last-of-type a {
-  color: #22315e;
-}
-.header_big.blue .signup ul li:last-of-type a:hover,
-.header_small.blue .signup ul li:last-of-type a:hover {
-  color: #fff;
+.header_big.purpledark .signup ul li:last-of-type a,
+.header_small.purpledark .signup ul li:last-of-type a {
   background: transparent;
+  color: #fff;
 }
-.header_big.green .signup_btn,
-.header_small.green .signup_btn {
-  color: #00ac7d;
-}
-.header_big.green .demo_btn:hover,
-.header_small.green .demo_btn:hover {
-  color: #00ac7d;
-}
-.header_big.green .signup ul li:last-of-type a,
-.header_small.green .signup ul li:last-of-type a {
-  color: #00ac7d;
+.header_big.purpledark .signup ul li:last-of-type a:hover,
+.header_small.purpledark .signup ul li:last-of-type a:hover {
+  color: #502d52;
+  background: #fff;
 }
 .header_big.white .signup_btn,
 .header_big .lightgrey .signup_btn,
@@ -1299,7 +1324,6 @@ nav > .toggle {
 }
 .header_big .header_items_section .header_heading,
 .header_small .header_items_section .header_heading {
-  color: #fff;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -1326,7 +1350,6 @@ nav > .toggle {
   max-width: 470px;
   margin: 0 auto 1.5rem auto;
   font-size: 1.2rem;
-  color: #dae0f1;
   text-align: center;
 }
 @media all and (min-width: 576px) {
@@ -2507,11 +2530,11 @@ small pricing cards
 }
 .blog_flow .post_card .post_content .category {
   position: relative;
-  color: #8c8c8c;
+  color: #0085cc;
   z-index: 40;
   letter-spacing: 0.01rem;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .blog_flow .post_card .post_content .category:hover {
   text-decoration: underline;
@@ -2582,7 +2605,6 @@ small pricing cards
 }
 .blog_flow .post_card.single .post_content .category {
   font-size: 1rem;
-  color: #0085cc;
 }
 @media all and (min-width: 768px) {
   .blog_flow .post_card.single .post_content p {
@@ -2646,7 +2668,7 @@ small pricing cards
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 83, 128, 0.8);
+  background: rgba(0, 83, 128, 0.85);
   opacity: 0.85;
   content: "";
   display: block;
@@ -2707,13 +2729,14 @@ small pricing cards
   border-radius: 4px;
   transition: 1s all ease;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+  border: 1px solid #fff;
   font-size: initial;
   line-height: 1;
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.2px;
-  box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
 }
 @media all and (min-width: 768px) {
   .newsletter .newsletter_content .es_subscription_form input[type=submit] {
@@ -2722,7 +2745,7 @@ small pricing cards
   }
 }
 .newsletter .newsletter_content .es_subscription_form input[type=submit]:hover {
-  opacity: 0.7;
+  transform: translateX(2px);
 }
 .newsletter .newsletter_content .es_subscription_form .es_spinner_image {
   margin-left: 0.5rem;
@@ -3105,7 +3128,6 @@ forum section
 .footer-main .social-icons ul.social li.social-item .fab:hover,
 .footer-main .social-icons ul.social li.social-item .fas:hover {
   transform: translateY(-2px);
-  transition: all 0.25s ease;
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
 }
 .footer-main .footer-copy .copy p {
