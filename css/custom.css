@@ -1972,24 +1972,36 @@ small pricing cards
   z-index: 1000;
   position: relative;
 }
-.two_columns_section .column_row .part.image::before {
-  content: "Hover image to enlarge";
+.two_columns_section .column_row .part.image .toggler {
   position: absolute;
-  color: #0085cc;
-  font-size: 0.8rem;
-  font-weight: 400;
   right: 0;
   top: -30px;
+  z-index: 2;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
 }
-.two_columns_section .column_row .part.image img {
+.two_columns_section .column_row .part.image .toggler:checked {
+  /* enlarge pict */
+}
+.two_columns_section .column_row .part.image .toggler:checked ~ .pict {
+  transform: scale(1.3);
+}
+.two_columns_section .column_row .part.image .pict {
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
   width: 100%;
   height: auto;
-  transition: all 1.5s 1s;
+  transition: all 1.5s 0.5s;
 }
-.two_columns_section .column_row .part.image img:hover {
-  transform: scale(1.4);
+.two_columns_section .column_row .part.image .magnifying_glass {
+  padding: 5px;
+  color: #66758d;
+  font-size: 0.9rem;
+  position: absolute;
+  right: 0;
+  top: -30px;
 }
 .two_columns_section .column_row .part.image .alt_caption {
   text-align: center;
