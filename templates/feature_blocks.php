@@ -3,12 +3,14 @@
 $bg_color = get_sub_field('background_color');
 ?>
 <section class="feature_blocks <?php echo $bg_color; ?> section_spacing_top_medium">
-    <?php
+    <div class="container">
+        <?php
    $heading = get_sub_field('heading');
 if ($heading) {?>
-    <h2 class="main_heading"> <?php echo $heading; ?></h2>
-    <?php
+        <h2 class="main_heading"> <?php echo $heading; ?></h2>
+        <?php
 }?>
+    </div>
     <div class="container">
         <?php
 // check if the repeater field has rows

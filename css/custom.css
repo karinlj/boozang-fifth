@@ -182,7 +182,6 @@ h1 {
 @media all and (min-width: 1200px) {
   h1 {
     font-size: 2.3rem;
-    font-size: 2.3rem;
   }
 }
 
@@ -204,7 +203,6 @@ h3 {
 }
 @media all and (min-width: 1200px) {
   h3 {
-    font-size: 1.4rem;
     font-size: 1.8rem;
   }
 }
@@ -225,7 +223,6 @@ h4 {
 }
 @media all and (min-width: 1200px) {
   h4 {
-    font-size: 1.2em;
     font-size: 1.4em;
   }
 }
@@ -241,7 +238,6 @@ h5 {
 }
 @media all and (min-width: 1200px) {
   h5 {
-    font-size: 1.1em;
     font-size: 1.1em;
   }
 }
@@ -610,10 +606,11 @@ header.white .banner_link:before,
 header .lightgrey .banner_link:before {
   background: #22315e;
 }
-section.overlay-lightblue:before, section.overlay-blue:before, section.overlay-purple:before,
+section.overlay-lightblue:before, section.overlay-blue:before, section.overlay-purple:before, section.overlay-purpledark:before,
 header.overlay-lightblue:before,
 header.overlay-blue:before,
-header.overlay-purple:before {
+header.overlay-purple:before,
+header.overlay-purpledark:before {
   position: absolute;
   top: 0;
   right: 0;
@@ -633,6 +630,10 @@ header.overlay-lightblue::before {
 section.overlay-purple::before,
 header.overlay-purple::before {
   background: rgba(87, 78, 147, 0.85);
+}
+section.overlay-purpledark::before,
+header.overlay-purpledark::before {
+  background: rgba(80, 45, 82, 0.8);
 }
 
 /************************
@@ -839,6 +840,9 @@ nav > .toggle {
     width: 210px;
   }
 }
+.site-title a:hover {
+  opacity: 1;
+}
 
 .nav-links {
   display: flex;
@@ -982,12 +986,12 @@ nav > .toggle {
   margin: 1rem 0.5rem;
   background: #22315e;
   color: #fff !important;
-  border: 1px solid #22315e;
+  border: 1px solid #fff !important;
   width: 100%;
 }
 .nav-mobile .signup ul li .signup_btn:hover {
-  background: transparent;
-  color: #22315e;
+  background: transparent !important;
+  opacity: 0.6;
 }
 @media all and (min-width: 576px) {
   .nav-mobile .signup ul li .signup_btn {
@@ -1336,13 +1340,13 @@ nav > .toggle {
 .header_big .header_items_section .header_heading.front,
 .header_small .header_items_section .header_heading.front {
   text-align: center;
-  font-size: 2.5rem;
-  margin-right: 5rem;
 }
 @media all and (min-width: 576px) {
   .header_big .header_items_section .header_heading.front,
 .header_small .header_items_section .header_heading.front {
     text-align: left;
+    font-size: 2.5rem;
+    margin-right: 5rem;
   }
 }
 .header_big .header_items_section .header_text,
@@ -1422,11 +1426,39 @@ nav > .toggle {
 .header_small .header_items_section .feature_slider_new {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+@media all and (min-width: 992px) {
+  .header_big .header_items_section .feature_slider_new,
+.header_small .header_items_section .feature_slider_new {
+    align-items: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 .header_big .header_items_section .feature_slider_new img,
 .header_small .header_items_section .feature_slider_new img {
-  height: 415px;
+  height: auto;
+}
+@media all and (min-width: 576px) {
+  .header_big .header_items_section .feature_slider_new img,
+.header_small .header_items_section .feature_slider_new img {
+    height: 415px;
+  }
+}
+@media all and (min-width: 992px) {
+  .header_big .header_items_section .feature_slider_new img,
+.header_small .header_items_section .feature_slider_new img {
+    height: 350px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .header_big .header_items_section .feature_slider_new img,
+.header_small .header_items_section .feature_slider_new img {
+    height: 415px;
+  }
 }
 .header_big .header_items_section .feature_slider_new .tab_content,
 .header_small .header_items_section .feature_slider_new .tab_content {
@@ -1451,6 +1483,7 @@ nav > .toggle {
   display: inline-block;
   padding: 0.2rem 0;
   margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease-in;
@@ -1594,14 +1627,14 @@ nav > .toggle {
   color: #fff;
 }
 .pricing_section .card.blue_darker .pricing_header {
-  border-bottom: 1px solid #006399;
+  border-bottom: 1px solid #0074b3;
 }
 .pricing_section .card.blue_darker .price span {
   color: #dae0f1;
 }
 
 /*********************
-feature list  var???
+feature list  (pricing page)
 *********************/
 .feature_list_section {
   background: #f5f6f9;
@@ -1637,69 +1670,6 @@ feature list  var???
 }
 .feature_list_section .feature_list_item .info .item_text {
   font-size: 0.9rem;
-}
-
-/***************************
-small pricing cards
-****************************/
-.small_pricing_cards_section .heading {
-  margin-bottom: 4rem;
-}
-.small_pricing_cards_section .card {
-  height: auto;
-  padding: 0.5rem 1.5rem;
-  box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
-  border: none;
-  margin-bottom: 3rem;
-  border-radius: 4px;
-}
-@media all and (min-width: 576px) {
-  .small_pricing_cards_section .card {
-    height: 250px;
-  }
-}
-@media all and (min-width: 992px) {
-  .small_pricing_cards_section .card {
-    margin-bottom: 0;
-  }
-}
-.small_pricing_cards_section .card .col-sm-9 {
-  border-bottom: 2px solid #e6e6e6;
-}
-@media all and (min-width: 576px) {
-  .small_pricing_cards_section .card .col-sm-9 {
-    border-bottom: none;
-    border-right: 2px solid #e6e6e6;
-  }
-}
-.small_pricing_cards_section .card .col-sm-9 .text {
-  font-size: 0.9rem;
-}
-@media all and (min-width: 576px) {
-  .small_pricing_cards_section .card .col-sm-3 {
-    text-align: center;
-  }
-}
-.small_pricing_cards_section .card .col-sm-3 .price h3 {
-  margin-bottom: 0.2rem;
-  padding-top: 1rem;
-}
-@media all and (min-width: 576px) {
-  .small_pricing_cards_section .card .col-sm-3 .price h3 {
-    padding-top: 0;
-  }
-}
-.small_pricing_cards_section .card.blue {
-  border-top: 5px solid #22315e;
-}
-.small_pricing_cards_section .card.lightblue {
-  border-top: 5px solid #0085cc;
-}
-.small_pricing_cards_section .card.green {
-  border-top: 5px solid #00ac7d;
-}
-.small_pricing_cards_section .card.red {
-  border-top: 5px solid #e62e65;
 }
 
 /*********************
@@ -1797,15 +1767,17 @@ small pricing cards
   padding-top: 1rem;
 }
 .info_banner .btn_wrapper .link {
-  background-color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+  border: 1px solid #fff;
   color: #fff;
+  transition: all 0.25s ease;
 }
 .info_banner .btn_wrapper .link:hover {
-  opacity: 0.8;
+  transform: translateX(2px);
 }
 
 /*********************
-   info banner small
+   info banner small (video-page)
 *********************/
 .info_banner_small {
   padding-top: 0;
@@ -2062,9 +2034,13 @@ small pricing cards
   content: "";
 }
 .two_columns_section.story .column_row .part.image img {
-  max-width: 450px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   transition: none;
+}
+@media all and (min-width: 992px) {
+  .two_columns_section.story .column_row .part.image img {
+    max-width: 450px;
+  }
 }
 .two_columns_section.story .column_row .part.image img:hover {
   transform: scale(1);
@@ -2088,6 +2064,16 @@ small pricing cards
 }
 .two_columns_section.story .column_row:last-child {
   padding-bottom: 7rem;
+}
+.two_columns_section.presentation .part.image img {
+  max-width: 120px;
+  margin-bottom: 2rem;
+}
+@media all and (min-width: 768px) {
+  .two_columns_section.presentation .part.image img {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 /**********************
@@ -2125,10 +2111,6 @@ small pricing cards
 ***********************/
 .integrations_section .text_section {
   padding-bottom: 2rem;
-}
-.integrations_section .text_section h2,
-.integrations_section .text_section p {
-  color: #fff;
 }
 .integrations_section .text_section p {
   font-size: 1.2rem;
@@ -2183,13 +2165,12 @@ small pricing cards
   margin-bottom: 4rem;
 }
 .testimonials_section_new .heading_section h2 {
-  color: #fff;
   margin-bottom: 1.5rem;
 }
 .testimonials_section_new .testimonials_item {
   min-height: 380px;
   margin-bottom: 2rem;
-  background: #f5f6f9;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2544,7 +2525,7 @@ small pricing cards
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #f1f1f4;
+  border-top: 1px solid #ebebeb;
   width: 100%;
   padding: 0.5rem 0 0 0;
 }
@@ -2727,7 +2708,6 @@ small pricing cards
   padding: 10px 20px;
   height: 45px;
   border-radius: 4px;
-  transition: 1s all ease;
   color: #fff;
   background: transparent;
   border: 1px solid #fff;
@@ -2770,24 +2750,14 @@ text layout for Pages Content block
 /***************************
    sign_up_field Front Page
 ****************************/
-.sign_up_front_section {
-  background: #1c284a;
-  background: #22315e;
-}
 @media all and (min-width: 768px) {
   .sign_up_front_section .col-md-6:first-child {
-    border-right: 1px solid #ebebeb;
+    border-right: 1px solid #293b70;
   }
 }
 .sign_up_front_section header {
   text-align: center;
   padding-bottom: 3rem;
-}
-.sign_up_front_section header .heading {
-  color: #fff;
-}
-.sign_up_front_section header p {
-  color: #dae0f1;
 }
 .sign_up_front_section .button_item {
   margin-bottom: 3rem;
@@ -2799,12 +2769,6 @@ text layout for Pages Content block
 }
 .sign_up_front_section .button_item .text_section {
   text-align: center;
-}
-.sign_up_front_section .button_item .text_section p {
-  color: #dae0f1;
-}
-.sign_up_front_section .button_item .text_section .heading {
-  color: #fff;
 }
 .sign_up_front_section .button_item .btn_container {
   display: flex;
@@ -2840,11 +2804,7 @@ big_image_center
 .big_image_center {
   text-align: center;
 }
-.big_image_center .heading {
-  color: #fff;
-}
 .big_image_center .preamble {
-  color: #dae0f1;
   max-width: 80%;
   margin: 0 auto;
 }
@@ -2879,7 +2839,6 @@ big_image_center
 }
 .feature_blocks .main_heading {
   text-align: center;
-  color: #fff;
   padding-bottom: 3rem;
 }
 .feature_blocks .row {
@@ -2945,10 +2904,11 @@ big_image_center
 *********************/
 .nopage {
   background: #f5f6f9;
-  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   padding: 3rem;
   min-height: 300px;
-  margin-top: -170px;
+  margin-top: -70px;
 }
 .nopage .nopage-heading {
   margin-bottom: 2rem;
@@ -3150,7 +3110,7 @@ forum section
   padding: 0;
 }
 .faq_list_section ul li {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 /******************************

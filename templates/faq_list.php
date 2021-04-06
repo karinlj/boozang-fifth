@@ -1,5 +1,4 @@
 <!-- faq list layout for Pages Content block-->
-<!-- när används?? -->
 
 <section class="faq_list_section section_spacing_top_medium">
     <div class="container">

@@ -2,7 +2,6 @@
 /**
  * The template for displaying comments
  */
-
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
@@ -12,15 +11,14 @@ if (post_password_required()) {
     return;
 }
 ?>
-
 <div id="comments" class="comments-area">
 
-  <?php
+    <?php
 // You can start editing here -- including this comment!
 if (have_comments()):
 ?>
-  <h2 class="comments-title">
-    <?php
+    <h2 class="comments-title">
+        <?php
 $comments_number = get_comments_number();
 if ('1' === $comments_number) {
     /* translators: %s: Post title. */
@@ -40,10 +38,9 @@ if ('1' === $comments_number) {
     );
 }
 ?>
-  </h2>
-
-  <ol class="comment-list">
-    <?php
+    </h2>
+    <ol class="comment-list">
+        <?php
 wp_list_comments(
     array(
         'avatar_size' => 100,
@@ -53,9 +50,9 @@ wp_list_comments(
     )
 );
 ?>
-  </ol>
+    </ol>
 
-  <?php
+    <?php
 the_comments_pagination(
     array(
         'prev_text' => twentyseventeen_get_svg(array('icon' => 'arrow-left')) . '<span class="screen-reader-text">' . __('Previous', 'twentyseventeen') . '</span>',
@@ -69,11 +66,10 @@ endif; // Check for have_comments().
 if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')):
 ?>
 
-  <p class="no-comments"><?php _e('Comments are closed.', 'twentyseventeen');?></p>
-  <?php
+    <p class="no-comments"><?php _e('Comments are closed.', 'twentyseventeen');?></p>
+    <?php
 endif;
 
 comment_form();
 ?>
-
 </div><!-- #comments -->

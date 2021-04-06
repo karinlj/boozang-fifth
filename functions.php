@@ -6,7 +6,6 @@ function bn_script_resourses()
     //name, absolute path, dependencies, version, in_footer
 
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', true);
-
 }
 add_action('wp_enqueue_scripts', 'bn_script_resourses');
 
@@ -23,7 +22,6 @@ function bn_style_resourses()
 
     wp_enqueue_style('boozang-fifth-custom', get_stylesheet_directory_uri() . '/css/custom.css');
     wp_enqueue_style('comp', get_stylesheet_directory_uri() . '/css/comp.css');
-
 }
 add_action('wp_enqueue_scripts', 'bn_style_resourses');
 
@@ -33,7 +31,6 @@ function google_fonts()
     ?>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-<!-- <link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@500&display=swap" rel="stylesheet"> -->
 
 <?php
 }
@@ -43,7 +40,6 @@ function add_scripts()
 {
     wp_register_script('custom_script', home_url() . '/wp-content/themes/boozang-fifth/js/custom_script.js', array('jquery'));
     wp_enqueue_script('custom_script');
-
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
@@ -51,11 +47,11 @@ function favicon()
 {?>
 
 <link rel="apple-touch-icon" sizes="57x57"
-  href="<?php echo get_stylesheet_directory_uri(); ?>/icon/apple-touch-icon.png">
+    href="<?php echo get_stylesheet_directory_uri(); ?>/icon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32"
-  href="<?php echo get_stylesheet_directory_uri(); ?>/icon/favicon-32x32.png">
+    href="<?php echo get_stylesheet_directory_uri(); ?>/icon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16"
-  href="<?php echo get_stylesheet_directory_uri(); ?>/icon/favicon-16x16.png">
+    href="<?php echo get_stylesheet_directory_uri(); ?>/icon/favicon-16x16.png">
 <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/icon/site.webmanifest">
 <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/icon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
@@ -73,7 +69,6 @@ function bn_theme_setup()
     add_image_size('small-thumbnail', 230, 144, true);
     add_image_size('normal-thumbnail', 320, 380, true);
     add_image_size('large-thumbnail', 500, 375, true);
-
 }
 add_action('after_setup_theme', 'bn_theme_setup');
 
@@ -123,7 +118,6 @@ function wpb_init_widgets($id)
         'before_widget' => '<div class="sidebar_forum">',
         'after_widget' => '</div>',
     ));
-
 }
 add_action('widgets_init', 'wpb_init_widgets');
 
@@ -175,7 +169,6 @@ function bn_custom_post_types()
     );
 
     register_post_type('videos', $args);
-
 }
 add_action('init', 'bn_custom_post_types');
 
@@ -206,7 +199,6 @@ function bn_custom_taxonomies()
         'rewrite' => array('slug' => 'film-category'),
     );
     register_taxonomy('film-category', array('videos'), $args);
-
 }
 add_action('init', 'bn_custom_taxonomies');
 

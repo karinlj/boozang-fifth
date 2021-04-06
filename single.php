@@ -1,43 +1,43 @@
 <?php get_header();?>
 
 <div class="container_blog">
-  <div class="blog_flow section_spacing_top_medium">
-    <div class="container">
-      <div class="row">
+    <div class="blog_flow section_spacing_top_medium">
+        <div class="container">
+            <div class="row">
 
-        <?php if (have_posts()): ?>
-        <?php while (have_posts()): the_post();?>
+                <?php if (have_posts()): ?>
+                <?php while (have_posts()): the_post();?>
 
-        <!--get content.php-->
-        <?php get_template_part('parts/content', get_post_format());?>
+                <!--get content.php-->
+                <?php get_template_part('parts/content', get_post_format());?>
 
-        <?php endwhile;?>
+                <?php endwhile;?>
 
-        <?php else: ?>
-        <p><?php __('No Posts Found');?></p>
-        <?php endif;?>
+                <?php else: ?>
+                <p><?php __('No Posts Found');?></p>
+                <?php endif;?>
 
-      </div>
+            </div>
+        </div>
+        <?php // comments_template();?>
     </div>
-    <?php // comments_template();?>
-  </div>
 
-  <!-- newsletter widget -->
-  <section class="newsletter section_spacing_top_medium">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="newsletter_content">
+    <!-- newsletter widget -->
+    <section class="newsletter section_spacing_top_medium">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="newsletter_content">
 
-            <?php if (is_active_sidebar('newsletter')):
+                        <?php if (is_active_sidebar('newsletter')):
 
     dynamic_sidebar('newsletter');
 endif;
 ?>
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <?php get_footer();?>
+    <?php get_footer();?>

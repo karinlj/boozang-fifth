@@ -9,19 +9,17 @@ get_header();?>
 if (function_exists('acf_add_options_page')) {?>
 
  <div class="content_container_page">
-   <div class="container">
-     <div class="row">
-       <div class="col-md-8">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-8">
+                 <div class="nopage section_spacing_top_medium">
+                     <h3 class="nopage-heading"><?php the_field('404_heading', 'option');?></h3>
+                     <p class="nopage-content"> <?php the_field('404_content', 'option');?></p>
+                 </div>
 
-         <div class="nopage section_spacing_top_medium">
-
-           <h3 class="nopage-heading"><?php the_field('404_heading', 'option');?></h3>
-           <p class="nopage-content"> <?php the_field('404_content', 'option');?></p>
+             </div>
          </div>
-
-       </div>
      </div>
-   </div>
  </div>
 
  <?php

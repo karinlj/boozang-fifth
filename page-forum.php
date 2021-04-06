@@ -7,11 +7,11 @@
 <?php get_header();?>
 
 <section class="forum_section section_spacing_top_medium">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-9">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9">
 
-        <?php while (have_posts()):
+                <?php while (have_posts()):
     the_post();
 
     get_template_part('parts/content-forum');
@@ -23,13 +23,13 @@
 
 endwhile; // End the loop.
 ?>
-      </div>
-      <div class="col-xl-3">
+            </div>
+            <div class="col-xl-3">
 
-        <?php get_template_part('parts/sidebar-forum');?>
-      </div>
+                <?php get_template_part('parts/sidebar-forum');?>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <?php get_footer();?>

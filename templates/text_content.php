@@ -8,16 +8,16 @@ if (get_row_layout() == 'text_content') {?>
 $text = get_sub_field('text');?>
 
 <section class="text_section_pages section_spacing_top_medium">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
 
-        <div class="text_content">
-          <?php echo $text; ?>
+                <div class="text_content">
+                    <?php echo $text; ?>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div><!-- /.container -->
+    </div><!-- /.container -->
 </section>
 <?php
 }

@@ -19,6 +19,7 @@
                 "white": "White",
                 "blueDark": "Blue dark",
                 "lightblue": "Lightblue",
+                "purple": "Purple",
                 "purpledark": "Purpledark"
             },
             "allow_null": 0,
@@ -67,9 +68,9 @@
             },
             "choices": {
                 "overlay-blue": "Overlay blue",
-                "overlay-green": "Overlay green",
                 "overlay-lightblue": "Overlay lightblue",
-                "overlay-dark": "Overlay dark"
+                "overlay-purple": "Overlay purple",
+                "overlay-purpledark": "Overlay purpledark"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -126,5 +127,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617570101
+    "modified": 1617734357
 }
