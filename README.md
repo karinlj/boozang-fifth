@@ -1,17 +1,16 @@
-boozang-fifth
-=========================
-The official Boozang custom WordPress theme for new Boozang launch, August 2020. 
+# boozang-fifth
 
-##### Url:  https://boozang.com/
+The official Boozang custom WordPress theme for new Boozang launch, August 2020.
 
+##### Url: https://boozang.com/
 
-![Screenshot](/img/screenshot.jpg?raw=true "Screenshot")
-
+![Screenshot](/screenshot.jpg?raw=true "Screenshot")
 
 ## Built With
-- WordPress
+
+- WordPress- ACF
 - Sass
-- Bootstrap4  
+- Bootstrap4
 - jQuery
 
 ## Author
