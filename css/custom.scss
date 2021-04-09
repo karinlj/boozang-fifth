@@ -601,11 +601,11 @@ nav {
             border-bottom: 1px solid transparent;
           }
         }
-      }
-      /*togglar med jquery*/
-      ul.sub-menu-open {
-        display: flex;
-        flex-direction: column;
+        /*toggle open*/
+        &.open {
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
   }
@@ -683,7 +683,10 @@ nav {
 /*nav-desktop*/
 .logo {
   img {
-    padding-top: 10px;
+    padding-top: 5px;
+    @media all and (min-width: $md-min) {
+      padding-top: 12px;
+    }
     @media all and (min-width: $lg-min) {
       padding-top: 0;
       padding-right: 25px;
@@ -858,12 +861,13 @@ nav {
       }
     }
   }
+  /*toggle open*/
+  &.open {
+    overflow-x: auto;
+    transform: translateX(0);
+  }
 }
-/*toggle class with jquery*/
-.nav-mobile-open {
-  overflow-x: auto;
-  transform: translateX(0);
-}
+
 /************************
    header
 *************************/
