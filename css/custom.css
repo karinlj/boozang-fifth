@@ -807,7 +807,7 @@ nav ul li.menu-item-has-children ul.sub-menu-open {
 }
 nav > .toggle {
   font-size: 30px;
-  color: #fff;
+  color: #fff !important;
   cursor: pointer;
 }
 @media all and (min-width: 992px) {
@@ -1294,7 +1294,7 @@ nav > .toggle {
 .header_big .lightgrey nav > .toggle,
 .header_small.white nav > .toggle,
 .header_small .lightgrey nav > .toggle {
-  color: #212735;
+  color: #212735 !important;
 }
 @media all and (min-width: 992px) {
   .header_big.white .signup ul li:last-of-type,
@@ -1973,6 +1973,7 @@ feature list  (pricing page)
   width: 100%;
   height: auto;
   transition: all 1.5s 0.5s;
+  cursor: pointer;
 }
 .two_columns_section .column_row .part.image .pict.enlarge {
   transform: scale(1.4);
@@ -2623,10 +2624,19 @@ feature list  (pricing page)
 .blog_flow .post_card.single .post_content .post_text figure img {
   width: 100%;
   height: auto;
-  transition: all 1.5s 1s;
+  transition: all 1.5s 0.5s;
+  cursor: pointer;
 }
 .blog_flow .post_card.single .post_content .post_text figure img.enlarge {
   transform: scale(1.4);
+}
+.blog_flow .post_card.single .post_content .post_text figure::before {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  content: "Click on image to enlarge";
+  font-size: 0.75rem;
+  color: #0085cc;
 }
 .blog_flow .wpcf7 {
   max-width: 100%;

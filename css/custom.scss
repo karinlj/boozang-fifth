@@ -611,7 +611,7 @@ nav {
   }
   > .toggle {
     font-size: 30px;
-    color: $navcolor;
+    color: $navcolor !important;
     cursor: pointer;
     @media all and (min-width: $lg-min) {
       display: none;
@@ -1017,7 +1017,7 @@ nav {
         }
       }
       > .toggle {
-        color: $themeHeadingcolor;
+        color: $themeHeadingcolor !important;
       }
     }
     .signup {
@@ -1624,6 +1624,7 @@ feature list  (pricing page)
           width: 100%;
           height: auto;
           transition: all 1.5s 0.5s; //how fast with delay
+          cursor: pointer;
           &.enlarge {
             transform: scale(1.4); //how much
           }
@@ -1635,6 +1636,14 @@ feature list  (pricing page)
           font-style: italic;
           margin-top: 4px;
         }
+        // &::before {
+        //   position: absolute;
+        //   top: -30px;
+        //   right: 0;
+        //   content: "Click on image to enlarge";
+        //   font-size: 0.75rem;
+        //   color: $linkcolor;
+        // }
       }
     }
   }
@@ -2245,10 +2254,19 @@ feature list  (pricing page)
             img {
               width: 100%;
               height: auto;
-              transition: all 1.5s 1s; //how fast with delay
+              transition: all 1.5s 0.5s; //how fast with delay
+              cursor: pointer;
               &.enlarge {
                 transform: scale(1.4); //how much
               }
+            }
+            &::before {
+              position: absolute;
+              top: 0px;
+              right: 0;
+              content: "Click on image to enlarge";
+              font-size: 0.75rem;
+              color: $linkcolor;
             }
           }
         }
