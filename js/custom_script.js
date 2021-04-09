@@ -10,7 +10,6 @@ jQuery(document).ready(function ($) {
   $(".blog-sidebar ul").prepend(
     '<li class="most-recent"><a href="/blog">Most Recent</a></li>'
   );
-
   $(window).on("load", function () {
     var path = window.location.pathname;
     if (path.indexOf("blog") >= 0) {
@@ -37,8 +36,9 @@ jQuery(document).ready(function ($) {
 
   /*Mobile menu*/
   /*when click on veggoburger...add or remove class */
-  $(".toggle").click(function () {
+  $(".toggle_btn").click(function () {
     $(".nav-mobile").toggleClass("nav-mobile-open");
+    $(".toggle_btn").toggleClass("clicked");
   });
 
   $(".nav-mobile ul li.menu-item-has-children").click(function (event) {
