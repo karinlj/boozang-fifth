@@ -38,6 +38,7 @@ jQuery(document).ready(function ($) {
   $(".toggle_btn").click(function () {
     $(".nav-mobile").toggleClass("open");
     $(".toggle_btn").toggleClass("clicked");
+    $("body").toggleClass("no_scroll");
   });
 
   $(".nav-mobile ul li.menu-item-has-children").click(function (event) {

@@ -17,6 +17,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.no_scroll {
+  overflow: hidden;
+}
+
 .content_container_page {
   min-height: 30rem;
 }
