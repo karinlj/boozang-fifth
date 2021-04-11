@@ -1959,14 +1959,13 @@ feature list  (pricing page)
         margin-top: 10px;
         margin-right: 5px;
         height: 20px;
-        border-radius: 2px;
         background-color: #f0f1f6;
         font-size: 10px;
         font-weight: 500;
         line-height: 18px;
         letter-spacing: normal;
         color: #737373;
-        padding: 3px 6px;
+        padding: 3px 8px;
         text-transform: uppercase;
       }
       .content_container_inner {
@@ -1998,6 +1997,8 @@ feature list  (pricing page)
 ********************************/
 .info_banner_small {
   box-shadow: $themeBox_shadow_more;
+  height: 300px;
+  border-radius: $themeBorder_radius;
   //background and overlay: see scss section
   // padding-top: 0;
   // margin-top: -3rem;
@@ -2008,9 +2009,8 @@ feature list  (pricing page)
   // }
   .content {
     padding: 3rem 2rem;
-    min-height: 200px;
+    height: 300px;
     border-radius: $themeBorder_radius;
-
     .heading,
     p,
     h3 {
@@ -2021,7 +2021,7 @@ feature list  (pricing page)
       margin-bottom: 0.5rem;
     }
     .heading {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
 
     .link_wrapper {
@@ -2057,6 +2057,60 @@ feature list  (pricing page)
     }
   }
 }
+
+/**********************
+   latest_features
+***********************/
+.latest_features {
+  .heading {
+    color: $themecolorLightest;
+    text-transform: uppercase;
+    border-bottom: 1px solid $themeBorderColor;
+    padding-bottom: 0.75rem;
+  }
+  .list {
+    height: 280px;
+    overflow-y: scroll;
+    padding-right: 1rem;
+    .item {
+      padding: 1rem 1.7rem;
+      box-shadow: $themeBox_shadow;
+      margin-bottom: 0.5rem;
+      border-radius: $btnBorder_radius;
+
+      .title {
+      }
+      .category {
+        display: inline;
+        text-align: center;
+        margin-top: 10px;
+        margin-right: 5px;
+        height: 20px;
+        background-color: #f0f1f6;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: normal;
+        color: #737373;
+        padding: 3px 8px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 300px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $themecolorLightest;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #cddeea;
+    border-radius: 4px;
+  }
+}
+
 /**********************
    check list
 ***********************/
