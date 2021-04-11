@@ -2074,8 +2074,15 @@ feature list  (pricing page)
       background: #fff;
       padding: 1rem 1.7rem;
       box-shadow: $themeBox_shadow;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       border-radius: $btnBorder_radius;
+      &:hover {
+        .title,
+        .text {
+          transition: 0.25s ease-in-out;
+          color: $themecolorNewBlue;
+        }
+      }
       .title {
       }
       .text {

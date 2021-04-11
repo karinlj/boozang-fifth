@@ -410,7 +410,7 @@ a.arrow_link:hover:before {
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 4px;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
   font-size: 1em;
@@ -923,7 +923,7 @@ nav > .toggle_btn.clicked:hover > div {
   background-color: #fff;
   border: 1px solid #fff;
   margin: 0 0 0 1.2rem;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
   line-height: 1.2;
@@ -2432,8 +2432,13 @@ feature list  (pricing page)
   background: #fff;
   padding: 1rem 1.7rem;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
-  margin-bottom: 1rem;
-  border-radius: 2px;
+  margin-bottom: 0.8rem;
+  border-radius: 4px;
+}
+.latest_features .list .item:hover .title,
+.latest_features .list .item:hover .text {
+  transition: 0.25s ease-in-out;
+  color: #0085cc;
 }
 .latest_features .list .item .text {
   font-size: 0.8rem;
