@@ -15,7 +15,7 @@ $style = '';
 <section class="info_banner_small section_spacing_top_mini">
     <div class="container">
         <div class="row justify-content-center"> -->
-<div class="col-md-8">
+<div class="col-lg-8">
     <section class="info_banner_small">
         <section class="content <?php echo $color; ?> <?php echo $overlay_color; ?>" <?php echo $style; ?>>
             <?php

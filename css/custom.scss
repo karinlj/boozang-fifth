@@ -299,7 +299,7 @@ a.arrow_link {
     transform: translateX(2px);
     color: #fff;
     &:before {
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
   &:focus {
@@ -1892,8 +1892,8 @@ feature list  (pricing page)
   Videos Page Layout
 *********************/
 .alternative_blocks {
-  margin-top: -5rem;
-  background: #fff;
+  margin-top: -3rem;
+  background: $lightgrey;
   > .container {
     max-width: 1100px;
     width: 100%;
@@ -1907,7 +1907,8 @@ feature list  (pricing page)
   }
 }
 .video_section {
-  background: #fff;
+  background: $lightgrey;
+  padding-top: 0;
   > .container {
     max-width: 1100px;
     width: 100%;
@@ -1953,7 +1954,10 @@ feature list  (pricing page)
       }
     }
     .content_container {
+      border-bottom-left-radius: $themeBorder_radius;
+      border-bottom-right-radius: $themeBorder_radius;
       padding: 1rem 1.7rem 0.5rem 1.7rem;
+      background: #fff;
       .cat_badge {
         text-align: center;
         margin-top: 10px;
@@ -1996,20 +2000,13 @@ feature list  (pricing page)
    info banner small (video-page)
 ********************************/
 .info_banner_small {
-  box-shadow: $themeBox_shadow_more;
-  height: 300px;
-  border-radius: $themeBorder_radius;
   //background and overlay: see scss section
-  // padding-top: 0;
-  // margin-top: -3rem;
-  // > .container {
-  //   max-width: 1100px;
-  //   width: 100%;
-  //   margin: 0 auto;
-  // }
+  box-shadow: $themeBox_shadow_more;
+  height: 360px;
+  border-radius: $themeBorder_radius;
   .content {
     padding: 3rem 2rem;
-    height: 300px;
+    height: 360px;
     border-radius: $themeBorder_radius;
     .heading,
     p,
@@ -2021,9 +2018,12 @@ feature list  (pricing page)
       margin-bottom: 0.5rem;
     }
     .heading {
-      font-size: 3.5rem;
+      font-size: 2.7rem;
+      margin-bottom: 2rem;
+      @media all and (min-width: $md-min) {
+        font-size: 3.7rem;
+      }
     }
-
     .link_wrapper {
       display: flex;
       align-items: flex-start;
@@ -2038,17 +2038,13 @@ feature list  (pricing page)
         }
       }
       a {
-        font-size: 0.75rem;
-        @media all and (max-width: $xs-max) {
+        &::before {
+          background-color: transparent;
+        }
+        @media all and (min-width: $md-min) {
           &::before {
-            background-color: transparent;
+            background-color: #fff;
           }
-        }
-        @media all and (min-width: $sm-min) {
-          font-size: 0.9rem;
-        }
-        @media all and (min-width: $lg-min) {
-          font-size: 1rem;
         }
       }
     }
@@ -2062,38 +2058,50 @@ feature list  (pricing page)
    latest_features
 ***********************/
 .latest_features {
+  margin-top: 2rem;
   .heading {
     color: $themecolorLightest;
     text-transform: uppercase;
     border-bottom: 1px solid $themeBorderColor;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
   }
   .list {
-    height: 280px;
+    height: 340px;
     overflow-y: scroll;
     padding-right: 1rem;
     .item {
+      position: relative;
+      background: #fff;
       padding: 1rem 1.7rem;
       box-shadow: $themeBox_shadow;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       border-radius: $btnBorder_radius;
-
       .title {
       }
-      .category {
+      .text {
+        font-size: 0.8rem;
+        margin-bottom: 0.1rem;
+        line-height: 1.4;
+      }
+      .date {
         display: inline;
-        text-align: center;
-        margin-top: 10px;
-        margin-right: 5px;
-        height: 20px;
-        background-color: #f0f1f6;
         font-size: 10px;
-        font-weight: 500;
-        line-height: 18px;
-        letter-spacing: normal;
-        color: #737373;
-        padding: 3px 8px;
+        color: $linkcolor;
+        padding: 3px 0;
         text-transform: uppercase;
+      }
+      .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 20;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        &:hover {
+          box-shadow: $themeBox_shadow_images;
+        }
       }
     }
   }
@@ -2108,6 +2116,9 @@ feature list  (pricing page)
   ::-webkit-scrollbar-track {
     background-color: #cddeea;
     border-radius: 4px;
+  }
+  @media all and (min-width: $lg-min) {
+    margin-top: 0;
   }
 }
 

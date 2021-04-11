@@ -2,7 +2,7 @@
 // latest_features layout for Alternative Blocks
 if (get_row_layout() == 'latest_features') {?>
 
-<div class="col-md-4">
+<div class="col-lg-4">
     <section class="latest_features">
         <?php  $heading = get_sub_field('heading');
         if ($heading) {?>
@@ -13,18 +13,27 @@ if (get_row_layout() == 'latest_features') {?>
             <?php if (have_rows('list')) {
             while (have_rows('list')) {
                 the_row(); ?>
-            <?php $title = get_sub_field('title'); ?>
-            <?php $category = get_sub_field('category'); ?>
+            <?php
+            $title = get_sub_field('title');
+                $date = get_sub_field('date');
+                $text = get_sub_field('text');
+                $link_url = get_sub_field('link_url'); ?>
 
             <div class="item">
-
                 <?php if ($title) {?>
                 <h6 class="title"><?php echo $title; ?></h6>
                 <?php } ?>
-
-                <?php if ($category) {?>
-                <p class="category"><?php echo $category; ?></p>
+                <?php if ($text) {?>
+                <p class="text"><?php echo $text; ?></p>
                 <?php } ?>
+
+                <?php if ($date) {?>
+                <p class="date"><?php echo $date; ?></p>
+                <?php } ?>
+                <?php if ($link_url) {?>
+                <a href="<?php echo $link_url; ?>" class="link"></a>
+                <?php
+                        } ?>
             </div>
             <?php
             }

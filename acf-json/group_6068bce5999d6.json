@@ -292,9 +292,47 @@
                                     "maxlength": ""
                                 },
                                 {
+                                    "key": "field_60732b196682a",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
                                     "key": "field_6072f371a3cba",
-                                    "label": "Category",
-                                    "name": "category",
+                                    "label": "Date",
+                                    "name": "date",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_6073154b60492",
+                                    "label": "Link url",
+                                    "name": "link_url",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -339,5 +377,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1618146753
+    "modified": 1618160427
 }
