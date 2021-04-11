@@ -5,7 +5,11 @@
  */
 ?>
 <?php get_header();?>
-<?php // for layouts of content_block_pages
+<section class="alternative_blocks section_spacing_top_mini">
+    <div class="container">
+        <div class="row justify-content-between">
+
+            <?php // for layouts of content_block_pages
 if (function_exists('have_rows')) {
     if (have_rows('alternative_blocks')) {
         while (have_rows('alternative_blocks')) {
@@ -18,6 +22,9 @@ if (function_exists('have_rows')) {
     }
 }?>
 
+        </div>
+    </div>
+</section>
 <!-- get video-list -->
 <?php get_template_part('parts/video-list');?>
 <?php wp_reset_postdata();?>

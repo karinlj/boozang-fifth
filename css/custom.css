@@ -410,7 +410,7 @@ a.arrow_link:hover:before {
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 2px;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
   font-size: 1em;
@@ -452,7 +452,7 @@ header.blueDarkest {
 }
 section.lightblue,
 header.lightblue {
-  background: #0085cc;
+  background-image: linear-gradient(to right bottom, #0074b3, #007cc0, #0084cc, #008dd9, #0095e6);
 }
 section.purpledark,
 header.purpledark {
@@ -629,7 +629,7 @@ header.overlay-blue::before {
 }
 section.overlay-lightblue::before,
 header.overlay-lightblue::before {
-  background: rgba(0, 99, 153, 0.8);
+  background: rgba(0, 116, 179, 0.75);
 }
 section.overlay-purple::before,
 header.overlay-purple::before {
@@ -923,7 +923,7 @@ nav > .toggle_btn.clicked:hover > div {
   background-color: #fff;
   border: 1px solid #fff;
   margin: 0 0 0 1.2rem;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 10px 20px;
   cursor: pointer;
   line-height: 1.2;
@@ -1550,7 +1550,7 @@ nav > .toggle_btn.clicked:hover > div {
 }
 .header_big .header_items_section .feature_slider_new .tab_content,
 .header_small .header_items_section .feature_slider_new .tab_content {
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
   display: none;
 }
@@ -1642,7 +1642,7 @@ nav > .toggle_btn.clicked:hover > div {
 .pricing_section .card {
   background: #f5f6f9;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   border: 1px solid #f5f6f9;
   height: 500px;
@@ -1865,70 +1865,6 @@ feature list  (pricing page)
 }
 
 /*********************
-   info banner small (video-page)
-*********************/
-.info_banner_small {
-  padding-top: 0;
-  margin-top: -3rem;
-}
-.info_banner_small > .container {
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
-}
-.info_banner_small .content {
-  padding: 2rem;
-  min-height: 200px;
-  border-radius: 4px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-}
-.info_banner_small .content .heading,
-.info_banner_small .content p {
-  position: relative;
-  color: #fff;
-}
-.info_banner_small .content p {
-  margin-bottom: 0.5rem;
-}
-.info_banner_small .content .link_wrapper {
-  display: flex;
-  align-items: flex-start;
-  padding-top: 1rem;
-}
-.info_banner_small .content .link_wrapper img {
-  position: relative;
-  max-width: 22px;
-  margin-right: 0.1rem;
-}
-@media all and (min-width: 768px) {
-  .info_banner_small .content .link_wrapper img {
-    max-width: 28px;
-    margin-right: 0.3rem;
-  }
-}
-.info_banner_small .content .link_wrapper a {
-  font-size: 0.75rem;
-}
-@media all and (max-width: 480px) {
-  .info_banner_small .content .link_wrapper a::before {
-    background-color: transparent;
-  }
-}
-@media all and (min-width: 576px) {
-  .info_banner_small .content .link_wrapper a {
-    font-size: 0.9rem;
-  }
-}
-@media all and (min-width: 992px) {
-  .info_banner_small .content .link_wrapper a {
-    font-size: 1rem;
-  }
-}
-.info_banner_small .content::before {
-  border-radius: 4px;
-}
-
-/*********************
    get started banner 
 *********************/
 .get_started_banner {
@@ -2056,7 +1992,7 @@ feature list  (pricing page)
   position: relative;
 }
 .two_columns_section .column_row .part.image .pict {
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
   width: 100%;
   height: auto;
@@ -2123,6 +2059,7 @@ feature list  (pricing page)
   content: "";
 }
 .two_columns_section.story .column_row .part.image img {
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   transition: none;
 }
@@ -2231,7 +2168,7 @@ feature list  (pricing page)
   height: 7rem;
   background: #fff;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
-  border-radius: 4px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2263,7 +2200,7 @@ feature list  (pricing page)
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 2.5rem 1.5rem;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -2299,6 +2236,26 @@ feature list  (pricing page)
 /********************
   Videos Page Layout
 *********************/
+.alternative_blocks {
+  margin-top: -5rem;
+  background: #fff;
+}
+.alternative_blocks > .container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media all and (min-width: 1580px) {
+  .alternative_blocks > .container {
+    max-width: 1150px;
+  }
+}
+@media all and (min-width: 1780px) {
+  .alternative_blocks > .container {
+    max-width: 1300px;
+  }
+}
+
 .video_section {
   background: #fff;
 }
@@ -2319,8 +2276,8 @@ feature list  (pricing page)
 }
 .video_section .video_container {
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  border-radius: 4px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
   margin: 0 2% 4rem 0;
   transition: 0.25s ease-in-out;
 }
@@ -2333,8 +2290,8 @@ feature list  (pricing page)
   color: #0085cc;
 }
 .video_section .video_container .embed_container {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .video_section .video_container .embed_container .video_link {
   position: absolute;
@@ -2348,8 +2305,8 @@ feature list  (pricing page)
   position: relative;
 }
 .video_section .video_container .embed_container .img_container img {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .video_section .video_container .content_container {
   padding: 1rem 1.7rem 0.5rem 1.7rem;
@@ -2389,6 +2346,67 @@ feature list  (pricing page)
 }
 .video_section .video_container .content_container .content_container_inner .description {
   font-size: 0.8rem;
+}
+
+/*******************************
+   info banner small (video-page)
+********************************/
+.info_banner_small {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.info_banner_small .content {
+  padding: 3rem 2rem;
+  min-height: 200px;
+  border-radius: 8px;
+}
+.info_banner_small .content .heading,
+.info_banner_small .content p,
+.info_banner_small .content h3 {
+  position: relative;
+  color: #fff;
+}
+.info_banner_small .content p {
+  margin-bottom: 0.5rem;
+}
+.info_banner_small .content .heading {
+  font-size: 4rem;
+}
+.info_banner_small .content .link_wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 1rem;
+}
+.info_banner_small .content .link_wrapper img {
+  position: relative;
+  max-width: 22px;
+  margin-right: 0.1rem;
+}
+@media all and (min-width: 768px) {
+  .info_banner_small .content .link_wrapper img {
+    max-width: 28px;
+    margin-right: 0.3rem;
+  }
+}
+.info_banner_small .content .link_wrapper a {
+  font-size: 0.75rem;
+}
+@media all and (max-width: 480px) {
+  .info_banner_small .content .link_wrapper a::before {
+    background-color: transparent;
+  }
+}
+@media all and (min-width: 576px) {
+  .info_banner_small .content .link_wrapper a {
+    font-size: 0.9rem;
+  }
+}
+@media all and (min-width: 992px) {
+  .info_banner_small .content .link_wrapper a {
+    font-size: 1rem;
+  }
+}
+.info_banner_small .content::before {
+  border-radius: 8px;
 }
 
 /**********************
@@ -2526,24 +2544,36 @@ feature list  (pricing page)
 .blog-sidebar .sidebar-module ul .most-recent.current-misse a {
   border-bottom: 3px solid #0085cc;
 }
-.blog_flow .container .container {
-  padding: 0;
+.blog_flow > .container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
 }
-.blog_flow .container .paginate_links {
+@media all and (min-width: 1580px) {
+  .blog_flow > .container {
+    max-width: 1150px;
+  }
+}
+@media all and (min-width: 1780px) {
+  .blog_flow > .container {
+    max-width: 1300px;
+  }
+}
+.blog_flow > .container .paginate_links {
   text-align: center;
 }
-.blog_flow .container .paginate_links span,
-.blog_flow .container .paginate_links a {
+.blog_flow > .container .paginate_links span,
+.blog_flow > .container .paginate_links a {
   padding-right: 0.4rem;
 }
-.blog_flow .container .paginate_links .page-numbers.current {
+.blog_flow > .container .paginate_links .page-numbers.current {
   color: #b3b3b3;
 }
 .blog_flow .post_card {
   position: relative;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: 0.25s ease-in-out;
   background: #fff;
 }
@@ -2567,8 +2597,8 @@ feature list  (pricing page)
   height: 490px;
 }
 .blog_flow .post_card img {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .blog_flow .post_card .post_content {
   padding: 1rem 1.2rem 0.5rem 1.2rem;
@@ -2747,7 +2777,7 @@ feature list  (pricing page)
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 83, 128, 0.85);
+  background: rgba(0, 116, 179, 0.75);
   opacity: 0.85;
   content: "";
   display: block;
@@ -2792,7 +2822,7 @@ feature list  (pricing page)
   color: #565c76;
   padding-left: 30px;
   height: 45px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 @media all and (min-width: 768px) {
   .newsletter .newsletter_content .es_subscription_form .es_txt_email {
@@ -2805,7 +2835,7 @@ feature list  (pricing page)
   font-size: 1rem;
   padding: 10px 20px;
   height: 45px;
-  border-radius: 4px;
+  border-radius: 8px;
   color: #fff;
   background: transparent;
   border: 1px solid #fff;
@@ -2874,7 +2904,7 @@ text layout for Pages Content block
   align-items: center;
 }
 .sign_up_front_section .button_item .btn_container .btn {
-  background: #0085cc;
+  background-image: linear-gradient(to right bottom, #0074b3, #007cc0, #0084cc, #008dd9, #0095e6);
   color: #fff;
   border: 1px solid #0085cc;
   padding: 10px 45px;
@@ -2913,7 +2943,7 @@ big_image_center
   opacity: 1;
 }
 .big_image_center .image_part img {
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   transition: 0.5s ease-in-out;
 }
@@ -2944,7 +2974,7 @@ big_image_center
 }
 .feature_blocks .single_block {
   position: relative;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
   margin-bottom: 2rem;
   padding: 3rem 1.5rem;
@@ -2994,7 +3024,7 @@ big_image_center
   background: #1c284a;
 }
 .feature_blocks .single_block.lightblue {
-  background: #0085cc;
+  background-image: linear-gradient(to right bottom, #0074b3, #007cc0, #0084cc, #008dd9, #0095e6);
 }
 
 /********************
@@ -3002,7 +3032,7 @@ big_image_center
 *********************/
 .nopage {
   background: #f5f6f9;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   padding: 3rem;
   min-height: 300px;

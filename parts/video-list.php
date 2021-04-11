@@ -1,4 +1,4 @@
-<section class="video_section section_spacing_top_small">
+<section class="video_section section_spacing_top_mini">
     <div class="container">
         <div class="row">
             <?php

@@ -367,7 +367,7 @@ header {
     background: $themecolorBlueDarkest;
   }
   &.lightblue {
-    background: $themecolorNewBlue;
+    background-image: $themecolorNewBlueBg;
   }
   &.purpledark {
     background-image: $themecolorPurpleDarkBg;
@@ -1533,64 +1533,6 @@ feature list  (pricing page)
 }
 
 /*********************
-   info banner small (video-page)
-*********************/
-.info_banner_small {
-  //background and overlay: see scss section
-  padding-top: 0;
-  margin-top: -3rem;
-  > .container {
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .content {
-    padding: 2rem;
-    min-height: 200px;
-    border-radius: $themeBorder_radius;
-    box-shadow: $themeBox_shadow_more;
-    .heading,
-    p {
-      position: relative;
-      color: #fff;
-    }
-    p {
-      margin-bottom: 0.5rem;
-    }
-    .link_wrapper {
-      display: flex;
-      align-items: flex-start;
-      padding-top: 1rem;
-      img {
-        position: relative;
-        max-width: 22px;
-        margin-right: 0.1rem;
-        @media all and (min-width: $md-min) {
-          max-width: 28px;
-          margin-right: 0.3rem;
-        }
-      }
-      a {
-        font-size: 0.75rem;
-        @media all and (max-width: $xs-max) {
-          &::before {
-            background-color: transparent;
-          }
-        }
-        @media all and (min-width: $sm-min) {
-          font-size: 0.9rem;
-        }
-        @media all and (min-width: $lg-min) {
-          font-size: 1rem;
-        }
-      }
-    }
-    &::before {
-      border-radius: $themeBorder_radius;
-    }
-  }
-}
-/*********************
    get started banner 
 *********************/
 .get_started_banner {
@@ -1779,6 +1721,7 @@ feature list  (pricing page)
             content: "";
           }
           img {
+            border-radius: $themeBorder_radius;
             box-shadow: $themeBox_shadow_images;
             transition: none;
             @media all and (min-width: $lg-min) {
@@ -1948,6 +1891,21 @@ feature list  (pricing page)
 /********************
   Videos Page Layout
 *********************/
+.alternative_blocks {
+  margin-top: -5rem;
+  background: #fff;
+  > .container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    @media all and (min-width: 1580px) {
+      max-width: 1150px;
+    }
+    @media all and (min-width: 1780px) {
+      max-width: 1300px;
+    }
+  }
+}
 .video_section {
   background: #fff;
   > .container {
@@ -1963,7 +1921,7 @@ feature list  (pricing page)
   }
   .video_container {
     width: 100%;
-    box-shadow: $themeBox_shadow_images;
+    box-shadow: $themeBox_shadow_more;
     border-radius: $themeBorder_radius;
     margin: 0 2% 4rem 0;
     transition: 0.25s ease-in-out;
@@ -2032,6 +1990,70 @@ feature list  (pricing page)
           font-size: 0.8rem;
         }
       }
+    }
+  }
+}
+/*******************************
+   info banner small (video-page)
+********************************/
+.info_banner_small {
+  box-shadow: $themeBox_shadow_more;
+  //background and overlay: see scss section
+  // padding-top: 0;
+  // margin-top: -3rem;
+  // > .container {
+  //   max-width: 1100px;
+  //   width: 100%;
+  //   margin: 0 auto;
+  // }
+  .content {
+    padding: 3rem 2rem;
+    min-height: 200px;
+    border-radius: $themeBorder_radius;
+
+    .heading,
+    p,
+    h3 {
+      position: relative;
+      color: #fff;
+    }
+    p {
+      margin-bottom: 0.5rem;
+    }
+    .heading {
+      font-size: 4rem;
+    }
+
+    .link_wrapper {
+      display: flex;
+      align-items: flex-start;
+      padding-top: 1rem;
+      img {
+        position: relative;
+        max-width: 22px;
+        margin-right: 0.1rem;
+        @media all and (min-width: $md-min) {
+          max-width: 28px;
+          margin-right: 0.3rem;
+        }
+      }
+      a {
+        font-size: 0.75rem;
+        @media all and (max-width: $xs-max) {
+          &::before {
+            background-color: transparent;
+          }
+        }
+        @media all and (min-width: $sm-min) {
+          font-size: 0.9rem;
+        }
+        @media all and (min-width: $lg-min) {
+          font-size: 1rem;
+        }
+      }
+    }
+    &::before {
+      border-radius: $themeBorder_radius;
     }
   }
 }
@@ -2166,10 +2188,17 @@ feature list  (pricing page)
 }
 //blog_flow
 .blog_flow {
-  .container {
-    .container {
-      padding: 0;
+  > .container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    @media all and (min-width: 1580px) {
+      max-width: 1150px;
     }
+    @media all and (min-width: 1780px) {
+      max-width: 1300px;
+    }
+
     //next and previous
     .paginate_links {
       text-align: center;
@@ -2384,7 +2413,7 @@ feature list  (pricing page)
     right: 0;
     bottom: 0;
     left: 0;
-    background: $themecolorNewBlueDarkerOverlay;
+    background: $themecolorBlueOverlay;
     opacity: 0.85;
     content: "";
     display: block;
@@ -2512,7 +2541,7 @@ text layout for Pages Content block
         // justify-content: flex-start;
       }
       .btn {
-        background: $themecolorNewBlue;
+        background-image: $themecolorNewBlueBg;
         color: #fff;
         border: 1px solid $themecolorNewBlue;
         padding: 10px 45px;
@@ -2625,7 +2654,7 @@ big_image_center
       background: $themecolorBlueDarkest;
     }
     &.lightblue {
-      background: $themecolorNewBlue;
+      background-image: $themecolorNewBlueBg;
     }
   }
 }

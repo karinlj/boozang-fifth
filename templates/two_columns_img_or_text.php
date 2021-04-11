@@ -22,9 +22,6 @@ if (have_rows('two_columns_row')) {
                 //Innehåll i kolumnerna
                 if (get_row_layout() == 'img') {?>
             <div class="part image">
-                <!-- <input type="checkbox" class="toggler">
-                <i class="fas fa-search magnifying_glass"></i> -->
-
                 <?php $img_id = get_sub_field('img');?>
 
                 <?php $image = wp_get_attachment_image_src($img_id, 'full');?>
