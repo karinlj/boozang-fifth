@@ -405,6 +405,13 @@ header {
       }
     }
   }
+  &.lightblue,
+  &.purple {
+    p {
+      color: #fff;
+    }
+  }
+
   &.white,
   .lightgrey {
     h1,

@@ -566,6 +566,11 @@ header.blueDark .banner_link:before,
 header.blueDarkest .banner_link:before {
   color: #fff;
 }
+section.lightblue p, section.purple p,
+header.lightblue p,
+header.purple p {
+  color: #fff;
+}
 section.white h1,
 section.white h2,
 section.white h3,
