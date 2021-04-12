@@ -1888,7 +1888,7 @@ feature list  (pricing page)
   Videos Page Layout
 *********************/
 .alternative_blocks {
-  margin-top: -3rem;
+  // margin-top: -3rem;
   background: $lightgrey;
   > .container {
     max-width: 1100px;
@@ -2434,6 +2434,15 @@ feature list  (pricing page)
           }
         }
         .post_text {
+          a {
+            word-break: break-word;
+            &::before {
+              background: transparent;
+            }
+            &:hover {
+              opacity: 0.7 !important;
+            }
+          }
           figure {
             position: relative;
             z-index: 1000;

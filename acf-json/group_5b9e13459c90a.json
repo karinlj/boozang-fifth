@@ -23,7 +23,7 @@
             "label": "Image",
             "name": "image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Aspect ratio: 15:9",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -41,25 +41,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_5f2d9c3beca65",
-            "label": "Image title",
-            "name": "image_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_5b9e139d96f17",
@@ -96,7 +77,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1596824678
+    "modified": 1618260709
 }

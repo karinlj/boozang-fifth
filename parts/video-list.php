@@ -45,7 +45,6 @@ foreach ($taxonomies as $taxonomy) {
                     <div class="content_container">
                         <?php echo '<span class="cat_badge">' . $term->name . '</span>'; ?>
                         <div class="content_container_inner">
-
                             <h6 class="title"><?php the_title(); ?></h6>
                             <p class="description"><?php the_field('description'); ?></p>
                         </div>

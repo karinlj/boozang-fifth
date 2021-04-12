@@ -2237,7 +2237,6 @@ feature list  (pricing page)
   Videos Page Layout
 *********************/
 .alternative_blocks {
-  margin-top: -3rem;
   background: #f5f6f9;
 }
 .alternative_blocks > .container {
@@ -2808,6 +2807,15 @@ feature list  (pricing page)
 .blog_flow .post_card.single .post_content .blog_post_meta p {
   font-size: 0.9rem;
   color: #8c8c8c;
+}
+.blog_flow .post_card.single .post_content .post_text a {
+  word-break: break-word;
+}
+.blog_flow .post_card.single .post_content .post_text a::before {
+  background: transparent;
+}
+.blog_flow .post_card.single .post_content .post_text a:hover {
+  opacity: 0.7 !important;
 }
 .blog_flow .post_card.single .post_content .post_text figure {
   position: relative;
