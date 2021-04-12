@@ -43,9 +43,7 @@ function add_scripts()
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
-function favicon()
-{?>
-
+function favicon() {?>
 <link rel="apple-touch-icon" sizes="57x57"
     href="<?php echo get_stylesheet_directory_uri(); ?>/icon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32"

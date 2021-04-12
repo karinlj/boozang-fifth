@@ -10,7 +10,6 @@ $color = get_field('color_theme');
                 <nav class="">
                     <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
                         <!--extra double size image for retina-->
-
                         <?php
                             if ($color === 'white') {?>
                         <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang.png"
@@ -24,9 +23,6 @@ $color = get_field('color_theme');
                             width="208" height="51" alt="boozang-logo" />
                         <?php
                             }?>
-
-
-
                     </a>
 
                     <div class="nav-links">

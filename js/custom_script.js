@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
 
   $(".nav-mobile ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation();
-    $(this).children("ul").toggleClass("sub-menu-open");
+    $(this).children("ul").toggleClass("open");
   });
 
   //feature slider

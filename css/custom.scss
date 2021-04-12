@@ -461,7 +461,6 @@ header {
   width: 100%;
   position: absolute;
   top: 0px;
-  // z-index: 1000;
   height: 80px;
   background: $navBg_transp;
   padding: 0rem calc(1.5rem - 15px);
@@ -803,7 +802,6 @@ nav {
       ul {
         position: static;
         z-index: 10;
-        //display: none;
         display: flex;
         flex-direction: column;
         max-height: 0;
@@ -812,8 +810,6 @@ nav {
       }
       /*togglar med jquery*/
       ul.sub-menu-open {
-        // display: flex;
-        // flex-direction: column;
         max-height: 200px;
       }
       > a {
