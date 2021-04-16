@@ -1004,9 +1004,6 @@ nav > .toggle_btn.clicked:hover > div {
   cursor: pointer;
   padding: 12px 10px;
 }
-.nav-mobile ul li.menu-item-has-children {
-  /*togglar med jquery*/
-}
 .nav-mobile ul li.menu-item-has-children ul {
   position: static;
   z-index: 10;
@@ -1015,8 +1012,9 @@ nav > .toggle_btn.clicked:hover > div {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
+  /*togglar med jquery*/
 }
-.nav-mobile ul li.menu-item-has-children ul.sub-menu-open {
+.nav-mobile ul li.menu-item-has-children ul.open {
   max-height: 200px;
 }
 .nav-mobile ul li.menu-item-has-children > a {
@@ -1791,6 +1789,7 @@ feature list  (pricing page)
 .faq_accordion_section .info_list_item .question_part .question {
   line-height: 1.7;
   margin-bottom: 0;
+  max-width: 90%;
   transition: all 0.3s ease-in-out;
 }
 .faq_accordion_section .info_list_item .question_part .question:hover {
@@ -1807,7 +1806,7 @@ feature list  (pricing page)
   position: absolute;
   right: 0;
   top: 1.3rem;
-  padding: 3px;
+  padding: 5px;
   color: #212735;
   transition: all 0.3s ease-in-out;
 }

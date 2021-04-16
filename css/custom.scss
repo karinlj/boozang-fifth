@@ -814,11 +814,12 @@ nav {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease-in-out;
+        /*togglar med jquery*/
+        &.open {
+          max-height: 200px;
+        }
       }
-      /*togglar med jquery*/
-      ul.sub-menu-open {
-        max-height: 200px;
-      }
+
       > a {
         color: #fff;
         &:hover {
@@ -1455,6 +1456,7 @@ feature list  (pricing page)
       .question {
         line-height: 1.7;
         margin-bottom: 0;
+        max-width: 90%;
         transition: all 0.3s ease-in-out;
         &:hover {
           color: $linkcolor;
@@ -1470,7 +1472,7 @@ feature list  (pricing page)
           position: absolute;
           right: 0;
           top: 1.3rem;
-          padding: 3px;
+          padding: 5px;
           color: $themeHeadingcolor;
           transition: all 0.3s ease-in-out;
         }
