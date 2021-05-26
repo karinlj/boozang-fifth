@@ -2826,7 +2826,6 @@ feature list  (pricing page)
   z-index: 1000;
 }
 .blog_flow .post_card.single .post_content .post_text figure img {
-  width: 100%;
   height: auto;
   transition: all 1.5s 0.5s;
   cursor: pointer;
