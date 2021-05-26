@@ -2412,15 +2412,20 @@ feature list  (pricing page)
           padding: 1rem 2rem;
         }
         @media all and (min-width: $md-min) {
-          padding: 1.5rem 3.5rem;
+          padding: 1.5rem 2.5rem;
         }
         .category {
           font-size: 1rem;
         }
         p {
+          margin-bottom: 1.75rem;
           @media all and (min-width: $md-min) {
             font-size: 1.1rem;
           }
+        }
+        h2 {
+          margin-top: 3rem;
+          margin-bottom: 1.75rem;
         }
         .blog_post_title {
           font-weight: 600;
@@ -2435,7 +2440,7 @@ feature list  (pricing page)
         }
         .blog_post_meta {
           border: none;
-          padding-bottom: 1.5rem;
+          padding-bottom: 0.5rem;
           justify-content: start;
           p {
             font-size: 0.9rem;
@@ -2472,6 +2477,30 @@ feature list  (pricing page)
               font-size: 0.75rem;
               color: $linkcolor;
             }
+          }
+        }
+        .wp-block-code {
+          background: #f5f2f0;
+          padding: 1em;
+          margin: 0.5em 0;
+          overflow: auto;
+          code {
+            color: #000;
+            text-shadow: 0 1px #fff;
+            font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+            font-size: 1em;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            -webkit-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none;
           }
         }
       }

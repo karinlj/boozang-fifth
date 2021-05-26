@@ -2777,16 +2777,23 @@ feature list  (pricing page)
 }
 @media all and (min-width: 768px) {
   .blog_flow .post_card.single .post_content {
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 2.5rem;
   }
 }
 .blog_flow .post_card.single .post_content .category {
   font-size: 1rem;
 }
+.blog_flow .post_card.single .post_content p {
+  margin-bottom: 1.75rem;
+}
 @media all and (min-width: 768px) {
   .blog_flow .post_card.single .post_content p {
     font-size: 1.1rem;
   }
+}
+.blog_flow .post_card.single .post_content h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.75rem;
 }
 .blog_flow .post_card.single .post_content .blog_post_title {
   font-weight: 600;
@@ -2805,7 +2812,7 @@ feature list  (pricing page)
 }
 .blog_flow .post_card.single .post_content .blog_post_meta {
   border: none;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
   justify-content: start;
 }
 .blog_flow .post_card.single .post_content .blog_post_meta p {
@@ -2840,6 +2847,30 @@ feature list  (pricing page)
   content: "Click on image to enlarge";
   font-size: 0.75rem;
   color: #0085cc;
+}
+.blog_flow .post_card.single .post_content .wp-block-code {
+  background: #f5f2f0;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+.blog_flow .post_card.single .post_content .wp-block-code code {
+  color: #000;
+  text-shadow: 0 1px #fff;
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 .blog_flow .wpcf7 {
   max-width: 100%;

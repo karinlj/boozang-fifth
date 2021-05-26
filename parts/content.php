@@ -7,7 +7,7 @@ $post_class = 'post_card';
 
 <!-- column size -->
 <?php if (is_single()) {
-    $col_class = 'col-lg-10 offset-lg-1';
+    $col_class = 'col-lg-8 offset-lg-2';
 }?>
 <div class="<?php echo $col_class; ?>">
 
