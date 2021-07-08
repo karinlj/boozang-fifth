@@ -1648,7 +1648,7 @@ nav > .toggle_btn.clicked:hover > div {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   border: 1px solid #f5f6f9;
-  height: 500px;
+  height: 520px;
 }
 .pricing_section .card .card-body {
   padding: 0 1.25rem 1.25rem 1.25rem;
@@ -1702,7 +1702,7 @@ nav > .toggle_btn.clicked:hover > div {
   opacity: 0.8;
 }
 .pricing_section .card.higher {
-  height: 530px;
+  height: 550px;
 }
 .pricing_section .card.higher .pricing_header {
   height: 115px;

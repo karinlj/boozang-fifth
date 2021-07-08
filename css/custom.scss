@@ -1320,7 +1320,7 @@ nav {
     border-radius: $themeBorder_radius;
     box-shadow: $themeBox_shadow_images;
     border: 1px solid $lightgrey;
-    height: 500px;
+    height: 520px;
     .card-body {
       padding: 0 1.25rem 1.25rem 1.25rem;
       height: 100%;
@@ -1374,7 +1374,7 @@ nav {
     }
     //middle card higher
     &.higher {
-      height: 530px;
+      height: 550px;
       .pricing_header {
         height: 115px;
       }
