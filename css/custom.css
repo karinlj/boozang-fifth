@@ -3173,6 +3173,9 @@ forum section
 .forum_section #af-wrapper .post-message img:hover {
   transform: scale(1.4);
 }
+.forum_section #af-wrapper .post-message img p {
+  line-height: 1.6;
+}
 .forum_section .forum-sidebar {
   padding-top: 3rem;
 }
