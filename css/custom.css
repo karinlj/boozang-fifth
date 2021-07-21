@@ -149,6 +149,10 @@ input {
   font-weight: 400;
 }
 
+li {
+  font-size: 0.9rem;
+}
+
 h1,
 h2,
 h3,
@@ -2785,11 +2789,6 @@ feature list  (pricing page)
 }
 .blog_flow .post_card.single .post_content p {
   margin-bottom: 1.75rem;
-}
-@media all and (min-width: 768px) {
-  .blog_flow .post_card.single .post_content p {
-    font-size: 1.1rem;
-  }
 }
 .blog_flow .post_card.single .post_content h2 {
   margin-top: 3rem;
