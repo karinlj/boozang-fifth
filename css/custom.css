@@ -3177,6 +3177,9 @@ forum section
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+.forum_section #af-wrapper .post-message h5 {
+  margin-top: 1rem;
+}
 .forum_section .forum-sidebar {
   padding-top: 3rem;
 }
