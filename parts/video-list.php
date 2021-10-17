@@ -1,4 +1,45 @@
 <section class="video_section section_spacing_top_mini">
+
+    <div class="video_filter">
+        <div class="container">
+            <div class="sidebar-module">
+                <ul class="videos">
+
+                    <?php $post_type = 'videos';
+$filter = $_GET['filter']; ?>
+
+                    <?php if (isset($filter)) { ?>
+                    <li class="cat-item "><a href="/Boozang/videos">All</a></li>
+                    <?php
+                    } else { ?>
+                    <li class="cat-item current-cat"><a href="/Boozang/videos">All</a></li>
+                    <?php }
+                
+                    // Get all the taxonomies for this post type
+                    $taxonomies = get_object_taxonomies((object) array('post_type' => $post_type));
+                    foreach ($taxonomies as $taxonomy) {
+                        // Gets every "category" (term) in this taxonomy to get the respective posts
+                        $terms = get_terms($taxonomy); ?>
+
+                    <?php foreach ($terms as $term) {
+                            if ($term->slug === $filter) {
+                                $activeClass = 'current-cat';
+                            } else {
+                                $activeClass = '';
+                            } ?>
+                    <li class="cat-item <?php echo $activeClass ?>"><a
+                            href="/Boozang/videos?filter=<?php echo $term->slug?>">
+                            <?php echo $term->name  ?></a>
+                    </li>
+
+                    <?php
+                        }
+                    }?>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <?php
@@ -12,11 +53,11 @@ foreach ($taxonomies as $taxonomy) {
     // Gets every "category" (term) in this taxonomy to get the respective posts
     $terms = get_terms($taxonomy); ?>
 
-            <?php foreach ($terms as $term) {?>
+            <?php foreach ($terms as $term) { ?>
 
             <?php $posts = new WP_Query("taxonomy=$taxonomy&term=$term->slug&posts_per_page=-1");
 
-        if ($posts->have_posts()) {
+        if ($posts->have_posts() && !isset($filter) || $term->slug === $filter) {
             while ($posts->have_posts()) {
                 $posts->the_post(); ?>
 

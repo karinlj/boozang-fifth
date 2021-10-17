@@ -2516,7 +2516,8 @@ feature list  (pricing page)
 /* 
 * Categories menu  
 */
-.blog-sidebar {
+.blog-sidebar,
+.video_filter {
   width: 100%;
   background: #fff;
   margin: 0;
@@ -2524,32 +2525,39 @@ feature list  (pricing page)
   padding: 0;
 }
 @media all and (min-width: 576px) {
-  .blog-sidebar {
+  .blog-sidebar,
+.video_filter {
     padding: 0 calc(2.25rem - 15px);
   }
 }
 @media all and (min-width: 768px) {
-  .blog-sidebar {
+  .blog-sidebar,
+.video_filter {
     padding: 0 calc(3rem - 15px);
   }
 }
 @media all and (min-width: 768px) {
-  .blog-sidebar {
+  .blog-sidebar,
+.video_filter {
     padding: 0 calc(3rem - 15px);
   }
 }
 @media all and (min-width: 1200px) {
-  .blog-sidebar {
+  .blog-sidebar,
+.video_filter {
     padding: 0 calc(3.75rem - 15px);
   }
 }
-.blog-sidebar .sidebar-module {
+.blog-sidebar .sidebar-module,
+.video_filter .sidebar-module {
   width: 100%;
 }
-.blog-sidebar .sidebar-module h4 {
+.blog-sidebar .sidebar-module h4,
+.video_filter .sidebar-module h4 {
   display: none;
 }
-.blog-sidebar .sidebar-module ul {
+.blog-sidebar .sidebar-module ul,
+.video_filter .sidebar-module ul {
   list-style: none;
   width: 100%;
   display: flex;
@@ -2563,21 +2571,25 @@ feature list  (pricing page)
   /*Uncategorized not show*/
 }
 @media all and (min-width: 576px) {
-  .blog-sidebar .sidebar-module ul {
+  .blog-sidebar .sidebar-module ul,
+.video_filter .sidebar-module ul {
     flex-direction: row;
   }
 }
-.blog-sidebar .sidebar-module ul li {
+.blog-sidebar .sidebar-module ul li,
+.video_filter .sidebar-module ul li {
   width: 100%;
   text-align: center;
 }
 @media all and (min-width: 576px) {
-  .blog-sidebar .sidebar-module ul li {
+  .blog-sidebar .sidebar-module ul li,
+.video_filter .sidebar-module ul li {
     width: auto;
     text-align: left;
   }
 }
-.blog-sidebar .sidebar-module ul li a {
+.blog-sidebar .sidebar-module ul li a,
+.video_filter .sidebar-module ul li a {
   padding: 1rem 0.2rem 0.8rem 0.2rem;
   transition: all 0.5s ease-out;
   text-transform: uppercase;
@@ -2594,37 +2606,54 @@ feature list  (pricing page)
   margin: 0 0.6rem;
   margin-bottom: -2px;
 }
-.blog-sidebar .sidebar-module ul li a:hover {
+.blog-sidebar .sidebar-module ul li a:hover,
+.video_filter .sidebar-module ul li a:hover {
   opacity: 1;
   border-color: #0085cc;
 }
 @media all and (min-width: 576px) {
-  .blog-sidebar .sidebar-module ul li a {
+  .blog-sidebar .sidebar-module ul li a,
+.video_filter .sidebar-module ul li a {
     font-size: 0.7em;
   }
 }
 @media all and (min-width: 768px) {
-  .blog-sidebar .sidebar-module ul li a {
+  .blog-sidebar .sidebar-module ul li a,
+.video_filter .sidebar-module ul li a {
     font-size: 0.8em;
     padding: 1.3rem 0.2rem 1rem 0.2rem;
   }
 }
 @media all and (min-width: 1200px) {
-  .blog-sidebar .sidebar-module ul li a {
+  .blog-sidebar .sidebar-module ul li a,
+.video_filter .sidebar-module ul li a {
     letter-spacing: 0.5px;
     margin: 0 1rem;
     margin-bottom: -2px;
   }
 }
-.blog-sidebar .sidebar-module ul li.cat-item-1 {
+.blog-sidebar .sidebar-module ul li.cat-item-1,
+.video_filter .sidebar-module ul li.cat-item-1 {
   display: none;
 }
-.blog-sidebar .sidebar-module ul li.current-cat a {
+.blog-sidebar .sidebar-module ul li.current-cat a,
+.video_filter .sidebar-module ul li.current-cat a {
   border-bottom: 3px solid #0085cc;
 }
-.blog-sidebar .sidebar-module ul .most-recent.current-misse a {
+.blog-sidebar .sidebar-module ul .most-recent.current-misse a,
+.video_filter .sidebar-module ul .most-recent.current-misse a {
   border-bottom: 3px solid #0085cc;
 }
+.blog-sidebar .sidebar-module ul.videos,
+.video_filter .sidebar-module ul.videos {
+  background: transparent;
+}
+
+.video_filter {
+  background: transparent;
+  padding-bottom: 3rem;
+}
+
 .blog_flow > .container {
   max-width: 1100px;
   width: 100%;

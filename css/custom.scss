@@ -2165,7 +2165,8 @@ feature list  (pricing page)
 /* 
 * Categories menu  
 */
-.blog-sidebar {
+.blog-sidebar,
+.video_filter {
   width: 100%;
   background: #fff;
   margin: 0;
@@ -2263,8 +2264,15 @@ feature list  (pricing page)
           }
         }
       }
+      &.videos {
+        background: transparent;
+      }
     }
   }
+}
+.video_filter {
+  background: transparent;
+  padding-bottom: 3rem;
 }
 //blog_flow
 .blog_flow {
