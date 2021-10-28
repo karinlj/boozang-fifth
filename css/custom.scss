@@ -48,7 +48,10 @@ img {
     max-width: 1250px;
   }
   @media all and (min-width: 1780px) {
-    max-width: 1450px;
+    max-width: 1400px;
+  }
+  @media all and (min-width: 2000px) {
+    max-width: 1600px;
   }
 }
 .section_spacing_top_big {
@@ -1753,6 +1756,12 @@ feature list  (pricing page)
           flex-direction: row;
           max-width: 960px;
         }
+        @media all and (min-width: 1600px) {
+          max-width: 1100px;
+        }
+        @media all and (min-width: 2000px) {
+          max-width: 1300px;
+        }
       }
       &:last-child {
         //fixa mobile
@@ -1917,6 +1926,7 @@ feature list  (pricing page)
 .video_section {
   background: $lightgrey;
   padding-top: 0;
+
   > .container {
     max-width: 1100px;
     width: 100%;
@@ -1925,6 +1935,9 @@ feature list  (pricing page)
       max-width: 1150px;
     }
     @media all and (min-width: 1780px) {
+      max-width: 1200px;
+    }
+    @media all and (min-width: 2000px) {
       max-width: 1300px;
     }
   }
@@ -2284,6 +2297,9 @@ feature list  (pricing page)
       max-width: 1150px;
     }
     @media all and (min-width: 1780px) {
+      max-width: 1200px;
+    }
+    @media all and (min-width: 2000px) {
       max-width: 1300px;
     }
 
