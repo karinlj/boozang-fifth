@@ -56,12 +56,12 @@ img {
 }
 @media all and (min-width: 1780px) {
   .container {
-    max-width: 1400px;
+    max-width: 1350px;
   }
 }
 @media all and (min-width: 2000px) {
   .container {
-    max-width: 1600px;
+    max-width: 1450px;
   }
 }
 
