@@ -5,7 +5,9 @@
  */
 ?>
 <?php get_header();?>
-<section class="alternative_blocks section_spacing_top_small">
+<!-- <section class="alternative_blocks section_spacing_top_small"> -->
+<section class="alternative_blocks">
+
     <div class="container">
         <div class="row justify-content-between">
 
