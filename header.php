@@ -36,7 +36,7 @@ $header_btn_links = get_field('btn_links');
 }
 
 // header class
-if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_page('lp4')) {
+if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_page('beta')) {
     $header_class = 'header_big';
 }
 
@@ -93,7 +93,7 @@ if (is_home() || is_singular('post') || is_archive()) {
 
                     <!-- column / columns for front pages-->
                     <?php
-if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_page('lp4')) {
+if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_page('beta')) {
 
 // half column width
     if (get_field('half_width') == 'small') {
