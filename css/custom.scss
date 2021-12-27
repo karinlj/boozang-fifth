@@ -3023,3 +3023,30 @@ forum section
     color: #999;
   }
 }
+/*********************
+   action banner
+*********************/
+.action_banner {
+  //background and overlay: see scss section
+  text-align: center;
+  .btn {
+    margin-top: 1.5rem;
+    background-image: $themecolorNewBlueBg;
+    color: #fff;
+    border: 1px solid $themecolorNewBlue;
+    padding: 10px 45px;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      box-shadow: none;
+    }
+    &:active {
+      box-shadow: none;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

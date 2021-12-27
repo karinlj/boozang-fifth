@@ -3424,4 +3424,31 @@ forum section
   color: #999;
 }
 
+/*********************
+   action banner
+*********************/
+.action_banner {
+  text-align: center;
+}
+.action_banner .btn {
+  margin-top: 1.5rem;
+  background-image: linear-gradient(to right bottom, #0074b3, #007cc0, #0084cc, #008dd9, #0095e6);
+  color: #fff;
+  border: 1px solid #0085cc;
+  padding: 10px 45px;
+  transition: 0.5s ease-in-out;
+}
+.action_banner .btn:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: none;
+}
+.action_banner .btn:active {
+  box-shadow: none;
+}
+.action_banner .btn:focus {
+  box-shadow: none;
+}
+
 /*# sourceMappingURL=custom.css.map */
