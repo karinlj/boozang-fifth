@@ -2120,7 +2120,7 @@ feature list  (pricing page)
 }
 @media all and (min-width: 768px) {
   .two_columns_section.presentation .part.image img {
-    max-width: 100%;
+    max-width: 180px;
     margin-bottom: 0;
   }
 }
