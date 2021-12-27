@@ -1,6 +1,6 @@
 <?php
 if (!is_front_page() && function_exists('acf_add_options_page')) {
-    ?>
+?>
 <!-- signup for pages -->
 <section class="signup_section <?php echo $color; ?> section_spacing_top_small">
     <div class="container">
@@ -9,30 +9,30 @@ if (!is_front_page() && function_exists('acf_add_options_page')) {
                 <div class="row justify-content-between">
                     <?php
                         // check if repeater has rows
-                    if (have_rows('sign_up_btns', 'option')) {
-                        // loop rows of data
-                        while (have_rows('sign_up_btns', 'option')) {
-                            the_row();
-                            $heading = get_sub_field('heading');
-                            $text = get_sub_field('text');
-                            $link = get_sub_field('link'); ?>
+                        if (have_rows('sign_up_btns', 'option')) {
+                            // loop rows of data
+                            while (have_rows('sign_up_btns', 'option')) {
+                                the_row();
+                                $heading = get_sub_field('heading');
+                                $text = get_sub_field('text');
+                                $link = get_sub_field('link'); ?>
 
                     <div class="col-md-6">
                         <div class="button_item">
                             <div class="text_section">
-                                <?php if ($heading) {?>
+                                <?php if ($heading) { ?>
                                 <h4 class="heading"> <?php echo $heading; ?></h4>
                                 <?php
-                                } ?>
-                                <?php if ($text) {?>
+                                            } ?>
+                                <?php if ($text) { ?>
                                 <p class="text"> <?php echo $text; ?></p>
                                 <?php
-                                } ?>
+                                            } ?>
                             </div>
                             <div class="btn_container">
                                 <?php
-                              
-                            if ($link) {?>
+
+                                            if ($link) { ?>
                                 <a class="btn link" href="<?php echo $link['url']; ?>"
                                     target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
                                 </a>
@@ -41,14 +41,14 @@ if (!is_front_page() && function_exists('acf_add_options_page')) {
                         </div>
                     </div>
                     <?php
-                        }
-                    } ?>
+                            }
+                        } ?>
                 </div>
             </div>
         </div>
 </section>
 <?php
-}?>
+} ?>
 <!-- footer -->
 <footer id="footer" class="footer-main section_spacing_top_small">
     <div class="container">
@@ -65,28 +65,29 @@ if (!is_front_page() && function_exists('acf_add_options_page')) {
                 </div>
                 <div class="social-icons">
                     <?php
-if (function_exists('acf_add_options_page')) {
-                        ?>
+                    if (function_exists('acf_add_options_page')) {
+                    ?>
                     <ul class="social">
 
                         <?php
-if (have_rows('social_icons', 'option')) { // check if repeater field has rows?>
+                            if (have_rows('social_icons', 'option')) { // check if repeater field has rows
+                            ?>
                         <?php
-while (have_rows('social_icons', 'option')) {
-                            the_row();
+                                while (have_rows('social_icons', 'option')) {
+                                    the_row();
 
-                            $social_url = get_sub_field('social_url');
-                            $social_site = get_sub_field('social_site'); ?>
+                                    $social_url = get_sub_field('social_url');
+                                    $social_site = get_sub_field('social_site'); ?>
 
                         <li class="social-item">
                             <a href="<?php echo $social_url; ?>"><i class="fab fa-<?php echo $social_site; ?>"></i></a>
                         </li>
 
                         <?php
-                        }?>
+                                } ?>
                         <?php
-}
-                        $link = get_field('mail_link', 'option'); ?>
+                            }
+                            $link = get_field('mail_link', 'option'); ?>
 
                         <li class="social-item">
                             <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope"
@@ -95,52 +96,52 @@ while (have_rows('social_icons', 'option')) {
                     </ul>
                     <?php
                     }
-?>
+                    ?>
                 </div>
             </div>
 
             <div class="col-lg-9 col-xl-8">
                 <div class="row align-items-start links">
                     <?php
-if (function_exists('acf_add_options_page')) {
-    // check if repeater field has rows
-    if (have_rows('footer_links', 'option')) {
+                    if (function_exists('acf_add_options_page')) {
+                        // check if repeater field has rows
+                        if (have_rows('footer_links', 'option')) {
 
-         // loop through the rows of data
-        while (have_rows('footer_links', 'option')) {
-            the_row(); ?>
+                            // loop through the rows of data
+                            while (have_rows('footer_links', 'option')) {
+                                the_row(); ?>
                     <div class="col-6 col-md-3">
                         <h5 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h5>
 
                         <?php
-                        // check if repeater field has rows
-                        if (have_rows('links')) {
-                            ?>
+                                    // check if repeater field has rows
+                                    if (have_rows('links')) {
+                                    ?>
                         <ul class="footer-links">
                             <?php
-                            // loop through the rows of data
-                        while (have_rows('links')) {
-                            the_row(); ?>
+                                            // loop through the rows of data
+                                            while (have_rows('links')) {
+                                                the_row(); ?>
 
                             <?php
-                            $link = get_sub_field('link'); ?>
+                                                $link = get_sub_field('link'); ?>
 
                             <li class="link-item">
                                 <a href="<?php echo $link['url']; ?>"
                                     target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
                             </li>
                             <?php
-                        } ?>
+                                            } ?>
                         </ul>
                         <?php
-                        } ?>
+                                    } ?>
                     </div>
                     <?php
-        } ?>
+                            } ?>
                     <?php
-    }
-}
-?>
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -150,7 +151,7 @@ if (function_exists('acf_add_options_page')) {
             <div class="row align-items-start">
                 <div class="col">
                     <div class="copy">
-                        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name');?> INC. ALL RIGHTS RESERVED.
+                        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> INC. ALL RIGHTS RESERVED.
                             Theme by <a href="http://karinljunggren.com/" target="_blank">Karin</a>
                         </p>
                     </div>
@@ -160,7 +161,7 @@ if (function_exists('acf_add_options_page')) {
     </div>
 </footer>
 
-<?php wp_footer();?>
+<?php wp_footer(); ?>
 </body>
 
 </html>

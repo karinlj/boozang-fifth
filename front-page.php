@@ -4,27 +4,27 @@
  * Description: Front page template
  */
 ?>
-<?php get_header();?>
+<?php get_header(); ?>
 
 <?php
 //Loopa ACF Front Page Blocks -flexible content
-if (function_exists('have_rows')) {?>
+if (function_exists('have_rows')) { ?>
 
 <?php
-if (have_rows('front_page_blocks')) {?>
+    if (have_rows('front_page_blocks')) { ?>
 
-<?php while (have_rows('front_page_blocks')) {?>
-<?php the_row();?>
+<?php while (have_rows('front_page_blocks')) { ?>
+<?php the_row(); ?>
 
 
-<?php $layout = get_row_layout();?>
+<?php $layout = get_row_layout(); ?>
 
 <?php // load the layout from the templates folder
-    get_template_part('templates/' . $layout);?>
+            get_template_part('templates/' . $layout); ?>
 
 <?php }
-}
-}?>
+    }
+} ?>
 
 
-<?php get_footer();?>
+<?php get_footer(); ?>
