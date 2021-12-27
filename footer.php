@@ -1,5 +1,5 @@
 <?php
-if (!is_front_page() && function_exists('acf_add_options_page')) {
+if ((!is_front_page() && !is_page('beta')) && function_exists('acf_add_options_page')) {
 ?>
 <!-- signup for pages -->
 <section class="signup_section <?php echo $color; ?> section_spacing_top_small">
