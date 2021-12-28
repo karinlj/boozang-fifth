@@ -124,6 +124,10 @@
                         </div>
                         <?php } ?>
 
+                        <?php $tab = $_GET['tab']; ?>
+                        <?php $tab = $tab ? $tab : 1; ?>
+                        I have <?php echo $tab; ?> 
+
                         <!-- feature_slider -->
                         <?php if (have_rows('feature_slider')) { ?>
                         <section class="feature_slider_new">
@@ -144,11 +148,11 @@
                                         $video = get_sub_field('video');
                                         if (!empty($video)) {
 
-                                            if ($i == 1) { ?>
+                                            if ($i == $tab) { ?>
                             <div id="tab_id_<?php echo $i ?>" class="tab_video_content active"><?php echo $video; ?>
                             </div>
 
-                            <?php } else { ?>
+                            <?php } elseif ($i != $tab) { ?>
                             <div id="tab_id_<?php echo $i ?>" class="tab_video_content "><?php echo $video; ?></div>
                             <?php }
                                         }
