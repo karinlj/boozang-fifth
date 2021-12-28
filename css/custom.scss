@@ -1239,28 +1239,32 @@ nav {
         border-radius: $themeBorder_radius;
         box-shadow: $themeBox_shadow;
         display: none;
-
         &.active {
           display: block;
         }
-
-        &.video {
-          // position: relative;
-          padding-bottom: 56.25%;
-          overflow: hidden;
-          max-width: 100%;
-          height: auto;
-          iframe,
-          object,
-          embed {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 86%;
-            border-radius: $themeBorder_radius;
-            box-shadow: $themeBox_shadow;
-          }
+      }
+      .tab_video_content {
+        border-radius: $themeBorder_radius;
+        box-shadow: $themeBox_shadow;
+        display: none;
+        // position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+        &.active {
+          display: block;
+        }
+        iframe,
+        object,
+        embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 86%;
+          border-radius: $themeBorder_radius;
+          box-shadow: $themeBox_shadow;
         }
       }
       //link

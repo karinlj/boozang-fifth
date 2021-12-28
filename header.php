@@ -132,7 +132,7 @@
                                     while (have_rows('feature_slider')) {
                                         the_row();
                                         $i++; ?>
-                            <!-- I have <?php echo $i; ?>-->
+                            I have <?php echo $i; ?> I
                             <?php
                                         $image = get_sub_field('img');
                                         //echo $image;
@@ -143,7 +143,7 @@
                             <?php }
                                         $video = get_sub_field('video');
                                         if (!empty($video)) { ?>
-                            <div id="tab_id_<?php echo $i ?>" class="tab_content video"><?php echo $video; ?></div>
+                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content "><?php echo $video; ?></div>
 
                             <?php }
                                     } ?>
@@ -152,7 +152,7 @@
                                         while (have_rows('feature_slider')) {
                                             the_row();
                                             $j++; ?>
-                                <!--I have <?php echo $j; ?>-->
+                                I have <?php echo $j; ?> J
                                 <?php
                                             if (get_sub_field('tab_link')) { ?>
                                 <li class="tab_link" data_tab="tab_id_<?php echo $j ?>">
