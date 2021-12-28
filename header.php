@@ -143,7 +143,7 @@
                             <?php }
                                         $video = get_sub_field('video');
                                         if (!empty($video)) { ?>
-                            <div id="tab_id_<?php echo $i ?>" class="tab_content"><?php echo $video; ?></div>
+                            <div id="tab_id_<?php echo $i ?>" class="tab_content video"><?php echo $video; ?></div>
 
                             <?php }
                                     } ?>
