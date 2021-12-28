@@ -124,8 +124,13 @@
                         </div>
                         <?php } ?>
 
-                        <?php $tab = $_GET['tab']; ?>
-                        <?php $tab = $tab ? $tab : 1; ?>
+                        <?php if (isset($_GET['tab'])) {
+                                $tab = $_GET['tab'];
+                            } else {
+                                $tab = 1;
+                            }
+                            $tab = $tab ? $tab : 1; ?>
+
                         <!-- I have <?php echo $tab; ?> -->
 
                         <!-- feature_slider -->
