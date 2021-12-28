@@ -233,6 +233,22 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_61caf3bb17d47",
+                    "label": "Video",
+                    "name": "video",
+                    "type": "oembed",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "width": "",
+                    "height": ""
                 }
             ]
         }
@@ -254,5 +270,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617140295
+    "modified": 1640699415
 }
