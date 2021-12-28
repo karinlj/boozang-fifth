@@ -126,7 +126,7 @@
 
                         <?php $tab = $_GET['tab']; ?>
                         <?php $tab = $tab ? $tab : 1; ?>
-                        I have <?php echo $tab; ?> 
+                        <!-- I have <?php echo $tab; ?> -->
 
                         <!-- feature_slider -->
                         <?php if (have_rows('feature_slider')) { ?>
@@ -140,9 +140,17 @@
                             <?php
                                         $image = get_sub_field('img');
                                         //echo $image;
-                                        if (!empty($image)) { ?>
+                                        if (!empty($image)) {
+
+                                            if ($i == $tab) { ?>
+                            <img id="tab_id_<?php echo $i ?>" class="tab_content active"
+                                src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                            <?php } else { ?>
+
                             <img id="tab_id_<?php echo $i ?>" class="tab_content" src="<?php echo $image['url']; ?>"
                                 alt="<?php echo $image['alt']; ?>" />
+                            <?php } ?>
 
                             <?php }
                                         $video = get_sub_field('video');
@@ -152,8 +160,9 @@
                             <div id="tab_id_<?php echo $i ?>" class="tab_video_content active"><?php echo $video; ?>
                             </div>
 
-                            <?php } elseif ($i != $tab) { ?>
-                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content "><?php echo $video; ?></div>
+                            <?php } else { ?>
+
+                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content"><?php echo $video; ?></div>
                             <?php }
                                         }
                                     } ?>
@@ -163,15 +172,23 @@
                                             the_row();
                                             $j++; ?>
                                 <!-- I have <?php echo $j; ?> J -->
-                                <?php
-                                            if (get_sub_field('tab_link')) { ?>
+
+                                <?php if (get_sub_field('tab_link')) { ?>
+
+                                <?php if ($j == $tab) { ?>
+                                <li class="tab_link active" data_tab="tab_id_<?php echo $j ?>">
+                                    <span><?php the_sub_field('tab_link'); ?></span>
+                                </li>
+
+                                <?php } else { ?>
+
                                 <li class="tab_link" data_tab="tab_id_<?php echo $j ?>">
                                     <span><?php the_sub_field('tab_link'); ?></span>
                                 </li>
-                                <?php
+
+                                <?php }
                                             }
                                         } ?>
-
                             </ul>
                         </section>
                         <?php } ?>
