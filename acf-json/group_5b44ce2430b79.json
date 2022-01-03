@@ -225,6 +225,35 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_61ce064e36abf": {
+                    "key": "layout_61ce064e36abf",
+                    "name": "text_content",
+                    "label": "Text content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61ce065336ac0",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6064611211c2f": {
                     "key": "layout_6064611211c2f",
                     "name": "sign_up_field_front",
@@ -1799,5 +1828,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1640644408
+    "modified": 1640892000
 }

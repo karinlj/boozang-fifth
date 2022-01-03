@@ -28,7 +28,7 @@ add_action('wp_enqueue_scripts', 'bn_style_resourses');
 function google_fonts()
 {
     //Av någon anledning knasar det med wp_enqueue_script
-    ?>
+?>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 
@@ -43,7 +43,8 @@ function add_scripts()
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
-function favicon() {?>
+function favicon()
+{ ?>
 <link rel="apple-touch-icon" sizes="57x57"
     href="<?php echo get_stylesheet_directory_uri(); ?>/icon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32"
@@ -208,3 +209,19 @@ if (function_exists('acf_add_options_page')) {
         'position' => 3.33,
     ));
 }
+
+function my_acf_admin_head()
+{
+?>
+<script type="text/javascript">
+(function($) {
+    $(document).ready(function() {
+        $('.layout').addClass('-collapsed');
+        $('.acf-postbox').addClass('closed');
+    });
+})(jQuery);
+</script>
+<?php
+}
+
+add_action('acf/input/admin_head', 'my_acf_admin_head');
