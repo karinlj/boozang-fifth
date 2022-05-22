@@ -217,7 +217,7 @@
                             <div class="btn_container">
                                 <?php
                                         if ($link) { ?>
-                                <a class="btn link" href="<?php echo $link['url']; ?>"
+                                <a class="btn link" href="<?php echo $link['url']; ?>" rel="noopener noreferrer"
                                     target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
                                 </a>
                                 <?php } ?>

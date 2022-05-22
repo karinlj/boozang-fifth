@@ -17,8 +17,8 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  /*Desktop*/
-  /*when click on menu-item with sub-menu...add or remove class*/
+  /*Menu Desktop*/
+  /*toggle sub-menu-open class*/
   $("nav ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation(); /* to stop the 'document handler' from activating at the same time as the click event on class */
     $(this).children("ul").toggleClass("open");
@@ -34,10 +34,15 @@ jQuery(document).ready(function ($) {
   });
 
   /*Mobile menu*/
-  /*when click on veggoburger...add or remove class */
-  $(".toggle_btn").click(function () {
-    $(".nav-mobile").toggleClass("open");
-    $(".toggle_btn").toggleClass("clicked");
+  /*toggle classes and attributes when btn click */
+  $(".menu_toggle_btn").click(function () {
+    $(this).toggleClass("btn_clicked");
+
+    let expanded = $(this).attr("aria-expanded") === "true";
+    $(this).attr("aria-expanded", !expanded);
+
+    $(".nav-mobile").toggleClass("menu_open");
+
     $("body").toggleClass("no_scroll");
   });
 

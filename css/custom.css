@@ -41,6 +41,24 @@ img {
   margin: 0 auto;
 }
 
+[target=_blank] {
+  position: relative;
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+[target=_blank]:after {
+  content: "(opens in a new window)";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /********************
   padding/ margin sections
 *********************/
@@ -820,7 +838,7 @@ nav ul li.menu-item-has-children ul.open {
   display: flex;
   flex-direction: column;
 }
-nav > .toggle_btn {
+nav > .menu_toggle_btn {
   position: absolute;
   top: 0.8rem;
   right: 0;
@@ -834,7 +852,7 @@ nav > .toggle_btn {
   justify-content: center;
   /* Hamburger Line */
 }
-nav > .toggle_btn > div {
+nav > .menu_toggle_btn > div {
   position: relative;
   flex: none;
   width: 100%;
@@ -847,7 +865,7 @@ nav > .toggle_btn > div {
   /* Hamburger Lines - Top & Bottom */
   /* Moves Line Down */
 }
-nav > .toggle_btn > div::before {
+nav > .menu_toggle_btn > div::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -856,7 +874,7 @@ nav > .toggle_btn > div::before {
   height: 2px;
   background: inherit;
 }
-nav > .toggle_btn > div::after {
+nav > .menu_toggle_btn > div::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -867,23 +885,23 @@ nav > .toggle_btn > div::after {
   top: 10px;
 }
 @media all and (min-width: 992px) {
-  nav > .toggle_btn {
+  nav > .menu_toggle_btn {
     display: none;
   }
 }
-nav > .toggle_btn.clicked > div {
+nav > .menu_toggle_btn.btn_clicked > div {
   transform: rotate(135deg);
   /* Turns Lines Into X */
 }
-nav > .toggle_btn.clicked > div:before {
+nav > .menu_toggle_btn.btn_clicked > div:before {
   top: 0;
   transform: rotate(90deg);
 }
-nav > .toggle_btn.clicked > div:after {
+nav > .menu_toggle_btn.btn_clicked > div:after {
   top: 0;
   transform: rotate(90deg);
 }
-nav > .toggle_btn.clicked:hover > div {
+nav > .menu_toggle_btn.btn_clicked:hover > div {
   transform: rotate(225deg);
 }
 
@@ -1070,7 +1088,7 @@ nav > .toggle_btn.clicked:hover > div {
     width: 12rem;
   }
 }
-.nav-mobile.open {
+.nav-mobile.menu_open {
   overflow-x: auto;
   transform: translateX(0);
 }

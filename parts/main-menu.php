@@ -8,38 +8,38 @@ $color = get_field('color_theme');
         <div class="row">
             <div class="col">
                 <nav class="">
-                    <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
+                    <a class="logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Boozang home page">
                         <!--extra double size image for retina-->
                         <?php
-                            if ($color === 'white') {?>
+                        if ($color === 'white') { ?>
                         <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang.png"
                             srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang@2x.png 325w" width="208"
-                            height="51" alt="boozang-logo" />
+                            height="51" alt="Boozang home page" />
                         <?php
-                            } else {?>
+                        } else { ?>
                         <img class="logo-img"
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse.png"
                             srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse@2x.png 325w"
-                            width="208" height="51" alt="boozang-logo" />
+                            width="208" height="51" alt="Boozang home page" />
                         <?php
-                            }?>
+                        } ?>
                     </a>
 
                     <div class="nav-links">
                         <?php
-wp_nav_menu(array(
-    'theme_location' => 'primary',
-));
-?>
+                        wp_nav_menu(array(
+                            'theme_location' => 'primary',
+                        ));
+                        ?>
                         <div class="signup">
                             <ul>
                                 <li>
-                                    <a href="https://ai.boozang.com/">
+                                    <a href="https://ai.boozang.com/" aria-label="Boozang Login">
                                         Login
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://ai.boozang.com/#security/signup">
+                                    <a href="https://ai.boozang.com/#security/signup" aria-label="Boozang Sign Up">
                                         Sign Up
                                     </a>
                                 </li>
@@ -47,8 +47,8 @@ wp_nav_menu(array(
                         </div>
                     </div>
                     <!--hamburger-->
-                    <div class="toggle_btn">
-                        <div></div>
+                    <div class="menu_toggle_btn" aria-expanded="false" aria-label="Mobile Menu">
+                        <div aria-hidden="true"></div>
                     </div>
                 </nav>
             </div>
@@ -57,29 +57,30 @@ wp_nav_menu(array(
 </div>
 
 <div class="nav-mobile">
-    <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
+    <a class="logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Boozang home page">
 
         <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse.png"
             srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse@2x.png 325w" width="208"
-            height="51" alt="boozang-logo" />
+            height="51" alt="Boozang home page" />
 
     </a>
 
     <div class="nav-links">
         <?php
-wp_nav_menu(array(
-    'theme_location' => 'primary',
-));
-?>
+        wp_nav_menu(array(
+            'theme_location' => 'primary',
+        ));
+        ?>
         <div class="signup">
             <ul>
                 <li>
-                    <a href="https://ai.boozang.com/">
+                    <a href="https://ai.boozang.com/" aria-label="Boozang Login">
                         Login
                     </a>
                 </li>
                 <li>
-                    <a class="btn signup_btn" href="https://ai.boozang.com/#security/signup">
+                    <a class="btn signup_btn" href="https://ai.boozang.com/#security/signup"
+                        aria-label="Boozang Sign Up">
                         Free Trial
                     </a>
                 </li>

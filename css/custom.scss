@@ -37,6 +37,24 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+
+[target="_blank"] {
+  position: relative;
+  display: inline-block;
+  padding-right: 1rem;
+}
+[target="_blank"]:after {
+  content: "(opens in a new window)";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /********************
   padding/ margin sections
 *********************/
@@ -624,7 +642,7 @@ nav {
       }
     }
   }
-  > .toggle_btn {
+  > .menu_toggle_btn {
     position: absolute;
     top: 0.8rem;
     right: 0;
@@ -673,8 +691,8 @@ nav {
     @media all and (min-width: $lg-min) {
       display: none;
     }
-    //clicked veggoburger
-    &.clicked {
+    //rotate veggoburger
+    &.btn_clicked {
       > div {
         transform: rotate(135deg);
         /* Turns Lines Into X */
@@ -875,7 +893,7 @@ nav {
     }
   }
   /*toggle open*/
-  &.open {
+  &.menu_open {
     overflow-x: auto;
     transform: translateX(0);
   }
