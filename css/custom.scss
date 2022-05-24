@@ -120,7 +120,168 @@ img {
     padding: 2rem calc(3.75rem - 15px);
   }
 }
+/*********************
+    buttons
+ *********************/
+button,
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: $btnBorder_radius;
+  transition: 1s all ease;
+  -webkit-transition: 1s all ease;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  box-shadow: $themeBox_shadow;
+  &:focus {
+    color: $linkcolor;
+    outline: 3px dotted $themecolorLight;
+    border-radius: 3px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+section,
+header {
+  &.lightblue,
+  .lightgrey {
+    a {
+      &:focus {
+        outline: 3px dotted $themecolorBlueDarkLighter;
+      }
+    }
+  }
+}
+/********************
+ links
+*********************/
+a {
+  color: $linkcolor;
+  text-decoration: none;
+  &:focus {
+    color: $linkcolor;
+    outline: 3px dotted $themecolorLight;
+    border-radius: 3px;
+  }
+  &:active {
+    color: $linkcolor;
+  }
+  /*&:visited {
+		color: $linkcolor;
+	}*/
+  &:hover {
+    color: $linkcolor;
+    opacity: 0.6;
+    text-decoration: none;
+  }
+}
+section,
+header {
+  &.lightblue,
+  .lightgrey {
+    a {
+      &:focus {
+        outline: 3px dotted $themecolorBlueDarkLighter;
+      }
+    }
+  }
+}
 
+/* links with underscore on some sections with Wysiyg */
+.faq_list_section,
+.two_columns_section,
+.text_section_pages,
+.post_text {
+  a {
+    display: inline-block;
+    position: relative;
+    &:before {
+      opacity: 0.4;
+      position: absolute;
+      bottom: 0;
+      left: 1px;
+      content: "";
+      width: 100%;
+      // width: 0;
+      height: 2px;
+      background: $linkcolor;
+      -webkit-transition: width 0.2s ease-in;
+      transition: width 0.2s ease-in;
+    }
+    &:hover {
+      opacity: 1;
+      &:before {
+        width: 100%;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+//class for link with arrow
+a.arrow_link {
+  display: inline-block;
+  position: relative;
+  color: $linkcolor;
+  &:before {
+    opacity: 0.4;
+    position: absolute;
+    bottom: 0;
+    left: 1px;
+    content: "";
+    width: 100%;
+    // width: 0;
+    height: 2px;
+    background: $linkcolor;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+  }
+  &:hover {
+    opacity: 1;
+    &:before {
+      width: 100%;
+      opacity: 0.7;
+    }
+  }
+}
+//white link with arrow on colored banner
+.banner_link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+  &:hover {
+    opacity: 1;
+    transform: translateX(2px);
+    color: #fff;
+    &:before {
+      opacity: 0.8;
+    }
+  }
+  &:focus {
+    color: #fff;
+  }
+  &:active {
+    color: #fff;
+  }
+  &:visited {
+    color: #fff;
+  }
+  &:before {
+    opacity: 0.4;
+    position: absolute;
+    bottom: 0;
+    left: 1px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #fff;
+  }
+}
 /********************
  typografy
 *********************/
@@ -230,169 +391,6 @@ h6 {
   text-align: center;
   @media all and (min-width: $sm-min) {
     text-align: left;
-  }
-}
-/********************
- links
-*********************/
-a {
-  color: $linkcolor;
-  text-decoration: none;
-  &:focus {
-    color: $linkcolor;
-    outline: 3px dotted $themecolorLight;
-    border-radius: 3px;
-  }
-  &:active {
-    color: $linkcolor;
-  }
-  /*&:visited {
-		color: $linkcolor;
-	}*/
-  &:hover {
-    color: $linkcolor;
-    opacity: 0.6;
-    text-decoration: none;
-  }
-}
-section,
-header {
-  &.lightblue,
-  .lightgrey {
-    a {
-      &:focus {
-        outline: 3px dotted $themecolorBlueDarkLighter !important;
-      }
-    }
-  }
-}
-
-/* links with underscore on some sections with Wysiyg */
-.faq_list_section,
-.two_columns_section,
-.text_section_pages,
-.post_text {
-  a {
-    display: inline-block;
-    position: relative;
-    &:before {
-      opacity: 0.4;
-      position: absolute;
-      bottom: 0;
-      left: 1px;
-      content: "";
-      width: 100%;
-      // width: 0;
-      height: 2px;
-      background: $linkcolor;
-      -webkit-transition: width 0.2s ease-in;
-      transition: width 0.2s ease-in;
-    }
-    &:hover {
-      opacity: 1;
-      &:before {
-        width: 100%;
-        opacity: 0.7;
-      }
-    }
-  }
-}
-//class for link with arrow
-a.arrow_link {
-  display: inline-block;
-  position: relative;
-  color: $linkcolor;
-  &:before {
-    opacity: 0.4;
-    position: absolute;
-    bottom: 0;
-    left: 1px;
-    content: "";
-    width: 100%;
-    // width: 0;
-    height: 2px;
-    background: $linkcolor;
-    -webkit-transition: width 0.2s ease-in;
-    transition: width 0.2s ease-in;
-  }
-  &:hover {
-    opacity: 1;
-    &:before {
-      width: 100%;
-      opacity: 0.7;
-    }
-  }
-}
-//white link with arrow on colored banner
-.banner_link {
-  color: #fff;
-  font-weight: 500;
-  font-size: 1.1rem;
-  display: inline-block;
-  position: relative;
-  transition: transform 0.3s ease;
-  &:hover {
-    opacity: 1;
-    transform: translateX(2px);
-    color: #fff;
-    &:before {
-      opacity: 0.8;
-    }
-  }
-  &:focus {
-    color: #fff;
-  }
-  &:active {
-    color: #fff;
-  }
-  &:visited {
-    color: #fff;
-  }
-  &:before {
-    opacity: 0.4;
-    position: absolute;
-    bottom: 0;
-    left: 1px;
-    content: "";
-    width: 100%;
-    height: 2px;
-    background: #fff;
-  }
-}
-
-/*********************
-    buttons
- *********************/
-button,
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: $btnBorder_radius;
-  transition: 1s all ease;
-  -webkit-transition: 1s all ease;
-  font-size: 1em;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  box-shadow: $themeBox_shadow;
-  &:focus {
-    color: $linkcolor;
-    outline: 3px dotted $themecolorLight !important;
-    border-radius: 3px;
-  }
-  &:hover {
-    opacity: 1;
-  }
-}
-section,
-header {
-  &.lightblue,
-  .lightgrey {
-    a {
-      &:focus {
-        outline: 3px dotted $themecolorBlueDarkLighter !important;
-      }
-    }
   }
 }
 
@@ -579,7 +577,7 @@ nav.main_menu {
         font-weight: 600;
         cursor: pointer;
         @media all and (min-width: $lg-min) {
-          font-size: 0.7em;
+          font-size: 0.8em;
         }
         @media all and (min-width: $xl-min) {
           font-size: 0.85em;
@@ -690,6 +688,7 @@ nav.main_menu {
     height: 60px;
     padding: 1rem;
     background: transparent;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -836,6 +835,9 @@ nav.main_menu {
   text-align: left;
   transform: translateX(100%);
   transition: transform 0.6s ease;
+  a:focus {
+    outline: 3px dotted $themecolorLight !important;
+  }
   @media all and (min-width: $lg-min) {
     display: none;
   }
@@ -1759,7 +1761,7 @@ feature list  (pricing page)
         }
       }
       &.image {
-        z-index: 1000;
+        z-index: 400;
         position: relative;
         .pict {
           border-radius: $themeBorder_radius;

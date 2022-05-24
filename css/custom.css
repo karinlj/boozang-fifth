@@ -159,6 +159,169 @@ img {
   }
 }
 
+/*********************
+    buttons
+ *********************/
+button,
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 1s all ease;
+  -webkit-transition: 1s all ease;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
+}
+button:focus,
+.btn:focus {
+  color: #0085cc;
+  outline: 3px dotted #66758d;
+  border-radius: 3px;
+}
+button:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+section.lightblue a:focus,
+section .lightgrey a:focus,
+header.lightblue a:focus,
+header .lightgrey a:focus {
+  outline: 3px dotted #293b70;
+}
+
+/********************
+ links
+*********************/
+a {
+  color: #0085cc;
+  text-decoration: none;
+  /*&:visited {
+  	color: $linkcolor;
+  }*/
+}
+a:focus {
+  color: #0085cc;
+  outline: 3px dotted #66758d;
+  border-radius: 3px;
+}
+a:active {
+  color: #0085cc;
+}
+a:hover {
+  color: #0085cc;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+section.lightblue a:focus,
+section .lightgrey a:focus,
+header.lightblue a:focus,
+header .lightgrey a:focus {
+  outline: 3px dotted #293b70;
+}
+
+/* links with underscore on some sections with Wysiyg */
+.faq_list_section a,
+.two_columns_section a,
+.text_section_pages a,
+.post_text a {
+  display: inline-block;
+  position: relative;
+}
+.faq_list_section a:before,
+.two_columns_section a:before,
+.text_section_pages a:before,
+.post_text a:before {
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #0085cc;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+.faq_list_section a:hover,
+.two_columns_section a:hover,
+.text_section_pages a:hover,
+.post_text a:hover {
+  opacity: 1;
+}
+.faq_list_section a:hover:before,
+.two_columns_section a:hover:before,
+.text_section_pages a:hover:before,
+.post_text a:hover:before {
+  width: 100%;
+  opacity: 0.7;
+}
+
+a.arrow_link {
+  display: inline-block;
+  position: relative;
+  color: #0085cc;
+}
+a.arrow_link:before {
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #0085cc;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+a.arrow_link:hover {
+  opacity: 1;
+}
+a.arrow_link:hover:before {
+  width: 100%;
+  opacity: 0.7;
+}
+
+.banner_link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.banner_link:hover {
+  opacity: 1;
+  transform: translateX(2px);
+  color: #fff;
+}
+.banner_link:hover:before {
+  opacity: 0.8;
+}
+.banner_link:focus {
+  color: #fff;
+}
+.banner_link:active {
+  color: #fff;
+}
+.banner_link:visited {
+  color: #fff;
+}
+.banner_link:before {
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
 /********************
  typografy
 *********************/
@@ -308,169 +471,6 @@ h6 {
 .newsletter {
     text-align: left;
   }
-}
-
-/********************
- links
-*********************/
-a {
-  color: #0085cc;
-  text-decoration: none;
-  /*&:visited {
-  	color: $linkcolor;
-  }*/
-}
-a:focus {
-  color: #0085cc;
-  outline: 3px dotted #66758d;
-  border-radius: 3px;
-}
-a:active {
-  color: #0085cc;
-}
-a:hover {
-  color: #0085cc;
-  opacity: 0.6;
-  text-decoration: none;
-}
-
-section.lightblue a:focus,
-section .lightgrey a:focus,
-header.lightblue a:focus,
-header .lightgrey a:focus {
-  outline: 3px dotted #293b70 !important;
-}
-
-/* links with underscore on some sections with Wysiyg */
-.faq_list_section a,
-.two_columns_section a,
-.text_section_pages a,
-.post_text a {
-  display: inline-block;
-  position: relative;
-}
-.faq_list_section a:before,
-.two_columns_section a:before,
-.text_section_pages a:before,
-.post_text a:before {
-  opacity: 0.4;
-  position: absolute;
-  bottom: 0;
-  left: 1px;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #0085cc;
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-}
-.faq_list_section a:hover,
-.two_columns_section a:hover,
-.text_section_pages a:hover,
-.post_text a:hover {
-  opacity: 1;
-}
-.faq_list_section a:hover:before,
-.two_columns_section a:hover:before,
-.text_section_pages a:hover:before,
-.post_text a:hover:before {
-  width: 100%;
-  opacity: 0.7;
-}
-
-a.arrow_link {
-  display: inline-block;
-  position: relative;
-  color: #0085cc;
-}
-a.arrow_link:before {
-  opacity: 0.4;
-  position: absolute;
-  bottom: 0;
-  left: 1px;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #0085cc;
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-}
-a.arrow_link:hover {
-  opacity: 1;
-}
-a.arrow_link:hover:before {
-  width: 100%;
-  opacity: 0.7;
-}
-
-.banner_link {
-  color: #fff;
-  font-weight: 500;
-  font-size: 1.1rem;
-  display: inline-block;
-  position: relative;
-  transition: transform 0.3s ease;
-}
-.banner_link:hover {
-  opacity: 1;
-  transform: translateX(2px);
-  color: #fff;
-}
-.banner_link:hover:before {
-  opacity: 0.8;
-}
-.banner_link:focus {
-  color: #fff;
-}
-.banner_link:active {
-  color: #fff;
-}
-.banner_link:visited {
-  color: #fff;
-}
-.banner_link:before {
-  opacity: 0.4;
-  position: absolute;
-  bottom: 0;
-  left: 1px;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #fff;
-}
-
-/*********************
-    buttons
- *********************/
-button,
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: 1s all ease;
-  -webkit-transition: 1s all ease;
-  font-size: 1em;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
-}
-button:focus,
-.btn:focus {
-  color: #0085cc;
-  outline: 3px dotted #66758d !important;
-  border-radius: 3px;
-}
-button:hover,
-.btn:hover {
-  opacity: 1;
-}
-
-section.lightblue a:focus,
-section .lightgrey a:focus,
-header.lightblue a:focus,
-header .lightgrey a:focus {
-  outline: 3px dotted #293b70 !important;
 }
 
 /********************
@@ -779,7 +779,7 @@ nav.main_menu ul li a {
 }
 @media all and (min-width: 992px) {
   nav.main_menu ul li a {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 1200px) {
@@ -876,6 +876,7 @@ nav.main_menu > .menu_toggle_btn {
   height: 60px;
   padding: 1rem;
   background: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1028,6 +1029,9 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
   transform: translateX(100%);
   transition: transform 0.6s ease;
   /*toggle open*/
+}
+.nav-mobile a:focus {
+  outline: 3px dotted #66758d !important;
 }
 @media all and (min-width: 992px) {
   .nav-mobile {
@@ -2092,7 +2096,7 @@ feature list  (pricing page)
   }
 }
 .two_columns_section .column_row .part.image {
-  z-index: 1000;
+  z-index: 400;
   position: relative;
 }
 .two_columns_section .column_row .part.image .pict {

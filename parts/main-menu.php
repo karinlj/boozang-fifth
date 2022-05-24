@@ -47,9 +47,9 @@ $color = get_field('color_theme');
                         </div>
                     </div>
                     <!--hamburger-->
-                    <div class="menu_toggle_btn" aria-expanded="false" aria-label="Mobile Menu">
+                    <button class="menu_toggle_btn" aria-expanded="false" aria-label="Mobile Menu">
                         <div aria-hidden="true"></div>
-                    </div>
+                    </button>
                 </nav>
             </div>
         </div>
