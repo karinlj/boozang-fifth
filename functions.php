@@ -78,9 +78,6 @@ function set_excerpt_length()
 }
 add_filter('excerpt_length', 'set_excerpt_length');
 
-//New file for customizing
-require get_template_directory() . '/inc/customizer.php';
-
 //Menyer
 //register Nav Walker class_alias
 //require_once('wp-bootstrap-navwalker.php');
@@ -225,3 +222,18 @@ function my_acf_admin_head()
 }
 
 add_action('acf/input/admin_head', 'my_acf_admin_head');
+
+/**
+ * WCAG 2.0 Attributes for Dropdown Menus
+ */
+function wcag_nav_menu_link_attributes($atts, $item, $args, $depth)
+{
+    // Add [aria-haspopup] and [aria-expanded] to menu items that have children
+    $item_has_children = in_array('menu-item-has-children', $item->classes);
+    if ($item_has_children) {
+        $atts['aria-haspopup'] = "true";
+        $atts['aria-expanded'] = "false";
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'wcag_nav_menu_link_attributes', 10, 4);

@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
     $(this).children(".question").toggleClass("active");
   });
 
-  /*Blog Sidebar Categories*/
+  //Blog Sidebar Categories
   $(".blog-sidebar ul").prepend(
     '<li class="most-recent"><a href="/blog">Most Recent</a></li>'
   );
@@ -17,30 +17,35 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  /*Menu Desktop*/
-  /*toggle sub-menu-open class*/
+  //Menu Desktop
+  //toggle sub_menu_open class
   $("nav ul li.menu-item-has-children").click(function (event) {
-    event.stopPropagation(); /* to stop the 'document handler' from activating at the same time as the click event on class */
-    $(this).children("ul").toggleClass("open");
+    event.stopPropagation(); // to stop the 'document handler' from activating
+
+    $(this).toggleClass("is_open");
+
+    let subExpanded = $(this).children("a").attr("aria-expanded") === "true";
+    $(this).children("a").attr("aria-expanded", !subExpanded);
+
+    $(this).children("ul").toggleClass("sub-menu-open");
   });
 
-  /*remove class clicking anywhere on page*/
+  //Remove class clicking anywhere on page
   $(document).click(function (event) {
     if (
       !$(event.target).closest("nav ul li.menu-item-has-children ul").length
     ) {
-      $("nav ul li.menu-item-has-children ul").removeClass("open");
+      $("nav ul li.menu-item-has-children ul").removeClass("sub-menu-open");
     }
   });
 
-  /*Mobile menu*/
-  /*toggle classes and attributes when btn click */
+  //Mobile menu
+  //toggle classes and attributes
   $(".menu_toggle_btn").click(function () {
     $(this).toggleClass("btn_clicked");
 
     let expanded = $(this).attr("aria-expanded") === "true";
     $(this).attr("aria-expanded", !expanded);
-
     $(".nav-mobile").toggleClass("menu_open");
 
     $("body").toggleClass("no_scroll");
@@ -48,7 +53,10 @@ jQuery(document).ready(function ($) {
 
   $(".nav-mobile ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation();
-    $(this).children("ul").toggleClass("open");
+    $(this).toggleClass("is_open");
+    let subExpanded = $(this).children("a").attr("aria-expanded") === "true";
+    $(this).children("a").attr("aria-expanded", !subExpanded);
+    $(this).children("ul").toggleClass("sub-menu-open");
   });
 
   //feature slider
@@ -58,26 +66,27 @@ jQuery(document).ready(function ($) {
   // $(".tab_link:nth-child(" + rand + ")").addClass("active");
 
   $(".tab_link").click(function () {
-    //get value of data_tab-attribute in this link
+    //value of data_tab-attribute
     var tab_id = $(this).attr("data_tab");
 
     //Toggle tab link
-    //first remove active class, then add active class
-    $(this).addClass("active").siblings().removeClass("active");
+    // $(this).addClass("active").siblings().removeClass("active");
+    $(".tab_link").attr("aria-selected", "false"); //deselect all the tabs
+    $(this).attr("aria-selected", "true"); // select this tab
 
     //Toggle target tab
-    $("#" + tab_id)
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
+    $("img[role='tabpanel']").attr("aria-hidden", "true"); //hide all the img panels
+    $("div[role='tabpanel']").attr("aria-hidden", "true"); //hide all the video panels
+
+    $("#" + tab_id).attr("aria-hidden", "false"); // show our panel
   });
 
-  //enlarge image at two_columns
+  //enlarge image in two_columns_block
   $(".part.image .pict").click(function () {
     // console.log("this", this);
     $(this).toggleClass("enlarge");
   });
-  /*remove class clicking anywhere on page*/
+  //Remove class clicking anywhere on page
   $(document).click(function (event) {
     if (!$(event.target).closest(".part.image .pict").length) {
       $(".part.image .pict").removeClass("enlarge");

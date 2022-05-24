@@ -7,7 +7,7 @@ $color = get_field('color_theme');
     <div class="container">
         <div class="row">
             <div class="col">
-                <nav class="">
+                <nav class="main_menu" role="navigation" aria-label="Main Navigation">
                     <a class="logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Boozang home page">
                         <!--extra double size image for retina-->
                         <?php
@@ -25,7 +25,7 @@ $color = get_field('color_theme');
                         } ?>
                     </a>
 
-                    <div class="nav-links">
+                    <div class="nav_links">
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'primary',
@@ -62,10 +62,8 @@ $color = get_field('color_theme');
         <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse.png"
             srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse@2x.png 325w" width="208"
             height="51" alt="Boozang home page" />
-
     </a>
-
-    <div class="nav-links">
+    <div class="nav_links">
         <?php
         wp_nav_menu(array(
             'theme_location' => 'primary',

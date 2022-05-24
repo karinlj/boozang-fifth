@@ -148,13 +148,13 @@
                                         if (!empty($image)) {
 
                                             if ($i == $tab) { ?>
-                            <img id="tab_id_<?php echo $i ?>" class="tab_content active"
+                            <img id="tab_id_<?php echo $i ?>" class="tab_content" role="tabpanel" aria-hidden="false"
                                 src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                             <?php } else { ?>
 
-                            <img id="tab_id_<?php echo $i ?>" class="tab_content" src="<?php echo $image['url']; ?>"
-                                alt="<?php echo $image['alt']; ?>" />
+                            <img id="tab_id_<?php echo $i ?>" class="tab_content" role="tabpanel" aria-hidden="true"
+                                src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                             <?php } ?>
 
                             <?php }
@@ -162,16 +162,18 @@
                                         if (!empty($video)) {
 
                                             if ($i == $tab) { ?>
-                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content active"><?php echo $video; ?>
+                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content" role="tabpanel"
+                                aria-hidden="true"><?php echo $video; ?>
                             </div>
 
                             <?php } else { ?>
 
-                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content"><?php echo $video; ?></div>
+                            <div id="tab _id_<?php echo $i ?>" class="tab_video_content" role="tabpanel"
+                                aria-hidden="false"><?php echo $video; ?></div>
                             <?php }
                                         }
                                     } ?>
-                            <ul class="tabs">
+                            <div class="tab_list" role="tablist">
                                 <?php $j = 0;
                                         while (have_rows('feature_slider')) {
                                             the_row();
@@ -181,20 +183,25 @@
                                 <?php if (get_sub_field('tab_link')) { ?>
 
                                 <?php if ($j == $tab) { ?>
-                                <li class="tab_link active" data_tab="tab_id_<?php echo $j ?>">
-                                    <span><?php the_sub_field('tab_link'); ?></span>
-                                </li>
+
+                                <button role="tab" class="tab_link" data_tab="tab_id_<?php echo $j ?>"
+                                    aria-controls="tab_id_<?php echo $j ?>" aria-selected="true">
+                                    <?php the_sub_field('tab_link'); ?>
+                                </button>
+
+
 
                                 <?php } else { ?>
 
-                                <li class="tab_link" data_tab="tab_id_<?php echo $j ?>">
-                                    <span><?php the_sub_field('tab_link'); ?></span>
-                                </li>
+                                <button role="tab" class="tab_link" data_tab="tab_id_<?php echo $j ?>"
+                                    aria-controls="tab_id_<?php echo $j ?>" aria-selected="false">
+                                    <?php the_sub_field('tab_link'); ?>
+                                </button>
 
                                 <?php }
                                             }
                                         } ?>
-                            </ul>
+                            </div>
                         </section>
                         <?php } ?>
                     </div>
