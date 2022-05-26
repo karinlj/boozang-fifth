@@ -347,6 +347,7 @@ h5,
 h6 {
   font-family: "Roboto", "Helvetica", sans-serif;
   color: #212735;
+  font-weight: 600;
 }
 
 section h3,
@@ -361,7 +362,6 @@ p {
 
 h1 {
   font-size: 2rem;
-  font-weight: 600;
 }
 @media all and (min-width: 768px) {
   h1 {
@@ -381,7 +381,6 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 600;
 }
 @media all and (min-width: 1200px) {
   h2 {
@@ -392,7 +391,6 @@ h2 {
 h3 {
   position: relative;
   font-size: 1.4rem;
-  font-weight: 600;
   line-height: 1.4;
 }
 @media all and (min-width: 1200px) {
@@ -403,7 +401,6 @@ h3 {
 
 h4 {
   font-size: 1.1em;
-  font-weight: 600;
 }
 @media all and (min-width: 768px) {
   h4 {
@@ -423,14 +420,8 @@ h4 {
 
 h5 {
   font-size: 1em;
-  font-weight: 600;
 }
 @media all and (min-width: 768px) {
-  h5 {
-    font-size: 1.1em;
-  }
-}
-@media all and (min-width: 1200px) {
   h5 {
     font-size: 1.1em;
   }
@@ -438,7 +429,6 @@ h5 {
 
 h6 {
   font-size: 0.9em;
-  font-weight: 600;
 }
 @media all and (min-width: 768px) {
   h6 {
@@ -2147,38 +2137,6 @@ feature list  (pricing page)
     padding: 3rem calc(3.75rem - 15px);
   }
 }
-.two_columns_section.story .column_row .part.text {
-  padding-bottom: 3rem;
-}
-.two_columns_section.story .column_row .part.text .small_title {
-  font-weight: 700;
-  font-size: 17px;
-  color: #cfd5de;
-  letter-spacing: 0;
-  line-height: 36px;
-}
-.two_columns_section.story .column_row .part.text .small_title .number {
-  font-size: 70px;
-  font-weight: 700;
-  color: #e1e6ed;
-  letter-spacing: 0;
-}
-.two_columns_section.story .column_row .part.image::before {
-  content: "";
-}
-.two_columns_section.story .column_row .part.image img {
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  transition: none;
-}
-@media all and (min-width: 992px) {
-  .two_columns_section.story .column_row .part.image img {
-    max-width: 450px;
-  }
-}
-.two_columns_section.story .column_row .part.image img:hover {
-  transform: scale(1);
-}
 .two_columns_section.story .column_row .column_row_inner {
   display: flex;
   align-items: center;
@@ -2208,6 +2166,52 @@ feature list  (pricing page)
 }
 .two_columns_section.story .column_row:last-child {
   padding-bottom: 7rem;
+}
+.two_columns_section.story .column_row .part.text {
+  padding-bottom: 3rem;
+}
+.two_columns_section.story .column_row .part .small_title {
+  font-weight: 700;
+  font-size: 17px;
+  color: #cfd5de;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+.two_columns_section.story .column_row .part .small_title .number {
+  font-size: 70px;
+  font-weight: 700;
+  color: #e1e6ed;
+  letter-spacing: 0;
+}
+.two_columns_section.story .column_row .part h3 {
+  font-size: 1em;
+  font-weight: 600;
+}
+@media all and (min-width: 768px) {
+  .two_columns_section.story .column_row .part h3 {
+    font-size: 1.1em;
+  }
+}
+@media all and (min-width: 1200px) {
+  .two_columns_section.story .column_row .part h3 {
+    font-size: 1.1em;
+  }
+}
+.two_columns_section.story .column_row .part.image::before {
+  content: "";
+}
+.two_columns_section.story .column_row .part.image img {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: none;
+}
+@media all and (min-width: 992px) {
+  .two_columns_section.story .column_row .part.image img {
+    max-width: 450px;
+  }
+}
+.two_columns_section.story .column_row .part.image img:hover {
+  transform: scale(1);
 }
 .two_columns_section.presentation .part.image img {
   max-width: 120px;
@@ -2280,7 +2284,7 @@ feature list  (pricing page)
   flex-wrap: wrap;
   margin: 0 -12px;
 }
-.integrations_section .icon_section .img_box {
+.integrations_section .img_box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2288,12 +2292,12 @@ feature list  (pricing page)
   padding: 0 12px 24px;
 }
 @media all and (min-width: 576px) {
-  .integrations_section .icon_section .img_box {
+  .integrations_section .img_box {
     width: 25%;
     padding: 0 12px 24px;
   }
 }
-.integrations_section .icon_section .img_box span {
+.integrations_section .img_box span {
   height: 7rem;
   background: #fff;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
@@ -2321,6 +2325,16 @@ feature list  (pricing page)
 }
 .testimonials_section_new .heading_section h2 {
   margin-bottom: 1.5rem;
+}
+.testimonials_section_new .heading_section p {
+  margin-bottom: 0.5rem;
+  font-size: 1em;
+  font-weight: 600;
+}
+@media all and (min-width: 768px) {
+  .testimonials_section_new .heading_section p {
+    font-size: 1.1em;
+  }
 }
 .testimonials_section_new .testimonials_item {
   min-height: 380px;
@@ -2353,6 +2367,8 @@ feature list  (pricing page)
   border-left: 5px solid #dae0f1;
   padding-left: 1rem;
   color: #f24d7f;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 .testimonials_section_new .testimonials_item .icon {
   margin-bottom: 1rem;

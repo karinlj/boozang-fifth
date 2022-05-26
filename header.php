@@ -168,7 +168,7 @@
 
                             <?php } else { ?>
 
-                            <div id="tab _id_<?php echo $i ?>" class="tab_video_content" role="tabpanel"
+                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content" role="tabpanel"
                                 aria-hidden="false"><?php echo $video; ?></div>
                             <?php }
                                         }

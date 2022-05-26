@@ -9,10 +9,10 @@ $bg_color = get_sub_field('background_color');
             <div class="col-lg-6">
                 <div class="text_section">
                     <h2 class="">
-                        <?php the_sub_field('heading');?>
+                        <?php the_sub_field('heading'); ?>
                     </h2>
                     <p>
-                        <?php the_sub_field('text');?>
+                        <?php the_sub_field('text'); ?>
                     </p>
                 </div>
             </div>
@@ -22,10 +22,10 @@ $bg_color = get_sub_field('background_color');
                     <div class="container">
                         <div class="d-flex flex-wrap justify-content-between">
                             <?php
-// check if the repeater field has rows
-if (have_rows('icon_box')) {
-    while (have_rows('icon_box')) {
-        the_row(); ?>
+                            // check if the repeater field has rows
+                            if (have_rows('icon_box')) {
+                                while (have_rows('icon_box')) {
+                                    the_row(); ?>
                             <div class="img_box">
                                 <span>
                                     <?php $img_id = get_sub_field('icon_image'); ?>
@@ -33,8 +33,8 @@ if (have_rows('icon_box')) {
                                 </span>
                             </div>
                             <?php
-    }
-}?>
+                                }
+                            } ?>
                         </div>
                     </div>
                 </div>

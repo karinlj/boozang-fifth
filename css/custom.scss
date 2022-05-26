@@ -305,6 +305,7 @@ h5,
 h6 {
   font-family: $themefont;
   color: $themeHeadingcolor;
+  font-weight: 600;
 }
 section {
   h3,
@@ -318,7 +319,6 @@ p {
 }
 h1 {
   font-size: 2rem;
-  font-weight: 600;
   @media all and (min-width: $md-min) {
     font-size: 2.1rem;
   }
@@ -331,7 +331,6 @@ h1 {
 }
 h2 {
   font-size: 1.5rem;
-  font-weight: 600;
   @media all and (min-width: $xl-min) {
     font-size: 1.9rem;
   }
@@ -339,7 +338,6 @@ h2 {
 h3 {
   position: relative;
   font-size: 1.4rem;
-  font-weight: 600;
   line-height: 1.4;
   @media all and (min-width: $xl-min) {
     font-size: 1.8rem;
@@ -347,7 +345,6 @@ h3 {
 }
 h4 {
   font-size: 1.1em;
-  font-weight: 600;
   @media all and (min-width: $md-min) {
     font-size: 1.1em;
   }
@@ -360,17 +357,12 @@ h4 {
 }
 h5 {
   font-size: 1em;
-  font-weight: 600;
   @media all and (min-width: $md-min) {
-    font-size: 1.1em;
-  }
-  @media all and (min-width: $xl-min) {
     font-size: 1.1em;
   }
 }
 h6 {
   font-size: 0.9em;
-  font-weight: 600;
   @media all and (min-width: $md-min) {
     font-size: 0.9em;
   }
@@ -1780,14 +1772,6 @@ feature list  (pricing page)
           font-style: italic;
           margin-top: 4px;
         }
-        // &::before {
-        //   position: absolute;
-        //   top: -30px;
-        //   right: 0;
-        //   content: "Click on image to enlarge";
-        //   font-size: 0.75rem;
-        //   color: $linkcolor;
-        // }
       }
     }
   }
@@ -1812,40 +1796,6 @@ feature list  (pricing page)
       @media all and (min-width: $xl-min) {
         padding: 3rem calc(3.75rem - 15px);
       }
-      .part {
-        &.text {
-          padding-bottom: 3rem;
-          .small_title {
-            font-weight: 700;
-            font-size: 17px;
-            color: #cfd5de;
-            letter-spacing: 0;
-            line-height: 36px;
-            .number {
-              font-size: 70px;
-              font-weight: 700;
-              color: #e1e6ed;
-              letter-spacing: 0;
-            }
-          }
-        }
-        &.image {
-          &::before {
-            content: "";
-          }
-          img {
-            border-radius: $themeBorder_radius;
-            box-shadow: $themeBox_shadow_images;
-            transition: none;
-            @media all and (min-width: $lg-min) {
-              max-width: 450px;
-            }
-            &:hover {
-              transform: scale(1);
-            }
-          }
-        }
-      }
       .column_row_inner {
         display: flex;
         align-items: center;
@@ -1866,8 +1816,52 @@ feature list  (pricing page)
         }
       }
       &:last-child {
-        //fixa mobile
+        //fix mobile
         padding-bottom: 7rem;
+      }
+      .part {
+        &.text {
+          padding-bottom: 3rem;
+        }
+        .small_title {
+          font-weight: 700;
+          font-size: 17px;
+          color: #cfd5de;
+          letter-spacing: 0;
+          line-height: 36px;
+          .number {
+            font-size: 70px;
+            font-weight: 700;
+            color: #e1e6ed;
+            letter-spacing: 0;
+          }
+        }
+        h3 {
+          font-size: 1em;
+          font-weight: 600;
+          @media all and (min-width: $md-min) {
+            font-size: 1.1em;
+          }
+          @media all and (min-width: $xl-min) {
+            font-size: 1.1em;
+          }
+        }
+        &.image {
+          &::before {
+            content: "";
+          }
+          img {
+            border-radius: $themeBorder_radius;
+            box-shadow: $themeBox_shadow_images;
+            transition: none;
+            @media all and (min-width: $lg-min) {
+              max-width: 450px;
+            }
+            &:hover {
+              transform: scale(1);
+            }
+          }
+        }
       }
     }
   }
@@ -1942,25 +1936,25 @@ feature list  (pricing page)
     display: flex;
     flex-wrap: wrap;
     margin: 0 -12px;
-    .img_box {
+  }
+  .img_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0 12px 24px;
+    @media all and (min-width: $sm-min) {
+      width: 25%;
+      padding: 0 12px 24px;
+    }
+    span {
+      height: 7rem;
+      background: #fff;
+      box-shadow: $themeBox_shadow;
+      border-radius: $themeBorder_radius;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 50%;
-      padding: 0 12px 24px;
-      @media all and (min-width: $sm-min) {
-        width: 25%;
-        padding: 0 12px 24px;
-      }
-      span {
-        height: 7rem;
-        background: #fff;
-        box-shadow: $themeBox_shadow;
-        border-radius: $themeBorder_radius;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
     }
   }
 }
@@ -1978,6 +1972,14 @@ feature list  (pricing page)
     margin-bottom: 4rem;
     h2 {
       margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 1em;
+      font-weight: 600;
+      @media all and (min-width: $md-min) {
+        font-size: 1.1em;
+      }
     }
   }
   .testimonials_item {
@@ -2006,6 +2008,8 @@ feature list  (pricing page)
       border-left: 5px solid $themecolorFront;
       padding-left: 1rem;
       color: $themecolorPink;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
     }
     .icon {
       margin-bottom: 1rem;
