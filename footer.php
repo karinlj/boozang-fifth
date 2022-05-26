@@ -54,12 +54,11 @@ if ((!is_front_page() && !is_page('beta')) && function_exists('acf_add_options_p
         <div class="row align-items-start justify-content-between">
             <div class="col-lg-3">
                 <div class="logo">
-                    <a href="<?php echo home_url() ?>" class="logo">
-
+                    <a href="<?php echo home_url() ?>" class="logo" aria-label="Boozang home page">
                         <img class="logo-img"
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse.png"
                             srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse@2x.png 325w"
-                            width="208" height="51" alt="boozang-logo" />
+                            width="208" height="51" alt="Boozang home page" />
                     </a>
                 </div>
                 <div class="social-icons">
@@ -79,7 +78,9 @@ if ((!is_front_page() && !is_page('beta')) && function_exists('acf_add_options_p
                                     $social_site = get_sub_field('social_site'); ?>
 
                         <li class="social-item">
-                            <a href="<?php echo $social_url; ?>"><i class="fab fa-<?php echo $social_site; ?>"></i></a>
+                            <a href="<?php echo $social_url; ?>" aria-label="<?php echo $social_site; ?>">
+                                <i class="fab fa-<?php echo $social_site; ?>" aria-hidden="true"></i>
+                            </a>
                         </li>
 
                         <?php
@@ -87,10 +88,10 @@ if ((!is_front_page() && !is_page('beta')) && function_exists('acf_add_options_p
                         <?php
                             }
                             $link = get_field('mail_link', 'option'); ?>
-
                         <li class="social-item">
-                            <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope"
-                                    aria-hidden="true"></i></a>
+                            <a href="mailto:<?php echo $link; ?>" target="_top" aria-label="Boozang email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
                         </li>
                     </ul>
                     <?php
@@ -110,7 +111,7 @@ if ((!is_front_page() && !is_page('beta')) && function_exists('acf_add_options_p
                             while (have_rows('footer_links', 'option')) {
                                 the_row(); ?>
                     <div class="col-6 col-md-3">
-                        <h5 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h5>
+                        <h2 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h2>
 
                         <?php
                                     // check if repeater field has rows
@@ -151,7 +152,8 @@ if ((!is_front_page() && !is_page('beta')) && function_exists('acf_add_options_p
                 <div class="col">
                     <div class="copy">
                         <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> INC. ALL RIGHTS RESERVED.
-                            Theme by <a href="http://karinljunggren.com/" target="_blank">Karin</a>
+                            Theme by <a href="http://karinljunggren.com/" target="_blank" rel="noopener noreferrer"
+                                aria-label="Karin Ljunggren Home Page">Karin</a>
                         </p>
                     </div>
                 </div>

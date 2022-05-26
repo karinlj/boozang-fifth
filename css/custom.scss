@@ -970,7 +970,6 @@ nav.main_menu {
   .header_links_section {
     display: flex;
     flex-direction: column;
-
     .header_btn_section {
       display: flex;
       flex-direction: column;
@@ -978,30 +977,30 @@ nav.main_menu {
       @media all and (min-width: $sm-min) {
         flex-direction: row;
       }
-      a {
-        margin-right: 1rem;
-        width: 100%;
-        margin-bottom: 1rem;
-        @media all and (min-width: $sm-min) {
-          width: auto;
-        }
+    }
+    a {
+      margin-right: 1rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      @media all and (min-width: $sm-min) {
+        width: auto;
       }
-      //default: non white
-      .signup_btn {
-        background: #fff;
-        border: 1px solid #fff;
-        &:hover {
-          color: #fff;
-          background: transparent;
-        }
-      }
-      .demo_btn {
-        background: transparent;
-        border: 1px solid #fff;
+    }
+    //default: non white
+    .signup_btn {
+      background: #fff;
+      border: 1px solid #fff;
+      &:hover {
         color: #fff;
-        &:hover {
-          background: #fff;
-        }
+        background: transparent;
+      }
+    }
+    .demo_btn {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      &:hover {
+        background: #fff;
       }
     }
     a.play_btn {
@@ -3020,7 +3019,7 @@ forum section
     @media all and (min-width: $lg-min) {
       justify-content: flex-end;
     }
-    h5.footer-links-heading {
+    .footer-links-heading {
       font-size: 0.9rem;
       letter-spacing: 0.5px;
       color: #fff;

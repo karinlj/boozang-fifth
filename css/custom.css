@@ -1170,36 +1170,36 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
     flex-direction: row;
   }
 }
-.header_big .header_links_section .header_btn_section a,
-.header_small .header_links_section .header_btn_section a {
+.header_big .header_links_section a,
+.header_small .header_links_section a {
   margin-right: 1rem;
   width: 100%;
   margin-bottom: 1rem;
 }
 @media all and (min-width: 576px) {
-  .header_big .header_links_section .header_btn_section a,
-.header_small .header_links_section .header_btn_section a {
+  .header_big .header_links_section a,
+.header_small .header_links_section a {
     width: auto;
   }
 }
-.header_big .header_links_section .header_btn_section .signup_btn,
-.header_small .header_links_section .header_btn_section .signup_btn {
+.header_big .header_links_section .signup_btn,
+.header_small .header_links_section .signup_btn {
   background: #fff;
   border: 1px solid #fff;
 }
-.header_big .header_links_section .header_btn_section .signup_btn:hover,
-.header_small .header_links_section .header_btn_section .signup_btn:hover {
+.header_big .header_links_section .signup_btn:hover,
+.header_small .header_links_section .signup_btn:hover {
   color: #fff;
   background: transparent;
 }
-.header_big .header_links_section .header_btn_section .demo_btn,
-.header_small .header_links_section .header_btn_section .demo_btn {
+.header_big .header_links_section .demo_btn,
+.header_small .header_links_section .demo_btn {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
 }
-.header_big .header_links_section .header_btn_section .demo_btn:hover,
-.header_small .header_links_section .header_btn_section .demo_btn:hover {
+.header_big .header_links_section .demo_btn:hover,
+.header_small .header_links_section .demo_btn:hover {
   background: #fff;
 }
 .header_big .header_links_section a.play_btn,
@@ -3418,7 +3418,7 @@ forum section
     justify-content: flex-end;
   }
 }
-.footer-main .links h5.footer-links-heading {
+.footer-main .links .footer-links-heading {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   color: #fff;
@@ -3426,7 +3426,7 @@ forum section
   margin-bottom: 1rem;
 }
 @media all and (min-width: 992px) {
-  .footer-main .links h5.footer-links-heading {
+  .footer-main .links .footer-links-heading {
     padding-top: 0;
   }
 }
