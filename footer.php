@@ -30,10 +30,10 @@ if ((!is_front_page() && !is_page('beta')) && function_exists('acf_add_options_p
                             </div>
                             <div class="btn_container">
                                 <?php
-
                                             if ($link) { ?>
                                 <a class="btn link" href="<?php echo $link['url']; ?>"
-                                    target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
+                                    target="<?php echo $link['target']; ?>"
+                                    rel="noopener noreferrer"><?php echo $link['title']; ?>
                                 </a>
                                 <?php } ?>
                             </div>
@@ -111,7 +111,7 @@ if ((!is_front_page() && !is_page('beta')) && function_exists('acf_add_options_p
                             while (have_rows('footer_links', 'option')) {
                                 the_row(); ?>
                     <div class="col-6 col-md-3">
-                        <h2 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h2>
+                        <h3 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h3>
 
                         <?php
                                     // check if repeater field has rows

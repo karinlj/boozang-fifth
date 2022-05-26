@@ -12,10 +12,8 @@ if (function_exists('have_rows')) { ?>
 
 <?php
     if (have_rows('front_page_blocks')) { ?>
-
 <?php while (have_rows('front_page_blocks')) { ?>
 <?php the_row(); ?>
-
 
 <?php $layout = get_row_layout(); ?>
 
@@ -25,6 +23,5 @@ if (function_exists('have_rows')) { ?>
 <?php }
     }
 } ?>
-
 
 <?php get_footer(); ?>
