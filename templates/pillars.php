@@ -6,21 +6,21 @@ $color = get_sub_field('color_theme');
     <div class="container">
         <div class="row align-items-start">
             <?php
-        // check if the repeater field has rows
-        if (have_rows('pillars_content')) {
-            while (have_rows('pillars_content')) {
-                the_row(); ?>
+            // check if the repeater field has rows
+            if (have_rows('pillars_content')) {
+                while (have_rows('pillars_content')) {
+                    the_row(); ?>
             <div class="col-md">
                 <div class="pillars_item">
-                    <h6 class="top-heading"><?php the_sub_field('top_heading'); ?></h6>
-                    <h6 class="heading"><?php the_sub_field('heading'); ?></h6>
+                    <h3 class="pillars_top_heading"><?php the_sub_field('top_heading'); ?></h3>
+                    <h4 class="pillars_heading"><?php the_sub_field('heading'); ?></h4>
                     <p class="text"><?php the_sub_field('text'); ?></p>
                 </div>
             </div>
             <?php
+                }
             }
-        }
-        ?>
+            ?>
         </div>
     </div>
 </section>

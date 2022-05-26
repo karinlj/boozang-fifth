@@ -1906,13 +1906,22 @@ feature list  (pricing page)
     @media all and (min-width: $lg-min) {
       margin-bottom: 0;
     }
-    .top-heading {
-      font-weight: 500;
-      font-size: 0.85rem;
-      color: $themecolorPink !important;
-    }
     p {
       font-size: 0.9rem;
+    }
+  }
+  .pillars_top_heading {
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    color: $themecolorPink !important;
+    text-transform: uppercase;
+  }
+  .pillars_heading {
+    font-size: 0.9em;
+    margin-bottom: 0.5rem;
+    @media all and (min-width: $xl-min) {
+      font-size: 1em;
     }
   }
 }
@@ -2772,35 +2781,35 @@ text layout for Pages Content block
     .text_section {
       text-align: center;
     }
-    .btn_container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @media all and (min-width: $lg-min) {
-        // justify-content: flex-start;
-      }
-      .btn {
-        background-image: $themecolorNewBlueBg;
+  }
+  .btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: $lg-min) {
+      // justify-content: flex-start;
+    }
+    .btn {
+      background-image: $themecolorNewBlueBg;
+      color: #fff;
+      border: 1px solid $themecolorNewBlue;
+      padding: 10px 45px;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        background: transparent;
         color: #fff;
-        border: 1px solid $themecolorNewBlue;
-        padding: 10px 45px;
-        transition: 0.5s ease-in-out;
-        &:hover {
-          background: transparent;
-          color: #fff;
-          border: 1px solid #fff;
-          box-shadow: none;
-        }
-        &:active {
-          box-shadow: none;
-        }
-        &:focus {
-          box-shadow: none;
-        }
+        border: 1px solid #fff;
+        box-shadow: none;
       }
-      &.demo {
-        float: right;
+      &:active {
+        box-shadow: none;
       }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    &.demo {
+      float: right;
     }
   }
 }

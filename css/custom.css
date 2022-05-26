@@ -2241,13 +2241,24 @@ feature list  (pricing page)
     margin-bottom: 0;
   }
 }
-.pillars_section .pillars_item .top-heading {
-  font-weight: 500;
-  font-size: 0.85rem;
-  color: #f24d7f !important;
-}
 .pillars_section .pillars_item p {
   font-size: 0.9rem;
+}
+.pillars_section .pillars_top_heading {
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: #f24d7f !important;
+  text-transform: uppercase;
+}
+.pillars_section .pillars_heading {
+  font-size: 0.9em;
+  margin-bottom: 0.5rem;
+}
+@media all and (min-width: 1200px) {
+  .pillars_section .pillars_heading {
+    font-size: 1em;
+  }
 }
 
 /**********************
@@ -3162,31 +3173,31 @@ text layout for Pages Content block
 .sign_up_front_section .button_item .text_section {
   text-align: center;
 }
-.sign_up_front_section .button_item .btn_container {
+.sign_up_front_section .btn_container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.sign_up_front_section .button_item .btn_container .btn {
+.sign_up_front_section .btn_container .btn {
   background-image: linear-gradient(to right bottom, #0074b3, #007cc0, #0084cc, #008dd9, #0095e6);
   color: #fff;
   border: 1px solid #0085cc;
   padding: 10px 45px;
   transition: 0.5s ease-in-out;
 }
-.sign_up_front_section .button_item .btn_container .btn:hover {
+.sign_up_front_section .btn_container .btn:hover {
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
   box-shadow: none;
 }
-.sign_up_front_section .button_item .btn_container .btn:active {
+.sign_up_front_section .btn_container .btn:active {
   box-shadow: none;
 }
-.sign_up_front_section .button_item .btn_container .btn:focus {
+.sign_up_front_section .btn_container .btn:focus {
   box-shadow: none;
 }
-.sign_up_front_section .button_item .btn_container.demo {
+.sign_up_front_section .btn_container.demo {
   float: right;
 }
 
