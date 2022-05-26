@@ -2973,28 +2973,28 @@ forum section
         color: $themecolorLight;
       }
     }
-    .btn_container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .btn {
-        background: transparent;
+  }
+  .btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      background: transparent;
+      border: 1px solid $themecolorNewBlue;
+      color: $themecolorNewBlue;
+      padding: 10px 45px;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        background: $themecolorNewBlue;
+        color: #fff;
         border: 1px solid $themecolorNewBlue;
-        color: $themecolorNewBlue;
-        padding: 10px 45px;
-        transition: 0.5s ease-in-out;
-        &:hover {
-          background: $themecolorNewBlue;
-          color: #fff;
-          border: 1px solid $themecolorNewBlue;
-          box-shadow: none;
-        }
-        &:active {
-          box-shadow: none;
-        }
-        &:focus {
-          box-shadow: none;
-        }
+        box-shadow: none;
+      }
+      &:active {
+        box-shadow: none;
+      }
+      &:focus {
+        box-shadow: none;
       }
     }
   }
@@ -3019,36 +3019,36 @@ forum section
     @media all and (min-width: $lg-min) {
       justify-content: flex-end;
     }
-    .footer-links-heading {
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-      color: #fff;
-      padding-top: 2rem;
-      margin-bottom: 1rem;
-      @media all and (min-width: $lg-min) {
-        padding-top: 0;
+  }
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding-bottom: 0.6rem;
+      transition: all 0.25s ease;
+      &:hover {
+        transform: translateY(-1px);
+        transition: all 0.25s ease;
+        text-decoration: none;
       }
     }
-    ul.footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      li {
-        padding-bottom: 0.6rem;
-        transition: all 0.25s ease;
-        &:hover {
-          transform: translateY(-1px);
-          transition: all 0.25s ease;
-          text-decoration: none;
-        }
-        a {
-          color: $themecolorFront;
-          font-size: 0.9rem;
-          &:hover {
-            text-decoration: none;
-          }
-        }
+    a {
+      color: $themecolorFront;
+      font-size: 0.9rem;
+      &:hover {
+        text-decoration: none;
       }
+    }
+  }
+  .footer-links-heading {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #fff;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+    @media all and (min-width: $lg-min) {
+      padding-top: 0;
     }
   }
   .social-icons {
@@ -3059,29 +3059,29 @@ forum section
       margin: 0;
       padding: 0;
       width: 100%;
-      li.social-item {
-        padding: 0 0.4rem;
-        &:first-child {
-          padding-left: 0;
-        }
-        .fab,
-        .fas {
-          font-size: 17px;
-          padding-right: 1rem;
-          text-align: center;
-          text-decoration: none;
-          border-radius: 50%;
-          transition: 1s;
-          color: #fff;
-          background-position: center;
-          cursor: pointer;
-          box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-          transition: all 0.25s ease;
-          &:hover {
-            transform: translateY(-2px);
-            box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
-          }
-        }
+    }
+    .social-item {
+      padding: 0 0.4rem;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+    .fab,
+    .fas {
+      font-size: 17px;
+      padding-right: 1rem;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+      transition: 1s;
+      color: #fff;
+      background-position: center;
+      cursor: pointer;
+      box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
+      transition: all 0.25s ease;
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
       }
     }
   }

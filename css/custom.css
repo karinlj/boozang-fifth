@@ -3366,28 +3366,28 @@ forum section
 .signup_section .button_item .text_section p {
   color: #66758d;
 }
-.signup_section .button_item .btn_container {
+.signup_section .btn_container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.signup_section .button_item .btn_container .btn {
+.signup_section .btn_container .btn {
   background: transparent;
   border: 1px solid #0085cc;
   color: #0085cc;
   padding: 10px 45px;
   transition: 0.5s ease-in-out;
 }
-.signup_section .button_item .btn_container .btn:hover {
+.signup_section .btn_container .btn:hover {
   background: #0085cc;
   color: #fff;
   border: 1px solid #0085cc;
   box-shadow: none;
 }
-.signup_section .button_item .btn_container .btn:active {
+.signup_section .btn_container .btn:active {
   box-shadow: none;
 }
-.signup_section .button_item .btn_container .btn:focus {
+.signup_section .btn_container .btn:focus {
   box-shadow: none;
 }
 
@@ -3418,7 +3418,28 @@ forum section
     justify-content: flex-end;
   }
 }
-.footer-main .links .footer-links-heading {
+.footer-main .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-main .footer-links li {
+  padding-bottom: 0.6rem;
+  transition: all 0.25s ease;
+}
+.footer-main .footer-links li:hover {
+  transform: translateY(-1px);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.footer-main .footer-links a {
+  color: #dae0f1;
+  font-size: 0.9rem;
+}
+.footer-main .footer-links a:hover {
+  text-decoration: none;
+}
+.footer-main .footer-links-heading {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   color: #fff;
@@ -3426,30 +3447,9 @@ forum section
   margin-bottom: 1rem;
 }
 @media all and (min-width: 992px) {
-  .footer-main .links .footer-links-heading {
+  .footer-main .footer-links-heading {
     padding-top: 0;
   }
-}
-.footer-main .links ul.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer-main .links ul.footer-links li {
-  padding-bottom: 0.6rem;
-  transition: all 0.25s ease;
-}
-.footer-main .links ul.footer-links li:hover {
-  transform: translateY(-1px);
-  transition: all 0.25s ease;
-  text-decoration: none;
-}
-.footer-main .links ul.footer-links li a {
-  color: #dae0f1;
-  font-size: 0.9rem;
-}
-.footer-main .links ul.footer-links li a:hover {
-  text-decoration: none;
 }
 .footer-main .social-icons {
   padding: 1.5rem 0;
@@ -3464,14 +3464,14 @@ forum section
   padding: 0;
   width: 100%;
 }
-.footer-main .social-icons ul.social li.social-item {
+.footer-main .social-icons .social-item {
   padding: 0 0.4rem;
 }
-.footer-main .social-icons ul.social li.social-item:first-child {
+.footer-main .social-icons .social-item:first-child {
   padding-left: 0;
 }
-.footer-main .social-icons ul.social li.social-item .fab,
-.footer-main .social-icons ul.social li.social-item .fas {
+.footer-main .social-icons .fab,
+.footer-main .social-icons .fas {
   font-size: 17px;
   padding-right: 1rem;
   text-align: center;
@@ -3484,8 +3484,8 @@ forum section
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.1);
   transition: all 0.25s ease;
 }
-.footer-main .social-icons ul.social li.social-item .fab:hover,
-.footer-main .social-icons ul.social li.social-item .fas:hover {
+.footer-main .social-icons .fab:hover,
+.footer-main .social-icons .fas:hover {
   transform: translateY(-2px);
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
 }
