@@ -3233,12 +3233,12 @@ big_image_center
 .big_image_center .image_part a:hover {
   opacity: 1;
 }
-.big_image_center .image_part img {
+.big_image_center img {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   transition: 0.5s ease-in-out;
 }
-.big_image_center .image_part img:hover {
+.big_image_center img:hover {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
