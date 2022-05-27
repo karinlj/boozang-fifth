@@ -317,6 +317,14 @@ p {
   font-size: 1rem;
   line-height: 1.9;
 }
+// .smaller_size_text {
+//   font-size: 1.3rem;
+//   font-weight: 600;
+//   color: $themeHeadingcolor;
+//   @media all and (min-width: $xl-min) {
+//     font-size: 1.7rem;
+//   }
+// }
 h1 {
   font-size: 2rem;
   @media all and (min-width: $md-min) {
@@ -333,6 +341,12 @@ h2 {
   font-size: 1.5rem;
   @media all and (min-width: $xl-min) {
     font-size: 1.9rem;
+  }
+  &.smaller_size_text {
+    font-size: 1.3rem;
+    @media all and (min-width: $xl-min) {
+      font-size: 1.6rem;
+    }
   }
 }
 h3 {
@@ -1733,45 +1747,59 @@ feature list  (pricing page)
     @media all and (min-width: $lg-min) {
       padding-bottom: 8rem;
     }
-    .part {
-      position: relative;
-      width: 100%;
-      @media all and (min-width: $md-min) {
-        width: 50%;
+  }
+  .part {
+    position: relative;
+    width: 100%;
+    @media all and (min-width: $md-min) {
+      width: 50%;
+    }
+    &.text {
+      @media all and (max-width: $sm-max) {
+        order: -1;
+        padding: 1rem 0;
       }
+      @media all and (min-width: $md-min) {
+        padding: 0 2rem 0 0;
+      }
+      @media all and (min-width: $lg-min) {
+        padding: 0 3rem 0 0;
+      }
+    }
+    &:nth-child(2) {
       &.text {
         @media all and (max-width: $sm-max) {
           order: -1;
           padding: 1rem 0;
         }
         @media all and (min-width: $md-min) {
-          padding: 0 2rem;
+          padding: 0 0 0 2rem;
         }
         @media all and (min-width: $lg-min) {
-          padding: 0 3rem;
+          padding: 0 0 0 3rem;
         }
       }
-      &.image {
-        z-index: 400;
-        position: relative;
-        .pict {
-          border-radius: $themeBorder_radius;
-          box-shadow: $themeBox_shadow;
-          width: 100%;
-          height: auto;
-          transition: all 1.5s 0.5s; //how fast with delay
-          cursor: pointer;
-          &.enlarge {
-            transform: scale(1.4); //how much
-          }
+    }
+    &.image {
+      z-index: 400;
+      position: relative;
+      .pict {
+        border-radius: $themeBorder_radius;
+        box-shadow: $themeBox_shadow;
+        width: 100%;
+        height: auto;
+        transition: all 1.5s 0.5s; //how fast with delay
+        cursor: pointer;
+        &.enlarge {
+          transform: scale(1.4); //how much
         }
-        .alt_caption {
-          text-align: center;
-          display: block;
-          font-size: 0.9rem;
-          font-style: italic;
-          margin-top: 4px;
-        }
+      }
+      .alt_caption {
+        text-align: center;
+        display: block;
+        font-size: 0.9rem;
+        font-style: italic;
+        margin-top: 4px;
       }
     }
   }

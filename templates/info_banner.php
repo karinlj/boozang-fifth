@@ -23,7 +23,7 @@ if (get_row_layout() == 'info_banner') { ?>
                     $heading = get_sub_field('heading');
                     $text = get_sub_field('text');
                     ?>
-                <h3 class=""><?php echo $heading; ?></h3>
+                <h2 class=""><?php echo $heading; ?></h2>
                 <p class=""><?php echo $text; ?></p>
 
                 <?php if (have_rows('banner_links')) {
@@ -46,7 +46,9 @@ if (get_row_layout() == 'info_banner') { ?>
                                 $link_text = get_sub_field('link_text'); ?>
 
                 <div class="link_wrapper">
-                    <a class="banner_link" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
+                    <a class="banner_link" href="<?php echo $link_url; ?>">
+                        <?php echo $link_text; ?>
+                    </a>
                 </div>
                 <?php
                             }
@@ -55,7 +57,9 @@ if (get_row_layout() == 'info_banner') { ?>
                                 $button_link_text = get_sub_field('button_link_text'); ?>
 
                 <div class="btn_wrapper">
-                    <a class="btn link" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
+                    <a class="btn link" href="<?php echo $button_link_url; ?>">
+                        <?php echo $button_link_text; ?>
+                    </a>
                 </div>
                 <?php
                             }

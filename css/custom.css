@@ -387,6 +387,14 @@ h2 {
     font-size: 1.9rem;
   }
 }
+h2.smaller_size_text {
+  font-size: 1.3rem;
+}
+@media all and (min-width: 1200px) {
+  h2.smaller_size_text {
+    font-size: 1.6rem;
+  }
+}
 
 h3 {
   position: relative;
@@ -2060,36 +2068,52 @@ feature list  (pricing page)
     padding-bottom: 8rem;
   }
 }
-.two_columns_section .column_row .part {
+.two_columns_section .part {
   position: relative;
   width: 100%;
 }
 @media all and (min-width: 768px) {
-  .two_columns_section .column_row .part {
+  .two_columns_section .part {
     width: 50%;
   }
 }
 @media all and (max-width: 767.9px) {
-  .two_columns_section .column_row .part.text {
+  .two_columns_section .part.text {
     order: -1;
     padding: 1rem 0;
   }
 }
 @media all and (min-width: 768px) {
-  .two_columns_section .column_row .part.text {
-    padding: 0 2rem;
+  .two_columns_section .part.text {
+    padding: 0 2rem 0 0;
   }
 }
 @media all and (min-width: 992px) {
-  .two_columns_section .column_row .part.text {
-    padding: 0 3rem;
+  .two_columns_section .part.text {
+    padding: 0 3rem 0 0;
   }
 }
-.two_columns_section .column_row .part.image {
+@media all and (max-width: 767.9px) {
+  .two_columns_section .part:nth-child(2).text {
+    order: -1;
+    padding: 1rem 0;
+  }
+}
+@media all and (min-width: 768px) {
+  .two_columns_section .part:nth-child(2).text {
+    padding: 0 0 0 2rem;
+  }
+}
+@media all and (min-width: 992px) {
+  .two_columns_section .part:nth-child(2).text {
+    padding: 0 0 0 3rem;
+  }
+}
+.two_columns_section .part.image {
   z-index: 400;
   position: relative;
 }
-.two_columns_section .column_row .part.image .pict {
+.two_columns_section .part.image .pict {
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
   width: 100%;
@@ -2097,10 +2121,10 @@ feature list  (pricing page)
   transition: all 1.5s 0.5s;
   cursor: pointer;
 }
-.two_columns_section .column_row .part.image .pict.enlarge {
+.two_columns_section .part.image .pict.enlarge {
   transform: scale(1.4);
 }
-.two_columns_section .column_row .part.image .alt_caption {
+.two_columns_section .part.image .alt_caption {
   text-align: center;
   display: block;
   font-size: 0.9rem;
