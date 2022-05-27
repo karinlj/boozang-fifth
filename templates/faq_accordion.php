@@ -6,30 +6,30 @@
 
 <section class="faq_accordion_section <?php echo $bgColor; ?> section_spacing_top_medium">
     <div class="container">
-        <?php if ($heading) {?>
+        <?php if ($heading) { ?>
         <h2 class="heading"><?php echo $heading; ?></h2>
         <?php } ?>
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <?php if (have_rows('faq_accordion_list')) {?>
+                <?php if (have_rows('faq_accordion_list')) { ?>
                 <?php while (have_rows('faq_accordion_list')) {
-        the_row();
+                            the_row();
 
-        $question = get_sub_field('question');
-        $answer = get_sub_field('answer'); ?>
+                            $question = get_sub_field('question');
+                            $answer = get_sub_field('answer'); ?>
 
                 <div class="info_list_item">
                     <div class="question_part">
-                        <h6 class="question"><?php echo $question; ?></h6>
+                        <h3 class="small_size_text question"><?php echo $question; ?></h3>
                     </div>
                     <div class="answer_part">
                         <p><?php echo $answer; ?> </p>
                     </div>
                 </div>
                 <?php
-    }
-          } ?>
+                        }
+                    } ?>
             </div>
         </div>
     </div>

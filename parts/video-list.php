@@ -2,7 +2,7 @@
 
     <div class="video_filter">
         <div class="container">
-            <div class="sidebar-module">
+            <nav class="filter_nav">
                 <ul class="videos">
 
                     <?php $post_type = 'videos';
@@ -26,15 +26,16 @@
                                 $activeClass = '';
                             } ?>
                     <li class="cat-item <?php echo $activeClass ?>"><a
-                            href="/Boozang/videos?filter=<?php echo $term->slug ?>">
-                            <?php echo $term->name  ?></a>
+                            href="/Boozang/videos?filter=<?php echo $term->slug ?>"
+                            aria-label="Category: <?php echo $term->name ?>">
+                            <?php echo $term->name ?></a>
                     </li>
 
                     <?php
                         }
                     } ?>
                 </ul>
-            </div>
+            </nav>
         </div>
     </div>
 
@@ -61,32 +62,36 @@
 
             <div class="col-sm-6 col-lg-4">
                 <div class="video_container">
+                    <div class="video_container_inner">
 
-                    <?php $video_url = get_field('url');
-                                    $style = '';
-                                    $bg_img = get_field('background_image'); ?>
-                    <div class="embed_container" <?php echo $style; ?>>
-                        <!-- url -->
-                        <?php if ($video_url) { ?>
-                        <a class="video_link" href="<?php echo $video_url; ?>">
-                        </a>
-                        <?php } ?>
+                        <?php $video_url = get_field('url');
+                                        $style = '';
+                                        $bg_img = get_field('background_image'); ?>
 
-                        <div class="img_container">
+                        <div class="embed_container" <?php echo $style; ?>>
+                            <!-- url -->
+                            <?php if ($video_url) { ?>
+                            <a class="video_link" href="<?php echo $video_url; ?>" aria-label="<?php the_title(); ?>">
+                            </a>
+                            <?php } ?>
 
-                            <?php $image = get_field('image');
-                                            $size = 'full'; // (thumbnail, medium, large, full or custom size)
-                                            if ($image) {
-                                                echo wp_get_attachment_image($image, $size);
-                                            } ?>
+                            <div class="img_container">
+                                <?php $image = get_field('image');
+                                                $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                                                if ($image) {
+                                                    echo wp_get_attachment_image($image, $size);
+                                                } ?>
+                            </div>
                         </div>
-                    </div>
-                    <div class="content_container">
-                        <?php echo '<span class="cat_badge">' . $term->name . '</span>'; ?>
-                        <div class="content_container_inner">
-                            <h6 class="title"><?php the_title(); ?></h6>
-                            <p class="description"><?php the_field('description'); ?></p>
+                        <div class="content_container">
+                            <?php echo '<span class="cat_badge">' . $term->name . '</span>'; ?>
+                            <div class="content_container_inner">
+                                <h2 class="title"><?php the_title(); ?></h2>
+                                <p class="description"><?php the_field('description'); ?></p>
+                            </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>

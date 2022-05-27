@@ -97,10 +97,10 @@ function wpb_init_widgets($id)
     register_sidebar(array(
         'name' => 'Sidebar-blog',
         'id' => 'sidebar-blog',
-        'before_widget' => '<div class="sidebar-module">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
+        'before_widget' => '<nav class="filter_nav">',
+        'after_widget' => '</nav>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
     ));
     register_sidebar(array(
         'name' => 'Newsletter',
