@@ -20,13 +20,14 @@
                             $answer = get_sub_field('answer'); ?>
 
                 <div class="info_list_item">
-                    <div class="question_part">
-                        <h3 class="small_size_text question"><?php echo $question; ?></h3>
-                    </div>
-                    <div class="answer_part">
+                    <h3 class="question_part small_size_text">
+                        <button class="question" aria-expanded="false"><?php echo $question; ?></button>
+                    </h3>
+                    <section class="answer_part" aria-hidden="true">
                         <p><?php echo $answer; ?> </p>
-                    </div>
+                    </section>
                 </div>
+
                 <?php
                         }
                     } ?>

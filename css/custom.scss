@@ -148,9 +148,18 @@ section,
 header {
   &.lightblue,
   .lightgrey {
-    a {
+    button,
+    .btn {
       &:focus {
         outline: 3px dotted $themecolorBlueDarkLighter;
+      }
+    }
+  }
+  &.white {
+    button,
+    .btn {
+      &:focus {
+        outline: 3px dotted $themecolorLightest;
       }
     }
   }
@@ -1565,49 +1574,54 @@ feature list  (pricing page)
   }
   .info_list_item {
     border-bottom: 1px solid $themecolorFront;
-    .question_part {
+  }
+  .question_part {
+    width: 100%;
+    position: relative;
+    padding: 1.3rem 0;
+    cursor: pointer;
+    .question {
+      line-height: 1.7;
+      margin-bottom: 0;
+      transition: all 0.3s ease-in-out;
       width: 100%;
-      position: relative;
-      padding: 1.3rem 0;
-      cursor: pointer;
-      .question {
-        line-height: 1.7;
-        margin-bottom: 0;
-        max-width: 90%;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          color: $linkcolor;
-        }
-        &:hover::after {
-          color: $linkcolor;
-        }
-        &:after {
-          font-family: "Font Awesome 5 Free";
-          font-size: 0.7rem;
-          content: "\f067";
-          font-weight: 900;
-          position: absolute;
-          right: 0;
-          top: 1.3rem;
-          padding: 5px;
-          color: $themeHeadingcolor;
-          transition: all 0.3s ease-in-out;
-        }
+      padding-left: 0;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      text-align: left;
+      &:hover {
+        color: $linkcolor;
       }
-      .question.active {
-        &:after {
-          content: "\f068";
-        }
+      &:hover::after {
+        color: $linkcolor;
+      }
+      &:after {
+        font-family: "Font Awesome 5 Free";
+        font-size: 0.7rem;
+        content: "\f067";
+        font-weight: 900;
+        position: absolute;
+        right: 0;
+        top: 1.3rem;
+        padding: 5px;
+        color: $themeHeadingcolor;
+        transition: all 0.3s ease-in-out;
       }
     }
-    .answer_part {
-      width: 100%;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease-in-out;
-      &.open {
-        max-height: 260px;
+    .question[aria-expanded="true"] {
+      &:after {
+        content: "\f068";
       }
+    }
+  }
+  .answer_part {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    &[aria-hidden="false"] {
+      max-height: 260px;
     }
   }
 }

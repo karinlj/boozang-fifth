@@ -186,11 +186,21 @@ button:hover,
   opacity: 1;
 }
 
-section.lightblue a:focus,
-section .lightgrey a:focus,
-header.lightblue a:focus,
-header .lightgrey a:focus {
+section.lightblue button:focus,
+section.lightblue .btn:focus,
+section .lightgrey button:focus,
+section .lightgrey .btn:focus,
+header.lightblue button:focus,
+header.lightblue .btn:focus,
+header .lightgrey button:focus,
+header .lightgrey .btn:focus {
   outline: 3px dotted #293b70;
+}
+section.white button:focus,
+section.white .btn:focus,
+header.white button:focus,
+header.white .btn:focus {
+  outline: 3px dotted #b5bdc9;
 }
 
 /********************
@@ -1895,25 +1905,30 @@ feature list  (pricing page)
 .faq_accordion_section .info_list_item {
   border-bottom: 1px solid #dae0f1;
 }
-.faq_accordion_section .info_list_item .question_part {
+.faq_accordion_section .question_part {
   width: 100%;
   position: relative;
   padding: 1.3rem 0;
   cursor: pointer;
 }
-.faq_accordion_section .info_list_item .question_part .question {
+.faq_accordion_section .question_part .question {
   line-height: 1.7;
   margin-bottom: 0;
-  max-width: 90%;
   transition: all 0.3s ease-in-out;
+  width: 100%;
+  padding-left: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
 }
-.faq_accordion_section .info_list_item .question_part .question:hover {
+.faq_accordion_section .question_part .question:hover {
   color: #0085cc;
 }
-.faq_accordion_section .info_list_item .question_part .question:hover::after {
+.faq_accordion_section .question_part .question:hover::after {
   color: #0085cc;
 }
-.faq_accordion_section .info_list_item .question_part .question:after {
+.faq_accordion_section .question_part .question:after {
   font-family: "Font Awesome 5 Free";
   font-size: 0.7rem;
   content: "";
@@ -1925,16 +1940,16 @@ feature list  (pricing page)
   color: #212735;
   transition: all 0.3s ease-in-out;
 }
-.faq_accordion_section .info_list_item .question_part .question.active:after {
+.faq_accordion_section .question_part .question[aria-expanded=true]:after {
   content: "";
 }
-.faq_accordion_section .info_list_item .answer_part {
+.faq_accordion_section .answer_part {
   width: 100%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 }
-.faq_accordion_section .info_list_item .answer_part.open {
+.faq_accordion_section .answer_part[aria-hidden=false] {
   max-height: 260px;
 }
 

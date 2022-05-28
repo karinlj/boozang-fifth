@@ -1,9 +1,18 @@
 jQuery(document).ready(function ($) {
   //faq_accordion_section
-  $(".question_part").click(function () {
-    //console.log("this", this); = .question_part
-    $(this).next().toggleClass("open");
-    $(this).children(".question").toggleClass("active");
+  //toggle aria-attributes and style the states
+  $(".question").click(function () {
+    $(this).attr("aria-expanded", function (index, attr) {
+      console.log("expanded", attr);
+      return attr == "true" ? "false" : "true";
+    });
+    $(this)
+      .parent()
+      .next()
+      .attr("aria-hidden", function (index, attr) {
+        console.log("hidden", attr);
+        return attr == "true" ? "false" : "true";
+      });
   });
 
   //Blog Sidebar Categories
