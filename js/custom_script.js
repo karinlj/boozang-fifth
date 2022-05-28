@@ -3,14 +3,12 @@ jQuery(document).ready(function ($) {
   //toggle aria-attributes and style the states
   $(".question").click(function () {
     $(this).attr("aria-expanded", function (index, attr) {
-      console.log("expanded", attr);
       return attr == "true" ? "false" : "true";
     });
     $(this)
       .parent()
       .next()
       .attr("aria-hidden", function (index, attr) {
-        console.log("hidden", attr);
         return attr == "true" ? "false" : "true";
       });
   });
@@ -30,11 +28,13 @@ jQuery(document).ready(function ($) {
   //toggle sub_menu_open class
   $("nav ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation(); // to stop the 'document handler' from activating
-
     $(this).toggleClass("is_open");
-
-    let subExpanded = $(this).children("a").attr("aria-expanded") === "true";
-    $(this).children("a").attr("aria-expanded", !subExpanded);
+    $(this)
+      .children("a")
+      .attr("aria-expanded", function (index, attr) {
+        console.log("expanded", attr);
+        return attr == "true" ? "false" : "true";
+      });
 
     $(this).children("ul").toggleClass("sub-menu-open");
   });

@@ -178,29 +178,12 @@ button,
 button:focus,
 .btn:focus {
   color: #0085cc;
-  outline: 3px dotted #66758d;
+  outline: 2px dotted #66758d;
   border-radius: 3px;
 }
 button:hover,
 .btn:hover {
   opacity: 1;
-}
-
-section.lightblue button:focus,
-section.lightblue .btn:focus,
-section .lightgrey button:focus,
-section .lightgrey .btn:focus,
-header.lightblue button:focus,
-header.lightblue .btn:focus,
-header .lightgrey button:focus,
-header .lightgrey .btn:focus {
-  outline: 3px dotted #293b70;
-}
-section.white button:focus,
-section.white .btn:focus,
-header.white button:focus,
-header.white .btn:focus {
-  outline: 3px dotted #b5bdc9;
 }
 
 /********************
@@ -215,7 +198,7 @@ a {
 }
 a:focus {
   color: #0085cc;
-  outline: 3px dotted #66758d;
+  outline: 2px dotted #66758d;
   border-radius: 3px;
 }
 a:active {
@@ -227,14 +210,45 @@ a:hover {
   text-decoration: none;
 }
 
+/*****************************
+ buttons & links focus colors
+******************************/
+section.lightblue button:focus,
+section.lightblue .btn:focus,
 section.lightblue a:focus,
-section .lightgrey a:focus,
-header.lightblue a:focus,
-header .lightgrey a:focus {
-  outline: 3px dotted #293b70;
+header.lightblue button:focus,
+header.lightblue .btn:focus,
+header.lightblue a:focus {
+  outline: 2px dotted #293b70;
+}
+section.white button:focus,
+section.white .btn:focus,
+section.white a:focus, section.darkblue button:focus,
+section.darkblue .btn:focus,
+section.darkblue a:focus, section.purpledark button:focus,
+section.purpledark .btn:focus,
+section.purpledark a:focus,
+header.white button:focus,
+header.white .btn:focus,
+header.white a:focus,
+header.darkblue button:focus,
+header.darkblue .btn:focus,
+header.darkblue a:focus,
+header.purpledark button:focus,
+header.purpledark .btn:focus,
+header.purpledark a:focus {
+  outline: 2px dotted #b5bdc9;
 }
 
-/* links with underscore on some sections with Wysiyg */
+footer button:focus,
+footer .btn:focus,
+footer a:focus {
+  outline: 2px dotted #b5bdc9;
+}
+
+/*****************************
+  links with underscore on some sections with Wysiyg 
+******************************/
 .faq_list_section a,
 .two_columns_section a,
 .text_section_pages a,
@@ -1916,7 +1930,7 @@ feature list  (pricing page)
   margin-bottom: 0;
   transition: all 0.3s ease-in-out;
   width: 100%;
-  padding-left: 0;
+  padding: 0;
   border: none;
   background: transparent;
   box-shadow: none;

@@ -137,31 +137,11 @@ button,
   box-shadow: $themeBox_shadow;
   &:focus {
     color: $linkcolor;
-    outline: 3px dotted $themecolorLight;
+    outline: 2px dotted $themecolorLight;
     border-radius: 3px;
   }
   &:hover {
     opacity: 1;
-  }
-}
-section,
-header {
-  &.lightblue,
-  .lightgrey {
-    button,
-    .btn {
-      &:focus {
-        outline: 3px dotted $themecolorBlueDarkLighter;
-      }
-    }
-  }
-  &.white {
-    button,
-    .btn {
-      &:focus {
-        outline: 3px dotted $themecolorLightest;
-      }
-    }
   }
 }
 /********************
@@ -172,7 +152,7 @@ a {
   text-decoration: none;
   &:focus {
     color: $linkcolor;
-    outline: 3px dotted $themecolorLight;
+    outline: 2px dotted $themecolorLight;
     border-radius: 3px;
   }
   &:active {
@@ -187,19 +167,44 @@ a {
     text-decoration: none;
   }
 }
+/*****************************
+ buttons & links focus colors
+******************************/
 section,
 header {
-  &.lightblue,
-  .lightgrey {
+  &.lightblue {
+    button,
+    .btn,
     a {
       &:focus {
-        outline: 3px dotted $themecolorBlueDarkLighter;
+        outline: 2px dotted $themecolorBlueDarkLighter;
+      }
+    }
+  }
+  &.white,
+  &.darkblue,
+  &.purpledark {
+    button,
+    .btn,
+    a {
+      &:focus {
+        outline: 2px dotted $themecolorLightest;
       }
     }
   }
 }
-
-/* links with underscore on some sections with Wysiyg */
+footer {
+  button,
+  .btn,
+  a {
+    &:focus {
+      outline: 2px dotted $themecolorLightest;
+    }
+  }
+}
+/*****************************
+  links with underscore on some sections with Wysiyg 
+******************************/
 .faq_list_section,
 .two_columns_section,
 .text_section_pages,
@@ -481,7 +486,6 @@ header {
       color: #fff;
     }
   }
-
   &.white,
   .lightgrey {
     h1,
@@ -530,7 +534,6 @@ header {
     background: $themecolorPurpleDarkOverlay;
   }
 }
-
 /************************
 main nav
 *************************/
@@ -1585,7 +1588,7 @@ feature list  (pricing page)
       margin-bottom: 0;
       transition: all 0.3s ease-in-out;
       width: 100%;
-      padding-left: 0;
+      padding: 0;
       border: none;
       background: transparent;
       box-shadow: none;
