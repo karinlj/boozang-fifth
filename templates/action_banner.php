@@ -23,7 +23,7 @@ if (get_row_layout() == 'action_banner') { ?>
                     $text = get_sub_field('text');
                     ?>
                 <h2 class="heading"><?php echo $heading; ?></h2>
-                <h5 class=""><?php echo $text; ?></h5>
+                <p class="action_banner_text"><?php echo $text; ?></p>
 
                 <?php
                     $link = get_sub_field('button_link');

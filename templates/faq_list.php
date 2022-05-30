@@ -7,22 +7,22 @@
                 <ul class="list">
 
                     <!-- repeater field called 'list' -->
-                    <?php if (have_rows('list')) {?>
+                    <?php if (have_rows('list')) { ?>
                     <?php while (have_rows('list')) {
-    the_row();
+                            the_row();
 
-    $question = get_sub_field('question');
-    $answer = get_sub_field('answer'); ?>
+                            $question = get_sub_field('question');
+                            $answer = get_sub_field('answer'); ?>
 
                     <li class="info_list_item">
-                        <h5><?php echo $question; ?> </h5>
+                        <h3 class="small_size_text"><?php echo $question; ?> </h3>
                         <p><?php echo $answer; ?> </p>
                     </li>
 
                     <?php
-}
-}
-?>
+                        }
+                    }
+                    ?>
                 </ul>
             </div>
         </div>

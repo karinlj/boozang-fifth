@@ -40,7 +40,7 @@
                         <div class="button_item">
                             <div class="text_section">
                                 <?php if ($heading) { ?>
-                                <h4 class="heading"> <?php echo $heading; ?></h4>
+                                <h3 class="heading"> <?php echo $heading; ?></h3>
                                 <?php
                                             } ?>
                                 <?php if ($text) { ?>

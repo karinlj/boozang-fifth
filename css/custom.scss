@@ -346,8 +346,11 @@ h1 {
 }
 h2 {
   font-size: 1.5rem;
+  @media all and (min-width: $lg-min) {
+    font-size: 1.7em;
+  }
   @media all and (min-width: $xl-min) {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
   &.smaller_size_text {
     font-size: 1.3rem;
@@ -358,19 +361,22 @@ h2 {
 }
 h3 {
   //position: relative;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.4;
+  @media all and (min-width: $lg-min) {
+    font-size: 1.3em;
+  }
   @media all and (min-width: $xl-min) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   &.small_size_text {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
     @media all and (min-width: $md-min) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     @media all and (min-width: $xl-min) {
-      font-size: 1em;
+      font-size: 1rem;
     }
   }
 }
@@ -1515,7 +1521,6 @@ nav.main_menu {
       margin-bottom: 0.2rem;
     }
     .text {
-      font-size: 0.9rem;
       margin-bottom: 0;
     }
   }
@@ -1526,6 +1531,7 @@ nav.main_menu {
     min-height: 15rem;
     li.list_item {
       margin-bottom: 0.8rem;
+      font-size: 0.95rem;
     }
   }
 }
@@ -1771,9 +1777,9 @@ feature list  (pricing page)
   .part {
     position: relative;
     width: 100%;
-    @media all and (min-width: $md-min) {
-      width: 50%;
-    }
+    // @media all and (min-width: $md-min) {
+    //   width: 50%;
+    // }
     &.text {
       @media all and (max-width: $sm-max) {
         order: -1;
@@ -1933,7 +1939,6 @@ feature list  (pricing page)
 /**********************
   pillars
 ***********************/
-
 .pillars_section {
   overflow: hidden;
   display: flex;
@@ -2249,79 +2254,6 @@ feature list  (pricing page)
 }
 
 /**********************
-   latest_features
-***********************/
-.latest_features {
-  margin-top: 2rem;
-  .heading {
-    color: $themecolorLightest;
-    text-transform: uppercase;
-    border-bottom: 1px solid $themeBorderColor;
-    padding-bottom: 0.5rem;
-  }
-  .list {
-    height: 340px;
-    overflow-y: scroll;
-    padding-right: 1rem;
-    .item {
-      position: relative;
-      background: #fff;
-      padding: 1rem 1.7rem;
-      box-shadow: $themeBox_shadow;
-      margin-bottom: 0.8rem;
-      border-radius: $btnBorder_radius;
-      &:hover {
-        .title,
-        .text {
-          transition: 0.25s ease-in-out;
-          color: $themecolorNewBlue;
-        }
-      }
-      .text {
-        font-size: 0.8rem;
-        margin-bottom: 0.1rem;
-        line-height: 1.4;
-      }
-      .date {
-        display: inline;
-        font-size: 10px;
-        color: $linkcolor;
-        padding: 3px 0;
-        text-transform: uppercase;
-      }
-      .link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 20;
-        cursor: pointer;
-        transition: 0.5s ease-in-out;
-        &:hover {
-          box-shadow: $themeBox_shadow_images;
-        }
-      }
-    }
-  }
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 300px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: $themecolorLightest;
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #cddeea;
-    border-radius: 4px;
-  }
-  @media all and (min-width: $lg-min) {
-    margin-top: 0;
-  }
-}
-
-/**********************
    check list
 ***********************/
 .video_checklist_section {
@@ -2483,6 +2415,13 @@ feature list  (pricing page)
     }
     .page-numbers.current {
       color: #b3b3b3;
+    }
+    button {
+      background: transparent;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+      color: $linkcolor;
     }
   }
   // posts
@@ -3230,5 +3169,10 @@ forum section
     &:focus {
       box-shadow: none;
     }
+  }
+  .action_banner_text {
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.1rem;
   }
 }

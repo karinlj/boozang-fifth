@@ -29,19 +29,20 @@
                             $text = get_sub_field('text'); ?>
 
              <div class="col-md-4">
-                 <div class="card <?php
-                                                if ($count == 1) {
-                                                ?>
+                 <div class="card 
+                 <?php
+                            if ($count == 1) {
+                    ?>
              higher
                 <?php
-                                                } elseif ($count == 2) {
+                            } elseif ($count == 2) {
                 ?> blue_darker
                 <?php
-                                                } ?>">
+                            } ?>">
                      <div class="card_body">
                          <header class="pricing_header">
                              <div class="">
-                                 <h4 class="heading"><?php echo $heading; ?></h4>
+                                 <h3 class="heading"><?php echo $heading; ?></h3>
                                  <p class="text"><?php echo $text; ?></p>
                              </div>
                          </header>

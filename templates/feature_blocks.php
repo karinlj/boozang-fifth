@@ -44,7 +44,7 @@ $bg_color = get_sub_field('background_color');
             <div class="<?php echo $col_class; ?>">
                 <section class="single_block <?php echo $color; ?> <?php echo $overlay_color; ?>" <?php echo $style; ?>>
                     <div class="inner_items">
-                        <h4 class="heading"><?php the_sub_field('heading'); ?></h4>
+                        <h3 class="heading"><?php the_sub_field('heading'); ?></h3>
                         <p class="text"><?php the_sub_field('text'); ?></p>
                     </div>
                     <?php if ($link_url) { ?>

@@ -12,8 +12,8 @@ $color = get_sub_field('color_theme');
                     the_row(); ?>
             <div class="col-md">
                 <div class="pillars_item">
-                    <h3 class="pillars_top_heading"><?php the_sub_field('top_heading'); ?></h3>
-                    <h4 class="pillars_heading"><?php the_sub_field('heading'); ?></h4>
+                    <h2 class="pillars_top_heading"><?php the_sub_field('top_heading'); ?></h2>
+                    <h3 class="pillars_heading"><?php the_sub_field('heading'); ?></h3>
                     <p class="text"><?php the_sub_field('text'); ?></p>
                 </div>
             </div>

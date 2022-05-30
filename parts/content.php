@@ -21,7 +21,8 @@ $post_class = 'post_card';
 
         <!-- link if post page  -->
         <?php if (!is_single()) { ?>
-        <a class="post_link" href="<?php the_permalink(); ?>"> </a>
+        <a class="post_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
+        </a>
         <?php } ?>
 
         <!-- content -->

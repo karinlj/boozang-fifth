@@ -406,9 +406,14 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
+@media all and (min-width: 992px) {
+  h2 {
+    font-size: 1.7em;
+  }
+}
 @media all and (min-width: 1200px) {
   h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 h2.smaller_size_text {
@@ -421,26 +426,31 @@ h2.smaller_size_text {
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.4;
+}
+@media all and (min-width: 992px) {
+  h3 {
+    font-size: 1.3em;
+  }
 }
 @media all and (min-width: 1200px) {
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 h3.small_size_text {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
 @media all and (min-width: 768px) {
   h3.small_size_text {
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 }
 @media all and (min-width: 1200px) {
   h3.small_size_text {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
@@ -1850,7 +1860,6 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
   margin-bottom: 0.2rem;
 }
 .pricing_section .pricing_header .text {
-  font-size: 0.9rem;
   margin-bottom: 0;
 }
 .pricing_section ul.feat_list {
@@ -1861,6 +1870,7 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
 }
 .pricing_section ul.feat_list li.list_item {
   margin-bottom: 0.8rem;
+  font-size: 0.95rem;
 }
 
 /*********************
@@ -2113,11 +2123,6 @@ feature list  (pricing page)
 .two_columns_section .part {
   position: relative;
   width: 100%;
-}
-@media all and (min-width: 768px) {
-  .two_columns_section .part {
-    width: 50%;
-  }
 }
 @media all and (max-width: 767.9px) {
   .two_columns_section .part.text {
@@ -2640,79 +2645,6 @@ feature list  (pricing page)
 }
 
 /**********************
-   latest_features
-***********************/
-.latest_features {
-  margin-top: 2rem;
-}
-.latest_features .heading {
-  color: #b5bdc9;
-  text-transform: uppercase;
-  border-bottom: 1px solid #ebebeb;
-  padding-bottom: 0.5rem;
-}
-.latest_features .list {
-  height: 340px;
-  overflow-y: scroll;
-  padding-right: 1rem;
-}
-.latest_features .list .item {
-  position: relative;
-  background: #fff;
-  padding: 1rem 1.7rem;
-  box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
-  margin-bottom: 0.8rem;
-  border-radius: 4px;
-}
-.latest_features .list .item:hover .title,
-.latest_features .list .item:hover .text {
-  transition: 0.25s ease-in-out;
-  color: #0085cc;
-}
-.latest_features .list .item .text {
-  font-size: 0.8rem;
-  margin-bottom: 0.1rem;
-  line-height: 1.4;
-}
-.latest_features .list .item .date {
-  display: inline;
-  font-size: 10px;
-  color: #0085cc;
-  padding: 3px 0;
-  text-transform: uppercase;
-}
-.latest_features .list .item .link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 20;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-.latest_features .list .item .link:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-}
-.latest_features ::-webkit-scrollbar {
-  width: 6px;
-  height: 300px;
-}
-.latest_features ::-webkit-scrollbar-thumb {
-  background-color: #b5bdc9;
-  border-radius: 4px;
-}
-.latest_features ::-webkit-scrollbar-track {
-  background-color: #cddeea;
-  border-radius: 4px;
-}
-@media all and (min-width: 992px) {
-  .latest_features {
-    margin-top: 0;
-  }
-}
-
-/**********************
    check list
 ***********************/
 .video_checklist_section ul.list {
@@ -2905,6 +2837,13 @@ feature list  (pricing page)
 }
 .blog_flow .paginate_links .page-numbers.current {
   color: #b3b3b3;
+}
+.blog_flow .paginate_links button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  color: #0085cc;
 }
 .blog_flow .post_card {
   position: relative;
@@ -3667,6 +3606,11 @@ forum section
 }
 .action_banner .btn:focus {
   box-shadow: none;
+}
+.action_banner .action_banner_text {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=custom.css.map */
