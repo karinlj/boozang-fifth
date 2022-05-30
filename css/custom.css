@@ -1076,7 +1076,7 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
   /*toggle open*/
 }
 .nav-mobile a:focus {
-  outline: 3px dotted #66758d !important;
+  outline: 2px dotted #66758d !important;
 }
 @media all and (min-width: 992px) {
   .nav-mobile {
@@ -1733,7 +1733,7 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
 .header_big .header_items_section .feature_slider_new .tab_list .tab_link:focus,
 .header_small .header_items_section .feature_slider_new .tab_list .tab_link:focus {
   color: #0085cc;
-  outline: 3px dotted #66758d !important;
+  outline: 2px dotted #66758d !important;
   border-radius: 3px;
 }
 .header_big .header_items_section .header_image_section,

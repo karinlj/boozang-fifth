@@ -863,7 +863,7 @@ nav.main_menu {
   transform: translateX(100%);
   transition: transform 0.6s ease;
   a:focus {
-    outline: 3px dotted $themecolorLight !important;
+    outline: 2px dotted $themecolorLight !important;
   }
   @media all and (min-width: $lg-min) {
     display: none;
@@ -1390,7 +1390,7 @@ nav.main_menu {
           }
           &:focus {
             color: $linkcolor;
-            outline: 3px dotted $themecolorLight !important;
+            outline: 2px dotted $themecolorLight !important;
             border-radius: 3px;
           }
         }
