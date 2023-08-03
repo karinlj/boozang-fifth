@@ -60,7 +60,7 @@
                         while ($posts->have_posts()) {
                             $posts->the_post(); ?>
 
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-sm-6 col-lg-3">
                 <div class="video_container">
                     <div class="video_container_inner">
 

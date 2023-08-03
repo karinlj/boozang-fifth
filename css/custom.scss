@@ -17,6 +17,7 @@ body {
   padding: 0;
   background: #fff;
   -webkit-font-smoothing: antialiased;
+  // font-size: 15px;
 }
 body.no_scroll {
   overflow: hidden;
@@ -126,13 +127,14 @@ img {
 button,
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  // padding: 10px 20px;
+  padding: 5px 20px;
   cursor: pointer;
   border-radius: $btnBorder_radius;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   letter-spacing: 0.2px;
   box-shadow: $themeBox_shadow;
   &:focus {
@@ -177,7 +179,7 @@ header {
     .btn,
     a {
       &:focus {
-        outline: 2px dotted $themecolorBlueDarkLighter;
+        outline: 2px dotted $blueDarkLighterBgGradient;
       }
     }
   }
@@ -203,7 +205,7 @@ footer {
   }
 }
 /*****************************
-  links with underscore on some sections with Wysiyg 
+  links with underscore on some sections with Wysiyg
 ******************************/
 .faq_list_section,
 .two_columns_section,
@@ -347,10 +349,10 @@ h1 {
 h2 {
   font-size: 1.5rem;
   @media all and (min-width: $lg-min) {
-    font-size: 1.7em;
+    font-size: 1.9rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   &.smaller_size_text {
     font-size: 1.3rem;
@@ -364,10 +366,10 @@ h3 {
   font-size: 1.3rem;
   line-height: 1.4;
   @media all and (min-width: $lg-min) {
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   &.small_size_text {
     font-size: 0.9rem;
@@ -439,22 +441,49 @@ section,
 header {
   position: relative;
   &.blue {
-    background: $themecolorBlueDarkLighter;
+    background-image: $blueDarkLighterBgGradient;
+    .btn {
+      color: #fff;
+      border: 1px solid #fff;
+      &:nth-child(2) {
+        color: $blueDarkLighterBgGradient;
+        border: 1px solid $blueDarkLighterBgGradient;
+      }
+    }
   }
+  //header buttons
   &.blueDark {
-    background-image: $themecolorBlueDarkBg;
+    background-image: $blueDarkBgGradient;
+    .btn {
+      background: #fff;
+      color: $blueDarkLighterBgGradient;
+      &:hover {
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+      &.transparent {
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        &:hover {
+          background: #fff;
+          color: $blueDark;
+        }
+      }
+    }
+  }
+  &.blueDarkSolid {
+    background: $blueDark;
   }
   &.blueDarkest {
-    background: $themecolorBlueDarkest;
+    background: $blueDarkest;
   }
   &.lightblue {
     background-image: $themecolorNewBlueBg;
   }
   &.purpledark {
-    background-image: $themecolorPurpleDarkBg;
-  }
-  &.purple {
-    background-image: $themecolorPurple;
+    background-image: $purpleDarkBgGradient;
   }
   &.lightgrey {
     background: $lightgrey;
@@ -463,11 +492,11 @@ header {
     background: #fff;
   }
   &.lightblue,
-  &.purple,
   &.purpledark,
   &.blue,
   &.blueDark,
-  &.blueDarkest {
+  &.blueDarkest,
+  &.blueDarkSolid {
     h1,
     h2,
     h3,
@@ -486,8 +515,7 @@ header {
       }
     }
   }
-  &.lightblue,
-  &.purple {
+  &.lightblue {
     p {
       color: #fff;
     }
@@ -508,7 +536,7 @@ header {
     .banner_link {
       color: $themecolorNewBlue;
       &:before {
-        background: $themecolorBlueDark;
+        background: $blueDark;
       }
     }
   }
@@ -528,7 +556,7 @@ header {
     }
   }
   &.overlay-blue::before {
-    background: $themecolorBlueDarkOverlay;
+    background: $blueDarkOverlay;
   }
   &.overlay-lightblue::before {
     background: $themecolorBlueOverlay;
@@ -801,6 +829,7 @@ nav.main_menu {
   @media all and (min-width: $lg-min) {
     justify-content: space-between;
     flex-direction: row;
+    margin-left: 6rem;
   }
 }
 .signup {
@@ -812,30 +841,29 @@ nav.main_menu {
   ul {
     li {
       &:last-of-type {
-        @media all and (min-width: $lg-min) {
-          border-left: 1px solid #fff;
-        }
+        // @media all and (min-width: $lg-min) {
+        //   border-left: 1px solid #fff;
+        // }
         a {
           color: #333;
           background-color: #fff;
           border: 1px solid #fff;
           margin: 0 0 0 1.2rem;
           border-radius: $btnBorder_radius;
-          padding: 10px 20px;
+          padding: 5px 20px;
           cursor: pointer;
           line-height: 1.2;
           font-weight: 600;
           transition: all 0.5s ease;
-          text-transform: uppercase;
-          font-size: 0.85em;
-          letter-spacing: 0.5px;
+          // font-size: 0.9rem;
+          letter-spacing: 0.2px;
           box-shadow: $themeBox_shadow;
-          @media all and (min-width: $lg-min) {
-            font-size: 0.7em;
-          }
-          @media all and (min-width: $xl-min) {
-            font-size: 0.85em;
-          }
+          // @media all and (min-width: $lg-min) {
+          //   font-size: 0.7em;
+          // }
+          // @media all and (min-width: $xl-min) {
+          //   font-size: 0.85em;
+          // }
           &:hover {
             color: $themecolorNewBlue;
             background: #fff;
@@ -855,7 +883,7 @@ nav.main_menu {
   z-index: 500;
   top: 0;
   left: 0;
-  background: $themecolorBlueDarkest;
+  background: $blueDarkest;
   opacity: 0.98;
   padding: 0 10%;
   padding-top: 20px;
@@ -979,79 +1007,79 @@ nav.main_menu {
 /************************
    header
 *************************/
-.header_big {
-  min-height: 600px;
-  @media all and (min-width: $sm-min) {
-    min-height: 550px;
-  }
-  @media all and (min-width: $lg-min) {
-    min-height: 650px;
-  }
-}
+// .header_big {
+//   min-height: 600px;
+//   @media all and (min-width: $sm-min) {
+//     min-height: 550px;
+//   }
+//   @media all and (min-width: $lg-min) {
+//     min-height: 650px;
+//   }
+// }
 .header_small {
-  min-height: 400px;
+  min-height: 350px;
 }
 .header_big,
 .header_small {
   //background and overlay: see scss section
-  .header_links_section {
-    display: flex;
-    flex-direction: column;
-    .header_btn_section {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1rem;
-      @media all and (min-width: $sm-min) {
-        flex-direction: row;
-      }
-    }
-    a {
-      margin-right: 1rem;
-      width: 100%;
-      margin-bottom: 1rem;
-      @media all and (min-width: $sm-min) {
-        width: auto;
-      }
-    }
-    //default: non white
-    .signup_btn {
-      background: #fff;
-      border: 1px solid #fff;
-      &:hover {
-        color: #fff;
-        background: transparent;
-      }
-    }
-    .demo_btn {
-      background: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-      &:hover {
-        background: #fff;
-      }
-    }
-    a.play_btn {
-      margin: auto;
-      @media all and (min-width: $sm-min) {
-        margin-right: auto;
-        margin-left: 0;
-      }
-    }
-  }
+  // .header_links_section {
+  //   display: flex;
+  //   flex-direction: column;
+  //   .header_btn_section {
+  //     display: flex;
+  //     flex-direction: column;
+  //     margin-bottom: 1rem;
+  //     @media all and (min-width: $sm-min) {
+  //       flex-direction: row;
+  //     }
+  //   }
+  //   a {
+  //     margin-right: 1rem;
+  //     width: 100%;
+  //     margin-bottom: 1rem;
+  //     @media all and (min-width: $sm-min) {
+  //       width: auto;
+  //     }
+  //   }
+  //default: non white
+  // .signup_btn {
+  //   background: #fff;
+  //   border: 1px solid #fff;
+  //   &:hover {
+  //     color: #fff;
+  //     background: transparent;
+  //   }
+  // }
+  // .demo_btn {
+  //   background: transparent;
+  //   border: 1px solid #fff;
+  //   color: #fff;
+  //   &:hover {
+  //     background: #fff;
+  //   }
+  // }
+  // a.play_btn {
+  //   margin: auto;
+  //   @media all and (min-width: $sm-min) {
+  //     margin-right: auto;
+  //     margin-left: 0;
+  //   }
+  // }
+  //}
   //btns under text
   //blue
-  &.blueDark,
-  &.blueDarkest {
-    .signup_btn {
-      color: $themecolorBlueDark;
-    }
-    .demo_btn {
-      &:hover {
-        color: $themecolorBlueDark;
-      }
-    }
+  &.blueDark {
+    // .btn {
+    //   color: $blueDark;
+    //   border: white;
+    // }
+    // .demo_btn {
+    //   &:hover {
+    //     color: $blueDark;
+    //   }
+    // }
     .signup ul li:last-of-type a {
-      color: $themecolorBlueDark;
+      color: $blueDark;
       &:hover {
         color: #fff;
         background: transparent;
@@ -1060,14 +1088,14 @@ nav.main_menu {
   }
   //lightblue
   &.lightblue {
-    .signup_btn {
+    .btn {
       color: $themecolorNewBlue;
     }
-    .demo_btn {
-      &:hover {
-        color: $themecolorNewBlue;
-      }
-    }
+    // .demo_btn {
+    //   &:hover {
+    //     color: $themecolorNewBlue;
+    //   }
+    // }
     .signup ul li:last-of-type a {
       background: transparent;
       color: #fff;
@@ -1078,14 +1106,14 @@ nav.main_menu {
     }
   }
   &.purpledark {
-    .signup_btn {
+    .btn {
       color: $themecolorPurpleDark;
     }
-    .demo_btn {
-      &:hover {
-        color: $themecolorPurpleDark;
-      }
-    }
+    // .demo_btn {
+    //   &:hover {
+    //     color: $themecolorPurpleDark;
+    //   }
+    // }
     .signup ul li:last-of-type a {
       background: transparent;
       color: #fff;
@@ -1098,14 +1126,14 @@ nav.main_menu {
   //lightgrey bg and NAV dark-color
   &.white,
   .lightgrey {
-    .signup_btn {
+    .btn {
       color: $themecolor;
     }
-    .demo_btn {
-      &:hover {
-        color: $themecolor;
-      }
-    }
+    // .demo_btn {
+    //   &:hover {
+    //     color: $themecolor;
+    //   }
+    // }
     .signup ul li:last-of-type a {
       color: $navcolorDark;
       background: transparent;
@@ -1236,7 +1264,7 @@ nav.main_menu {
       padding: 0 calc(3rem - 15px) 2rem calc(3rem - 15px);
     }
     @media all and (min-width: $xl-min) {
-      padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
+      padding: 0 calc(3.75rem - 15px) 2rem calc(3.75rem - 15px);
     }
     .header_heading {
       margin-bottom: 1.5rem;
@@ -1244,30 +1272,16 @@ nav.main_menu {
       @media all and (max-width: $xs-max) {
         text-align: center;
       }
-      &.front {
-        text-align: center;
-        @media all and (min-width: $sm-min) {
-          text-align: left;
-          font-size: 2.5rem;
-          margin-right: 5rem;
-        }
-      }
     }
     .header_text {
       max-width: 470px;
-      margin: 0 auto 1.5rem auto;
-      font-size: 1.2rem;
+      margin: 0 auto 2rem auto;
+      font-size: 1.1rem;
       text-align: center;
       @media all and (min-width: $sm-min) {
-        font-size: 1.3em;
-      }
-      &.front {
-        text-align: center;
-        margin-left: 0;
-        @media all and (min-width: $sm-min) {
-          text-align: left;
-          margin-right: 5rem;
-        }
+        max-width: 570px;
+        font-size: 1.2rem;
+        margin: 0 auto 3rem auto;
       }
     }
     .btn_links {
@@ -1275,157 +1289,173 @@ nav.main_menu {
       margin: 0;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       @media all and (min-width: $md-min) {
         flex-direction: row;
       }
       .btn_container {
-        .btn {
-          background: transparent;
-          color: $themecolorNewBlue;
-          border: 1px solid $themecolorNewBlue;
-          padding: 10px 15px;
-          transition: 0.5s ease-in-out;
-          &:hover {
-            background: $themecolorNewBlue;
-            color: #fff;
-            border: 1px solid $themecolorNewBlue;
-            box-shadow: none;
-          }
-          &:active {
-            box-shadow: none;
-          }
-          &:focus {
-            box-shadow: none;
-          }
-        }
+        // .btn {
+        //   background: transparent;
+        //   color: $themecolorNewBlue;
+        //   border: 1px solid $themecolorNewBlue;
+        //   padding: 10px 15px;
+        //   transition: 0.5s ease-in-out;
+        //   &:hover {
+        //     background: $themecolorNewBlue;
+        //     color: #fff;
+        //     border: 1px solid $themecolorNewBlue;
+        //     box-shadow: none;
+        //   }
+        //   &:active {
+        //     box-shadow: none;
+        //   }
+        //   &:focus {
+        //     box-shadow: none;
+        //   }
+        // }
         margin-bottom: 1rem;
         @media all and (min-width: $md-min) {
           margin-bottom: 0;
         }
       }
+      .btn {
+        margin-right: 1rem;
+      }
     }
     //feature_slider
-    .feature_slider_new {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      @media all and (min-width: $lg-min) {
-        align-items: flex-end;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      img {
-        height: auto;
-        @media all and (min-width: $sm-min) {
-          height: 415px;
-        }
-        @media all and (min-width: $lg-min) {
-          height: 350px;
-        }
-        @media all and (min-width: $xl-min) {
-          height: 415px;
-        }
-      }
-      //content
-      .tab_content {
-        border-radius: $themeBorder_radius;
-        box-shadow: $themeBox_shadow;
-        display: none;
-        &[aria-hidden="false"] {
-          display: block;
-        }
-      }
-      .tab_video_content {
-        border-radius: $themeBorder_radius;
-        box-shadow: $themeBox_shadow;
-        display: none;
-        // position: relative;
-        padding-bottom: 56.25%;
-        overflow: hidden;
-        max-width: 100%;
-        height: auto;
-        &[aria-hidden="false"] {
-          display: block;
-        }
-        iframe,
-        object,
-        embed {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 86%;
-          border-radius: $themeBorder_radius;
-          box-shadow: $themeBox_shadow;
-        }
-      }
-      //link
-      .tab_list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        padding-top: 1rem;
-        .tab_link {
-          display: inline-block;
-          padding: 0.2rem 0;
-          margin-right: 1.5rem;
-          margin-bottom: 0.5rem;
-          font-weight: 400;
-          border-radius: 0;
-          color: #fff;
-          background: transparent;
-          border: none;
-          border-bottom: 2px solid transparent;
-          cursor: pointer;
-          transition: all 0.3s ease-in;
-          &:last-child {
-            margin-right: 0;
-          }
-          &[aria-selected="true"] {
-            border-color: $linkcolor;
-          }
-          &:focus {
-            color: $linkcolor;
-            outline: 2px dotted $themecolorLight !important;
-            border-radius: 3px;
-          }
-        }
-      }
-    }
+    // .feature_slider_new {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    //   margin-top: 3rem;
+    //   margin-bottom: 1rem;
+    //   @media all and (min-width: $lg-min) {
+    //     align-items: flex-end;
+    //     margin-top: 0;
+    //     margin-bottom: 0;
+    //   }
+    //   img {
+    //     height: auto;
+    //     @media all and (min-width: $sm-min) {
+    //       height: 415px;
+    //     }
+    //     @media all and (min-width: $lg-min) {
+    //       height: 350px;
+    //     }
+    //     @media all and (min-width: $xl-min) {
+    //       height: 415px;
+    //     }
+    //   }
+    //   //content
+    //   .tab_content {
+    //     border-radius: $themeBorder_radius;
+    //     box-shadow: $themeBox_shadow;
+    //     display: none;
+    //     &[aria-hidden="false"] {
+    //       display: block;
+    //     }
+    //   }
+    //   .tab_video_content {
+    //     border-radius: $themeBorder_radius;
+    //     box-shadow: $themeBox_shadow;
+    //     display: none;
+    //     // position: relative;
+    //     padding-bottom: 56.25%;
+    //     overflow: hidden;
+    //     max-width: 100%;
+    //     height: auto;
+    //     &[aria-hidden="false"] {
+    //       display: block;
+    //     }
+    //     iframe,
+    //     object,
+    //     embed {
+    //       position: absolute;
+    //       top: 0;
+    //       left: 0;
+    //       width: 100%;
+    //       height: 86%;
+    //       border-radius: $themeBorder_radius;
+    //       box-shadow: $themeBox_shadow;
+    //     }
+    //   }
+    //   //link
+    //   .tab_list {
+    //     list-style: none;
+    //     margin: 0;
+    //     padding: 0;
+    //     padding-top: 1rem;
+    //     .tab_link {
+    //       display: inline-block;
+    //       padding: 0.2rem 0;
+    //       margin-right: 1.5rem;
+    //       margin-bottom: 0.5rem;
+    //       font-weight: 400;
+    //       border-radius: 0;
+    //       color: #fff;
+    //       background: transparent;
+    //       border: none;
+    //       border-bottom: 2px solid transparent;
+    //       cursor: pointer;
+    //       transition: all 0.3s ease-in;
+    //       &:last-child {
+    //         margin-right: 0;
+    //       }
+    //       &[aria-selected="true"] {
+    //         border-color: $linkcolor;
+    //       }
+    //       &:focus {
+    //         color: $linkcolor;
+    //         outline: 2px dotted $themecolorLight !important;
+    //         border-radius: 3px;
+    //       }
+    //     }
+    //   }
+    // }
     //header_image
-    .header_image_section {
-      img {
-        max-width: 230px;
-      }
-      text-align: center;
-      display: none;
-      @media all and (min-width: $lg-min) {
-        display: block;
-      }
-    }
+    // .header_image_section {
+    //   img {
+    //     max-width: 230px;
+    //   }
+    //   text-align: center;
+    //   display: none;
+    //   @media all and (min-width: $lg-min) {
+    //     display: block;
+    //   }
+    // }
   }
 }
 //header items
-.header_big {
-  .header_items_section {
-    padding-top: calc(500px / 3);
-    @media all and (min-width: $sm-min) {
-      //padding-top: calc(500px / 3);
-    }
-  }
-}
+// .header_big {
+//   .header_items_section {
+//     padding-top: calc(500px / 3);
+//     @media all and (min-width: $sm-min) {
+//       //padding-top: calc(500px / 3);
+//     }
+//   }
+// }
 .header_small {
   .header_items_section {
     text-align: center;
-    padding-top: 160px;
+    padding-top: 130px;
     @media all and (min-width: $sm-min) {
-      padding-top: 170px;
+      padding-top: 140px;
     }
   }
+}
+
+.colored_part {
+  background-image: linear-gradient(
+    to right,
+    #f24d7f,
+    #db4f92,
+    #bf549f,
+    #9f59a6,
+    #7e5da6
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*********************
@@ -1468,7 +1498,7 @@ nav.main_menu {
       }
     }
     .btn {
-      background: $themecolorNewBlueDarker;
+      background: $themecolorNewblueDarker;
       color: #fff;
       margin-top: 1rem;
       position: absolute;
@@ -1678,84 +1708,84 @@ feature list  (pricing page)
 }
 
 /*********************
-   get started banner 
+   get started banner
 *********************/
-.get_started_banner {
-  //background and overlay: see scss section
-  // min-height: 350px;
-  height: 420px;
-  .sub_info_part {
-    p {
-      font-size: 1.2rem;
-    }
-    &.smallscreen {
-      display: block;
-      margin-top: 2rem;
-      @media all and (min-width: $lg-min) {
-        display: none;
-      }
-    }
-    &.bigscreen {
-      display: none;
-      @media all and (min-width: $lg-min) {
-        display: block;
-        margin-right: 1rem;
-      }
-    }
-  }
-  h2 {
-    margin-bottom: 3rem;
-  }
-  h5,
-  h2,
-  p {
-    color: #fff;
-    &::before {
-      font-weight: 600;
-      font-size: 40px;
-      color: #fff;
-    }
-  }
-  .action_items {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    @media all and (min-width: $sm-min) {
-      flex-direction: row;
-    }
-    .action_item {
-      padding-right: 0.7rem;
-      width: 100%;
-      @media all and (min-width: $md-min) {
-        align-items: flex-start;
-      }
-      @media all and (min-width: $lg-min) {
-        align-items: flex-start;
-      }
-      &:nth-of-type(1) {
-        h5 {
-          &::before {
-            content: "1";
-          }
-        }
-      }
-      &:nth-of-type(2) {
-        h5 {
-          &::before {
-            content: "2";
-          }
-        }
-      }
-      &:nth-of-type(3) {
-        h5 {
-          &::before {
-            content: "3";
-          }
-        }
-      }
-    }
-  }
-}
+// .get_started_banner {
+//   //background and overlay: see scss section
+//   // min-height: 350px;
+//   height: 420px;
+//   .sub_info_part {
+//     p {
+//       font-size: 1.2rem;
+//     }
+//     &.smallscreen {
+//       display: block;
+//       margin-top: 2rem;
+//       @media all and (min-width: $lg-min) {
+//         display: none;
+//       }
+//     }
+//     &.bigscreen {
+//       display: none;
+//       @media all and (min-width: $lg-min) {
+//         display: block;
+//         margin-right: 1rem;
+//       }
+//     }
+//   }
+//   h2 {
+//     margin-bottom: 3rem;
+//   }
+//   h5,
+//   h2,
+//   p {
+//     color: #fff;
+//     &::before {
+//       font-weight: 600;
+//       font-size: 40px;
+//       color: #fff;
+//     }
+//   }
+//   .action_items {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end;
+//     @media all and (min-width: $sm-min) {
+//       flex-direction: row;
+//     }
+//     .action_item {
+//       padding-right: 0.7rem;
+//       width: 100%;
+//       @media all and (min-width: $md-min) {
+//         align-items: flex-start;
+//       }
+//       @media all and (min-width: $lg-min) {
+//         align-items: flex-start;
+//       }
+//       &:nth-of-type(1) {
+//         h5 {
+//           &::before {
+//             content: "1";
+//           }
+//         }
+//       }
+//       &:nth-of-type(2) {
+//         h5 {
+//           &::before {
+//             content: "2";
+//           }
+//         }
+//       }
+//       &:nth-of-type(3) {
+//         h5 {
+//           &::before {
+//             content: "3";
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 /*************************
   two columns img or text
@@ -1811,7 +1841,7 @@ feature list  (pricing page)
       position: relative;
       .pict {
         border-radius: $themeBorder_radius;
-        box-shadow: $themeBox_shadow;
+        // box-shadow: $themeBox_shadow;
         width: 100%;
         height: auto;
         transition: all 1.5s 0.5s; //how fast with delay
@@ -1831,9 +1861,9 @@ feature list  (pricing page)
   }
   //story fields
   &.story {
-    padding: 4rem 0 0 0;
+    padding: 3rem 0 0 0;
     @media all and (min-width: $md-min) {
-      padding: 7rem 0 0 0;
+      padding: 5rem 0 0 0;
     }
     .header {
       text-align: center;
@@ -1871,42 +1901,20 @@ feature list  (pricing page)
       }
       &:last-child {
         //fix mobile
-        padding-bottom: 7rem;
+        padding-bottom: 5rem;
       }
       .part {
         &.text {
           padding-bottom: 3rem;
         }
-        .small_title {
-          font-weight: 700;
-          font-size: 17px;
-          color: #cfd5de;
-          letter-spacing: 0;
-          line-height: 36px;
-          .number {
-            font-size: 70px;
-            font-weight: 700;
-            color: #e1e6ed;
-            letter-spacing: 0;
-          }
-        }
-        h3 {
-          font-size: 1em;
-          font-weight: 600;
-          @media all and (min-width: $md-min) {
-            font-size: 1.1em;
-          }
-          @media all and (min-width: $xl-min) {
-            font-size: 1.1em;
-          }
-        }
+
         &.image {
           &::before {
             content: "";
           }
           img {
             border-radius: $themeBorder_radius;
-            box-shadow: $themeBox_shadow_images;
+            // box-shadow: $themeBox_shadow_images;
             transition: none;
             @media all and (min-width: $lg-min) {
               max-width: 450px;
@@ -1915,6 +1923,12 @@ feature list  (pricing page)
               transform: scale(1);
             }
           }
+        }
+      }
+      .arrow_link {
+        color: $themecolorPink;
+        &::before {
+          background: $themecolorPink;
         }
       }
     }
@@ -1980,9 +1994,6 @@ feature list  (pricing page)
     padding-bottom: 2rem;
     p {
       font-size: 1.2rem;
-    }
-    @media all and (min-width: $lg-min) {
-      padding-bottom: 0;
     }
   }
   .icon_section {
@@ -2154,7 +2165,8 @@ feature list  (pricing page)
     .content_container_inner {
       margin-bottom: 1rem;
       position: relative;
-      height: 180px;
+      // height: 180px;
+      height: 160px;
       overflow: hidden;
       &:before {
         content: "";
@@ -2276,10 +2288,10 @@ feature list  (pricing page)
 }
 
 /*********************
-        Blog 
+        Blog
  *********************/
-/* 
-* Categories menu  
+/*
+* Categories menu
 */
 .blog-sidebar,
 .video_filter {
@@ -2835,22 +2847,21 @@ big_image_center
     margin: 0 auto;
   }
   .image_part {
-    padding-top: 2rem;
+    padding-top: 1rem;
     a:hover {
       opacity: 1;
     }
   }
   img {
     border-radius: $themeBorder_radius;
-    box-shadow: $themeBox_shadow_images;
     transition: 0.5s ease-in-out;
-    &:hover {
-      box-shadow: $themeBox_shadow_images_hover;
-    }
+    // &:hover {
+    //   box-shadow: $themeBox_shadow_images_hover;
+    // }
   }
 }
 /*********************************
-  feature blocks 
+  feature blocks
   - blocks in different colors or bg image
 ***********************************/
 .feature_blocks {
@@ -2908,10 +2919,10 @@ big_image_center
       }
     }
     &.blue {
-      background: $themecolorBlueDarkLighter;
+      background: $blueDarkLighterBgGradient;
     }
     &.green {
-      background: $themecolorBlueDarkest;
+      background: $blueDarkest;
     }
     &.lightblue {
       background-image: $themecolorNewBlueBg;
@@ -2977,59 +2988,45 @@ forum section
 *********************/
 //signup for pages
 .signup_section {
-  background: #fff;
-  .col-md-6:first-child {
-    @media all and (min-width: $md-min) {
-      border-right: 1px solid $themeBorderColor;
-    }
-  }
-  .button_item {
-    margin-bottom: 3rem;
-    @media all and (min-width: $md-min) {
-      margin-bottom: 0;
-    }
-    .text_section {
-      text-align: center;
-      p {
-        color: $themecolorLight;
-      }
-    }
+  background: $blueDark;
+  p,
+  h2 {
+    color: #fff;
   }
   .btn_container {
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     .btn {
-      background: transparent;
-      border: 1px solid $themecolorNewBlue;
-      color: $themecolorNewBlue;
-      padding: 10px 45px;
+      background: #fff;
+      color: $blueDark;
+      // padding: 10px 45px;
       transition: 0.5s ease-in-out;
       &:hover {
-        background: $themecolorNewBlue;
+        background: $blueDark;
         color: #fff;
-        border: 1px solid $themecolorNewBlue;
-        box-shadow: none;
+        border: 1px solid #fff;
       }
-      &:active {
-        box-shadow: none;
-      }
-      &:focus {
-        box-shadow: none;
-      }
+      // &:active {
+      //   box-shadow: none;
+      // }
+      // &:focus {
+      //   box-shadow: none;
+      // }
     }
   }
 }
 .footer-main {
-  background: $themecolorBlueDarkest;
+  background: $blueDark;
   width: 100%;
   @include d-inline-flex;
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  min-height: 700px;
+  min-height: 300px;
   @media all and (min-width: $md-min) {
-    min-height: 550px;
+    min-height: 350px;
   }
   img {
     width: 140px;
@@ -3056,7 +3053,7 @@ forum section
     }
     a {
       color: $themecolorFront;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       &:hover {
         text-decoration: none;
       }
@@ -3109,9 +3106,9 @@ forum section
   .footer-copy {
     .copy {
       p {
-        border-top: 1px solid $themecolorBlueDark;
+        border-top: 1px solid $blueDark;
         color: #cbd6e2;
-        font-size: 75%;
+        font-size: 70%;
         margin-bottom: -1rem;
         padding-top: 1rem;
         a {
@@ -3137,7 +3134,7 @@ forum section
 }
 
 /******************************
-    Cookies plugin 
+    Cookies plugin
 *******************************/
 .cookie-notice-container {
   span {

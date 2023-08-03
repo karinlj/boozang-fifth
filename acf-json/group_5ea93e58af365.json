@@ -6,7 +6,8 @@
             "key": "field_5ea93e627bfcc",
             "label": "Heading pages",
             "name": "heading_pages",
-            "type": "text",
+            "aria-label": "",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,15 +17,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_5ea93ea47bfcd",
             "label": "Header text pages",
             "name": "header_text_pages",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -44,6 +46,7 @@
             "key": "field_60670396d9f58",
             "label": "Btn links",
             "name": "btn_links",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -57,12 +60,13 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Add Row",
             "sub_fields": [
                 {
                     "key": "field_606703b4d9f59",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -72,9 +76,37 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_60670396d9f58"
+                },
+                {
+                    "key": "field_64c828e440203",
+                    "label": "Btn color",
+                    "name": "btn_color",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "white": "White",
+                        "transparent": "Transparent"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_60670396d9f58"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         }
     ],
     "location": [
@@ -98,6 +130,13 @@
                 "operator": "==",
                 "value": "page-comparison-chart.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "front-page.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -108,5 +147,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617745384
+    "show_in_rest": 0,
+    "modified": 1691072106
 }

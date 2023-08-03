@@ -29,35 +29,25 @@
     $heading_pages = get_field('heading_pages');
     $header_text_pages = get_field('header_text_pages');
     $header_btn_links = get_field('btn_links');
-
     ?>
     <?php if (is_singular('post')) {
         $col_class = 'col-md-10 offset-md-1';
     }
-
-    // header class
-    if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_page('beta')) {
-        $header_class = 'header_big';
-    }
-
     // header background
     if (get_field('color_theme')) {
         $color = get_field('color_theme');
     } elseif (get_field('color_default', 'option')) { //default header background
         $color = get_field('color_default', 'option');
     }
-
     // header background image
     if ($header_bgImage) {
         $style = 'style="background: url(\'' . wp_get_attachment_url($header_bgImage, 'full') . '\') no-repeat center;
   background-size: cover"';
         $overlay_color = get_field('overlay_color');
     }
-
     if (is_home() || is_singular('post') || is_archive()) {
         $color = get_field('color_theme', get_option('page_for_posts')); //for blog
         $header_bgImage = get_field('header_image', get_option('page_for_posts'));
-
         if ($header_bgImage) {
             $style = 'style="background: url(\'' . wp_get_attachment_url($header_bgImage, 'full') . '\') no-repeat center;
   background-size: cover"';
@@ -77,12 +67,14 @@
                     <!-- column for pages-->
                     <div class="<?php echo $col_class; ?>">
 
+                        <!-- vad är detta tro? -->
                         <?php if (is_home() || is_archive()) { //for blog
                             $heading_pages = get_field('heading_pages', get_option('page_for_posts'));
                             $header_text_pages = get_field('header_text_pages', get_option('page_for_posts'));
                         } ?>
                         <h1 class="header_heading">
                             <?php echo $heading_pages; ?>
+
                             <!-- title in header for single post -->
                             <?php if (is_singular('post')) : the_title();
                             endif; ?>
@@ -91,140 +83,24 @@
                             <?php echo $header_text_pages; ?>
                         </p>
                     </div>
-
-                    <!-- column / columns for front pages-->
-                    <?php
-                    if (is_front_page() || is_page('lp1') || is_page('lp2') || is_page('lp3') || is_page('beta')) {
-
-                        // half column width
-                        if (get_field('half_width') == 'small') {
-                            $col_class = 'col-12 col-lg-6';
-                        } elseif (get_field('half_width') == 'large') {
-                            $col_class = 'col-md-10 offset-md-1';
-                        } ?>
-                    <div class="<?php echo $col_class; ?>">
-                        <!-- heading, text, buttons -->
-                        <?php //Loop flex content for layouts of header_items
-                            if (have_rows('header_items')) {
-                                while (have_rows('header_items')) {
-                                    the_row();
-
-                                    $layout = get_row_layout();
-                                    // load the layout from  templates folder
-                                    get_template_part('templates/' . $layout);
-                                }
-                            } ?>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <!-- header small image -->
-                        <?php if (get_field('header_small_image')) { ?>
-                        <div class="header_image_section">
-                            <?php $img_id = get_field('header_small_image');
-                                    echo wp_get_attachment_image($img_id, 'full'); ?>
-                        </div>
-                        <?php } ?>
-
-                        <?php if (isset($_GET['tab'])) {
-                                $tab = $_GET['tab'];
-                            } else {
-                                $tab = 1;
-                            }
-                            $tab = $tab ? $tab : 1; ?>
-
-                        <!-- I have <?php echo $tab; ?> -->
-
-                        <!-- feature_slider -->
-                        <?php if (have_rows('feature_slider')) { ?>
-                        <section class="feature_slider_new">
-                            <?php
-                                    $i = 0;
-                                    while (have_rows('feature_slider')) {
-                                        the_row();
-                                        $i++; ?>
-                            <!-- I have <?php echo $i; ?> I -->
-                            <?php
-                                        $image = get_sub_field('img');
-                                        //echo $image;
-                                        if (!empty($image)) {
-
-                                            if ($i == $tab) { ?>
-                            <img id="tab_id_<?php echo $i ?>" class="tab_content" role="tabpanel" aria-hidden="false"
-                                src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-                            <?php } else { ?>
-
-                            <img id="tab_id_<?php echo $i ?>" class="tab_content" role="tabpanel" aria-hidden="true"
-                                src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                            <?php } ?>
-
-                            <?php }
-                                        $video = get_sub_field('video');
-                                        if (!empty($video)) {
-
-                                            if ($i == $tab) { ?>
-                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content" role="tabpanel"
-                                aria-hidden="true"><?php echo $video; ?>
-                            </div>
-
-                            <?php } else { ?>
-
-                            <div id="tab_id_<?php echo $i ?>" class="tab_video_content" role="tabpanel"
-                                aria-hidden="false"><?php echo $video; ?></div>
-                            <?php }
-                                        }
-                                    } ?>
-                            <div class="tab_list" role="tablist">
-                                <?php $j = 0;
-                                        while (have_rows('feature_slider')) {
-                                            the_row();
-                                            $j++; ?>
-                                <!-- I have <?php echo $j; ?> J -->
-
-                                <?php if (get_sub_field('tab_link')) { ?>
-
-                                <?php if ($j == $tab) { ?>
-
-                                <button role="tab" class="tab_link" data_tab="tab_id_<?php echo $j ?>"
-                                    aria-controls="tab_id_<?php echo $j ?>" aria-selected="true">
-                                    <?php the_sub_field('tab_link'); ?>
-                                </button>
-
-
-
-                                <?php } else { ?>
-
-                                <button role="tab" class="tab_link" data_tab="tab_id_<?php echo $j ?>"
-                                    aria-controls="tab_id_<?php echo $j ?>" aria-selected="false">
-                                    <?php the_sub_field('tab_link'); ?>
-                                </button>
-
-                                <?php }
-                                            }
-                                        } ?>
-                            </div>
-                        </section>
-                        <?php } ?>
-                    </div>
-                    <?php
-                    }
-                    ?>
-                    <!-- row -->
                 </div>
                 <!-- btn links -->
                 <div class="row justify-content-center">
-                    <div class="col-lg-10 col-xl-8">
+                    <div class="col-md-10 col-lg-6">
                         <ul class="btn_links">
                             <!-- repeater field -->
                             <?php
                             if (have_rows('btn_links')) { ?>
                             <?php while (have_rows('btn_links')) {
                                     the_row();
-                                    $link = get_sub_field('link'); ?>
+                                    $link = get_sub_field('link');
 
+                                    $btn_color = get_sub_field('btn_color'); ?>
                             <div class="btn_container">
                                 <?php
                                         if ($link) { ?>
-                                <a class="btn link" href="<?php echo $link['url']; ?>" rel="noopener noreferrer"
+                                <a class="btn link <?php echo $btn_color; ?>" href="<?php echo $link['url']; ?>"
+                                    rel="noopener noreferrer"
                                     target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
                                 </a>
                                 <?php } ?>

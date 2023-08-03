@@ -3,9 +3,50 @@
     "title": "Sign up field",
     "fields": [
         {
+            "key": "field_64c96fefd2bb3",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_64c92e7661c24",
+            "label": "Text",
+            "name": "text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_60647dc19c419",
             "label": "Sign up btns",
             "name": "sign_up_btns",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -15,54 +56,19 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
-                {
-                    "key": "field_60647dd99c41a",
-                    "label": "Heading",
-                    "name": "heading",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_60647dde9c41b",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
                 {
                     "key": "field_60647de59c41c",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -72,7 +78,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_60647dc19c419"
                 }
             ]
         }
@@ -94,5 +101,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617198590
+    "show_in_rest": 0,
+    "modified": 1690923142
 }

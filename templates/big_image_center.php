@@ -14,7 +14,7 @@ if (get_row_layout() == 'big_image_center') { ?>
     $image = wp_get_attachment_image_src($img_id, 'full');
     $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true); ?>
 
-<section class="big_image_center <?php echo $color; ?> section_spacing_top_small">
+<section class="big_image_center <?php echo $color; ?> section_spacing_top_mini">
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
