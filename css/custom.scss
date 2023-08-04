@@ -18,6 +18,7 @@ body {
   background: #fff;
   -webkit-font-smoothing: antialiased;
   // font-size: 15px;
+  letter-spacing: 0.2px;
 }
 body.no_scroll {
   overflow: hidden;
@@ -207,37 +208,36 @@ footer {
 /*****************************
   links with underscore on some sections with Wysiyg
 ******************************/
-.faq_list_section,
-.two_columns_section,
-.text_section_pages,
-.post_text {
-  a {
-    display: inline-block;
-    position: relative;
-    &:before {
-      opacity: 0.4;
-      position: absolute;
-      bottom: 0;
-      left: 1px;
-      content: "";
-      width: 100%;
-      // width: 0;
-      height: 2px;
-      background: $linkcolor;
-      -webkit-transition: width 0.2s ease-in;
-      transition: width 0.2s ease-in;
-    }
-    &:hover {
-      opacity: 1;
-      &:before {
-        width: 100%;
-        opacity: 0.7;
-      }
-    }
-  }
-}
-//class for link with arrow
-a.arrow_link {
+// .faq_list_section,
+// .two_columns_section,
+// .text_section_pages,
+// .post_text {
+//   a {
+//     display: inline-block;
+//     position: relative;
+//     &:before {
+//       opacity: 0.4;
+//       position: absolute;
+//       bottom: 0;
+//       left: 1px;
+//       content: "";
+//       width: 100%;
+//       height: 2px;
+//       background: $linkcolor;
+//       -webkit-transition: width 0.2s ease-in;
+//       transition: width 0.2s ease-in;
+//     }
+//     &:hover {
+//       opacity: 1;
+//       &:before {
+//         width: 100%;
+//         opacity: 0.7;
+//       }
+//     }
+//   }
+// }
+//class for link with underscore
+a.uderscore_link {
   display: inline-block;
   position: relative;
   color: $linkcolor;
@@ -248,7 +248,6 @@ a.arrow_link {
     left: 1px;
     content: "";
     width: 100%;
-    // width: 0;
     height: 2px;
     background: $linkcolor;
     -webkit-transition: width 0.2s ease-in;
@@ -262,7 +261,7 @@ a.arrow_link {
     }
   }
 }
-//white link with arrow on colored banner
+//white link with underscore on colored banner
 .banner_link {
   color: #fff;
   font-weight: 500;
@@ -296,6 +295,31 @@ a.arrow_link {
     width: 100%;
     height: 2px;
     background: #fff;
+  }
+}
+.arrow_link {
+  color: $themecolorPink;
+  font-weight: 500;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+  letter-spacing: 0px;
+  &:hover {
+    opacity: 0.7;
+    color: $themecolorPink;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: $themecolorPink;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 /********************
@@ -624,18 +648,18 @@ nav.main_menu {
         transition: all 0.5s ease;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
-        font-size: 0.85em;
-        letter-spacing: 0.5px;
+        font-size: 0.8rem;
+        letter-spacing: 0.6px;
         display: block;
         color: $navcolor;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 500;
         cursor: pointer;
         @media all and (min-width: $lg-min) {
-          font-size: 0.8em;
+          font-size: 0.8rem;
         }
         @media all and (min-width: $xl-min) {
-          font-size: 0.85em;
+          font-size: 0.9rem;
         }
         &:hover {
           color: $navcolor;
@@ -810,12 +834,12 @@ nav.main_menu {
 .logo {
   img {
     padding-top: 5px;
+    padding-right: 25px;
     @media all and (min-width: $md-min) {
       padding-top: 12px;
     }
     @media all and (min-width: $lg-min) {
       padding-top: 0;
-      padding-right: 25px;
     }
   }
   a:hover {
@@ -841,29 +865,19 @@ nav.main_menu {
   ul {
     li {
       &:last-of-type {
-        // @media all and (min-width: $lg-min) {
-        //   border-left: 1px solid #fff;
-        // }
         a {
           color: #333;
           background-color: #fff;
           border: 1px solid #fff;
-          margin: 0 0 0 1.2rem;
+          margin: 0 0 0 1rem;
           border-radius: $btnBorder_radius;
           padding: 5px 20px;
           cursor: pointer;
           line-height: 1.2;
           font-weight: 600;
           transition: all 0.5s ease;
-          // font-size: 0.9rem;
           letter-spacing: 0.2px;
           box-shadow: $themeBox_shadow;
-          // @media all and (min-width: $lg-min) {
-          //   font-size: 0.7em;
-          // }
-          // @media all and (min-width: $xl-min) {
-          //   font-size: 0.85em;
-          // }
           &:hover {
             color: $themecolorNewBlue;
             background: #fff;
@@ -1925,7 +1939,7 @@ feature list  (pricing page)
           }
         }
       }
-      .arrow_link {
+      .uderscore_link {
         color: $themecolorPink;
         &::before {
           background: $themecolorPink;
@@ -1992,23 +2006,29 @@ feature list  (pricing page)
 .integrations_section {
   .text_section {
     padding-bottom: 2rem;
-    p {
-      font-size: 1.2rem;
-    }
+    // p {
+    //   font-size: 1.2rem;
+    // }
   }
   .icon_section {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 0 -12px;
   }
   .img_box {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     width: 50%;
     padding: 0 12px 24px;
     @media all and (min-width: $sm-min) {
       width: 25%;
+      padding: 0 12px 24px;
+    }
+    @media all and (min-width: $lg-min) {
+      width: 12%;
       padding: 0 12px 24px;
     }
     span {
@@ -3053,7 +3073,7 @@ forum section
     }
     a {
       color: $themecolorFront;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       &:hover {
         text-decoration: none;
       }
@@ -3070,7 +3090,7 @@ forum section
     }
   }
   .social-icons {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     ul.social {
       @include d-inline-flex;
       list-style: none;

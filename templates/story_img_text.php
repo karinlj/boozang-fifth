@@ -9,7 +9,7 @@ $heading_color = get_sub_field('heading_background');
 <section class="two_columns_section story <?php echo $heading_color; ?>">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-sm-8 col-lg-6">
                 <div class="header">
                     <?php if (get_sub_field('tagline')) { ?>
                     <p><?php the_sub_field('tagline'); ?></p>

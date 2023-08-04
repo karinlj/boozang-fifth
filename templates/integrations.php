@@ -17,11 +17,9 @@ $bg_color = get_sub_field('background_color');
                 </div>
             </div>
         </div>
-
-
         <div class="icon_section">
             <div class="container">
-                <div class="d-flex justify-content-center">
+                <div class="icon_section">
                     <?php
                     // check if the repeater field has rows
                     if (have_rows('icon_box')) {
@@ -39,6 +37,4 @@ $bg_color = get_sub_field('background_color');
                 </div>
             </div>
         </div>
-
-    </div>
 </section>

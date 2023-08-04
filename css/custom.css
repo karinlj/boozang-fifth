@@ -15,6 +15,7 @@ body {
   padding: 0;
   background: #fff;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.2px;
 }
 
 body.no_scroll {
@@ -249,48 +250,12 @@ footer a:focus {
 /*****************************
   links with underscore on some sections with Wysiyg
 ******************************/
-.faq_list_section a,
-.two_columns_section a,
-.text_section_pages a,
-.post_text a {
-  display: inline-block;
-  position: relative;
-}
-.faq_list_section a:before,
-.two_columns_section a:before,
-.text_section_pages a:before,
-.post_text a:before {
-  opacity: 0.4;
-  position: absolute;
-  bottom: 0;
-  left: 1px;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #0085cc;
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-}
-.faq_list_section a:hover,
-.two_columns_section a:hover,
-.text_section_pages a:hover,
-.post_text a:hover {
-  opacity: 1;
-}
-.faq_list_section a:hover:before,
-.two_columns_section a:hover:before,
-.text_section_pages a:hover:before,
-.post_text a:hover:before {
-  width: 100%;
-  opacity: 0.7;
-}
-
-a.arrow_link {
+a.uderscore_link {
   display: inline-block;
   position: relative;
   color: #0085cc;
 }
-a.arrow_link:before {
+a.uderscore_link:before {
   opacity: 0.4;
   position: absolute;
   bottom: 0;
@@ -302,10 +267,10 @@ a.arrow_link:before {
   -webkit-transition: width 0.2s ease-in;
   transition: width 0.2s ease-in;
 }
-a.arrow_link:hover {
+a.uderscore_link:hover {
   opacity: 1;
 }
-a.arrow_link:hover:before {
+a.uderscore_link:hover:before {
   width: 100%;
   opacity: 0.7;
 }
@@ -344,6 +309,32 @@ a.arrow_link:hover:before {
   width: 100%;
   height: 2px;
   background: #fff;
+}
+
+.arrow_link {
+  color: #f24d7f;
+  font-weight: 500;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+  letter-spacing: 0px;
+}
+.arrow_link:hover {
+  opacity: 0.7;
+  color: #f24d7f;
+}
+.arrow_link:before {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #f24d7f;
+}
+.arrow_link:before:hover {
+  opacity: 0.7;
 }
 
 /********************
@@ -845,22 +836,22 @@ nav.main_menu ul li a {
   transition: all 0.5s ease;
   padding: 0.5rem 0.2rem;
   border-bottom: 1px solid transparent;
-  font-size: 0.85em;
-  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  letter-spacing: 0.6px;
   display: block;
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 @media all and (min-width: 992px) {
   nav.main_menu ul li a {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1200px) {
   nav.main_menu ul li a {
-    font-size: 0.85em;
+    font-size: 0.9rem;
   }
 }
 nav.main_menu ul li a:hover {
@@ -1014,6 +1005,7 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
 /*nav-desktop*/
 .logo img {
   padding-top: 5px;
+  padding-right: 25px;
 }
 @media all and (min-width: 768px) {
   .logo img {
@@ -1023,7 +1015,6 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
 @media all and (min-width: 992px) {
   .logo img {
     padding-top: 0;
-    padding-right: 25px;
   }
 }
 .logo a:hover {
@@ -1056,7 +1047,7 @@ nav.main_menu > .menu_toggle_btn.btn_clicked:hover > div {
   color: #333;
   background-color: #fff;
   border: 1px solid #fff;
-  margin: 0 0 0 1.2rem;
+  margin: 0 0 0 1rem;
   border-radius: 20px;
   padding: 5px 20px;
   cursor: pointer;
@@ -1932,10 +1923,10 @@ feature list  (pricing page)
 .two_columns_section.story .column_row .part.image img:hover {
   transform: scale(1);
 }
-.two_columns_section.story .column_row .arrow_link {
+.two_columns_section.story .column_row .uderscore_link {
   color: #f24d7f;
 }
-.two_columns_section.story .column_row .arrow_link::before {
+.two_columns_section.story .column_row .uderscore_link::before {
   background: #f24d7f;
 }
 .two_columns_section.presentation .part.image img {
@@ -1996,24 +1987,29 @@ feature list  (pricing page)
 .integrations_section .text_section {
   padding-bottom: 2rem;
 }
-.integrations_section .text_section p {
-  font-size: 1.2rem;
-}
 .integrations_section .icon_section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 -12px;
 }
 .integrations_section .img_box {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   width: 50%;
   padding: 0 12px 24px;
 }
 @media all and (min-width: 576px) {
   .integrations_section .img_box {
     width: 25%;
+    padding: 0 12px 24px;
+  }
+}
+@media all and (min-width: 992px) {
+  .integrations_section .img_box {
+    width: 12%;
     padding: 0 12px 24px;
   }
 }
@@ -3118,7 +3114,7 @@ forum section
 }
 .footer-main .footer-links a {
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 .footer-main .footer-links a:hover {
   text-decoration: none;
@@ -3136,7 +3132,7 @@ forum section
   }
 }
 .footer-main .social-icons {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 .footer-main .social-icons ul.social {
   display: -webkit-inline-box !important;
