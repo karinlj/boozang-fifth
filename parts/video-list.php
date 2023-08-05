@@ -3,7 +3,7 @@
     <div class="video_filter">
         <div class="container">
             <nav class="filter_nav">
-                <ul class="videos">
+                <ul class="video_categories">
 
                     <?php $post_type = 'videos';
 
@@ -60,7 +60,7 @@
                         while ($posts->have_posts()) {
                             $posts->the_post(); ?>
 
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="video_container">
                     <div class="video_container_inner">
 

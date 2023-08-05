@@ -11,7 +11,7 @@ $color = get_field('color_theme');
                     <a class="logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Boozang home page">
                         <!--extra double size image for retina-->
                         <?php
-                        if ($color === 'white') { ?>
+                        if ($color === 'white' || $color === 'lightgrey') { ?>
                         <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang.png"
                             srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang@2x.png 325w" width="208"
                             height="51" alt="Boozang home page" />

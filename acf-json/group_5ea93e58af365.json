@@ -23,26 +23,6 @@
             "delay": 0
         },
         {
-            "key": "field_5ea93ea47bfcd",
-            "label": "Header text pages",
-            "name": "header_text_pages",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_60670396d9f58",
             "label": "Btn links",
             "name": "btn_links",
@@ -148,5 +128,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691072106
+    "modified": 1691270676
 }

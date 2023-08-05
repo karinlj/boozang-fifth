@@ -1,7 +1,7 @@
 <!--content for posts-->
 <?php
 //blog variables - default: (!is_single()
-$col_class = 'col-sm-6 col-lg-4';
+$col_class = 'col-sm-6 col-md-4 col-lg-3';
 $post_class = 'post_card';
 ?>
 

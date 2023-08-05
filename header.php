@@ -21,7 +21,7 @@
 
     <?php //header field variables
     $col_class = 'col-md-8 offset-md-2 col-lg-6 offset-lg-3';
-    $header_class = 'header_small';
+    $header_class = 'header_main';
     $style = '';
     $color = '';
     $header_bgImage = get_field('header_image');
@@ -70,27 +70,25 @@
                         <!-- vad är detta tro? -->
                         <?php if (is_home() || is_archive()) { //for blog
                             $heading_pages = get_field('heading_pages', get_option('page_for_posts'));
-                            $header_text_pages = get_field('header_text_pages', get_option('page_for_posts'));
                         } ?>
-                        <h1 class="header_heading">
+                        <div class="header_heading">
                             <?php echo $heading_pages; ?>
 
                             <!-- title in header for single post -->
-                            <?php if (is_singular('post')) : the_title();
-                            endif; ?>
-                        </h1>
-                        <p class="header_text">
-                            <?php echo $header_text_pages; ?>
-                        </p>
+                            <?php if (is_singular('post')) : ?> <h1> <?php the_title(); ?></h1>
+                            <?php endif; ?>
+                        </div>
+
                     </div>
                 </div>
                 <!-- btn links -->
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-6">
+                        <!-- repeater field -->
+                        <?php
+                        if (have_rows('btn_links')) { ?>
                         <ul class="btn_links">
-                            <!-- repeater field -->
-                            <?php
-                            if (have_rows('btn_links')) { ?>
+
                             <?php while (have_rows('btn_links')) {
                                     the_row();
                                     $link = get_sub_field('link');
@@ -107,9 +105,10 @@
 
                             </div>
                             <?php
-                                }
-                            } ?>
+                                } ?>
                         </ul>
+                        <?php  } ?>
+
                     </div>
                 </div>
             </div>

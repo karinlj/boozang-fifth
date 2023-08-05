@@ -16,8 +16,8 @@ $max-page-width: 1380px;
 
 /* colors */
 
-$blueDarkest: #1b284a;
-$blueDark: #2a3970;
+$blueDarkestSolid: #1b284a;
+$blueDarkSolid: #2a3970;
 
 $blueDarkBgGradient: linear-gradient(
   to bottom,
@@ -27,7 +27,7 @@ $blueDarkBgGradient: linear-gradient(
   #383e78,
   #3d407b
 );
-$blueDarkLighterBgGradient: linear-gradient(
+$blueBgGradient: linear-gradient(
   to bottom,
   #3d407b,
   #444380,
@@ -35,7 +35,7 @@ $blueDarkLighterBgGradient: linear-gradient(
   #534989,
   #5b4c8e
 );
-$purpleDarkBgGradient: linear-gradient(
+$purpleBgGradient: linear-gradient(
   to bottom,
   #5b4c8e,
   #645094,
@@ -44,53 +44,6 @@ $purpleDarkBgGradient: linear-gradient(
   #7e5da6
 );
 
-// $blueDarkBgGradient: linear-gradient(
-//   to right,
-//   #1b274b,
-//   #1e2c54,
-//   #22315d,
-//   #253667,
-//   #293b70
-// );
-
-// $blueDarkBgGradient: linear-gradient(
-//   to bottom,
-//   #2a3970,
-//   #333c76,
-//   #3d407b,
-//   #464381,
-//   #4f4686
-// );
-
-// $blueDarkLighterBgGradient: #293b70;
-
-// $blueDarkLighterBgGradient: linear-gradient(
-//   to bottom,
-//   #4f4686,
-//   #5b4c8e,
-//   #665196,
-//   #72579e,
-//   #7e5da6
-// );
-
-// $themecolorPurpleDark: #502d52;
-// $purpleDarkBgGradient: linear-gradient(
-//   to right,
-//   #402442,
-//   #48284a,
-//   #502d52,
-//   #58315b,
-//   #603663
-// );
-
-// $themecolorPurple: linear-gradient(
-//   to right,
-//   #4f4686,
-//   #5b4c8e,
-//   #675196,
-//   #73579e,
-//   #7f5da6
-// );
 $themecolorNewBlue: #0085cc;
 $themecolorNewblueDarker: #006399;
 $themecolorNewBlueBg: linear-gradient(
@@ -105,11 +58,11 @@ $themecolorNewBlueBg: linear-gradient(
 $themecolor: #4a5669;
 // $themecolorLight: #66758d;
 $themecolorLight: #fff;
-// $themecolorLightest: #b5bdc9;
-$themecolorLightest: #fff;
+$themecolorLightest: #b5bdc9;
+// $themecolorLightest: #fff;
 
 $themeHeadingcolor: #212735;
-// $themecolorFront: #dae0f1;
+// $themecolorFront: #edf0f8;
 $themecolorFront: #fff;
 
 $themeBorderColor: #ebebeb;
@@ -138,8 +91,7 @@ $themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
   rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 $themeBox_shadow_images_hover: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 
-$navcolor: #fff;
+$navcolor: $themecolor;
+//$navcolor: $blueDarkSolid;
 $navcolorDark: $themecolor;
-$navBg_transp: transparent;
-$linkcolor: $themecolorNewBlue;
-//old  blue light: #2e9ce6;
+$linkcolor: #0085cc;
