@@ -464,6 +464,9 @@ header {
   &.purpleGradient {
     background-image: $purpleBgGradient;
   }
+  &.pinkGradient {
+    background-image: $pinkBgGradient;
+  }
   &.blueDarkSolid {
     background: $blueDarkSolid;
   }
@@ -477,6 +480,7 @@ header {
   &.blueDarkGradient,
   &.blueGradient,
   &.purpleGradient,
+  &.pinkGradient,
   &.blueDarkSolid {
     h1,
     h2,
@@ -501,8 +505,9 @@ header {
 
   //overlays
   &.overlay-blue,
+  &.overlay-blueDark,
   &.overlay-purple,
-  &.overlay-purpledark {
+  &.overlay-pink {
     &:before {
       position: absolute;
       top: 0;
@@ -523,6 +528,10 @@ header {
   }
   &.overlay-purple::before {
     background-image: $purpleBgGradient;
+    opacity: 0.9;
+  }
+  &.overlay-pink::before {
+    background-image: $pinkBgGradient;
     opacity: 0.9;
   }
 }
@@ -989,7 +998,8 @@ main nav - default colors for white & lightgrey bg
   // items on dark bg - nav ecc
   &.blueDarkGradient,
   &.blueGradient,
-  &.purpleGradient {
+  &.purpleGradient,
+  &.pinkGradient {
     .btn {
       background: #fff;
       color: $blueDarkSolid;
@@ -1259,7 +1269,7 @@ main nav - default colors for white & lightgrey bg
       }
       .price {
         span {
-          color: $themecolorFront;
+          color: #fff;
         }
       }
     }
@@ -1269,7 +1279,7 @@ main nav - default colors for white & lightgrey bg
     height: 100%;
   }
   .pricing_header {
-    border-bottom: 1px solid $themecolorFront;
+    border-bottom: 1px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1339,13 +1349,16 @@ feature list  (pricing page)
       text-align: center;
     }
   }
+  h3 {
+    margin-bottom: 0.5rem;
+  }
   .info_list_item {
-    border-bottom: 1px solid $themecolorFront;
+    border-bottom: 1px dotted $lightgrey;
   }
   .question_part {
     width: 100%;
     position: relative;
-    padding: 1.3rem 0;
+    padding: 0.5rem 0;
     cursor: pointer;
     .question {
       line-height: 1.7;
@@ -1370,7 +1383,7 @@ feature list  (pricing page)
         font-weight: 900;
         position: absolute;
         right: 0;
-        top: 1.3rem;
+        top: 0.5rem;
         padding: 5px;
         color: $themeHeadingcolor;
         transition: all 0.3s ease-in-out;
@@ -1803,7 +1816,7 @@ feature list  (pricing page)
     .signature {
       font-weight: 500;
       font-size: 1.1rem;
-      border-left: 5px solid $themecolorFront;
+      border-left: 5px solid #fff;
       padding-left: 1rem;
       color: $themecolorPink;
       margin-bottom: 0.5rem;
@@ -2126,7 +2139,7 @@ feature list  (pricing page)
     }
     .most-recent.current-misse {
       a {
-        border-bottom: 3px solid $themecolorNewBlue;
+        border-bottom: 2px solid $themecolorNewBlue;
         @media all and (min-width: $sm-min) {
         }
       }
@@ -2139,29 +2152,17 @@ feature list  (pricing page)
 
 //blog_flow
 .blog_flow {
-  // > .container {
-  //   max-width: 1100px;
-  //   width: 100%;
-  //   margin: 0 auto;
-  //   @media all and (min-width: 1580px) {
-  //     max-width: 1150px;
-  //   }
-  //   @media all and (min-width: 1780px) {
-  //     max-width: 1200px;
-  //   }
-  //   @media all and (min-width: 2000px) {
-  //     max-width: 1300px;
-  //   }
-  // }
   //next and previous
   .paginate_links {
     text-align: center;
+
     span,
     a {
       padding-right: 0.6rem;
+      font-weight: 500;
     }
     .page-numbers.current {
-      color: #b3b3b3;
+      color: $themecolor;
     }
     button {
       background: transparent;
@@ -2419,12 +2420,11 @@ feature list  (pricing page)
     right: 0;
     bottom: 0;
     left: 0;
-    background: $themecolorBlueOverlay;
+    background-image: $blueBgGradient;
     opacity: 0.85;
     content: "";
     display: block;
   }
-
   &.single {
     @media all and (min-width: $sm-min) {
       margin: 3rem 2rem;
@@ -2537,9 +2537,6 @@ big_image_center
   img {
     border-radius: $themeBorder_radius;
     transition: 0.5s ease-in-out;
-    // &:hover {
-    //   box-shadow: $themeBox_shadow_images_hover;
-    // }
   }
 }
 /*********************************
@@ -2728,7 +2725,7 @@ forum section
       }
     }
     a {
-      color: $themecolorFront;
+      color: #fff;
       font-size: 0.85rem;
       &:hover {
         text-decoration: none;

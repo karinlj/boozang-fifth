@@ -43,6 +43,14 @@ $purpleBgGradient: linear-gradient(
   #7559a0,
   #7e5da6
 );
+$pinkBgGradient: linear-gradient(
+  to bottom,
+  #4f4686,
+  #7e5494,
+  #a9629f,
+  #d173a5,
+  #f688a9
+);
 
 $themecolorNewBlue: #0085cc;
 $themecolorNewblueDarker: #006399;
@@ -56,32 +64,22 @@ $themecolorNewBlueBg: linear-gradient(
 );
 //text color
 $themecolor: #4a5669;
-// $themecolorLight: #66758d;
-$themecolorLight: #fff;
+$navcolor: $themecolor;
+$themecolorLight: #66758d;
+// $themecolorLight: #fff;
 $themecolorLightest: #b5bdc9;
 // $themecolorLightest: #fff;
 
 $themeHeadingcolor: #212735;
-// $themecolorFront: #edf0f8;
-$themecolorFront: #fff;
 
 $themeBorderColor: #ebebeb;
-$themeBorderColorFront: #293b70;
 $lightgrey: #f5f6f9;
 $themecolorPink: #f24d7f;
 $themecolorGreen: #00ac7d;
-$themecolorPurpleDark: #4f4686;
-//overlays
-$blueDarkOverlay: rgba(34, 49, 94, 0.8);
-$themecolorBlueOverlay: rgba(0, 116, 179, 0.75);
-$themecolorNewblueDarkerOverlay: rgba(0, 83, 128, 0.85);
-$themecolorPurpleOverlay: rgba(87, 78, 147, 0.85);
-$themecolorPurpleDarkOverlay: rgba(80, 45, 82, 0.8);
 
 //other
 $themefont: "Roboto", "Helvetica", sans-serif;
-$navfont: $themefont;
-$headingfont: $themefont;
+
 $themeBorder_radius: 8px;
 $btnBorder_radius: 20px;
 
@@ -91,7 +89,4 @@ $themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
   rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 $themeBox_shadow_images_hover: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 
-$navcolor: $themecolor;
-//$navcolor: $blueDarkSolid;
-$navcolorDark: $themecolor;
 $linkcolor: #0085cc;

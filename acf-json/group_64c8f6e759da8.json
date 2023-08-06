@@ -305,8 +305,12 @@
                                 "id": ""
                             },
                             "choices": {
-                                "blue": "Blue",
-                                "purpledark": "Purpledark"
+                                "white": "White",
+                                "lightgrey": "Lightgrey",
+                                "blueDarkGradient": "Blue dark gradient",
+                                "blueGradient": "Blue gradient",
+                                "purpleGradient": "Purple gradient",
+                                "pinkGradient": "Pink gradient"
                             },
                             "default_value": "",
                             "return_format": "value",
@@ -422,16 +426,16 @@
                                 "id": ""
                             },
                             "choices": {
-                                "blueDark": "Blue dark",
-                                "blue": "Blue",
-                                "purpledark": "Purpledark",
-                                "purple": "Purple"
+                                "blueDarkGradient": "Blue dark gradient",
+                                "blueGradient": "Blue gradient",
+                                "purpleGradient": "Purple gradient",
+                                "pinkGradient": "Pink gradient"
                             },
                             "default_value": "",
-                            "return_format": "",
+                            "return_format": "value",
                             "allow_null": 0,
                             "other_choice": 0,
-                            "layout": "",
+                            "layout": "vertical",
                             "save_other_choice": 0
                         },
                         {
@@ -1818,5 +1822,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691081485
+    "modified": 1691318914
 }

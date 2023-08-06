@@ -1,43 +1,42 @@
-<?php get_header();?>
+<?php get_header(); ?>
 
 <div class="container_blog">
     <div class="blog_flow section_spacing_top_medium">
         <div class="container">
             <div class="row">
 
-                <?php if (have_posts()): ?>
-                <?php while (have_posts()): the_post();?>
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
 
                 <!--get content.php-->
-                <?php get_template_part('parts/content', get_post_format());?>
+                <?php get_template_part('parts/content', get_post_format()); ?>
 
-                <?php endwhile;?>
+                <?php endwhile; ?>
 
-                <?php else: ?>
-                <p><?php __('No Posts Found');?></p>
-                <?php endif;?>
+                <?php else : ?>
+                <p><?php __('No Posts Found'); ?></p>
+                <?php endif; ?>
 
             </div>
         </div>
-        <?php // comments_template();?>
+        <?php // comments_template();
+        ?>
     </div>
 
     <!-- newsletter widget -->
-    <section class="newsletter section_spacing_top_medium">
+    <section class="newsletter section_spacing_top_small">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="newsletter_content">
-
-                        <?php if (is_active_sidebar('newsletter')):
-
-    dynamic_sidebar('newsletter');
-endif;
-?>
+                        <?php if (is_active_sidebar('newsletter')) :
+                            dynamic_sidebar('newsletter');
+                        endif;
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <?php get_footer();?>
+    <?php get_footer(); ?>

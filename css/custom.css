@@ -179,7 +179,7 @@ button,
 button:focus,
 .btn:focus {
   color: #0085cc;
-  outline: 2px dotted #fff;
+  outline: 2px dotted #66758d;
   border-radius: 3px;
 }
 button:hover,
@@ -197,7 +197,7 @@ a {
 }
 a:focus {
   color: #0085cc;
-  outline: 2px dotted #fff;
+  outline: 2px dotted #66758d;
   border-radius: 3px;
 }
 a:active {
@@ -530,6 +530,10 @@ section.purpleGradient,
 header.purpleGradient {
   background-image: linear-gradient(to bottom, #5b4c8e, #645094, #6c549a, #7559a0, #7e5da6);
 }
+section.pinkGradient,
+header.pinkGradient {
+  background-image: linear-gradient(to bottom, #4f4686, #7e5494, #a9629f, #d173a5, #f688a9);
+}
 section.blueDarkSolid,
 header.blueDarkSolid {
   background: #2a3970;
@@ -557,7 +561,12 @@ section.purpleGradient h2,
 section.purpleGradient h3,
 section.purpleGradient h4,
 section.purpleGradient h5,
-section.purpleGradient h6, section.blueDarkSolid h1,
+section.purpleGradient h6, section.pinkGradient h1,
+section.pinkGradient h2,
+section.pinkGradient h3,
+section.pinkGradient h4,
+section.pinkGradient h5,
+section.pinkGradient h6, section.blueDarkSolid h1,
 section.blueDarkSolid h2,
 section.blueDarkSolid h3,
 section.blueDarkSolid h4,
@@ -581,6 +590,12 @@ header.purpleGradient h3,
 header.purpleGradient h4,
 header.purpleGradient h5,
 header.purpleGradient h6,
+header.pinkGradient h1,
+header.pinkGradient h2,
+header.pinkGradient h3,
+header.pinkGradient h4,
+header.pinkGradient h5,
+header.pinkGradient h6,
 header.blueDarkSolid h1,
 header.blueDarkSolid h2,
 header.blueDarkSolid h3,
@@ -589,31 +604,35 @@ header.blueDarkSolid h5,
 header.blueDarkSolid h6 {
   color: #fff;
 }
-section.blueDarkGradient p, section.blueGradient p, section.purpleGradient p, section.blueDarkSolid p,
+section.blueDarkGradient p, section.blueGradient p, section.purpleGradient p, section.pinkGradient p, section.blueDarkSolid p,
 header.blueDarkGradient p,
 header.blueGradient p,
 header.purpleGradient p,
+header.pinkGradient p,
 header.blueDarkSolid p {
   color: #fff;
 }
-section.blueDarkGradient .banner_link, section.blueGradient .banner_link, section.purpleGradient .banner_link, section.blueDarkSolid .banner_link,
+section.blueDarkGradient .banner_link, section.blueGradient .banner_link, section.purpleGradient .banner_link, section.pinkGradient .banner_link, section.blueDarkSolid .banner_link,
 header.blueDarkGradient .banner_link,
 header.blueGradient .banner_link,
 header.purpleGradient .banner_link,
+header.pinkGradient .banner_link,
 header.blueDarkSolid .banner_link {
   color: #fff;
 }
-section.blueDarkGradient .banner_link:before, section.blueGradient .banner_link:before, section.purpleGradient .banner_link:before, section.blueDarkSolid .banner_link:before,
+section.blueDarkGradient .banner_link:before, section.blueGradient .banner_link:before, section.purpleGradient .banner_link:before, section.pinkGradient .banner_link:before, section.blueDarkSolid .banner_link:before,
 header.blueDarkGradient .banner_link:before,
 header.blueGradient .banner_link:before,
 header.purpleGradient .banner_link:before,
+header.pinkGradient .banner_link:before,
 header.blueDarkSolid .banner_link:before {
   color: #fff;
 }
-section.overlay-blue:before, section.overlay-purple:before, section.overlay-purpledark:before,
+section.overlay-blue:before, section.overlay-blueDark:before, section.overlay-purple:before, section.overlay-pink:before,
 header.overlay-blue:before,
+header.overlay-blueDark:before,
 header.overlay-purple:before,
-header.overlay-purpledark:before {
+header.overlay-pink:before {
   position: absolute;
   top: 0;
   right: 0;
@@ -635,6 +654,11 @@ header.overlay-blueDark::before {
 section.overlay-purple::before,
 header.overlay-purple::before {
   background-image: linear-gradient(to bottom, #5b4c8e, #645094, #6c549a, #7559a0, #7e5da6);
+  opacity: 0.9;
+}
+section.overlay-pink::before,
+header.overlay-pink::before {
+  background-image: linear-gradient(to bottom, #4f4686, #7e5494, #a9629f, #d173a5, #f688a9);
   opacity: 0.9;
 }
 
@@ -962,7 +986,7 @@ main nav - default colors for white & lightgrey bg
   /*toggle open*/
 }
 .nav-mobile a:focus {
-  outline: 2px dotted #fff !important;
+  outline: 2px dotted #66758d !important;
 }
 @media all and (min-width: 992px) {
   .nav-mobile {
@@ -1091,34 +1115,34 @@ main nav - default colors for white & lightgrey bg
   background: #2a3970;
   color: #fff;
 }
-.header_main.blueDarkGradient .btn, .header_main.blueGradient .btn, .header_main.purpleGradient .btn {
+.header_main.blueDarkGradient .btn, .header_main.blueGradient .btn, .header_main.purpleGradient .btn, .header_main.pinkGradient .btn {
   background: #fff;
   color: #2a3970;
 }
-.header_main.blueDarkGradient .btn:hover, .header_main.blueGradient .btn:hover, .header_main.purpleGradient .btn:hover {
+.header_main.blueDarkGradient .btn:hover, .header_main.blueGradient .btn:hover, .header_main.purpleGradient .btn:hover, .header_main.pinkGradient .btn:hover {
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
 }
-.header_main.blueDarkGradient .btn.transparent, .header_main.blueGradient .btn.transparent, .header_main.purpleGradient .btn.transparent {
+.header_main.blueDarkGradient .btn.transparent, .header_main.blueGradient .btn.transparent, .header_main.purpleGradient .btn.transparent, .header_main.pinkGradient .btn.transparent {
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
 }
-.header_main.blueDarkGradient .btn.transparent:hover, .header_main.blueGradient .btn.transparent:hover, .header_main.purpleGradient .btn.transparent:hover {
+.header_main.blueDarkGradient .btn.transparent:hover, .header_main.blueGradient .btn.transparent:hover, .header_main.purpleGradient .btn.transparent:hover, .header_main.pinkGradient .btn.transparent:hover {
   background: #fff;
   color: #2a3970;
 }
-.header_main.blueDarkGradient .signup ul li:last-of-type a, .header_main.blueGradient .signup ul li:last-of-type a, .header_main.purpleGradient .signup ul li:last-of-type a {
+.header_main.blueDarkGradient .signup ul li:last-of-type a, .header_main.blueGradient .signup ul li:last-of-type a, .header_main.purpleGradient .signup ul li:last-of-type a, .header_main.pinkGradient .signup ul li:last-of-type a {
   background: #fff;
   color: #2a3970;
 }
-.header_main.blueDarkGradient .signup ul li:last-of-type a:hover, .header_main.blueGradient .signup ul li:last-of-type a:hover, .header_main.purpleGradient .signup ul li:last-of-type a:hover {
+.header_main.blueDarkGradient .signup ul li:last-of-type a:hover, .header_main.blueGradient .signup ul li:last-of-type a:hover, .header_main.purpleGradient .signup ul li:last-of-type a:hover, .header_main.pinkGradient .signup ul li:last-of-type a:hover {
   color: #fff;
   background: transparent;
   border-color: #fff;
 }
-.header_main.blueDarkGradient nav, .header_main.blueGradient nav, .header_main.purpleGradient nav {
+.header_main.blueDarkGradient nav, .header_main.blueGradient nav, .header_main.purpleGradient nav, .header_main.pinkGradient nav {
   /*Wp:s klasser*/
 }
 .header_main.blueDarkGradient nav a,
@@ -1130,66 +1154,69 @@ main nav - default colors for white & lightgrey bg
 .header_main.blueGradient nav a:hover, .header_main.purpleGradient nav a,
 .header_main.purpleGradient nav a:visited,
 .header_main.purpleGradient nav a:focus,
-.header_main.purpleGradient nav a:hover {
+.header_main.purpleGradient nav a:hover, .header_main.pinkGradient nav a,
+.header_main.pinkGradient nav a:visited,
+.header_main.pinkGradient nav a:focus,
+.header_main.pinkGradient nav a:hover {
   color: #fff;
 }
-.header_main.blueDarkGradient nav ul li a, .header_main.blueGradient nav ul li a, .header_main.purpleGradient nav ul li a {
+.header_main.blueDarkGradient nav ul li a, .header_main.blueGradient nav ul li a, .header_main.purpleGradient nav ul li a, .header_main.pinkGradient nav ul li a {
   color: #fff;
 }
-.header_main.blueDarkGradient nav ul li a:hover, .header_main.blueGradient nav ul li a:hover, .header_main.purpleGradient nav ul li a:hover {
-  color: #fff;
-  border-bottom: 1px solid #fff;
-}
-.header_main.blueDarkGradient nav ul li a:active, .header_main.blueGradient nav ul li a:active, .header_main.purpleGradient nav ul li a:active {
-  color: #fff;
-}
-.header_main.blueDarkGradient nav ul li a:active:visited, .header_main.blueGradient nav ul li a:active:visited, .header_main.purpleGradient nav ul li a:active:visited {
-  color: #fff;
-}
-.header_main.blueDarkGradient nav a:not([href]):not([tabindex]), .header_main.blueGradient nav a:not([href]):not([tabindex]), .header_main.purpleGradient nav a:not([href]):not([tabindex]) {
-  color: #fff;
-}
-.header_main.blueDarkGradient nav a:not([href]):not([tabindex]):hover, .header_main.blueGradient nav a:not([href]):not([tabindex]):hover, .header_main.purpleGradient nav a:not([href]):not([tabindex]):hover {
-  color: #fff;
-}
-.header_main.blueDarkGradient nav li.current-menu-item > a, .header_main.blueGradient nav li.current-menu-item > a, .header_main.purpleGradient nav li.current-menu-item > a {
+.header_main.blueDarkGradient nav ul li a:hover, .header_main.blueGradient nav ul li a:hover, .header_main.purpleGradient nav ul li a:hover, .header_main.pinkGradient nav ul li a:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-.header_main.blueDarkGradient nav li.menu-item-has-children > a, .header_main.blueGradient nav li.menu-item-has-children > a, .header_main.purpleGradient nav li.menu-item-has-children > a {
+.header_main.blueDarkGradient nav ul li a:active, .header_main.blueGradient nav ul li a:active, .header_main.purpleGradient nav ul li a:active, .header_main.pinkGradient nav ul li a:active {
   color: #fff;
 }
-.header_main.blueDarkGradient nav li.menu-item-has-children > a:hover, .header_main.blueGradient nav li.menu-item-has-children > a:hover, .header_main.purpleGradient nav li.menu-item-has-children > a:hover {
+.header_main.blueDarkGradient nav ul li a:active:visited, .header_main.blueGradient nav ul li a:active:visited, .header_main.purpleGradient nav ul li a:active:visited, .header_main.pinkGradient nav ul li a:active:visited {
   color: #fff;
 }
-.header_main.blueDarkGradient nav li.menu-item-has-children > a:after, .header_main.blueGradient nav li.menu-item-has-children > a:after, .header_main.purpleGradient nav li.menu-item-has-children > a:after {
+.header_main.blueDarkGradient nav a:not([href]):not([tabindex]), .header_main.blueGradient nav a:not([href]):not([tabindex]), .header_main.purpleGradient nav a:not([href]):not([tabindex]), .header_main.pinkGradient nav a:not([href]):not([tabindex]) {
   color: #fff;
 }
-.header_main.blueDarkGradient nav li.menu-item-has-children ul li a, .header_main.blueGradient nav li.menu-item-has-children ul li a, .header_main.purpleGradient nav li.menu-item-has-children ul li a {
+.header_main.blueDarkGradient nav a:not([href]):not([tabindex]):hover, .header_main.blueGradient nav a:not([href]):not([tabindex]):hover, .header_main.purpleGradient nav a:not([href]):not([tabindex]):hover, .header_main.pinkGradient nav a:not([href]):not([tabindex]):hover {
+  color: #fff;
+}
+.header_main.blueDarkGradient nav li.current-menu-item > a, .header_main.blueGradient nav li.current-menu-item > a, .header_main.purpleGradient nav li.current-menu-item > a, .header_main.pinkGradient nav li.current-menu-item > a {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.header_main.blueDarkGradient nav li.menu-item-has-children > a, .header_main.blueGradient nav li.menu-item-has-children > a, .header_main.purpleGradient nav li.menu-item-has-children > a, .header_main.pinkGradient nav li.menu-item-has-children > a {
+  color: #fff;
+}
+.header_main.blueDarkGradient nav li.menu-item-has-children > a:hover, .header_main.blueGradient nav li.menu-item-has-children > a:hover, .header_main.purpleGradient nav li.menu-item-has-children > a:hover, .header_main.pinkGradient nav li.menu-item-has-children > a:hover {
+  color: #fff;
+}
+.header_main.blueDarkGradient nav li.menu-item-has-children > a:after, .header_main.blueGradient nav li.menu-item-has-children > a:after, .header_main.purpleGradient nav li.menu-item-has-children > a:after, .header_main.pinkGradient nav li.menu-item-has-children > a:after {
+  color: #fff;
+}
+.header_main.blueDarkGradient nav li.menu-item-has-children ul li a, .header_main.blueGradient nav li.menu-item-has-children ul li a, .header_main.purpleGradient nav li.menu-item-has-children ul li a, .header_main.pinkGradient nav li.menu-item-has-children ul li a {
   color: #16181d;
 }
-.header_main.blueDarkGradient nav li.menu-item-has-children ul li a:hover, .header_main.blueGradient nav li.menu-item-has-children ul li a:hover, .header_main.purpleGradient nav li.menu-item-has-children ul li a:hover {
+.header_main.blueDarkGradient nav li.menu-item-has-children ul li a:hover, .header_main.blueGradient nav li.menu-item-has-children ul li a:hover, .header_main.purpleGradient nav li.menu-item-has-children ul li a:hover, .header_main.pinkGradient nav li.menu-item-has-children ul li a:hover {
   border-bottom: 1px solid transparent;
 }
-.header_main.blueDarkGradient nav li.menu-item-has-children ul li:hover a, .header_main.blueGradient nav li.menu-item-has-children ul li:hover a, .header_main.purpleGradient nav li.menu-item-has-children ul li:hover a {
+.header_main.blueDarkGradient nav li.menu-item-has-children ul li:hover a, .header_main.blueGradient nav li.menu-item-has-children ul li:hover a, .header_main.purpleGradient nav li.menu-item-has-children ul li:hover a, .header_main.pinkGradient nav li.menu-item-has-children ul li:hover a {
   background: #f5f6f9;
   opacity: 1;
 }
-.header_main.blueDarkGradient nav li.menu-item-has-children ul li.current-menu-item > a, .header_main.blueGradient nav li.menu-item-has-children ul li.current-menu-item > a, .header_main.purpleGradient nav li.menu-item-has-children ul li.current-menu-item > a {
+.header_main.blueDarkGradient nav li.menu-item-has-children ul li.current-menu-item > a, .header_main.blueGradient nav li.menu-item-has-children ul li.current-menu-item > a, .header_main.purpleGradient nav li.menu-item-has-children ul li.current-menu-item > a, .header_main.pinkGradient nav li.menu-item-has-children ul li.current-menu-item > a {
   border-bottom: 1px solid transparent;
 }
-.header_main.blueDarkGradient nav > .menu_toggle_btn, .header_main.blueGradient nav > .menu_toggle_btn, .header_main.purpleGradient nav > .menu_toggle_btn {
+.header_main.blueDarkGradient nav > .menu_toggle_btn, .header_main.blueGradient nav > .menu_toggle_btn, .header_main.purpleGradient nav > .menu_toggle_btn, .header_main.pinkGradient nav > .menu_toggle_btn {
   /* Hamburger Line */
 }
-.header_main.blueDarkGradient nav > .menu_toggle_btn > div, .header_main.blueGradient nav > .menu_toggle_btn > div, .header_main.purpleGradient nav > .menu_toggle_btn > div {
+.header_main.blueDarkGradient nav > .menu_toggle_btn > div, .header_main.blueGradient nav > .menu_toggle_btn > div, .header_main.purpleGradient nav > .menu_toggle_btn > div, .header_main.pinkGradient nav > .menu_toggle_btn > div {
   background: #fff;
   /* Hamburger Lines - Top & Bottom */
   /* Moves Line Down */
 }
-.header_main.blueDarkGradient nav > .menu_toggle_btn > div::before, .header_main.blueGradient nav > .menu_toggle_btn > div::before, .header_main.purpleGradient nav > .menu_toggle_btn > div::before {
+.header_main.blueDarkGradient nav > .menu_toggle_btn > div::before, .header_main.blueGradient nav > .menu_toggle_btn > div::before, .header_main.purpleGradient nav > .menu_toggle_btn > div::before, .header_main.pinkGradient nav > .menu_toggle_btn > div::before {
   background: inherit;
 }
-.header_main.blueDarkGradient nav > .menu_toggle_btn > div::after, .header_main.blueGradient nav > .menu_toggle_btn > div::after, .header_main.purpleGradient nav > .menu_toggle_btn > div::after {
+.header_main.blueDarkGradient nav > .menu_toggle_btn > div::after, .header_main.blueGradient nav > .menu_toggle_btn > div::after, .header_main.purpleGradient nav > .menu_toggle_btn > div::after, .header_main.pinkGradient nav > .menu_toggle_btn > div::after {
   background: inherit;
 }
 .header_main .header_items_section {
@@ -1311,7 +1338,7 @@ main nav - default colors for white & lightgrey bg
   font-size: 1.9rem;
 }
 .pricing_section .card .price .number span {
-  color: #fff;
+  color: #66758d;
   font-size: 0.8rem;
 }
 .pricing_section .card .btn {
@@ -1430,13 +1457,16 @@ feature list  (pricing page)
     text-align: center;
   }
 }
+.faq_accordion_section h3 {
+  margin-bottom: 0.5rem;
+}
 .faq_accordion_section .info_list_item {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px dotted #f5f6f9;
 }
 .faq_accordion_section .question_part {
   width: 100%;
   position: relative;
-  padding: 1.3rem 0;
+  padding: 0.5rem 0;
   cursor: pointer;
 }
 .faq_accordion_section .question_part .question {
@@ -1463,7 +1493,7 @@ feature list  (pricing page)
   font-weight: 900;
   position: absolute;
   right: 0;
-  top: 1.3rem;
+  top: 0.5rem;
   padding: 5px;
   color: #212735;
   transition: all 0.3s ease-in-out;
@@ -2188,7 +2218,7 @@ feature list  (pricing page)
 }
 .blog-sidebar ul .most-recent.current-misse a,
 .video_filter ul .most-recent.current-misse a {
-  border-bottom: 3px solid #0085cc;
+  border-bottom: 2px solid #0085cc;
 }
 .blog-sidebar ul.videos,
 .video_filter ul.videos {
@@ -2201,9 +2231,10 @@ feature list  (pricing page)
 .blog_flow .paginate_links span,
 .blog_flow .paginate_links a {
   padding-right: 0.6rem;
+  font-weight: 500;
 }
 .blog_flow .paginate_links .page-numbers.current {
-  color: #b3b3b3;
+  color: #4a5669;
 }
 .blog_flow .paginate_links button {
   background: transparent;
@@ -2470,7 +2501,7 @@ feature list  (pricing page)
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 116, 179, 0.75);
+  background-image: linear-gradient(to bottom, #3d407b, #444380, #4c4685, #534989, #5b4c8e);
   opacity: 0.85;
   content: "";
   display: block;

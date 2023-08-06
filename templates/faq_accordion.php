@@ -20,7 +20,7 @@
                             $answer = get_sub_field('answer'); ?>
 
                 <div class="info_list_item">
-                    <h3 class="question_part small_size_text">
+                    <h3 class="question_part">
                         <button class="question" aria-expanded="false"><?php echo $question; ?></button>
                     </h3>
                     <section class="answer_part" aria-hidden="true">
