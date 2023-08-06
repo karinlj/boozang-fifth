@@ -196,9 +196,9 @@ footer {
     }
   }
 }
-/*****************************
+/**********************************************
   links with underscore on some sections with Wysiyg
-******************************/
+***********************************************/
 // .faq_list_section,
 // .two_columns_section,
 // .text_section_pages,
@@ -300,17 +300,26 @@ a.uderscore_link {
     opacity: 0.7;
     color: $themecolorPink;
   }
-  &:before {
+  &:after {
     position: absolute;
     top: 0;
     right: -6px;
-    content: "\f061";
     font-family: "Font Awesome 5 Free";
+    content: "\f061";
     font-weight: 900;
     color: $themecolorPink;
     &:hover {
       opacity: 0.7;
     }
+  }
+  &:focus {
+    color: $themecolorPink;
+  }
+  &:active {
+    color: $themecolorPink;
+  }
+  &:visited {
+    color: $themecolorPink;
   }
 }
 /********************
@@ -521,15 +530,15 @@ header {
   }
   &.overlay-blueDark::before {
     background-image: $blueDarkBgGradient;
-    opacity: 0.9;
+    opacity: 0.85;
   }
   &.overlay-purple::before {
     background-image: $purpleBgGradient;
-    opacity: 0.9;
+    opacity: 0.85;
   }
   &.overlay-pink::before {
     background-image: $pinkBgGradient;
-    opacity: 0.9;
+    opacity: 0.85;
   }
 }
 /**************************************
@@ -815,11 +824,9 @@ main nav - default colors for white & lightgrey bg
           border-radius: $btnBorder_radius;
           padding: 5px 20px;
           cursor: pointer;
-          // line-height: 1.2;
           font-weight: 600;
           transition: all 0.5s ease;
           letter-spacing: 0.2px;
-          // box-shadow: $themeBox_shadow;
           &:active {
             color: #fff;
           }
@@ -992,7 +999,7 @@ main nav - default colors for white & lightgrey bg
       }
     }
   }
-  // items on dark bg - nav ecc
+  //items on dark bg - nav, btns ecc
   &.blueDarkGradient,
   &.blueGradient,
   &.purpleGradient,
@@ -1145,17 +1152,6 @@ main nav - default colors for white & lightgrey bg
       }
     }
   }
-  // .header_text {
-  //   max-width: 470px;
-  //   margin: 0 auto 2rem auto;
-  //   font-size: 1.1rem;
-  //   text-align: center;
-  //   @media all and (min-width: $sm-min) {
-  //     max-width: 570px;
-  //     font-size: 1.2rem;
-  //     margin: 0 auto 3rem auto;
-  //   }
-  // }
   .btn_links {
     padding: 0;
     margin: 0;
@@ -1445,86 +1441,6 @@ feature list  (pricing page)
   }
 }
 
-/*********************
-   get started banner
-*********************/
-// .get_started_banner {
-//   //background and overlay: see scss section
-//   // min-height: 350px;
-//   height: 420px;
-//   .sub_info_part {
-//     p {
-//       font-size: 1.2rem;
-//     }
-//     &.smallscreen {
-//       display: block;
-//       margin-top: 2rem;
-//       @media all and (min-width: $lg-min) {
-//         display: none;
-//       }
-//     }
-//     &.bigscreen {
-//       display: none;
-//       @media all and (min-width: $lg-min) {
-//         display: block;
-//         margin-right: 1rem;
-//       }
-//     }
-//   }
-//   h2 {
-//     margin-bottom: 3rem;
-//   }
-//   h5,
-//   h2,
-//   p {
-//     color: #fff;
-//     &::before {
-//       font-weight: 600;
-//       font-size: 40px;
-//       color: #fff;
-//     }
-//   }
-//   .action_items {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-end;
-//     @media all and (min-width: $sm-min) {
-//       flex-direction: row;
-//     }
-//     .action_item {
-//       padding-right: 0.7rem;
-//       width: 100%;
-//       @media all and (min-width: $md-min) {
-//         align-items: flex-start;
-//       }
-//       @media all and (min-width: $lg-min) {
-//         align-items: flex-start;
-//       }
-//       &:nth-of-type(1) {
-//         h5 {
-//           &::before {
-//             content: "1";
-//           }
-//         }
-//       }
-//       &:nth-of-type(2) {
-//         h5 {
-//           &::before {
-//             content: "2";
-//           }
-//         }
-//       }
-//       &:nth-of-type(3) {
-//         h5 {
-//           &::before {
-//             content: "3";
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 /*************************
   two columns img or text
 **************************/
@@ -1606,6 +1522,11 @@ feature list  (pricing page)
     .header {
       text-align: center;
     }
+    a {
+      &::before {
+        background: transparent;
+      }
+    }
     .column_row {
       display: block;
       padding: 2rem calc(1.5rem - 15px);
@@ -1662,12 +1583,12 @@ feature list  (pricing page)
           }
         }
       }
-      .uderscore_link {
-        color: $themecolorPink;
-        &::before {
-          background: $themecolorPink;
-        }
-      }
+      // .uderscore_link {
+      //   color: $themecolorPink;
+      //   &::before {
+      //     background: $themecolorPink;
+      //   }
+      // }
     }
   }
   //about field
@@ -1729,9 +1650,6 @@ feature list  (pricing page)
 .integrations_section {
   .text_section {
     padding-bottom: 2rem;
-    // p {
-    //   font-size: 1.2rem;
-    // }
   }
   .icon_section {
     display: flex;
@@ -1830,6 +1748,9 @@ feature list  (pricing page)
 /********************
   Videos Page Layout
 *********************/
+.video_filter {
+  padding-bottom: 3.5rem !important;
+}
 .alternative_blocks {
   // margin-top: -3rem;
   background: $lightgrey;
@@ -1848,21 +1769,6 @@ feature list  (pricing page)
 .video_section {
   background: $lightgrey;
   padding-top: 0;
-
-  // > .container {
-  //   max-width: 1100px;
-  //   width: 100%;
-  //   margin: 0 auto;
-  //   @media all and (min-width: 1580px) {
-  //     max-width: 1150px;
-  //   }
-  //   @media all and (min-width: 1780px) {
-  //     max-width: 1200px;
-  //   }
-  //   @media all and (min-width: 2000px) {
-  //     max-width: 1300px;
-  //   }
-  // }
   .video_container {
     width: 100%;
     box-shadow: $themeBox_shadow_more;
@@ -1905,7 +1811,6 @@ feature list  (pricing page)
       padding: 1rem 1.7rem 0.5rem 1.7rem;
       background: #fff;
     }
-
     .content_container_inner {
       margin-bottom: 1rem;
       position: relative;
@@ -1951,85 +1856,6 @@ feature list  (pricing page)
     }
   }
 }
-/*******************************
-   info banner small (video-page)
-********************************/
-.info_banner_small {
-  //background and overlay: see scss section
-  box-shadow: $themeBox_shadow_more;
-  height: 360px;
-  border-radius: $themeBorder_radius;
-  .content {
-    padding: 3rem 2rem;
-    height: 360px;
-    border-radius: $themeBorder_radius;
-    .heading,
-    p,
-    h3 {
-      position: relative;
-      color: #fff;
-    }
-    p {
-      margin-bottom: 0.5rem;
-    }
-    .heading {
-      font-size: 2.7rem;
-      margin-bottom: 2rem;
-      @media all and (min-width: $md-min) {
-        font-size: 3.7rem;
-      }
-    }
-    .link_wrapper {
-      display: flex;
-      align-items: flex-start;
-      padding-top: 1rem;
-      img {
-        position: relative;
-        max-width: 22px;
-        margin-right: 0.1rem;
-        @media all and (min-width: $md-min) {
-          max-width: 28px;
-          margin-right: 0.3rem;
-        }
-      }
-      a {
-        &::before {
-          background-color: transparent;
-        }
-        @media all and (min-width: $md-min) {
-          &::before {
-            background-color: #fff;
-          }
-        }
-      }
-    }
-    &::before {
-      border-radius: $themeBorder_radius;
-    }
-  }
-}
-
-/**********************
-   check list
-***********************/
-.video_checklist_section {
-  ul.list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    .check_list_item {
-      margin-bottom: 0.8rem;
-      &::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f00c";
-        font-size: 1rem;
-        color: $themecolorGreen;
-        padding-right: 0.5rem;
-      }
-    }
-  }
-}
 
 /*********************
         Blog
@@ -2037,10 +1863,6 @@ feature list  (pricing page)
 /*
 * Categories menu
 */
-.video_filter {
-  padding-bottom: 3.5rem !important;
-}
-
 .blog-sidebar,
 .video_filter {
   width: 100%;
@@ -2078,7 +1900,6 @@ feature list  (pricing page)
     padding: 0;
     @media all and (min-width: $sm-min) {
       flex-direction: row;
-      //border-bottom: 1px solid $themeBorderColor;
     }
     li {
       width: 100%;
@@ -2613,6 +2434,7 @@ big_image_center
     margin-bottom: 2rem;
   }
 }
+
 /*********************************
 forum section
 ***********************************/
@@ -2670,19 +2492,12 @@ forum section
     .btn {
       background: #fff;
       color: $blueDarkSolid;
-      // padding: 10px 45px;
       transition: 0.5s ease-in-out;
       &:hover {
         background: $blueDarkSolid;
         color: #fff;
         border: 1px solid #fff;
       }
-      // &:active {
-      //   box-shadow: none;
-      // }
-      // &:focus {
-      //   box-shadow: none;
-      // }
     }
   }
 }
@@ -2810,38 +2625,6 @@ forum section
     color: #999;
   }
 }
-/*********************
-   action banner
-*********************/
-.action_banner {
-  //background and overlay: see scss section
-  text-align: center;
-  .btn {
-    margin-top: 1.5rem;
-    background-image: $blueBgGradient;
-    color: #fff;
-    border: 1px solid $blueDarkSolid;
-    padding: 10px 45px;
-    transition: 0.5s ease-in-out;
-    &:hover {
-      background: transparent;
-      color: #fff;
-      border: 1px solid #fff;
-      box-shadow: none;
-    }
-    &:active {
-      box-shadow: none;
-    }
-    &:focus {
-      box-shadow: none;
-    }
-  }
-  .action_banner_text {
-    font-weight: 600;
-    color: #fff;
-    font-size: 1.1rem;
-  }
-}
 
 /*********************
   feature slider
@@ -2933,6 +2716,86 @@ forum section
 //         color: $linkcolor;
 //         outline: 2px dotted $themecolorLight !important;
 //         border-radius: 3px;
+//       }
+//     }
+//   }
+// }
+
+/*********************
+   get started banner
+*********************/
+// .get_started_banner {
+//   //background and overlay: see scss section
+//   // min-height: 350px;
+//   height: 420px;
+//   .sub_info_part {
+//     p {
+//       font-size: 1.2rem;
+//     }
+//     &.smallscreen {
+//       display: block;
+//       margin-top: 2rem;
+//       @media all and (min-width: $lg-min) {
+//         display: none;
+//       }
+//     }
+//     &.bigscreen {
+//       display: none;
+//       @media all and (min-width: $lg-min) {
+//         display: block;
+//         margin-right: 1rem;
+//       }
+//     }
+//   }
+//   h2 {
+//     margin-bottom: 3rem;
+//   }
+//   h5,
+//   h2,
+//   p {
+//     color: #fff;
+//     &::before {
+//       font-weight: 600;
+//       font-size: 40px;
+//       color: #fff;
+//     }
+//   }
+//   .action_items {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end;
+//     @media all and (min-width: $sm-min) {
+//       flex-direction: row;
+//     }
+//     .action_item {
+//       padding-right: 0.7rem;
+//       width: 100%;
+//       @media all and (min-width: $md-min) {
+//         align-items: flex-start;
+//       }
+//       @media all and (min-width: $lg-min) {
+//         align-items: flex-start;
+//       }
+//       &:nth-of-type(1) {
+//         h5 {
+//           &::before {
+//             content: "1";
+//           }
+//         }
+//       }
+//       &:nth-of-type(2) {
+//         h5 {
+//           &::before {
+//             content: "2";
+//           }
+//         }
+//       }
+//       &:nth-of-type(3) {
+//         h5 {
+//           &::before {
+//             content: "3";
+//           }
+//         }
 //       }
 //     }
 //   }

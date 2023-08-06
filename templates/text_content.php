@@ -2,10 +2,10 @@
 
 // text layout for Pages Content block
 //wysiwyg for pages
-if (get_row_layout() == 'text_content') {?>
+if (get_row_layout() == 'text_content') { ?>
 
 <?php
-$text = get_sub_field('text');?>
+    $text = get_sub_field('text'); ?>
 
 <section class="text_section_pages section_spacing_top_medium">
     <div class="container">
@@ -17,7 +17,7 @@ $text = get_sub_field('text');?>
                 </div>
             </div>
         </div>
-    </div><!-- /.container -->
+    </div>
 </section>
 <?php
 }

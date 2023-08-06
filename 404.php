@@ -16,7 +16,6 @@
                      <h3 class="nopage-heading"><?php the_field('404_heading', 'option'); ?></h3>
                      <p class="nopage-content"> <?php the_field('404_content', 'option'); ?></p>
                  </div>
-
              </div>
          </div>
      </div>
