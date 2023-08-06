@@ -532,7 +532,7 @@ header.purpleGradient {
 }
 section.pinkGradient,
 header.pinkGradient {
-  background-image: linear-gradient(to bottom, #4f4686, #7e5494, #a9629f, #d173a5, #f688a9);
+  background-image: linear-gradient(to bottom, #2a3970, #654e88, #9a669b, #cb81ac, #f8a0ba);
 }
 section.blueDarkSolid,
 header.blueDarkSolid {
@@ -644,7 +644,7 @@ header.overlay-pink:before {
 section.overlay-blue::before,
 header.overlay-blue::before {
   background-image: linear-gradient(to bottom, #3d407b, #444380, #4c4685, #534989, #5b4c8e);
-  opacity: 0.9;
+  opacity: 0.8;
 }
 section.overlay-blueDark::before,
 header.overlay-blueDark::before {
@@ -658,7 +658,7 @@ header.overlay-purple::before {
 }
 section.overlay-pink::before,
 header.overlay-pink::before {
-  background-image: linear-gradient(to bottom, #4f4686, #7e5494, #a9629f, #d173a5, #f688a9);
+  background-image: linear-gradient(to bottom, #2a3970, #654e88, #9a669b, #cb81ac, #f8a0ba);
   opacity: 0.9;
 }
 
@@ -1326,7 +1326,7 @@ main nav - default colors for white & lightgrey bg
   background: #f5f6f9;
   text-align: center;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid #f5f6f9;
   height: 520px;
 }
@@ -2684,7 +2684,7 @@ big_image_center
   transition: 0.5s ease-in-out;
 }
 .feature_blocks .single_block .link:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .feature_blocks .single_block.blue {
   background: linear-gradient(to bottom, #3d407b, #444380, #4c4685, #534989, #5b4c8e);
@@ -2903,9 +2903,9 @@ forum section
 }
 .action_banner .btn {
   margin-top: 1.5rem;
-  background-image: linear-gradient(to right bottom, #0074b3, #007cc0, #0084cc, #008dd9, #0095e6);
+  background-image: linear-gradient(to bottom, #3d407b, #444380, #4c4685, #534989, #5b4c8e);
   color: #fff;
-  border: 1px solid #0085cc;
+  border: 1px solid #2a3970;
   padding: 10px 45px;
   transition: 0.5s ease-in-out;
 }

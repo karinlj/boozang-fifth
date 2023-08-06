@@ -500,9 +500,6 @@ header {
       }
     }
   }
-
-  //gjort hit
-
   //overlays
   &.overlay-blue,
   &.overlay-blueDark,
@@ -520,7 +517,7 @@ header {
   }
   &.overlay-blue::before {
     background-image: $blueBgGradient;
-    opacity: 0.9;
+    opacity: 0.8;
   }
   &.overlay-blueDark::before {
     background-image: $blueDarkBgGradient;
@@ -1220,7 +1217,7 @@ main nav - default colors for white & lightgrey bg
     background: $lightgrey;
     text-align: center;
     border-radius: $themeBorder_radius;
-    box-shadow: $themeBox_shadow_images;
+    box-shadow: $themeBox_shadow_more;
     border: 1px solid $lightgrey;
     height: 520px;
     .price {
@@ -1655,7 +1652,6 @@ feature list  (pricing page)
           }
           img {
             border-radius: $themeBorder_radius;
-            // box-shadow: $themeBox_shadow_images;
             transition: none;
             @media all and (min-width: $lg-min) {
               max-width: 450px;
@@ -2594,7 +2590,7 @@ big_image_center
       cursor: pointer;
       transition: 0.5s ease-in-out;
       &:hover {
-        box-shadow: $themeBox_shadow_images_hover;
+        box-shadow: $themeBox_shadow_more;
       }
     }
     &.blue {
@@ -2822,9 +2818,9 @@ forum section
   text-align: center;
   .btn {
     margin-top: 1.5rem;
-    background-image: $themecolorNewBlueBg;
+    background-image: $blueBgGradient;
     color: #fff;
-    border: 1px solid $themecolorNewBlue;
+    border: 1px solid $blueDarkSolid;
     padding: 10px 45px;
     transition: 0.5s ease-in-out;
     &:hover {

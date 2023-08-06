@@ -15,9 +15,11 @@ $xl-max: 1309px;
 $max-page-width: 1380px;
 
 /* colors */
-
 $blueDarkestSolid: #1b284a;
 $blueDarkSolid: #2a3970;
+
+$themecolorNewBlue: #0085cc;
+$themecolorNewblueDarker: #006399;
 
 $blueDarkBgGradient: linear-gradient(
   to bottom,
@@ -45,48 +47,31 @@ $purpleBgGradient: linear-gradient(
 );
 $pinkBgGradient: linear-gradient(
   to bottom,
-  #4f4686,
-  #7e5494,
-  #a9629f,
-  #d173a5,
-  #f688a9
+  #2a3970,
+  #654e88,
+  #9a669b,
+  #cb81ac,
+  #f8a0ba
 );
 
-$themecolorNewBlue: #0085cc;
-$themecolorNewblueDarker: #006399;
-$themecolorNewBlueBg: linear-gradient(
-  to right bottom,
-  #0074b3,
-  #007cc0,
-  #0084cc,
-  #008dd9,
-  #0095e6
-);
 //text color
 $themecolor: #4a5669;
 $navcolor: $themecolor;
+
 $themecolorLight: #66758d;
-// $themecolorLight: #fff;
 $themecolorLightest: #b5bdc9;
-// $themecolorLightest: #fff;
 
 $themeHeadingcolor: #212735;
-
 $themeBorderColor: #ebebeb;
 $lightgrey: #f5f6f9;
 $themecolorPink: #f24d7f;
 $themecolorGreen: #00ac7d;
+$linkcolor: #0085cc;
 
 //other
 $themefont: "Roboto", "Helvetica", sans-serif;
 
 $themeBorder_radius: 8px;
 $btnBorder_radius: 20px;
-
 $themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
 $themeBox_shadow_more: 0px 2px 10px rgb(0 0 0 / 20%);
-$themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
-  rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-$themeBox_shadow_images_hover: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-
-$linkcolor: #0085cc;
