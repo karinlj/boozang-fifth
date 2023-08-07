@@ -43,7 +43,7 @@
 </section>
 
 <!-- footer -->
-<footer id="footer" class="footer-main section_spacing_top_small">
+<footer id="footer" class="footer-main section_spacing_top_mini">
     <div class="container">
         <div class="row align-items-start justify-content-between">
             <div class="col-lg-3">

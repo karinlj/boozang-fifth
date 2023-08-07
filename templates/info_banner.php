@@ -23,7 +23,7 @@ if (get_row_layout() == 'info_banner') { ?>
                     $heading = get_sub_field('heading');
                     $text = get_sub_field('text');
                     ?>
-                <h2 class=""><?php echo $heading; ?></h2>
+                <h3 class=""><?php echo $heading; ?></h3>
                 <p class=""><?php echo $text; ?></p>
 
                 <?php if (have_rows('banner_links')) {

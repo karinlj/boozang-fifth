@@ -64,7 +64,7 @@ $heading_color = get_sub_field('heading_background');
                     <?php
                                         if ($link) { ?>
                     <a class="arrow_link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"
-                        rel="noopener noreferrer"><?php echo $link['title']; ?>
+                        rel="noopener noreferrer"><?php echo $link['title']; ?><i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <?php } ?>
 

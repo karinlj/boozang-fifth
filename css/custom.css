@@ -84,25 +84,6 @@ img {
   }
 }
 
-.section_spacing_top_big {
-  padding: 5rem calc(1.5rem - 15px);
-}
-@media all and (min-width: 576px) {
-  .section_spacing_top_big {
-    padding: 5rem calc(2.25rem - 15px);
-  }
-}
-@media all and (min-width: 768px) {
-  .section_spacing_top_big {
-    padding: 6rem calc(3rem - 15px);
-  }
-}
-@media all and (min-width: 1200px) {
-  .section_spacing_top_big {
-    padding: 10rem calc(3.75rem - 15px);
-  }
-}
-
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
 }
@@ -243,6 +224,42 @@ footer a:focus {
 /**********************************************
   links with underscore on some sections with Wysiyg
 ***********************************************/
+.faq_list_section a,
+.two_columns_section a,
+.text_section_pages a,
+.post_text a {
+  display: inline-block;
+  position: relative;
+}
+.faq_list_section a:before,
+.two_columns_section a:before,
+.text_section_pages a:before,
+.post_text a:before {
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #0085cc;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+.faq_list_section a:hover,
+.two_columns_section a:hover,
+.text_section_pages a:hover,
+.post_text a:hover {
+  opacity: 1;
+}
+.faq_list_section a:hover:before,
+.two_columns_section a:hover:before,
+.text_section_pages a:hover:before,
+.post_text a:hover:before {
+  width: 100%;
+  opacity: 0.7;
+}
+
 a.uderscore_link {
   display: inline-block;
   position: relative;
@@ -314,20 +331,12 @@ a.uderscore_link:hover:before {
   letter-spacing: 0px;
 }
 .arrow_link:hover {
-  opacity: 0.7;
+  opacity: 0.7 !important;
   color: #f24d7f;
 }
-.arrow_link:after {
-  position: absolute;
-  top: 0;
-  right: -6px;
-  font-family: "Font Awesome 5 Free";
-  content: "";
-  font-weight: 900;
+.arrow_link i {
   color: #f24d7f;
-}
-.arrow_link:after:hover {
-  opacity: 0.7;
+  margin-left: 0.5rem;
 }
 .arrow_link:focus {
   color: #f24d7f;
@@ -401,12 +410,12 @@ h2 {
 }
 @media all and (min-width: 992px) {
   h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 @media all and (min-width: 1200px) {
   h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 h2.smaller_size_text {
@@ -541,7 +550,7 @@ header.purpleGradient {
 }
 section.pinkGradient,
 header.pinkGradient {
-  background-image: linear-gradient(to bottom, #2a3970, #654e88, #9a669b, #cb81ac, #f8a0ba);
+  background-image: linear-gradient(to bottom, #7e5da6, #a165aa, #c16eab, #dd7aab, #f688a9);
 }
 section.blueDarkSolid,
 header.blueDarkSolid {
@@ -667,7 +676,7 @@ header.overlay-purple::before {
 }
 section.overlay-pink::before,
 header.overlay-pink::before {
-  background-image: linear-gradient(to bottom, #2a3970, #654e88, #9a669b, #cb81ac, #f8a0ba);
+  background-image: linear-gradient(to bottom, #7e5da6, #a165aa, #c16eab, #dd7aab, #f688a9);
   opacity: 0.85;
 }
 
@@ -1524,7 +1533,7 @@ feature list  (pricing page)
    info banner
 *********************/
 .info_banner {
-  min-height: 330px;
+  min-height: 280px;
 }
 .info_banner p {
   font-size: 1.1rem;
@@ -2705,7 +2714,7 @@ forum section
 }
 @media all and (min-width: 768px) {
   .footer-main {
-    min-height: 350px;
+    min-height: 320px;
   }
 }
 .footer-main img {
@@ -2788,6 +2797,9 @@ forum section
 .footer-main .social-icons .fas:hover {
   transform: translateY(-2px);
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
+}
+.footer-main .footer-copy {
+  border-top: 1px solid #66758d;
 }
 .footer-main .footer-copy .copy p {
   border-top: 1px solid #2a3970;

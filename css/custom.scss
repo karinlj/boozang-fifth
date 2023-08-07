@@ -74,18 +74,6 @@ img {
     max-width: 1450px;
   }
 }
-.section_spacing_top_big {
-  padding: 5rem calc(1.5rem - 15px);
-  @media all and (min-width: $sm-min) {
-    padding: 5rem calc(2.25rem - 15px);
-  }
-  @media all and (min-width: $md-min) {
-    padding: 6rem calc(3rem - 15px);
-  }
-  @media all and (min-width: $xl-min) {
-    padding: 10rem calc(3.75rem - 15px);
-  }
-}
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
   @media all and (min-width: $sm-min) {
@@ -199,34 +187,34 @@ footer {
 /**********************************************
   links with underscore on some sections with Wysiyg
 ***********************************************/
-// .faq_list_section,
-// .two_columns_section,
-// .text_section_pages,
-// .post_text {
-//   a {
-//     display: inline-block;
-//     position: relative;
-//     &:before {
-//       opacity: 0.4;
-//       position: absolute;
-//       bottom: 0;
-//       left: 1px;
-//       content: "";
-//       width: 100%;
-//       height: 2px;
-//       background: $linkcolor;
-//       -webkit-transition: width 0.2s ease-in;
-//       transition: width 0.2s ease-in;
-//     }
-//     &:hover {
-//       opacity: 1;
-//       &:before {
-//         width: 100%;
-//         opacity: 0.7;
-//       }
-//     }
-//   }
-// }
+.faq_list_section,
+.two_columns_section,
+.text_section_pages,
+.post_text {
+  a {
+    display: inline-block;
+    position: relative;
+    &:before {
+      opacity: 0.4;
+      position: absolute;
+      bottom: 0;
+      left: 1px;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: $linkcolor;
+      -webkit-transition: width 0.2s ease-in;
+      transition: width 0.2s ease-in;
+    }
+    &:hover {
+      opacity: 1;
+      &:before {
+        width: 100%;
+        opacity: 0.7;
+      }
+    }
+  }
+}
 //class for link with underscore
 a.uderscore_link {
   display: inline-block;
@@ -297,20 +285,12 @@ a.uderscore_link {
   transition: transform 0.3s ease;
   letter-spacing: 0px;
   &:hover {
-    opacity: 0.7;
+    opacity: 0.7 !important;
     color: $themecolorPink;
   }
-  &:after {
-    position: absolute;
-    top: 0;
-    right: -6px;
-    font-family: "Font Awesome 5 Free";
-    content: "\f061";
-    font-weight: 900;
+  i {
     color: $themecolorPink;
-    &:hover {
-      opacity: 0.7;
-    }
+    margin-left: 0.5rem;
   }
   &:focus {
     color: $themecolorPink;
@@ -373,10 +353,10 @@ h1 {
 h2 {
   font-size: 1.5rem;
   @media all and (min-width: $lg-min) {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   &.smaller_size_text {
     font-size: 1.3rem;
@@ -1404,7 +1384,7 @@ feature list  (pricing page)
 *********************/
 .info_banner {
   //background and overlay: see scss section
-  min-height: 330px;
+  min-height: 280px;
   p {
     font-size: 1.1rem;
     @media all and (min-width: $lg-min) {
@@ -2510,7 +2490,7 @@ forum section
   color: #fff;
   min-height: 300px;
   @media all and (min-width: $md-min) {
-    min-height: 350px;
+    min-height: 320px;
   }
   img {
     width: 140px;
@@ -2588,6 +2568,7 @@ forum section
     }
   }
   .footer-copy {
+    border-top: 1px solid $themecolorLight;
     .copy {
       p {
         border-top: 1px solid $blueDarkSolid;
