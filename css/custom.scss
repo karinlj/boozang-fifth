@@ -2492,6 +2492,9 @@ forum section
   @media all and (min-width: $md-min) {
     min-height: 320px;
   }
+  > .container {
+    margin-bottom: 3rem;
+  }
   img {
     width: 140px;
     margin-top: -0.5rem;

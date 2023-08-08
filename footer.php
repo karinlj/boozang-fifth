@@ -7,11 +7,11 @@
 
         <div class="text_section text-center">
             <?php if ($heading) { ?>
-            <h2 class=""> <?php echo $heading; ?></h2>
+                <h2 class=""> <?php echo $heading; ?></h2>
             <?php
             } ?>
             <?php if ($text) { ?>
-            <p class=""> <?php echo $text; ?></p>
+                <p class=""> <?php echo $text; ?></p>
             <?php
             } ?>
         </div>
@@ -26,14 +26,13 @@
                     the_row();
 
                     $link = get_sub_field('link'); ?>
-        <div class="btn_container">
-            <?php
+                    <div class="btn_container">
+                        <?php
                         if ($link) { ?>
-            <a class="btn link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"
-                rel="noopener noreferrer"><?php echo $link['title']; ?>
-            </a>
-            <?php } ?>
-        </div>
+                            <a class="btn link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" rel="noopener noreferrer"><?php echo $link['title']; ?>
+                            </a>
+                        <?php } ?>
+                    </div>
         <?php
                 }
             }
@@ -49,45 +48,42 @@
             <div class="col-lg-3">
                 <div class="logo">
                     <a href="<?php echo home_url() ?>" class="logo" aria-label="Boozang home page">
-                        <img class="logo-img"
-                            src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse.png"
-                            srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse@2x.png 325w"
-                            width="208" height="51" alt="Boozang home page" />
+                        <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse@2x.png 325w" width="208" height="51" alt="Boozang home page" />
                     </a>
                 </div>
                 <div class="social-icons">
                     <?php
                     if (function_exists('acf_add_options_page')) {
                     ?>
-                    <ul class="social">
+                        <ul class="social">
 
-                        <?php
+                            <?php
                             if (have_rows('social_icons', 'option')) { // check if repeater field has rows
                             ?>
-                        <?php
+                                <?php
                                 while (have_rows('social_icons', 'option')) {
                                     the_row();
 
                                     $social_url = get_sub_field('social_url');
                                     $social_site = get_sub_field('social_site'); ?>
 
-                        <li class="social-item">
-                            <a href="<?php echo $social_url; ?>" aria-label="<?php echo $social_site; ?>">
-                                <i class="fab fa-<?php echo $social_site; ?>" aria-hidden="true"></i>
-                            </a>
-                        </li>
+                                    <li class="social-item">
+                                        <a href="<?php echo $social_url; ?>" aria-label="<?php echo $social_site; ?>">
+                                            <i class="fab fa-<?php echo $social_site; ?>" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
 
-                        <?php
+                                <?php
                                 } ?>
-                        <?php
+                            <?php
                             }
                             $link = get_field('mail_link', 'option'); ?>
-                        <li class="social-item">
-                            <a href="mailto:<?php echo $link; ?>" target="_top" aria-label="Boozang email">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
+                            <li class="social-item">
+                                <a href="mailto:<?php echo $link; ?>" target="_top" aria-label="Boozang email">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     <?php
                     }
                     ?>
@@ -104,32 +100,31 @@
                             // loop through the rows of data
                             while (have_rows('footer_links', 'option')) {
                                 the_row(); ?>
-                    <div class="col-6 col-md-3">
-                        <h3 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h3>
+                                <div class="col-6 col-md-3">
+                                    <h3 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h3>
 
-                        <?php
+                                    <?php
                                     //if repeater field has rows
                                     if (have_rows('links')) {
                                     ?>
-                        <ul class="footer-links">
-                            <?php
+                                        <ul class="footer-links">
+                                            <?php
                                             while (have_rows('links')) {
                                                 the_row(); ?>
 
-                            <?php
+                                                <?php
                                                 $link = get_sub_field('link'); ?>
 
-                            <li class="link-item">
-                                <a href="<?php echo $link['url']; ?>"
-                                    target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-                            </li>
-                            <?php
+                                                <li class="link-item">
+                                                    <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                                                </li>
+                                            <?php
                                             } ?>
-                        </ul>
-                        <?php
+                                        </ul>
+                                    <?php
                                     } ?>
-                    </div>
-                    <?php
+                                </div>
+                            <?php
                             } ?>
                     <?php
                         }
@@ -145,8 +140,7 @@
                 <div class="col">
                     <div class="copy">
                         <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> INC. ALL RIGHTS RESERVED.
-                            Theme by <a href="http://karinljunggren.com/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Karin Ljunggren Home Page">Karin</a>
+                            Theme by <a href="http://karinljunggren.com/" target="_blank" rel="noopener noreferrer" aria-label="Karin Ljunggren Home Page">Karin</a>
                         </p>
                     </div>
                 </div>

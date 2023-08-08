@@ -2717,6 +2717,9 @@ forum section
     min-height: 320px;
   }
 }
+.footer-main > .container {
+  margin-bottom: 3rem;
+}
 .footer-main img {
   width: 140px;
   margin-top: -0.5rem;
