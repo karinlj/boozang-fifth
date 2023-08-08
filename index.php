@@ -10,12 +10,12 @@
 
                 <!--main post loop-->
                 <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-                <!-- get content.php-->
-                <?php get_template_part('parts/content', get_post_format()); ?>
+                        <!-- get content.php-->
+                        <?php get_template_part('parts/content', get_post_format()); ?>
 
-                <?php endwhile; ?>
+                    <?php endwhile; ?>
             </div>
 
             <div class="paginate_links">
@@ -27,32 +27,18 @@
                     );
 
                     if (paginate_links($pages)) { ?>
-                <div class="btn">
-                    <?php echo paginate_links($pages); ?>
-                    </button>
+                    <div class="btn">
+                        <?php echo paginate_links($pages); ?>
+                        </button>
                     <?php } ?>
-                </div>
+                    </div>
 
                 <?php else : ?>
-                <p><?php __('No Posts Found'); ?></p>
+                    <p><?php __('No Posts Found'); ?></p>
                 <?php endif; ?>
             </div>
         </div>
     </div>
-    <!-- newsletter widget -->
-    <section class="newsletter section_spacing_top_small">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="newsletter_content">
-                        <?php if (is_active_sidebar('newsletter')) :
-                            dynamic_sidebar('newsletter');
-                        endif;
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <?php get_footer(); ?>

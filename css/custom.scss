@@ -421,8 +421,7 @@ h6 {
 .text_section,
 .get_started_banner,
 .info_banner,
-.copy,
-.newsletter {
+.copy {
   text-align: center;
   @media all and (min-width: $sm-min) {
     text-align: left;
@@ -2204,102 +2203,6 @@ feature list  (pricing page)
         max-width: 100%;
       }
     }
-  }
-}
-// Newsletter {
-.newsletter {
-  background-image: url("../img/newspapers.jpg");
-  background-size: cover;
-  position: relative;
-  &:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: $blueBgGradient;
-    opacity: 0.85;
-    content: "";
-    display: block;
-  }
-  &.single {
-    @media all and (min-width: $sm-min) {
-      margin: 3rem 2rem;
-    }
-  }
-  .newsletter_content {
-    display: flex;
-    flex-direction: column;
-    @media all and (min-width: $lg-min) {
-      flex-direction: row;
-      align-items: flex-end;
-    }
-  }
-  .widget_text.newsletter-form {
-    .textwidget.custom-html-widget {
-      .heading,
-      .text {
-        color: #fff;
-      }
-      .text {
-        font-size: 1.2rem;
-      }
-    }
-    @media all and (min-width: $lg-min) {
-      padding-right: 3rem;
-    }
-  }
-  .es_subscription_form {
-    display: flex;
-    flex-direction: column;
-    @media all and (min-width: $md-min) {
-      flex-direction: row;
-    }
-    label {
-      display: block;
-    }
-    .es_txt_email {
-      width: 100%;
-      border: none;
-      color: #565c76;
-      padding-left: 30px;
-      height: 45px;
-      border-radius: $themeBorder_radius;
-
-      @media all and (min-width: $md-min) {
-        width: 25rem;
-      }
-    }
-    input[type="submit"] {
-      width: 100%;
-      border: none;
-      font-size: 1rem;
-      padding: 10px 20px;
-      height: 45px;
-      border-radius: $themeBorder_radius;
-      color: #fff;
-      background: transparent;
-      border: 1px solid #fff;
-      font-size: initial;
-      line-height: 1;
-      cursor: pointer;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-      transition: all 0.25s ease;
-      @media all and (min-width: $md-min) {
-        width: initial;
-        margin-left: 0.5rem;
-      }
-      &:hover {
-        transform: translateX(2px);
-      }
-    }
-    .es_spinner_image {
-      margin-left: 0.5rem;
-    }
-  }
-  .es_subscription_message {
-    color: #fff;
   }
 }
 
