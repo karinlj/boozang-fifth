@@ -124,6 +124,7 @@
                                     <?php
                                     } ?>
                                 </div>
+
                             <?php
                             } ?>
                     <?php
@@ -132,6 +133,12 @@
                     ?>
                 </div>
             </div>
+            <div class="back_to_top_link">
+                <a href="#header_top">
+                    <i class="fa-solid fa-angles-up" aria-hidden="true" aria-label="To top of page"></i>
+                </a>
+            </div>
+
         </div>
     </div>
     <div class="footer-copy">

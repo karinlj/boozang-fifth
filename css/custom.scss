@@ -2385,6 +2385,7 @@ forum section
   }
 }
 .footer-main {
+  position: relative;
   background: $blueDarkSolid;
   width: 100%;
   @include d-inline-flex;
@@ -2473,6 +2474,7 @@ forum section
       }
     }
   }
+
   .footer-copy {
     border-top: 1px solid $themecolorLight;
     .copy {
@@ -2486,6 +2488,17 @@ forum section
           padding-left: 3px;
         }
       }
+    }
+  }
+  .back_to_top_link {
+    position: absolute;
+    bottom: 4.5rem;
+    right: 3rem;
+    font-size: 1rem;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    a {
+      color: $themecolorPink;
     }
   }
 }

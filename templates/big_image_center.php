@@ -21,11 +21,19 @@ if (get_row_layout() == 'big_image_center') { ?>
                 <h2 class="heading"> <?php echo $heading; ?></h2>
                 <p class="preamble"> <?php echo $preamble; ?></p>
                 <div class="image_part">
+                    <?php  if($link_url) {  ?>
                     <a class="link_url" href="<?php echo $link_url; ?>" target="_blank" rel="noreferrer noopener"
                         aria-label="Boozang TheLab">
+                        <?php  } ?>
+
                         <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
                         <span class="alt_caption"><?php echo $alt_text; ?></span>
+
+                        <?php  if($link_url) {?>
                     </a>
+                    <?php  } ?>
+
+
                 </div>
             </div>
         </div>

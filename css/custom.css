@@ -2598,6 +2598,7 @@ forum section
 }
 
 .footer-main {
+  position: relative;
   background: #2a3970;
   width: 100%;
   display: -webkit-inline-box !important;
@@ -2710,6 +2711,17 @@ forum section
 }
 .footer-main .footer-copy .copy p a {
   padding-left: 3px;
+}
+.footer-main .back_to_top_link {
+  position: absolute;
+  bottom: 4.5rem;
+  right: 3rem;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.footer-main .back_to_top_link a {
+  color: #f24d7f;
 }
 
 /*********************
