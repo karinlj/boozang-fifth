@@ -7,7 +7,13 @@ function bn_script_resourses()
     //name, absolute path, dependencies, version, in_footer
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', true);
 
-    wp_register_script('custom_script', home_url() . '/wp-content/themes/boozang-fifth/assets/js/custom_script.js', array('jquery'), '1.0.0', true);
+    wp_register_script(
+        'custom_script',
+        home_url() . '/wp-content/themes/boozang-fifth/assets/js/custom_script.js',
+        array('jquery'),
+        '1.0.0',
+        true
+    );
     wp_enqueue_script('custom_script');
 }
 add_action('wp_enqueue_scripts', 'bn_script_resourses');
@@ -31,10 +37,11 @@ function google_fonts()
 {
     //Av någon anledning knasar det med wp_enqueue_script
 ?>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 
 <?php
 }
 add_action('wp_head', 'google_fonts');
+
 ?>
