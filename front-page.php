@@ -17,8 +17,8 @@ if (function_exists('have_rows')) { ?>
 
 <?php $layout = get_row_layout(); ?>
 
-<?php // load the layout from the templates folder
-            get_template_part('templates/' . $layout); ?>
+<?php // load the layout
+            get_template_part('acf-templates/' . $layout); ?>
 
 <?php }
     }

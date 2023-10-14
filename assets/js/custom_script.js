@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 
   //Blog Sidebar Categories
   $(".blog-sidebar ul").prepend(
-    '<li class="most-recent"><a href="/blog">Most Recent</a></li>'
+    '<li class="most-recent"><a href="/Boozang/blog">Most Recent</a></li>'
   );
   $(window).on("load", function () {
     var path = window.location.pathname;
@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
   });
 
   //Menu Desktop
-  //toggle sub_menu_open class
+  //toggle class
   $("nav ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation(); // to stop the 'document handler' from activating
     $(this).toggleClass("is_open");
@@ -38,7 +38,6 @@ jQuery(document).ready(function ($) {
 
     $(this).children("ul").toggleClass("sub-menu-open");
   });
-
   //Remove class clicking anywhere on page
   $(document).click(function (event) {
     if (
@@ -52,14 +51,11 @@ jQuery(document).ready(function ($) {
   //toggle classes and attributes
   $(".menu_toggle_btn").click(function () {
     $(this).toggleClass("btn_clicked");
-
     let expanded = $(this).attr("aria-expanded") === "true";
     $(this).attr("aria-expanded", !expanded);
     $(".nav-mobile").toggleClass("menu_open");
-
     $("body").toggleClass("no_scroll");
   });
-
   $(".nav-mobile ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation();
     $(this).toggleClass("is_open");
@@ -73,42 +69,42 @@ jQuery(document).ready(function ($) {
   // //set active class on rand
   // $(".tab_content:nth-child(" + rand + ")").addClass("active");
   // $(".tab_link:nth-child(" + rand + ")").addClass("active");
+  // $(".tab_link").click(function () {
+  //   //value of data_tab-attribute
+  //   var tab_id = $(this).attr("data_tab");
 
-  $(".tab_link").click(function () {
-    //value of data_tab-attribute
-    var tab_id = $(this).attr("data_tab");
+  //   //Toggle tab link
+  //   // $(this).addClass("active").siblings().removeClass("active");
+  //   $(".tab_link").attr("aria-selected", "false"); //deselect all the tabs
+  //   $(this).attr("aria-selected", "true"); // select this tab
 
-    //Toggle tab link
-    // $(this).addClass("active").siblings().removeClass("active");
-    $(".tab_link").attr("aria-selected", "false"); //deselect all the tabs
-    $(this).attr("aria-selected", "true"); // select this tab
+  //   //Toggle target tab
+  //   $("img[role='tabpanel']").attr("aria-hidden", "true"); //hide all the img panels
+  //   $("div[role='tabpanel']").attr("aria-hidden", "true"); //hide all the video panels
 
-    //Toggle target tab
-    $("img[role='tabpanel']").attr("aria-hidden", "true"); //hide all the img panels
-    $("div[role='tabpanel']").attr("aria-hidden", "true"); //hide all the video panels
-
-    $("#" + tab_id).attr("aria-hidden", "false"); // show our panel
-  });
+  //   $("#" + tab_id).attr("aria-hidden", "false"); // show our panel
+  // });
 
   //enlarge image in two_columns_block
-  $(".part.image .pict").click(function () {
-    // console.log("this", this);
-    $(this).toggleClass("enlarge");
-  });
-  //Remove class clicking anywhere on page
-  $(document).click(function (event) {
-    if (!$(event.target).closest(".part.image .pict").length) {
-      $(".part.image .pict").removeClass("enlarge");
-    }
-  });
+  // $(".part.image .pict").click(function () {
+  //   // console.log("this", this);
+  //   $(this).toggleClass("enlarge");
+  // });
+  // //Remove class clicking anywhere on page
+  // $(document).click(function (event) {
+  //   if (!$(event.target).closest(".part.image .pict").length) {
+  //     $(".part.image .pict").removeClass("enlarge");
+  //   }
+  // });
+
   //enlarge image blog
-  $(".post_text figure img").click(function () {
-    $(this).toggleClass("enlarge");
-  });
-  $(document).click(function (event) {
-    if (!$(event.target).closest(".post_text figure img").length) {
-      $(".post_text figure img").removeClass("enlarge");
-    }
-  });
+  // $(".post_text figure img").click(function () {
+  //   $(this).toggleClass("enlarge");
+  // });
+  // $(document).click(function (event) {
+  //   if (!$(event.target).closest(".post_text figure img").length) {
+  //     $(".post_text figure img").removeClass("enlarge");
+  //   }
+  // });
 });
 document.ready;

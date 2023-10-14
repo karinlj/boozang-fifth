@@ -7,14 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content=" <?php bloginfo('description'); ?>">
-    <!-- <link rel="icon" href="../../favicon.ico">-->
-
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
     </title>
-
     <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -58,7 +54,7 @@
     <header id="header_top" class="<?php echo $header_class; ?>  <?php echo $color; ?> <?php echo $overlay_color; ?>" <?php echo $style; ?>>
 
         <!-- get menu -->
-        <?php get_template_part('parts/main-menu'); ?>
+        <?php get_template_part('template-parts/navigation/main-menu'); ?>
 
         <div class="header_items_section">
             <div class="container">
@@ -80,10 +76,8 @@
 
                     </div>
                 </div>
-                <!-- btn links -->
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-6">
-                        <!-- repeater field -->
                         <?php
                         if (have_rows('btn_links')) { ?>
                             <ul class="btn_links">

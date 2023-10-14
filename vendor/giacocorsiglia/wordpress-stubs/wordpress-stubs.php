@@ -8858,7 +8858,7 @@ class WP_Site_Icon
         /*
          * App icons up to iPhone 6 Plus.
          *
-         * See https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html
+         * See https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIGassets/iconMatrix.html
          */
         180,
         // Our regular Favicon.
@@ -11101,19 +11101,19 @@ class getid3_dts extends \getid3_handler
     /**
      * Default DTS syncword used in native .cpt or .dts formats
      */
-    const syncword = "þ€\1";
+    const syncword = "ï¿½ï¿½\1";
     private $readBinDataOffset = 0;
     /**
      * Possible syncwords indicating bitstream encoding
      */
     public static $syncwords = array(
-        0 => "þ€\1",
+        0 => "ï¿½ï¿½\1",
         // raw big-endian
-        1 => "þ\1€",
+        1 => "ï¿½\1ï¿½",
         // raw little-endian
-        2 => "\37ÿè\0",
+        2 => "\37ï¿½ï¿½\0",
         // 14-bit big-endian
-        3 => "ÿ\37\0è",
+        3 => "ï¿½\37\0ï¿½",
     );
     // 14-bit little-endian
     public function Analyze()
@@ -16765,7 +16765,7 @@ class SimplePie
      *
      * The number of supported character encodings depends on whether your web
      * host supports {@link http://php.net/mbstring mbstring},
-     * {@link http://php.net/iconv iconv}, or both. See
+     * {@link http://php.netassets/iconv iconv}, or both. See
      * {@link http://simplepie.org/wiki/faq/Supported_Character_Encodings} for
      * more information.
      *
@@ -24820,8 +24820,8 @@ class PHPMailer
      * Automatically inlines images and creates a plain-text version by converting the HTML,
      * overwriting any existing values in Body and AltBody.
      * Do not source $message content from user input!
-     * $basedir is prepended when handling relative URLs, e.g. <img src="/images/a.png"> and must not be empty
-     * will look for an image file in $basedir/images/a.png and convert it to inline.
+     * $basedir is prepended when handling relative URLs, e.g. <img src="/assets/images/a.png"> and must not be empty
+     * will look for an image file in $basedir/assets/images/a.png and convert it to inline.
      * If you don't provide a $basedir, relative paths will be left untouched (and thus probably break in email)
      * If you don't want to apply these transformations to your HTML, just set Body and AltBody directly.
      * @access public
@@ -101770,7 +101770,7 @@ function get_front_page_template()
  *
  * An example of this is:
  *
- * 1. page-templates/full-width.php
+ * 1. page-acf-templates/full-width.php
  * 2. page-about.php
  * 3. page-4.php
  * 4. page.php
@@ -101817,7 +101817,7 @@ function get_search_template()
  *
  * An example of this is:
  *
- * 1. templates/full-width.php
+ * 1. acf-templates/full-width.php
  * 2. single-post-hello-world.php
  * 3. single-post.php
  * 4. single.php

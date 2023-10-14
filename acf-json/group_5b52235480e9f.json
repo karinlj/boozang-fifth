@@ -274,7 +274,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
+                "value": "front-page.php"
             }
         ]
     ],
@@ -287,5 +287,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1690922270
+    "modified": 1697050154
 }

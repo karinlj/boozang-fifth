@@ -48,7 +48,7 @@
             <div class="col-lg-3">
                 <div class="logo">
                     <a href="<?php echo home_url() ?>" class="logo" aria-label="Boozang home page">
-                        <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/boozang_logo_reverse@2x.png 325w" width="208" height="51" alt="Boozang home page" />
+                        <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w" width="208" height="51" alt="Boozang home page" />
                     </a>
                 </div>
                 <div class="social-icons">
