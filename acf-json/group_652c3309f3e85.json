@@ -1,11 +1,11 @@
 {
-    "key": "group_5b48ac4dc5471",
-    "title": "Sign up field",
+    "key": "group_652c3309f3e85",
+    "title": "Sign up field K8s",
     "fields": [
         {
-            "key": "field_652c2e12645d2",
-            "label": "Footer text",
-            "name": "footer_text",
+            "key": "field_652c330a1490a",
+            "label": "K8s text",
+            "name": "k8s_text",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -23,9 +23,9 @@
             "delay": 0
         },
         {
-            "key": "field_652c2e1e645d3",
-            "label": "Footer link",
-            "name": "footer_link",
+            "key": "field_652c330a16a6f",
+            "label": "K8s link",
+            "name": "k8s_link",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -57,5 +57,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697398330
+    "modified": 1697398412
 }

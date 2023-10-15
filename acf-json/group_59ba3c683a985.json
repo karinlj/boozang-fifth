@@ -22,7 +22,9 @@
                 "blueDarkGradient": "Blue dark gradient",
                 "blueGradient": "Blue gradient",
                 "purpleGradient": "Purple gradient",
-                "pinkGradient": "Pink gradient"
+                "blueDarkToTurquoiseGradient": "Blue dark to turquoise gradient",
+                "blueToTurquoiseGradient": "Blue to turquoise gradient",
+                "turquoiseGradient": "Turquoise gradient"
             },
             "default_value": "",
             "return_format": "value",
@@ -73,8 +75,7 @@
             "choices": {
                 "overlay-blue": "Overlay blue",
                 "overlay-blueDark": "Overlay blue dark",
-                "overlay-purple": "Overlay purple",
-                "overlay-pink": "Overlay pink"
+                "overlay-purple": "Overlay purple"
             },
             "default_value": "",
             "return_format": "value",
@@ -132,5 +133,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691317804
+    "modified": 1697386605
 }

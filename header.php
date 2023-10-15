@@ -51,7 +51,8 @@
         }
     } ?>
 
-    <header id="header_top" class="<?php echo $header_class; ?>  <?php echo $color; ?> <?php echo $overlay_color; ?>" <?php echo $style; ?>>
+    <header id="header_top" class="<?php echo $header_class; ?>  <?php echo $color; ?> <?php echo $overlay_color; ?>"
+        <?php echo $style; ?>>
 
         <!-- get menu -->
         <?php get_template_part('template-parts/navigation/main-menu'); ?>
@@ -80,24 +81,26 @@
                     <div class="col-md-10 col-lg-6">
                         <?php
                         if (have_rows('btn_links')) { ?>
-                            <ul class="btn_links">
+                        <ul class="btn_links">
 
-                                <?php while (have_rows('btn_links')) {
+                            <?php while (have_rows('btn_links')) {
                                     the_row();
                                     $link = get_sub_field('link');
 
                                     $btn_color = get_sub_field('btn_color'); ?>
-                                    <div class="btn_container">
-                                        <?php
-                                        if ($link) { ?>
-                                            <a class="btn link <?php echo $btn_color; ?>" href="<?php echo $link['url']; ?>" rel="noopener noreferrer" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
-                                            </a>
-                                        <?php } ?>
-
-                                    </div>
+                            <div class="btn_container">
                                 <?php
+                                        if ($link) { ?>
+                                <a class="btn link <?php echo $btn_color; ?>" href="<?php echo $link['url']; ?>"
+                                    rel="noopener noreferrer"
+                                    target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?>
+                                </a>
+                                <?php } ?>
+
+                            </div>
+                            <?php
                                 } ?>
-                            </ul>
+                        </ul>
                         <?php  } ?>
 
                     </div>

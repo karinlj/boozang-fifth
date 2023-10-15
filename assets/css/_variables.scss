@@ -17,11 +17,15 @@ $max-page-width: 1380px;
 /* colors */
 $blueDarkestSolid: #1b284a;
 $blueDarkSolid: #2a3970;
+$purpleSolid: #7e5da6;
+
+$turquoiseSolid: #9ae0ec;
 
 $themecolorNewBlue: #0085cc;
 $themecolorNewblueDarker: #006399;
 
-$blueDarkBgGradient: linear-gradient(
+//blue to purple bg
+$blueDarkToPurpleBgGradient: linear-gradient(
   to bottom,
   #2a3970,
   #2f3b73,
@@ -29,7 +33,7 @@ $blueDarkBgGradient: linear-gradient(
   #383e78,
   #3d407b
 );
-$blueBgGradient: linear-gradient(
+$blueToPurpleBgGradient: linear-gradient(
   to bottom,
   #3d407b,
   #444380,
@@ -52,6 +56,32 @@ $pinkBgGradient: linear-gradient(
   #c16eab,
   #dd7aab,
   #f688a9
+);
+
+//blue to turquoise bg
+$blueDarkToTurquoiseBgGradient: linear-gradient(
+  to bottom,
+  #2a3970,
+  #2b437a,
+  #2d4d83,
+  #2f588c,
+  #326295
+);
+$blueToTurquoiseBgGradient: linear-gradient(
+  to bottom,
+  #326295,
+  #3872a1,
+  #4081ad,
+  #4b91b8,
+  #58a1c3
+);
+$turquoiseBgGradient: linear-gradient(
+  to bottom,
+  #58a1c3,
+  #63adcb,
+  #6fb8d3,
+  #7bc4da,
+  #88d0e2
 );
 
 //text color

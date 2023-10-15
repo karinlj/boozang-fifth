@@ -23,10 +23,13 @@ body {
 body.no_scroll {
   overflow: hidden;
 }
+.alt_caption {
+  display: none;
+}
 .content_container_page {
   min-height: 30rem;
   .page_aside {
-    background: $blueDarkBgGradient;
+    background: $blueDarkSolid;
     ul {
       list-style-type: none;
       margin: 0;
@@ -504,18 +507,28 @@ h6 {
 section,
 header {
   position: relative;
+  //gradients
+  //purple
   &.blueDarkGradient {
-    background-image: $blueDarkBgGradient;
+    background-image: $blueDarkToPurpleBgGradient;
   }
   &.blueGradient {
-    background-image: $blueBgGradient;
+    background-image: $blueToPurpleBgGradient;
   }
   &.purpleGradient {
     background-image: $purpleBgGradient;
   }
-  &.pinkGradient {
-    background-image: $pinkBgGradient;
+  //turqoise
+  &.blueDarkToTurquoiseGradient {
+    background-image: $blueDarkToTurquoiseBgGradient;
   }
+  &.blueToTurquoiseGradient {
+    background-image: $blueToTurquoiseBgGradient;
+  }
+  &.turquoiseGradient {
+    background-image: $turquoiseBgGradient;
+  }
+  //solid
   &.blueDarkSolid {
     background: $blueDarkSolid;
   }
@@ -529,7 +542,9 @@ header {
   &.blueDarkGradient,
   &.blueGradient,
   &.purpleGradient,
-  &.pinkGradient,
+  &.blueDarkToTurquoiseGradient,
+  &.blueToTurquoiseGradient,
+  &.turquoiseGradient,
   &.blueDarkSolid {
     h1,
     h2,
@@ -565,19 +580,15 @@ header {
     }
   }
   &.overlay-blue::before {
-    background-image: $blueBgGradient;
+    background-image: $blueToPurpleBgGradient;
     opacity: 0.8;
   }
   &.overlay-blueDark::before {
-    background-image: $blueDarkBgGradient;
+    background-image: $blueDarkToPurpleBgGradient;
     opacity: 0.85;
   }
   &.overlay-purple::before {
     background-image: $purpleBgGradient;
-    opacity: 0.85;
-  }
-  &.overlay-pink::before {
-    background-image: $pinkBgGradient;
     opacity: 0.85;
   }
 }
@@ -652,7 +663,7 @@ main nav - default colors for white & lightgrey bg
         }
         &:hover {
           color: $navcolor;
-          border-bottom: 1px solid #fff;
+          border-bottom: 1px solid $blueDarkSolid;
           opacity: 1;
         }
         &:active {
@@ -824,6 +835,7 @@ main nav - default colors for white & lightgrey bg
 /*nav-desktop*/
 .logo {
   img {
+    max-width: 160px;
     padding-top: 5px;
     padding-right: 25px;
     @media all and (min-width: $md-min) {
@@ -1043,7 +1055,9 @@ main nav - default colors for white & lightgrey bg
   &.blueDarkGradient,
   &.blueGradient,
   &.purpleGradient,
-  &.pinkGradient {
+  &.blueDarkToTurquoiseGradient,
+  &.blueToTurquoiseGradient,
+  &.turquoiseGradient {
     .btn {
       background: #fff;
       color: $blueDarkSolid;
@@ -1215,7 +1229,7 @@ main nav - default colors for white & lightgrey bg
   }
 }
 //colored text
-.colored_part {
+.colored_pink_part {
   background-image: linear-gradient(
     to right,
     #f24d7f,
@@ -1223,6 +1237,19 @@ main nav - default colors for white & lightgrey bg
     #bf549f,
     #9f59a6,
     #7e5da6
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.colored_purple_part {
+  background-image: linear-gradient(
+    to right,
+    #956fac,
+    #9a77b1,
+    #a07eb5,
+    #a586ba,
+    #ab8ebe
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2344,7 +2371,7 @@ big_image_center
       }
     }
     &.blue {
-      background: $blueBgGradient;
+      background: $blueToPurpleBgGradient;
     }
   }
 }
@@ -2413,6 +2440,12 @@ forum section
   h2 {
     color: #fff;
   }
+  h2 {
+    font-size: 1.7rem;
+    @media (min-width: 992px) {
+      font-size: 2rem;
+    }
+  }
   .btn_container {
     margin-top: 3rem;
     display: flex;
@@ -2438,12 +2471,13 @@ forum section
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  min-height: 300px;
-  @media all and (min-width: $md-min) {
-    min-height: 320px;
-  }
   > .container {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+  }
+  &.boozang_footer {
+    > .container {
+      margin-bottom: 4rem;
+    }
   }
   img {
     width: 140px;
@@ -2521,6 +2555,22 @@ forum section
     }
   }
 
+  .customer_contact {
+    padding: 1rem 0;
+    p {
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+    a {
+      display: inline-block;
+      color: $themecolorPink;
+    }
+    .fab,
+    .fas {
+      color: $themecolorPink;
+      padding-right: 0.5rem;
+    }
+  }
   .footer-copy {
     border-top: 1px solid $themecolorLight;
     .copy {
@@ -2538,7 +2588,7 @@ forum section
   }
   .back_to_top_link {
     position: absolute;
-    bottom: 4.5rem;
+    bottom: 6rem;
     right: 3rem;
     font-size: 1rem;
     -webkit-transition: all 0.3s ease-in;
