@@ -2616,15 +2616,15 @@ forum section
 /******************************
     Cookies plugin
 *******************************/
-.cookie-notice-container {
-  span {
-    color: #999;
-  }
-}
 #moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme {
   border-color: transparent !important;
 }
-
+#moove_gdpr_cookie_info_bar
+  .moove-gdpr-info-bar-container
+  .moove-gdpr-info-bar-content
+  p {
+  font-weight: 400 !important;
+}
 /*********************
   feature slider
 *********************/
