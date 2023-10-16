@@ -2850,6 +2850,10 @@ forum section
   color: #999;
 }
 
+#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme {
+  border-color: transparent !important;
+}
+
 /*********************
   feature slider
 *********************/

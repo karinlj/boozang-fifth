@@ -56,7 +56,7 @@ $heading_color = get_sub_field('heading_background');
                 <?php
                                 if (get_row_layout() == 'text') { ?>
                 <div class="part text">
-                    <h3 class="colored_part"><?php the_sub_field('heading'); ?></h3>
+                    <h3 class="colored_pink_part"><?php the_sub_field('heading'); ?></h3>
                     <p><?php the_sub_field('text'); ?></p>
 
                     <?php $link = get_sub_field('link'); ?>
@@ -80,5 +80,4 @@ $heading_color = get_sub_field('heading_background');
         }
     }
     ?>
-
 </section>
