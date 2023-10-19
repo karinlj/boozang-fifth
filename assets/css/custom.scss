@@ -28,17 +28,27 @@ body.no_scroll {
 }
 .content_container_page {
   min-height: 30rem;
+  color: $themecolor;
   .page_aside {
-    background: $blueDarkSolid;
+    @media all and (min-width: $md-min) {
+      background: $blueDarkSolid;
+      color: #fff;
+    }
     ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       display: flex;
       align-items: center;
+      flex-direction: column;
+      @media all and (min-width: $md-min) {
+        flex-direction: row;
+      }
       li {
-        margin-right: 2rem;
         position: relative;
+        @media all and (min-width: $md-min) {
+          margin-right: 2rem;
+        }
         &::after {
           opacity: 0;
           content: "";
@@ -58,14 +68,19 @@ body.no_scroll {
       }
     }
     a {
-      line-height: 3rem;
-      // text-transform: uppercase;
+      padding: 0.8rem 0.2rem 0.8rem 0.2rem;
+      @media all and (min-width: $md-min) {
+        padding: 1rem 0.2rem 0.8rem 0.2rem;
+      }
       text-decoration: none;
-      color: #fff;
       display: block;
       white-space: nowrap;
       font-weight: 500;
       font-size: 0.9rem;
+      color: $themecolor;
+      @media all and (min-width: $md-min) {
+        color: #fff;
+      }
       &:hover {
         opacity: 1;
       }
@@ -75,7 +90,10 @@ body.no_scroll {
   .parent_active {
     a {
       font-weight: bolder;
-      color: #fff;
+      // color: #fff;
+      @media all and (min-width: $md-min) {
+        // color: #fff;
+      }
       &::after {
         opacity: 1;
         content: "";
@@ -1962,7 +1980,7 @@ feature list  (pricing page)
         text-align: left;
       }
       a {
-        padding: 1rem 0.2rem 0.8rem 0.2rem;
+        padding: 0.8rem 0.2rem 0.8rem 0.2rem;
         transition: all 0.5s ease-out;
         text-transform: uppercase;
         font-size: 0.8em;
@@ -1984,10 +2002,10 @@ feature list  (pricing page)
         }
         @media all and (min-width: $sm-min) {
           font-size: 0.7em;
+          padding: 1.3rem 0.2rem 0.6rem 0.2rem;
         }
         @media all and (min-width: $md-min) {
           font-size: 0.8em;
-          padding: 1.3rem 0.2rem 0.6rem 0.2rem;
         }
         @media all and (min-width: $xl-min) {
           letter-spacing: 0.5px;
