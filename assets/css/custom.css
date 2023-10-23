@@ -2732,6 +2732,20 @@ forum section
 .footer-main.boozang_footer > .container {
   margin-bottom: 4rem;
 }
+@media all and (min-width: 1400px) {
+  .footer-main.boozang_footer > .container {
+    margin-bottom: 2rem;
+  }
+}
+.footer-main.boozang_footer > .container.badges .row {
+  justify-content: center;
+  align-items: center;
+}
+@media all and (min-width: 576px) {
+  .footer-main.boozang_footer > .container.badges .row {
+    justify-content: flex-end;
+  }
+}
 .footer-main img {
   width: 140px;
   margin-top: -0.5rem;
@@ -2844,11 +2858,16 @@ forum section
 }
 .footer-main .back_to_top_link {
   position: absolute;
-  bottom: 6rem;
+  bottom: 4rem;
   right: 3rem;
   font-size: 1rem;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+@media all and (min-width: 1200px) {
+  .footer-main .back_to_top_link {
+    bottom: 6rem;
+  }
 }
 .footer-main .back_to_top_link a {
   color: #f24d7f;

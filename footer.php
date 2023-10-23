@@ -7,38 +7,36 @@
             $footer_text = get_field('footer_text', 'option');
             $footer_link = get_field('footer_link', 'option'); ?>
 
-        <div class="text_section text-center">
-            <?php if ($footer_text) { ?>
-            <p class=""> <?php echo $footer_text; ?></p>
-            <?php
+            <div class="text_section text-center">
+                <?php if ($footer_text) { ?>
+                    <p class=""> <?php echo $footer_text; ?></p>
+                <?php
                 } ?>
-        </div>
-        <div class="btn_container">
-            <?php if ($footer_link) { ?>
-            <a class="btn link" href="<?php echo $footer_link['url']; ?>" target="<?php echo $footer_link['target']; ?>"
-                rel="noopener noreferrer"><?php echo $footer_link['title']; ?>
-            </a>
-            <?php } ?>
-        </div>
+            </div>
+            <div class="btn_container">
+                <?php if ($footer_link) { ?>
+                    <a class="btn link" href="<?php echo $footer_link['url']; ?>" target="<?php echo $footer_link['target']; ?>" rel="noopener noreferrer"><?php echo $footer_link['title']; ?>
+                    </a>
+                <?php } ?>
+            </div>
         <?php
         } else {
             //k8s-tool sign up
             $k8s_text = get_field('k8s_text', 'option');
             $k8s_link = get_field('k8s_link', 'option'); ?>
 
-        <div class="text_section text-center">
-            <?php if ($k8s_text) { ?>
-            <p class=""> <?php echo $k8s_text; ?></p>
-            <?php
+            <div class="text_section text-center">
+                <?php if ($k8s_text) { ?>
+                    <p class=""> <?php echo $k8s_text; ?></p>
+                <?php
                 } ?>
-        </div>
-        <div class="btn_container">
-            <?php if ($k8s_link) { ?>
-            <a class="btn link" href="<?php echo $k8s_link['url']; ?>" target="<?php echo $k8s_link['target']; ?>"
-                rel="noopener noreferrer"><?php echo $k8s_link['title']; ?>
-            </a>
-            <?php } ?>
-        </div>
+            </div>
+            <div class="btn_container">
+                <?php if ($k8s_link) { ?>
+                    <a class="btn link" href="<?php echo $k8s_link['url']; ?>" target="<?php echo $k8s_link['target']; ?>" rel="noopener noreferrer"><?php echo $k8s_link['title']; ?>
+                    </a>
+                <?php } ?>
+            </div>
         <?php }
         ?>
     </div>
@@ -57,10 +55,7 @@ if (!is_page('k8s-tool')) {
             <div class="col-md-6 col-xl-3">
                 <div class="logo">
                     <a href="<?php echo home_url() ?>" class="logo" aria-label="Boozang home page">
-                        <img class="logo-img"
-                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png"
-                            srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w"
-                            width="208" height="51" alt="Boozang home page" />
+                        <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w" width="208" height="51" alt="Boozang home page" />
                     </a>
                 </div>
                 <div class="social-icons">
@@ -72,11 +67,11 @@ if (!is_page('k8s-tool')) {
 
                                 $social_url = get_sub_field('social_url');
                                 $social_site = get_sub_field('social_site'); ?>
-                        <li class="social-item">
-                            <a href="<?php echo $social_url; ?>" aria-label="<?php echo $social_site; ?>">
-                                <i class="fab fa-<?php echo $social_site; ?>" aria-hidden="true"></i>
-                            </a>
-                        </li>
+                                <li class="social-item">
+                                    <a href="<?php echo $social_url; ?>" aria-label="<?php echo $social_site; ?>">
+                                        <i class="fab fa-<?php echo $social_site; ?>" aria-hidden="true"></i>
+                                    </a>
+                                </li>
                         <?php
                             }
                         } ?>
@@ -97,39 +92,58 @@ if (!is_page('k8s-tool')) {
             <!-- k8s-tool -->
             <?php if (!is_page('k8s-tool')) { ?>
 
-            <div class="col-md-112 col-xl-8">
-                <div class="row align-items-start links">
-                    <?php
+                <div class="col-md-112 col-xl-8">
+                    <div class="row align-items-start links">
+                        <?php
                         if (function_exists('acf_add_options_page')) {
                             //repeater field
                             if (have_rows('footer_links', 'option')) {
                                 while (have_rows('footer_links', 'option')) {
                                     the_row(); ?>
 
-                    <div class="col-6 col-md-3">
-                        <h3 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h3>
+                                    <div class="col-6 col-md-3">
+                                        <h3 class="footer-links-heading"><?php the_sub_field('heading'); ?> </h3>
 
-                        <!-- repeater field -->
-                        <?php if (have_rows('links')) {  ?>
-                        <ul class="footer-links">
-                            <?php while (have_rows('links')) {
+                                        <!-- repeater field -->
+                                        <?php if (have_rows('links')) {  ?>
+                                            <ul class="footer-links">
+                                                <?php while (have_rows('links')) {
                                                     the_row(); ?>
 
-                            <?php $link = get_sub_field('link'); ?>
+                                                    <?php $link = get_sub_field('link'); ?>
 
-                            <li class="link-item">
-                                <a href="<?php echo $link['url']; ?>"
-                                    target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                        <?php } ?>
-                    </div>
-                    <?php }
+                                                    <li class="link-item">
+                                                        <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                                                    </li>
+                                                <?php } ?>
+                                            </ul>
+                                        <?php } ?>
+                                    </div>
+                        <?php }
                             }
                         }  ?>
+                    </div>
                 </div>
+            <?php } ?>
+            <div class="back_to_top_link">
+                <a href="#header_top">
+                    <i class="fa-solid fa-angles-up" aria-hidden="true" aria-label="To top of page"></i>
+                </a>
             </div>
+        </div>
+    </div>
+    <div class="container badges">
+        <div class="row">
+            <?php if (!is_page('k8s-tool')) { ?>
+                <div class="sf-root" data-id="2969897" data-badge="heart-badge-white" data-variant-id="sf" style="width:90px">
+                    <a href="https://sourceforge.net/software/product/Boozang/" target="_blank">Boozang Reviews</a>
+                </div>
+                <div class="sf-root" data-id="2969897" data-badge="light-default" data-variant-id="sd" style="width:90px">
+                    <a href="https://slashdot.org/software/p/Boozang/" target="_blank">Boozang Reviews</a>
+                </div>
+                <a href="https://www.capterra.com/reviews/166146/Boozang?utm_source=vendor&utm_medium=badge&utm_campaign=capterra_reviews_badge" target="_blank">
+                    <img border="0" src="https://assets.capterra.com/badge/0b59d4c7af779186f0e9303f7c23bc2a.svg?v=2115861&p=166146" />
+                </a>
             <?php } ?>
 
             <div class="back_to_top_link">
@@ -145,8 +159,7 @@ if (!is_page('k8s-tool')) {
                 <div class="col">
                     <div class="copy">
                         <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> INC. ALL RIGHTS RESERVED.
-                            Theme by <a href="http://karinljunggren.com/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Karin Ljunggren Home Page">Karin</a>
+                            Theme by <a href="http://karinljunggren.com/" target="_blank" rel="noopener noreferrer" aria-label="Karin Ljunggren Home Page">Karin</a>
                         </p>
                     </div>
                 </div>

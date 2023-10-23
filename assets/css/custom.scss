@@ -2495,6 +2495,18 @@ forum section
   &.boozang_footer {
     > .container {
       margin-bottom: 4rem;
+      @media all and (min-width: 1400px) {
+        margin-bottom: 2rem;
+      }
+      &.badges {
+        .row {
+          justify-content: center;
+          align-items: center;
+          @media all and (min-width: $sm-min) {
+            justify-content: flex-end;
+          }
+        }
+      }
     }
   }
   img {
@@ -2572,7 +2584,6 @@ forum section
       }
     }
   }
-
   .customer_contact {
     padding: 1rem 0;
     p {
@@ -2606,11 +2617,14 @@ forum section
   }
   .back_to_top_link {
     position: absolute;
-    bottom: 6rem;
+    bottom: 4rem;
     right: 3rem;
     font-size: 1rem;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
+    @media all and (min-width: $xl-min) {
+      bottom: 6rem;
+    }
     a {
       color: $themecolorPink;
     }

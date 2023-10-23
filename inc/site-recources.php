@@ -44,4 +44,29 @@ function google_fonts()
 }
 add_action('wp_head', 'google_fonts');
 
+//Review badges
+function review_badges()
+{
+?>
+    <script>
+        (function() {
+            var sc = document.createElement('script');
+            sc.async = true;
+            sc.src = 'https://b.sf-syn.com/badge_js?sf_id=2969897&variant_id=sf';
+            var p = document.getElementsByTagName('script')[0];
+            p.parentNode.insertBefore(sc, p);
+        })();
+
+        (function() {
+            var sc = document.createElement('script');
+            sc.async = true;
+            sc.src = 'https://b.sf-syn.com/badge_js?sf_id=2969897&variant_id=sd';
+            var p = document.getElementsByTagName('script')[0];
+            p.parentNode.insertBefore(sc, p);
+        })();
+    </script>
+<?php
+}
+add_action('wp_enqueue_scripts', 'review_badges');
+
 ?>
