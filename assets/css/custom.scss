@@ -198,7 +198,7 @@ img {
 button,
 .btn {
   display: inline-block;
-  padding: 5px 20px;
+  padding: 6px 20px;
   cursor: pointer;
   border-radius: $btnBorder_radius;
   transition: 1s all ease;
@@ -207,10 +207,15 @@ button,
   font-weight: 600;
   letter-spacing: 0.2px;
   box-shadow: $themeBox_shadow;
+  border: 1px solid transparent;
   &:focus {
     color: $linkcolor;
     outline: 2px dotted $themecolorLight;
     border-radius: 3px;
+    border-radius: $btnBorder_radius;
+  }
+  &:visited {
+    border-radius: $btnBorder_radius;
   }
   &:hover {
     opacity: 1;
@@ -429,7 +434,7 @@ h1 {
     font-size: 2.2rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
 }
 h2 {
@@ -438,7 +443,7 @@ h2 {
     font-size: 1.8rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 1.9rem;
+    font-size: 2.1rem;
   }
   &.smaller_size_text {
     font-size: 1.3rem;
@@ -651,7 +656,6 @@ main nav - default colors for white & lightgrey bg
   ul {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     list-style: none;
     display: none;
     border-radius: 3px;
@@ -892,7 +896,7 @@ main nav - default colors for white & lightgrey bg
           border: 1px solid #fff;
           margin: 0 0 0 1rem;
           border-radius: $btnBorder_radius;
-          padding: 5px 20px;
+          padding: 6px 20px;
           cursor: pointer;
           font-weight: 600;
           transition: all 0.5s ease;
@@ -1200,7 +1204,7 @@ main nav - default colors for white & lightgrey bg
       padding: 0 calc(3rem - 15px) 3rem calc(3rem - 15px);
     }
     @media all and (min-width: $xl-min) {
-      padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
+      padding: 0 calc(3.75rem - 15px) 2rem calc(3.75rem - 15px);
     }
     text-align: center;
     padding-top: 130px;
@@ -2617,11 +2621,14 @@ forum section
   }
   .back_to_top_link {
     position: absolute;
-    bottom: 4rem;
+    bottom: 5rem;
     right: 3rem;
     font-size: 1rem;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
+    @media all and (min-width: $sm-min) {
+      bottom: 4rem;
+    }
     @media all and (min-width: $xl-min) {
       bottom: 6rem;
     }

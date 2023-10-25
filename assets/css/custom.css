@@ -231,7 +231,7 @@ img {
 button,
 .btn {
   display: inline-block;
-  padding: 5px 20px;
+  padding: 6px 20px;
   cursor: pointer;
   border-radius: 20px;
   transition: 1s all ease;
@@ -240,12 +240,18 @@ button,
   font-weight: 600;
   letter-spacing: 0.2px;
   box-shadow: 0 4px 8px 0 rgba(74, 86, 104, 0.08);
+  border: 1px solid transparent;
 }
 button:focus,
 .btn:focus {
   color: #0085cc;
   outline: 2px dotted #66758d;
   border-radius: 3px;
+  border-radius: 20px;
+}
+button:visited,
+.btn:visited {
+  border-radius: 20px;
 }
 button:hover,
 .btn:hover {
@@ -485,7 +491,7 @@ h1 {
 }
 @media all and (min-width: 1200px) {
   h1 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -499,7 +505,7 @@ h2 {
 }
 @media all and (min-width: 1200px) {
   h2 {
-    font-size: 1.9rem;
+    font-size: 2.1rem;
   }
 }
 h2.smaller_size_text {
@@ -847,7 +853,6 @@ main nav - default colors for white & lightgrey bg
 .main_menu ul {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   list-style: none;
   display: none;
   border-radius: 3px;
@@ -1082,7 +1087,7 @@ main nav - default colors for white & lightgrey bg
   border: 1px solid #fff;
   margin: 0 0 0 1rem;
   border-radius: 20px;
-  padding: 5px 20px;
+  padding: 6px 20px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.5s ease;
@@ -1374,7 +1379,7 @@ main nav - default colors for white & lightgrey bg
 }
 @media all and (min-width: 1200px) {
   .header_main .header_items_section {
-    padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
+    padding: 0 calc(3.75rem - 15px) 2rem calc(3.75rem - 15px);
   }
 }
 @media all and (min-width: 576px) {
@@ -2858,11 +2863,16 @@ forum section
 }
 .footer-main .back_to_top_link {
   position: absolute;
-  bottom: 4rem;
+  bottom: 5rem;
   right: 3rem;
   font-size: 1rem;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+@media all and (min-width: 576px) {
+  .footer-main .back_to_top_link {
+    bottom: 4rem;
+  }
 }
 @media all and (min-width: 1200px) {
   .footer-main .back_to_top_link {
