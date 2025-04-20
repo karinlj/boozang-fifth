@@ -24,8 +24,8 @@
         },
         {
             "key": "field_652c2e1e645d3",
-            "label": "Footer link",
-            "name": "footer_link",
+            "label": "Sign up link",
+            "name": "sign_up_link",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -36,7 +36,25 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_67f6eb36fa325",
+            "label": "Sign up link demo",
+            "name": "sign_up_link_demo",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
         }
     ],
     "location": [
@@ -57,5 +75,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697398330
+    "modified": 1744745815
 }

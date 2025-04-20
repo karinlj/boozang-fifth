@@ -1,4 +1,19 @@
 jQuery(document).ready(function ($) {
+  //latest_updates_section
+  $(".updates_tabs li:first").find("a").addClass("active");
+  $(".updates_tab_content").hide();
+  $(".updates_tab_content:first").show();
+  // Click function
+  $(".updates_tabs li").click(function () {
+    $(".updates_tabs li a").removeClass("active");
+    $(this).find("a").addClass("active");
+    $(".updates_tab_content").hide();
+
+    var activeTab = $(this).find("a").attr("href");
+    $(activeTab).fadeIn();
+    return false;
+  });
+
   //faq_accordion_section
   //toggle aria-attributes and style the states
   $(".question").click(function () {
@@ -62,6 +77,29 @@ jQuery(document).ready(function ($) {
     let subExpanded = $(this).children("a").attr("aria-expanded") === "true";
     $(this).children("a").attr("aria-expanded", !subExpanded);
     $(this).children("ul").toggleClass("sub-menu-open");
+  });
+
+  //Review badges
+
+  $(window).on("load", function () {
+      var sc = document.createElement("script");
+      sc.async = true;
+      sc.src = "https://b.sf-syn.com/badge_js?sf_id=2969897&variant_id=sf";
+      var p = document.getElementsByTagName("script")[0];
+      p.parentNode.insertBefore(sc, p);
+ 
+
+      var sc = document.createElement("script");
+      sc.async = true;
+      sc.src = "https://b.sf-syn.com/badge_js?sf_id=2969897&variant_id=sd";
+      var p = document.getElementsByTagName("script")[0];
+      p.parentNode.insertBefore(sc, p);
+
+      var sc = document.createElement("script");
+      sc.async = true;
+      sc.src = "https://b.sf-syn.com/badge_js?sf_id=2969897&variant_id=tbs";
+      var p = document.getElementsByTagName("script")[0];
+      p.parentNode.insertBefore(sc, p);
   });
 
   //feature slider

@@ -4,7 +4,6 @@
         <div class="container">
             <nav class="filter_nav">
                 <ul class="video_categories">
-
                     <?php $post_type = 'videos';
 
                     if (isset($_GET['filter'])) {
@@ -28,9 +27,7 @@
                             <li class="cat-item <?php echo $activeClass ?>"><a href="/Boozang/videos?filter=<?php echo $term->slug ?>" aria-label="Category: <?php echo $term->name ?>">
                                     <?php echo $term->name ?></a>
                             </li>
-
-                    <?php
-                        }
+                    <?php   }
                     } ?>
                 </ul>
             </nav>
@@ -88,13 +85,10 @@
                                                 <p class="description"><?php the_field('description'); ?></p>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
-            <?php
-                        }
+            <?php   }
                     }
                 }
             } ?>

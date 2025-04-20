@@ -1,6 +1,6 @@
 <?php
 // header background
-$color = get_field('color_theme');
+$color = get_field('header_background');
 ?>
 
 <div id="nav-wrap" class="">
@@ -11,22 +11,20 @@ $color = get_field('color_theme');
                     <a class="logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Boozang home page">
                         <!--extra double size image for retina-->
                         <?php
-                        if ($color === 'white' || $color === 'lightgrey') { ?>
-                        <img class="logo-img"
-                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang.png"
-                            srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang@2x.png 325w"
-                            width="208" height="51" alt="Boozang home page" />
-                        <?php
-                        } else { ?>
-                        <img class="logo-img"
+                        if ($color === 'darkblue') { ?>
+                          <img
                             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png"
                             srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w"
                             width="208" height="51" alt="Boozang home page" />
                         <?php
+                        } else { ?>
+                          <img
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang.png"
+                            srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang@2x.png 325w"
+                            width="208" height="51" alt="Boozang home page" />
+                        <?php
                         } ?>
                     </a>
-
-                    <?php if (!is_page('k8s-tool')) { ?>
 
                     <div class="nav_links">
                         <?php
@@ -34,18 +32,17 @@ $color = get_field('color_theme');
                                 'theme_location' => 'primary',
                             ));
                             ?>
-                        <div class="signup">
+                        <section class="signup">
                             <ul>
-                                <li><a href="https://ai.boozang.com/" aria-label="Boozang Login">Login</a></li>
+                                <li><a href="https://ai.boozang.com/" aria-label="Boozang Login" class="">Login</a></li>
                                 <li>
-                                    <a href="https://ai.boozang.com/#security/signup" aria-label="Boozang Sign Up">
-                                        Sign Up
+                                    <a href="https://ai.boozang.com/#security/signup" aria-label="Boozang Sign Up" class="btn_link green">
+                                        Try for Free
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </section>
                     </div>
-                    <?php } ?>
                     <!--hamburger-->
                     <button class="menu_toggle_btn" aria-expanded="false" aria-label="Mobile Menu">
                         <div aria-hidden="true"></div>
@@ -59,7 +56,7 @@ $color = get_field('color_theme');
 <div class="nav-mobile">
     <a class="logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Boozang home page">
 
-        <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png"
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse.png"
             srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/boozang_logo_reverse@2x.png 325w"
             width="208" height="51" alt="Boozang home page" />
     </a>

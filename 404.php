@@ -6,7 +6,7 @@
  <?php
     if (function_exists('acf_add_options_page')) { ?>
 
- <div class="content_container_page">
+ <section class="nopage_section">
      <div class="container">
          <div class="row">
              <div class="col-md-8">
@@ -17,7 +17,7 @@
              </div>
          </div>
      </div>
- </div>
+ </section>
 
  <?php
     }

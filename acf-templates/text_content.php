@@ -1,13 +1,11 @@
 <?php
-
-// text layout for Pages Content block
-//wysiwyg for pages
+//wysiwyg 
 if (get_row_layout() == 'text_content') { ?>
 
     <?php
     $text = get_sub_field('text'); ?>
 
-    <section class="text_section_pages section_spacing_top_mini">
+    <section class="text_section_pages section_spacing_top_small">
         <div class="container">
             <div class="row">
                 <div class="col-12">

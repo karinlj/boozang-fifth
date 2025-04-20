@@ -6,7 +6,7 @@ $post_class = 'post_card';
 
 <!-- column size -->
 <?php if (is_single()) {
-    $col_class = 'col-lg-8 offset-lg-2';
+    $col_class = 'col-lg-10 offset-lg-1';
 } ?>
 <div class="<?php echo $col_class; ?>">
 
@@ -14,12 +14,12 @@ $post_class = 'post_card';
         $post_class = 'post_card single';
     } ?>
     <article class="<?php echo $post_class; ?>">
-        <?php the_post_thumbnail('banner-image'); ?>
+        <?php the_post_thumbnail(); ?>
 
         <!-- link if blog page  -->
         <?php if (!is_single()) { ?>
-        <a class="post_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
-        </a>
+            <a class="post_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
+            </a>
         <?php } ?>
 
         <div class="post_content">
@@ -37,7 +37,7 @@ $post_class = 'post_card';
             }
             ?>
             <?php if (!is_single()) { ?>
-            <div class="post_content_inner">
+                <div class="post_content_inner">
                 <?php } ?>
 
                 <header class="post_heading">
@@ -45,27 +45,26 @@ $post_class = 'post_card';
                         <?php the_title(); ?>
                     </h2>
                 </header>
-
                 <!-- meta - single-->
                 <?php if (is_single()) { ?>
-                <div class="blog_post_meta">
+                    <div class="blog_post_meta">
 
-                    <p>by <?php the_author(); ?> &nbsp; | &nbsp;</p>
-                    <p><?php echo get_the_date('F j, Y'); ?></p>
-                </div>
+                        <p>by <?php the_author(); ?> &nbsp; | &nbsp;</p>
+                        <p><?php echo get_the_date('F j, Y'); ?></p>
+                    </div>
                 <?php } ?>
 
                 <main class="post_text">
                     <!-- content and exerpt-->
                     <!--if search.php or archive.php -> show only excerpts-->
                     <?php if (is_search() or is_archive()) { ?>
-                    <p><?php echo get_the_excerpt(); ?></p>
-                    <?php } else {
+                        <p><?php echo get_the_excerpt(); ?></p>
+                        <?php } else {
 
                         /*if excerpt used in adminGUI -> show excerpt*/
                         if ($post->post_excerpt) { ?>
 
-                    <p><?php echo get_the_excerpt(); ?></p>
+                            <p><?php echo get_the_excerpt(); ?></p>
                     <?php } else {
                             the_content();
                         }
@@ -73,16 +72,16 @@ $post_class = 'post_card';
                 </main>
 
                 <?php if (!is_single()) { ?>
-                <!--/end  post_content_inner -->
-            </div>
+                    <!--/end  post_content_inner -->
+                </div>
             <?php } ?>
 
             <!-- meta - blog page-->
             <?php if (!is_single()) { ?>
-            <footer class="blog_post_meta">
-                <p>by <?php the_author(); ?></p>
-                <p><?php echo get_the_date('F j, Y'); ?></p>
-            </footer>
+                <footer class="blog_post_meta">
+                    <p>by <?php the_author(); ?></p>
+                    <p><?php echo get_the_date('F j, Y'); ?></p>
+                </footer>
             <?php } ?>
 
         </div>

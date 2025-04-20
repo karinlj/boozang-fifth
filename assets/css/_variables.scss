@@ -15,93 +15,72 @@ $xl-max: 1309px;
 $max-page-width: 1380px;
 
 /* colors */
-$blueDarkestSolid: #1b284a;
-$blueDarkSolid: #2a3970;
-$purpleSolid: #7e5da6;
-
-$turquoiseSolid: #9ae0ec;
+$blueDarkest: #151c37; //#1b284a;
+$blueDark: #232f5c;
+$blue: #1260d8;
+$blueLight: #4dbeff;
+$turqoise: #b8e0d7;
+$turqoiseLight: #e6f4f1;
+$purpleLight: #9966ff;
 
 $themecolorNewBlue: #0085cc;
 $themecolorNewblueDarker: #006399;
 
-//blue to purple bg
-$blueDarkToPurpleBgGradient: linear-gradient(
-  to bottom,
-  #2a3970,
-  #2f3b73,
-  #343d76,
-  #383e78,
-  #3d407b
-);
-$blueToPurpleBgGradient: linear-gradient(
-  to bottom,
-  #3d407b,
-  #444380,
-  #4c4685,
-  #534989,
-  #5b4c8e
-);
-$purpleBgGradient: linear-gradient(
-  to bottom,
-  #5b4c8e,
-  #645094,
-  #6c549a,
-  #7559a0,
-  #7e5da6
-);
-$pinkBgGradient: linear-gradient(
-  to bottom,
-  #7e5da6,
-  #a165aa,
-  #c16eab,
-  #dd7aab,
-  #f688a9
-);
-
-//blue to turquoise bg
-$blueDarkToTurquoiseBgGradient: linear-gradient(
-  to bottom,
-  #2a3970,
-  #2b437a,
-  #2d4d83,
-  #2f588c,
-  #326295
-);
-$blueToTurquoiseBgGradient: linear-gradient(
-  to bottom,
-  #326295,
-  #3872a1,
-  #4081ad,
-  #4b91b8,
-  #58a1c3
-);
-$turquoiseBgGradient: linear-gradient(
-  to bottom,
-  #58a1c3,
-  #63adcb,
-  #6fb8d3,
-  #7bc4da,
-  #88d0e2
-);
+// $themecolorNewBlue: $blueLight;
+// $themecolorNewblueDarker: $blue;
 
 //text color
-$themecolor: #4a5669;
+$headingcolor: #212735;
+$themecolor: $headingcolor; //#30394f; //#4a5669;
 $navcolor: $themecolor;
 
+//outline
 $themecolorLight: #66758d;
 $themecolorLightest: #b5bdc9;
 
-$themeHeadingcolor: #212735;
-$themeBorderColor: #ebebeb;
-$lightgrey: #f5f6f9;
-$themecolorPink: #f24d7f;
+$themeBorderColor: #f2f2f2;
+$lightgrey: #f9f9f9;
+$themecolorPink: #ff5c9f; //#f24d7f;
 $themecolorGreen: #00ac7d;
 $linkcolor: $themecolorNewBlue;
 
 //other
 $themefont: "Roboto", "Helvetica", sans-serif;
 
-$themeBorder_radius: 8px;
-$btnBorder_radius: 20px;
-$themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
+$themeBorder_radius: 12px; //8px
+$btnBorder_radius: 8px; //20px;
+
+$link_colorBox_shadow: 0 4px 0 #0085cc;
+$blueBox_shadow: 0 4px 0 #0b3f8e;
+$bluedarkBox_shadow: 0 4px 0 #070912;
+
+$turqoiseBox_shadow: 0 4px 0 #b8e0d7;
+$greyBox_shadow: 0 4px 0 #d9d9d9;
+
+$greenBox_shadow: 0 4px 0 #00664b;
+
+$themeBox_shadow: 0 4px 0 #212735;
+
+// $themeBox_shadow: 0 2px 0 #070912;
+
+//  $themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
 $themeBox_shadow_more: 0px 2px 10px rgb(0 0 0 / 20%);
+
+
+//overlay colors
+$blueDarkOverlayColor: linear-gradient(
+  to right bottom,
+  #151c37,
+  #182140,
+  #1c2549,
+  #1f2a52,
+  #232f5c
+);
+$blueOverlayColor: linear-gradient(
+  to right bottom,
+  #0f55bd,
+  #1f61ca,
+  #2c6ed7,
+  #377be3,
+  #4288f0
+);

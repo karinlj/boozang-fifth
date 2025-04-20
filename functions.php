@@ -20,3 +20,4 @@ require_once('inc/custom-taxonomies.php');
 
 //ACF options page
 require_once('inc/acf-settings.php');
+

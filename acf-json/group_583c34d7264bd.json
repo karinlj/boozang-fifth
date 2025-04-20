@@ -6,6 +6,7 @@
             "key": "field_5b583c92619cf",
             "label": "Mail link",
             "name": "mail_link",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_583c3f7b5f400",
             "label": "Social icons",
             "name": "social_icons",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "Social icons are shown in header and footer.",
             "required": 0,
@@ -44,6 +46,7 @@
                     "key": "field_583c40b85f402",
                     "label": "Site",
                     "name": "social_site",
+                    "aria-label": "",
                     "type": "radio",
                     "instructions": "",
                     "required": 1,
@@ -57,21 +60,24 @@
                         "facebook": "Facebook",
                         "linkedin-in": "LinkedIn",
                         "youtube": "YouTube",
-                        "twitter": "Twitter",
+                        "x-twitter": "X-Twitter",
                         "instagram": "Instagram",
                         "google-plus": "Google+"
                     },
+                    "default_value": "",
+                    "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
-                    "default_value": "",
+                    "allow_in_bindings": 1,
                     "layout": "vertical",
-                    "return_format": "value",
-                    "save_other_choice": 0
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_583c3f7b5f400"
                 },
                 {
                     "key": "field_583c40975f401",
                     "label": "URL",
                     "name": "social_url",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 1,
@@ -82,9 +88,11 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "https:\/\/www.facebook.com\/sida"
+                    "placeholder": "https:\/\/www.facebook.com\/sida",
+                    "parent_repeater": "field_583c3f7b5f400"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         }
     ],
     "location": [
@@ -102,7 +110,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1589281395
+    "show_in_rest": 0,
+    "modified": 1744287761
 }
