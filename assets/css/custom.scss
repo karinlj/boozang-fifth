@@ -30,16 +30,6 @@ ol {
 .alt_caption {
   display: none;
 }
-//text styling
-.text_center {
-  text-align: center;
-}
-.margin_2 {
-  margin-bottom: 2rem;
-}
-.margin_3 {
-  margin-bottom: 3rem;
-}
 //colored text
 .colored_pink_part {
   background-image: linear-gradient(
@@ -158,10 +148,6 @@ img {
   .parent_active {
     a {
       font-weight: bolder;
-      // color: #fff;
-      @media all and (min-width: $md-min) {
-        // color: #fff;
-      }
       &::after {
         opacity: 1;
         content: "";
@@ -292,6 +278,16 @@ button,
   &.outline_color_white {
     border-color: #fff;
     color: #fff;
+    background: transparent;
+    &:hover {
+      color: $blueDarkest;
+      background: #fff;
+    }
+  }
+  &.outline_color_white_blue {
+    border-color: #fff;
+    color: #fff;
+    background: transparent;
     &:hover {
       color: $blueDarkest;
       background: #fff;
@@ -458,6 +454,43 @@ a {
   }
 }
 /********************
+ text style
+*********************/
+
+//centered text mobile
+.text_section,
+.info_banner {
+  text-align: center;
+  @media all and (min-width: $sm-min) {
+    text-align: left;
+  }
+}
+//centered text laptop
+.text_center {
+  text-align: left;
+  @media all and (min-width: $sm-min) {
+    text-align: center;
+  }
+}
+.margin_2 {
+  margin-bottom: 2rem;
+}
+.margin_3 {
+  margin-bottom: 3rem;
+}
+.margin_4 {
+  margin-bottom: 3rem;
+}
+/********************
+ Size image-Main
+*********************/
+#main img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/********************
  typografy
 *********************/
 p,
@@ -573,25 +606,7 @@ h6 {
   }
 }
 
-/********************
- centered text mobile
-*********************/
-.text_section,
-.info_banner {
-  text-align: center;
-  @media all and (min-width: $sm-min) {
-    text-align: left;
-  }
-}
 
-/********************
- Size image-Main
-*********************/
-#main img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 
 /*******************************************************
   backgrounds - header, footer and sections
@@ -1075,7 +1090,9 @@ main nav - default colors for white & lightgrey bg
     justify-content: center;
   }
   .btn_link {
-    box-shadow: $bluedarkBox_shadow;
+    &.outline_color_white_blue {
+      box-shadow: $blueBox_shadow;
+    }
     &.green {
       box-shadow: $greenBox_shadow;
       color: #fff;
@@ -1122,9 +1139,8 @@ main nav - default colors for white & lightgrey bg
       margin-right: 2rem;
     }
   }
-
   //items on dark bg - nav, btns ecc
-  &.darkblue {
+  &.darkblue, &.blue {
     .btn_link {
       &.green {
         &:hover {
@@ -1233,7 +1249,8 @@ main nav - default colors for white & lightgrey bg
     }
   }
   .card {
-    background: $turqoiseLight;
+    // background: $turqoiseLight;
+     border: 2px solid $turqoiseLight;
     border-radius: $themeBorder_radius;
     box-shadow: $turqoiseBox_shadow;
     text-align: center;
@@ -1248,6 +1265,9 @@ main nav - default colors for white & lightgrey bg
       justify-content: center;
       align-items: center;
       height: 100px;
+      .heading{
+        font-size: 1.8rem;
+      }
       .text {
         font-weight: 600;
       }
@@ -1284,6 +1304,7 @@ main nav - default colors for white & lightgrey bg
     //last card blue
     &.blue {
       background: $blue;
+      border: 2px solid $blue;
       box-shadow: $blueBox_shadow;
       .btn_link {
         background: #fff;
@@ -1303,33 +1324,16 @@ main nav - default colors for white & lightgrey bg
 feature list  (pricing page)
 *********************/
 .feature_list_section {
-  background: $lightgrey;
-  padding-bottom: 2rem;
-  .heading {
-    margin-bottom: 4rem;
-  }
   .feature_list_item {
     display: flex;
     padding-bottom: 2rem;
+    padding: 0 1rem 2rem 0;
   }
   .features_icon {
-    height: 2.4rem;
-    border-radius: 2px;
+    padding-right: 0.8rem;
     i {
-      padding: 0 0.7rem 0.7rem 0.7rem;
       color: $themecolorGreen;
-      @media all and (min-width: $xl-min) {
-        padding: 0 1rem 1rem 1rem;
-      }
-    }
-    @media all and (min-width: $xl-min) {
-      height: 3rem;
-    }
-  }
-  .info {
-    padding-left: 1rem;
-    .item_text {
-      font-size: 0.9rem;
+      font-size: $iconsize;
     }
   }
 }
@@ -1338,18 +1342,8 @@ feature list  (pricing page)
    faq accordion
 *********************/
 .faq_accordion_section {
-  background: #fff;
-  .heading {
-    margin-bottom: 4rem;
-    @media all and (min-width: $md-min) {
-      text-align: center;
-    }
-  }
-  h3 {
-    margin-bottom: 0.5rem;
-  }
   .info_list_item {
-    border-bottom: 1px dotted $lightgrey;
+    border-bottom: 1px solid $turqoiseLight;
   }
   .question_part {
     width: 100%;
@@ -1359,16 +1353,10 @@ feature list  (pricing page)
     .question {
       color: $themecolor;
       font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: 0;
-      line-height: 1.7;
-      margin-bottom: 0;
-      transition: all 0.3s ease-in-out;
-      width: 100%;
-      padding: 0;
+      font-size: 17px;
+      line-height: 1.8;
       border: none;
       background: transparent;
-      box-shadow: none;
       text-align: left;
       &:hover {
         color: $linkcolor;
@@ -1378,12 +1366,12 @@ feature list  (pricing page)
       }
       &:after {
         font-family: "Font Awesome 5 Free";
-        font-size: 0.8rem;
+        font-size: calc ( $iconsize/2 );
         content: "\f067";
         font-weight: 900;
         position: absolute;
         right: 0;
-        top: 0.5rem;
+        top: 1rem;
         padding: 5px;
         color: $headingcolor;
         transition: all 0.3s ease-in-out;
@@ -1400,8 +1388,14 @@ feature list  (pricing page)
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
+    p{
+      margin-bottom: 0;
+    }
     &[aria-hidden="false"] {
       max-height: 260px;
+      p{
+        margin-bottom: 2rem;
+      }
     }
   }
 }
@@ -1433,27 +1427,13 @@ feature list  (pricing page)
   &.overlay-darkblue {
     &::before {
       background-image: $blueDarkOverlayColor;
-      opacity: 0.85;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      content: "";
-      display: block;
+      @include overlay();
     }
   }
   &.overlay-blue {
     &::before {
       background-image: $blueOverlayColor;
-      opacity: 0.85;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      content: "";
-      display: block;
+      @include overlay();
     }
   }
   &.overlay-none {
@@ -1846,7 +1826,6 @@ feature list  (pricing page)
   .icon_section {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
     margin: 0 -12px;
   }
   .img_box {
@@ -1925,21 +1904,14 @@ feature list  (pricing page)
     .far,
     .fas {
       color: $themecolorGreen;
-      font-size: 1.5em;
+      font-size: $iconsize;
     }
   }
 }
 .overlay-darkblue {
   &::before {
     background-image: $blueDarkOverlayColor;
-    opacity: 0.85;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: "";
-    display: block;
+    @include overlay();
   }
 }
 
@@ -2225,7 +2197,7 @@ latest_updates_section
     background: #fff;
     // box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     box-shadow: $turqoiseBox_shadow;
-    border: 1px solid $turqoiseLight;
+    border: 2px solid $turqoiseLight;
     &:hover {
       box-shadow: $link_colorBox_shadow;
       // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -2457,16 +2429,13 @@ latest_updates_section
 text layout for Pages Content block
 ***********************************/
 .text_section_pages {
-  h2 {
-    margin-bottom: 4rem;
-  }
   .text_content {
     //centered images
-    img {
+    img, iframe {
       display: block;
       margin: 2.5rem auto;
+      border-radius: $themeBorder_radius;
     }
-    padding-bottom: 4rem;
   }
 }
 
@@ -2619,7 +2588,7 @@ forum section
       }
     }
     .fa-brands {
-      font-size: 19px;
+       font-size: 19px;
       padding-right: 1rem;
       text-align: center;
       border-radius: 50%;
@@ -2629,15 +2598,6 @@ forum section
         transform: translateX(2px);
         color: #fff;
       }
-      // transition: 1s;
-      // background-position: center;
-      // cursor: pointer;
-      // box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-      // transition: all 0.25s ease;
-      // &:hover {
-      //   transform: translateY(-2px);
-      //   box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
-      // }
     }
   }
   .links {

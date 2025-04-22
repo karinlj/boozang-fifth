@@ -19,7 +19,8 @@
             "choices": {
                 "white": "White",
                 "lightgrey": "Lightgrey",
-                "darkblue": "DarkBlue"
+                "darkblue": "DarkBlue",
+                "blue": "Blue"
             },
             "default_value": "",
             "return_format": "value",
@@ -103,7 +104,8 @@
                     },
                     "choices": {
                         "white": "White",
-                        "outline_color_white": "Outline white",
+                        "outline_color_white": "Outline white darkblue",
+                        "outline_color_white_blue": "Outline white blue",
                         "green": "Green"
                     },
                     "default_value": "",
@@ -123,7 +125,7 @@
             "name": "header_image_front",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Only for Front Page",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -183,5 +185,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744843008
+    "modified": 1745361898
 }

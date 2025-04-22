@@ -25,7 +25,7 @@
                                  <div class="card_body">
                                      <header class="pricing_header">
                                          <div class="">
-                                             <h2 class="heading"><?php echo $heading; ?></h2>
+                                             <h3 class="heading"><?php echo $heading; ?></h3>
                                              <p class="text"><?php echo $text; ?></p>
                                          </div>
                                      </header>
@@ -59,7 +59,6 @@
 
                                      <a class="btn_link blue" href="<?php echo $btn_link['url']; ?>"
                                          target="<?php echo $btn_link['target']; ?>"><?php echo $btn_link['title']; ?></a>
-
                                  </div>
                              </div>
                          </div>

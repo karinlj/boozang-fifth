@@ -13,7 +13,7 @@ if (get_row_layout() == 'info_banner') { ?>
     }
     ?>
     <section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small"
-    <?php echo $style; ?>>
+        <?php echo $style; ?>>
 
         <div class="container">
             <div class="row">
