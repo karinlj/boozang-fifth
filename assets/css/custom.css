@@ -1054,8 +1054,8 @@ main nav - default colors for white & lightgrey bg
   padding: 13px 10px;
 }
 .nav-mobile ul li .btn_link {
-  margin-top: 1rem;
   width: 9rem;
+  margin: 1rem 10px;
 }
 .nav-mobile ul li.menu-item-has-children.is_open > a::after {
   content: "";
@@ -2191,12 +2191,17 @@ latest_updates_section
     background: #e6f4f1;
   }
 }
+.blog_sidebar.section_spacing_top_mini,
+.video_filter.section_spacing_top_mini,
+.page_aside.section_spacing_top_mini {
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
 @media all and (min-width: 768px) {
   .blog_sidebar.section_spacing_top_mini,
 .video_filter.section_spacing_top_mini,
 .page_aside.section_spacing_top_mini {
     padding-top: 0;
-    padding-bottom: 0;
   }
 }
 .blog_sidebar .filter_nav h3,
