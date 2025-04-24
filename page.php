@@ -6,7 +6,6 @@
 ?>
 <?php get_header(); ?>
 
-<div class="content_container_page">
     <?php
     $theParent = wp_get_post_parent_id(get_the_ID()); //if parent page, this will = 0
     $parent_active_class = '';
@@ -31,22 +30,22 @@
     //if is child page or parent page
     if ($theParent or $pagesArray) {
     ?>
-    <aside class="page_aside section_spacing_top_aside">
-        <div class="container">
-            <ul>
-                <li class=" <?php echo $parent_active_class; ?> ">
-                    <a href="<?php echo get_permalink($theParent) ?>">
-                        <?php echo get_the_title($theParent)  ?>
-                    </a>
-                </li>
-                <?php wp_list_pages(array(
+        <aside class="page_aside section_spacing_top_aside">
+            <div class="container">
+                <ul>
+                    <li class=" <?php echo $parent_active_class; ?> ">
+                        <a href="<?php echo get_permalink($theParent) ?>">
+                            <?php echo get_the_title($theParent)  ?>
+                        </a>
+                    </li>
+                    <?php wp_list_pages(array(
                         'title_li' => NULL,
                         'child_of' =>   $findChildrenOf
 
                     )); ?>
-            </ul>
-        </div>
-    </aside>
+                </ul>
+            </div>
+        </aside>
     <?php
     }
     ?>
@@ -65,5 +64,4 @@
             }
         } ?>
     </main>
-</div>
 <?php get_footer(); ?>

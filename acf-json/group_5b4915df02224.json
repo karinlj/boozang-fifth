@@ -443,7 +443,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "message": "End card",
+                                    "message": "End pricing_card",
                                     "new_lines": "wpautop",
                                     "esc_html": 0,
                                     "parent_repeater": "field_5b5de144d5a30"

@@ -24,7 +24,7 @@ if (get_row_layout() == 'latest_updates') { ?>
                         ?>
                     </ul>
                         <?php
-                        // check if the ACF repeater field has rows
+                        // repeater field
                         if (have_rows('latest_updates_categories')) {
                             while (have_rows('latest_updates_categories')) {
                                 the_row();
@@ -71,14 +71,14 @@ if (get_row_layout() == 'latest_updates') { ?>
                                             $image = get_field('image');
                                             $video_url = get_field('url');  ?>
 
-                                            <li class="video_container">
-                                                <div class="video_container_inner">
-                                                    <div class="embed_container">
+                                            <li class="card_container">
+                                                <div class="card_container_inner">
+                                                    <div class="card_embed_container">
                                                         <?php if ($video_url) { ?>
-                                                            <a class="video_link" href="<?php echo $video_url; ?>" target="_blank" aria-label="<?php the_title(); ?>">
+                                                            <a class="embed_link" href="<?php echo $video_url; ?>" target="_blank" aria-label="<?php the_title(); ?>">
                                                             </a>
                                                         <?php } else { ?>
-                                                            <a class="video_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
+                                                            <a class="embed_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                                                             </a>
                                                         <?php } ?>
 

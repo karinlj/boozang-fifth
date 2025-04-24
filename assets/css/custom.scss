@@ -34,7 +34,7 @@ ol {
 .colored_pink_part {
   background-image: linear-gradient(
     to right top,
-    #eb1487,
+    $themecolorPink,
     #f0539f,
     #f479b5,
     #f79ac9,
@@ -46,7 +46,7 @@ ol {
 .colored_blue_part {
   background-image: linear-gradient(
     to right top,
-    #00a2ff,
+    $themecolorOldBlue,
     #52b6ff,
     #7dc8ff,
     #a5dbff,
@@ -58,7 +58,7 @@ ol {
 .colored_purple_part {
   background-image: linear-gradient(
     to right top,
-    #661aff,
+    $purpleLight,
     #854bff,
     #9f70ff,
     #b692ff,
@@ -86,101 +86,12 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-//product tabs
-.content_container_page {
-  min-height: 30rem;
-  // color: $themecolor;
-  .page_aside {
-    @media all and (min-width: $md-min) {
-      background: $blueDark;
-      color: #fff;
-    }
-    ul {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      @media all and (min-width: $md-min) {
-        flex-direction: row;
-      }
-      li {
-        position: relative;
-        @media all and (min-width: $md-min) {
-          margin-right: 2rem;
-        }
-        &::after {
-          opacity: 0;
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 3px;
-          left: 0;
-          bottom: 0;
-          background: $blueLight;
-          transition: all ease-out 300ms;
-        }
-        &:hover {
-          &::after {
-            opacity: 1;
-          }
-        }
-      }
-    }
-    a {
-      padding: 0.8rem 0.2rem 0.8rem 0.2rem;
-      @media all and (min-width: $md-min) {
-        padding: 1rem 0.2rem 0.8rem 0.2rem;
-      }
-      text-decoration: none;
-      display: block;
-      white-space: nowrap;
-      font-weight: 500;
-      font-size: 0.9rem;
-      color: $themecolor;
-      @media all and (min-width: $md-min) {
-        color: #fff;
-      }
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-  .current_page_item,
-  .parent_active {
-    a {
-      font-weight: bolder;
-      &::after {
-        opacity: 1;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        left: 0;
-        bottom: 0;
-        background: $blueLight;
-        transition: all ease-out 300ms;
-      }
-    }
-  }
-}
 
 /********************
   padding/ margin sections
 *********************/
 .container {
   // max-width: 1170px;
-  // max-width: 1140px;
-  // max-width: 1140px;
-  // width: 100%;
-  // margin: 0 auto;
-  // @media all and (min-width: 1580px) {
-  //   max-width: 1250px;
-  // }
-  // @media all and (min-width: 1780px) {
-  //   max-width: 1350px;
-  // }
-  // @media all and (min-width: 2000px) {
-  //   max-width: 1450px;
-  // }
 }
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
@@ -606,14 +517,13 @@ h6 {
   }
 }
 
-
-
 /*******************************************************
   backgrounds - header, footer and sections
  *******************************************************/
 section,
 header,
-footer,.card {
+footer,
+.pricing_card {
   position: relative;
   &.darkblue {
     background: $blueDarkest;
@@ -668,15 +578,12 @@ footer,.card {
 main nav - default colors for white & lightgrey bg
 ***************************************/
 #nav-wrap {
-  border-bottom: 1px solid $themecolorLight;
   width: 100%;
-  position: absolute;
-  top: 0px;
-  height: 80px;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  padding: 0rem calc(1.5rem - 15px);
+    position: absolute;
+    top: 0px;
+    height: 80px;
+    background: transparent;
+    padding: 0rem calc(1.5rem - 15px);
   @media all and (min-width: $sm-min) {
     padding: 0rem calc(2.25rem - 15px);
   }
@@ -691,14 +598,11 @@ main nav - default colors for white & lightgrey bg
   }
 }
 .main_menu {
-  position: relative;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media all and (min-width: $lg-min) {
-    justify-content: flex-start;
-  }
+  height: 80px;
   a,
   a:visited,
   a:focus,
@@ -833,13 +737,12 @@ main nav - default colors for white & lightgrey bg
   // menu btn
   > .menu_toggle_btn {
     position: absolute;
-    // top: 0.8rem;
-    top: -8px;
+    top: 0.8rem;
     right: 0;
     z-index: 10000;
-    width: 60px;
+    width: 70px;
     height: 60px;
-    padding: 1rem !important;
+    padding: 1rem;
     background: transparent;
     border: none;
     display: flex;
@@ -908,6 +811,8 @@ main nav - default colors for white & lightgrey bg
 }
 /*nav-desktop*/
 .logo {
+  // position: relative;
+  // z-index: 1000;
   img {
     max-width: 160px;
     padding-top: 5px;
@@ -918,9 +823,6 @@ main nav - default colors for white & lightgrey bg
     @media all and (min-width: $lg-min) {
       padding-top: 0;
     }
-  }
-  a:hover {
-    opacity: 1;
   }
 }
 .nav_links {
@@ -949,8 +851,8 @@ main nav - default colors for white & lightgrey bg
   top: 0;
   left: 0;
   background: $blueDarkest;
-  padding: 0 10%;
-  padding-top: 20px;
+  // padding: 0 10%;
+  padding: 1rem;
   text-align: left;
   transform: translateX(100%);
   transition: transform 0.6s ease;
@@ -961,28 +863,26 @@ main nav - default colors for white & lightgrey bg
     display: none;
   }
   .logo {
-    img {
-      max-width: 150px;
-    }
-    a:hover {
-      opacity: 1;
-    }
+    padding: 0 10px ;
   }
   .nav_links {
-    margin-top: 2rem;
+     margin-top: 2rem;
   }
   ul {
     li {
       a {
         transition: all 0.5s ease;
-        font-size: 1rem;
+        font-size: 17px;
         letter-spacing: 0.5px;
         display: block;
         color: #fff;
         text-decoration: none;
-        font-weight: 500;
-        cursor: pointer;
-        padding: 12px 10px;
+        // cursor: pointer;
+        padding: 13px 10px;
+      }
+      .btn_link{
+        margin-top: 1rem;
+        width: 9rem;
       }
     }
     /*Wp:s klasser*/
@@ -1140,7 +1040,8 @@ main nav - default colors for white & lightgrey bg
     }
   }
   //items on dark bg - nav, btns ecc
-  &.darkblue, &.blue {
+  &.darkblue,
+  &.blue {
     .btn_link {
       &.green {
         &:hover {
@@ -1248,9 +1149,9 @@ main nav - default colors for white & lightgrey bg
       margin-bottom: 0;
     }
   }
-  .card {
+  .pricing_card {
     // background: $turqoiseLight;
-     border: 2px solid $turqoiseLight;
+    border: 2px solid $turqoiseLight;
     border-radius: $themeBorder_radius;
     box-shadow: $turqoiseBox_shadow;
     text-align: center;
@@ -1265,7 +1166,7 @@ main nav - default colors for white & lightgrey bg
       justify-content: center;
       align-items: center;
       height: 100px;
-      .heading{
+      .heading {
         font-size: 1.8rem;
       }
       .text {
@@ -1294,14 +1195,14 @@ main nav - default colors for white & lightgrey bg
     .btn_link {
       width: 12rem;
     }
-    //middle card higher
+    //middle pricing_card higher
     &.higher {
       height: 550px;
       .pricing_header {
         height: 115px;
       }
     }
-    //last card blue
+    //last pricing_card blue
     &.blue {
       background: $blue;
       border: 2px solid $blue;
@@ -1317,7 +1218,6 @@ main nav - default colors for white & lightgrey bg
       }
     }
   }
-
 }
 
 /*********************
@@ -1366,7 +1266,7 @@ feature list  (pricing page)
       }
       &:after {
         font-family: "Font Awesome 5 Free";
-        font-size: calc ( $iconsize/2 );
+        font-size: calc ($iconsize/2);
         content: "\f067";
         font-weight: 900;
         position: absolute;
@@ -1388,12 +1288,12 @@ feature list  (pricing page)
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
-    p{
+    p {
       margin-bottom: 0;
     }
     &[aria-hidden="false"] {
       max-height: 260px;
-      p{
+      p {
         margin-bottom: 2rem;
       }
     }
@@ -1939,7 +1839,7 @@ latest_updates_section
     display: flex;
     flex-wrap: wrap;
     gap: 2rem 2rem;
-    .video_container {
+    .card_container {
       margin: 0;
       flex-grow: 1;
       flex-basis: 200px;
@@ -1964,39 +1864,32 @@ latest_updates_section
   }
 }
 
-/********************
-  Videos Page Layout
-*********************/
-.video_filter {
-  padding-bottom: 3.5rem !important;
-}
-.video_section {
-  background: $lightgrey;
-  padding-top: 0;
-}
-.video_container {
+/********************************
+  Card Layout for Blog and Videos
+*********************************/
+.card_container {
   width: 100%;
   border-radius: $themeBorder_radius;
   margin: 0 2% 4rem 0;
   transition: 0.25s ease-in-out;
-  box-shadow: $greyBox_shadow;
-  border: 1px solid $themeBorderColor;
+  box-shadow: $turqoiseBox_shadow;
+  border: 1px solid $turqoiseLight;
   &:hover {
     box-shadow: $link_colorBox_shadow;
     .title,
     .description {
       transition: 0.25s ease-in-out;
-      color: $themecolorNewBlue;
+      color: $linkcolor;
     }
   }
-  .video_container_inner {
+  .card_container_inner {
     position: relative;
   }
-  .embed_container {
+  .card_embed_container {
     border-top-left-radius: $themeBorder_radius;
     border-top-right-radius: $themeBorder_radius;
   }
-  .video_link {
+  .embed_link {
     position: absolute;
     top: 0;
     right: 0;
@@ -2032,139 +1925,198 @@ latest_updates_section
     }
     .title {
       padding: 0.5rem 0 0 0;
-      font-weight: 600;
-      font-size: 0.9em;
-      @media all and (min-width: $md-min) {
-        font-size: 0.9em;
-      }
-      @media all and (min-width: $xl-min) {
-        font-size: 1em;
-      }
     }
+    p,
     .description {
       font-size: 0.9rem;
     }
   }
   .cat_badge {
+    display: inline-block;
     text-align: center;
     margin-top: 10px;
     margin-right: 5px;
-    height: 20px;
-    background-color: #f0f1f6;
+    background-color: $turqoiseLight;
     font-size: 10px;
     font-weight: 500;
-    line-height: 18px;
     letter-spacing: normal;
-    color: #737373;
-    padding: 3px 8px;
+    border-radius: 5px;
+    padding: 6px 10px;
     text-transform: uppercase;
   }
+  //single blog post
+  &.single {
+    margin-top: -3rem;
+    transition: none;
+    box-shadow: none;
+    border: none;
+    .content_container {
+      padding: 1rem 0;
+      @media all and (min-width: $sm-min) {
+        padding: 1rem 2rem;
+      }
+      @media all and (min-width: $md-min) {
+        padding: 1.5rem 2.5rem;
+      }
+      .cat_badge {
+        font-size: 12px;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 1.75rem;
+      }
+      h2 {
+        margin-top: 3rem;
+      }
+      a {
+        word-break: break-word;
+        &::before {
+          background: transparent;
+        }
+        &:hover {
+          opacity: 0.7 !important;
+        }
+      }
+      .title {
+        color: $themecolor;
+      }
+      .blog_post_meta {
+        justify-content: flex-start;
+      }
+      figure {
+        position: relative;
+        z-index: 1000;
+        margin: 3rem 0;
+        img {
+          border-radius: $themeBorder_radius;
+          height: auto;
+        }
+      }
+    }
+    .wp-block-code {
+      background: #f5f2f0;
+      padding: 1em;
+      margin: 0.5em 0;
+      overflow: auto;
+      code {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+        font-size: 1em;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+    }
+  }
 }
-/*********************
-        Blog
- *********************/
-/*
-* Categories menu
-*/
-.blog-sidebar,
-.video_filter {
-  width: 100%;
-  margin: 0;
-  height: auto;
-  background: transparent;
-  @media all and (min-width: $sm-min) {
-    padding: 0 calc(2.25rem - 15px);
-  }
+
+/*******************************************
+    Filter menu - blog, videos, product
+ ******************************************/
+.blog_sidebar,
+.video_filter,
+.page_aside {
   @media all and (min-width: $md-min) {
-    padding: 0 calc(3rem - 15px);
+    background: $turqoiseLight;
   }
-  @media all and (min-width: $md-min) {
-    padding: 0 calc(3rem - 15px);
-  }
-  @media all and (min-width: $xl-min) {
-    padding: 0 calc(3.75rem - 15px);
+  &.section_spacing_top_mini{
+    @media all and (min-width: $md-min) {
+ padding-top: 0;
+ padding-bottom: 0;
+    }
   }
   .filter_nav {
-    width: 100%;
     h3 {
       display: none;
     }
   }
   ul {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    @media all and (min-width: $sm-min) {
+    @media all and (min-width: $md-min) {
       flex-direction: row;
+      align-items: center;
+      // justify-content: center;
     }
     li {
-      width: 100%;
-      text-align: center;
-      @media all and (min-width: $sm-min) {
-        width: auto;
-        text-align: left;
+      position: relative;
+      border-bottom: 1px solid $turqoise;
+      @media all and (min-width: $md-min) {
+        margin-right: 2rem;
+        border: none;
+      }
+      &::after {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        background: $linkcolor;
+        transition: all ease-out 300ms;
+      }
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
       }
       a {
         padding: 0.8rem 0.2rem 0.8rem 0.2rem;
-        transition: all 0.5s ease-out;
-        text-transform: uppercase;
-        font-size: 0.8em;
-        display: inline-block;
-        letter-spacing: 0.2px;
-        color: $themecolor;
+        @media all and (min-width: $md-min) {
+          padding: 1rem 0.2rem 0.8rem 0.2rem;
+        }
         text-decoration: none;
-        cursor: pointer;
-        font-weight: 600;
+        display: block;
+        white-space: nowrap;
+        font-weight: 500;
         color: $themecolor;
-        text-decoration: none;
-        border-bottom: 3px solid transparent;
-        // margin-bottom: -3px;
-        margin: 0 0.6rem;
-        margin-bottom: -2px;
         &:hover {
           opacity: 1;
-          border-color: $themecolorNewBlue;
-        }
-        @media all and (min-width: $sm-min) {
-          font-size: 0.7em;
-          padding: 1.3rem 0.2rem 0.6rem 0.2rem;
-        }
-        @media all and (min-width: $md-min) {
-          font-size: 0.8em;
-        }
-        @media all and (min-width: $xl-min) {
-          letter-spacing: 0.5px;
-          margin: 0 1rem;
-          margin-bottom: -2px;
         }
       }
     }
+    //for videos
     /*Uncategorized not show*/
     li.cat-item-1 {
       display: none;
     }
+    //current item
     li.current-cat {
       a {
-        border-bottom: 3px solid $themecolorNewBlue;
-        @media all and (min-width: $md-min) {
-        }
+        border-bottom: 3px solid $linkcolor;
       }
     }
     .most-recent.current-misse {
       a {
-        border-bottom: 2px solid $themecolorNewBlue;
-        @media all and (min-width: $sm-min) {
-        }
+        border-bottom: 3px solid $linkcolor;
       }
-    }
-    &.videos {
-      background: transparent;
     }
   }
 }
+//for product
+.page_aside {
+  .current_page_item,
+  .parent_active {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+/*********************
+        Blog
+ *********************/
 
 //blog_flow
 .blog_flow {
@@ -2188,231 +2140,22 @@ latest_updates_section
       color: $linkcolor;
     }
   }
-  // posts
-  .post_card {
-    position: relative;
-    margin-bottom: 4rem;
-    border-radius: $themeBorder_radius;
-    transition: 0.25s ease-in-out;
-    background: #fff;
-    // box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-    box-shadow: $turqoiseBox_shadow;
-    border: 2px solid $turqoiseLight;
-    &:hover {
-      box-shadow: $link_colorBox_shadow;
-      // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-      .blog_post_title,
-      p {
-        transition: 0.25s ease-in-out;
-        color: $linkcolor;
-      }
-    }
-    .post_link {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: 20;
-    }
-    .img_wrapper {
-      height: 490px;
-    }
-    img {
-      border-top-left-radius: $themeBorder_radius;
-      border-top-right-radius: $themeBorder_radius;
-    }
-    .post_content {
-      padding: 1rem 1.2rem 0.5rem 1.2rem;
-      //centered images
-      img {
-        display: block;
-        margin: 2.5rem auto;
-      }
-      .post_content_inner {
-        margin-bottom: 1rem;
-        position: relative;
-        height: 170px;
-        overflow: hidden;
-        //text-overflow: ellipsis;
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 2rem;
-          background: linear-gradient(transparent, white);
-        }
-        .more-link {
-          display: none;
-        }
-      }
-      .category {
-        position: relative;
-        //color: #8c8c8c;
-        color: $linkcolor;
-        z-index: 40;
-        letter-spacing: 0.01rem;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        &:hover {
-          text-decoration: underline;
-          opacity: 1;
-        }
-      }
-      .blog_post_meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid $themecolorLightest;
-        width: 100%;
-        padding: 0.5rem 0 0 0;
-        p {
-          font-size: 0.8rem;
-          margin: 0;
-          color: #8c8c8c;
-        }
-      }
-      .blog_post_title {
-        line-height: 1.3;
-        margin: 1rem 0;
 
-        font-size: 1.1em;
-        @media all and (min-width: $md-min) {
-          font-size: 1.1em;
-        }
-        @media all and (min-width: $lg-min) {
-          font-size: 1.2em;
-        }
-        @media all and (min-width: $xl-min) {
-          font-size: 1.4em;
-        }
-      }
-    }
-    //single post
-    &.single {
-      transition: none;
-      margin-bottom: 0;
-      box-shadow: none;
-      @media all and (min-width: $sm-min) {
-        margin-top: -20px;
-      }
-      @media all and (min-width: $xl-min) {
-        margin-top: -50px;
-      }
-      &:hover {
-        box-shadow: none;
-        p {
-          transition: none;
-          color: $themecolor;
-        }
-        .blog_post_title {
-          color: $headingcolor;
-        }
-      }
-      img {
-        box-shadow: $themeBox_shadow;
-        @media all and (min-width: $sm-min) {
-          box-shadow: none;
-        }
-      }
-      .post_content {
-        padding: 1rem 0;
-        @media all and (min-width: $sm-min) {
-          padding: 1rem 2rem;
-        }
-        @media all and (min-width: $md-min) {
-          padding: 1.5rem 2.5rem;
-        }
-        .category {
-          font-size: 1rem;
-        }
-        p {
-          margin-bottom: 1.75rem;
-        }
-        h2 {
-          margin-top: 3rem;
-          margin-bottom: 1.75rem;
-        }
-        .blog_post_title {
-          font-weight: 600;
-          font-size: 1.5rem;
-          margin: 0.5rem 0;
-          @media all and (min-width: $sm-min) {
-            font-size: 2rem;
-          }
-          @media all and (min-width: $md-min) {
-            font-size: 2.5rem;
-          }
-        }
-        .blog_post_meta {
-          border: none;
-          padding-bottom: 0.5rem;
-          justify-content: start;
-          p {
-            font-size: 0.9rem;
-            color: #8c8c8c;
-          }
-        }
-        .post_text {
-          a {
-            word-break: break-word;
-            &::before {
-              background: transparent;
-            }
-            &:hover {
-              opacity: 0.7 !important;
-            }
-          }
-          figure {
-            position: relative;
-            z-index: 1000;
-            img {
-              //width: 100%;
-              height: auto;
-              transition: all 1.5s 0.5s; //how fast with delay
-              cursor: pointer;
-              &.enlarge {
-                transform: scale(1.4); //how much
-              }
-            }
-            &::before {
-              position: absolute;
-              top: -25px;
-              right: 0;
-              content: "Click on image to enlarge";
-              font-size: 0.75rem;
-              color: $linkcolor;
-            }
-          }
-        }
-        .wp-block-code {
-          background: #f5f2f0;
-          padding: 1em;
-          margin: 0.5em 0;
-          overflow: auto;
-          code {
-            color: #000;
-            text-shadow: 0 1px #fff;
-            font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-            font-size: 1em;
-            text-align: left;
-            white-space: pre;
-            word-spacing: normal;
-            word-break: normal;
-            word-wrap: normal;
-            line-height: 1.5;
-            -moz-tab-size: 4;
-            -o-tab-size: 4;
-            tab-size: 4;
-            -webkit-hyphens: none;
-            -ms-hyphens: none;
-            hyphens: none;
-          }
-        }
-      }
+  //blog_post_meta
+  .blog_post_meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $turqoise;
+    width: 100%;
+    padding: 0.5rem 0 0 0;
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+      color: $themecolorLight;
     }
   }
+
   //wpcf7 form
   .wpcf7 {
     max-width: 100%;
@@ -2431,7 +2174,8 @@ text layout for Pages Content block
 .text_section_pages {
   .text_content {
     //centered images
-    img, iframe {
+    img,
+    iframe {
       display: block;
       margin: 2.5rem auto;
       border-radius: $themeBorder_radius;
@@ -2588,7 +2332,7 @@ forum section
       }
     }
     .fa-brands {
-       font-size: 19px;
+      font-size: 19px;
       padding-right: 1rem;
       text-align: center;
       border-radius: 50%;

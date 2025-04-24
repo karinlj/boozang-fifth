@@ -19,7 +19,7 @@
     $header_class = 'header_main';
     $style = '';
     $row_class = 'justify-content-start';
-    $col_class = 'col-md-8 offset-md-2 col-lg-6 offset-lg-3';
+    $col_class = 'col-md-8 offset-md-2';
 
     if (is_front_page()) {
         $header_class = 'header_main front';
@@ -28,13 +28,18 @@
         $header_image_front = get_field('header_image_front');
     }
     if (is_singular('post')) {
-        // $col_class = 'col-md-10 offset-md-1';
         $header_class = 'header_main single_post';
     }
 
     $color = get_field('header_background');
     $heading_pages = get_field('heading_pages');
     $header_btn_links = get_field('btn_links');
+
+    if (is_home() || is_archive()) {
+        $color = get_field('header_background', get_option('page_for_posts'));
+        $heading_pages = get_field('heading_pages', get_option('page_for_posts'));
+        $header_btn_links = get_field('btn_links', get_option('page_for_posts'));
+    }
     ?>
 
     <header id="header_top" class="<?php echo $header_class; ?> <?php echo $color; ?>"
@@ -42,7 +47,6 @@
 
         <!-- get menu -->
         <?php get_template_part('template-parts/navigation/main-menu'); ?>
-           
 
         <div class="header_items_section">
             <div class="container">

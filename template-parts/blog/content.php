@@ -1,75 +1,76 @@
 <?php
 //blog variables - default: (!is_single()
-$col_class = 'col-sm-6 col-md-4 col-lg-3';
-$post_class = 'post_card';
+$col_class = 'col-sm-6 col-md-4';
+$post_class = 'card_container';
 ?>
-
-<!-- column size -->
 <?php if (is_single()) {
     $col_class = 'col-lg-10 offset-lg-1';
 } ?>
 <div class="<?php echo $col_class; ?>">
 
     <?php if (is_single()) {
-        $post_class = 'post_card single';
+        $post_class = 'card_container single';
     } ?>
-    <article class="<?php echo $post_class; ?>">
-        <?php the_post_thumbnail(); ?>
+    <div class="<?php echo $post_class; ?>">
+        <div class="card_embed_container">
+            <div class="img_container">
+                <?php the_post_thumbnail(); ?>
+            </div>
+        </div>
 
         <!-- link if blog page  -->
         <?php if (!is_single()) { ?>
-            <a class="post_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
+            <a class="embed_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
             </a>
         <?php } ?>
 
-        <div class="post_content">
+        <div class="content_container">
             <?php $categories = get_the_category();
-            $separator = ", ";
+            $separator = " ";
             $output = '';
 
             if ($categories) {
                 foreach ($categories as $category) {
                     // categories as a link separated by comma
-                    $output .= '<a class ="category" href=" ' . get_category_link($category->term_id) . ' ">' . $category->cat_name . '</a>' . $separator;
+                    $output .= '<a class ="cat_badge" href=" ' . get_category_link($category->term_id) . ' ">' . $category->cat_name . '</a>' . $separator;
                 }
                 //trim takes $output and removes $separator
                 echo trim($output, $separator);
             }
             ?>
             <?php if (!is_single()) { ?>
-                <div class="post_content_inner">
+                <div class="content_container_inner">
+                <h3 class="title">
+                    <?php the_title(); ?>
+                </h3>
                 <?php } ?>
 
-                <header class="post_heading">
-                    <h2 class="blog_post_title">
-                        <?php the_title(); ?>
-                    </h2>
-                </header>
-                <!-- meta - single-->
+                <!-- title and meta - single-->
                 <?php if (is_single()) { ?>
+                    <h1 class="title">
+                    <?php the_title(); ?>
+                </h1>
                     <div class="blog_post_meta">
-
                         <p>by <?php the_author(); ?> &nbsp; | &nbsp;</p>
                         <p><?php echo get_the_date('F j, Y'); ?></p>
                     </div>
                 <?php } ?>
 
-                <main class="post_text">
-                    <!-- content and exerpt-->
+                <!-- content and exerpt-->
+                <p class="description">
                     <!--if search.php or archive.php -> show only excerpts-->
                     <?php if (is_search() or is_archive()) { ?>
-                        <p><?php echo get_the_excerpt(); ?></p>
+                        <?php echo get_the_excerpt(); ?>
                         <?php } else {
 
                         /*if excerpt used in adminGUI -> show excerpt*/
                         if ($post->post_excerpt) { ?>
-
-                            <p><?php echo get_the_excerpt(); ?></p>
-                    <?php } else {
-                            the_content();
-                        }
+                            <?php echo get_the_excerpt(); ?>
+                        <?php } else { ?>
+                            <?php echo the_content(); ?>
+                    <?php }
                     } ?>
-                </main>
+                </p>
 
                 <?php if (!is_single()) { ?>
                     <!--/end  post_content_inner -->
@@ -78,12 +79,11 @@ $post_class = 'post_card';
 
             <!-- meta - blog page-->
             <?php if (!is_single()) { ?>
-                <footer class="blog_post_meta">
+                <div class="blog_post_meta">
                     <p>by <?php the_author(); ?></p>
                     <p><?php echo get_the_date('F j, Y'); ?></p>
-                </footer>
+                </div>
             <?php } ?>
-
         </div>
-    </article>
+    </div>
 </div>

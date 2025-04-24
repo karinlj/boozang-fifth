@@ -18,7 +18,7 @@
                             $text = get_sub_field('text'); ?>
 
                          <div class="col-lg-4">
-                             <div class="card
+                             <div class="pricing_card
                  <?php if ($count == 1) { ?> higher
                            <?php  } elseif ($count == 2) { ?> blue <?php } ?>">
 

@@ -1,8 +1,10 @@
 <?php
 // header background
 $color = get_field('header_background');
+if (is_home() || is_archive()) {
+    $color = get_field('header_background', get_option('page_for_posts'));
+}
 ?>
-
 <div id="nav-wrap" class="">
     <div class="container">
         <div class="row">
@@ -74,9 +76,9 @@ $color = get_field('header_background');
                     </a>
                 </li>
                 <li>
-                    <a class="btn signup_btn" href="https://ai.boozang.com/#security/signup"
+                    <a class="btn_link green" href="https://ai.boozang.com/#security/signup"
                         aria-label="Boozang Sign Up">
-                        Free Trial
+                       Try for Free
                     </a>
                 </li>
             </ul>

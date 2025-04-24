@@ -165,14 +165,14 @@
             {
                 "param": "post_template",
                 "operator": "==",
-                "value": "default"
+                "value": "front-page.php"
             }
         ],
         [
             {
-                "param": "post_template",
+                "param": "page_template",
                 "operator": "==",
-                "value": "front-page.php"
+                "value": "page-forum.php"
             }
         ]
     ],
@@ -185,5 +185,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745361898
+    "modified": 1745442607
 }
