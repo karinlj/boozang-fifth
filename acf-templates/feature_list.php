@@ -9,7 +9,7 @@ if (get_row_layout() == 'feature_list') {
             <div class="row">
                 <div class="col-12">
                     <?php if ($heading) { ?>
-                        <h2 class="text_center margin_4"><?php echo $heading; ?></h2>
+                        <h2 class="text_center_laptop margin_4"><?php echo $heading; ?></h2>
                     <?php } ?>
 
                     <div class="row">

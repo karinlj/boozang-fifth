@@ -7,7 +7,7 @@
     <section class="faq_accordion_section <?php echo $bgColor; ?> section_spacing_top_medium">
         <div class="container">
             <?php if ($heading) { ?>
-                <h2 class="text_center margin_4"><?php echo $heading; ?></h2>
+                <h2 class="text_center_laptop margin_4"><?php echo $heading; ?></h2>
             <?php } ?>
             
             <div class="row justify-content-center">

@@ -16,7 +16,7 @@
             <div class="paginate_links">
                 <?php
                     $pages = array(
-                        'prev_text' => __('<button aria-label="Next page"><i class="fas fa-angle-double-left" aria-hidden="true"></i></button>'),
+                        'prev_text' => __('<button aria-label="Next page"><i class="fas fa-angle-left" aria-hidden="true"></i></button>'),
                         'next_text' => __('<button aria-label="Previous page"><i class="fas fa-angle-right" aria-hidden="true"></i></button>'),
                     );
                     if (paginate_links($pages)) { ?>

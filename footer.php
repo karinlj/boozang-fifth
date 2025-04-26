@@ -20,11 +20,11 @@
             </div>
             <div class="capterra_img bigger">
                 <a href="https://www.capterra.com/p/166146/Boozang/reviews/">
-                    <img border="0" src="https://brand-assets.capterra.com/badge/f2d59cba-8965-4346-86cc-255b859ccbc1.svg" />
+                    <img border="0" src="https://brand-assets.capterra.com/badge/f2d59cba-8965-4346-86cc-255b859ccbc1.svg" alt="Boozang Reviews"/>
                 </a>
             </div>
             <div class="capterra_img">
-                <a href="https://www.getapp.com/it-management-software/a/boozang/reviews/"> <img border="0" src="https://brand-assets.getapp.com/badge/8fc04a2f-c58e-40bd-8641-dac27b3b2ac3.png" /> </a>
+                <a href="https://www.getapp.com/it-management-software/a/boozang/reviews/"> <img border="0" src="https://brand-assets.getapp.com/badge/8fc04a2f-c58e-40bd-8641-dac27b3b2ac3.png" /></a>
             </div>
         
         </div>
@@ -41,7 +41,7 @@
                 </a>
             <?php } ?>
             <?php if ($sign_up_link_demo) { ?>
-                <a class="btn_link outline_color_darkblue" href="<?php echo $sign_up_link_demo['url']; ?>" target="<?php echo $sign_up_link_demo['target']; ?>" rel="noopener noreferrer"><?php echo $sign_up_link_demo['title']; ?>
+                <a class="btn_link outline_color_darkblue_transparent" href="<?php echo $sign_up_link_demo['url']; ?>" target="<?php echo $sign_up_link_demo['target']; ?>" rel="noopener noreferrer"><?php echo $sign_up_link_demo['title']; ?>
                 </a>
             <?php } ?>
         </div>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="col-2">
                     <div class="back_to_top_link">
-                        <a href="#header_top">
+                        <a href="#header_top" aria-label="To top of page>
                             <i class="fas fa-angle-up" aria-hidden="true" aria-label="To top of page"></i>
                         </a>
                     </div>

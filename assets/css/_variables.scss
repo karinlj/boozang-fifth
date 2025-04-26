@@ -15,29 +15,29 @@ $xl-max: 1309px;
 $max-page-width: 1380px;
 
 /* colors */
-$blueDarkest: #151c37; //#1b284a;
-// $blueDark: #232f5c;
-$blue: #1260d8;
+$blueDarkest: #151c37; 
+$blue: #1368E7;
 $blueLight: #4dbeff;
 $turqoise: #b8e0d7;
 $turqoiseLight: #e6f4f1;
 
-$themecolorOldBlue: #00a2ff;  //#0085cc;
+$themecolorOldBlue: #00a2ff; 
 $themecolorPink: #ff5c9f; 
-$themecolorGreen: #00ac7d;
+$themecolorGreen: #00A87B; 
+$themecolorGreenDark: #00805e;
 $purpleLight: #9966ff;
 $lightgrey: #f9f9f9;
-$themeBorderColor: #f2f2f2;
+$themeBorderColor: #596dc0;
 
 //text color
 $headingcolor: #212735;
-$themecolor: $headingcolor; //#30394f; //#4a5669;
+$themecolor: $headingcolor; 
 $navcolor: $themecolor;
 $linkcolor: $themecolorOldBlue;
 
 //outline
 $themecolorLight: #66758d;
-$themecolorLightest: #b5bdc9;
+$themecolorLightest: #a6b0bf;
 
 //other
 $themefont: "Roboto", "Helvetica", sans-serif;
@@ -60,7 +60,7 @@ $themeBox_shadow: 0 4px 0 #212735;
 //overlay colors
 $blueDarkOverlayColor: linear-gradient(
   to right bottom,
-  #151c37,
+  $blueDarkest,
   #182140,
   #1c2549,
   #1f2a52,

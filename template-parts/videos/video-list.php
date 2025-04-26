@@ -57,7 +57,6 @@
                             $image = get_field('image');
                             $video_url = get_field('url');
                     ?>
-
                             <div class="col-sm-6 col-md-4">
                                 <div class="card_container">
                                     <div class="card_container_inner">

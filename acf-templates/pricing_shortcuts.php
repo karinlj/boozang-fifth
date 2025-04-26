@@ -4,7 +4,7 @@ $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') .
 ?>
 <section class="pricing_shortcuts darkblue overlay-darkblue section_spacing_top_medium" <?php echo $style; ?>>
     <div class="container">
-        <div class="row">
+        
             <div class="heading_section">
                 <div>
                     <?php
@@ -20,7 +20,6 @@ $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') .
                     <?php
                     } ?>
                 </div>
-            </div>
         </div>
         <div class="row align-items-center justify-content-between">
             <?php

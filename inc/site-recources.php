@@ -29,7 +29,6 @@ function bn_style_resourses()
     wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0', 'all');
 
     // wp_enqueue_style('font-awesome-5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null);
-    wp_enqueue_style('font-awesome-5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null);
 
 
     wp_enqueue_style('boozang-fifth-custom', get_stylesheet_directory_uri() . '/assets/css/custom.css');
@@ -43,11 +42,9 @@ function google_fonts()
 ?>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/a9f08520e7.js" crossorigin="anonymous"></script> -->
 
 <?php
 }
 add_action('wp_head', 'google_fonts');
 
-//Review badges
 ?>

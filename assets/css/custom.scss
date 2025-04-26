@@ -70,6 +70,9 @@ ol {
 .green {
   color: $themecolorGreen;
 }
+.green_dark {
+  color: $themecolorGreenDark;
+}
 .dark_text {
   color: $blueDarkest;
 }
@@ -156,12 +159,13 @@ button,
   border-radius: $btnBorder_radius;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
-  font-size: 0.9rem;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.1px;
   background: $blueDarkest;
   color: #fff;
   border: 1px solid transparent;
+  text-transform: capitalize;
   &:focus {
     color: $linkcolor;
     border-radius: 3px;
@@ -213,6 +217,15 @@ button,
       background: $blueDarkest;
     }
   }
+  &.outline_color_darkblue_transparent {
+    background: transparent;
+    border-color: $blueDarkest;
+    color: $blueDarkest;
+    &:hover {
+      color: #fff;
+      background: $blueDarkest;
+    }
+  }
   &.green {
     background: $themecolorGreen;
     color: #fff;
@@ -238,12 +251,13 @@ button,
  links
 *********************/
 a {
+  display: inline-block;
+  position: relative;
   color: $linkcolor;
   text-decoration: none;
   transition: all 0.3s ease-in;
   &:focus {
     color: $linkcolor;
-    border-radius: 3px;
   }
   &:active {
     color: $linkcolor;
@@ -252,8 +266,7 @@ a {
     color: $linkcolor;
   }
   &:hover {
-    color: $linkcolor;
-    // opacity: 0.7;
+    color: $blue;
     text-decoration: none;
   }
 }
@@ -273,8 +286,6 @@ a {
 .text_section_pages,
 .post_text {
   a {
-    display: inline-block;
-    position: relative;
     &:before {
       opacity: 0.4;
       position: absolute;
@@ -284,8 +295,6 @@ a {
       width: 100%;
       height: 2px;
       background: $linkcolor;
-      -webkit-transition: width 0.2s ease-in;
-      transition: width 0.2s ease-in;
     }
     &:hover {
       opacity: 1;
@@ -301,14 +310,6 @@ a {
   color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
-  display: inline-block;
-  position: relative;
-  transition: all 0.25s ease;
-  // box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-  // &:hover {
-  //   transform: translateY(-2px);
-  //   box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
-  // }
   &:before {
     opacity: 0.6;
     position: absolute;
@@ -345,7 +346,6 @@ a {
   display: inline-block;
   position: relative;
   transition: transform 0.3s ease;
-  letter-spacing: 0px;
   &:hover {
     opacity: 0.7 !important;
     color: $themecolorPink;
@@ -377,11 +377,14 @@ a {
   }
 }
 //centered text laptop
-.text_center {
+.text_center_laptop {
   text-align: left;
   @media all and (min-width: $sm-min) {
     text-align: center;
   }
+}
+.text_center {
+  text-align: center;
 }
 .margin_2 {
   margin-bottom: 2rem;
@@ -425,7 +428,6 @@ h6 {
   font-family: $themefont;
   color: $headingcolor;
   font-weight: 600;
-  // font-weight: 500;
   margin-top: 0.3rem;
 }
 section {
@@ -442,59 +444,56 @@ p {
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: 2.5rem;
   @media all and (min-width: $md-min) {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
   @media all and (min-width: $lg-min) {
-    font-size: 2.4rem;
+    font-size: 2.7rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
   }
 }
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   @media all and (min-width: $lg-min) {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
+  }
+  @media all and (min-width: $lg-min) {
+    font-size: 2.3rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   &.smaller_size_text {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     @media all and (min-width: $xl-min) {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
     }
   }
 }
 h3 {
-  //position: relative;
   font-size: 1.3rem;
-  line-height: 1.4;
   @media all and (min-width: $lg-min) {
-    font-size: 1.4em;
+    font-size: 1.4rem;
   }
   @media all and (min-width: $xl-min) {
     font-size: 1.5rem;
   }
-  &.small_size_text {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    @media all and (min-width: $md-min) {
-      font-size: 0.9rem;
+  &.smaller_size_text {
+    font-size: 1.1rem;
+    @media all and (min-width: $lg-min) {
+      font-size: 1.2rem;
     }
     @media all and (min-width: $xl-min) {
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   }
 }
 h4 {
   font-size: 1.1em;
   @media all and (min-width: $md-min) {
-    font-size: 1.1em;
-  }
-  @media all and (min-width: $lg-min) {
     font-size: 1.2em;
   }
   @media all and (min-width: $xl-min) {
@@ -503,15 +502,12 @@ h4 {
 }
 h5 {
   font-size: 1em;
-  @media all and (min-width: $md-min) {
+  @media all and (min-width: $lg-min) {
     font-size: 1.1em;
   }
 }
 h6 {
   font-size: 0.9em;
-  @media all and (min-width: $md-min) {
-    font-size: 0.9em;
-  }
   @media all and (min-width: $xl-min) {
     font-size: 1em;
   }
@@ -550,16 +546,9 @@ footer,
     p {
       color: #fff;
     }
-    // .underscore_link {
-    //   color: #fff;
-    //   &:before {
-    //     color: #fff;
-    //   }
-    // }
   }
   // text and btn color for light bg
   &.white {
-    background: #fff;
     h1,
     h2,
     h3,
@@ -588,6 +577,10 @@ main nav - default colors for white & lightgrey bg
     padding: 0rem calc(2.25rem - 15px);
   }
   @media all and (min-width: $md-min) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $themecolorLightest;
     padding: 0rem calc(3rem - 15px);
   }
   @media all and (min-width: $md-min) {
@@ -618,28 +611,24 @@ main nav - default colors for white & lightgrey bg
     }
     li {
       position: relative;
+      //default: white bg
       a {
         margin: 0 1rem -1px 1rem;
-        transition: all 0.5s ease;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
-        font-size: 0.8rem;
-        display: block;
+        font-size: 14px;
         color: $navcolor;
-        text-decoration: none;
         font-weight: 500;
         letter-spacing: 0.6px;
-        cursor: pointer;
         @media all and (min-width: $lg-min) {
-          font-size: 0.8rem;
+          font-size: 15px;
         }
         @media all and (min-width: $xl-min) {
-          font-size: 0.9rem;
+          font-size: 15px;
         }
         &:hover {
           color: $navcolor;
           border-bottom: 1px solid $blueDarkest;
-          opacity: 1;
         }
         &:active {
           color: $navcolor;
@@ -670,7 +659,7 @@ main nav - default colors for white & lightgrey bg
       > a {
         &::after {
           content: "\f106";
-          font-family: "Font Awesome 5 Free";
+          font-family: "Font Awesome 6 Free";
           font-weight: 900;
           margin-left: 5px;
         }
@@ -684,7 +673,7 @@ main nav - default colors for white & lightgrey bg
       }
       &::after {
         content: "\f107";
-        font-family: "Font Awesome 5 Free";
+        font-family: "Font Awesome 6 Free";
         font-weight: 600;
         margin-left: 5px;
         color: $navcolor;
@@ -698,7 +687,6 @@ main nav - default colors for white & lightgrey bg
       width: 230px;
       padding: 2rem 0;
       display: none;
-      // box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
       box-shadow: $themeBox_shadow;
       li {
         width: 100%;
@@ -718,7 +706,6 @@ main nav - default colors for white & lightgrey bg
         &:hover {
           a {
             background: #f4f0f4;
-            opacity: 1;
           }
         }
       }
@@ -851,7 +838,6 @@ main nav - default colors for white & lightgrey bg
   top: 0;
   left: 0;
   background: $blueDarkest;
-  // padding: 0 10%;
   padding: 1rem;
   text-align: left;
   transform: translateX(100%);
@@ -871,12 +857,10 @@ main nav - default colors for white & lightgrey bg
   ul {
     li {
       a {
-        transition: all 0.5s ease;
         font-size: 17px;
         letter-spacing: 0.5px;
         display: block;
         color: #fff;
-        text-decoration: none;
         padding: 13px 10px;
       }
       .btn_link {
@@ -890,7 +874,7 @@ main nav - default colors for white & lightgrey bg
         > a {
           &::after {
             content: "\f106";
-            font-family: "Font Awesome 5 Free";
+            font-family: "Font Awesome 6 Free";
             font-weight: 900;
             margin-left: 5px;
           }
@@ -916,7 +900,7 @@ main nav - default colors for white & lightgrey bg
         }
         &::after {
           content: "\f107";
-          font-family: "Font Awesome 5 Free";
+          font-family: "Font Awesome 6 Free";
           font-weight: 900;
           margin-left: 5px;
         }
@@ -936,27 +920,7 @@ main nav - default colors for white & lightgrey bg
       }
     }
   }
-  .signup {
-    ul {
-      width: 100%;
-      li {
-        .signup_btn {
-          margin: 1rem 0.5rem;
-          background: transparent !important;
-          color: #fff !important;
-          border: 1px solid #fff !important;
-          width: 100%;
-          &:hover {
-            background: transparent !important;
-            opacity: 0.6;
-          }
-          @media all and (min-width: $sm-min) {
-            width: 12rem;
-          }
-        }
-      }
-    }
-  }
+
   /*toggle open*/
   &.menu_open {
     overflow-x: auto;
@@ -970,10 +934,6 @@ main nav - default colors for white & lightgrey bg
 .header_main {
   background: #fff; //default bg
   min-height: 350px;
-  // height: 700px;
-  @media all and (min-width: $lg-min) {
-    // height: 400px;
-  }
   &.front {
     .btn_container {
       justify-content: flex-start;
@@ -1073,6 +1033,7 @@ main nav - default colors for white & lightgrey bg
           }
         }
       }
+
       /*Wp:s klasser*/
       a:not([href]):not([tabindex]) {
         color: #fff;
@@ -1099,7 +1060,7 @@ main nav - default colors for white & lightgrey bg
         ul {
           li {
             a {
-              color: #16181d;
+              color: $themecolor;
               &:hover {
                 border-bottom: 1px solid transparent;
               }
@@ -1120,14 +1081,11 @@ main nav - default colors for white & lightgrey bg
       }
       //menu btn
       > .menu_toggle_btn {
-        /* Hamburger Line */
         > div {
           background: #fff;
-          /* Hamburger Lines - Top & Bottom */
           &::before {
             background: inherit;
           }
-          /* Moves Line Down */
           &::after {
             background: inherit;
           }
@@ -1177,7 +1135,6 @@ main nav - default colors for white & lightgrey bg
       min-height: 15rem;
       li.list_item {
         margin-bottom: 0.8rem;
-        //ändras???
         font-size: 1rem;
       }
     }
@@ -1264,7 +1221,7 @@ feature list  (pricing page)
         color: $linkcolor;
       }
       &:after {
-        font-family: "Font Awesome 5 Free";
+        font-family: "Font Awesome 6 Free";
         font-size: calc ($iconsize/2);
         content: "\f067";
         font-weight: 900;
@@ -1484,12 +1441,6 @@ feature list  (pricing page)
           }
         }
       }
-      // .uderscore_link {
-      //   color: $themecolorPink;
-      //   &::before {
-      //     background: $themecolorPink;
-      //   }
-      // }
     }
   }
   //about field
@@ -1509,42 +1460,6 @@ feature list  (pricing page)
   }
 }
 
-/**********************
-  pillars
-***********************/
-// .pillars_section {
-//   overflow: hidden;
-//   display: flex;
-//   align-items: center;
-//   @media all and (min-width: $md-min) {
-//   }
-//   .pillars_item {
-//     margin: 1.5rem 0;
-//     @media all and (min-width: $md-min) {
-//       margin: 1rem 0;
-//     }
-//     @media all and (min-width: $lg-min) {
-//       margin-bottom: 0;
-//     }
-//     p {
-//       font-size: 0.9rem;
-//     }
-//   }
-//   .pillars_top_heading {
-//     font-weight: 500;
-//     font-size: 0.85rem;
-//     margin-bottom: 0.5rem;
-//     color: $themecolorPink !important;
-//     text-transform: uppercase;
-//   }
-//   .pillars_heading {
-//     font-size: 0.9em;
-//     margin-bottom: 0.5rem;
-//     @media all and (min-width: $xl-min) {
-//       font-size: 1em;
-//     }
-//   }
-// }
 /*********************
     image_and_text_boxes
  *********************/
@@ -1714,11 +1629,7 @@ feature list  (pricing page)
   integrations
 ***********************/
 .integrations_section {
-  // background: linear-gradient(-90deg, rgba(0, 12, 26, 0.08) 1px, transparent 0),
-  //   linear-gradient(rgba(0, 12, 26, 0.08) 1px, transparent 0), $blueDarkest;
-  // background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
-  //   80px 80px, 80px 80px, 80px 80px;
-  background-color: $blueDarkest !important;
+  background: $blueDarkest;
   .text_section {
     padding-bottom: 2rem;
   }
@@ -1824,14 +1735,9 @@ latest_updates_section
   }
   .updates_btn {
     margin-right: 0.8rem;
-    text-transform: capitalize;
     &.active {
       color: #fff;
       background: $blueDarkest;
-    }
-    font-size: 0.7rem;
-    @media all and (min-width: $sm-min) {
-      font-size: 0.9rem;
     }
   }
   .updates_tab_content {
@@ -2117,7 +2023,6 @@ latest_updates_section
 /*********************
         Blog
  *********************/
-
 //blog_flow
 .blog_flow {
   //next and previous
@@ -2138,9 +2043,9 @@ latest_updates_section
       box-shadow: none;
       font-size: 1.1rem;
       color: $linkcolor;
+      border: none;
     }
   }
-
   //blog_post_meta
   .blog_post_meta {
     display: flex;
@@ -2155,7 +2060,6 @@ latest_updates_section
       color: $themecolorLight;
     }
   }
-
   //wpcf7 form
   .wpcf7 {
     max-width: 100%;
