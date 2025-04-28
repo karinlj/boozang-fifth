@@ -23,7 +23,7 @@
                            <?php  } elseif ($count == 2) { ?> blue <?php } ?>">
 
                                  <div class="card_body">
-                                     <header class="pricing_header">
+                                     <header class="card_header">
                                          <div class="">
                                              <h3 class="heading"><?php echo $heading; ?></h3>
                                              <p class="text"><?php echo $text; ?></p>

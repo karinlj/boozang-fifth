@@ -7,6 +7,23 @@
 $heading_color = get_sub_field('heading_background');
 ?>
 <section class="two_columns_section story <?php echo $heading_color; ?>">
+    <!-- <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-lg-6">
+                <div class="header">
+                    <?php if (get_sub_field('tagline')) { ?>
+                        <p><?php the_sub_field('tagline'); ?></p>
+                    <?php }
+                    if (get_sub_field('heading')) { ?>
+                        <h2><?php the_sub_field('heading'); ?></h2>
+                    <?php  }
+                    if (get_sub_field('preamble')) { ?>
+                        <p><?php the_sub_field('preamble'); ?></p>
+                    <?php  } ?>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <?php
     //loopa repeater
     if (have_rows('two_columns_row')) {
@@ -31,7 +48,7 @@ $heading_color = get_sub_field('heading_background');
                                         <?php $image = wp_get_attachment_image_src($img_id, 'full'); ?>
                                         <?php $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true); ?>
 
-                                        <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" class="pict" />
+                                        <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
                                         <span class="alt_caption"><?php echo $alt_text; ?></span>
                                     </div>
                                 <?php
@@ -39,14 +56,15 @@ $heading_color = get_sub_field('heading_background');
                                 <?php
                                 if (get_row_layout() == 'text') { ?>
                                     <div class="part text">
+                                        <!-- <h2 class=""><?php the_sub_field('heading'); ?></h2> -->
                                         <div><?php the_sub_field('text'); ?></div>
 
                                         <?php $link = get_sub_field('link'); ?>
 
                                         <?php
                                         if ($link) { ?>
-                                            <a class="btn_link outline_color_white" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"
-                                              rel="noopener noreferrer"><?php echo $link['title']; ?>
+                                            <a class="arrow_link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"
+                                                rel="noopener noreferrer"><?php echo $link['title']; ?><i class="fa-solid fa-arrow-right"></i>
                                             </a>
                                         <?php } ?>
 

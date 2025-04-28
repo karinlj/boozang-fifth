@@ -153,8 +153,9 @@ img {
 button,
 .btn,
 .btn_link {
+  line-height: 1.2;
   display: inline-block;
-  padding: 10px 20px !important;
+  padding: 10px 20px;
   cursor: pointer;
   border-radius: $btnBorder_radius;
   transition: 1s all ease;
@@ -165,7 +166,7 @@ button,
   background: $blueDarkest;
   color: #fff;
   border: 1px solid transparent;
-  text-transform: capitalize;
+  // text-transform: capitalize;
   &:focus {
     color: $linkcolor;
     border-radius: 3px;
@@ -276,6 +277,7 @@ button,
 a {
   &:focus {
     outline: 2px dotted $themecolorLightest;
+    border-radius: $btnBorder_radius;
   }
 }
 
@@ -367,20 +369,17 @@ a {
 /********************
  text style
 *********************/
-
-//centered text mobile
-.text_section,
-.info_banner {
-  text-align: center;
-  @media all and (min-width: $sm-min) {
-    text-align: left;
-  }
-}
-//centered text laptop
+//centered text
 .text_center_laptop {
   text-align: left;
   @media all and (min-width: $sm-min) {
     text-align: center;
+  }
+}
+.text_center_mobile {
+  text-align: center;
+  @media all and (min-width: $sm-min) {
+    text-align: left;
   }
 }
 .text_center {
@@ -418,6 +417,7 @@ input {
 }
 li {
   font-size: 0.9rem;
+  line-height: 1.6;
 }
 h1,
 h2,
@@ -430,6 +430,9 @@ h6 {
   font-weight: 600;
   margin-top: 0.3rem;
 }
+// h1 {
+//   font-weight: 500;
+// }
 section {
   h3 {
     margin-bottom: 0.5rem;
@@ -457,14 +460,14 @@ h1 {
 }
 h2 {
   font-size: 1.9rem;
-  @media all and (min-width: $lg-min) {
-    font-size: 2.1rem;
+  @media all and (min-width: $md-min) {
+    font-size: 2rem;
   }
   @media all and (min-width: $lg-min) {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
   &.smaller_size_text {
     font-size: 1.5rem;
@@ -563,6 +566,27 @@ footer,
     }
   }
 }
+
+section,
+header {
+  &.overlay-darkblue {
+    &::before {
+      background-image: $blueDarkOverlayColor;
+      @include overlay();
+    }
+  }
+  &.overlay-blue {
+    &::before {
+      background-image: $blueOverlayColor;
+      @include overlay();
+    }
+  }
+  &.overlay-none {
+    &::before {
+      background-image: none;
+    }
+  }
+}
 /**************************************
 main nav - default colors for white & lightgrey bg
 ***************************************/
@@ -595,7 +619,7 @@ main nav - default colors for white & lightgrey bg
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 70px;
   a,
   a:visited,
   a:focus,
@@ -611,6 +635,7 @@ main nav - default colors for white & lightgrey bg
     }
     li {
       position: relative;
+      border-radius: $themeBorder_radius;
       //default: white bg
       a {
         margin: 0 1rem -1px 1rem;
@@ -621,10 +646,7 @@ main nav - default colors for white & lightgrey bg
         font-weight: 500;
         letter-spacing: 0.6px;
         @media all and (min-width: $lg-min) {
-          font-size: 15px;
-        }
-        @media all and (min-width: $xl-min) {
-          font-size: 15px;
+          font-size: 14px;
         }
         &:hover {
           color: $navcolor;
@@ -828,6 +850,9 @@ main nav - default colors for white & lightgrey bg
   @media all and (min-width: $lg-min) {
     justify-content: flex-end;
   }
+  .btn_link {
+    padding: 10px 20px;
+  }
 }
 /*Mobile view - menu*/
 .nav-mobile {
@@ -934,19 +959,14 @@ main nav - default colors for white & lightgrey bg
 .header_main {
   background: #fff; //default bg
   min-height: 350px;
-  &.front {
-    .btn_container {
-      justify-content: flex-start;
-    }
-    .header_items_section {
-      text-align: left;
-    }
-  }
   &.single_post {
     min-height: 0;
+    .header_items_section {
+      padding-top: 0;
+    }
   }
   .btn_container {
-    justify-content: center;
+    padding-bottom: 0;
   }
   .btn_link {
     &.outline_color_white_blue {
@@ -961,20 +981,12 @@ main nav - default colors for white & lightgrey bg
     }
   }
   .header_items_section {
-    text-align: center;
-    padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
-    @media all and (min-width: $sm-min) {
-      padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
-    }
-    @media all and (min-width: $md-min) {
-      padding: 0 calc(3rem - 15px) 3rem calc(3rem - 15px);
-    }
-    @media all and (min-width: $xl-min) {
-      padding: 0 calc(3.75rem - 15px) 2rem calc(3.75rem - 15px);
-    }
     padding-top: 130px;
     @media all and (min-width: $sm-min) {
       padding-top: 140px;
+    }
+    @media all and (min-width: $lg-min) {
+      padding-top: 170px;
     }
   }
   .header_heading {
@@ -992,11 +1004,11 @@ main nav - default colors for white & lightgrey bg
     border-radius: $themeBorder_radius;
     max-height: 500px;
     float: right;
-    margin-top: 2.5rem;
-    @media all and (min-width: $xl-min) {
-      max-height: 450px;
-      margin-right: 2rem;
-    }
+    // margin-top: 2.5rem;
+    // @media all and (min-width: $xl-min) {
+    //   max-height: 450px;
+    //   margin-right: 2rem;
+    // }
   }
   //items on dark bg - nav, btns ecc
   &.darkblue,
@@ -1113,44 +1125,7 @@ main nav - default colors for white & lightgrey bg
     box-shadow: $turqoiseBox_shadow;
     text-align: center;
     height: 520px;
-    .card_body {
-      padding: 1.5rem 1.25rem;
-      height: 100%;
-    }
-    .pricing_header {
-      border-bottom: 1px solid $turqoise;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100px;
-      .heading {
-        font-size: 1.8rem;
-      }
-      .text {
-        font-weight: 600;
-      }
-    }
-    ul.feat_list {
-      padding: 1.25rem 0 0 0;
-      min-height: 15rem;
-      li.list_item {
-        margin-bottom: 0.8rem;
-        font-size: 1rem;
-      }
-    }
-    .price {
-      padding: 1rem 0;
-      .number {
-        font-weight: 500;
-        font-size: 1.9rem;
-        span {
-          font-size: 0.8rem;
-        }
-      }
-    }
-    .btn_link {
-      width: 12rem;
-    }
+  
     //middle pricing_card higher
     &.higher {
       height: 550px;
@@ -1173,6 +1148,46 @@ main nav - default colors for white & lightgrey bg
         }
       }
     }
+  }
+  .card_body {
+    padding: 1.5rem 1.25rem;
+    height: 100%;
+  }
+  .card_header {
+    border-bottom: 1px solid $turqoise;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    .heading {
+      font-size: 1.8rem;
+    }
+    .text {
+      font-weight: 600;
+    }
+  }
+  ul.feat_list {
+    padding: 1.25rem 0 0 0;
+    min-height: 15rem;
+    li.list_item {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+  }
+  .price {
+    padding: 1rem 0;
+    .number {
+      font-weight: 500;
+      font-size: 1.9rem;
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .btn_link {
+    width: 12rem;
+    box-shadow: none;
   }
 }
 
@@ -1280,23 +1295,6 @@ feature list  (pricing page)
       }
     }
   }
-  &.overlay-darkblue {
-    &::before {
-      background-image: $blueDarkOverlayColor;
-      @include overlay();
-    }
-  }
-  &.overlay-blue {
-    &::before {
-      background-image: $blueOverlayColor;
-      @include overlay();
-    }
-  }
-  &.overlay-none {
-    &::before {
-      background-image: none;
-    }
-  }
 }
 
 /*************************
@@ -1318,17 +1316,16 @@ feature list  (pricing page)
   }
   .part {
     position: relative;
-    width: 100%;
-    // @media all and (min-width: $md-min) {
-    //   width: 50%;
-    // }
+    // width: 100%;
     &.text {
+      width: 100%;
       @media all and (max-width: $sm-max) {
         order: -1;
         padding: 1rem 0;
       }
       @media all and (min-width: $md-min) {
         padding: 0 2rem 0 0;
+        width: 50%;
       }
       @media all and (min-width: $lg-min) {
         padding: 0 3rem 0 0;
@@ -1342,6 +1339,7 @@ feature list  (pricing page)
         }
         @media all and (min-width: $md-min) {
           padding: 0 0 0 2rem;
+          width: 50%;
         }
         @media all and (min-width: $lg-min) {
           padding: 0 0 0 3rem;
@@ -1349,18 +1347,17 @@ feature list  (pricing page)
       }
     }
     &.image {
+      width: 100%;
       z-index: 400;
       position: relative;
+      @media all and (min-width: $md-min) {
+        width: 50%;
+      }
       .pict {
         border-radius: $themeBorder_radius;
-        box-shadow: $greyBox_shadow;
+        box-shadow: $themeBox_shadow_alt;
         width: 100%;
         height: auto;
-        transition: all 1.5s 0.5s; //how fast with delay
-        cursor: pointer;
-        &.enlarge {
-          transform: scale(1.4); //how much
-        }
       }
       .alt_caption {
         text-align: center;
@@ -1373,76 +1370,125 @@ feature list  (pricing page)
   }
   //story fields
   &.story {
-    padding: 3rem 0 0 0;
-    @media all and (min-width: $md-min) {
-      padding: 5rem 0 0 0;
-    }
-    .header {
-      text-align: center;
-    }
     a {
-      &::before {
-        background: transparent;
+      &:before {
+        height: 0;
+      }
+    }
+    .btn_link {
+      margin: 1.5rem 0;
+      @media all and (min-width: $md-min) {
+        margin: 1.5rem 0 0 0;
       }
     }
     .column_row {
       display: block;
-      padding: 2rem calc(1.5rem - 15px);
-      @media all and (min-width: $sm-min) {
-        padding: 2rem calc(2.25rem - 15px);
-      }
-      @media all and (min-width: $md-min) {
-        padding: 3rem calc(3rem - 15px);
-      }
-      @media all and (min-width: $xl-min) {
-        padding: 3rem calc(3.75rem - 15px);
+      ul {
+        list-style: circle;
+        margin-left: 1.5rem;
       }
       .column_row_inner {
         display: flex;
-        align-items: center;
         flex-direction: column;
-        @media all and (min-width: $sm-min) {
-          max-width: 400px;
-          margin: 0 auto;
-        }
         @media all and (min-width: $md-min) {
           flex-direction: row;
-          max-width: 960px;
         }
-        @media all and (min-width: 1600px) {
-          max-width: 1100px;
-        }
-        @media all and (min-width: 2000px) {
-          max-width: 1300px;
-        }
-      }
-      &:last-child {
-        //fix mobile
-        padding-bottom: 5rem;
       }
       .part {
         &.text {
-          padding-bottom: 3rem;
+          width: 100%;
+          @media all and (min-width: $md-min) {
+            width: 45%;
+          }
         }
-
         &.image {
-          &::before {
-            content: "";
-          }
-          img {
-            border-radius: $themeBorder_radius;
-            transition: none;
-            @media all and (min-width: $lg-min) {
-              max-width: 450px;
-            }
-            &:hover {
-              transform: scale(1);
-            }
+          width: 100%;
+          @media all and (min-width: $md-min) {
+            width: 55%;
           }
         }
+        // &:last-child {
+        //   //fix mobile
+        //   padding-bottom: 5rem;
+        // }
+        // .part {
+        //   &.text {
+        //     padding-bottom: 3rem;
+        //   }
       }
     }
   }
+  // &.story {
+  //   padding: 3rem 0 0 0;
+  //   @media all and (min-width: $md-min) {
+  //     padding: 5rem 0 0 0;
+  //   }
+  //   .header {
+  //     text-align: center;
+  //   }
+  //   a {
+  //     &::before {
+  //       background: transparent;
+  //     }
+  //   }
+  //   .column_row {
+  //     display: block;
+  //     padding: 2rem calc(1.5rem - 15px);
+  //     @media all and (min-width: $sm-min) {
+  //       padding: 2rem calc(2.25rem - 15px);
+  //     }
+  //     @media all and (min-width: $md-min) {
+  //       padding: 3rem calc(3rem - 15px);
+  //     }
+  //     @media all and (min-width: $xl-min) {
+  //       padding: 3rem calc(3.75rem - 15px);
+  //     }
+  //     .column_row_inner {
+  //       display: flex;
+  //       align-items: center;
+  //       flex-direction: column;
+  //       @media all and (min-width: $sm-min) {
+  //         max-width: 400px;
+  //         margin: 0 auto;
+  //       }
+  //       @media all and (min-width: $md-min) {
+  //         flex-direction: row;
+  //         max-width: 960px;
+  //       }
+  //       @media all and (min-width: 1600px) {
+  //         max-width: 1100px;
+  //       }
+  //       @media all and (min-width: 2000px) {
+  //         max-width: 1300px;
+  //       }
+  //     }
+  //     &:last-child {
+  //       //fix mobile
+  //       padding-bottom: 5rem;
+  //     }
+  //     .part {
+  //       &.text {
+  //         padding-bottom: 3rem;
+  //       }
+
+  //       &.image {
+  //         &::before {
+  //           content: "";
+  //         }
+  //         img {
+  //           border-radius: $themeBorder_radius;
+  //           transition: none;
+  //           @media all and (min-width: $lg-min) {
+  //             max-width: 450px;
+  //           }
+  //           &:hover {
+  //             transform: scale(1);
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   //about field
   &.presentation {
     .part {
@@ -1630,6 +1676,8 @@ feature list  (pricing page)
 ***********************/
 .integrations_section {
   background: $blueDarkest;
+  background: $turqoiseLight;
+
   .text_section {
     padding-bottom: 2rem;
   }
@@ -1718,12 +1766,6 @@ feature list  (pricing page)
     }
   }
 }
-.overlay-darkblue {
-  &::before {
-    background-image: $blueDarkOverlayColor;
-    @include overlay();
-  }
-}
 
 /********************
 latest_updates_section
@@ -1734,7 +1776,19 @@ latest_updates_section
     justify-content: center;
   }
   .updates_btn {
-    margin-right: 0.8rem;
+    font-size: 11px;
+    margin-right: 0.4rem;
+    text-transform: capitalize;
+
+    .btn_link {
+      @media all and (max-width: $xs-max) {
+        padding: 8px 10px;
+      }
+    }
+    @media all and (min-width: $sm-min) {
+      font-size: 15px;
+      margin-right: 0.8rem;
+    }
     &.active {
       color: #fff;
       background: $blueDarkest;
@@ -1773,6 +1827,7 @@ latest_updates_section
   Card Layout for Blog and Videos
 *********************************/
 .card_container {
+  background: #fff;
   width: 100%;
   border-radius: $themeBorder_radius;
   margin: 0 2% 4rem 0;
@@ -1812,22 +1867,16 @@ latest_updates_section
   .content_container {
     border-bottom-left-radius: $themeBorder_radius;
     border-bottom-right-radius: $themeBorder_radius;
-    padding: 1rem 1.7rem 0.5rem 1.7rem;
-    background: #fff;
+    padding: 0.1rem 1.7rem 0.5rem 1.7rem;
   }
   .content_container_inner {
-    margin-bottom: 1rem;
-    position: relative;
-    height: 150px;
+    width: 100%;
+    /* this code clamps based on specified lines */
     overflow: hidden;
-    &:before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 2rem;
-      background: linear-gradient(transparent, white);
-    }
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    margin-bottom: 1.5rem;
     .title {
       padding: 0.5rem 0 0 0;
     }
@@ -1839,8 +1888,8 @@ latest_updates_section
   .cat_badge {
     display: inline-block;
     text-align: center;
-    margin-top: 10px;
-    margin-right: 5px;
+
+    margin: 0.8rem 0.5rem 0.5rem 0;
     background-color: $turqoiseLight;
     font-size: 10px;
     font-weight: 500;
@@ -1898,6 +1947,7 @@ latest_updates_section
         }
       }
     }
+
     .wp-block-code {
       background: #f5f2f0;
       padding: 1em;
@@ -2025,27 +2075,6 @@ latest_updates_section
  *********************/
 //blog_flow
 .blog_flow {
-  //next and previous
-  .paginate_links {
-    text-align: center;
-    span,
-    a {
-      padding-right: 0.6rem;
-      font-weight: 500;
-    }
-    .page-numbers.current {
-      color: $themecolor;
-    }
-    button,
-    .btn {
-      background: transparent;
-      padding: 0;
-      box-shadow: none;
-      font-size: 1.1rem;
-      color: $linkcolor;
-      border: none;
-    }
-  }
   //blog_post_meta
   .blog_post_meta {
     display: flex;
@@ -2069,6 +2098,37 @@ latest_updates_section
         max-width: 100%;
       }
     }
+  }
+}
+//next and previous
+.paginate_links {
+  text-align: center;
+  span,
+  a,
+  button {
+    display: inline-block;
+    margin-right: 0.2rem;
+    line-height: 1.2;
+    border-radius: $btnBorder_radius;
+    border: 1px solid $themecolorLightest;
+  }
+  .page-numbers {
+    padding: 0.4rem 0.6rem;
+  }
+  .page-numbers.current {
+    color: $themecolor;
+  }
+  .prev,
+  .next {
+    border: none;
+    padding: 0;
+  }
+  button,
+  .btn {
+    border-color: $themecolorLightest;
+    background: transparent;
+    color: $themecolor;
+    padding: 0.4rem 0.6rem !important;
   }
 }
 
@@ -2411,3 +2471,8 @@ forum section
 //     }
 //   }
 // }
+
+//funkkar inte
+.ti-widget.ti-capt .ti-review-item > .ti-inner {
+  border-radius: $themeBorder_radius !important;
+}

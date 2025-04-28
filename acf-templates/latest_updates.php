@@ -3,11 +3,11 @@
 // latest_updates field for for Front Page Block
 if (get_row_layout() == 'latest_updates') { ?>
 
-    <section class="latest_updates_section lightgrey section_spacing_top_medium">
+    <section class="latest_updates_section lightgrey section_spacing_top_small">
         <div class="container">
-            <div class="heading text_center_laptop margin_3"><?php the_sub_field('heading'); ?></div>
-            <div class="row">
-                <div class="col-12 col-md-10 offset-md-1">
+            <div class="heading text_center margin_3"><?php the_sub_field('heading'); ?></div>
+            <!-- <div class="row">
+                <div class="col-12 col-md-10 offset-md-1"> -->
                     <ul class="updates_tabs margin_3">
                         <?php // check if the ACF repeater field has rows
                         if (have_rows('latest_updates_categories')) {
@@ -114,8 +114,8 @@ if (get_row_layout() == 'latest_updates') { ?>
                     <?php  }
                     }
                     ?>
-                </div>
-            </div>
+                <!-- </div>
+            </div> -->
         </div>
     </section>
 <?php

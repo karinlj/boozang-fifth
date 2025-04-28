@@ -8,12 +8,11 @@ $bg_color = get_sub_field('background_color');
         <!-- <div class="row justify-content-center"> -->
         <div class="row">
 
-            <div class="col-sm-12 col-lg-8">
-                <div class="text_section">
+            <div class="col-sm-12 col-lg-6">
+                <div class="text_section text_center_mobile">
                     <div class="">
                         <?php the_sub_field('content'); ?>
-</div>
-                 
+                    </div>
                 </div>
             </div>
         </div>
@@ -25,12 +24,12 @@ $bg_color = get_sub_field('background_color');
                     if (have_rows('icon_box')) {
                         while (have_rows('icon_box')) {
                             the_row(); ?>
-                    <div class="img_box">
-                        <span>
-                            <?php $img_id = get_sub_field('icon_image'); ?>
-                            <?php echo wp_get_attachment_image($img_id, 'full'); ?>
-                        </span>
-                    </div>
+                            <div class="img_box">
+                                <span>
+                                    <?php $img_id = get_sub_field('icon_image'); ?>
+                                    <?php echo wp_get_attachment_image($img_id, 'full'); ?>
+                                </span>
+                            </div>
                     <?php
                         }
                     } ?>

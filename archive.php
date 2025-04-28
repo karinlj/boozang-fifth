@@ -22,7 +22,7 @@
                     if (paginate_links($pages)) { ?>
                     <div class="btn">
                         <?php echo paginate_links($pages); ?>
-                        </button>
+                        <!-- </button> -->
                     <?php } ?>
                     </div>
 

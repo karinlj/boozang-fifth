@@ -443,7 +443,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "message": "End pricing_card",
+                                    "message": "End card",
                                     "new_lines": "wpautop",
                                     "esc_html": 0,
                                     "parent_repeater": "field_5b5de144d5a30"
@@ -1049,5 +1049,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745066575
+    "modified": 1745848881
 }

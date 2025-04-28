@@ -19,12 +19,18 @@
     $header_class = 'header_main';
     $style = '';
     $row_class = 'justify-content-start';
-    $col_class = 'col-md-8 offset-md-2';
+    // $col_class = 'col-md-8 offset-md-2';
+    $col_class = 'col-md-8';
+    $bg_image = get_field('background_image');
+
+
 
     if (is_front_page()) {
         $header_class = 'header_main front';
         $row_class = 'justify-content-between';
         $col_class = 'col-12 col-md-6 col-xl-5';
+        //$col_class = 'col-12 col-md-6 ';
+
         $header_image_front = get_field('header_image_front');
     }
     if (is_singular('post')) {
@@ -40,17 +46,23 @@
         $heading_pages = get_field('heading_pages', get_option('page_for_posts'));
         $header_btn_links = get_field('btn_links', get_option('page_for_posts'));
     }
-    ?>
 
-    <header id="header_top" class="<?php echo $header_class; ?> <?php echo $color; ?>"
+
+    if ($bg_image) {
+        $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
+        $overlay_color = get_field('overlay_color');
+    }  ?>
+    <header id="header_top" class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
         <?php echo $style; ?>>
 
         <!-- get menu -->
         <?php get_template_part('template-parts/navigation/main-menu'); ?>
 
-        <div class="header_items_section">
+        <div class="header_items_section section_spacing_top_small">
             <div class="container">
-                <div class="row align-items-center <?php echo $row_class; ?>">
+                <!-- <div class="row align-items-center <?php echo $row_class; ?>"> -->
+                <div class="row <?php echo $row_class; ?>">
+
                     <div class="<?php echo $col_class; ?>">
 
                         <!-- heading for blog -->
@@ -88,6 +100,8 @@
                     <!-- header image for Front page-->
                     <?php if (is_front_page()) { ?>
                         <div class="col-12 col-md-6 col-xl-7">
+                            <!-- <div class="col-12 col-md-6"> -->
+
                             <?php $image = wp_get_attachment_image_src($header_image_front, 'full'); ?>
                             <?php $alt_text = get_post_meta($header_image_front, '_wp_attachment_image_alt', true); ?>
 

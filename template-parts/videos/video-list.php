@@ -83,7 +83,7 @@
                                         <div class="content_container">
                                             <?php echo '<span class="cat_badge">' . $term->name . '</span>'; ?>
                                             <div class="content_container_inner">
-                                                <h3 class="title"><?php echo $title; ?></h3>
+                                                <h3 class="smaller_size_text  title"><?php echo $title; ?></h3>
 
                                                 <?php if ($description) { ?>
                                                     <p class="description"><?php echo $description; ?></p>

@@ -4,7 +4,7 @@
     $heading = get_sub_field('heading');
     $bgColor = get_sub_field('background_color'); ?>
 
-    <section class="faq_accordion_section <?php echo $bgColor; ?> section_spacing_top_medium">
+    <section class="faq_accordion_section <?php echo $bgColor; ?> section_spacing_top_small">
         <div class="container">
             <?php if ($heading) { ?>
                 <h2 class="text_center_laptop margin_4"><?php echo $heading; ?></h2>
