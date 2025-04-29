@@ -8,7 +8,7 @@ $bg_color = get_sub_field('background_color');
         <!-- <div class="row justify-content-center"> -->
         <div class="row">
 
-            <div class="col-sm-12 col-lg-6">
+            <div class="col">
                 <div class="text_section text_center_mobile">
                     <div class="">
                         <?php the_sub_field('content'); ?>

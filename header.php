@@ -19,34 +19,28 @@
     $header_class = 'header_main';
     $style = '';
     $row_class = 'justify-content-start';
-    // $col_class = 'col-md-8 offset-md-2';
     $col_class = 'col-md-8';
     $bg_image = get_field('background_image');
-
-
+    $overlay_color = '';
+    $color = get_field('header_background');
+    $heading_pages = get_field('heading_pages');
+    $header_btn_links = get_field('btn_links');
 
     if (is_front_page()) {
         $header_class = 'header_main front';
         $row_class = 'justify-content-between';
         $col_class = 'col-12 col-md-6 col-xl-5';
-        //$col_class = 'col-12 col-md-6 ';
-
         $header_image_front = get_field('header_image_front');
     }
     if (is_singular('post')) {
         $header_class = 'header_main single_post';
     }
 
-    $color = get_field('header_background');
-    $heading_pages = get_field('heading_pages');
-    $header_btn_links = get_field('btn_links');
-
     if (is_home() || is_archive()) {
         $color = get_field('header_background', get_option('page_for_posts'));
         $heading_pages = get_field('heading_pages', get_option('page_for_posts'));
         $header_btn_links = get_field('btn_links', get_option('page_for_posts'));
     }
-
 
     if ($bg_image) {
         $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
@@ -60,7 +54,6 @@
 
         <div class="header_items_section section_spacing_top_small">
             <div class="container">
-                <!-- <div class="row align-items-center <?php echo $row_class; ?>"> -->
                 <div class="row <?php echo $row_class; ?>">
 
                     <div class="<?php echo $col_class; ?>">

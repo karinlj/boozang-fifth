@@ -15,15 +15,15 @@ $xl-max: 1309px;
 $max-page-width: 1380px;
 
 /* colors */
-$blueDarkest: #151c37; 
-$blue: #1368E7;
+$blueDarkest: #151c37;
+$blue: #1368e7;
 $blueLight: #4dbeff;
 $turqoise: #b8e0d7;
 $turqoiseLight: #e6f4f1;
 
-$themecolorOldBlue: #00a2ff; 
-$themecolorPink: #ff5c9f; 
-$themecolorGreen: #00A87B; 
+$themecolorOldBlue: #00a2ff;
+$themecolorPink: #ff5c9f;
+$themecolorGreen: #00a87b;
 $themecolorGreenDark: #00805e;
 $purpleLight: #9966ff;
 $lightgrey: #f9f9f9;
@@ -31,7 +31,7 @@ $themeBorderColor: #e6e6e6;
 
 //text color
 $headingcolor: #212735;
-$themecolor: $headingcolor; 
+$themecolor: $headingcolor;
 $navcolor: $themecolor;
 $linkcolor: $themecolorOldBlue;
 
@@ -42,8 +42,8 @@ $themecolorLightest: #a6b0bf;
 //other
 $themefont: "Roboto", "Helvetica", sans-serif;
 $iconsize: 1.6rem;
-$themeBorder_radius: 24px; //12px; 
-$btnBorder_radius: 8px; 
+$themeBorder_radius: 24px; //12px;
+$btnBorder_radius: 8px;
 
 //shadows
 $link_colorBox_shadow: 0 4px 0 #0085cc;
@@ -60,12 +60,13 @@ $themeBox_shadow_alt: 0px 2px 10px rgb(0 0 0 / 20%);
 //overlay colors
 $blueDarkOverlayColor: linear-gradient(
   to right bottom,
-  $blueDarkest,
-  #182140,
-  #1c2549,
-  #1f2a52,
-  #232f5c
+  #151c37,
+  #1d274d,
+  #253264,
+  #2e3e7b,
+  #384a94
 );
+
 $blueOverlayColor: linear-gradient(
   to right bottom,
   #0f55bd,
@@ -75,3 +76,11 @@ $blueOverlayColor: linear-gradient(
   #4288f0
 );
 
+$whiteOverlayColor: linear-gradient(
+  to right bottom,
+  #f2f2f2,
+  #f5f5f5,
+  #f8f8f8,
+  #fcfcfc,
+  #ffffff
+);

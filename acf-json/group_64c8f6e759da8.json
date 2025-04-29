@@ -289,103 +289,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_67e5aae9f574d": {
-                    "key": "layout_67e5aae9f574d",
-                    "name": "image_and_text_boxes",
-                    "label": "Image and text boxes",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_67e5ab05f574f",
-                            "label": "BoxRow",
-                            "name": "boxrow",
-                            "aria-label": "",
-                            "type": "flexible_content",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layouts": {
-                                "layout_67e5aca0c3fd2": {
-                                    "key": "layout_67e5aca0c3fd2",
-                                    "name": "img",
-                                    "label": "Img",
-                                    "display": "block",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_67e5ad54a1ef9",
-                                            "label": "ImgBox",
-                                            "name": "imgbox",
-                                            "aria-label": "",
-                                            "type": "image",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "return_format": "id",
-                                            "library": "all",
-                                            "min_width": "",
-                                            "min_height": "",
-                                            "min_size": "",
-                                            "max_width": "",
-                                            "max_height": "",
-                                            "max_size": "",
-                                            "mime_types": "",
-                                            "allow_in_bindings": 0,
-                                            "preview_size": "medium"
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                },
-                                "layout_67e5acdba1ef7": {
-                                    "key": "layout_67e5acdba1ef7",
-                                    "name": "text",
-                                    "label": "Text",
-                                    "display": "block",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_67e5ad84a1efa",
-                                            "label": "TextBox",
-                                            "name": "textbox",
-                                            "aria-label": "",
-                                            "type": "wysiwyg",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "allow_in_bindings": 0,
-                                            "tabs": "all",
-                                            "toolbar": "full",
-                                            "media_upload": 1,
-                                            "delay": 0
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                }
-                            },
-                            "min": "",
-                            "max": "",
-                            "button_label": "Add Row"
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_67f58de43c915": {
                     "key": "layout_67f58de43c915",
                     "name": "items_and_text_boxes",
@@ -666,16 +569,16 @@
                 },
                 "5b5f8349d66f9": {
                     "key": "5b5f8349d66f9",
-                    "name": "pricing_shortcuts",
-                    "label": "Pricing shortcuts",
+                    "name": "cards_template",
+                    "label": "Cards template",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_67e7273fbdde0",
-                            "label": "Background image",
-                            "name": "background_image",
+                            "key": "field_6810c940f1cf7",
+                            "label": "Color",
+                            "name": "color",
                             "aria-label": "",
-                            "type": "image",
+                            "type": "radio",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -684,17 +587,18 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "id",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
+                            "choices": {
+                                "white": "White",
+                                "lightgrey": "Lightgrey",
+                                "darkblue": "Darkblue"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
                             "allow_in_bindings": 0,
-                            "preview_size": "medium"
+                            "layout": "vertical",
+                            "save_other_choice": 0
                         },
                         {
                             "key": "field_5b5f83a6d66fb",
@@ -740,8 +644,8 @@
                         },
                         {
                             "key": "field_5b5f83afd66fc",
-                            "label": "Pricing tiers",
-                            "name": "pricing_tiers",
+                            "label": "Single card",
+                            "name": "single_card",
                             "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
@@ -1199,5 +1103,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745867001
+    "modified": 1745959866
 }

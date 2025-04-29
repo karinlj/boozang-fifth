@@ -69,6 +69,7 @@ if (get_row_layout() == 'latest_updates') { ?>
                                         $image = get_field('image');
                                         $video_url = get_field('url');  ?>
 
+
                                         <li class="card_container">
                                             <div class="card_container_inner">
                                                 <div class="card_embed_container">

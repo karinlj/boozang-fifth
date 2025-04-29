@@ -581,6 +581,12 @@ header {
       @include overlay();
     }
   }
+  &.overlay-white {
+    &::before {
+      background-image: $whiteOverlayColor;
+      @include overlay();
+    }
+  }
   &.overlay-none {
     &::before {
       background-image: none;
@@ -1125,7 +1131,7 @@ main nav - default colors for white & lightgrey bg
     box-shadow: $turqoiseBox_shadow;
     text-align: center;
     height: 520px;
-  
+
     //middle pricing_card higher
     &.higher {
       height: 550px;
@@ -1418,77 +1424,7 @@ feature list  (pricing page)
       }
     }
   }
-  // &.story {
-  //   padding: 3rem 0 0 0;
-  //   @media all and (min-width: $md-min) {
-  //     padding: 5rem 0 0 0;
-  //   }
-  //   .header {
-  //     text-align: center;
-  //   }
-  //   a {
-  //     &::before {
-  //       background: transparent;
-  //     }
-  //   }
-  //   .column_row {
-  //     display: block;
-  //     padding: 2rem calc(1.5rem - 15px);
-  //     @media all and (min-width: $sm-min) {
-  //       padding: 2rem calc(2.25rem - 15px);
-  //     }
-  //     @media all and (min-width: $md-min) {
-  //       padding: 3rem calc(3rem - 15px);
-  //     }
-  //     @media all and (min-width: $xl-min) {
-  //       padding: 3rem calc(3.75rem - 15px);
-  //     }
-  //     .column_row_inner {
-  //       display: flex;
-  //       align-items: center;
-  //       flex-direction: column;
-  //       @media all and (min-width: $sm-min) {
-  //         max-width: 400px;
-  //         margin: 0 auto;
-  //       }
-  //       @media all and (min-width: $md-min) {
-  //         flex-direction: row;
-  //         max-width: 960px;
-  //       }
-  //       @media all and (min-width: 1600px) {
-  //         max-width: 1100px;
-  //       }
-  //       @media all and (min-width: 2000px) {
-  //         max-width: 1300px;
-  //       }
-  //     }
-  //     &:last-child {
-  //       //fix mobile
-  //       padding-bottom: 5rem;
-  //     }
-  //     .part {
-  //       &.text {
-  //         padding-bottom: 3rem;
-  //       }
 
-  //       &.image {
-  //         &::before {
-  //           content: "";
-  //         }
-  //         img {
-  //           border-radius: $themeBorder_radius;
-  //           transition: none;
-  //           @media all and (min-width: $lg-min) {
-  //             max-width: 450px;
-  //           }
-  //           &:hover {
-  //             transform: scale(1);
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
   //about field
   &.presentation {
     .part {
@@ -1502,70 +1438,6 @@ feature list  (pricing page)
           }
         }
       }
-    }
-  }
-}
-
-/*********************
-    image_and_text_boxes
- *********************/
-.image_and_text_boxes {
-  margin: 4rem 0;
-  @media all and (min-width: $sm-min) {
-    margin: 6rem 0;
-  }
-  .flex_container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    @media all and (min-width: $lg-min) {
-      flex-direction: row;
-    }
-  }
-  .box {
-    width: 100%;
-    min-height: 300px;
-    margin-top: 1rem;
-    @media all and (min-width: $sm-min) {
-      min-height: 500px;
-      margin-top: 0;
-    }
-    @media all and (min-width: $lg-min) {
-      min-height: 700px;
-      width: 50%;
-    }
-  }
-  .img_box {
-    position: relative;
-    z-index: 2;
-    @media all and (min-width: $lg-min) {
-      transform: translate(-20%);
-      top: 90px;
-    }
-    img {
-      width: 100%;
-      border-radius: $themeBorder_radius;
-      box-shadow: $themeBox_shadow;
-    }
-  }
-  .text_box {
-    position: relative;
-    z-index: 1;
-    border-radius: $themeBorder_radius;
-    box-shadow: $blueBox_shadow;
-    background: $blue;
-    padding: 5rem 2rem;
-    height: 100%;
-    @media all and (min-width: $md-min) {
-      padding: 7rem 10rem 7rem 5rem;
-    }
-    @media all and (min-width: $lg-min) {
-      transform: translate(0%, -20px);
-    }
-    ul {
-      list-style: disc;
-      margin-left: 1rem;
     }
   }
 }
@@ -1711,117 +1583,6 @@ feature list  (pricing page)
     }
   }
 }
-/**********************
-  pricing_shortcuts
-***********************/
-.pricing_shortcuts {
-  @media all and (min-width: $xl-min) {
-    min-height: 700px;
-  }
-  .heading_section {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 3rem;
-  }
-}
-.pricing_tiers_item {
-  min-height: 380px;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: $themeBorder_radius;
-  padding: 2.5rem 1.5rem;
-  box-shadow: $bluedarkBox_shadow;
-  @media all and (min-width: $sm-min) {
-    min-height: 250px;
-  }
-  @media all and (min-width: $lg-min) {
-    margin-bottom: 0;
-    padding: 2.5rem;
-    min-height: 300px;
-  }
-  &.darkblue {
-    border: 1px solid #fff;
-    .icon {
-      border-color: #fff;
-    }
-  }
-  .icon {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    width: 2.5rem;
-    border: 1px solid $themecolor;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    i.fa-classic,
-    .fa-regular,
-    .fa-solid,
-    .far,
-    .fas {
-      color: $themecolorGreen;
-      font-size: $iconsize;
-    }
-  }
-}
-
-/********************
-latest_updates_section
-*********************/
-.latest_updates_section {
-  .updates_tabs {
-    display: flex;
-    justify-content: center;
-  }
-  .updates_btn {
-    font-size: 11px;
-    margin-right: 0.4rem;
-    text-transform: capitalize;
-
-    .btn_link {
-      @media all and (max-width: $xs-max) {
-        padding: 8px 10px;
-      }
-    }
-    @media all and (min-width: $sm-min) {
-      font-size: 15px;
-      margin-right: 0.8rem;
-    }
-    &.active {
-      color: #fff;
-      background: $blueDarkest;
-    }
-  }
-  .updates_tab_content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem 2rem;
-    .card_container {
-      margin: 0;
-      flex-grow: 1;
-      flex-basis: 200px;
-      max-width: 100%;
-      @media all and (min-width: $sm-min) {
-        flex-basis: 250px;
-        max-width: 280px;
-      }
-      @media all and (min-width: $md-min) {
-        flex-basis: 270px;
-        max-width: 300px;
-      }
-      @media all and (min-width: $lg-min) {
-        flex-basis: 260px;
-        max-width: 320px;
-      }
-      @media all and (min-width: $xl-min) {
-        flex-basis: 280px;
-        max-width: 350px;
-      }
-    }
-  }
-}
 
 /********************************
   Card Layout for Blog and Videos
@@ -1867,7 +1628,8 @@ latest_updates_section
   .content_container {
     border-bottom-left-radius: $themeBorder_radius;
     border-bottom-right-radius: $themeBorder_radius;
-    padding: 0.1rem 1.7rem 0.5rem 1.7rem;
+    // padding: 0.1rem 1.7rem 0.5rem 1.7rem;
+    padding: 0.1rem 1.7rem 1rem 1.7rem;
   }
   .content_container_inner {
     width: 100%;
@@ -1876,7 +1638,7 @@ latest_updates_section
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     display: -webkit-box;
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     .title {
       padding: 0.5rem 0 0 0;
     }
@@ -1947,7 +1709,6 @@ latest_updates_section
         }
       }
     }
-
     .wp-block-code {
       background: #f5f2f0;
       padding: 1em;
@@ -1971,6 +1732,119 @@ latest_updates_section
         -ms-hyphens: none;
         hyphens: none;
       }
+    }
+  }
+}
+/**********************
+  cards_template
+***********************/
+.cards_template {
+  position: relative;
+  &.darkblue {
+    .card_container {
+      &.darkblue {
+         border: 1px solid #fff;
+      }
+    }
+  }
+  .heading_section {
+    margin-bottom: 3rem;
+  }
+  .cards_template_content {
+    margin-top: 3rem;
+  }
+  .card_container {
+    box-shadow: $bluedarkBox_shadow;
+    border-color: $blueDarkest;
+    &.darkblue {
+      .icon {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.cards_template_item_content {
+  border-radius: $themeBorder_radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1.7rem;
+  .icon {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 2.5rem;
+    border: 1px solid $themecolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i.fa-classic,
+    .fa-regular,
+    .fa-solid,
+    .far,
+    .fas {
+      color: $themecolorGreen;
+      font-size: $iconsize;
+    }
+  }
+  .btn_link {
+    max-width: 8rem;
+  }
+}
+
+/********************
+latest_updates_section
+*********************/
+.latest_updates_section {
+  .updates_tabs {
+    display: flex;
+    justify-content: center;
+  }
+  .updates_btn {
+    font-size: 11px;
+    margin-right: 0.4rem;
+    text-transform: capitalize;
+    .btn_link {
+      @media all and (max-width: $xs-max) {
+        padding: 8px 10px;
+      }
+    }
+    @media all and (min-width: $sm-min) {
+      font-size: 15px;
+      margin-right: 0.8rem;
+    }
+    &.active {
+      color: #fff;
+      background: $blueDarkest;
+    }
+  }
+}
+.updates_tab_content,
+.cards_template_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2rem;
+  .card_container {
+    margin: 0;
+    flex-grow: 1;
+    flex-basis: 200px;
+    max-width: 100%;
+    @media all and (min-width: $sm-min) {
+      flex-basis: 250px;
+      max-width: 280px;
+    }
+    @media all and (min-width: $md-min) {
+      flex-basis: 270px;
+      max-width: 300px;
+    }
+    @media all and (min-width: $lg-min) {
+      flex-basis: 260px;
+      max-width: 320px;
+    }
+    @media all and (min-width: $xl-min) {
+      flex-basis: 280px;
+      max-width: 350px;
     }
   }
 }
