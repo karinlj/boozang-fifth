@@ -58,9 +58,9 @@ ol {
 .colored_purple_part {
   background-image: linear-gradient(
     to right top,
-    $purpleLight,
-    #854bff,
-    #9f70ff,
+    #621aff,
+    #834bff,
+    #9e70ff,
     #b692ff,
     #ccb3ff
   );
@@ -533,6 +533,9 @@ footer,
   &.lightgrey {
     background: $lightgrey;
   }
+  &.lighturqoise {
+    background: $turqoiseLight;
+  }
   &.white {
     background: #fff;
   }
@@ -972,7 +975,10 @@ main nav - default colors for white & lightgrey bg
     }
   }
   .btn_container {
-    padding-bottom: 0;
+    padding-bottom: 3rem;
+    @media all and (min-width: $md-min) {
+      padding-bottom: 0;
+    }
   }
   .btn_link {
     &.outline_color_white_blue {
@@ -1317,14 +1323,13 @@ feature list  (pricing page)
       flex-direction: row;
     }
     @media all and (min-width: $lg-min) {
-      padding-bottom: 8rem;
+      padding-bottom: 7rem;
     }
   }
   .part {
     position: relative;
-    // width: 100%;
+    width: 100%;
     &.text {
-      width: 100%;
       @media all and (max-width: $sm-max) {
         order: -1;
         padding: 1rem 0;
@@ -1353,7 +1358,6 @@ feature list  (pricing page)
       }
     }
     &.image {
-      width: 100%;
       z-index: 400;
       position: relative;
       @media all and (min-width: $md-min) {
@@ -1362,7 +1366,7 @@ feature list  (pricing page)
       .pict {
         border-radius: $themeBorder_radius;
         box-shadow: $themeBox_shadow_alt;
-        width: 100%;
+        // width: 100%;
         height: auto;
       }
       .alt_caption {
@@ -1374,8 +1378,22 @@ feature list  (pricing page)
       }
     }
   }
-  //story fields
-  &.story {
+  //text_big_image_field
+  // &:last-child {
+  //   //fix mobile
+  //   padding-bottom: 5rem;
+  // }
+  // .part {
+  //   &.text {
+  //     padding-bottom: 3rem;
+  //   }
+  &.big_image,
+  &.small_image {
+    padding: 0;
+    .part {
+      width: auto;
+    }
+    //link fix
     a {
       &:before {
         height: 0;
@@ -1388,43 +1406,62 @@ feature list  (pricing page)
       }
     }
     .column_row {
+      //problem here.....
+      // padding-bottom: 4rem;
       display: block;
       ul {
         list-style: circle;
         margin-left: 1.5rem;
       }
-      .column_row_inner {
-        display: flex;
-        flex-direction: column;
-        @media all and (min-width: $md-min) {
-          flex-direction: row;
-        }
-      }
-      .part {
-        &.text {
-          width: 100%;
-          @media all and (min-width: $md-min) {
-            width: 45%;
-          }
-        }
-        &.image {
-          width: 100%;
-          @media all and (min-width: $md-min) {
-            width: 55%;
-          }
-        }
-        // &:last-child {
-        //   //fix mobile
-        //   padding-bottom: 5rem;
-        // }
-        // .part {
-        //   &.text {
-        //     padding-bottom: 3rem;
-        //   }
+    }
+    .column_row_inner {
+      display: flex;
+      flex-direction: column;
+      @media all and (min-width: $md-min) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 -15px;
       }
     }
   }
-
+  &.big_image {
+    .part {
+      &.text {
+        width: 100%;
+        @media all and (min-width: $md-min) {
+          width: 45%;
+        }
+      }
+      &.image {
+        width: 100%;
+        @media all and (min-width: $md-min) {
+          width: 55%;
+        }
+      }
+    }
+  }
+  &.small_image {
+    .column_row {
+      padding-bottom: 3rem ;
+      @media all and (min-width: $xl-min) {
+        padding-bottom: 4rem ;
+      }
+    }
+    .part {
+      &.text {
+        width: 100%;
+        @media all and (min-width: $md-min) {
+          width: 60%;
+        }
+      }
+      &.image {
+        width: 100%;
+        @media all and (min-width: $md-min) {
+          width: 35%;
+        }
+      }
+    }
+  }
   //about field
   &.presentation {
     .part {
@@ -1442,77 +1479,6 @@ feature list  (pricing page)
   }
 }
 
-/*********************
-    items_and_text_boxes
- *********************/
-.items_and_text_boxes {
-  padding: 4rem 0;
-  min-height: 500px;
-  @media all and (min-width: $md-min) {
-    padding: 6rem 0;
-  }
-  @media all and (min-width: $lg-min) {
-    min-height: 700px;
-  }
-  .flex_container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    @media all and (min-width: $lg-min) {
-      flex-direction: row;
-    }
-  }
-  .box {
-    width: 100%;
-    min-height: 300px;
-    margin-top: 1rem;
-    @media all and (min-width: $sm-min) {
-      margin-top: 0;
-    }
-    @media all and (min-width: $lg-min) {
-      min-height: 400px;
-      width: 50%;
-    }
-  }
-  .text_box_left {
-    position: relative;
-    z-index: 1;
-    border-radius: $themeBorder_radius;
-    box-shadow: $turqoiseBox_shadow;
-    background: $turqoiseLight;
-    padding: 5rem 2rem;
-    height: 100%;
-    @media all and (min-width: $md-min) {
-      padding: 7rem 10rem 7rem 5rem;
-    }
-    @media all and (min-width: $lg-min) {
-      transform: translate(0%, -20px);
-    }
-  }
-  .text_box_right {
-    position: relative;
-    z-index: 2;
-    border-radius: $themeBorder_radius;
-    box-shadow: $blueBox_shadow;
-    background: $blue;
-    padding: 5rem 2rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media all and (min-width: $lg-min) {
-      transform: translate(-20%);
-      top: 90px;
-    }
-    .btn_link {
-      width: 10rem;
-      text-align: center;
-      margin-top: 1rem;
-    }
-  }
-}
 
 /*********************************
   feature blocks
@@ -1743,7 +1709,7 @@ feature list  (pricing page)
   &.darkblue {
     .card_container {
       &.darkblue {
-         border: 1px solid #fff;
+        border: 1px solid #fff;
       }
     }
   }

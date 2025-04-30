@@ -3,7 +3,7 @@
 // latest_updates field for for Front Page Block
 if (get_row_layout() == 'latest_updates') { ?>
 
-    <section class="latest_updates_section lightgrey section_spacing_top_small">
+    <section class="latest_updates_section lightgrey section_spacing_top_medium">
         <div class="container">
             <div class="heading text_center margin_3"><?php the_sub_field('heading'); ?></div>
             <!-- <div class="row">

@@ -4,7 +4,7 @@ $color = get_sub_field('color');
 $bg_image = get_sub_field('background_image');
 ?>
 
-<section class="cards_template <?php echo $color; ?> section_spacing_top_medium">
+<section class="cards_template lighturqoise section_spacing_top_medium">
     <div class="container">
         <?php
         $heading = get_sub_field('heading');

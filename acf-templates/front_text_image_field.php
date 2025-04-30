@@ -2,11 +2,23 @@
 
 /**
  * Created by Karin.
- * Layout 'story_img_text' in flex content 'Front Page block'
+ * Layout 'front_text_image_field' in flex content 'Front Page block'
  */
-$heading_color = get_sub_field('heading_background');
+$color = get_sub_field('background_color');
+$column_class = 'big_image';
+$padding_class = 'section_spacing_top_medium';
+
+$big_or_small_image = get_sub_field('big_or_small_image');
+$narrow_field =  get_sub_field('narrow_field');
+
+if($narrow_field == 'true') {
+    $padding_class = 'section_spacing_top_small'; 
+}
+if($big_or_small_image == 'small_image') {
+    $column_class = 'small_image'; 
+}
 ?>
-<section class="two_columns_section story <?php echo $heading_color; ?>">
+<section class="two_columns_section <?php echo $column_class; ?> <?php echo $color; ?>">
     <?php
     //loopa repeater
     if (have_rows('two_columns_row')) {
@@ -15,7 +27,7 @@ $heading_color = get_sub_field('heading_background');
             the_row();
             $number++;
             $color = get_sub_field('background_color'); ?>
-            <section class="column_row <?php echo $color; ?> section_spacing_top_medium">
+            <section class="column_row <?php echo $color; ?> <?php echo $padding_class; ?>">
                 <div class="container">
                     <div class="column_row_inner">
 
@@ -38,18 +50,20 @@ $heading_color = get_sub_field('heading_background');
                                 } ?>
                                 <?php
                                 if (get_row_layout() == 'text') { ?>
-                                    <div class="part text">
+                                   <div class="part text">
                                         <div><?php the_sub_field('text'); ?></div>
 
                                         <?php $link = get_sub_field('link'); ?>
-
                                         <?php
-                                        if ($link) { ?>
-                                            <a class="btn_link outline_color_white" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"
-                                              rel="noopener noreferrer"><?php echo $link['title']; ?>
+                                        $btn_class = 'outline_color_white';
+                                        if ($color == 'white') {
+                                            $btn_class = 'outline_color_darkblue';
+                                        } ?>
+                                        <?php if ($link) { ?>
+                                            <a class="btn_link <?php echo $btn_class ?>" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"
+                                                rel="noopener noreferrer"><?php echo $link['title']; ?>
                                             </a>
                                         <?php } ?>
-
                                     </div>
                         <?php
                                 }

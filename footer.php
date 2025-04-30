@@ -41,7 +41,7 @@
                 </a>
             <?php } ?>
             <?php if ($sign_up_link_demo) { ?>
-                <a class="btn_link outline_color_darkblue_transparent" href="<?php echo $sign_up_link_demo['url']; ?>" target="<?php echo $sign_up_link_demo['target']; ?>" rel="noopener noreferrer"><?php echo $sign_up_link_demo['title']; ?>
+                <a class="btn_link outline_color_darkblue" href="<?php echo $sign_up_link_demo['url']; ?>" target="<?php echo $sign_up_link_demo['target']; ?>" rel="noopener noreferrer"><?php echo $sign_up_link_demo['title']; ?>
                 </a>
             <?php } ?>
         </div>

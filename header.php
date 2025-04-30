@@ -16,35 +16,37 @@
 <body <?php body_class(); ?>>
 
     <?php //header field variables
+    $page_domain = null; //     $page_domain = get_option('page_for_posts'
+    
+    if (is_home() || is_archive()) {
+        $page_domain= get_option('page_for_posts'); 
+    }
+
     $header_class = 'header_main';
     $style = '';
     $row_class = 'justify-content-start';
     $col_class = 'col-md-8';
-    $bg_image = get_field('background_image');
+    $bg_image = get_field('background_image', $page_domain);
     $overlay_color = '';
-    $color = get_field('header_background');
-    $heading_pages = get_field('heading_pages');
-    $header_btn_links = get_field('btn_links');
+    $color = get_field('header_background', $page_domain);
+    $heading_pages = get_field('heading_pages', $page_domain);
+    $header_btn_links = get_field('btn_links', $page_domain);
 
     if (is_front_page()) {
         $header_class = 'header_main front';
         $row_class = 'justify-content-between';
         $col_class = 'col-12 col-md-6 col-xl-5';
-        $header_image_front = get_field('header_image_front');
+        $header_image_front = get_field('header_image_front', $page_domain);
     }
     if (is_singular('post')) {
         $header_class = 'header_main single_post';
     }
 
-    if (is_home() || is_archive()) {
-        $color = get_field('header_background', get_option('page_for_posts'));
-        $heading_pages = get_field('heading_pages', get_option('page_for_posts'));
-        $header_btn_links = get_field('btn_links', get_option('page_for_posts'));
-    }
-
+  
     if ($bg_image) {
         $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
-        $overlay_color = get_field('overlay_color');
+        $overlay_color = get_field('overlay_color', $page_domain);
+
     }  ?>
     <header id="header_top" class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
         <?php echo $style; ?>>

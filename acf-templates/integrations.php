@@ -2,14 +2,12 @@
 // integrations layout for Front Page Block
 $bg_color = get_sub_field('background_color');
 ?>
-<!-- integrations_section -->
 <section class="integrations_section <?php echo $bg_color; ?> section_spacing_top_small">
     <div class="container">
-        <!-- <div class="row justify-content-center"> -->
         <div class="row">
 
-            <div class="col">
-                <div class="text_section text_center_mobile">
+            <div class="col-12 col-lg-10">
+                <div class="text_section">
                     <div class="">
                         <?php the_sub_field('content'); ?>
                     </div>
