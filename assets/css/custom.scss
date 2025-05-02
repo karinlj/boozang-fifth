@@ -430,9 +430,6 @@ h6 {
   font-weight: 600;
   margin-top: 0.3rem;
 }
-// h1 {
-//   font-weight: 500;
-// }
 section {
   h3 {
     margin-bottom: 0.5rem;
@@ -758,7 +755,7 @@ main nav - default colors for white & lightgrey bg
     top: 0.8rem;
     right: 0;
     z-index: 10000;
-    width: 70px;
+    width: 63px;
     height: 60px;
     padding: 1rem;
     background: transparent;
@@ -1016,11 +1013,6 @@ main nav - default colors for white & lightgrey bg
     border-radius: $themeBorder_radius;
     max-height: 500px;
     float: right;
-    // margin-top: 2.5rem;
-    // @media all and (min-width: $xl-min) {
-    //   max-height: 450px;
-    //   margin-right: 2rem;
-    // }
   }
   //items on dark bg - nav, btns ecc
   &.darkblue,
@@ -1131,7 +1123,6 @@ main nav - default colors for white & lightgrey bg
     }
   }
   .pricing_card {
-    // background: $turqoiseLight;
     border: 2px solid $turqoiseLight;
     border-radius: $themeBorder_radius;
     box-shadow: $turqoiseBox_shadow;
@@ -1363,35 +1354,31 @@ feature list  (pricing page)
       @media all and (min-width: $md-min) {
         width: 50%;
       }
-      .pict {
-        border-radius: $themeBorder_radius;
-        box-shadow: $themeBox_shadow_alt;
-        // width: 100%;
-        height: auto;
-      }
-      .alt_caption {
-        text-align: center;
-        display: block;
-        font-size: 0.9rem;
-        font-style: italic;
-        margin-top: 4px;
-      }
+    }
+    .pict {
+      border-radius: $themeBorder_radius;
+      box-shadow: $themeBox_shadow_alt;
+      // width: 100%;
+      height: auto;
+    }
+    .alt_caption {
+      text-align: center;
+      display: block;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: 4px;
     }
   }
-  //text_big_image_field
-  // &:last-child {
-  //   //fix mobile
-  //   padding-bottom: 5rem;
-  // }
-  // .part {
-  //   &.text {
-  //     padding-bottom: 3rem;
-  //   }
   &.big_image,
   &.small_image {
     padding: 0;
     .part {
       width: auto;
+    }
+    .box_shadow_off {
+      img {
+        box-shadow: none;
+      }
     }
     //link fix
     a {
@@ -1406,8 +1393,6 @@ feature list  (pricing page)
       }
     }
     .column_row {
-      //problem here.....
-      // padding-bottom: 4rem;
       display: block;
       ul {
         list-style: circle;
@@ -1442,9 +1427,9 @@ feature list  (pricing page)
   }
   &.small_image {
     .column_row {
-      padding-bottom: 3rem ;
+      padding-bottom: 3rem;
       @media all and (min-width: $xl-min) {
-        padding-bottom: 4rem ;
+        padding-bottom: 4rem;
       }
     }
     .part {
@@ -1479,7 +1464,6 @@ feature list  (pricing page)
   }
 }
 
-
 /*********************************
   feature blocks
   - blocks in different colors or bg image
@@ -1500,9 +1484,6 @@ feature list  (pricing page)
     position: relative;
     margin-bottom: 4rem;
     height: auto;
-    // @media all and (min-width: $md-min) {
-    //   margin-bottom: 4rem;
-    // }
     @media all and (min-width: $xl-min) {
       padding: 0 0 0 1.5rem;
     }
@@ -1729,7 +1710,6 @@ feature list  (pricing page)
     }
   }
 }
-
 .cards_template_item_content {
   border-radius: $themeBorder_radius;
   display: flex;
@@ -1842,7 +1822,6 @@ latest_updates_section
     @media all and (min-width: $md-min) {
       flex-direction: row;
       align-items: center;
-      // justify-content: center;
     }
     li {
       position: relative;
@@ -2214,9 +2193,6 @@ forum section
   font-weight: 400 !important;
 }
 
-// .ti-widget.ti-capt .ti-review-item>.ti-inner{
-// border-radius: $btnBorder_radius !important;
-// }
 /*********************
   feature slider
 *********************/
@@ -2311,8 +2287,3 @@ forum section
 //     }
 //   }
 // }
-
-//funkkar inte
-.ti-widget.ti-capt .ti-review-item > .ti-inner {
-  border-radius: $themeBorder_radius !important;
-}

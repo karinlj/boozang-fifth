@@ -4,7 +4,7 @@ $color = get_sub_field('color');
 $bg_image = get_sub_field('background_image');
 ?>
 
-<section class="cards_template lighturqoise section_spacing_top_medium">
+<section class="cards_template <?php echo $color ?> section_spacing_top_medium">
     <div class="container">
         <?php
         $heading = get_sub_field('heading');
@@ -36,12 +36,22 @@ $bg_image = get_sub_field('background_image');
                                 <h3><?php the_sub_field('heading'); ?></h3>
                                 <p class="text"><?php the_sub_field('text'); ?></p>
 
-                                <?php $link = get_sub_field('link'); ?>
-                                <?php if ($color === 'darkblue') { ?>
-                                    <a class="btn_link outline_color_white" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" rel="noopener noreferrer"><?php echo $link['title']; ?>
+                                <?php $link = get_sub_field('link');
+                                $mail_link = get_sub_field('mail_link');
+                                $mail_link_text = get_sub_field('mail_link_text');
+                                $btn_class = 'btn_link'
+                                ?>
+                                <?php if ($color === 'darkblue') {
+                                    $btn_class = 'btn_link outline_color_white';
+                                } ?>
+
+                                <?php if ($link) { ?>
+                                    <a class="<?php echo $btn_class ?>" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr( $link['target']); ?>" rel="noopener noreferrer"><?php echo esc_html ($link['title']); ?>
                                     </a>
-                                <?php  } else { ?>
-                                    <a class="btn_link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" rel="noopener noreferrer"><?php echo $link['title']; ?>
+                                <?php   } ?>
+
+                                <?php if ($mail_link) { ?>
+                                    <a href="<?php echo esc_url('mailto:' . antispambot( ($mail_link))) ; ?>" class="<?php echo $btn_class ?>" aria-label="Boozang email"><?php echo esc_html ($mail_link_text); ?>
                                     </a>
                                 <?php   } ?>
                             </div>

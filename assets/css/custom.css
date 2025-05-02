@@ -946,7 +946,7 @@ main nav - default colors for white & lightgrey bg
   top: 0.8rem;
   right: 0;
   z-index: 10000;
-  width: 70px;
+  width: 63px;
   height: 60px;
   padding: 1rem;
   background: transparent;
@@ -1525,12 +1525,12 @@ feature list  (pricing page)
     width: 50%;
   }
 }
-.two_columns_section .part.image .pict {
+.two_columns_section .part .pict {
   border-radius: 24px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   height: auto;
 }
-.two_columns_section .part.image .alt_caption {
+.two_columns_section .part .alt_caption {
   text-align: center;
   display: block;
   font-size: 0.9rem;
@@ -1542,6 +1542,9 @@ feature list  (pricing page)
 }
 .two_columns_section.big_image .part, .two_columns_section.small_image .part {
   width: auto;
+}
+.two_columns_section.big_image .box_shadow_off img, .two_columns_section.small_image .box_shadow_off img {
+  box-shadow: none;
 }
 .two_columns_section.big_image a:before, .two_columns_section.small_image a:before {
   height: 0;
@@ -2369,8 +2372,5 @@ forum section
 /*********************
   feature slider
 *********************/
-.ti-widget.ti-capt .ti-review-item > .ti-inner {
-  border-radius: 24px !important;
-}
 
 /*# sourceMappingURL=custom.css.map */

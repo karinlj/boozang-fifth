@@ -20,13 +20,13 @@
             </div>
             <div class="capterra_img bigger">
                 <a href="https://www.capterra.com/p/166146/Boozang/reviews/">
-                    <img border="0" src="https://brand-assets.capterra.com/badge/f2d59cba-8965-4346-86cc-255b859ccbc1.svg" alt="Boozang Reviews"/>
+                    <img border="0" src="https://brand-assets.capterra.com/badge/f2d59cba-8965-4346-86cc-255b859ccbc1.svg" alt="Boozang Reviews" />
                 </a>
             </div>
             <div class="capterra_img">
                 <a href="https://www.getapp.com/it-management-software/a/boozang/reviews/"> <img border="0" src="https://brand-assets.getapp.com/badge/8fc04a2f-c58e-40bd-8641-dac27b3b2ac3.png" /></a>
             </div>
-        
+
         </div>
 
         <div class="text_center">
@@ -60,17 +60,19 @@
                     </a>
                 </div>
                 <div class="customer_contact">
-                        <p class="contact_heading"><span class="email_icon colored_blue_part"><i class="fa-regular fa-envelope"></i>
-                            </span>Drop us an email
-                        </p>
-                        <p>We are always happy to help if you have any questions.</p>
+                    <p class="contact_heading"><span class="email_icon colored_blue_part"><i class="fa-regular fa-envelope"></i>
+                        </span>Drop us an email
+                    </p>
+                    <p>We are always happy to help if you have any questions.</p>
 
-                        <?php $link = get_field('mail_link', 'option'); ?>
-                        <a href="mailto:<?php echo $link; ?>" class="underscore_link colored_blue_part" target="_top" aria-label="Boozang email"><?php echo $link; ?>
+                    <?php $mail_link = get_field('mail_link', 'option');
+                    if ($mail_link) { ?>
+                        <a href="<?php echo esc_url('mailto:' . antispambot(($mail_link))); ?>" class="underscore_link colored_blue_part" target="_top" aria-label="Boozang email"><?php echo esc_html($mail_link); ?>
                         </a>
-                    </div>
+                    <?php   } ?>
+                </div>
                 <div class="social_icons">
-                 
+
                     <ul class="social">
                         <!-- repeater -->
                         <?php if (have_rows('social_icons', 'option')) {
@@ -136,7 +138,7 @@
                 <div class="col-2">
                     <div class="back_to_top_link">
                         <a href="#header_top" aria-label="To top of page>
-                            <i class="fas fa-angle-up" aria-hidden="true" aria-label="To top of page"></i>
+                            <i class=" fas fa-angle-up" aria-hidden="true" aria-label="To top of page"></i>
                         </a>
                     </div>
                 </div>

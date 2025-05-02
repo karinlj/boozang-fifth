@@ -1,6 +1,7 @@
 # boozang-fifth
 
 The official Boozang custom WordPress theme for new Boozang launch, 2025.
+Boozang is a SaaS start-up in test automation based in Montreal.
 
 ##### Url: https://boozang.com/
 

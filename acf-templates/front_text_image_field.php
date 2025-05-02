@@ -7,9 +7,11 @@
 $color = get_sub_field('background_color');
 $column_class = 'big_image';
 $padding_class = 'section_spacing_top_medium';
+$shadow_class = '';
 
 $big_or_small_image = get_sub_field('big_or_small_image');
 $narrow_field =  get_sub_field('narrow_field');
+$box_shadow_on_image = get_sub_field('box_shadow_on_image');
 
 if($narrow_field == 'true') {
     $padding_class = 'section_spacing_top_small'; 
@@ -17,6 +19,10 @@ if($narrow_field == 'true') {
 if($big_or_small_image == 'small_image') {
     $column_class = 'small_image'; 
 }
+if($box_shadow_on_image == 'false') {
+    $shadow_class = 'box_shadow_off'; 
+}
+
 ?>
 <section class="two_columns_section <?php echo $column_class; ?> <?php echo $color; ?>">
     <?php
@@ -38,7 +44,7 @@ if($big_or_small_image == 'small_image') {
 
                                 //Innehåll i kolumnerna
                                 if (get_row_layout() == 'img') { ?>
-                                    <div class="part image">
+                                    <div class="part image <?php echo $shadow_class; ?>">
                                         <?php $img_id = get_sub_field('img'); ?>
                                         <?php $image = wp_get_attachment_image_src($img_id, 'full'); ?>
                                         <?php $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true); ?>
