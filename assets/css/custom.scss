@@ -1133,13 +1133,15 @@ main nav - default colors for white & lightgrey bg
     border-radius: $themeBorder_radius;
     box-shadow: $turqoiseBox_shadow;
     text-align: center;
-    height: 520px;
+    height: 490px;
+    @media all and (min-width: $sm-min) {
+      height: 520px;    }
 
     //middle pricing_card higher
     &.higher {
-      height: 550px;
-      .pricing_header {
-        height: 115px;
+      height: 520px;
+      @media all and (min-width: $sm-min) {
+        height: 550px;
       }
     }
     //last pricing_card blue
@@ -1177,11 +1179,17 @@ main nav - default colors for white & lightgrey bg
   }
   ul.feat_list {
     padding: 1.25rem 0 0 0;
-    min-height: 15rem;
+    min-height: 12rem;
     li.list_item {
-      margin-bottom: 0.8rem;
-      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
       line-height: 1.3;
+      @media all and (min-width: $sm-min) {
+        font-size: 1rem;
+      }
+      @media all and (min-width: $xl-min) {
+        margin-bottom: 0.8rem;
+      }
     }
   }
   .price {
