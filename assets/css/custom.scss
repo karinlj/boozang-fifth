@@ -1832,9 +1832,8 @@ latest_updates_section
     flex-wrap: wrap;
     li {
       position: relative;
-      margin-right: 1rem;
+      margin-right: 1.5rem;
       @media all and (min-width: $sm-min) {
-        padding: 0.8rem 0.2rem 0.8rem 0.2rem;
         margin-right: 2rem;
       }
       &::after {
@@ -1854,7 +1853,7 @@ latest_updates_section
         }
       }
       a {
-        padding:  0.5rem 0.7rem;
+        padding: 0.5rem 0.2rem 0.5rem 0.2rem;
         margin-bottom: 0.3rem;
         @media all and (min-width: $sm-min) {
           padding: 0.8rem 0.2rem 0.8rem 0.2rem;

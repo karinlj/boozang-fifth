@@ -2038,13 +2038,12 @@ latest_updates_section
 .video_filter ul li,
 .page_aside ul li {
   position: relative;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 @media all and (min-width: 576px) {
   .blog_sidebar ul li,
 .video_filter ul li,
 .page_aside ul li {
-    padding: 0.8rem 0.2rem 0.8rem 0.2rem;
     margin-right: 2rem;
   }
 }
@@ -2069,7 +2068,7 @@ latest_updates_section
 .blog_sidebar ul li a,
 .video_filter ul li a,
 .page_aside ul li a {
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.2rem 0.5rem 0.2rem;
   margin-bottom: 0.3rem;
   text-decoration: none;
   display: block;
