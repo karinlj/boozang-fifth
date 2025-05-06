@@ -21,7 +21,6 @@
     if (is_home() || is_archive()) {
         $page_domain= get_option('page_for_posts'); 
     }
-
     $header_class = 'header_main';
     $style = '';
     $row_class = 'justify-content-start';
@@ -41,12 +40,10 @@
     if (is_singular('post')) {
         $header_class = 'header_main single_post';
     }
-
   
     if ($bg_image) {
         $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
         $overlay_color = get_field('overlay_color', $page_domain);
-
     }  ?>
     <header id="header_top" class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
         <?php echo $style; ?>>
@@ -59,15 +56,10 @@
                 <div class="row <?php echo $row_class; ?>">
 
                     <div class="<?php echo $col_class; ?>">
-
-                        <!-- heading for blog -->
-                        <?php if (is_home() || is_archive()) {
-                            $heading_pages = get_field('heading_pages', get_option('page_for_posts'));
-                        } ?>
+                
                         <!-- heading and text-->
                         <div class="header_heading">
                             <?php echo $heading_pages; ?>
-
                             <!-- <?php if (is_singular('post')) : ?> <h1> <?php the_title(); ?></h1>
                             <?php endif; ?> -->
                         </div>
@@ -95,7 +87,6 @@
                     <!-- header image for Front page-->
                     <?php if (is_front_page()) { ?>
                         <div class="col-12 col-md-6 col-xl-7">
-                            <!-- <div class="col-12 col-md-6"> -->
 
                             <?php $image = wp_get_attachment_image_src($header_image_front, 'full'); ?>
                             <?php $alt_text = get_post_meta($header_image_front, '_wp_attachment_image_alt', true); ?>

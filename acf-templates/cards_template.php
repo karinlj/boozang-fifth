@@ -11,7 +11,7 @@ $bg_image = get_sub_field('background_image');
         $text = get_sub_field('text'); ?>
 
         <?php if ($heading) { ?>
-            <h2 class="cards_template_heading"><?php echo $heading ?></h2>
+            <div class="cards_template_heading"><?php echo $heading ?></div>
         <?php
         } ?>
         <?php if ($text) { ?>

@@ -28,16 +28,16 @@ jQuery(document).ready(function ($) {
       });
   });
 
-    //Blog Sidebar Categories
-    $(".blog_sidebar ul").prepend(
-      '<li class="most-recent"><a href="/Boozang/blog">Most Recent</a></li>'
-    ); 
-    // $(window).on("load", function () {
-      var path = window.location.pathname;
-      if (path.indexOf("blog") >= 0) {
-        $(".most-recent").addClass("current-misse");
-      }
-    // });
+  //Blog Sidebar Categories
+  $(".blog_sidebar ul").prepend(
+    '<li class="most-recent"><a href="/Boozang/blog">Most Recent</a></li>'
+  );
+  // $(window).on("load", function () {
+  var path = window.location.pathname;
+  if (path.indexOf("blog") >= 0) {
+    $(".most-recent").addClass("current-misse");
+  }
+  // });
   //Menu Desktop
   //toggle class
   $("nav ul li.menu-item-has-children").click(function (event) {
@@ -79,7 +79,6 @@ jQuery(document).ready(function ($) {
   });
 
   //Review badges
-
   $(window).on("load", function () {
     var sc = document.createElement("script");
     sc.async = true;

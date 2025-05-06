@@ -372,7 +372,7 @@ a {
 //centered text
 .text_center_laptop {
   text-align: left;
-  @media all and (min-width: $sm-min) {
+  @media all and (min-width: $md-min) {
     text-align: center;
   }
 }
@@ -386,13 +386,16 @@ a {
   text-align: center;
 }
 .margin_2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  @media all and (min-width: $lg-min) {
+    margin-bottom: 2rem;
+  }
 }
 .margin_3 {
-  margin-bottom: 3rem;
-}
-.margin_4 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  @media all and (min-width: $lg-min) {
+    margin-bottom: 3rem;
+  }
 }
 /********************
  Size image-Main
@@ -452,13 +455,13 @@ h1 {
     font-size: 2.7rem;
   }
   @media all and (min-width: $xl-min) {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }
 h2 {
-  font-size: 1.9rem;
-  @media all and (min-width: $md-min) {
-    font-size: 2rem;
+  font-size: 2rem;
+  @media all and (min-width: $sm-min) {
+    font-size: 2.1rem;
   }
   @media all and (min-width: $lg-min) {
     font-size: 2.2rem;
@@ -1001,6 +1004,9 @@ main nav - default colors for white & lightgrey bg
   .header_heading {
     h1 {
       margin-bottom: 1.6rem;
+      @media all and (min-width: $xl-min) {
+        font-size: 3.2rem;
+      }
     }
     p {
       @media all and (min-width: $sm-min) {
@@ -1395,7 +1401,7 @@ feature list  (pricing page)
     .column_row {
       display: block;
       ul {
-        list-style: circle;
+        list-style: disc;
         margin-left: 1.5rem;
       }
     }
@@ -1488,17 +1494,17 @@ feature list  (pricing page)
       padding: 0 0 0 1.5rem;
     }
   }
+  .feature_text {
+    word-wrap: break-word;
+  }
 }
 
 /**********************
   integrations
 ***********************/
 .integrations_section {
-  background: $blueDarkest;
-  background: $turqoiseLight;
-
   .text_section {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
   .icon_section {
     display: flex;
@@ -1506,27 +1512,23 @@ feature list  (pricing page)
     margin: 0 -12px;
   }
   .img_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    width: 50%;
-    padding: 0 12px 24px;
+    width: 100px;
+    padding: 0 0.1rem 1rem 0;
     @media all and (min-width: $sm-min) {
-      width: 25%;
-      padding: 0 12px 24px;
+      width: 110px;
     }
     @media all and (min-width: $lg-min) {
-      width: 12%;
-      padding: 0 12px 24px;
+      width: 120px;
+    }
+    @media all and (min-width: $xl-min) {
+      width: 125px;
     }
     span {
-      height: 6rem;
-      background: #fff;
       border-radius: $btnBorder_radius;
       display: flex;
       justify-content: center;
       align-items: center;
+      background: transparent;
     }
   }
 }
@@ -1576,7 +1578,10 @@ feature list  (pricing page)
     border-bottom-left-radius: $themeBorder_radius;
     border-bottom-right-radius: $themeBorder_radius;
     // padding: 0.1rem 1.7rem 0.5rem 1.7rem;
-    padding: 0.1rem 1.7rem 1rem 1.7rem;
+    padding: 0.1rem 1.3rem 1rem 1.3rem;
+    @media all and (min-width: $lg-min) {
+      padding: 0.1rem 1.7rem 1rem 1.7rem;
+    }
   }
   .content_container_inner {
     width: 100%;
@@ -1694,11 +1699,11 @@ feature list  (pricing page)
       }
     }
   }
-  .heading_section {
-    margin-bottom: 3rem;
-  }
   .cards_template_content {
-    margin-top: 3rem;
+    margin-top: 2rem;
+    @media all and (min-width: $lg-min) {
+      margin-top: 3rem;
+    }
   }
   .card_container {
     box-shadow: $bluedarkBox_shadow;
@@ -1715,7 +1720,7 @@ feature list  (pricing page)
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem 1.7rem;
+  padding: 1.1rem 1.3rem;
   .icon {
     margin-bottom: 1rem;
     padding: 0.5rem;
@@ -1737,6 +1742,9 @@ feature list  (pricing page)
   .btn_link {
     max-width: 8rem;
   }
+  @media all and (min-width: $lg-min) {
+    padding: 1.5rem 1.7rem;
+  }
 }
 
 /********************
@@ -1745,18 +1753,23 @@ latest_updates_section
 .latest_updates_section {
   .updates_tabs {
     display: flex;
-    justify-content: center;
-  }
-  .updates_btn {
-    font-size: 11px;
-    margin-right: 0.4rem;
-    text-transform: capitalize;
+    @media all and (min-width: $md-min) {
+      justify-content: center;
+    }
     .btn_link {
       @media all and (max-width: $xs-max) {
         padding: 8px 10px;
       }
     }
+  }
+  .updates_btn {
+    font-size: 13px;
+    margin-right: 0.4rem;
+    text-transform: capitalize;
     @media all and (min-width: $sm-min) {
+      margin-right: 0.6rem;
+    }
+    @media all and (min-width: $md-min) {
       font-size: 15px;
       margin-right: 0.8rem;
     }
@@ -1771,6 +1784,9 @@ latest_updates_section
   display: flex;
   flex-wrap: wrap;
   gap: 2rem 2rem;
+  @media all and (min-width: $lg-min) {
+    justify-content: space-around;
+  }
   .card_container {
     margin: 0;
     flex-grow: 1;
@@ -1784,13 +1800,9 @@ latest_updates_section
       flex-basis: 270px;
       max-width: 300px;
     }
-    @media all and (min-width: $lg-min) {
-      flex-basis: 260px;
-      max-width: 320px;
-    }
     @media all and (min-width: $xl-min) {
       flex-basis: 280px;
-      max-width: 350px;
+      max-width: 330px;
     }
   }
 }
@@ -1801,14 +1813,13 @@ latest_updates_section
 .blog_sidebar,
 .video_filter,
 .page_aside {
-  @media all and (min-width: $md-min) {
-    background: $turqoiseLight;
-  }
+  background: $turqoiseLight;
   &.section_spacing_top_mini {
     padding-top: 0.5rem;
-    padding-bottom: 0;
+    padding-bottom: 0.5rem;
     @media all and (min-width: $md-min) {
       padding-top: 0;
+      padding-bottom: 0;
     }
   }
   .filter_nav {
@@ -1818,17 +1829,13 @@ latest_updates_section
   }
   ul {
     display: flex;
-    flex-direction: column;
-    @media all and (min-width: $md-min) {
-      flex-direction: row;
-      align-items: center;
-    }
+    flex-wrap: wrap;
     li {
       position: relative;
-      border-bottom: 1px solid $turqoise;
-      @media all and (min-width: $md-min) {
+      margin-right: 1rem;
+      @media all and (min-width: $sm-min) {
+        padding: 0.8rem 0.2rem 0.8rem 0.2rem;
         margin-right: 2rem;
-        border: none;
       }
       &::after {
         opacity: 0;
@@ -1847,7 +1854,12 @@ latest_updates_section
         }
       }
       a {
-        padding: 0.8rem 0.2rem 0.8rem 0.2rem;
+        padding:  0.5rem 0.7rem;
+        margin-bottom: 0.3rem;
+        @media all and (min-width: $sm-min) {
+          padding: 0.8rem 0.2rem 0.8rem 0.2rem;
+          margin-bottom: 0;
+        }
         @media all and (min-width: $md-min) {
           padding: 1rem 0.2rem 0.8rem 0.2rem;
         }
@@ -1899,7 +1911,7 @@ latest_updates_section
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid $turqoise;
+    // border-top: 1px solid $turqoise;
     width: 100%;
     padding: 0.5rem 0 0 0;
     p {
@@ -2045,15 +2057,28 @@ forum section
         margin-right: 1rem;
         margin-bottom: 0.5rem;
       }
-      .capterra_img {
-        img {
+    }
+    .capterra_img,
+    .sf-root {
+      img {
+        width: 75px;
+        @media all and (min-width: $md-min) {
           width: 80px;
         }
-        &.bigger {
-          img {
+      }
+      &.bigger {
+        img {
+          width: 100px;
+          @media all and (min-width: $md-min) {
             width: 110px;
           }
         }
+      }
+    }
+    .sf-root {
+      width: 75px;
+      @media all and (min-width: $md-min) {
+        width: 80px;
       }
     }
   }
@@ -2133,11 +2158,12 @@ forum section
     }
   }
   .footer_links_heading {
-    padding-top: 2rem;
-    margin-top: 0;
-    margin-bottom: 1.2rem;
-    @media all and (min-width: $lg-min) {
+    padding-top: 1rem;
+    text-transform: uppercase;
+    font-size: 13px;
+    @media all and (min-width: $md-min) {
       padding-top: 0;
+      font-size: 15px;
     }
   }
   .footer_links {

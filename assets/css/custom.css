@@ -416,7 +416,7 @@ a:focus {
 .text_center_laptop {
   text-align: left;
 }
-@media all and (min-width: 576px) {
+@media all and (min-width: 768px) {
   .text_center_laptop {
     text-align: center;
   }
@@ -436,15 +436,21 @@ a:focus {
 }
 
 .margin_2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+@media all and (min-width: 992px) {
+  .margin_2 {
+    margin-bottom: 2rem;
+  }
 }
 
 .margin_3 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
-
-.margin_4 {
-  margin-bottom: 3rem;
+@media all and (min-width: 992px) {
+  .margin_3 {
+    margin-bottom: 3rem;
+  }
 }
 
 /********************
@@ -513,16 +519,16 @@ h1 {
 }
 @media all and (min-width: 1200px) {
   h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 576px) {
   h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 }
 @media all and (min-width: 992px) {
@@ -1193,6 +1199,11 @@ main nav - default colors for white & lightgrey bg
 .header_main .header_heading h1 {
   margin-bottom: 1.6rem;
 }
+@media all and (min-width: 1200px) {
+  .header_main .header_heading h1 {
+    font-size: 3.2rem;
+  }
+}
 @media all and (min-width: 576px) {
   .header_main .header_heading p {
     font-size: 1.1rem;
@@ -1561,7 +1572,7 @@ feature list  (pricing page)
   display: block;
 }
 .two_columns_section.big_image .column_row ul, .two_columns_section.small_image .column_row ul {
-  list-style: circle;
+  list-style: disc;
   margin-left: 1.5rem;
 }
 .two_columns_section.big_image .column_row_inner, .two_columns_section.small_image .column_row_inner {
@@ -1653,16 +1664,15 @@ feature list  (pricing page)
     padding: 0 0 0 1.5rem;
   }
 }
+.feature_blocks .feature_text {
+  word-wrap: break-word;
+}
 
 /**********************
   integrations
 ***********************/
-.integrations_section {
-  background: #151c37;
-  background: #e6f4f1;
-}
 .integrations_section .text_section {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .integrations_section .icon_section {
   display: flex;
@@ -1670,32 +1680,30 @@ feature list  (pricing page)
   margin: 0 -12px;
 }
 .integrations_section .img_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  width: 50%;
-  padding: 0 12px 24px;
+  width: 100px;
+  padding: 0 0.1rem 1rem 0;
 }
 @media all and (min-width: 576px) {
   .integrations_section .img_box {
-    width: 25%;
-    padding: 0 12px 24px;
+    width: 110px;
   }
 }
 @media all and (min-width: 992px) {
   .integrations_section .img_box {
-    width: 12%;
-    padding: 0 12px 24px;
+    width: 120px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .integrations_section .img_box {
+    width: 125px;
   }
 }
 .integrations_section .img_box span {
-  height: 6rem;
-  background: #fff;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
 }
 
 /********************************
@@ -1743,7 +1751,12 @@ feature list  (pricing page)
 .card_container .content_container {
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  padding: 0.1rem 1.7rem 1rem 1.7rem;
+  padding: 0.1rem 1.3rem 1rem 1.3rem;
+}
+@media all and (min-width: 992px) {
+  .card_container .content_container {
+    padding: 0.1rem 1.7rem 1rem 1.7rem;
+  }
 }
 .card_container .content_container_inner {
   width: 100%;
@@ -1859,11 +1872,13 @@ feature list  (pricing page)
 .cards_template.darkblue .card_container.darkblue {
   border: 1px solid #fff;
 }
-.cards_template .heading_section {
-  margin-bottom: 3rem;
-}
 .cards_template .cards_template_content {
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+@media all and (min-width: 992px) {
+  .cards_template .cards_template_content {
+    margin-top: 3rem;
+  }
 }
 .cards_template .card_container {
   box-shadow: 0 4px 0 #070912;
@@ -1878,7 +1893,7 @@ feature list  (pricing page)
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem 1.7rem;
+  padding: 1.1rem 1.3rem;
 }
 .cards_template_item_content .icon {
   margin-bottom: 1rem;
@@ -1901,25 +1916,39 @@ feature list  (pricing page)
 .cards_template_item_content .btn_link {
   max-width: 8rem;
 }
+@media all and (min-width: 992px) {
+  .cards_template_item_content {
+    padding: 1.5rem 1.7rem;
+  }
+}
 
 /********************
 latest_updates_section
 *********************/
 .latest_updates_section .updates_tabs {
   display: flex;
-  justify-content: center;
 }
-.latest_updates_section .updates_btn {
-  font-size: 11px;
-  margin-right: 0.4rem;
-  text-transform: capitalize;
+@media all and (min-width: 768px) {
+  .latest_updates_section .updates_tabs {
+    justify-content: center;
+  }
 }
 @media all and (max-width: 480px) {
-  .latest_updates_section .updates_btn .btn_link {
+  .latest_updates_section .updates_tabs .btn_link {
     padding: 8px 10px;
   }
 }
+.latest_updates_section .updates_btn {
+  font-size: 13px;
+  margin-right: 0.4rem;
+  text-transform: capitalize;
+}
 @media all and (min-width: 576px) {
+  .latest_updates_section .updates_btn {
+    margin-right: 0.6rem;
+  }
+}
+@media all and (min-width: 768px) {
   .latest_updates_section .updates_btn {
     font-size: 15px;
     margin-right: 0.8rem;
@@ -1935,6 +1964,12 @@ latest_updates_section
   display: flex;
   flex-wrap: wrap;
   gap: 2rem 2rem;
+}
+@media all and (min-width: 992px) {
+  .updates_tab_content,
+.cards_template_content {
+    justify-content: space-around;
+  }
 }
 .updates_tab_content .card_container,
 .cards_template_content .card_container {
@@ -1957,42 +1992,34 @@ latest_updates_section
     max-width: 300px;
   }
 }
-@media all and (min-width: 992px) {
-  .updates_tab_content .card_container,
-.cards_template_content .card_container {
-    flex-basis: 260px;
-    max-width: 320px;
-  }
-}
 @media all and (min-width: 1200px) {
   .updates_tab_content .card_container,
 .cards_template_content .card_container {
     flex-basis: 280px;
-    max-width: 350px;
+    max-width: 330px;
   }
 }
 
 /*******************************************
     Filter menu - blog, videos, product
  ******************************************/
-@media all and (min-width: 768px) {
-  .blog_sidebar,
+.blog_sidebar,
 .video_filter,
 .page_aside {
-    background: #e6f4f1;
-  }
+  background: #e6f4f1;
 }
 .blog_sidebar.section_spacing_top_mini,
 .video_filter.section_spacing_top_mini,
 .page_aside.section_spacing_top_mini {
   padding-top: 0.5rem;
-  padding-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 @media all and (min-width: 768px) {
   .blog_sidebar.section_spacing_top_mini,
 .video_filter.section_spacing_top_mini,
 .page_aside.section_spacing_top_mini {
     padding-top: 0;
+    padding-bottom: 0;
   }
 }
 .blog_sidebar .filter_nav h3,
@@ -2004,29 +2031,21 @@ latest_updates_section
 .video_filter ul,
 .page_aside ul {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   /*Uncategorized not show*/
-}
-@media all and (min-width: 768px) {
-  .blog_sidebar ul,
-.video_filter ul,
-.page_aside ul {
-    flex-direction: row;
-    align-items: center;
-  }
 }
 .blog_sidebar ul li,
 .video_filter ul li,
 .page_aside ul li {
   position: relative;
-  border-bottom: 1px solid #b8e0d7;
+  margin-right: 1rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 576px) {
   .blog_sidebar ul li,
 .video_filter ul li,
 .page_aside ul li {
+    padding: 0.8rem 0.2rem 0.8rem 0.2rem;
     margin-right: 2rem;
-    border: none;
   }
 }
 .blog_sidebar ul li::after,
@@ -2050,12 +2069,21 @@ latest_updates_section
 .blog_sidebar ul li a,
 .video_filter ul li a,
 .page_aside ul li a {
-  padding: 0.8rem 0.2rem 0.8rem 0.2rem;
+  padding: 0.5rem 0.7rem;
+  margin-bottom: 0.3rem;
   text-decoration: none;
   display: block;
   white-space: nowrap;
   font-weight: 500;
   color: #212735;
+}
+@media all and (min-width: 576px) {
+  .blog_sidebar ul li a,
+.video_filter ul li a,
+.page_aside ul li a {
+    padding: 0.8rem 0.2rem 0.8rem 0.2rem;
+    margin-bottom: 0;
+  }
 }
 @media all and (min-width: 768px) {
   .blog_sidebar ul li a,
@@ -2097,7 +2125,6 @@ latest_updates_section
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #b8e0d7;
   width: 100%;
   padding: 0.5rem 0 0 0;
 }
@@ -2232,11 +2259,33 @@ forum section
   margin-right: 1rem;
   margin-bottom: 0.5rem;
 }
-.signup_section .btn_container.badges .capterra_img img {
-  width: 80px;
+.signup_section .btn_container .capterra_img img,
+.signup_section .btn_container .sf-root img {
+  width: 75px;
 }
-.signup_section .btn_container.badges .capterra_img.bigger img {
-  width: 110px;
+@media all and (min-width: 768px) {
+  .signup_section .btn_container .capterra_img img,
+.signup_section .btn_container .sf-root img {
+    width: 80px;
+  }
+}
+.signup_section .btn_container .capterra_img.bigger img,
+.signup_section .btn_container .sf-root.bigger img {
+  width: 100px;
+}
+@media all and (min-width: 768px) {
+  .signup_section .btn_container .capterra_img.bigger img,
+.signup_section .btn_container .sf-root.bigger img {
+    width: 110px;
+  }
+}
+.signup_section .btn_container .sf-root {
+  width: 75px;
+}
+@media all and (min-width: 768px) {
+  .signup_section .btn_container .sf-root {
+    width: 80px;
+  }
 }
 
 .footer_main {
@@ -2313,13 +2362,14 @@ forum section
   }
 }
 .footer_main .footer_links_heading {
-  padding-top: 2rem;
-  margin-top: 0;
-  margin-bottom: 1.2rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+  font-size: 13px;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   .footer_main .footer_links_heading {
     padding-top: 0;
+    font-size: 15px;
   }
 }
 .footer_main .footer_links {

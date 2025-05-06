@@ -1,5 +1,5 @@
 <!-- signup field -->
-<section class="signup_section text_center section_spacing_top_small">
+<section class="signup_section  section_spacing_top_small">
     <div class="container">
         <?php
         $footer_text = get_field('footer_text', 'option');
@@ -7,16 +7,16 @@
         $sign_up_link_demo = get_field('sign_up_link_demo', 'option'); ?>
 
         <div class="btn_container badges">
-            <div class="sf-root" data-id="2969897" data-badge="light-default" data-variant-id="sf" style="width:80px">
+            <div class="sf-root" data-id="2969897" data-badge="light-default" data-variant-id="sf">
                 <a href="https://sourceforge.net/software/product/Boozang/" target="_blank">Boozang Reviews</a>
             </div>
 
-            <div class="sf-root" data-id="2969897" data-badge="users-love-us-new-white" data-variant-id="sd" style="width:80px">
+            <div class="sf-root" data-id="2969897" data-badge="users-love-us-new-white" data-variant-id="sd">
                 <a href="https://slashdot.org/software/p/Boozang/" target="_blank">Boozang Reviews</a>
             </div>
 
-            <div class="sf-root" data-id="2969897" data-badge="partner" data-variant-id="tbs" style="width:80px">
-                <a href="https://sourceforge.net/software/product/Boozang/" target="_blank">Boozang Reviews</a>
+            <div class="sf-root" data-id="2969897" data-badge="partner" data-variant-id="tbs">
+                <a href="https://topbusinesssoftware.com/products/Boozang/reviews/" target="_blank">Boozang Reviews</a>
             </div>
             <div class="capterra_img bigger">
                 <a href="https://www.capterra.com/p/166146/Boozang/reviews/">
@@ -45,7 +45,6 @@
                 </a>
             <?php } ?>
         </div>
-
     </div>
 </section>
 
@@ -137,8 +136,8 @@
                 </div>
                 <div class="col-2">
                     <div class="back_to_top_link">
-                        <a href="#header_top" aria-label="To top of page>
-                            <i class=" fas fa-angle-up" aria-hidden="true" aria-label="To top of page"></i>
+                        <a href="#header_top" aria-label="To top of page">
+                            <i class="fas fa-angle-up" aria-hidden="true" aria-label="To top of page"></i>
                         </a>
                     </div>
                 </div>
