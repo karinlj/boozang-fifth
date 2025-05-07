@@ -60,6 +60,8 @@ if($box_shadow_on_image == 'false') {
                                         <div><?php the_sub_field('text'); ?></div>
 
                                         <?php $link = get_sub_field('link'); ?>
+                                        <?php $link_no_2 = get_sub_field('link_no_2'); ?>
+
                                         <?php
                                         $btn_class = 'outline_color_white';
                                         if ($color == 'white') {
@@ -68,6 +70,11 @@ if($box_shadow_on_image == 'false') {
                                         <?php if ($link) { ?>
                                             <a class="btn_link <?php echo $btn_class ?>" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"
                                                 rel="noopener noreferrer"><?php echo $link['title']; ?>
+                                            </a>
+                                        <?php } ?>
+                                        <?php if ($link_no_2) { ?>
+                                            <a class="btn_link <?php echo $btn_class ?>" href="<?php echo $link_no_2['url']; ?>" target="<?php echo $link_no_2['target']; ?>"
+                                                rel="noopener noreferrer"><?php echo $link_no_2['title']; ?>
                                             </a>
                                         <?php } ?>
                                     </div>

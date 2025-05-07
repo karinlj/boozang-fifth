@@ -104,8 +104,8 @@
                     },
                     "choices": {
                         "white": "White",
-                        "outline_color_white": "Outline white darkblue",
-                        "outline_color_white_blue": "Outline white blue",
+                        "outline_color_white": "Outline white",
+                        "outline_color_darkblue": "Outline darkblue",
                         "green": "Green"
                     },
                     "default_value": "",
@@ -238,5 +238,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745842241
+    "modified": 1746651016
 }

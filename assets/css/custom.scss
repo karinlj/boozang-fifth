@@ -95,6 +95,7 @@ img {
 *********************/
 .container {
   // max-width: 1170px;
+  position: relative;
 }
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
@@ -155,7 +156,7 @@ button,
 .btn_link {
   line-height: 1.2;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 22px;
   cursor: pointer;
   border-radius: $btnBorder_radius;
   transition: 1s all ease;
@@ -200,15 +201,6 @@ button,
       background: #fff;
     }
   }
-  &.outline_color_white_blue {
-    border-color: #fff;
-    color: #fff;
-    background: transparent;
-    &:hover {
-      color: $blueDarkest;
-      background: #fff;
-    }
-  }
   &.outline_color_darkblue {
     background: #fff;
     border-color: $blueDarkest;
@@ -245,6 +237,15 @@ button,
     &:hover {
       background: transparent;
       color: $blue;
+    }
+  }
+  &.outline_color_blue{
+    border-color: $blue;
+    color: $blue;
+    background: transparent;
+    &:hover {
+      color: #fff;
+      background: $blue;
     }
   }
 }
@@ -419,7 +420,7 @@ input {
   font-weight: 400;
 }
 li {
-  font-size: 0.9rem;
+  // font-size: 0.9rem;
   line-height: 1.6;
 }
 h1,
@@ -587,7 +588,7 @@ header {
   &.overlay-white {
     &::before {
       background-image: $whiteOverlayColor;
-      @include overlay();
+      @include overlay_light();
     }
   }
   &.overlay-none {
@@ -860,7 +861,7 @@ main nav - default colors for white & lightgrey bg
     justify-content: flex-end;
   }
   .btn_link {
-    padding: 10px 20px;
+    padding: 12px 22px;
   }
 }
 /*Mobile view - menu*/
@@ -981,11 +982,11 @@ main nav - default colors for white & lightgrey bg
     }
   }
   .btn_link {
-    &.outline_color_white_blue {
-      box-shadow: $blueBox_shadow;
-    }
+    // &.outline_color_white {
+    //   box-shadow: $blueBox_shadow;
+    // }
     &.green {
-      box-shadow: $greenBox_shadow;
+      // box-shadow: $greenBox_shadow;
       color: #fff;
       &:hover {
         color: $themecolorGreen;
@@ -1023,13 +1024,13 @@ main nav - default colors for white & lightgrey bg
   //items on dark bg - nav, btns ecc
   &.darkblue,
   &.blue {
-    .btn_link {
-      &.green {
-        &:hover {
-          color: $themecolorGreen;
-        }
-      }
-    }
+    // .btn_link {
+    //   &.green {
+    //     &:hover {
+    //       color: $themecolorGreen;
+    //     }
+    //   }
+    // }
     //nav for dark bg
     nav {
       a,
@@ -1280,7 +1281,7 @@ feature list  (pricing page)
       margin-bottom: 0;
     }
     &[aria-hidden="false"] {
-      max-height: 260px;
+      max-height: 400px;
       p {
         margin-bottom: 2rem;
       }
@@ -1365,7 +1366,9 @@ feature list  (pricing page)
     &.image {
       z-index: 400;
       position: relative;
+      margin-top: 2rem;
       @media all and (min-width: $md-min) {
+        margin-top: 0;
         width: 50%;
       }
     }
@@ -1401,10 +1404,7 @@ feature list  (pricing page)
       }
     }
     .btn_link {
-      margin: 1.5rem 0;
-      @media all and (min-width: $md-min) {
-        margin: 1.5rem 0 0 0;
-      }
+      margin: 1.5rem 1rem 0 0;
     }
     .column_row {
       display: block;
@@ -1428,13 +1428,13 @@ feature list  (pricing page)
       &.text {
         width: 100%;
         @media all and (min-width: $md-min) {
-          width: 45%;
+          width: 50%;
         }
       }
       &.image {
         width: 100%;
         @media all and (min-width: $md-min) {
-          width: 55%;
+          width: 50%;
         }
       }
     }
@@ -1450,13 +1450,13 @@ feature list  (pricing page)
       &.text {
         width: 100%;
         @media all and (min-width: $md-min) {
-          width: 60%;
+          width: 70%;
         }
       }
       &.image {
         width: 100%;
         @media all and (min-width: $md-min) {
-          width: 35%;
+          width: 30%;
         }
       }
     }
@@ -1520,17 +1520,17 @@ feature list  (pricing page)
     margin: 0 -12px;
   }
   .img_box {
-    width: 100px;
+    width: 7rem;
     padding: 0 0.1rem 1rem 0;
-    @media all and (min-width: $sm-min) {
-      width: 110px;
-    }
-    @media all and (min-width: $lg-min) {
-      width: 120px;
-    }
-    @media all and (min-width: $xl-min) {
-      width: 125px;
-    }
+    // @media all and (min-width: $sm-min) {
+    //   width: 110px;
+    // }
+    // @media all and (min-width: $lg-min) {
+    //   width: 8rem;
+    // }
+    // @media all and (min-width: $xl-min) {
+    //   width: 8rem;
+    // }
     span {
       border-radius: $btnBorder_radius;
       display: flex;
@@ -1702,7 +1702,7 @@ feature list  (pricing page)
   position: relative;
   &.darkblue {
     .card_container {
-      &.darkblue {
+      &.darkblue,  &.blue {
         border: 1px solid #fff;
       }
     }
@@ -1715,8 +1715,8 @@ feature list  (pricing page)
   }
   .card_container {
     box-shadow: $bluedarkBox_shadow;
-    border-color: $blueDarkest;
-    &.darkblue {
+    // border-color: $blueDarkest;
+    &.darkblue,  &.blue {
       .icon {
         border-color: #fff;
       }
@@ -1749,6 +1749,10 @@ feature list  (pricing page)
   }
   .btn_link {
     max-width: 8rem;
+  }
+  .text{
+    min-height: 100px;
+
   }
   @media all and (min-width: $lg-min) {
     padding: 1.5rem 1.7rem;
@@ -1793,7 +1797,7 @@ latest_updates_section
   flex-wrap: wrap;
   gap: 2rem 2rem;
   @media all and (min-width: $lg-min) {
-    justify-content: space-around;
+    justify-content: center;
   }
   .card_container {
     margin: 0;
@@ -1838,11 +1842,17 @@ latest_updates_section
   ul {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    @media all and (min-width: $sm-min) {
+  flex-direction: row;
+    }
     li {
       position: relative;
-      margin-right: 1.5rem;
+      font-size: 0.9rem;
+      border-bottom: 1px solid $turqoise;
       @media all and (min-width: $sm-min) {
         margin-right: 2rem;
+        border: none;
       }
       &::after {
         opacity: 0;
@@ -1862,7 +1872,6 @@ latest_updates_section
       }
       a {
         padding: 0.5rem 0.2rem 0.5rem 0.2rem;
-        margin-bottom: 0.3rem;
         @media all and (min-width: $sm-min) {
           padding: 0.8rem 0.2rem 0.8rem 0.2rem;
           margin-bottom: 0;

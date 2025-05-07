@@ -15,8 +15,8 @@ $xl-max: 1309px;
 $max-page-width: 1380px;
 
 /* colors */
-$blueDarkest: #151c37;
-$blue: #1368e7;
+$blueDarkest: #1c254a; //#151c37;
+ $blue: #1368e7;
 $blueLight: #4dbeff;
 $turqoise: #b8e0d7;
 $turqoiseLight: #e6f4f1;
@@ -46,16 +46,30 @@ $themeBorder_radius: 24px; //12px;
 $btnBorder_radius: 8px;
 
 //shadows
-$link_colorBox_shadow: 0 4px 0 #0085cc;
-$blueBox_shadow: 0 4px 0 #0b3f8e;
-$bluedarkBox_shadow: 0 4px 0 #070912;
+// $link_colorBox_shadow: 0 4px 0 #0085cc;
+// $blueBox_shadow: 0 4px 0 #0b3f8e;
+// $bluedarkBox_shadow: 0 4px 0 #070912;
 
-$turqoiseBox_shadow: 0 4px 0 #b8e0d7;
-$greyBox_shadow: 0 4px 0 #d9d9d9;
-$greenBox_shadow: 0 4px 0 #00664b;
-$themeBox_shadow: 0 4px 0 #212735;
+// $turqoiseBox_shadow: 0 4px 0 #b8e0d7;
+// $greyBox_shadow: 0 4px 0 #d9d9d9;
+// $greenBox_shadow: 0 4px 0 #00664b;
+ //$themeBox_shadow: 0 4px 0 #212735;
+ $themeBox_shadow_alt: 0px 2px 10px rgb(0 0 0 / 20%);
+
+// $themeBox_shadow_mapl: 0 25px 60px -20px rgba(81,63,174,.33);
+$themeBox_shadow_mapl:  $themeBox_shadow_alt;
+
+$link_colorBox_shadow: $themeBox_shadow_mapl;
+$blueBox_shadow: $themeBox_shadow_mapl;
+$bluedarkBox_shadow: $themeBox_shadow_mapl;
+
+$turqoiseBox_shadow:$themeBox_shadow_mapl;
+$greyBox_shadow: $themeBox_shadow_mapl;
+$greenBox_shadow: $themeBox_shadow_mapl;
+$themeBox_shadow: $themeBox_shadow_mapl;
+
+//        border: 3px solid #f2f2f9;
 // $themeBox_shadow_alt: 0 2px 0 #070912;
-$themeBox_shadow_alt: 0px 2px 10px rgb(0 0 0 / 20%);
 
 //overlay colors
 $blueDarkOverlayColor: linear-gradient(

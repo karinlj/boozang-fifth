@@ -60,7 +60,7 @@ ol {
 }
 
 .dark_text {
-  color: #151c37;
+  color: #1c254a;
 }
 
 hr {
@@ -82,6 +82,10 @@ img {
 /********************
   padding/ margin sections
 *********************/
+.container {
+  position: relative;
+}
+
 .section_spacing_top_medium {
   padding: 4rem calc(1.5rem - 15px);
 }
@@ -166,7 +170,7 @@ button,
 .btn_link {
   line-height: 1.2;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 22px;
   cursor: pointer;
   border-radius: 8px;
   transition: 1s all ease;
@@ -174,7 +178,7 @@ button,
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.1px;
-  background: #151c37;
+  background: #1c254a;
   color: #fff;
   border: 1px solid transparent;
 }
@@ -195,8 +199,8 @@ button:hover,
 .btn:hover,
 .btn_link:hover {
   background: transparent;
-  color: #151c37;
-  border: 1px solid #151c37;
+  color: #1c254a;
+  border: 1px solid #1c254a;
   opacity: 1;
 }
 button.white,
@@ -204,7 +208,7 @@ button.white,
 .btn_link.white {
   border-color: #fff;
   background: #fff;
-  color: #151c37;
+  color: #1c254a;
 }
 button.white:hover,
 .btn.white:hover,
@@ -222,47 +226,34 @@ button.outline_color_white,
 button.outline_color_white:hover,
 .btn.outline_color_white:hover,
 .btn_link.outline_color_white:hover {
-  color: #151c37;
-  background: #fff;
-}
-button.outline_color_white_blue,
-.btn.outline_color_white_blue,
-.btn_link.outline_color_white_blue {
-  border-color: #fff;
-  color: #fff;
-  background: transparent;
-}
-button.outline_color_white_blue:hover,
-.btn.outline_color_white_blue:hover,
-.btn_link.outline_color_white_blue:hover {
-  color: #151c37;
+  color: #1c254a;
   background: #fff;
 }
 button.outline_color_darkblue,
 .btn.outline_color_darkblue,
 .btn_link.outline_color_darkblue {
   background: #fff;
-  border-color: #151c37;
-  color: #151c37;
+  border-color: #1c254a;
+  color: #1c254a;
 }
 button.outline_color_darkblue:hover,
 .btn.outline_color_darkblue:hover,
 .btn_link.outline_color_darkblue:hover {
   color: #fff;
-  background: #151c37;
+  background: #1c254a;
 }
 button.outline_color_darkblue_transparent,
 .btn.outline_color_darkblue_transparent,
 .btn_link.outline_color_darkblue_transparent {
   background: transparent;
-  border-color: #151c37;
-  color: #151c37;
+  border-color: #1c254a;
+  color: #1c254a;
 }
 button.outline_color_darkblue_transparent:hover,
 .btn.outline_color_darkblue_transparent:hover,
 .btn_link.outline_color_darkblue_transparent:hover {
   color: #fff;
-  background: #151c37;
+  background: #1c254a;
 }
 button.green,
 .btn.green,
@@ -270,7 +261,7 @@ button.green,
   background: #00a87b;
   color: #fff;
   border: 1px solid #00a87b;
-  box-shadow: 0 4px 0 #00664b;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 button.green:hover,
 .btn.green:hover,
@@ -284,13 +275,26 @@ button.blue,
   background: #1368e7;
   color: #fff;
   border: 1px solid #1368e7;
-  box-shadow: 0 4px 0 #0b3f8e;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 button.blue:hover,
 .btn.blue:hover,
 .btn_link.blue:hover {
   background: transparent;
   color: #1368e7;
+}
+button.outline_color_blue,
+.btn.outline_color_blue,
+.btn_link.outline_color_blue {
+  border-color: #1368e7;
+  color: #1368e7;
+  background: transparent;
+}
+button.outline_color_blue:hover,
+.btn.outline_color_blue:hover,
+.btn_link.outline_color_blue:hover {
+  color: #fff;
+  background: #1368e7;
 }
 
 /********************
@@ -476,7 +480,6 @@ input {
 }
 
 li {
-  font-size: 0.9rem;
   line-height: 1.6;
 }
 
@@ -622,7 +625,7 @@ section.darkblue,
 header.darkblue,
 footer.darkblue,
 .pricing_card.darkblue {
-  background: #151c37;
+  background: #1c254a;
 }
 section.blue,
 header.blue,
@@ -777,7 +780,7 @@ header.overlay-blue::before {
 section.overlay-white::before,
 header.overlay-white::before {
   background-image: linear-gradient(to right bottom, #f2f2f2, #f5f5f5, #f8f8f8, #fcfcfc, #ffffff);
-  opacity: 0.85;
+  opacity: 0.45;
   position: absolute;
   top: 0;
   right: 0;
@@ -871,7 +874,7 @@ main nav - default colors for white & lightgrey bg
 }
 .main_menu ul li a:hover {
   color: #212735;
-  border-bottom: 1px solid #151c37;
+  border-bottom: 1px solid #1c254a;
 }
 .main_menu ul li a:active {
   color: #212735;
@@ -918,7 +921,7 @@ main nav - default colors for white & lightgrey bg
   width: 230px;
   padding: 2rem 0;
   display: none;
-  box-shadow: 0 4px 0 #212735;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   /*toggle open*/
 }
 .main_menu li.menu-item-has-children ul li {
@@ -1057,7 +1060,7 @@ main nav - default colors for white & lightgrey bg
   }
 }
 .signup .btn_link {
-  padding: 10px 20px;
+  padding: 12px 22px;
 }
 
 /*Mobile view - menu*/
@@ -1068,7 +1071,7 @@ main nav - default colors for white & lightgrey bg
   z-index: 500;
   top: 0;
   left: 0;
-  background: #151c37;
+  background: #1c254a;
   padding: 1rem;
   text-align: left;
   transform: translateX(100%);
@@ -1173,11 +1176,7 @@ main nav - default colors for white & lightgrey bg
     padding-bottom: 0;
   }
 }
-.header_main .btn_link.outline_color_white_blue {
-  box-shadow: 0 4px 0 #0b3f8e;
-}
 .header_main .btn_link.green {
-  box-shadow: 0 4px 0 #00664b;
   color: #fff;
 }
 .header_main .btn_link.green:hover {
@@ -1214,9 +1213,6 @@ main nav - default colors for white & lightgrey bg
   border-radius: 24px;
   max-height: 500px;
   float: right;
-}
-.header_main.darkblue .btn_link.green:hover, .header_main.blue .btn_link.green:hover {
-  color: #00a87b;
 }
 .header_main.darkblue nav, .header_main.blue nav {
   /*Wp:s klasser*/
@@ -1302,7 +1298,7 @@ main nav - default colors for white & lightgrey bg
 .pricing_section .pricing_card {
   border: 2px solid #e6f4f1;
   border-radius: 24px;
-  box-shadow: 0 4px 0 #b8e0d7;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   height: 490px;
 }
@@ -1322,16 +1318,16 @@ main nav - default colors for white & lightgrey bg
 .pricing_section .pricing_card.blue {
   background: #1368e7;
   border: 2px solid #1368e7;
-  box-shadow: 0 4px 0 #0b3f8e;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .pricing_section .pricing_card.blue .btn_link {
   background: #fff;
-  border-color: #151c37;
-  color: #151c37;
+  border-color: #1c254a;
+  color: #1c254a;
 }
 .pricing_section .pricing_card.blue .btn_link:hover {
   color: #fff;
-  background: #151c37;
+  background: #1c254a;
 }
 .pricing_section .card_body {
   padding: 1.5rem 1.25rem;
@@ -1452,7 +1448,7 @@ feature list  (pricing page)
   margin-bottom: 0;
 }
 .faq_accordion_section .answer_part[aria-hidden=false] {
-  max-height: 260px;
+  max-height: 400px;
 }
 .faq_accordion_section .answer_part[aria-hidden=false] p {
   margin-bottom: 2rem;
@@ -1547,9 +1543,11 @@ feature list  (pricing page)
 .two_columns_section .part.image {
   z-index: 400;
   position: relative;
+  margin-top: 2rem;
 }
 @media all and (min-width: 768px) {
   .two_columns_section .part.image {
+    margin-top: 0;
     width: 50%;
   }
 }
@@ -1578,12 +1576,7 @@ feature list  (pricing page)
   height: 0;
 }
 .two_columns_section.big_image .btn_link, .two_columns_section.small_image .btn_link {
-  margin: 1.5rem 0;
-}
-@media all and (min-width: 768px) {
-  .two_columns_section.big_image .btn_link, .two_columns_section.small_image .btn_link {
-    margin: 1.5rem 0 0 0;
-  }
+  margin: 1.5rem 1rem 0 0;
 }
 .two_columns_section.big_image .column_row, .two_columns_section.small_image .column_row {
   display: block;
@@ -1608,7 +1601,7 @@ feature list  (pricing page)
 }
 @media all and (min-width: 768px) {
   .two_columns_section.big_image .part.text {
-    width: 45%;
+    width: 50%;
   }
 }
 .two_columns_section.big_image .part.image {
@@ -1616,7 +1609,7 @@ feature list  (pricing page)
 }
 @media all and (min-width: 768px) {
   .two_columns_section.big_image .part.image {
-    width: 55%;
+    width: 50%;
   }
 }
 .two_columns_section.small_image .column_row {
@@ -1632,7 +1625,7 @@ feature list  (pricing page)
 }
 @media all and (min-width: 768px) {
   .two_columns_section.small_image .part.text {
-    width: 60%;
+    width: 70%;
   }
 }
 .two_columns_section.small_image .part.image {
@@ -1640,7 +1633,7 @@ feature list  (pricing page)
 }
 @media all and (min-width: 768px) {
   .two_columns_section.small_image .part.image {
-    width: 35%;
+    width: 30%;
   }
 }
 .two_columns_section.presentation .part.image img {
@@ -1659,7 +1652,7 @@ feature list  (pricing page)
   - blocks in different colors or bg image
 ***********************************/
 .feature_blocks {
-  background: #151c37;
+  background: #1c254a;
   color: #fff;
 }
 .feature_blocks .feature_blocks_main_heading {
@@ -1697,23 +1690,8 @@ feature list  (pricing page)
   margin: 0 -12px;
 }
 .integrations_section .img_box {
-  width: 100px;
+  width: 7rem;
   padding: 0 0.1rem 1rem 0;
-}
-@media all and (min-width: 576px) {
-  .integrations_section .img_box {
-    width: 110px;
-  }
-}
-@media all and (min-width: 992px) {
-  .integrations_section .img_box {
-    width: 120px;
-  }
-}
-@media all and (min-width: 1200px) {
-  .integrations_section .img_box {
-    width: 125px;
-  }
 }
 .integrations_section .img_box span {
   border-radius: 8px;
@@ -1732,11 +1710,11 @@ feature list  (pricing page)
   border-radius: 24px;
   margin: 0 2% 4rem 0;
   transition: 0.25s ease-in-out;
-  box-shadow: 0 4px 0 #b8e0d7;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid #e6f4f1;
 }
 .card_container:hover {
-  box-shadow: 0 4px 0 #0085cc;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .card_container:hover .title,
 .card_container:hover .description {
@@ -1886,7 +1864,7 @@ feature list  (pricing page)
 .cards_template {
   position: relative;
 }
-.cards_template.darkblue .card_container.darkblue {
+.cards_template.darkblue .card_container.darkblue, .cards_template.darkblue .card_container.blue {
   border: 1px solid #fff;
 }
 .cards_template .cards_template_content {
@@ -1898,10 +1876,9 @@ feature list  (pricing page)
   }
 }
 .cards_template .card_container {
-  box-shadow: 0 4px 0 #070912;
-  border-color: #151c37;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
-.cards_template .card_container.darkblue .icon {
+.cards_template .card_container.darkblue .icon, .cards_template .card_container.blue .icon {
   border-color: #fff;
 }
 
@@ -1932,6 +1909,9 @@ feature list  (pricing page)
 }
 .cards_template_item_content .btn_link {
   max-width: 8rem;
+}
+.cards_template_item_content .text {
+  min-height: 100px;
 }
 @media all and (min-width: 992px) {
   .cards_template_item_content {
@@ -1973,7 +1953,7 @@ latest_updates_section
 }
 .latest_updates_section .updates_btn.active {
   color: #fff;
-  background: #151c37;
+  background: #1c254a;
 }
 
 .updates_tab_content,
@@ -1985,7 +1965,7 @@ latest_updates_section
 @media all and (min-width: 992px) {
   .updates_tab_content,
 .cards_template_content {
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 .updates_tab_content .card_container,
@@ -2049,19 +2029,29 @@ latest_updates_section
 .page_aside ul {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   /*Uncategorized not show*/
+}
+@media all and (min-width: 576px) {
+  .blog_sidebar ul,
+.video_filter ul,
+.page_aside ul {
+    flex-direction: row;
+  }
 }
 .blog_sidebar ul li,
 .video_filter ul li,
 .page_aside ul li {
   position: relative;
-  margin-right: 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #b8e0d7;
 }
 @media all and (min-width: 576px) {
   .blog_sidebar ul li,
 .video_filter ul li,
 .page_aside ul li {
     margin-right: 2rem;
+    border: none;
   }
 }
 .blog_sidebar ul li::after,
@@ -2086,7 +2076,6 @@ latest_updates_section
 .video_filter ul li a,
 .page_aside ul li a {
   padding: 0.5rem 0.2rem 0.5rem 0.2rem;
-  margin-bottom: 0.3rem;
   text-decoration: none;
   display: block;
   white-space: nowrap;
@@ -2209,7 +2198,7 @@ text layout for Pages Content block
 .nopage_section .nopage {
   background: #e6f4f1;
   border-radius: 24px;
-  box-shadow: 0 4px 0 #b8e0d7;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   padding: 3rem;
   min-height: 300px;
   margin-top: -70px;
@@ -2262,10 +2251,10 @@ forum section
   justify-content: center;
 }
 .signup_section .btn_container .btn_link {
-  box-shadow: 0 4px 0 #070912;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .signup_section .btn_container .btn_link.green {
-  box-shadow: 0 4px 0 #00664b;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   color: #fff;
 }
 .signup_section .btn_container .btn_link.green:hover {

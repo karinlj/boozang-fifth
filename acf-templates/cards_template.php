@@ -2,9 +2,11 @@
 $style = '';
 $color = get_sub_field('color');
 $bg_image = get_sub_field('background_image');
-?>
 
-<section class="cards_template <?php echo $color ?> section_spacing_top_medium">
+if ($bg_image) {
+    $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
+}  ?>
+<section class="cards_template <?php echo $color ?> section_spacing_top_medium" <?php echo $style; ?>>
     <div class="container">
         <?php
         $heading = get_sub_field('heading');
@@ -39,19 +41,19 @@ $bg_image = get_sub_field('background_image');
                                 <?php $link = get_sub_field('link');
                                 $mail_link = get_sub_field('mail_link');
                                 $mail_link_text = get_sub_field('mail_link_text');
-                                $btn_class = 'btn_link'
+                                $btn_class = 'btn_link outline_color_blue'
                                 ?>
-                                <?php if ($color === 'darkblue') {
+                                <?php if ($color === 'blue') {
                                     $btn_class = 'btn_link outline_color_white';
                                 } ?>
 
                                 <?php if ($link) { ?>
-                                    <a class="<?php echo $btn_class ?>" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr( $link['target']); ?>" rel="noopener noreferrer"><?php echo esc_html ($link['title']); ?>
+                                    <a class="<?php echo $btn_class ?>" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" rel="noopener noreferrer"><?php echo esc_html($link['title']); ?>
                                     </a>
                                 <?php   } ?>
 
                                 <?php if ($mail_link) { ?>
-                                    <a href="<?php echo esc_url('mailto:' . antispambot( ($mail_link))) ; ?>" class="<?php echo $btn_class ?>" aria-label="Boozang email"><?php echo esc_html ($mail_link_text); ?>
+                                    <a href="<?php echo esc_url('mailto:' . antispambot(($mail_link))); ?>" class="<?php echo $btn_class ?>" aria-label="Boozang email"><?php echo esc_html($mail_link_text); ?>
                                     </a>
                                 <?php   } ?>
                             </div>
