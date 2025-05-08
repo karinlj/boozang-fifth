@@ -1,6 +1,6 @@
 <?php
 //blog variables - default: (!is_single()
-$col_class = 'col-sm-6 col-md-4';
+$col_class = 'col-sm-6 col-lg-4';
 $post_class = 'card_container';
 ?>
 <?php if (is_single()) {

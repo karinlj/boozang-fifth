@@ -43,9 +43,10 @@ if ($bg_image) {
                                 $mail_link_text = get_sub_field('mail_link_text');
                                 $btn_class = 'btn_link outline_color_blue'
                                 ?>
-                                <?php if ($color === 'blue') {
+                                <?php if ($color === 'blue' || $color === 'darkblue') {
                                     $btn_class = 'btn_link outline_color_white';
                                 } ?>
+                                    
 
                                 <?php if ($link) { ?>
                                     <a class="<?php echo $btn_class ?>" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" rel="noopener noreferrer"><?php echo esc_html($link['title']); ?>
