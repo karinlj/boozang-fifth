@@ -4,12 +4,12 @@ if (get_row_layout() == 'feature_list') {
     $heading = get_sub_field('heading');
     $bgColor = get_sub_field('background_color'); ?>
 
-    <section class="feature_list_section <?php echo $bgColor; ?> section_spacing_top_medium">
+    <section class="feature_list_section <?php echo $bgColor; ?> section_spacing_top_small">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <?php if ($heading) { ?>
-                        <h2 class="text_center_laptop margin_4"><?php echo $heading; ?></h2>
+                        <h2 class="margin_4"><?php echo $heading; ?></h2>
                     <?php } ?>
 
                     <div class="row">

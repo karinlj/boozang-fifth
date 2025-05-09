@@ -1,7 +1,7 @@
 /*
 Theme Name: Boozang-fifth
 Author: Karin Ljunggren
-Author URI: http://karinljunggren.com
+Author URI: https://karinljunggren.com
 */
 @import "_mixins.scss";
 @import "variables.scss";
@@ -223,7 +223,7 @@ button,
     background: $themecolorGreen;
     color: #fff;
     border: 1px solid $themecolorGreen;
-    box-shadow: $greenBox_shadow;
+    box-shadow: $themeBox_shadow;
     &:hover {
       background: #fff;
       color: $themecolorGreen;
@@ -233,7 +233,7 @@ button,
     background: $blue;
     color: #fff;
     border: 1px solid $blue;
-    box-shadow: $blueBox_shadow;
+    box-shadow: $themeBox_shadow;
     &:hover {
       background: transparent;
       color: $blue;
@@ -398,6 +398,14 @@ a {
     margin-bottom: 3rem;
   }
 }
+.margin_4 {
+  margin-bottom: 3rem;
+  @media all and (min-width: $lg-min) {
+    margin-bottom: 4rem;
+  }
+}
+
+
 /********************
  Size image-Main
 *********************/
@@ -982,11 +990,7 @@ main nav - default colors for white & lightgrey bg
     }
   }
   .btn_link {
-    // &.outline_color_white {
-    //   box-shadow: $blueBox_shadow;
-    // }
     &.green {
-      // box-shadow: $greenBox_shadow;
       color: #fff;
       &:hover {
         color: $themecolorGreen;
@@ -1130,11 +1134,11 @@ main nav - default colors for white & lightgrey bg
     }
   }
   .pricing_card {
-    border: 2px solid $turqoiseLight;
     border-radius: $themeBorder_radius;
-    box-shadow: $turqoiseBox_shadow;
+    box-shadow: $themeBox_shadow;
     text-align: center;
     height: 490px;
+    margin-right: 4px;
     @media all and (min-width: $sm-min) {
       height: 520px;
     }
@@ -1143,14 +1147,12 @@ main nav - default colors for white & lightgrey bg
     &.higher {
       height: 520px;
       @media all and (min-width: $sm-min) {
-        height: 550px;
+        height: 560px;
       }
     }
     //last pricing_card blue
     &.blue {
       background: $blue;
-      border: 2px solid $blue;
-      box-shadow: $blueBox_shadow;
       .btn_link {
         background: #fff;
         border-color: $blueDarkest;
@@ -1375,7 +1377,7 @@ feature list  (pricing page)
     }
     .pict {
       border-radius: $themeBorder_radius;
-      box-shadow: $themeBox_shadow_alt;
+      box-shadow: $themeBox_shadow;
       // width: 100%;
       height: auto;
     }
@@ -1504,7 +1506,8 @@ feature list  (pricing page)
     }
   }
   .feature_text {
-    word-wrap: break-word;
+    // word-wrap: break-word;
+    white-space: normal;
   }
 }
 
@@ -1551,11 +1554,9 @@ feature list  (pricing page)
   border-radius: $themeBorder_radius;
   margin: 0 2% 4rem 0;
   transition: 0.25s ease-in-out;
-  box-shadow: $turqoiseBox_shadow;
-  // border: 2px solid #f2f2f9;
-  // border: 1px solid $turqoiseLight;
+  box-shadow: $themeBox_shadow;
   &:hover {
-    box-shadow: $link_colorBox_shadow;
+    box-shadow: $themeBox_shadow;
     .title,
     .description {
       transition: 0.25s ease-in-out;
@@ -1716,8 +1717,7 @@ feature list  (pricing page)
     }
   }
   .card_container {
-    box-shadow: $bluedarkBox_shadow;
-    // border-color: $blueDarkest;
+    box-shadow: $themeBox_shadow;
     &.darkblue,
     &.blue {
       .icon {
@@ -2001,7 +2001,7 @@ text layout for Pages Content block
   .nopage {
     background: $turqoiseLight;
     border-radius: $themeBorder_radius;
-    box-shadow: $turqoiseBox_shadow;
+    box-shadow: $themeBox_shadow;
     padding: 3rem;
     min-height: 300px;
     margin-top: -70px;
@@ -2058,9 +2058,9 @@ forum section
   .btn_container {
     justify-content: center;
     .btn_link {
-      box-shadow: $bluedarkBox_shadow;
+      box-shadow: $themeBox_shadow;
       &.green {
-        box-shadow: $greenBox_shadow;
+        box-shadow: $themeBox_shadow;
         color: #fff;
         &:hover {
           color: $themecolorGreen;
