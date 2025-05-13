@@ -8,6 +8,10 @@ Author URI: https://karinljunggren.com
 /********************
      general
 *********************/
+:root {
+  font-size: 16px;
+}
+
 body {
   font-family: "Roboto", "Helvetica", sans-serif;
   color: #212735;
@@ -170,17 +174,24 @@ button,
 .btn_link {
   line-height: 1.2;
   display: inline-block;
-  padding: 12px 22px;
+  padding: 10px 18px;
   cursor: pointer;
   border-radius: 8px;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.1px;
   background: #1c254a;
   color: #fff;
   border: 1px solid transparent;
+}
+@media all and (min-width: 768px) {
+  button,
+.btn,
+.btn_link {
+    padding: 12px 22px;
+  }
 }
 button:focus,
 .btn:focus,
@@ -512,7 +523,7 @@ section h4 {
 }
 
 p {
-  font-size: 17px;
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
@@ -563,7 +574,12 @@ h2.smaller_size_text {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+@media all and (min-width: 576px) {
+  h3 {
+    font-size: 1.3rem;
+  }
 }
 @media all and (min-width: 992px) {
   h3 {
@@ -1488,7 +1504,8 @@ feature list  (pricing page)
 }
 
 /*************************
-  two columns img or text
+two_columns_img_or_text & 
+front_text_image_field
 **************************/
 .two_columns_section {
   min-height: 300px;
@@ -1508,6 +1525,10 @@ feature list  (pricing page)
   .two_columns_section .column_row {
     padding-bottom: 7rem;
   }
+}
+.two_columns_section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
 }
 .two_columns_section .part {
   position: relative;
@@ -1570,11 +1591,10 @@ feature list  (pricing page)
   font-style: italic;
   margin-top: 4px;
 }
-.two_columns_section.big_image, .two_columns_section.small_image {
-  padding: 0;
-}
-.two_columns_section.big_image .part, .two_columns_section.small_image .part {
-  width: auto;
+.two_columns_section.big_image .column_row, .two_columns_section.small_image .column_row {
+  justify-content: space-between;
+  align-items: start;
+  padding-bottom: 0;
 }
 .two_columns_section.big_image .box_shadow_off img, .two_columns_section.small_image .box_shadow_off img {
   box-shadow: none;
@@ -1584,48 +1604,6 @@ feature list  (pricing page)
 }
 .two_columns_section.big_image .btn_link, .two_columns_section.small_image .btn_link {
   margin: 1.5rem 1rem 0 0;
-}
-.two_columns_section.big_image .column_row, .two_columns_section.small_image .column_row {
-  display: block;
-}
-.two_columns_section.big_image .column_row ul, .two_columns_section.small_image .column_row ul {
-  list-style: disc;
-  margin-left: 1.5rem;
-}
-.two_columns_section.big_image .column_row_inner, .two_columns_section.small_image .column_row_inner {
-  display: flex;
-  flex-direction: column;
-}
-@media all and (min-width: 768px) {
-  .two_columns_section.big_image .column_row_inner, .two_columns_section.small_image .column_row_inner {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 -15px;
-  }
-}
-.two_columns_section.big_image .part.text {
-  width: 100%;
-}
-@media all and (min-width: 768px) {
-  .two_columns_section.big_image .part.text {
-    width: 50%;
-  }
-}
-.two_columns_section.big_image .part.image {
-  width: 100%;
-}
-@media all and (min-width: 768px) {
-  .two_columns_section.big_image .part.image {
-    width: 50%;
-  }
-}
-.two_columns_section.small_image .column_row {
-  padding-bottom: 3rem;
-}
-@media all and (min-width: 1200px) {
-  .two_columns_section.small_image .column_row {
-    padding-bottom: 4rem;
-  }
 }
 .two_columns_section.small_image .part.text {
   width: 100%;
@@ -1673,7 +1651,7 @@ feature list  (pricing page)
 }
 .feature_blocks .feature_block {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   height: auto;
 }
 @media all and (min-width: 1200px) {
@@ -1708,31 +1686,25 @@ feature list  (pricing page)
   background: transparent;
 }
 
-/********************************
-  Card Layout for Blog and Videos
-*********************************/
+/****************************************
+  Card Layout for Blog, Videos and cards
+*****************************************/
 .card_container {
+  position: relative;
   background: #fff;
   width: 100%;
   border-radius: 24px;
   margin: 0 2% 4rem 0;
-  transition: 0.25s ease-in-out;
+  transition: all 0.25s ease-out;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .card_container:hover {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 .card_container:hover .title,
 .card_container:hover .description {
   transition: 0.25s ease-in-out;
   color: #00a2ff;
-}
-.card_container .card_container_inner {
-  position: relative;
-}
-.card_container .card_embed_container {
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
 }
 .card_container .embed_link {
   position: absolute;
@@ -1748,31 +1720,6 @@ feature list  (pricing page)
 .card_container .img_container img {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-}
-.card_container .content_container {
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
-  padding: 1rem 1.3rem 1rem 1.3rem;
-}
-@media all and (min-width: 992px) {
-  .card_container .content_container {
-    padding: 1rem 1.7rem 1rem 1.7rem;
-  }
-}
-.card_container .content_container_inner {
-  width: 100%;
-  /* this code clamps based on specified lines */
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  display: -webkit-box;
-}
-.card_container .content_container_inner .title {
-  line-height: 1.3;
-}
-.card_container .content_container_inner p,
-.card_container .content_container_inner .description {
-  font-size: 0.9rem;
 }
 .card_container .cat_badge {
   display: inline-block;
@@ -1791,55 +1738,45 @@ feature list  (pricing page)
   box-shadow: none;
   border: none;
 }
+.card_container.single:hover {
+  transform: none;
+}
 @media all and (min-width: 1200px) {
   .card_container.single {
-    margin-top: -3rem;
+    margin-top: -2rem;
   }
 }
-.card_container.single .content_container {
-  padding: 1rem 0;
-}
-@media all and (min-width: 576px) {
-  .card_container.single .content_container {
-    padding: 1rem 2rem;
-  }
-}
-@media all and (min-width: 768px) {
-  .card_container.single .content_container {
-    padding: 1.5rem 2.5rem;
-  }
-}
-.card_container.single .content_container .cat_badge {
+.card_container.single .cat_badge {
   font-size: 12px;
   margin-bottom: 1rem;
 }
-.card_container.single .content_container pre {
+.card_container.single pre {
   white-space: pre-line;
 }
-.card_container.single .content_container h2 {
+.card_container.single h2 {
   margin-top: 3rem;
 }
-.card_container.single .content_container a {
+.card_container.single a {
   word-break: break-word;
 }
-.card_container.single .content_container a::before {
+.card_container.single a::before {
   background: transparent;
 }
-.card_container.single .content_container a:hover {
+.card_container.single a:hover {
   opacity: 0.7 !important;
 }
-.card_container.single .content_container .title {
+.card_container.single .title {
   color: #212735;
 }
-.card_container.single .content_container .blog_post_meta {
+.card_container.single .blog_post_meta {
   justify-content: flex-start;
 }
-.card_container.single .content_container figure {
+.card_container.single figure {
   position: relative;
   z-index: 1000;
   margin: 3rem 0;
 }
-.card_container.single .content_container figure img {
+.card_container.single figure img {
   border-radius: 24px;
   height: auto;
 }
@@ -1868,6 +1805,34 @@ feature list  (pricing page)
   hyphens: none;
 }
 
+.card_content_container {
+  padding: 1.3rem 1.5rem 1.3rem 1.5rem;
+}
+@media all and (min-width: 992px) {
+  .card_content_container {
+    padding: 1.5rem 1.7rem 1.5rem 1.7rem;
+  }
+}
+.card_content_container .title {
+  line-height: 1.3;
+}
+.card_content_container p,
+.card_content_container .description {
+  font-size: 0.9rem;
+}
+.card_content_container.with_img {
+  padding-top: 1rem;
+}
+
+.card_content_container_inner {
+  width: 100%;
+  /* this code clamps based on specified lines */
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+}
+
 /**********************
   cards_template
 ***********************/
@@ -1877,29 +1842,19 @@ feature list  (pricing page)
 .cards_template.darkblue .card_container.darkblue, .cards_template.darkblue .card_container.blue {
   border: 1px solid #fff;
 }
-.cards_template .cards_template_content {
-  margin-top: 2rem;
-}
-@media all and (min-width: 992px) {
-  .cards_template .cards_template_content {
-    margin-top: 3rem;
-  }
-}
-.cards_template .card_container {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-}
 .cards_template .card_container.darkblue .icon, .cards_template .card_container.blue .icon {
   border-color: #fff;
 }
-
-.cards_template_item_content {
-  border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.1rem 1.3rem;
+.cards_template .card_container.darkblue .title, .cards_template .card_container.blue .title {
+  color: #fff;
 }
-.cards_template_item_content .icon {
+.cards_template .card_container .title {
+  color: #212735;
+}
+.cards_template .card_container:hover {
+  transform: none;
+}
+.cards_template .card_container .icon {
   margin-bottom: 1rem;
   padding: 0.5rem;
   border-radius: 5px;
@@ -1909,24 +1864,74 @@ feature list  (pricing page)
   justify-content: center;
   align-items: center;
 }
-.cards_template_item_content .icon i.fa-classic,
-.cards_template_item_content .icon .fa-regular,
-.cards_template_item_content .icon .fa-solid,
-.cards_template_item_content .icon .far,
-.cards_template_item_content .icon .fas {
+.cards_template .card_container .icon i.fa-classic,
+.cards_template .card_container .icon .fa-regular,
+.cards_template .card_container .icon .fa-solid,
+.cards_template .card_container .icon .far,
+.cards_template .card_container .icon .fas {
   color: #00a87b;
   font-size: 1.6rem;
 }
-.cards_template_item_content .btn_link {
-  max-width: 8rem;
-}
-.cards_template_item_content .text {
+.cards_template .card_container .card_text {
   min-height: 100px;
+  font-size: 1rem;
 }
-@media all and (min-width: 992px) {
-  .cards_template_item_content {
-    padding: 1.5rem 1.7rem;
-  }
+
+/*********************
+        Blog
+ *********************/
+.blog_flow .blog_post_meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0 0 0;
+}
+.blog_flow .blog_post_meta p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #66758d;
+  margin-bottom: 0.5rem;
+}
+.blog_flow .wpcf7 {
+  max-width: 100%;
+}
+.blog_flow .wpcf7 label {
+  max-width: 100%;
+}
+.blog_flow .wpcf7 label input {
+  max-width: 100%;
+}
+
+.paginate_links {
+  text-align: center;
+}
+.paginate_links span,
+.paginate_links a,
+.paginate_links button {
+  display: inline-block;
+  margin-right: 0.2rem;
+  line-height: 1.2;
+  border-radius: 8px;
+  border: 1px solid #a6b0bf;
+}
+.paginate_links .page-numbers {
+  padding: 0.4rem 0.6rem;
+}
+.paginate_links .page-numbers.current {
+  color: #212735;
+}
+.paginate_links .prev,
+.paginate_links .next {
+  border: none;
+  padding: 0;
+}
+.paginate_links button,
+.paginate_links .btn {
+  border-color: #a6b0bf;
+  background: transparent;
+  color: #212735;
+  padding: 0.4rem 0.6rem !important;
 }
 
 /********************
@@ -2123,63 +2128,6 @@ latest_updates_section
 .page_aside .current_page_item::after,
 .page_aside .parent_active::after {
   opacity: 1;
-}
-
-/*********************
-        Blog
- *********************/
-.blog_flow .blog_post_meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0.5rem 0 0 0;
-}
-.blog_flow .blog_post_meta p {
-  font-size: 0.8rem;
-  margin: 0;
-  color: #66758d;
-  margin-bottom: 0.5rem;
-}
-.blog_flow .wpcf7 {
-  max-width: 100%;
-}
-.blog_flow .wpcf7 label {
-  max-width: 100%;
-}
-.blog_flow .wpcf7 label input {
-  max-width: 100%;
-}
-
-.paginate_links {
-  text-align: center;
-}
-.paginate_links span,
-.paginate_links a,
-.paginate_links button {
-  display: inline-block;
-  margin-right: 0.2rem;
-  line-height: 1.2;
-  border-radius: 8px;
-  border: 1px solid #a6b0bf;
-}
-.paginate_links .page-numbers {
-  padding: 0.4rem 0.6rem;
-}
-.paginate_links .page-numbers.current {
-  color: #212735;
-}
-.paginate_links .prev,
-.paginate_links .next {
-  border: none;
-  padding: 0;
-}
-.paginate_links button,
-.paginate_links .btn {
-  border-color: #a6b0bf;
-  background: transparent;
-  color: #212735;
-  padding: 0.4rem 0.6rem !important;
 }
 
 /**********************************

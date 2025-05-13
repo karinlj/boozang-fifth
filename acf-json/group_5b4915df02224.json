@@ -75,6 +75,32 @@
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
+                                    "key": "field_68239f603edae",
+                                    "label": "Background color",
+                                    "name": "background_color",
+                                    "aria-label": "",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "white": "White"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "allow_in_bindings": 0,
+                                    "layout": "vertical",
+                                    "save_other_choice": 0,
+                                    "parent_repeater": "field_5eb1a91363b31"
+                                },
+                                {
                                     "key": "field_5b44cef42d091",
                                     "label": "Two columns",
                                     "name": "two_columns",
@@ -1019,5 +1045,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745961043
+    "modified": 1747165395
 }

@@ -1,23 +1,23 @@
 <?php
 
 //All resourses
-require_once('inc/site-recources.php');
+require('inc/site-recources.php');
 
 //Theme support
-require_once('inc/theme-support.php');
+require('inc/theme-support.php');
 
 // main menu
-require_once('inc/menus.php');
+require('inc/menus.php');
 
 //Widget locations
-require_once('inc/widgets.php');
+require('inc/widgets.php');
 
 //Custom Post Types
-require_once('inc/custom-post-types.php');
+require('inc/custom-post-types.php');
 
 //Custom Taxonomies
-require_once('inc/custom-taxonomies.php');
+require('inc/custom-taxonomies.php');
 
 //ACF options page
-require_once('inc/acf-settings.php');
+require('inc/acf-settings.php');
 

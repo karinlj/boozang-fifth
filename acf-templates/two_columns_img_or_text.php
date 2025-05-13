@@ -4,9 +4,8 @@
  * Created by Karin.
  * Layout 'two_columns_img_or_text' in flex content 'Pages Content block'
  */
-$color = get_sub_field('color_theme');
 ?>
-<section class="two_columns_section <?php echo $color; ?> section_spacing_top_medium">
+<section class="two_columns_section section_spacing_top_medium">
     <div class="container">
         <?php
         //loopa repeater

@@ -12,11 +12,9 @@ $post_class = 'card_container';
         $post_class = 'card_container single';
     } ?>
     <div class="<?php echo $post_class; ?>">
-        <div class="card_embed_container">
             <div class="img_container">
                 <?php the_post_thumbnail(); ?>
             </div>
-        </div>
 
         <!-- link if blog page  -->
         <?php if (!is_single()) { ?>
@@ -24,7 +22,7 @@ $post_class = 'card_container';
             </a>
         <?php } ?>
 
-        <div class="content_container">
+        <div class="card_content_container with_img">
             <?php $categories = get_the_category();
             $separator = " ";
             $output = '';
@@ -39,7 +37,7 @@ $post_class = 'card_container';
             }
             ?>
             <?php if (!is_single()) { ?>
-                <div class="content_container_inner">
+                <div class="card_content_container_inner">
                 <h3 class="title">
                     <?php the_title(); ?>
                 </h3>
@@ -73,7 +71,7 @@ $post_class = 'card_container';
                 </p>
 
                 <?php if (!is_single()) { ?>
-                    <!--/end  post_content_inner -->
+                    <!--/end  card_content_container_inner -->
                 </div>
             <?php } ?>
 

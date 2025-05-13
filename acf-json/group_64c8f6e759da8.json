@@ -131,6 +131,33 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6823a56df58a8",
+                            "label": "Background color",
+                            "name": "background_color",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "white": "White",
+                                "blue": "Blue",
+                                "darkblue": "Darkblue"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "allow_in_bindings": 1,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_681259a2363ca",
                             "label": "Big or small image",
                             "name": "big_or_small_image",
@@ -229,34 +256,6 @@
                             "button_label": "Add Row",
                             "rows_per_page": 20,
                             "sub_fields": [
-                                {
-                                    "key": "field_606207e30b6e9",
-                                    "label": "Background color",
-                                    "name": "background_color",
-                                    "aria-label": "",
-                                    "type": "radio",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "white": "White",
-                                        "blue": "Blue",
-                                        "darkblue": "Darkblue"
-                                    },
-                                    "default_value": "",
-                                    "return_format": "value",
-                                    "allow_null": 0,
-                                    "other_choice": 0,
-                                    "allow_in_bindings": 1,
-                                    "layout": "vertical",
-                                    "save_other_choice": 0,
-                                    "parent_repeater": "field_6061f86c6006d"
-                                },
                                 {
                                     "key": "field_6061f8936006e",
                                     "label": "Two columns",
@@ -1183,5 +1182,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746815032
+    "modified": 1747166686
 }

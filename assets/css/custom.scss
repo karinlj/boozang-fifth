@@ -9,6 +9,9 @@ Author URI: https://karinljunggren.com
 /********************
      general
 *********************/
+:root {
+  font-size: 16px;
+}
 body {
   font-family: $themefont;
   color: $themecolor;
@@ -156,18 +159,20 @@ button,
 .btn_link {
   line-height: 1.2;
   display: inline-block;
-  padding: 12px 22px;
+  padding: 10px 18px;
   cursor: pointer;
   border-radius: $btnBorder_radius;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.1px;
   background: $blueDarkest;
   color: #fff;
   border: 1px solid transparent;
-  // text-transform: capitalize;
+  @media all and (min-width: $md-min) {
+    padding: 12px 22px;
+  }
   &:focus {
     color: $linkcolor;
     border-radius: 3px;
@@ -405,7 +410,6 @@ a {
   }
 }
 
-
 /********************
  Size image-Main
 *********************/
@@ -451,7 +455,7 @@ section {
   }
 }
 p {
-  font-size: 17px;
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
@@ -486,7 +490,10 @@ h2 {
   }
 }
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  @media all and (min-width: $sm-min) {
+    font-size: 1.3rem;
+  }
   @media all and (min-width: $lg-min) {
     font-size: 1.4rem;
   }
@@ -1319,7 +1326,8 @@ feature list  (pricing page)
 }
 
 /*************************
-  two columns img or text
+two_columns_img_or_text & 
+front_text_image_field
 **************************/
 .two_columns_section {
   min-height: 300px;
@@ -1335,6 +1343,10 @@ feature list  (pricing page)
       padding-bottom: 7rem;
     }
   }
+    ul {
+        list-style: disc;
+        margin-left: 1.5rem;
+      }
   .part {
     position: relative;
     width: 100%;
@@ -1378,7 +1390,6 @@ feature list  (pricing page)
     .pict {
       border-radius: $themeBorder_radius;
       box-shadow: $themeBox_shadow;
-      // width: 100%;
       height: auto;
     }
     .alt_caption {
@@ -1391,9 +1402,10 @@ feature list  (pricing page)
   }
   &.big_image,
   &.small_image {
-    padding: 0;
-    .part {
-      width: auto;
+    .column_row {
+      justify-content: space-between;
+      align-items: start;
+      padding-bottom: 0;
     }
     .box_shadow_off {
       img {
@@ -1408,47 +1420,9 @@ feature list  (pricing page)
     }
     .btn_link {
       margin: 1.5rem 1rem 0 0;
-    }
-    .column_row {
-      display: block;
-      ul {
-        list-style: disc;
-        margin-left: 1.5rem;
-      }
-    }
-    .column_row_inner {
-      display: flex;
-      flex-direction: column;
-      @media all and (min-width: $md-min) {
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 0 -15px;
-      }
-    }
-  }
-  &.big_image {
-    .part {
-      &.text {
-        width: 100%;
-        @media all and (min-width: $md-min) {
-          width: 50%;
-        }
-      }
-      &.image {
-        width: 100%;
-        @media all and (min-width: $md-min) {
-          width: 50%;
-        }
-      }
-    }
+    }  
   }
   &.small_image {
-    .column_row {
-      padding-bottom: 3rem;
-      @media all and (min-width: $xl-min) {
-        padding-bottom: 4rem;
-      }
-    }
     .part {
       &.text {
         width: 100%;
@@ -1499,7 +1473,7 @@ feature list  (pricing page)
   }
   .feature_block {
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     height: auto;
     @media all and (min-width: $xl-min) {
       padding: 0 0 0 1.5rem;
@@ -1545,30 +1519,24 @@ feature list  (pricing page)
   }
 }
 
-/********************************
-  Card Layout for Blog and Videos
-*********************************/
+/****************************************
+  Card Layout for Blog, Videos and cards
+*****************************************/
 .card_container {
+  position: relative;
   background: #fff;
   width: 100%;
   border-radius: $themeBorder_radius;
   margin: 0 2% 4rem 0;
-  transition: 0.25s ease-in-out;
+  transition: all 0.25s ease-out;
   box-shadow: $themeBox_shadow;
   &:hover {
-    box-shadow: $themeBox_shadow;
+    transform: translateY(-4px);
     .title,
     .description {
       transition: 0.25s ease-in-out;
       color: $linkcolor;
     }
-  }
-  .card_container_inner {
-    position: relative;
-  }
-  .card_embed_container {
-    border-top-left-radius: $themeBorder_radius;
-    border-top-right-radius: $themeBorder_radius;
   }
   .embed_link {
     position: absolute;
@@ -1583,29 +1551,6 @@ feature list  (pricing page)
     img {
       border-top-left-radius: $themeBorder_radius;
       border-top-right-radius: $themeBorder_radius;
-    }
-  }
-  .content_container {
-    border-bottom-left-radius: $themeBorder_radius;
-    border-bottom-right-radius: $themeBorder_radius;
-    padding: 1rem 1.3rem 1rem 1.3rem;
-    @media all and (min-width: $lg-min) {
-      padding: 1rem 1.7rem 1rem 1.7rem;
-    }
-  }
-  .content_container_inner {
-    width: 100%;
-    /* this code clamps based on specified lines */
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    .title {
-      line-height: 1.3;
-    }
-    p,
-    .description {
-      font-size: 0.9rem;
     }
   }
   .cat_badge {
@@ -1625,52 +1570,47 @@ feature list  (pricing page)
     transition: none;
     box-shadow: none;
     border: none;
+    &:hover {
+      transform: none;
+    }
     @media all and (min-width: $xl-min) {
-      margin-top: -3rem;
+      margin-top: -2rem;
     }
-    .content_container {
-      padding: 1rem 0;
-      @media all and (min-width: $sm-min) {
-        padding: 1rem 2rem;
+    .cat_badge {
+      font-size: 12px;
+      margin-bottom: 1rem;
+    }
+    pre {
+      white-space: pre-line;
+    }
+    h2 {
+      margin-top: 3rem;
+    }
+    a {
+      word-break: break-word;
+      &::before {
+        background: transparent;
       }
-      @media all and (min-width: $md-min) {
-        padding: 1.5rem 2.5rem;
-      }
-      .cat_badge {
-        font-size: 12px;
-        margin-bottom: 1rem;
-      }
-      pre {
-        white-space: pre-line;
-      }
-      h2 {
-        margin-top: 3rem;
-      }
-      a {
-        word-break: break-word;
-        &::before {
-          background: transparent;
-        }
-        &:hover {
-          opacity: 0.7 !important;
-        }
-      }
-      .title {
-        color: $themecolor;
-      }
-      .blog_post_meta {
-        justify-content: flex-start;
-      }
-      figure {
-        position: relative;
-        z-index: 1000;
-        margin: 3rem 0;
-        img {
-          border-radius: $themeBorder_radius;
-          height: auto;
-        }
+      &:hover {
+        opacity: 0.7 !important;
       }
     }
+    .title {
+      color: $themecolor;
+    }
+    .blog_post_meta {
+      justify-content: flex-start;
+    }
+    figure {
+      position: relative;
+      z-index: 1000;
+      margin: 3rem 0;
+      img {
+        border-radius: $themeBorder_radius;
+        height: auto;
+      }
+    }
+
     .wp-block-code {
       background: #f5f2f0;
       padding: 1em;
@@ -1697,11 +1637,40 @@ feature list  (pricing page)
     }
   }
 }
+.card_content_container {
+  padding: 1.3rem 1.5rem 1.3rem 1.5rem;
+  @media all and (min-width: $lg-min) {
+    padding: 1.5rem 1.7rem 1.5rem 1.7rem;
+  }
+  .title {
+    line-height: 1.3;
+  }
+  //blog & video
+  p,
+  .description {
+    font-size: 0.9rem;
+  }
+  &.with_img {
+    padding-top: 1rem;
+  }
+}
+//blog & video
+.card_content_container_inner {
+  width: 100%;
+  /* this code clamps based on specified lines */
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+}
+
 /**********************
   cards_template
 ***********************/
+//card layout for cards_template cards
 .cards_template {
   position: relative;
+  //darkblue bg on whole field
   &.darkblue {
     .card_container {
       &.darkblue,
@@ -1710,57 +1679,109 @@ feature list  (pricing page)
       }
     }
   }
-  .cards_template_content {
-    margin-top: 2rem;
-    @media all and (min-width: $lg-min) {
-      margin-top: 3rem;
-    }
-  }
   .card_container {
-    box-shadow: $themeBox_shadow;
+    //bg on item
     &.darkblue,
     &.blue {
       .icon {
         border-color: #fff;
       }
+      .title {
+        color: #fff;
+      }
+    }
+    .title {
+      color: $themecolor;
+    }
+    &:hover {
+      transform: none;
+    }
+    .icon {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      width: 2.5rem;
+      border: 1px solid $themecolor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i.fa-classic,
+      .fa-regular,
+      .fa-solid,
+      .far,
+      .fas {
+        color: $themecolorGreen;
+        font-size: $iconsize;
+      }
+    }
+    .card_text {
+      min-height: 100px;
+      font-size: 1rem;
     }
   }
 }
-.cards_template_item_content {
-  border-radius: $themeBorder_radius;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.1rem 1.3rem;
-  .icon {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    width: 2.5rem;
-    border: 1px solid $themecolor;
+/*********************
+        Blog
+ *********************/
+//blog_flow
+.blog_flow {
+  //blog_post_meta
+  .blog_post_meta {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    i.fa-classic,
-    .fa-regular,
-    .fa-solid,
-    .far,
-    .fas {
-      color: $themecolorGreen;
-      font-size: $iconsize;
+    // border-top: 1px solid $turqoise;
+    width: 100%;
+    padding: 0.5rem 0 0 0;
+    p {
+      font-size: 0.9rem;
+      margin: 0;
+      color: $themecolorLight;
+      margin-bottom: 0.5rem;
     }
   }
-  .btn_link {
-    max-width: 8rem;
-  }
-  .text {
-    min-height: 100px;
-  }
-  @media all and (min-width: $lg-min) {
-    padding: 1.5rem 1.7rem;
+  //wpcf7 form
+  .wpcf7 {
+    max-width: 100%;
+    label {
+      max-width: 100%;
+      input {
+        max-width: 100%;
+      }
+    }
   }
 }
-
+//next and previous
+.paginate_links {
+  text-align: center;
+  span,
+  a,
+  button {
+    display: inline-block;
+    margin-right: 0.2rem;
+    line-height: 1.2;
+    border-radius: $btnBorder_radius;
+    border: 1px solid $themecolorLightest;
+  }
+  .page-numbers {
+    padding: 0.4rem 0.6rem;
+  }
+  .page-numbers.current {
+    color: $themecolor;
+  }
+  .prev,
+  .next {
+    border: none;
+    padding: 0;
+  }
+  button,
+  .btn {
+    border-color: $themecolorLightest;
+    background: transparent;
+    color: $themecolor;
+    padding: 0.4rem 0.6rem !important;
+  }
+}
 /********************
 latest_updates_section
 *********************/
@@ -1915,68 +1936,7 @@ latest_updates_section
   }
 }
 
-/*********************
-        Blog
- *********************/
-//blog_flow
-.blog_flow {
-  //blog_post_meta
-  .blog_post_meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // border-top: 1px solid $turqoise;
-    width: 100%;
-    padding: 0.5rem 0 0 0;
-    p {
-      font-size: 0.8rem;
-      margin: 0;
-      color: $themecolorLight;
-      margin-bottom: 0.5rem;
-    }
-  }
-  //wpcf7 form
-  .wpcf7 {
-    max-width: 100%;
-    label {
-      max-width: 100%;
-      input {
-        max-width: 100%;
-      }
-    }
-  }
-}
-//next and previous
-.paginate_links {
-  text-align: center;
-  span,
-  a,
-  button {
-    display: inline-block;
-    margin-right: 0.2rem;
-    line-height: 1.2;
-    border-radius: $btnBorder_radius;
-    border: 1px solid $themecolorLightest;
-  }
-  .page-numbers {
-    padding: 0.4rem 0.6rem;
-  }
-  .page-numbers.current {
-    color: $themecolor;
-  }
-  .prev,
-  .next {
-    border: none;
-    padding: 0;
-  }
-  button,
-  .btn {
-    border-color: $themecolorLightest;
-    background: transparent;
-    color: $themecolor;
-    padding: 0.4rem 0.6rem !important;
-  }
-}
+
 
 /**********************************
 text layout for Pages Content block

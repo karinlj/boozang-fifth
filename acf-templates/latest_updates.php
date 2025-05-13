@@ -73,41 +73,34 @@ if (get_row_layout() == 'latest_updates') {
                                 $image = get_field('image');
                                 $video_url = get_field('url');  ?>
 
-
                                 <li class="card_container">
-                                    <div class="card_container_inner">
-                                        <div class="card_embed_container">
-                                            <?php if ($video_url) { ?>
-                                                <a class="embed_link" href="<?php echo $video_url; ?>" target="_blank" aria-label="<?php the_title(); ?>">
-                                                </a>
+                                    <div class="img_container">
+                                        <?php
+                                        if ($image) {
+                                            echo wp_get_attachment_image($image, 'full');
+                                        } else if (has_post_thumbnail()) {
+                                            $thumb_id = get_post_thumbnail_id();
+                                            echo wp_get_attachment_image($thumb_id, 'full');
+                                        }  ?>
+                                    </div>
+                                    <?php if ($video_url) { ?>
+                                        <a class="embed_link" href="<?php echo $video_url; ?>" target="_blank" aria-label="<?php the_title(); ?>">
+                                        </a>
+                                    <?php } else { ?>
+                                        <a class="embed_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
+                                        </a>
+                                    <?php } ?>
+                                    <div class="card_content_container with_img">
+                                        <?php echo '<span class="cat_badge">' . $text_field . '</span>'; ?>
+                                        <div class="card_content_container_inner">
+                                            <h3 class="title"><?php echo $title; ?></h3>
+
+                                            <?php if ($description) { ?>
+                                                <p class="description"><?php echo $description; ?></p>
+
                                             <?php } else { ?>
-                                                <a class="embed_link" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
-                                                </a>
-                                            <?php } ?>
-
-                                            <div class="img_container">
-                                                <?php
-                                                if ($image) {
-                                                    echo wp_get_attachment_image($image, 'full');
-                                                } else if (has_post_thumbnail()) {
-                                                    $thumb_id = get_post_thumbnail_id();
-                                                    echo wp_get_attachment_image($thumb_id, 'full');
-                                                }  ?>
-
-                                            </div>
-                                        </div>
-                                        <div class="content_container">
-                                            <?php echo '<span class="cat_badge">' . $text_field . '</span>'; ?>
-                                            <div class="content_container_inner">
-                                                <h3 class="smaller_size_text title"><?php echo $title; ?></h3>
-
-                                                <?php if ($description) { ?>
-                                                    <p class="description"><?php echo $description; ?></p>
-
-                                                <?php } else { ?>
-                                                    <p class="description"><?php echo get_the_content();; ?></p>
-                                                <?php   } ?>
-                                            </div>
+                                                <p class="description"><?php echo get_the_content();; ?></p>
+                                            <?php   } ?>
                                         </div>
                                     </div>
                                 </li>
