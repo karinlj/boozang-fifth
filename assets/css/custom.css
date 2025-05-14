@@ -643,37 +643,37 @@ h6 {
 section,
 header,
 footer,
-.pricing_card {
+.pricing_card, .card_container {
   position: relative;
 }
 section.darkblue,
 header.darkblue,
 footer.darkblue,
-.pricing_card.darkblue {
+.pricing_card.darkblue, .card_container.darkblue {
   background: #1c254a;
 }
 section.blue,
 header.blue,
 footer.blue,
-.pricing_card.blue {
+.pricing_card.blue, .card_container.blue {
   background: #1368e7;
 }
 section.lightgrey,
 header.lightgrey,
 footer.lightgrey,
-.pricing_card.lightgrey {
+.pricing_card.lightgrey, .card_container.lightgrey {
   background: #f9f9f9;
 }
 section.lighturqoise,
 header.lighturqoise,
 footer.lighturqoise,
-.pricing_card.lighturqoise {
+.pricing_card.lighturqoise, .card_container.lighturqoise {
   background: #e6f4f1;
 }
 section.white,
 header.white,
 footer.white,
-.pricing_card.white {
+.pricing_card.white, .card_container.white {
   background: #fff;
 }
 section.darkblue h1,
@@ -738,7 +738,21 @@ footer.blue p,
 .pricing_card.blue h5,
 .pricing_card.blue h6,
 .pricing_card.blue li,
-.pricing_card.blue p {
+.pricing_card.blue p, .card_container.darkblue h1,
+.card_container.darkblue h2,
+.card_container.darkblue h3,
+.card_container.darkblue h4,
+.card_container.darkblue h5,
+.card_container.darkblue h6,
+.card_container.darkblue li,
+.card_container.darkblue p, .card_container.blue h1,
+.card_container.blue h2,
+.card_container.blue h3,
+.card_container.blue h4,
+.card_container.blue h5,
+.card_container.blue h6,
+.card_container.blue li,
+.card_container.blue p {
   color: #fff;
 }
 section.white h1,
@@ -764,7 +778,12 @@ footer.white h6,
 .pricing_card.white h3,
 .pricing_card.white h4,
 .pricing_card.white h5,
-.pricing_card.white h6 {
+.pricing_card.white h6, .card_container.white h1,
+.card_container.white h2,
+.card_container.white h3,
+.card_container.white h4,
+.card_container.white h5,
+.card_container.white h6 {
   color: #212735;
 }
 section.white li,
@@ -774,7 +793,8 @@ header.white p,
 footer.white li,
 footer.white p,
 .pricing_card.white li,
-.pricing_card.white p {
+.pricing_card.white p, .card_container.white li,
+.card_container.white p {
   color: #212735;
 }
 
@@ -1309,87 +1329,46 @@ main nav - default colors for white & lightgrey bg
 /*********************
     pricing
  *********************/
-.pricing_section {
-  padding-top: 1.5rem;
-}
-.pricing_section .col-lg-4 {
-  margin-bottom: 2rem;
-}
-@media all and (min-width: 992px) {
-  .pricing_section .col-lg-4 {
-    margin-bottom: 0;
-  }
+.pricing_section .no-gutters > .col, .pricing_section .no-gutters > [class*=col-] {
+  padding-right: 5px;
 }
 .pricing_section .pricing_card {
   border-radius: 24px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
   height: 490px;
-  margin-right: 4px;
 }
 @media all and (min-width: 576px) {
   .pricing_section .pricing_card {
     height: 520px;
   }
 }
-.pricing_section .pricing_card.higher {
-  height: 520px;
-}
-@media all and (min-width: 576px) {
-  .pricing_section .pricing_card.higher {
-    height: 560px;
+@media all and (min-width: 1200px) {
+  .pricing_section .pricing_card {
+    height: 580px;
   }
 }
-.pricing_section .pricing_card.blue {
-  background: #1368e7;
-}
-.pricing_section .pricing_card.blue .btn_link {
-  background: #fff;
-  border-color: #1c254a;
-  color: #1c254a;
-}
-.pricing_section .pricing_card.blue .btn_link:hover {
-  color: #fff;
-  background: #1c254a;
-}
-.pricing_section .card_body {
-  padding: 1.5rem 1.25rem;
+.pricing_section .pricing_card_body {
+  padding: 0 1rem;
   height: 100%;
-}
-.pricing_section .card_header {
-  border-bottom: 1px solid #b8e0d7;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.pricing_section .card_header .heading {
-  font-size: 1.8rem;
-}
-.pricing_section .card_header .text {
-  font-weight: 600;
+.pricing_section .pricing_card_header {
+  border-bottom: 1px solid #b8e0d7;
 }
 .pricing_section ul.feat_list {
-  padding: 1.25rem 0 0 0;
-  min-height: 12rem;
+  padding-top: 1rem;
 }
 .pricing_section ul.feat_list li.list_item {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  line-height: 1.3;
-}
-@media all and (min-width: 576px) {
-  .pricing_section ul.feat_list li.list_item {
-    font-size: 1rem;
-  }
+  margin-bottom: 0.1rem;
 }
 @media all and (min-width: 1200px) {
   .pricing_section ul.feat_list li.list_item {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
   }
 }
 .pricing_section .price {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 .pricing_section .price .number {
   font-weight: 500;
@@ -1400,7 +1379,6 @@ main nav - default colors for white & lightgrey bg
 }
 .pricing_section .btn_link {
   width: 12rem;
-  box-shadow: none;
 }
 
 /*********************
@@ -1428,14 +1406,13 @@ feature list  (pricing page)
 .faq_accordion_section .question_part {
   width: 100%;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   cursor: pointer;
 }
 .faq_accordion_section .question_part .question {
   color: #212735;
   font-weight: 600;
-  font-size: 17px;
-  line-height: 1.8;
+  font-size: inherit;
   border: none;
   background: transparent;
   text-align: left;
@@ -1484,23 +1461,13 @@ feature list  (pricing page)
   min-height: 310px;
 }
 .info_banner p {
-  color: #fff;
   line-height: 1.8;
 }
 .info_banner .link_wrapper {
-  padding-top: 1rem;
+  padding: 0.5rem 0;
 }
-.info_banner .btn_wrapper {
-  padding-top: 1rem;
-}
-.info_banner .btn_wrapper .link {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  transition: all 0.25s ease;
-}
-.info_banner .btn_wrapper .link:hover {
-  transform: translateX(2px);
+.info_banner .link_wrapper a {
+  display: inline-block;
 }
 
 /*************************
@@ -1687,7 +1654,7 @@ front_text_image_field
 }
 
 /****************************************
-  Card Layout for Blog, Videos and cards
+  Card Layout for Blog, Videos, Pricing and cards
 *****************************************/
 .card_container {
   position: relative;

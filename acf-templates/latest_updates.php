@@ -1,8 +1,8 @@
 <?php
 
 // latest_updates field for for Front Page Block
-
 if (get_row_layout() == 'latest_updates') {
+    
     $style = '';
     $bg_image = get_sub_field('background_image');
 

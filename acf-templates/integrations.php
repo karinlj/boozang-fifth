@@ -1,5 +1,7 @@
 <?php
 // integrations layout for Front Page Block
+if (get_row_layout() == 'integrations') {
+
 $bg_color = get_sub_field('background_color');
 ?>
 <section class="integrations_section <?php echo $bg_color; ?> section_spacing_top_small">
@@ -33,3 +35,6 @@ $bg_color = get_sub_field('background_color');
 
     </div>
 </section>
+<?php
+}
+?>

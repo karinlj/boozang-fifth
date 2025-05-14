@@ -538,7 +538,7 @@ h6 {
 section,
 header,
 footer,
-.pricing_card {
+ .pricing_card,.card_container {
   position: relative;
   &.darkblue {
     background: $blueDarkest;
@@ -1035,14 +1035,6 @@ main nav - default colors for white & lightgrey bg
   //items on dark bg - nav, btns ecc
   &.darkblue,
   &.blue {
-    // .btn_link {
-    //   &.green {
-    //     &:hover {
-    //       color: $themecolorGreen;
-    //     }
-    //   }
-    // }
-    //nav for dark bg
     nav {
       a,
       a:visited,
@@ -1133,78 +1125,40 @@ main nav - default colors for white & lightgrey bg
     pricing
  *********************/
 .pricing_section {
-  padding-top: 1.5rem;
-  .col-lg-4 {
-    margin-bottom: 2rem;
-    @media all and (min-width: $lg-min) {
-      margin-bottom: 0;
-    }
+  .no-gutters>.col, .no-gutters>[class*=col-] {
+    padding-right: 5px;
   }
   .pricing_card {
     border-radius: $themeBorder_radius;
-    box-shadow: $themeBox_shadow;
-    text-align: center;
-    height: 490px;
-    margin-right: 4px;
+     height: 490px;
     @media all and (min-width: $sm-min) {
       height: 520px;
     }
-
-    //middle pricing_card higher
-    &.higher {
-      height: 520px;
-      @media all and (min-width: $sm-min) {
-        height: 560px;
-      }
-    }
-    //last pricing_card blue
-    &.blue {
-      background: $blue;
-      .btn_link {
-        background: #fff;
-        border-color: $blueDarkest;
-        color: $blueDarkest;
-        &:hover {
-          color: #fff;
-          background: $blueDarkest;
-        }
-      }
+    @media all and (min-width: $xl-min) {
+      height: 580px;
     }
   }
-  .card_body {
-    padding: 1.5rem 1.25rem;
+  .pricing_card_body {
+    padding: 0 1rem;
     height: 100%;
-  }
-  .card_header {
-    border-bottom: 1px solid $turqoise;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    .heading {
-      font-size: 1.8rem;
-    }
-    .text {
-      font-weight: 600;
-    }
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .pricing_card_header {
+    border-bottom: 1px solid $turqoise;
   }
   ul.feat_list {
-    padding: 1.25rem 0 0 0;
-    min-height: 12rem;
+    padding-top: 1rem;
     li.list_item {
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      line-height: 1.3;
-      @media all and (min-width: $sm-min) {
-        font-size: 1rem;
-      }
+      margin-bottom: 0.1rem;
       @media all and (min-width: $xl-min) {
-        margin-bottom: 0.8rem;
+         margin-bottom: 0.5rem;
       }
     }
   }
   .price {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     .number {
       font-weight: 500;
       font-size: 1.9rem;
@@ -1215,7 +1169,6 @@ main nav - default colors for white & lightgrey bg
   }
   .btn_link {
     width: 12rem;
-    box-shadow: none;
   }
 }
 
@@ -1247,13 +1200,12 @@ feature list  (pricing page)
   .question_part {
     width: 100%;
     position: relative;
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     cursor: pointer;
     .question {
       color: $themecolor;
       font-weight: 600;
-      font-size: 17px;
-      line-height: 1.8;
+      font-size: inherit;
       border: none;
       background: transparent;
       text-align: left;
@@ -1305,22 +1257,13 @@ feature list  (pricing page)
 .info_banner {
   min-height: 310px;
   p {
-    color: #fff;
     line-height: 1.8;
   }
   .link_wrapper {
-    padding-top: 1rem;
-  }
-  .btn_wrapper {
-    padding-top: 1rem;
-    .link {
-      background: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-      transition: all 0.25s ease;
-      &:hover {
-        transform: translateX(2px);
-      }
+    padding: 0.5rem 0;
+    a{
+      display: inline-block;
+
     }
   }
 }
@@ -1500,15 +1443,6 @@ front_text_image_field
   .img_box {
     width: 7rem;
     padding: 0 0.1rem 1rem 0;
-    // @media all and (min-width: $sm-min) {
-    //   width: 110px;
-    // }
-    // @media all and (min-width: $lg-min) {
-    //   width: 8rem;
-    // }
-    // @media all and (min-width: $xl-min) {
-    //   width: 8rem;
-    // }
     span {
       border-radius: $btnBorder_radius;
       display: flex;
@@ -1520,7 +1454,7 @@ front_text_image_field
 }
 
 /****************************************
-  Card Layout for Blog, Videos and cards
+  Card Layout for Blog, Videos, Pricing and cards
 *****************************************/
 .card_container {
   position: relative;
