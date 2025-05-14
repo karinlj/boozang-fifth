@@ -1329,21 +1329,18 @@ main nav - default colors for white & lightgrey bg
 /*********************
     pricing
  *********************/
-.pricing_section .no-gutters > .col, .pricing_section .no-gutters > [class*=col-] {
-  padding-right: 5px;
-}
 .pricing_section .pricing_card {
   border-radius: 24px;
-  height: 490px;
+  height: 480px;
 }
 @media all and (min-width: 576px) {
   .pricing_section .pricing_card {
-    height: 520px;
+    height: 500px;
   }
 }
 @media all and (min-width: 1200px) {
   .pricing_section .pricing_card {
-    height: 580px;
+    height: 560px;
   }
 }
 .pricing_section .pricing_card_body {
@@ -1357,7 +1354,7 @@ main nav - default colors for white & lightgrey bg
   border-bottom: 1px solid #b8e0d7;
 }
 .pricing_section ul.feat_list {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 .pricing_section ul.feat_list li.list_item {
   margin-bottom: 0.1rem;
@@ -1414,10 +1411,11 @@ feature list  (pricing page)
   color: #212735;
   font-weight: 600;
   font-size: inherit;
-  line-height: 1.8;
+  line-height: 1.6;
   border: none;
   background: transparent;
   text-align: left;
+  letter-spacing: 0;
 }
 .faq_accordion_section .question_part .question:hover {
   color: #00a2ff;

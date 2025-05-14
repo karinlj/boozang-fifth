@@ -1125,17 +1125,14 @@ main nav - default colors for white & lightgrey bg
     pricing
  *********************/
 .pricing_section {
-  .no-gutters>.col, .no-gutters>[class*=col-] {
-    padding-right: 5px;
-  }
   .pricing_card {
     border-radius: $themeBorder_radius;
-     height: 490px;
+     height: 480px;
     @media all and (min-width: $sm-min) {
-      height: 520px;
+      height: 500px;
     }
     @media all and (min-width: $xl-min) {
-      height: 580px;
+      height: 560px;
     }
   }
   .pricing_card_body {
@@ -1149,7 +1146,7 @@ main nav - default colors for white & lightgrey bg
     border-bottom: 1px solid $turqoise;
   }
   ul.feat_list {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     li.list_item {
       margin-bottom: 0.1rem;
       @media all and (min-width: $xl-min) {
@@ -1207,10 +1204,11 @@ feature list  (pricing page)
       color: $themecolor;
       font-weight: 600;
       font-size: inherit;
-       line-height: 1.8;
+       line-height: 1.6;
       border: none;
       background: transparent;
       text-align: left;
+      letter-spacing: 0;
       &:hover {
         color: $linkcolor;
       }
