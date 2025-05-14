@@ -592,7 +592,7 @@ h3 {
   }
 }
 h3.smaller_size_text {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 @media all and (min-width: 992px) {
   h3.smaller_size_text {
@@ -1400,19 +1400,20 @@ feature list  (pricing page)
 /*********************
    faq accordion
 *********************/
-.faq_accordion_section .info_list_item {
+.faq_accordion_section .faq_list_item {
   border-bottom: 1px solid #e6f4f1;
 }
 .faq_accordion_section .question_part {
   width: 100%;
   position: relative;
-  padding: 0.4rem 0;
+  padding: 0.1rem 0;
   cursor: pointer;
 }
 .faq_accordion_section .question_part .question {
   color: #212735;
   font-weight: 600;
   font-size: inherit;
+  line-height: 1.8;
   border: none;
   background: transparent;
   text-align: left;
