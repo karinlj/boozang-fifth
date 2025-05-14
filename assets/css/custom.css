@@ -1379,6 +1379,7 @@ main nav - default colors for white & lightgrey bg
 }
 .pricing_section .btn_link {
   width: 12rem;
+  text-align: center;
 }
 
 /*********************
@@ -1401,7 +1402,7 @@ feature list  (pricing page)
    faq accordion
 *********************/
 .faq_accordion_section .faq_list_item {
-  border-bottom: 1px solid #e6f4f1;
+  border-bottom: 1px solid #b8e0d7;
 }
 .faq_accordion_section .question_part {
   width: 100%;

@@ -4,7 +4,7 @@
 
      <section class="pricing_section section_spacing_top_small">
          <div class="container">
-             <div class="row align-items-center no-gutters">
+             <div class="row align-items-center">
                  <?php
                     //repeater
                     if (have_rows('pricing_cards')) {

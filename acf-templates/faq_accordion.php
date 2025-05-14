@@ -7,11 +7,11 @@
     <section class="faq_accordion_section <?php echo $bgColor; ?> section_spacing_top_small">
         <div class="container">
             <?php if ($heading) { ?>
-                <h2 class="text_center_laptop margin_4"><?php echo $heading; ?></h2>
+                <h2 class="margin_4"><?php echo $heading; ?></h2>
             <?php } ?>
             
-            <div class="row justify-content-center">
-                <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-10">
                     <?php if (have_rows('faq_accordion_list')) { ?>
                         <?php while (have_rows('faq_accordion_list')) {
                             the_row();
