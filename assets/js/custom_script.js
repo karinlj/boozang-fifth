@@ -15,17 +15,12 @@ jQuery(document).ready(function ($) {
   });
 
   //faq_accordion_section
-  //toggle aria-attributes and style the states
-  $(".question").click(function () {
+  //toggle aria-attribute and style state open
+    $(".accordion_btn").click(function (e) {
+    e.currentTarget.classList.toggle("open");
     $(this).attr("aria-expanded", function (index, attr) {
       return attr == "true" ? "false" : "true";
     });
-    $(this)
-      .parent()
-      .next()
-      .attr("aria-hidden", function (index, attr) {
-        return attr == "true" ? "false" : "true";
-      });
   });
 
   //Blog Sidebar Categories

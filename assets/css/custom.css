@@ -643,37 +643,43 @@ h6 {
 section,
 header,
 footer,
-.pricing_card, .card_container {
+.pricing_card,
+.card_container {
   position: relative;
 }
 section.darkblue,
 header.darkblue,
 footer.darkblue,
-.pricing_card.darkblue, .card_container.darkblue {
+.pricing_card.darkblue,
+.card_container.darkblue {
   background: #1c254a;
 }
 section.blue,
 header.blue,
 footer.blue,
-.pricing_card.blue, .card_container.blue {
+.pricing_card.blue,
+.card_container.blue {
   background: #1368e7;
 }
 section.lightgrey,
 header.lightgrey,
 footer.lightgrey,
-.pricing_card.lightgrey, .card_container.lightgrey {
+.pricing_card.lightgrey,
+.card_container.lightgrey {
   background: #f9f9f9;
 }
 section.lighturqoise,
 header.lighturqoise,
 footer.lighturqoise,
-.pricing_card.lighturqoise, .card_container.lighturqoise {
+.pricing_card.lighturqoise,
+.card_container.lighturqoise {
   background: #e6f4f1;
 }
 section.white,
 header.white,
 footer.white,
-.pricing_card.white, .card_container.white {
+.pricing_card.white,
+.card_container.white {
   background: #fff;
 }
 section.darkblue h1,
@@ -738,14 +744,16 @@ footer.blue p,
 .pricing_card.blue h5,
 .pricing_card.blue h6,
 .pricing_card.blue li,
-.pricing_card.blue p, .card_container.darkblue h1,
+.pricing_card.blue p,
+.card_container.darkblue h1,
 .card_container.darkblue h2,
 .card_container.darkblue h3,
 .card_container.darkblue h4,
 .card_container.darkblue h5,
 .card_container.darkblue h6,
 .card_container.darkblue li,
-.card_container.darkblue p, .card_container.blue h1,
+.card_container.darkblue p,
+.card_container.blue h1,
 .card_container.blue h2,
 .card_container.blue h3,
 .card_container.blue h4,
@@ -778,7 +786,8 @@ footer.white h6,
 .pricing_card.white h3,
 .pricing_card.white h4,
 .pricing_card.white h5,
-.pricing_card.white h6, .card_container.white h1,
+.pricing_card.white h6,
+.card_container.white h1,
 .card_container.white h2,
 .card_container.white h3,
 .card_container.white h4,
@@ -793,7 +802,8 @@ header.white p,
 footer.white li,
 footer.white p,
 .pricing_card.white li,
-.pricing_card.white p, .card_container.white li,
+.pricing_card.white p,
+.card_container.white li,
 .card_container.white p {
   color: #212735;
 }
@@ -1204,7 +1214,7 @@ main nav - default colors for white & lightgrey bg
    header*
 *************************/
 .header_main {
-  background: #fff;
+  background: #f9f9f9;
   min-height: 350px;
 }
 .header_main.single_post {
@@ -1398,60 +1408,70 @@ feature list  (pricing page)
 /*********************
    faq accordion
 *********************/
-.faq_accordion_section .faq_list_item {
-  border-bottom: 1px solid #b8e0d7;
-}
-.faq_accordion_section .question_part {
-  width: 100%;
-  position: relative;
-  padding: 0.1rem 0;
-  cursor: pointer;
-}
-.faq_accordion_section .question_part .question {
-  color: #212735;
-  font-weight: 600;
-  font-size: inherit;
-  line-height: 1.6;
+.faq_accordion_section .accordion_btn {
+  background: #e6f4f1;
   border: none;
-  background: transparent;
-  text-align: left;
-  letter-spacing: 0;
-}
-.faq_accordion_section .question_part .question:hover {
-  color: #00a2ff;
-}
-.faq_accordion_section .question_part .question:hover::after {
-  color: #00a2ff;
-}
-.faq_accordion_section .question_part .question:after {
-  font-family: "Font Awesome 6 Free";
-  font-size: calc 0.8rem;
-  content: "";
-  font-weight: 900;
-  position: absolute;
-  right: 0;
-  top: 1rem;
-  padding: 5px;
-  color: #212735;
-  transition: all 0.3s ease-in-out;
-}
-.faq_accordion_section .question_part .question[aria-expanded=true]:after {
-  content: "";
-}
-.faq_accordion_section .answer_part {
+  padding: 1rem;
+  margin: 0.5rem auto;
+  border-radius: 24px;
   width: 100%;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  text-align: left;
+  color: #212735;
 }
-.faq_accordion_section .answer_part p {
+.faq_accordion_section .accordion_btn:focus {
+  filter: none;
+}
+.faq_accordion_section .accordion_btn .heading {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media all and (min-width: 768px) {
+  .faq_accordion_section .accordion_btn .heading {
+    padding: 0.5rem 1rem;
+  }
+}
+.faq_accordion_section .accordion_btn .heading h3 {
   margin-bottom: 0;
 }
-.faq_accordion_section .answer_part[aria-hidden=false] {
-  max-height: 400px;
+.faq_accordion_section .accordion_btn .heading .fa-angle-down {
+  transition: all 0.3s linear;
+  font-size: 1.2rem;
+  margin: 0 0.1rem 0 0.5rem;
+  height: 1.1rem;
+  padding: 2px;
+  color: #212735;
 }
-.faq_accordion_section .answer_part[aria-hidden=false] p {
-  margin-bottom: 2rem;
+@media all and (min-width: 768px) {
+  .faq_accordion_section .accordion_btn .heading .fa-angle-down {
+    margin: 0 1rem;
+  }
+}
+.faq_accordion_section .accordion_btn .heading .fa-angle-down:hover {
+  color: #00a2ff;
+}
+.faq_accordion_section .accordion_btn .accordion_content {
+  margin-bottom: 0;
+  padding: 0rem 1rem 0 1rem;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease-out;
+  opacity: 0;
+  line-height: 1.5;
+}
+.faq_accordion_section .accordion_btn.open .heading {
+  margin-bottom: 1rem;
+}
+.faq_accordion_section .accordion_btn.open .fa-angle-down {
+  transform: rotate(180deg);
+}
+.faq_accordion_section .accordion_btn.open .accordion_content {
+  opacity: 1;
+  max-height: 800px;
+  padding: 0rem 1rem 2rem 1rem;
 }
 
 /*********************
@@ -2111,18 +2131,22 @@ text layout for Pages Content block
   404-page
 *********************/
 .nopage_section {
-  min-height: 30rem;
+  min-height: 32rem;
 }
-.nopage_section .nopage {
-  background: #e6f4f1;
-  border-radius: 24px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  padding: 3rem;
-  min-height: 300px;
-  margin-top: -70px;
+@media all and (min-width: 768px) {
+  .nopage_section {
+    min-height: 40rem;
+  }
 }
-.nopage_section .nopage-heading {
+.nopage_section .nopage_heading {
+  font-size: 7rem;
   margin-bottom: 2rem;
+  color: #1368e7;
+}
+@media all and (min-width: 768px) {
+  .nopage_section .nopage_heading {
+    font-size: 10rem;
+  }
 }
 
 /*********************************

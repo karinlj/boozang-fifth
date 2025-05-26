@@ -9,7 +9,7 @@
             <?php if ($heading) { ?>
                 <h2 class="margin_4"><?php echo $heading; ?></h2>
             <?php } ?>
-            
+
             <div class="row">
                 <div class="col-md-10">
                     <?php if (have_rows('faq_accordion_list')) { ?>
@@ -19,14 +19,16 @@
                             $question = get_sub_field('question');
                             $answer = get_sub_field('answer'); ?>
 
-                            <div class="faq_list_item">
-                                <h3 class="smaller_size_text question_part">
-                                    <button class="question" aria-expanded="false"><?php echo $question; ?></button>
-                                </h3>
-                                <section class="answer_part" aria-hidden="true">
-                                    <p><?php echo $answer; ?> </p>
-                                </section>
-                            </div>
+                            <button class="accordion_btn" aria-expanded="false" aria-label="FAQ content">
+                                <div class="heading">
+                                    <h3 class="smaller_size_text"><?php echo $question; ?>
+                                    </h3>
+                                    <i class="fas fa-angle-down" aria-hidden="true" aria-label="Open faq content"></i>
+                                </div>
+                                <div class="accordion_content medium_text">
+                                    <p><?php echo $answer; ?></p>
+                                </div>
+                            </button>
                     <?php
                         }
                     } ?>

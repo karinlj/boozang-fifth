@@ -6,18 +6,21 @@
  <?php
     if (function_exists('acf_add_options_page')) { ?>
 
- <section class="nopage_section">
-     <div class="container">
-         <div class="row">
-             <div class="col-md-8">
-                 <div class="nopage section_spacing_top_medium">
-                     <h3 class="nopage-heading"><?php the_field('404_heading', 'option'); ?></h3>
-                     <p class="nopage-content"> <?php the_field('404_content', 'option'); ?></p>
+     <main class="page_main">
+         <section class="nopage_section section_spacing_top_mini">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-md-10">
+                         <section class="">
+                             <h2 class="nopage_heading"><?php the_field('404_heading', 'option'); ?>
+                             </h2>
+                             <div class="nopage_text"><?php the_field('404_content', 'option'); ?></div>
+                         </section>
+                     </div>
                  </div>
              </div>
-         </div>
-     </div>
- </section>
+         </section>
+     </main>
 
  <?php
     }
