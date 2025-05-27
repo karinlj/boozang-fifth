@@ -30,7 +30,7 @@
     //if is child page or parent page
     if ($theParent or $pagesArray) {
     ?>
-        <aside class="page_aside section_spacing_top_aside">
+        <aside class="page_aside section_spacing_top_mini">
             <div class="container">
                 <ul>
                     <li class=" <?php echo $parent_active_class; ?> ">

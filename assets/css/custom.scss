@@ -1789,14 +1789,12 @@ latest_updates_section
 .video_filter,
 .page_aside {
   background: $turqoiseLight;
-  &.section_spacing_top_mini {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     @media all and (min-width: $md-min) {
       padding-top: 0;
       padding-bottom: 0;
     }
-  }
   .filter_nav {
     h3 {
       display: none;

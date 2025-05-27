@@ -2006,17 +2006,13 @@ latest_updates_section
 .video_filter,
 .page_aside {
   background: #e6f4f1;
-}
-.blog_sidebar.section_spacing_top_mini,
-.video_filter.section_spacing_top_mini,
-.page_aside.section_spacing_top_mini {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 @media all and (min-width: 768px) {
-  .blog_sidebar.section_spacing_top_mini,
-.video_filter.section_spacing_top_mini,
-.page_aside.section_spacing_top_mini {
+  .blog_sidebar,
+.video_filter,
+.page_aside {
     padding-top: 0;
     padding-bottom: 0;
   }
