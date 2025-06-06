@@ -983,7 +983,7 @@ main nav - default colors for white & lightgrey bg
    header*
 *************************/
 .header_main {
-  background: $lightgrey; //default bg
+  background: #fff; //default bg
   min-height: 350px;
   &.single_post {
     min-height: 0;
