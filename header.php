@@ -16,7 +16,7 @@
 <body <?php body_class(); ?>>
 
     <?php //header field variables
-    $page_domain = null; //     $page_domain = get_option('page_for_posts'
+    $page_domain   = null; //     $page_domain = get_option('page_for_posts'
     
     if (is_home() || is_archive()) {
         $page_domain= get_option('page_for_posts'); 

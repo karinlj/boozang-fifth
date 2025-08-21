@@ -9,11 +9,14 @@ Boozang is a SaaS start-up in test automation based in Montreal.
 
 ## Built With
 
-- WordPress- ACF
-- Sass
+- WordPress.org
+- ACF for content interface
+- PHP, HTML5, SASS
 - Bootstrap
-- jQuery
+- jQuery for interactivity
+- Built according to The Web Content Accessibility Guidelines ( WCAG )
 
-## Author
+## Author KarinsWeb
 
+##### Url: https://frilans.karinljunggren.com/
 - **Karin Ljunggren** - [karinlj](https://github.com/karinlj)
