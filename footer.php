@@ -135,7 +135,7 @@
                 <div class="col-2">
                     <div class="back_to_top_link">
                         <a href="#header_top" aria-label="To top of page">
-                            <i class="fas fa-angle-up" aria-hidden="true" aria-label="To top of page"></i>
+                            <i class="fas fa-angle-up" aria-hidden="true" aria-label="To top of page" title="To top of page"></i>
                         </a>
                     </div>
                 </div>

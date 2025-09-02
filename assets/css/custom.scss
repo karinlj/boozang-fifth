@@ -1789,12 +1789,12 @@ latest_updates_section
 .video_filter,
 .page_aside {
   background: $turqoiseLight;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    @media all and (min-width: $md-min) {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  @media all and (min-width: $md-min) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .filter_nav {
     h3 {
       display: none;
@@ -2105,12 +2105,19 @@ forum section
   }
   .back_to_top_link {
     float: right;
+    background: $linkcolor;
+    border-radius: $btnBorder_radius;
+    padding: 5px;
+    height: 1.9rem;
+    display: flex;
+    align-items: center;
     font-size: 1.7rem;
     transition: all 0.25s ease;
+    a {
+      color: $blueDarkest;
+    }
     &:hover {
-      // opacity: 1;
       transform: translateX(2px);
-      color: #fff;
     }
   }
 }
