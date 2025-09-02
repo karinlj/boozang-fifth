@@ -2345,11 +2345,11 @@ forum section
   float: right;
   background: #00a2ff;
   border-radius: 8px;
-  padding: 5px;
+  padding: 4px;
   height: 1.9rem;
   display: flex;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   transition: all 0.25s ease;
 }
 .footer_main .back_to_top_link a {

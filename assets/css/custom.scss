@@ -2107,16 +2107,16 @@ forum section
     float: right;
     background: $linkcolor;
     border-radius: $btnBorder_radius;
-    padding: 5px;
+    padding: 4px;
     height: 1.9rem;
     display: flex;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     transition: all 0.25s ease;
     a {
       color: $blueDarkest;
     }
-    &:hover {
+    &:hover {  
       transform: translateX(2px);
     }
   }
